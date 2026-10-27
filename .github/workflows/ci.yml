@@ -55,7 +55,7 @@ jobs:
       - name: Prepare Test Environment
         run: |
           cp .env.example .env
-          php artisan key:generate
+          php artisan key:generate --force
 
       - name: Execute Automated Tests
         run: php artisan test

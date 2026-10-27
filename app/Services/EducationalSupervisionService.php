@@ -401,8 +401,8 @@ class EducationalSupervisionService
         $publishedLowExams = ExamAttempt::whereHas('exam', function ($q) use ($groupIds) {
             $q->whereIn('group_id', $groupIds);
         })
-        ->whereNotNull('published_at')
-        ->whereNotNull('total_score')
+        ->whereNotNull('exam_attempts.published_at')
+        ->whereNotNull('exam_attempts.total_score')
         ->join('exams', 'exams.id', '=', 'exam_attempts.exam_id')
         ->whereRaw('exam_attempts.total_score < (exams.total_marks * 0.5)')
         ->count();
