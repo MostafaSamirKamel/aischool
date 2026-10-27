@@ -1,0 +1,48 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Payments\Pages;
+
+use App\Filament\Admin\Resources\Payments\PaymentResource;
+use Filament\Notifications\Notification;
+use Filament\Resources\Pages\CreateRecord;
+
+class CreatePayment extends CreateRecord
+{
+    protected static string $resource = PaymentResource::class;
+    
+    public function mount(): void
+    {
+        parent::mount();
+        
+        if (auth()->user()->is_super_admin) {
+            Notification::make()
+                ->title(__('filament/admin/create_payment.غيرمصرح'))
+                ->body('الأدمن الرئيسي لا يمكنه إنشاء سجلات في هذا القسم')
+                ->danger()
+                ->send();
+                
+            $this->redirect(PaymentResource::getUrl('index'));
+        }
+    }
+
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        $data['tenant_id'] = auth()->user()->tenant_id;
+        return $data;
+    }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+    public function getTitle(): string
+    {
+        return __('filament/admin/create_payment.title');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/create_payment.title');
+    }
+
+}

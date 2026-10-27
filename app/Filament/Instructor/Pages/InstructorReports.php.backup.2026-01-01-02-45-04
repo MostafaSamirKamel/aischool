@@ -1,0 +1,248 @@
+<?php
+
+namespace App\Filament\Instructor\Pages;
+
+use Filament\Pages\Page;
+use App\Models\AttendanceSession;
+use App\Models\Exam;
+use App\Models\Assignment;
+use App\Models\Attendance;
+use App\Models\ExamAttempt;
+use App\Models\AssignmentSubmission;
+use Illuminate\Support\Facades\Auth;
+use Filament\Support\Icons\Heroicon;
+use BackedEnum;
+
+class InstructorReports extends Page
+{
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedChartBar;
+
+    protected string $view = 'filament.instructor.pages.instructor-reports';
+    
+    protected static ?string $navigationLabel = null;
+    
+    protected static ?string $title = null;
+    
+    protected static ?int $navigationSort = 50;
+
+    public function getStats(): array
+    {
+        $instructor = Auth::user()->instructor;
+        
+        if (!$instructor) {
+            return [
+                'totalGroups' => 0,
+                'activeGroups' => 0,
+                'totalStudents' => 0,
+                'totalSessions' => 0,
+                'totalExams' => 0,
+                'totalAssignments' => 0,
+                'attendanceRate' => 0,
+            ];
+        }
+
+        // إجمالي المجموعات
+        $totalGroups = $instructor->groups()->count();
+
+        // المجموعات النشطة
+        $activeGroups = $instructor->groups()->where('status', 'active')->count();
+
+        // إجمالي الطلاب (في جميع المجموعات)
+        $totalStudents = $instructor->groups()->withCount('enrollments')->get()->sum('enrollments_count');
+
+        // عدد الجلسات (آخر 30 يوم)
+        $totalSessions = AttendanceSession::whereHas('group', fn($q) => $q->where('instructor_id', $instructor->id))
+            ->where('attendance_date', '>=', now()->subDays(30))
+            ->count();
+
+        // عدد الامتحانات (آخر 30 يوم)
+        $totalExams = Exam::whereHas('group', fn($q) => $q->where('instructor_id', $instructor->id))
+            ->where('exam_date', '>=', now()->subDays(30))
+            ->count();
+
+        // عدد الواجبات (آخر 30 يوم)
+        $totalAssignments = Assignment::whereHas('group', fn($q) => $q->where('instructor_id', $instructor->id))
+            ->where('created_at', '>=', now()->subDays(30))
+            ->count();
+
+        // نسبة الحضور في جلساتي (آخر 30 يوم)
+        $sessionIds = AttendanceSession::whereHas('group', fn($q) => $q->where('instructor_id', $instructor->id))
+            ->where('attendance_date', '>=', now()->subDays(30))
+            ->pluck('id');
+
+        $presentCount = Attendance::whereIn('attendance_session_id', $sessionIds)
+            ->where('status', 'present')
+            ->count();
+
+        $totalAttendance = Attendance::whereIn('attendance_session_id', $sessionIds)->count();
+
+        $attendanceRate = $totalAttendance > 0 
+            ? round(($presentCount / $totalAttendance) * 100, 1) 
+            : 0;
+
+        return [
+            'totalGroups' => $totalGroups,
+            'activeGroups' => $activeGroups,
+            'totalStudents' => $totalStudents,
+            'totalSessions' => $totalSessions,
+            'totalExams' => $totalExams,
+            'totalAssignments' => $totalAssignments,
+            'attendanceRate' => $attendanceRate,
+        ];
+    }
+
+    public function getGroupsPerformance(): array
+    {
+        $instructor = Auth::user()->instructor;
+        
+        if (!$instructor) {
+            return [];
+        }
+
+        return $instructor->groups()
+            ->withCount('enrollments')
+            ->get()
+            ->map(function($group) {
+                // متوسط الدرجات للمجموعة
+                $examAttempts = ExamAttempt::whereHas('exam', fn($q) => $q->where('group_id', $group->id))
+                    ->whereNotNull('score')
+                    ->get();
+
+                $avgScore = $examAttempts->count() > 0 
+                    ? round($examAttempts->avg('score'), 1) 
+                    : 0;
+
+                // نسبة الحضور للمجموعة
+                $sessionIds = AttendanceSession::where('group_id', $group->id)
+                    ->pluck('id');
+
+                $presentCount = Attendance::whereIn('attendance_session_id', $sessionIds)
+                    ->where('status', 'present')
+                    ->count();
+
+                $totalAttendance = Attendance::whereIn('attendance_session_id', $sessionIds)->count();
+
+                $attendanceRate = $totalAttendance > 0 
+                    ? round(($presentCount / $totalAttendance) * 100, 1) 
+                    : 0;
+
+                return [
+                    'name' => $group->name,
+                    'students_count' => $group->enrollments_count,
+                    'avg_score' => $avgScore,
+                    'attendance_rate' => $attendanceRate,
+                    'status' => $group->status,
+                ];
+            })
+            ->toArray();
+    }
+
+    public function getSessionsByMonth(): array
+    {
+        $instructor = Auth::user()->instructor;
+        
+        if (!$instructor) {
+            return [];
+        }
+
+        $data = [];
+        for ($i = 5; $i >= 0; $i--) {
+            $month = now()->subMonths($i);
+            $monthName = $month->locale('ar')->format('F');
+
+            $count = AttendanceSession::whereHas('group', fn($q) => $q->where('instructor_id', $instructor->id))
+                ->whereYear('attendance_date', $month->year)
+                ->whereMonth('attendance_date', $month->month)
+                ->count();
+
+            $data[] = [
+                'month' => $monthName,
+                'count' => $count,
+            ];
+        }
+
+        return $data;
+    }
+
+    public function getExamsStatistics(): array
+    {
+        $instructor = Auth::user()->instructor;
+        
+        if (!$instructor) {
+            return [];
+        }
+
+        $exams = Exam::whereHas('group', fn($q) => $q->where('instructor_id', $instructor->id))
+            ->where('exam_date', '>=', now()->subMonths(3))
+            ->with('attempts')
+            ->get();
+
+        return $exams->map(function($exam) {
+            $attempts = $exam->attempts()->whereNotNull('score')->get();
+            
+            $avgScore = $attempts->count() > 0 
+                ? round($attempts->avg('score'), 1) 
+                : 0;
+
+            $passRate = $attempts->count() > 0 
+                ? round(($attempts->where('score', '>=', $exam->total_marks * 0.5)->count() / $attempts->count()) * 100, 1) 
+                : 0;
+
+            return [
+                'title' => $exam->title,
+                'date' => $exam->exam_date->format('Y-m-d'),
+                'attempts_count' => $attempts->count(),
+                'avg_score' => $avgScore,
+                'total_marks' => $exam->total_marks,
+                'pass_rate' => $passRate,
+            ];
+        })->toArray();
+    }
+
+    public function getAssignmentsStatistics(): array
+    {
+        $instructor = Auth::user()->instructor;
+        
+        if (!$instructor) {
+            return [];
+        }
+
+        $assignments = Assignment::whereHas('group', fn($q) => $q->where('instructor_id', $instructor->id))
+            ->where('created_at', '>=', now()->subMonths(3))
+            ->with('submissions')
+            ->get();
+
+        return $assignments->map(function($assignment) {
+            $submissions = $assignment->submissions;
+            $graded = $submissions->whereNotNull('score');
+            
+            $avgScore = $graded->count() > 0 
+                ? round($graded->avg('score'), 1) 
+                : 0;
+
+            $submissionRate = $assignment->group->enrollments()->count() > 0
+                ? round(($submissions->count() / $assignment->group->enrollments()->count()) * 100, 1)
+                : 0;
+
+            return [
+                'title' => $assignment->title,
+                'due_date' => $assignment->due_date->format('Y-m-d'),
+                'submissions_count' => $submissions->count(),
+                'graded_count' => $graded->count(),
+                'avg_score' => $avgScore,
+                'max_score' => $assignment->max_score,
+                'submission_rate' => $submissionRate,
+            ];
+        })->toArray();
+    }
+    public function getTitle(): string
+    {
+        return __('filament/instructor/instructor_reports.title');
+    }
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/instructor/instructor_reports.navigation_label');
+    }
+
+
+}

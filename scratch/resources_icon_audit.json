@@ -1,0 +1,415 @@
+{
+    "app\\Filament\\Admin\\Resources\\Admins\\AdminResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Admins\\AdminResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedUserGroup",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\AssignmentResource\\ExamAttemptResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\AssignmentResource\\ExamAttemptResource.php",
+        "label": null,
+        "group": "null",
+        "icon": "Heroicon::OutlinedClipboardDocumentList",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\AttendanceSessions\\AttendanceSessionResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\AttendanceSessions\\AttendanceSessionResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedCalendarDays",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\Classrooms\\ClassroomResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Classrooms\\ClassroomResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Admin\\Resources\\Courses\\CourseResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Courses\\CourseResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Admin\\Resources\\Departments\\DepartmentResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Departments\\DepartmentResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedBuildingOffice2",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\Enrollments\\EnrollmentResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Enrollments\\EnrollmentResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Admin\\Resources\\Exams\\ExamResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Exams\\ExamResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedAcademicCap",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\ExpenseCategories\\ExpenseCategoryResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\ExpenseCategories\\ExpenseCategoryResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Admin\\Resources\\Expenses\\ExpenseResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\ExpenseResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedBanknotes",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\Grades\\GradeResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Grades\\GradeResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedChartBar",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\Groups\\GroupResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Groups\\GroupResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\AdminInstructorEvaluationAppealResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\AdminInstructorEvaluationAppealResource.php",
+        "label": "اعتراضات تقييمات المهندسين",
+        "group": null,
+        "icon": "'heroicon-o-scale'",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\Instructors\\InstructorResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Instructors\\InstructorResource.php",
+        "label": null,
+        "group": "null",
+        "icon": "Heroicon::OutlinedUserGroup",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\Nationalities\\NationalityResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Nationalities\\NationalityResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Admin\\Resources\\Occupations\\OccupationResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Occupations\\OccupationResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedBriefcase",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\OverdueInstallmentResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\OverdueInstallmentResource.php",
+        "label": "الأقساط المتأخرة",
+        "group": null,
+        "icon": null,
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\Payments\\PaymentResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Payments\\PaymentResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedCurrencyDollar",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\RevenueCategories\\RevenueCategoryResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\RevenueCategories\\RevenueCategoryResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Admin\\Resources\\Revenues\\RevenueResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Revenues\\RevenueResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedCurrencyDollar",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+        "label": null,
+        "group": null,
+        "icon": null,
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\SalaryPayments\\SalaryPaymentResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\SalaryPayments\\SalaryPaymentResource.php",
+        "label": "المرتبات",
+        "group": null,
+        "icon": "Heroicon::OutlinedBanknotes",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\Settings\\SettingResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Settings\\SettingResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Admin\\Resources\\SmsConfigs\\SmsConfigResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\SmsConfigs\\SmsConfigResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedDevicePhoneMobile",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\SmsLogResource\\SmsLogResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\SmsLogResource\\SmsLogResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedChatBubbleLeftRight",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\StudentFollowUpTaskResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\StudentFollowUpTaskResource.php",
+        "label": "متابعة الطلاب",
+        "group": null,
+        "icon": null,
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\StudentParents\\StudentParentResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\StudentParents\\StudentParentResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedUsers",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\Students\\StudentResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Students\\StudentResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource.php",
+        "label": "تقارير الإشراف التعليمي للفروع",
+        "group": null,
+        "icon": "'heroicon-o-document-chart-bar'",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\Supervisors\\SupervisorResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Supervisors\\SupervisorResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedUserCircle",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\Tenants\\TenantResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Tenants\\TenantResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Admin\\Resources\\Tracks\\TrackResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Tracks\\TrackResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Admin\\Resources\\Users\\UserResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Users\\UserResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Admin\\Resources\\VaultReconciliations\\VaultReconciliationResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\VaultReconciliationResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedClipboardDocumentCheck",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Admin\\Resources\\Vaults\\VaultResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\VaultResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Admin\\Resources\\VaultTransfers\\VaultTransferResource.php": {
+        "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\VaultTransferResource.php",
+        "label": null,
+        "group": null,
+        "icon": "'heroicon-o-arrow-path'",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Instructor\\Resources\\Assignments\\AssignmentResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\Assignments\\AssignmentResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Instructor\\Resources\\AssignmentSubmissions\\AssignmentSubmissionResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\AssignmentSubmissions\\AssignmentSubmissionResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\AttendanceSessionResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\AttendanceSessionResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedRectangleStack",
+        "is_generic_stack": true
+    },
+    "app\\Filament\\Instructor\\Resources\\Exams\\ExamResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\ExamResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedAcademicCap",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Instructor\\Resources\\GroupMessageResource\\GroupMessageResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\GroupMessageResource\\GroupMessageResource.php",
+        "label": "رسائل المجموعات",
+        "group": "'التواصل'",
+        "icon": "Heroicon::OutlinedEnvelope",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Instructor\\Resources\\InstructorEvaluations\\InstructorMyEvaluationResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\InstructorEvaluations\\InstructorMyEvaluationResource.php",
+        "label": "تقييماتي التعليمية الرسمية",
+        "group": null,
+        "icon": "'heroicon-o-academic-cap'",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Instructor\\Resources\\InstructorExamAttemptResource\\InstructorExamAttemptResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\InstructorExamAttemptResource\\InstructorExamAttemptResource.php",
+        "label": null,
+        "group": "null",
+        "icon": "Heroicon::OutlinedClipboardDocumentCheck",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Instructor\\Resources\\InstructorPayments\\InstructorPaymentResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\InstructorPaymentResource.php",
+        "label": "أجوري",
+        "group": null,
+        "icon": null,
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Instructor\\Resources\\InstructorReviews\\InstructorReviewResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\InstructorReviews\\InstructorReviewResource.php",
+        "label": "تقييماتي",
+        "group": null,
+        "icon": null,
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Instructor\\Resources\\LearningResources\\LearningResourceResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\LearningResourceResource.php",
+        "label": null,
+        "group": null,
+        "icon": null,
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Instructor\\Resources\\LearningResources\\Pages\\CreateLearningResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\Pages\\CreateLearningResource.php",
+        "label": null,
+        "group": null,
+        "icon": null,
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Instructor\\Resources\\LearningResources\\Pages\\EditLearningResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\Pages\\EditLearningResource.php",
+        "label": null,
+        "group": null,
+        "icon": null,
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Instructor\\Resources\\SessionSchedules\\SessionScheduleResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\SessionScheduleResource.php",
+        "label": "جدول السيشنات",
+        "group": null,
+        "icon": null,
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Instructor\\Resources\\StudentMessages\\StudentMessageResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\StudentMessages\\StudentMessageResource.php",
+        "label": "رسائل الطلاب",
+        "group": "'التواصل'",
+        "icon": "Heroicon::OutlinedEnvelope",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Instructor\\Resources\\SupervisoryObservations\\InstructorSupervisoryObservationResource.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\SupervisoryObservations\\InstructorSupervisoryObservationResource.php",
+        "label": "توجيهاتي الإشرافية",
+        "group": null,
+        "icon": "'heroicon-o-clipboard-document-check'",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Parent\\Resources\\Messages\\MessagesResource.php": {
+        "file": "app\\Filament\\Parent\\Resources\\Messages\\MessagesResource.php",
+        "label": "الرسائل والإشعارات",
+        "group": "'التواصل'",
+        "icon": "Heroicon::OutlinedEnvelope",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Student\\Resources\\InstructorReviewResource.php": {
+        "file": "app\\Filament\\Student\\Resources\\InstructorReviewResource.php",
+        "label": "تقييمات المدرسين",
+        "group": null,
+        "icon": "'heroicon-o-star'",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Supervisor\\Resources\\AttendanceSessions\\AttendanceSessionResource.php": {
+        "file": "app\\Filament\\Supervisor\\Resources\\AttendanceSessions\\AttendanceSessionResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedClipboardDocumentCheck",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Supervisor\\Resources\\Groups\\GroupResource.php": {
+        "file": "app\\Filament\\Supervisor\\Resources\\Groups\\GroupResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedUserGroup",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\InstructorEvaluationResource.php": {
+        "file": "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\InstructorEvaluationResource.php",
+        "label": "تقييمات جودة التدريس",
+        "group": null,
+        "icon": "'heroicon-o-academic-cap'",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Supervisor\\Resources\\Students\\StudentResource.php": {
+        "file": "app\\Filament\\Supervisor\\Resources\\Students\\StudentResource.php",
+        "label": null,
+        "group": null,
+        "icon": "Heroicon::OutlinedAcademicCap",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\SupervisionReportResource.php": {
+        "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\SupervisionReportResource.php",
+        "label": "التقارير الإشرافية والإدارية",
+        "group": null,
+        "icon": "'heroicon-o-document-chart-bar'",
+        "is_generic_stack": false
+    },
+    "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\SupervisoryObservationResource.php": {
+        "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\SupervisoryObservationResource.php",
+        "label": "الملاحظات والتوجيهات الإشرافية",
+        "group": null,
+        "icon": "'heroicon-o-clipboard-document-list'",
+        "is_generic_stack": false
+    }
+}

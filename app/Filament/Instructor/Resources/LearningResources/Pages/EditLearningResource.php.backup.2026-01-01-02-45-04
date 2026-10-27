@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\LearningResources\Pages;
+
+use App\Filament\Instructor\Resources\LearningResources\LearningResourceResource;
+use Filament\Actions;
+use Filament\Resources\Pages\EditRecord;
+
+class EditLearningResource extends EditRecord
+{
+    protected static string $resource = LearningResourceResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\DeleteAction::make()
+                ->label(__('filament/instructor/edit_learning_resource.حذف')),
+        ];
+    }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+    public function getTitle(): string
+    {
+        return __('filament/instructor/edit_learning_resource.title');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/instructor/edit_learning_resource.title');
+    }
+
+}

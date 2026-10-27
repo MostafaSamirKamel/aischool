@@ -1,0 +1,88 @@
+<?php
+
+namespace App\Filament\Supervisor\Resources\Groups\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use Filament\Actions\ViewAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\BadgeColumn;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Table;
+
+class GroupsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('name')
+                    ->label('اسم المجموعة')
+                    ->searchable()
+                    ->sortable(),
+
+                TextColumn::make('code')
+                    ->label('الكود')
+                    ->searchable(),
+
+                TextColumn::make('course.name')
+                    ->label('الدورة')
+                    ->searchable(),
+
+                TextColumn::make('instructor.user.name')
+                    ->label('المدرس')
+                    ->searchable(),
+
+                TextColumn::make('students_count')
+                    ->label('عدد الطلاب')
+                    ->counts('students')
+                    ->badge()
+                    ->color('info'),
+
+                BadgeColumn::make('status')
+                    ->label('الحالة')
+                    ->colors([
+                        'warning' => 'pending',
+                        'success' => 'active',
+                        'danger' => 'cancelled',
+                        'info' => 'completed',
+                    ])
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'pending' => 'قيد الانتظار',
+                        'active' => 'نشطة',
+                        'cancelled' => 'ملغاة',
+                        'completed' => 'مكتملة',
+                        default => $state,
+                    }),
+
+                TextColumn::make('start_date')
+                    ->label('تاريخ البداية')
+                    ->date('Y-m-d')
+                    ->sortable(),
+
+                TextColumn::make('end_date')
+                    ->label('تاريخ النهاية')
+                    ->date('Y-m-d')
+                    ->sortable(),
+            ])
+            ->filters([
+                SelectFilter::make('status')
+                    ->label('الحالة')
+                    ->options([
+                        'pending' => 'قيد الانتظار',
+                        'active' => 'نشطة',
+                        'cancelled' => 'ملغاة',
+                        'completed' => 'مكتملة',
+                    ]),
+                TrashedFilter::make(),
+            ])
+            ->recordActions([
+                ViewAction::make(),
+            ])
+            ->defaultSort('created_at', 'desc');
+    }
+}

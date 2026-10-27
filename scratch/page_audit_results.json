@@ -1,0 +1,546 @@
+[
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/students",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/enrollments",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/groups",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/courses",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/classrooms",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/session-schedules",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/attendance-sessions",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/homework",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/exams",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/exam-retake-grants",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/payments",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/installments",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/vaults",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/expenses",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/salary-payments",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/instructors",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/educational-supervisors",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/tenants",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/users",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/roles",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "super_admin",
+        "role_label": "Super Administrator (المدير العام)",
+        "uri": "/admin/reports",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin/students",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin/enrollments",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin/groups",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin/courses",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin/classrooms",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin/session-schedules",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin/attendance-sessions",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin/homework",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin/exams",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin/payments",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin/installments",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin/vaults",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_matamir",
+        "role_label": "Abu El Matamir Branch Manager (مدير فرع أبو المطامير)",
+        "uri": "/admin/salary-payments",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_online",
+        "role_label": "Online Branch Manager (مدير فرع الأونلاين)",
+        "uri": "/admin",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_online",
+        "role_label": "Online Branch Manager (مدير فرع الأونلاين)",
+        "uri": "/admin/students",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_online",
+        "role_label": "Online Branch Manager (مدير فرع الأونلاين)",
+        "uri": "/admin/groups",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "branch_manager_online",
+        "role_label": "Online Branch Manager (مدير فرع الأونلاين)",
+        "uri": "/admin/enrollments",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "instructor",
+        "role_label": "Lead Instructor (المعلم الرئيسي)",
+        "uri": "/instructor",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "instructor",
+        "role_label": "Lead Instructor (المعلم الرئيسي)",
+        "uri": "/instructor/groups",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "instructor",
+        "role_label": "Lead Instructor (المعلم الرئيسي)",
+        "uri": "/instructor/groups/94/academic-center",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "instructor",
+        "role_label": "Lead Instructor (المعلم الرئيسي)",
+        "uri": "/instructor/groups/95/academic-center",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "instructor",
+        "role_label": "Lead Instructor (المعلم الرئيسي)",
+        "uri": "/instructor/groups/96/academic-center",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "instructor",
+        "role_label": "Lead Instructor (المعلم الرئيسي)",
+        "uri": "/instructor/homework",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "instructor",
+        "role_label": "Lead Instructor (المعلم الرئيسي)",
+        "uri": "/instructor/exams",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "instructor",
+        "role_label": "Lead Instructor (المعلم الرئيسي)",
+        "uri": "/instructor/session-schedules",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "instructor",
+        "role_label": "Lead Instructor (المعلم الرئيسي)",
+        "uri": "/instructor/attendance-sessions",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "instructor",
+        "role_label": "Lead Instructor (المعلم الرئيسي)",
+        "uri": "/instructor/salary",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "supervisor",
+        "role_label": "Educational Supervisor (المشرف التربوي)",
+        "uri": "/supervisor",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "supervisor",
+        "role_label": "Educational Supervisor (المشرف التربوي)",
+        "uri": "/supervisor/group-profiles",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "supervisor",
+        "role_label": "Educational Supervisor (المشرف التربوي)",
+        "uri": "/supervisor/instructor-profiles",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "supervisor",
+        "role_label": "Educational Supervisor (المشرف التربوي)",
+        "uri": "/supervisor/educational-alerts",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "student",
+        "role_label": "Primary Test Student (طالب أبو المطامير)",
+        "uri": "/student",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "student",
+        "role_label": "Primary Test Student (طالب أبو المطامير)",
+        "uri": "/student/my-courses",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "student",
+        "role_label": "Primary Test Student (طالب أبو المطامير)",
+        "uri": "/student/my-assignments",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "student",
+        "role_label": "Primary Test Student (طالب أبو المطامير)",
+        "uri": "/student/my-exams",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "student",
+        "role_label": "Primary Test Student (طالب أبو المطامير)",
+        "uri": "/student/my-attendance",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "student",
+        "role_label": "Primary Test Student (طالب أبو المطامير)",
+        "uri": "/student/my-payments",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "student",
+        "role_label": "Primary Test Student (طالب أبو المطامير)",
+        "uri": "/student/student-enrollments",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "student",
+        "role_label": "Primary Test Student (طالب أبو المطامير)",
+        "uri": "/student/student-learning-resources",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "student",
+        "role_label": "Primary Test Student (طالب أبو المطامير)",
+        "uri": "/student/student-reports",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "parent",
+        "role_label": "Authorized Parent (ولي الأمر)",
+        "uri": "/parent",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "parent",
+        "role_label": "Authorized Parent (ولي الأمر)",
+        "uri": "/parent/my-courses",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "parent",
+        "role_label": "Authorized Parent (ولي الأمر)",
+        "uri": "/parent/my-attendance",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "parent",
+        "role_label": "Authorized Parent (ولي الأمر)",
+        "uri": "/parent/my-payments",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    },
+    {
+        "role": "parent",
+        "role_label": "Authorized Parent (ولي الأمر)",
+        "uri": "/parent/student-reports",
+        "status_code": 500,
+        "status": "FAIL",
+        "error": "NunoMaduro\\Collision\\Handler::setOutput(): Argument #1 ($output) must be of type Symfony\\Component\\Console\\Output\\OutputInterface, null given, called in D:\\ai_school_new-main (1)\\ai_school_new-main\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php on line 71"
+    }
+]

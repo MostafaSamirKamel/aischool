@@ -1,0 +1,817 @@
+/* ==========================================================================
+   Saad Sakr Water Filters & AC - Ultra Modern Filament Design Theme
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Alexandria:wght@400;600;700&display=swap');
+
+:root {
+    --font-family-cairo: 'Cairo', 'Alexandria', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body,
+.fi-body,
+.fi-page,
+.fi-sidebar,
+.fi-topbar,
+.fi-ta,
+.fi-fo,
+.fi-modal {
+    font-family: var(--font-family-cairo) !important;
+    letter-spacing: -0.01em;
+}
+
+/* --------------------------------------------------------------------------
+   1. Page Background & Global Smooth Animations
+   -------------------------------------------------------------------------- */
+body {
+    background: radial-gradient(circle at top right, #f0f9ff 0%, #f8fafc 40%, #f1f5f9 100%) !important;
+    min-height: 100vh;
+}
+
+.dark body {
+    background: radial-gradient(circle at top right, #0c1524 0%, #030712 50%, #020617 100%) !important;
+}
+
+.fi-page {
+    animation: fiFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fiFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+:root {
+    --sidebar-width: 19rem;
+}
+
+.fi-sidebar {
+    background: #ffffff !important;
+    border-inline-end: 1px solid #e2e8f0 !important;
+    box-shadow: 2px 0 12px rgba(15, 23, 42, 0.02) !important;
+    transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease !important;
+}
+
+.dark .fi-sidebar {
+    background: #0f172a !important;
+    border-inline-end: 1px solid #1e293b !important;
+}
+
+/* Sidebar Group Accordion Styling (تنسيق عناوين المجموعات المطوية) */
+.fi-sidebar-group-button {
+    border-radius: 10px !important;
+    padding: 0.5rem 0.75rem !important;
+    margin-inline: 0.35rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.fi-sidebar-group-button:hover {
+    background-color: #f8fafc !important;
+}
+
+.dark .fi-sidebar-group-button:hover {
+    background-color: #1e293b !important;
+}
+
+.fi-sidebar-group-label {
+    font-weight: 700 !important;
+    font-size: 0.825rem !important;
+    color: #475569 !important;
+    letter-spacing: 0.02em;
+}
+
+.dark .fi-sidebar-group-label {
+    color: #94a3b8 !important;
+}
+
+/* ==========================================================================
+   Smooth Sidebar Transition (حركة انسيابية وظلال ناعمة للشريط الجانبي)
+   ========================================================================== */
+@media (min-width: 1024px) {
+    .fi-sidebar {
+        transition: width 0.22s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.22s ease !important;
+    }
+
+    .fi-sidebar.fi-sidebar-open,
+    [x-bind*="sidebar.isOpen"] {
+        box-shadow: -4px 0 25px rgba(15, 23, 42, 0.08) !important;
+    }
+
+    .dark .fi-sidebar.fi-sidebar-open,
+    .dark [x-bind*="sidebar.isOpen"] {
+        box-shadow: -4px 0 25px rgba(0, 0, 0, 0.5) !important;
+    }
+}
+
+.fi-sidebar-item > a,
+.fi-sidebar-item > button {
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    margin-inline: 0.5rem !important;
+}
+
+.fi-sidebar-item > a:hover,
+.fi-sidebar-item > button:hover {
+    background-color: #f0f9ff !important;
+    color: #0284c7 !important;
+    transform: translateX(-2px);
+}
+
+.dark .fi-sidebar-item > a:hover,
+.dark .fi-sidebar-item > button:hover {
+    background-color: #1e293b !important;
+    color: #38bdf8 !important;
+}
+
+.fi-sidebar-item-active > a,
+.fi-sidebar-item-active > button {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.28) !important;
+}
+
+.fi-sidebar-item-active > a svg,
+.fi-sidebar-item-active > button svg,
+.fi-sidebar-item-active .fi-sidebar-item-label {
+    color: #ffffff !important;
+}
+
+.fi-sidebar-group-label {
+    font-weight: 800 !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b !important;
+    padding-inline: 1rem !important;
+}
+
+/* Sidebar Toggle Buttons (أزرار فتح وقفل الشريط الجانبي) */
+.fi-topbar-open-collapse-sidebar-btn,
+.fi-topbar-close-collapse-sidebar-btn {
+    border-radius: 10px !important;
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    transition: all 0.2s ease !important;
+}
+
+.fi-topbar-open-collapse-sidebar-btn:hover,
+.fi-topbar-close-collapse-sidebar-btn:hover {
+    background-color: #f0f9ff !important;
+    border-color: #0284c7 !important;
+    color: #0284c7 !important;
+    transform: scale(1.05);
+}
+
+.dark .fi-topbar-open-collapse-sidebar-btn,
+.dark .fi-topbar-close-collapse-sidebar-btn {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Ultra Clean Top Navigation Bar
+   -------------------------------------------------------------------------- */
+.fi-topbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 40 !important;
+}
+
+.dark .fi-topbar {
+    background: rgba(15, 23, 42, 0.95) !important;
+    border-bottom: 1px solid #1e293b !important;
+}
+
+.fi-topbar-nav-groups {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 0.25rem 0.4rem !important;
+    padding: 0.25rem 0 !important;
+}
+
+.fi-topbar-nav-groups > li {
+    display: inline-flex !important;
+}
+
+.fi-topbar nav a,
+.fi-topbar nav button {
+    font-weight: 600 !important;
+    font-size: 0.8rem !important;
+    padding: 0.3rem 0.6rem !important;
+    border-radius: 8px !important;
+    white-space: nowrap !important;
+    transition: all 0.15s ease !important;
+}
+
+.fi-topbar nav a:hover,
+.fi-topbar nav button:hover {
+    background-color: #f1f5f9 !important;
+    color: #0284c7 !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Tables (DataGrid) Styling
+   -------------------------------------------------------------------------- */
+.fi-ta-ctn {
+    border-radius: 16px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.04) !important;
+    background: #ffffff !important;
+    overflow: hidden !important;
+}
+
+.dark .fi-ta-ctn {
+    background: #0f172a !important;
+    border-color: #1e293b !important;
+}
+
+.fi-ta-header-ctn {
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding: 1rem !important;
+}
+
+.dark .fi-ta-header-ctn {
+    background: #1e293b !important;
+    border-bottom-color: #334155 !important;
+}
+
+.fi-ta-table th {
+    background-color: #f8fafc !important;
+    font-weight: 800 !important;
+    font-size: 0.78rem !important;
+    text-transform: uppercase;
+    color: #475569 !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding: 0.85rem 1rem !important;
+}
+
+.dark .fi-ta-table th {
+    background-color: #1e293b !important;
+    color: #94a3b8 !important;
+    border-bottom-color: #334155 !important;
+}
+
+.fi-ta-row {
+    transition: background-color 0.15s ease !important;
+}
+
+.fi-ta-row:hover {
+    background-color: #f0f9ff !important;
+}
+
+.dark .fi-ta-row:hover {
+    background-color: #1e293b !important;
+}
+
+.fi-ta-row td {
+    padding: 0.85rem 1rem !important;
+    font-size: 0.875rem !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Forms, Sections & Fieldsets
+   -------------------------------------------------------------------------- */
+.fi-section {
+    border-radius: 18px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03) !important;
+    background: #ffffff !important;
+    overflow: hidden !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.dark .fi-section {
+    background: #0f172a !important;
+    border-color: #1e293b !important;
+}
+
+.fi-section-header {
+    padding: 1.25rem 1.5rem !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.dark .fi-section-header {
+    background: #1e293b !important;
+    border-bottom-color: #334155 !important;
+}
+
+.fi-section-header-title {
+    font-weight: 800 !important;
+    font-size: 1.05rem !important;
+    color: #0f172a !important;
+}
+
+.dark .fi-section-header-title {
+    color: #f8fafc !important;
+}
+
+.fi-fo-field-wrp-label label {
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    color: #334155 !important;
+    margin-bottom: 0.35rem !important;
+}
+
+.dark .fi-fo-field-wrp-label label {
+    color: #cbd5e1 !important;
+}
+
+/* Input, Select & Textarea Controls */
+.fi-input,
+.fi-select-input,
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    border-radius: 10px !important;
+    border: 1px solid #cbd5e1 !important;
+    background-color: #ffffff !important;
+    font-size: 0.875rem !important;
+    font-family: var(--font-family-cairo) !important;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.dark .fi-input,
+.dark .fi-select-input,
+.dark input,
+.dark select,
+.dark textarea {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+.fi-input:focus,
+.fi-select-input:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0284c7 !important;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
+    outline: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. Modern Button Styles
+   -------------------------------------------------------------------------- */
+.fi-btn {
+    border-radius: 10px !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0 !important;
+    padding: 0.55rem 1.15rem !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.fi-btn-primary {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+    box-shadow: 0 2px 6px rgba(2, 132, 199, 0.3) !important;
+}
+
+.fi-btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4) !important;
+}
+
+.fi-btn-success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3) !important;
+}
+
+.fi-btn-success:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4) !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. Badges & Status Chips
+   -------------------------------------------------------------------------- */
+.fi-badge {
+    border-radius: 9999px !important;
+    font-weight: 700 !important;
+    font-size: 0.72rem !important;
+    padding: 0.25rem 0.65rem !important;
+    letter-spacing: 0.02em !important;
+}
+
+/* --------------------------------------------------------------------------
+   8. Modals & Dialogs
+   -------------------------------------------------------------------------- */
+.fi-modal-window {
+    border-radius: 20px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25) !important;
+    overflow: hidden !important;
+}
+
+.dark .fi-modal-window {
+    background-color: #0f172a !important;
+    border-color: #1e293b !important;
+}
+
+.fi-modal-header {
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding: 1.25rem 1.5rem !important;
+}
+
+.dark .fi-modal-header {
+    background: #1e293b !important;
+    border-bottom-color: #334155 !important;
+}
+
+/* --------------------------------------------------------------------------
+   9. Scrollbar
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* ==========================================================================
+   10. Force Full Width (100%) for ALL Forms, Pages, Resource Views & Sections
+   ========================================================================== */
+.fi-page,
+.fi-resource-page,
+.fi-resource-create-record-page,
+.fi-resource-edit-record-page,
+.fi-resource-view-record-page,
+.fi-form,
+.fi-section,
+.fi-main-ctn,
+.fi-main,
+.fi-page-content,
+.fi-page-header,
+.fi-fo,
+.fi-ta,
+.fi-ta-content,
+.fi-ta-ctn {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.fi-main-ctn > main,
+.fi-main-ctn .fi-main {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.fi-form,
+.fi-form > div,
+.fi-form > * {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.fi-section {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Ensure no form container centers with tight max-width */
+.fi-page-content > *,
+.fi-resource-create-record-page .fi-form,
+.fi-resource-edit-record-page .fi-form,
+.fi-resource-create-record-page,
+.fi-resource-edit-record-page,
+.fi-page-content form,
+.fi-page-content,
+.fi-form-actions,
+.fi-section-content-ctn,
+.fi-section-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-inline: 0 !important;
+}
+
+/* ==========================================================================
+   Dropdowns & Popovers Restraint (Ensures compact, elegant floating menus)
+   ========================================================================== */
+[x-cloak],
+[x-cloak] * {
+    display: none !important;
+}
+
+.fi-dropdown-panel {
+    min-width: 14rem !important;
+    max-width: 22rem !important;
+    max-height: calc(100vh - 120px) !important;
+    overflow-y: auto !important;
+    width: max-content !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.08) !important;
+    border-radius: 0.75rem !important;
+    border: 1px solid #e2e8f0 !important;
+    background: #ffffff !important;
+    z-index: 9999 !important;
+}
+
+.dark .fi-dropdown-panel {
+    background: #0f172a !important;
+    border-color: #1e293b !important;
+}
+
+.fi-dropdown-list-item {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Fix top navigation bar items so they don't stretch dropdowns */
+.fi-topbar-item {
+    position: relative !important;
+    width: auto !important;
+}
+
+.fi-topbar-group {
+    width: auto !important;
+}
+
+.fi-topbar nav {
+    width: auto !important;
+}
+
+/* Global SVG Safeguards */
+svg {
+    max-width: 100%;
+}
+.fi-page svg:not(.w-full) {
+    max-width: 3rem;
+    max-height: 3rem;
+}
+
+/* ==========================================================================
+   11. Ultra Modern Custom Reports & Tables Styling (Fallback for unbundled Tailwind)
+   ========================================================================== */
+
+/* Report Cards & KPI Metrics Grid */
+.grid {
+    display: grid !important;
+}
+
+.grid.grid-cols-1.md\:grid-cols-3,
+.grid.grid-cols-1.md\:grid-cols-4,
+.grid.grid-cols-2.md\:grid-cols-4 {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 1rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Report White / Dark Cards */
+div.bg-white,
+div[class*="rounded-2xl"][class*="border"] {
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 1rem !important;
+    padding: 1.25rem !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+}
+
+.dark div.bg-white,
+.dark div[class*="rounded-2xl"][class*="border"] {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+/* Filter & Header Bar */
+div.flex.flex-wrap.justify-between.items-center,
+div.flex.justify-between.items-center {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+}
+
+div.flex.items-center {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+}
+
+/* Select & Inputs in Reports */
+select.rounded-xl,
+select.rounded-lg,
+.fi-page select {
+    padding: 0.55rem 1rem !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 0.75rem !important;
+    font-size: 0.875rem !important;
+    background-color: #f8fafc !important;
+    font-family: inherit !important;
+    font-weight: 600 !important;
+    color: #1e293b !important;
+    outline: none !important;
+    transition: all 0.2s !important;
+}
+
+select.rounded-xl:focus,
+select.rounded-lg:focus,
+.fi-page select:focus {
+    border-color: #0284c7 !important;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
+}
+
+/* Typography in KPI Cards */
+.text-sm.font-bold.text-gray-500 {
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    color: #64748b !important;
+}
+
+.text-2xl.font-black,
+.text-3xl.font-black {
+    font-size: 1.65rem !important;
+    font-weight: 900 !important;
+    line-height: 1.2 !important;
+}
+
+.text-amber-600 { color: #d97706 !important; }
+.text-emerald-600 { color: #059669 !important; }
+.text-rose-600 { color: #e11d48 !important; }
+.text-primary-600 { color: #0284c7 !important; }
+.text-purple-600 { color: #9333ea !important; }
+.text-blue-600 { color: #2563eb !important; }
+
+/* Report Tables Full Styling */
+.fi-page table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    text-align: right !important;
+    font-size: 0.875rem !important;
+    margin-top: 0.5rem !important;
+}
+
+.fi-page table thead {
+    background-color: #f8fafc !important;
+}
+
+.fi-page table thead tr th,
+.fi-page table thead th {
+    background-color: #f1f5f9 !important;
+    color: #334155 !important;
+    font-weight: 800 !important;
+    font-size: 0.825rem !important;
+    padding: 0.9rem 1rem !important;
+    border-bottom: 2px solid #e2e8f0 !important;
+    white-space: nowrap !important;
+}
+
+.fi-page table thead tr th:first-child {
+    border-top-right-radius: 0.875rem !important;
+}
+
+.fi-page table thead tr th:last-child {
+    border-top-left-radius: 0.875rem !important;
+}
+
+.fi-page table tbody tr td,
+.fi-page table tbody td {
+    padding: 0.85rem 1rem !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    color: #1e293b !important;
+    vertical-align: middle !important;
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+}
+
+.fi-page table tbody tr:hover td {
+    background-color: #f8fafc !important;
+}
+
+.fi-page table tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+.dark .fi-page table thead tr th {
+    background-color: #0f172a !important;
+    color: #cbd5e1 !important;
+    border-bottom-color: #334155 !important;
+}
+
+.dark .fi-page table tbody tr td {
+    border-bottom-color: #334155 !important;
+    color: #f1f5f9 !important;
+}
+
+.dark .fi-page table tbody tr:hover td {
+    background-color: #1e293b !important;
+}
+
+/* Badges & Status Chips */
+span.rounded-full {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 0.3rem 0.75rem !important;
+    border-radius: 9999px !important;
+    font-size: 0.75rem !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+}
+
+.bg-emerald-100 { background-color: #d1fae5 !important; color: #065f46 !important; }
+.bg-amber-100 { background-color: #fef3c7 !important; color: #92400e !important; }
+.bg-rose-100 { background-color: #ffe4e6 !important; color: #9f1239 !important; }
+.bg-blue-100 { background-color: #dbeafe !important; color: #1e40af !important; }
+
+/* Custom Action Buttons */
+button.bg-emerald-600,
+button.bg-primary-600 {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
+    padding: 0.45rem 1rem !important;
+    background-color: #059669 !important;
+    color: #ffffff !important;
+    border-radius: 0.625rem !important;
+    font-size: 0.8rem !important;
+    font-weight: 800 !important;
+    border: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 6px rgba(5, 150, 105, 0.25) !important;
+    transition: all 0.2s !important;
+}
+
+button.bg-emerald-600:hover {
+    background-color: #047857 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* ==========================================================================
+   Mobile Drawer & Off-Canvas Navigation Polish
+   ========================================================================== */
+@media (max-width: 1023px) {
+    /* Topbar container lower priority on mobile */
+    .fi-topbar-ctn,
+    .fi-topbar {
+        z-index: 30 !important;
+    }
+
+    /* Ensure mobile drawer covers properly with high elevation */
+    .fi-sidebar {
+        z-index: 10000 !important;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.5) !important;
+        width: 19rem !important;
+        max-width: 88vw !important;
+        background-color: #ffffff !important;
+    }
+
+    .dark .fi-sidebar {
+        background-color: #0f172a !important;
+    }
+
+    /* Fixed backdrop overlay covering entire viewport including topbar */
+    .fi-sidebar-close-overlay {
+        position: fixed !important;
+        inset: 0 !important;
+        z-index: 9990 !important;
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+        background-color: rgba(15, 23, 42, 0.7) !important;
+    }
+
+    /* Clean mobile drawer scroll and padding */
+    .fi-sidebar-nav {
+        padding-bottom: 4rem !important;
+        padding-top: 1rem !important;
+    }
+
+    .fi-sidebar-header {
+        border-bottom: 1px solid #f1f5f9 !important;
+        padding-bottom: 0.75rem !important;
+    }
+
+    .dark .fi-sidebar-header {
+        border-bottom: 1px solid #1e293b !important;
+    }
+}

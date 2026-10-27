@@ -1,0 +1,60 @@
+<?php
+
+return [
+
+    'created_at' => 'Created',
+    'deleted_at' => 'Deleted',
+    'enrollment.id' => 'Id',
+    'enrollment_id' => 'Enrollment',
+    'enrollment_id_default' => 'Enrollment Default',
+    'exam.title' => 'Title',
+    'exam.type' => 'Type',
+    'exam_id' => 'Exam',
+    'grade' => 'Grade',
+    'grade.a' => 'A',
+    'grade.a+' => 'A+',
+    'grade.b' => 'B',
+    'grade.b+' => 'B+',
+    'grade.c' => 'C',
+    'grade.c+' => 'C+',
+    'grade.d' => 'D',
+    'grade.f' => 'F',
+    'grade.filament/admin/grade_resource.grade.a' => 'filament/admin/grade_resource.grade.a',
+    'grade.filament/admin/grade_resource.grade.a+' => 'filament/admin/grade_resource.grade.a+',
+    'grade.filament/admin/grade_resource.grade.b' => 'filament/admin/grade_resource.grade.b',
+    'grade.filament/admin/grade_resource.grade.b+' => 'filament/admin/grade_resource.grade.b+',
+    'grade.filament/admin/grade_resource.grade.c' => 'filament/admin/grade_resource.grade.c',
+    'grade.filament/admin/grade_resource.grade.c+' => 'filament/admin/grade_resource.grade.c+',
+    'grade.filament/admin/grade_resource.grade.d' => 'filament/admin/grade_resource.grade.d',
+    'grade.filament/admin/grade_resource.grade.f' => 'filament/admin/grade_resource.grade.f',
+    'grade_default' => 'Grade Default',
+    'graded_at' => 'Graded',
+    'graded_by' => 'Graded By',
+    'graded_by_user.name' => 'Name',
+    'marks_obtained' => 'Marks Obtained',
+    'model_label' => 'درجة',
+    'navigation_label' => 'الدرجات',
+    'percentage' => 'Percentage',
+    'plural_model_label' => 'الدرجات',
+    'remarks' => 'Remarks',
+    'student.full_name' => 'Full Name',
+    'student.id' => 'Id',
+    'student_id' => 'Student',
+    'tenant.name' => 'Name',
+    'tenant_id' => 'Tenant',
+    'tenant_id_default' => 'Tenant Default',
+    'updated_at' => 'Updated',
+
+    // Additional keys for enhanced forms and tables
+    'student' => [
+        'full_name' => 'Student Name',
+    ],
+    'exam' => [
+        'title' => 'Exam Title',
+        'type' => 'Exam Type',
+    ],
+    'graded_by_user' => [
+        'name' => 'Graded By',
+    ],
+
+];

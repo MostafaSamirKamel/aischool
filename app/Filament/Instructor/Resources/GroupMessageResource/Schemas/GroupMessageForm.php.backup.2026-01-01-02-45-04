@@ -1,0 +1,115 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\GroupMessageResource\Schemas;
+
+use App\Models\Group;
+use Filament\Schemas\Schema;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\DateTimePicker;
+
+class GroupMessageForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->schema([
+                // Section::make()
+                // ->schema([
+                        Select::make('group_id')
+                            ->label('المجموعة')
+                            ->options(function () {
+                                $user = auth()->user();
+                                if (!$user || !$user->instructor) {
+                                    return [];
+                                }
+                                
+                                return Group::where('instructor_id', $user->instructor->id)
+                                    ->where('status', 'active')
+                                    ->pluck('name', 'id');
+                            })
+                            ->required()
+                            ->searchable()
+                            ->preload()
+                            ->helperText('اختر المجموعة التي تريد إرسال الرسالة إليها')
+                        ,
+
+                        TextInput::make('subject')
+                            ->label('الموضوع')
+                            ->required()
+                            ->maxLength(255)
+                        ,
+
+                        RichEditor::make('message')
+                            ->label('الرسالة')
+                            ->required()
+                            
+                            ->toolbarButtons([
+                                'bold',
+                                'italic',
+                                'underline',
+                                'strike',
+                                'link',
+                                'bulletList',
+                                'orderedList',
+                                'h2',
+                                'h3',
+                                'blockquote',
+                                'codeBlock',
+                            ]),
+
+                        Select::make('type')
+                            ->label('نوع الرسالة')
+                            ->options([
+                                'announcement' => 'إعلان',
+                                'homework' => 'واجب',
+                                'reminder' => 'تذكير',
+                                'general' => 'عام',
+                            ])
+                            ->default('general')
+                            ->required(),
+
+                        Select::make('priority')
+                            ->label('الأولوية')
+                            ->options([
+                                'low' => 'منخفضة',
+                                'normal' => 'عادية',
+                                'high' => 'عالية',
+                                'urgent' => 'عاجلة',
+                            ])
+                            ->default('normal')
+                            ->required(),
+
+                        FileUpload::make('attachments')
+                            ->label('المرفقات')
+                            ->multiple()
+                            ->directory('group-messages')
+                            ->maxFiles(5)
+                            ->maxSize(10240)
+                        ,
+
+                        Toggle::make('send_notification')
+                            ->label('إرسال إشعار')
+                            ->default(true)
+                            ->inline(false),
+
+                        Toggle::make('send_email')
+                            ->label('إرسال بريد إلكتروني')
+                            ->default(false)
+                            ->inline(false),
+
+                        DateTimePicker::make('scheduled_at')
+                            ->label('جدولة الإرسال')
+                            ->helperText('اتركه فارغاً للإرسال الفوري')
+                            ->native(false)
+                        ,
+                // ])
+
+            ]);
+    }
+
+}

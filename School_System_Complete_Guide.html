@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل الاستخدام - نظام إدارة المدارس الذكية</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --accent: #00D4FF;
+            --success: #2ECC71;
+            --warning: #F39C12;
+            --danger: #E74C3C;
+            --dark: #1a1a2e;
+            --light: #f0f2f5;
+        }
+
+        * {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveRight 25s linear infinite;
+        }
+
+        @keyframes moveRight {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .badge-highlight {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 10px 25px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar-custom {
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-custom .nav-link {
+            color: var(--primary) !important;
+            font-weight: 600;
+            margin: 0 10px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-custom .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 3px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        .navbar-custom .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .section-white { background: white; }
+        .section-light { background: var(--light); }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 15px;
+            position: relative;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            margin-top: 15px;
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 50px;
+            line-height: 1.8;
+        }
+
+        /* ===== CARDS ===== */
+        .card-modern {
+            background: white;
+            border: none;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            opacity: 0.1;
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .card-modern:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .card-modern h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .card-modern p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* ===== STEPS ===== */
+        .process-step {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-right: 5px solid var(--primary);
+            position: relative;
+            animation: fadeInUp 0.8s ease-out;
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateX(10px);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* ===== FEATURE LIST ===== */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            color: #666;
+            font-size: 1rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-list li:last-child { border-bottom: none; }
+        .feature-list li:hover { color: var(--primary); transform: translateX(10px); }
+
+        .feature-list li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-left: 12px;
+            width: 25px;
+            text-align: center;
+        }
+
+        /* ===== HIGHLIGHTS ===== */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(255, 101, 132, 0.1));
+            border-left: 5px solid var(--primary);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .highlight-box h5 {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .highlight-box p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .highlight-box li {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        /* ===== CALCULATOR ===== */
+        .calculation-box {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+
+        .calc-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            font-size: 1.1rem;
+        }
+
+        .calc-row:last-child { border-bottom: none; }
+
+        .calc-label {
+            font-weight: 600;
+            color: #333;
+            flex: 1;
+        }
+
+        .calc-value {
+            font-weight: 700;
+            color: var(--primary);
+            min-width: 150px;
+            text-align: left;
+        }
+
+        .calc-total {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .calc-total .label { font-weight: 700; font-size: 1.2rem; }
+        .calc-total .value { font-weight: 700; font-size: 1.5rem; }
+
+        /* ===== BADGES ===== */
+        .badge-custom {
+            display: inline-block;
+            padding: 7px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin: 5px;
+        }
+
+        .badge-primary { background: rgba(108, 99, 255, 0.2); color: var(--primary); }
+        .badge-success { background: rgba(46, 204, 113, 0.2); color: var(--success); }
+        .badge-warning { background: rgba(243, 156, 18, 0.2); color: var(--warning); }
+        .badge-danger { background: rgba(231, 76, 60, 0.2); color: var(--danger); }
+
+        /* ===== TIMELINE ===== */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+        }
+
+        .timeline-item {
+            margin-bottom: 35px;
+            padding-left: 80px;
+            position: relative;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 5px;
+            width: 25px;
+            height: 25px;
+            background: white;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+        }
+
+        .timeline-item h5 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* ===== TABLE ===== */
+        .table-modern {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 30px 0;
+        }
+
+        .table-modern table {
+            margin-bottom: 0;
+        }
+
+        .table-modern th {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            font-weight: 700;
+            border: none;
+            padding: 20px;
+            text-align: right;
+        }
+
+        .table-modern td {
+            padding: 18px 20px;
+            border-color: #eee;
+            text-align: right;
+        }
+
+        .table-modern tr:hover { background: var(--light); }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 20px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            opacity: 0.8;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .section-title { font-size: 1.8rem; }
+            .calc-row { flex-direction: column; align-items: flex-start; }
+            .calc-value { margin-top: 10px; }
+            .timeline::before { left: 10px; }
+            .timeline-item { padding-left: 60px; }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        .pulse-icon {
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#home" style="font-size: 1.4rem; color: var(--primary);">
+            <i class="fas fa-graduation-cap"></i> نظام المدارس الذكية
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#enrollment">التسجيل</a></li>
+                <li class="nav-item"><a class="nav-link" href="#payment">المدفوعات</a></li>
+                <li class="nav-item"><a class="nav-link" href="#attendance">الحضور</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sessions">الجلسات</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="badge-highlight">
+            <i class="fas fa-star"></i> النظام الأول لإدارة المدارس
+        </div>
+        <h1>نظام إدارة مدارس ذكي وشامل</h1>
+        <p>الحل الأمثل لإدارة الطلاب والمعلمين والدفع والحضور بسهولة وفعالية</p>
+    </div>
+</section>
+
+<!-- ===== ENROLLMENT ===== -->
+<section id="enrollment" class="section section-white">
+    <div class="container">
+        <h2 class="section-title">شاشة تسجيل الطلاب الجديد</h2>
+        <p class="section-subtitle">عملية تسجيل شاملة وسهلة خطوة بخطوة</p>
+
+        <div class="row mt-5">
+            <div class="col-lg-6">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">البيانات الشخصية</div>
+                    <ul class="feature-list">
+                        <li>الاسم الكامل</li>
+                        <li>تاريخ الميلاد</li>
+                        <li>رقم الجوال</li>
+                        <li>البريد الإلكتروني</li>
+                        <li>المدينة والعنوان</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">اختيار الكورسات</div>
+                    <ul class="feature-list">
+                        <li>اختيار المسارات التعليمية</li>
+                        <li>عرض أسعار الكورسات</li>
+                        <li>عرض معلومات المدرسين</li>
+                        <li>معايير القبول</li>
+                        <li>الشروط والأحكام</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">اختيار المجموعات</div>
+                    <ul class="feature-list">
+                        <li>عرض المجموعات المتاحة</li>
+                        <li>جdول الحصص والأوقات</li>
+                        <li>مستوى الصعوبة</li>
+                        <li>عدد الطلاب الحالي</li>
+                        <li>اختيار مجموعات متعددة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-title">التأكيد والانتهاء</div>
+                    <ul class="feature-list">
+                        <li>عرض ملخص التسجيل</li>
+                        <li>الإجمالي النهائي</li>
+                        <li>الموافقة على الشروط</li>
+                        <li>تأكيد التسجيل</li>
+                        <li>استلام الباركود</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enrollment Features -->
+        <div class="row mt-5">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card-modern">
+                    <div class="card-icon" style="color: var(--primary);">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h4>الباركود الفريد</h4>
+                    <p>كل طالب يحصل على باركود خاص لا يتكرر يستخدمه في الحضور والدفع</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card-modern">
+                    <div class="card-icon" style="color: var(--primary);">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>وثيقة التسجيل</h4>
+                    <p>طباعة وثيقة رسمية تحتوي على بيانات الطالب والكورسات المسجلة</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card-modern">
+                    <div class="card-icon" style="color: var(--primary);">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h4>التنبيهات الفورية</h4>
+                    <p>إشعارات على الموبايل والبريد عند تأكيد التسجيل والبيانات الجديدة</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h5><i class="fas fa-check-circle"></i> مميزات التسجيل</h5>
+            <ul style="margin-top: 15px; margin-bottom: 0;">
+                <li>تسجيل الطالب لا يأخذ أكثر من 5 دقائق</li>
+                <li>إمكانية تعديل البيانات بعد التسجيل</li>
+                <li>حفظ تلقائي وآمن لجميع البيانات</li>
+                <li>البدء الفوري في الدراسة بعد التسجيل</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PAYMENT ===== -->
+<section id="payment" class="section section-light">
+    <div class="container">
+        <h2 class="section-title">نظام المدفوعات والأقساط</h2>
+        <p class="section-subtitle">منطق دقيق وعادل لحساب الأقساط</p>
+
+        <!-- Payment Calculation Logic -->
+        <div class="row mt-5 mb-5">
+            <div class="col-lg-12">
+                <div class="highlight-box" style="background: linear-gradient(135deg, rgba(46, 204, 113, 0.15), rgba(52, 152, 219, 0.15)); border-left-color: var(--success);">
+                    <h5 style="color: var(--success);"><i class="fas fa-calculator"></i> التسلسل الصحيح لحساب الأقساط</h5>
+                    <p style="margin-top: 15px; font-size: 1.05rem; font-weight: 600;">اتبع هذه الخطوات بترتيب صحيح لحساب القسط الشهري:</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculation Steps -->
+        <div class="row mb-5">
+            <div class="col-lg-6">
+                <div class="process-step" style="border-right-color: var(--success);">
+                    <div class="step-number" style="background: var(--success);">1</div>
+                    <div class="step-title">حساب إجمالي الكورسات</div>
+                    <p style="color: #666; margin-top: 10px;">جمع أسعار جميع الكورسات المختارة</p>
+                    <code style="display: block; background: var(--light); padding: 10px; border-radius: 8px; margin-top: 10px; color: var(--dark); font-weight: 600;">الإجمالي = مجموع أسعار الكورسات</code>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="process-step" style="border-right-color: var(--warning);">
+                    <div class="step-number" style="background: var(--warning);">2</div>
+                    <div class="step-title">تطبيق الخصم</div>
+                    <p style="color: #666; margin-top: 10px;">خصم أي عرض أو تخفيف من الإجمالي</p>
+                    <code style="display: block; background: var(--light); padding: 10px; border-radius: 8px; margin-top: 10px; color: var(--dark); font-weight: 600;">الصافي = الإجمالي - الخصم</code>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="process-step" style="border-right-color: var(--danger);">
+                    <div class="step-number" style="background: var(--danger);">3</div>
+                    <div class="step-title">خصم المقدم</div>
+                    <p style="color: #666; margin-top: 10px;">خصم المبلغ المدفوع فوراً عند التسجيل</p>
+                    <code style="display: block; background: var(--light); padding: 10px; border-radius: 8px; margin-top: 10px; color: var(--dark); font-weight: 600;">المتبقي = الصافي - المقدم</code>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="process-step" style="border-right-color: var(--primary);">
+                    <div class="step-number" style="background: var(--primary);">4</div>
+                    <div class="step-title">توزيع على الأقساط</div>
+                    <p style="color: #666; margin-top: 10px;">توزيع المتبقي فقط على عدد الأقساط</p>
+                    <code style="display: block; background: var(--light); padding: 10px; border-radius: 8px; margin-top: 10px; color: var(--dark); font-weight: 600;">القسط = المتبقي ÷ عدد الأقساط</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Important Note -->
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="highlight-box" style="background: linear-gradient(135deg, rgba(241, 196, 15, 0.15), rgba(230, 126, 34, 0.15)); border-left-color: var(--warning);">
+                    <h5 style="color: var(--warning);"><i class="fas fa-exclamation-triangle"></i> نقاط مهمة جداً</h5>
+                    <ul style="margin-top: 15px; margin-bottom: 0;">
+                        <li><strong>✓ المقدم لا يُعتبر قسط:</strong> المبلغ المدفوع عند التسجيل لا يدخل ضمن جدول الأقساط</li>
+                        <li><strong>✓ التوزيع على المتبقي فقط:</strong> توزيع الأقساط يتم على المبلغ المتبقي بعد خصم المقدم</li>
+                        <li><strong>✓ معالجة الكسور العشرية:</strong> في حالة وجود كسور يتم تعديل آخر قسط (إما زيادة أو نقصان)</li>
+                        <li><strong>✓ الشفافية التامة:</strong> يظهر للطالب تفصيل كامل لكيفية حساب كل قسط</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example Calculation -->
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h4 style="text-align: center; font-weight: 700; color: var(--dark); margin-bottom: 30px;">مثال عملي توضيحي</h4>
+                
+                <div class="calculation-box">
+                    <div class="calc-row">
+                        <div class="calc-label">الكورس الأول (لغة برمجة)</div>
+                        <div class="calc-value">1,500 ج.م</div>
+                    </div>
+                    <div class="calc-row">
+                        <div class="calc-label">الكورس الثاني (تطوير ويب)</div>
+                        <div class="calc-value">1,800 ج.م</div>
+                    </div>
+                    <div class="calc-row">
+                        <div class="calc-label">الكورس الثالث (قاعدة بيانات)</div>
+                        <div class="calc-value">1,200 ج.م</div>
+                    </div>
+                    <div class="calc-row" style="background: rgba(108, 99, 255, 0.05);">
+                        <div class="calc-label"><strong>الإجمالي الأولي</strong></div>
+                        <div class="calc-value" style="color: var(--dark);"><strong>4,500 ج.م</strong></div>
+                    </div>
+
+                    <div class="calc-row" style="border-bottom: 2px solid var(--primary);">
+                        <div class="calc-label">الخصم (10% عرض خاص)</div>
+                        <div class="calc-value" style="color: var(--danger);">-450 ج.م</div>
+                    </div>
+                    <div class="calc-row" style="background: rgba(108, 99, 255, 0.05);">
+                        <div class="calc-label"><strong>الصافي بعد الخصم</strong></div>
+                        <div class="calc-value" style="color: var(--dark);"><strong>4,050 ج.م</strong></div>
+                    </div>
+
+                    <div class="calc-row" style="border-bottom: 2px solid var(--danger);">
+                        <div class="calc-label"><span class="badge-custom badge-danger">مدفوع الآن</span> المقدم</div>
+                        <div class="calc-value" style="color: var(--success); font-weight: 700;">-1,000 ج.م</div>
+                    </div>
+                    <div class="calc-row" style="background: rgba(108, 99, 255, 0.05);">
+                        <div class="calc-label"><strong>المبلغ المتبقي</strong></div>
+                        <div class="calc-value" style="color: var(--dark);"><strong>3,050 ج.م</strong></div>
+                    </div>
+
+                    <div class="calc-row">
+                        <div class="calc-label">عدد الأقساط</div>
+                        <div class="calc-value">4 أقساط</div>
+                    </div>
+                    
+                    <div class="calc-total">
+                        <div class="label">قيمة القسط الشهري (3 أقساط ثابتة)</div>
+                        <div class="value">762.5 ج.م × 3</div>
+                    </div>
+                    
+                    <div style="background: rgba(231, 76, 60, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px; border-right: 4px solid var(--danger);">
+                        <p style="color: #333; margin: 0; font-weight: 600;">
+                            <i class="fas fa-info-circle" style="color: var(--danger);"></i> 
+                            القسط الرابع (الأخير): 762.5 ج.م <span style="color: var(--danger);">(لا كسور)</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 25px;">
+                    <h5><i class="fas fa-check"></i> ملخص المثال</h5>
+                    <ul style="margin-top: 15px; margin-bottom: 0;">
+                        <li><strong>المقدم (مدفوع عند التسجيل):</strong> 1,000 ج.م ✓</li>
+                        <li><strong>عدد الأقساط:</strong> 4 أقساط متساوية</li>
+                        <li><strong>قيمة كل قسط:</strong> 762.5 ج.م</li>
+                        <li><strong>إجمالي الأقساط:</strong> 3,050 ج.م</li>
+                        <li><strong>إجمالي المبلغ (مقدم + أقساط):</strong> 4,050 ج.م ✓</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Options -->
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <h4 style="font-weight: 700; color: var(--dark); margin-bottom: 30px; text-align: center;">خيارات الدفع المتاحة</h4>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card-modern">
+                    <div class="card-icon" style="color: var(--success);">
+                        <i class="fas fa-money-bill"></i>
+                    </div>
+                    <h4>الدفع النقدي</h4>
+                    <p>دفع مباشر عند مكتب المدرسة دون رسوم إضافية</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card-modern">
+                    <div class="card-icon" style="color: var(--primary);">
+                        <i class="fas fa-bank"></i>
+                    </div>
+                    <h4>التحويل البنكي</h4>
+                    <p>تحويل آمن إلى حساب المدرسة البنكي المعروف</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card-modern">
+                    <div class="card-icon" style="color: var(--warning);">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h4>المحافظ الرقمية</h4>
+                    <p>فودافون كاش أو WE كاش أو Etisalat Cash</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Tracking -->
+        <div class="table-modern">
+            <h5 style="padding: 20px 20px 0; color: var(--dark);">مثال على جدول الأقساط</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>رقم القسط</th>
+                        <th>تاريخ الاستحقاق</th>
+                        <th>المبلغ</th>
+                        <th>الحالة</th>
+                        <th>التصرف</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>أول مارس 2026</td>
+                        <td><strong style="color: var(--success);">762.5 ج.م</strong></td>
+                        <td><span class="badge-custom badge-success">مدفوع</span></td>
+                        <td><i class="fas fa-check" style="color: var(--success); font-size: 1.2rem;"></i></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>أول أبريل 2026</td>
+                        <td><strong>762.5 ج.م</strong></td>
+                        <td><span class="badge-custom badge-warning">قريب الاستحقاق</span></td>
+                        <td><button class="btn btn-sm" style="background: var(--warning); color: white; border: none; padding: 5px 10px; border-radius: 5px;">ادفع الآن</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>أول مايو 2026</td>
+                        <td><strong>762.5 ج.م</strong></td>
+                        <td><span class="badge-custom badge-primary">لم يستحق</span></td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>أول يونيو 2026</td>
+                        <td><strong>762.5 ج.م</strong></td>
+                        <td><span class="badge-custom badge-primary">لم يستحق</span></td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ATTENDANCE ===== -->
+<section id="attendance" class="section section-white">
+    <div class="container">
+        <h2 class="section-title">نظام الحضور والغياب</h2>
+        <p class="section-subtitle">تتبع دقيق وسريع لحضور الطلاب</p>
+
+        <div class="row mt-5">
+            <div class="col-lg-6">
+                <h4 style="font-weight: 700; color: var(--dark); margin-bottom: 25px;">طرق تسجيل الحضور</h4>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h5><i class="fas fa-barcode" style="color: var(--primary); margin-left: 10px;"></i> 1. قراءة الباركود</h5>
+                        <p>المدرس يقرأ باركود الطالب من البطاقة باستخدام ماسح ضوئي أو كاميرا الموبايل</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5><i class="fas fa-keyboard" style="color: var(--primary); margin-left: 10px;"></i> 2. الإدخال اليدوي</h5>
+                        <p>كتابة رقم الطالب أو الاسم يدوياً عند عدم توفر ماسح ضوئي</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5><i class="fas fa-check-square" style="color: var(--primary); margin-left: 10px;"></i> 3. التحديد من القائمة</h5>
+                        <p>اختيار أسماء الطلاب الحاضرين من قائمة الأسماء الكاملة</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <h4 style="font-weight: 700; color: var(--dark); margin-bottom: 25px;">مميزات النظام</h4>
+                <ul class="feature-list">
+                    <li>تسجيل الحضور في ثانية واحدة</li>
+                    <li>اكتشاف تلقائي للحضور المكرر</li>
+                    <li>سجل كامل لكل طالب</li>
+                    <li>تقارير الحضور الشهرية</li>
+                    <li>إشعارات الغياب التلقائية</li>
+                    <li>توقيع المدرس الرقمي</li>
+                    <li>موقع الجلسة والوقت</li>
+                    <li>إحصائيات الحضور للطالب</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Barcode Features -->
+        <div class="row mt-5">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card-modern">
+                    <div class="card-icon" style="color: var(--primary);">
+                        <i class="fas fa-qrcode" style="font-size: 3.5rem;"></i>
+                    </div>
+                    <h4>الباركود الفريد</h4>
+                    <p>كل طالب باركود خاص فريد لا يمكن تكراره أبداً</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card-modern">
+                    <div class="card-icon" style="color: var(--primary);">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h4>بطاقة الطالب</h4>
+                    <p>طباعة بطاقة بلاستيكية تحتوي على الباركود وبيانات الطالب</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card-modern">
+                    <div class="card-icon" style="color: var(--primary);">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>قراءة من الموبايل</h4>
+                    <p>استخدام تطبيق الموبايل لقراءة الباركود بكل سهولة</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h5><i class="fas fa-chart-line"></i> تقارير الحضور</h5>
+            <p style="margin-top: 15px;">يمكن الحصول على تقارير شاملة تتضمن:</p>
+            <ul style="margin-top: 10px; margin-bottom: 0;">
+                <li>عدد الحصص الإجمالي لكل طالب</li>
+                <li>عدد مرات الحضور والغياب</li>
+                <li>نسبة الحضور المئوية</li>
+                <li>تواريخ الحضور والغياب</li>
+                <li>تنبيهات عند انخفاض النسبة عن 75%</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SESSIONS ===== -->
+<section id="sessions" class="section section-light">
+    <div class="container">
+        <h2 class="section-title">إدارة الجلسات والحصص</h2>
+        <p class="section-subtitle">نظام متطور لإدارة وتنظيم جميع الجلسات</p>
+
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <h4 style="font-weight: 700; color: var(--dark); margin-bottom: 30px;">مراحل الجلسة الكاملة</h4>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h5>المرحلة 1: الإنشاء والتحضير</h5>
+                        <p>المدرس ينشئ جلسة جديدة مع تحديد التاريخ والوقت والموضوع والمجموعة المعنية</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>المرحلة 2: رفع المواد</h5>
+                        <p>إضافة الملفات والفيديوهات والمواد التعليمية المطلوبة للجلسة</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>المرحلة 3: الإشعارات</h5>
+                        <p>إرسال إشعارات تلقائية لجميع الطلاب والآباء بتفاصيل الجلسة</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>المرحلة 4: الحضور</h5>
+                        <p>تسجيل حضور الطلاب وغيابهم من خلال الباركود أو يدوياً</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>المرحلة 5: التقييم</h5>
+                        <p>تقييم أداء كل طالب على معايير: الالتزام والتركيز والمشاركة</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>المرحلة 6: الملخص</h5>
+                        <p>إرسال ملخص الجلسة والدرجات لكل طالب وولي أمره</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Session Evaluation -->
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <h4 style="font-weight: 700; color: var(--dark); margin-bottom: 30px; text-align: center;">معايير التقييم بكل جلسة</h4>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card-modern">
+                    <div class="card-icon" style="color: var(--primary);">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>الالتزام</h4>
+                    <p style="color: #666;">مدى انتظام الطالب والقدوم في الوقت المحدد والعودة في الموعد</p>
+                    <div style="background: var(--light); padding: 12px; border-radius: 8px; margin-top: 15px; text-align: center; font-weight: 700; color: var(--primary);">
+                        درجة من 5
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card-modern">
+                    <div class="card-icon" style="color: var(--primary);">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>التركيز</h4>
+                    <p style="color: #666;">مدى تركيز الطالب واهتمامه بالمحتوى وعدم الانشغال</p>
+                    <div style="background: var(--light); padding: 12px; border-radius: 8px; margin-top: 15px; text-align: center; font-weight: 700; color: var(--primary);">
+                        درجة من 5
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card-modern">
+                    <div class="card-icon" style="color: var(--primary);">
+                        <i class="fas fa-hand-paper"></i>
+                    </div>
+                    <h4>المشاركة</h4>
+                    <p style="color: #666;">مستوى تفاعل الطالب والمشاركة في النقاشات والأنشطة</p>
+                    <div style="background: var(--light); padding: 12px; border-radius: 8px; margin-top: 15px; text-align: center; font-weight: 700; color: var(--primary);">
+                        درجة من 5
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box" style="margin-top: 30px;">
+            <h5><i class="fas fa-info-circle"></i> ملاحظات مهمة عن الجلسات</h5>
+            <ul style="margin-top: 15px; margin-bottom: 0;">
+                <li>كل جلسة تحصل على رقم فريد لا يتكرر</li>
+                <li>النظام يمنع تضارب الجدول للمدرس والمجموعة الواحدة</li>
+                <li>التقييمات تُحفظ وتُعرض للطالب وولي الأمر</li>
+                <li>إمكانية تحميل التقارير والملفات بصيغة PDF</li>
+                <li>تنبيهات تلقائية في حالة غياب الطالب</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA SECTION ===== -->
+<section class="section" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; text-align: center; padding: 60px 20px;">
+    <div class="container">
+        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">هل أنت مستعد للبدء؟</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 30px;">انضم الآن وادير مدرستك بكفاءة تامة</p>
+        <button class="btn" style="background: white; color: var(--primary); padding: 15px 40px; border-radius: 50px; border: none; font-weight: 700; font-size: 1.1rem; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+            ابدأ مجاناً الآن
+        </button>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <p style="font-size: 1.3rem; font-weight: 700;"><i class="fas fa-graduation-cap"></i> نظام إدارة المدارس الذكية</p>
+        <p>الحل الأمثل الشامل لإدارة المؤسسات التعليمية: الطلاب والمعلمين والدفع والحضور والتقارير</p>
+        <p style="margin-top: 20px; opacity: 0.7; font-size: 0.9rem;">© 2026 جميع الحقوق محفوظة | تصميم وتطوير احترافي</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Navbar animation
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar-custom');
+        if (window.scrollY > 50) {
+            navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,0.15)';
+        } else {
+            navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+        }
+    });
+
+    // Intersection observer for animations
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.card-modern, .process-step, .timeline-item, .calculation-box, .highlight-box').forEach(el => {
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'title' => 'تقرير حركة الخزينة',
+    'navigation_label' => 'تقرير الخزينة',
+    'navigation_group' => 'التقارير',
+    'options_heading' => 'خيارات التقرير',
+    'vault' => 'اختر الخزينة',
+    'from_date' => 'من تاريخ',
+    'to_date' => 'إلى تاريخ',
+    'generate' => 'إنشاء التقرير',
+    'print' => 'طباعة',
+    'opening_balance' => 'الرصيد الافتتاحي',
+    'closing_balance' => 'الرصيد الختامي',
+    'total_income' => 'إجمالي الإيرادات',
+    'total_expenses' => 'إجمالي المصروفات',
+    'transactions' => 'العمليات المالية',
+    'no_transactions' => 'لا توجد عمليات في هذه الفترة',
+    'date' => 'التاريخ',
+    'type' => 'نوع العملية',
+    'reference' => 'المرجع',
+    'description' => 'البيان',
+    'amount' => 'المبلغ',
+    'print_date' => 'تاريخ الطباعة',
+    'created_by' => 'تم الإنشاء بواسطة',
+    'system_name' => 'النظام الأساسي لإدارة المدارس',
+];

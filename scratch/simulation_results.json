@@ -1,0 +1,164 @@
+{
+    "timestamp": "2026-10-25T18:34:42+03:00",
+    "total_operations": 18,
+    "passed": 18,
+    "failed": 0,
+    "operations": [
+        {
+            "id": "OP-01",
+            "title": "Student Registration with Guardian Separation",
+            "status": "PASS",
+            "student_id": 200,
+            "student_code": "STD-SIM-1792942475",
+            "father_phone": null,
+            "mother_phone": null
+        },
+        {
+            "id": "OP-02",
+            "title": "Course Enrollment & Group Assignment with Capacity",
+            "status": "PASS",
+            "enrollment_id": 252,
+            "group_capacity_before": 38,
+            "group_capacity_after": 39
+        },
+        {
+            "id": "OP-03",
+            "title": "Initial Down Payment Processing via Vault",
+            "status": "PASS",
+            "payment_id": 247,
+            "receipt_code": "PAY-DWN-1792942476",
+            "vault_balance_before": 173608.32,
+            "vault_balance_after": 174608.32,
+            "net_vault_increase": 1000
+        },
+        {
+            "id": "OP-04",
+            "title": "Installment Schedule Generation & Balance Reconciliation",
+            "status": "PASS",
+            "inst1_id": 330,
+            "inst1_due": "2026-10-19T21:00:00.000000Z",
+            "inst1_is_overdue": true,
+            "inst2_id": 331,
+            "inst2_is_future": true
+        },
+        {
+            "id": "OP-05",
+            "title": "Partial Payment Allocation against Overdue Installment",
+            "status": "PASS",
+            "payment_id": 248,
+            "inst1_paid": "400.00",
+            "inst1_remaining": 500,
+            "inst1_status": "partial"
+        },
+        {
+            "id": "OP-06",
+            "title": "Full Installment Settlement & Scope Exclusion",
+            "status": "PASS",
+            "inst1_status": "paid",
+            "is_fully_paid": true,
+            "is_in_open_scope": false,
+            "is_in_overdue_scope": false
+        },
+        {
+            "id": "OP-07",
+            "title": "Second Course Enrollment (Multi-Course Isolation)",
+            "status": "PASS",
+            "second_enrollment_id": 253,
+            "total_student_enrollments": 2
+        },
+        {
+            "id": "OP-08",
+            "title": "Attendance Session Logging with Discrete Statuses",
+            "status": "present",
+            "session_id": 259,
+            "attendance_record_id": 649
+        },
+        {
+            "id": "OP-09",
+            "title": "Homework Assignment, Student Submission & Evaluation",
+            "status": "PASS",
+            "assignment_id": 65,
+            "submission_id": 200,
+            "score": 19,
+            "images_count": 2
+        },
+        {
+            "id": "OP-10",
+            "title": "Examination Attempts & Mathematical Threshold Evaluation",
+            "status": "PASS",
+            "exam_id": 109,
+            "attempt_id": 205,
+            "score": "50.00",
+            "passed": true,
+            "triggers_low_grade_alert": false
+        },
+        {
+            "id": "OP-11",
+            "title": "Academic Follow-up Task Logging and State Transitions",
+            "status": "PASS",
+            "task_id": 18,
+            "initial_status": "جديدة",
+            "final_status": "تم التواصل"
+        },
+        {
+            "id": "OP-12",
+            "title": "Educational Supervision Observation and Official Publication",
+            "status": "published",
+            "supervisor_id": 4,
+            "report_id": 6
+        },
+        {
+            "id": "OP-13",
+            "title": "Instructor Salary Entitlement & Vault Disbursement",
+            "status": "PASS",
+            "salary_id": 26,
+            "amount": "800.00",
+            "vault_balance_before": 175008.32,
+            "vault_balance_after": 174208.32,
+            "net_deduction": 800
+        },
+        {
+            "id": "OP-14",
+            "title": "Vault Inter-Transfer & Balance Conservation",
+            "status": "PASS",
+            "transfer_id": 23,
+            "amount": "1500.00",
+            "from_vault_diff": 1500,
+            "to_vault_diff": 1500
+        },
+        {
+            "id": "OP-15",
+            "title": "Enrollment Cancellation with Multi-Course Protection",
+            "status": "PASS",
+            "canceled_enrollment_status": "cancelled",
+            "second_enrollment_status": "active",
+            "group_capacity_restored": true
+        },
+        {
+            "id": "OP-16",
+            "title": "Financial Settlement & Waived Installment Scope Exclusion",
+            "status": "PASS",
+            "inst2_status": "waived",
+            "is_in_overdue_scope": false,
+            "is_in_open_scope": false
+        },
+        {
+            "id": "OP-17",
+            "title": "Refund Execution with Anti-Duplication Protection",
+            "status": "PASS",
+            "cancellation_id": 69,
+            "refunded_amount": "400.00",
+            "vault_deduction": 0,
+            "anti_duplication_blocked": true
+        },
+        {
+            "id": "OP-18",
+            "title": "Payment Soft-Delete Reversal and Balance Restoration",
+            "status": "PASS",
+            "payment_id": 250,
+            "receipt_code": "PAY-REV-1792942480",
+            "is_soft_deleted": true,
+            "still_in_database": true
+        }
+    ]
+}

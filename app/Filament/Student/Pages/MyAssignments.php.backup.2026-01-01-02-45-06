@@ -1,0 +1,266 @@
+<?php
+
+namespace App\Filament\Student\Pages;
+
+use BackedEnum;
+use Filament\Forms;
+use Filament\Tables;
+use Filament\Pages\Page;
+use App\Models\Assignment;
+use App\Models\Enrollment;
+use Filament\Tables\Table;
+use Filament\Actions\Action;
+use App\Models\AssignmentSubmission;
+use Filament\Tables\Contracts\HasTable;
+use Illuminate\Support\Facades\Storage;
+use Filament\Notifications\Notification;
+use Filament\Tables\Concerns\InteractsWithTable;
+
+class MyAssignments extends Page implements HasTable
+{
+    use InteractsWithTable;
+
+    protected string $view = 'filament.student.pages.my-assignments';
+
+    protected static string | BackedEnum | null $navigationIcon = 'heroicon-o-clipboard-document-list';
+    
+    protected static ?int $navigationSort = 30;
+
+    public static function getNavigationLabel(): string
+    {
+        return __('واجباتي');
+    }
+
+    public function getTitle(): string
+    {
+        return __('واجباتي');
+    }
+
+    public function getHeading(): string
+    {
+        return __('واجباتي والتسليمات');
+    }
+
+    public function table(Table $table): Table
+    {
+        $student = auth()->user()->student;
+        
+        // Get all group IDs the student is enrolled in
+        $groupIds = Enrollment::where('student_id', $student?->id)
+            ->where('status', 'active')
+            ->pluck('group_id');
+
+        return $table
+            ->query(
+                Assignment::query()
+                    ->whereIn('group_id', $groupIds)
+                    ->with(['group.course', 'submissions' => function ($q) use ($student) {
+                        $q->where('student_id', $student?->id);
+                    }])
+                    ->orderBy('due_date', 'desc')
+            )
+            ->columns([
+                Tables\Columns\TextColumn::make('title')
+                    ->label(__('عنوان الواجب'))
+                    ->searchable()
+                    ->weight('bold')
+                    ->icon('heroicon-o-clipboard-document-list')
+                    ->color('primary'),
+
+                Tables\Columns\TextColumn::make('group.course.name')
+                    ->label(__('الكورس'))
+                    ->badge()
+                    ->color('info'),
+
+                Tables\Columns\TextColumn::make('group.name')
+                    ->label(__('المجموعة'))
+                    ->badge()
+                    ->color('success'),
+
+                Tables\Columns\TextColumn::make('due_date')
+                    ->label(__('تاريخ التسليم'))
+                    ->date('d/m/Y')
+                    ->sortable()
+                    ->icon('heroicon-o-calendar')
+                    ->color(fn ($state) => $state && $state->isPast() ? 'danger' : 'gray'),
+
+                Tables\Columns\TextColumn::make('max_grade')
+                    ->label(__('الدرجة الكلية'))
+                    ->badge()
+                    ->color('warning'),
+
+                Tables\Columns\TextColumn::make('status')
+                    ->label(__('حالة التسليم'))
+                    ->formatStateUsing(function ($record) use ($student) {
+                        $submission = $record->submissions->first();
+                        
+                        if (!$submission) {
+                            if ($record->due_date && $record->due_date->isPast()) {
+                                return 'متأخر';
+                            }
+                            return 'لم يتم التسليم';
+                        }
+                        
+                        if ($submission->graded) {
+                            return 'تم التقييم';
+                        }
+                        
+                        return 'تم التسليم';
+                    })
+                    ->badge()
+                    ->color(function ($record) use ($student) {
+                        $submission = $record->submissions->first();
+                        
+                        if (!$submission) {
+                            if ($record->due_date && $record->due_date->isPast()) {
+                                return 'danger';
+                            }
+                            return 'warning';
+                        }
+                        
+                        if ($submission->graded) {
+                            return 'success';
+                        }
+                        
+                        return 'info';
+                    }),
+
+                Tables\Columns\TextColumn::make('grade')
+                    ->label(__('درجتي'))
+                    ->formatStateUsing(function ($record) use ($student) {
+                        $submission = $record->submissions->first();
+                        
+                        if (!$submission || !$submission->graded) {
+                            return '-';
+                        }
+                        
+                        $grade = $submission->grade ?? 0;
+                        $max = $record->max_grade;
+                        $percentage = $max > 0 ? round(($grade / $max) * 100) : 0;
+                        
+                        return "{$grade} / {$max} ({$percentage}%)";
+                    })
+                    ->badge()
+                    ->color(function ($record) use ($student) {
+                        $submission = $record->submissions->first();
+                        
+                        if (!$submission || !$submission->graded) {
+                            return 'gray';
+                        }
+                        
+                        $percentage = $record->max_grade > 0 
+                            ? round(($submission->grade / $record->max_grade) * 100) 
+                            : 0;
+                        
+                        return match (true) {
+                            $percentage >= 90 => 'success',
+                            $percentage >= 75 => 'info',
+                            $percentage >= 60 => 'warning',
+                            default => 'danger',
+                        };
+                    }),
+            ])
+            ->filters([
+                Tables\Filters\SelectFilter::make('group_id')
+                    ->label(__('المجموعة'))
+                    ->relationship('group', 'name'),
+                    
+                Tables\Filters\Filter::make('submitted')
+                    ->label(__('تم التسليم'))
+                    ->query(function ($query) use ($student) {
+                        return $query->whereHas('submissions', function ($q) use ($student) {
+                            $q->where('student_id', $student->id);
+                        });
+                    }),
+                    
+                Tables\Filters\Filter::make('not_submitted')
+                    ->label(__('لم يتم التسليم'))
+                    ->query(function ($query) use ($student) {
+                        return $query->whereDoesntHave('submissions', function ($q) use ($student) {
+                            $q->where('student_id', $student->id);
+                        });
+                    }),
+
+                Tables\Filters\Filter::make('overdue')
+                    ->label(__('متأخر'))
+                    ->query(function ($query) use ($student) {
+                        return $query->where('due_date', '<', now())
+                            ->whereDoesntHave('submissions', function ($q) use ($student) {
+                                $q->where('student_id', $student->id);
+                            });
+                    }),
+            ])
+            ->actions([
+                Action::make('submit')
+                    ->label(__('رفع التسليم'))
+                    ->icon('heroicon-o-arrow-up-tray')
+                    ->color('success')
+                    ->visible(function ($record) use ($student) {
+                        $submission = $record->submissions->first();
+                        return !$submission; // Show only if not submitted yet
+                    })
+                    ->form([
+                        Forms\Components\FileUpload::make('file_path')
+                            ->label(__('ملف التسليم'))
+                            ->required()
+                            ->maxSize(10240) // 10MB
+                            ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/*'])
+                            ->directory('assignments/submissions'),
+                            
+                        Forms\Components\Textarea::make('notes')
+                            ->label(__('ملاحظات'))
+                            ->rows(3),
+                    ])
+                    ->action(function ($record, array $data) use ($student) {
+                        AssignmentSubmission::create([
+                            'assignment_id' => $record->id,
+                            'student_id' => $student->id,
+                            'file_path' => $data['file_path'],
+                            'notes' => $data['notes'] ?? null,
+                            'submitted_at' => now(),
+                            'graded' => false,
+                        ]);
+
+                        Notification::make()
+                            ->success()
+                            ->title(__('تم رفع التسليم بنجاح'))
+                            ->send();
+                    }),
+
+                Action::make('view_submission')
+                    ->label(__('عرض التسليم'))
+                    ->icon('heroicon-o-eye')
+                    ->color('info')
+                    ->visible(function ($record) use ($student) {
+                        $submission = $record->submissions->first();
+                        return $submission !== null;
+                    })
+                    ->modalHeading(fn ($record) => __('تسليم') . ': ' . $record->title)
+                    ->modalContent(function ($record) use ($student) {
+                        $submission = $record->submissions->first();
+                        return view('filament.student.pages.submission-details-modal', [
+                            'assignment' => $record,
+                            'submission' => $submission,
+                        ]);
+                    })
+                    ->modalWidth('3xl')
+                    ->modalSubmitAction(false)
+                    ->modalCancelActionLabel(__('إغلاق')),
+
+                Action::make('view_details')
+                    ->label(__('التفاصيل'))
+                    ->icon('heroicon-o-information-circle')
+                    ->color('gray')
+                    ->modalHeading(fn ($record) => $record->title)
+                    ->modalContent(fn ($record) => view('filament.student.pages.assignment-details-modal', [
+                        'assignment' => $record,
+                    ]))
+                    ->modalWidth('3xl')
+                    ->modalSubmitAction(false)
+                    ->modalCancelActionLabel(__('إغلاق')),
+            ])
+            ->emptyStateHeading(__('لا توجد واجبات'))
+            ->emptyStateDescription(__('لا توجد واجبات متاحة حالياً'))
+            ->emptyStateIcon('heroicon-o-clipboard-document-list');
+    }
+}

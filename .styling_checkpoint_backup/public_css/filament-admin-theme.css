@@ -1,0 +1,200 @@
+/* Clean & Modern Admin Theme for Filament v4 */
+/* نسخة مبسطة وآمنة - لا تسبب مشاكل في العرض */
+
+/* ===== DROPDOWN FIXES ===== */
+.fi-dropdown-panel {
+    z-index: 9999 !important;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* ===== SIDEBAR - خلفية زرقاء مع نصوص بيضاء ===== */
+aside.fi-sidebar,
+.fi-sidebar,
+[x-data*="sidebar"],
+nav.fi-sidebar {
+    background: #1e40af !important;
+    background: linear-gradient(180deg, #1e40af 0%, #1e3a8a 100%) !important;
+    border-right-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark aside.fi-sidebar,
+.dark .fi-sidebar,
+.dark [x-data*="sidebar"],
+.dark nav.fi-sidebar {
+    background: #1e40af !important;
+    background: linear-gradient(180deg, #1e40af 0%, #1e3a8a 100%) !important;
+}
+
+/* Force sidebar background on all child elements */
+.fi-sidebar * {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Sidebar text colors - النصوص بيضاء */
+.fi-sidebar .fi-sidebar-item-button,
+.fi-sidebar .fi-sidebar-item-label,
+.fi-sidebar .fi-sidebar-group-label,
+.fi-sidebar .fi-sidebar-nav-item,
+.fi-sidebar a,
+.fi-sidebar span,
+.fi-sidebar button {
+    color: white !important;
+}
+
+/* Sidebar icons */
+.fi-sidebar .fi-sidebar-item-icon,
+.fi-sidebar svg,
+.fi-sidebar .fi-icon {
+    color: rgba(255, 255, 255, 0.9) !important;
+    fill: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Sidebar group labels */
+.fi-sidebar .fi-sidebar-group-label {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* Hover state - عند المرور */
+.fi-sidebar .fi-sidebar-item-button:hover,
+.fi-sidebar button:hover,
+.fi-sidebar a:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+}
+
+.fi-sidebar .fi-sidebar-item-button:hover .fi-sidebar-item-icon,
+.fi-sidebar .fi-sidebar-item-button:hover svg,
+.fi-sidebar button:hover svg {
+    color: white !important;
+    fill: white !important;
+}
+
+/* Active state - العنصر النشط */
+.fi-sidebar .fi-sidebar-item-button.fi-active,
+.fi-sidebar .fi-sidebar-item.fi-sidebar-item-active > a,
+.fi-sidebar .fi-sidebar-item.fi-sidebar-item-active > button,
+.fi-sidebar .fi-sidebar-item-active > a,
+.fi-sidebar .fi-sidebar-item-active > button,
+.fi-sidebar .fi-sidebar-item-button[aria-current="page"],
+.fi-sidebar a[aria-current="page"],
+.fi-sidebar button[aria-current="page"],
+.fi-sidebar button.fi-active,
+.fi-sidebar a.fi-active {
+    background: #ffffff !important;
+    border-inline-start: 4px solid #f59e0b !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
+}
+
+.fi-sidebar .fi-sidebar-item-button.fi-active *,
+.fi-sidebar .fi-sidebar-item.fi-sidebar-item-active *,
+.fi-sidebar .fi-sidebar-item-active > a *,
+.fi-sidebar .fi-sidebar-item-active > button *,
+.fi-sidebar a[aria-current="page"] *,
+.fi-sidebar button[aria-current="page"] * {
+    color: #1e3a8a !important;
+    fill: #1e3a8a !important;
+    font-weight: 750 !important;
+}
+
+/* Sidebar header (logo area) */
+.fi-sidebar-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+}
+
+.fi-sidebar-header a,
+.fi-sidebar-header span {
+    color: white !important;
+    font-weight: 700;
+}
+
+/* Sidebar footer */
+.fi-sidebar-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Sidebar collapsed state */
+.fi-sidebar.fi-collapsed .fi-sidebar-item-label {
+    color: white !important;
+}
+
+/* Sidebar user menu */
+.fi-sidebar .fi-user-menu-button {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+}
+
+.fi-sidebar .fi-user-menu-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.fi-sidebar .fi-user-name,
+.fi-sidebar .fi-user-email {
+    color: white !important;
+}
+
+/* Sidebar badges */
+.fi-sidebar .fi-badge {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: 600;
+}
+
+/* ===== CARDS ===== */
+.fi-section,
+.fi-wi-stats-overview-stat {
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== BUTTONS ===== */
+.fi-btn-primary {
+    background: linear-gradient(90deg, #1e40af 0%, #1e3a8a 100%);
+    border: none;
+}
+
+.fi-btn-primary:hover {
+    background: linear-gradient(90deg, #1e3a8a 0%, #1e293b 100%);
+}
+
+/* ===== NOTIFICATIONS ===== */
+.fi-notification-success {
+    border-left: 4px solid #10b981;
+}
+
+.fi-notification-error {
+    border-left: 4px solid #ef4444;
+}
+
+.fi-notification-warning {
+    border-left: 4px solid #f59e0b;
+}
+
+.fi-notification-info {
+    border-left: 4px solid #3b82f6;
+}
+
+/* ===== SCROLLBAR للـ SIDEBAR ===== */
+.fi-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.fi-sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.fi-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.fi-sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}

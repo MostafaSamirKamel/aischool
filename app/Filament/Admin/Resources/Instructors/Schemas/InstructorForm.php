@@ -1,0 +1,275 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Instructors\Schemas;
+
+use Filament\Schemas\Schema;
+use App\Services\NationalIdParser;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\RichEditor;
+use Filament\Schemas\Components\Utilities\Set;
+
+class InstructorForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->columns(2)
+            ->components([
+                Section::make('معلومات الحساب')
+                    ->description('سيتم إنشاء حساب مستخدم تلقائياً للمدرس')
+                    ->schema([
+                        TextInput::make('user_name')
+                            ->label(__('filament/admin/instructor_resource.user_name'))
+                            ->required()
+                            ->maxLength(255)
+                            ->placeholder('أدخل اسم المدرس الكامل')
+                            ->columnSpan(1),
+
+                        TextInput::make('user_username')
+                            ->label(__('filament/admin/instructor_resource.user_username'))
+                            ->unique('users', 'username', modifyRuleUsing: function ($rule, $get, $record) {
+                                return $record ? $rule->ignore($record->user_id, 'id') : $rule;
+                            })
+                            ->alphaNum()
+                            ->helperText('يمكن استخدامه لتسجيل الدخول (اختياري)')
+                            ->maxLength(255)
+                            ->columnSpan(1),
+
+                        TextInput::make('user_email')
+                            ->label(__('filament/admin/instructor_resource.user_email'))
+                            ->email()
+                            ->required()
+                            ->unique('users', 'email', modifyRuleUsing: function ($rule, $get, $record) {
+                                return $record ? $rule->ignore($record->user_id, 'id') : $rule;
+                            })
+                            ->maxLength(255)
+                            ->placeholder('example@email.com')
+                            ->columnSpan(1),
+
+                        TextInput::make('user_password')
+                            ->label(__('filament/admin/instructor_resource.user_password'))
+                            ->password()
+                            ->required(fn($context) => $context === 'create')
+                            ->dehydrated(fn($state) => filled($state))
+                            ->minLength(8)
+                            ->placeholder('على الأقل 8 أحرف')
+                            ->helperText('اتركه فارغاً إذا كنت لا تريد تغيير كلمة المرور')
+                            ->columnSpan(1),
+
+                        TextInput::make('user_phone')
+                            ->label(__('filament/admin/instructor_resource.user_phone'))
+                            ->tel()
+                            ->maxLength(20)
+                            ->columnSpan(1),
+                    ])
+                    ->columns(2),
+
+                Section::make('البيانات الشخصية')
+                    ->schema([
+                        TextInput::make('national_id')
+                            ->label(__('filament/admin/instructor_resource.national_id'))
+                            ->maxLength(14)
+                            ->unique('instructors', 'national_id', modifyRuleUsing: function ($rule, $get, $record) {
+                                return $record ? $rule->ignore($record->id) : $rule;
+                            })
+                            ->lazy()
+                            ->afterStateUpdated(function (Set $set, ?string $state) {
+                                if (!empty($state) && strlen($state) === 14) {
+                                    $parsed = NationalIdParser::parse($state);
+                                    if ($parsed) {
+                                        $set('birth_date', $parsed['birth_date']);
+                                        $set('gender', $parsed['gender']);
+                                        $set('governorate', $parsed['governorate_name']);
+                                    }
+                                }
+                            })
+                            ->helperText('سيتم استخراج تاريخ الميلاد والجنس والمحافظة تلقائياً عند الخروج من الحقل')
+                            ->columnSpanFull(),
+
+                        DatePicker::make('birth_date')
+                            ->label(__('filament/admin/instructor_resource.birth_date'))
+                            ->maxDate(now())
+                            ->columnSpan(1)
+                            ->live(onBlur: true)
+                            ->afterStateUpdated(function (Set $set, $state) {
+                                if ($state) {
+                                    $birthDate = \Carbon\Carbon::parse($state);
+                                    $now = now();
+                                    $diff = $birthDate->diff($now);
+                                    $age = sprintf('%d سنة و %d شهر و %d يوم', $diff->y, $diff->m, $diff->d);
+                                    $set('age_display', $age);
+                                }
+                            }),
+
+                        TextInput::make('age_display')
+                            ->label(__('filament/admin/instructor_resource.age_display'))
+                            ->disabled()
+                            ->dehydrated(false)
+                            ->default(function ($record) {
+                                return $record?->age;
+                            })
+                            ->placeholder('سيتم حسابه تلقائياً')
+                            ->columnSpan(1),
+
+                        Select::make('gender')
+                            ->label(__('filament/admin/instructor_resource.gender'))
+                            ->options(['male' => __('filament/admin/instructor_resource.gender.male'), 'female' => __('filament/admin/instructor_resource.gender.female')])
+                            ->columnSpan(1),
+
+                        TextInput::make('governorate')
+                            ->label(__('filament/admin/instructor_resource.governorate'))
+                            ->maxLength(255)
+                            ->columnSpan(1),
+                    ])
+                    ->columns(3),
+
+                Section::make('المعلومات الأساسية')
+                    ->schema([
+                        TextInput::make('employee_code')
+                            ->label(__('filament/admin/instructor_resource.employee_code'))
+                            ->required()
+                            ->unique('instructors', 'employee_code', modifyRuleUsing: function ($rule, $get, $record) {
+                                return $record ? $rule->ignore($record->id) : $rule;
+                            })
+                            ->maxLength(50)
+                            ->default(function () {
+                                $lastInstructor = \App\Models\Instructor::withTrashed()->latest('id')->first();
+                                $nextNumber = $lastInstructor ? ($lastInstructor->id + 1) : 1;
+                                return 'INS-' . str_pad($nextNumber, 5, '0', STR_PAD_LEFT);
+                            })
+                            ->disabled()
+                            ->dehydrated()
+                            ->columnSpan(1),
+                            
+                        Select::make('department_id')
+                            ->label(__('filament/admin/instructor_resource.department_id'))
+                            ->relationship('department', 'name', fn($query) => $query->where('is_active', true))
+                            ->searchable()
+                            ->preload()
+                            ->columnSpan(1),
+                            
+                        TextInput::make('specialization')
+                            ->label(__('filament/admin/instructor_resource.specialization'))
+                            ->maxLength(255)
+                            ->columnSpan(1),
+                    ])
+                    ->columns(2),
+
+                Section::make('المعلومات المهنية')
+                    ->schema([
+                        RichEditor::make('bio')
+                            ->label(__('filament/admin/instructor_resource.bio'))
+                            ->columnSpanFull(),
+                        Repeater::make('qualifications')
+                            ->label(__('filament/admin/instructor_resource.qualifications'))
+                            ->schema([
+                                TextInput::make('title')
+                                    ->label(__('filament/admin/instructor_resource.title'))
+                                    ->required(),
+                                TextInput::make('institution')
+                                    ->label(__('filament/admin/instructor_resource.institution'))
+                                    ->required(),
+                                TextInput::make('year')
+                                    ->label(__('filament/admin/instructor_resource.year'))
+                                    ->numeric()
+                                    ->minValue(1950)
+                                    ->maxValue(date('Y')),
+                            ])
+                            ->columns(3)
+                            ->defaultItems(0)
+                            ->columnSpanFull(),
+                        TextInput::make('years_of_experience')
+                            ->label(__('filament/admin/instructor_resource.years_of_experience'))
+                            ->numeric()
+                            ->default(0)
+                            ->minValue(0)
+                            ->columnSpan(1),
+                        DatePicker::make('hired_date')
+                            ->label(__('filament/admin/instructor_resource.hired_date'))
+                            ->columnSpan(1),
+                    ])
+                    ->columns(2),
+
+                Section::make('بيانات العقد')
+                    ->schema([
+                        Select::make('contract_type')
+                            ->label(__('filament/admin/instructor_resource.contract_type'))
+                            ->options(['full_time' => __('filament/admin/instructor_resource.contract_type.full_time'), 'part_time' => __('filament/admin/instructor_resource.contract_type.part_time'), 'contract' => __('filament/admin/instructor_resource.contract_type.contract')])
+                            ->default('full_time')
+                            ->required()
+                            ->columnSpan(1),
+                        TextInput::make('salary')
+                            ->label(__('filament/admin/instructor_resource.salary'))
+                            ->numeric()
+                            ->prefix('ج.م')
+                            ->columnSpan(1),
+                        Select::make('status')
+                            ->label(__('filament/admin/instructor_resource.status'))
+                            ->options(['active' => __('filament/admin/instructor_resource.status.active'), 'inactive' => __('filament/admin/instructor_resource.status.inactive'), 'on_leave' => __('filament/admin/instructor_resource.status.on_leave')])
+                            ->default('active')
+                            ->required()
+                            ->columnSpan(1),
+                    ])
+                    ->columns(3),
+
+                Section::make('الإعدادات المالية')
+                    ->description('تحديد طريقة احتساب الأجر الشهري للمدرس')
+                    ->schema([
+                        Select::make('payment_type')
+                            ->label(__('filament/admin/instructor_resource.payment_type'))
+                            ->options(['per_session' => __('filament/admin/instructor_resource.payment_type.per_session'), 'hourly' => __('filament/admin/instructor_resource.payment_type.hourly'), 'fixed' => __('filament/admin/instructor_resource.payment_type.fixed'), 'mixed' => __('filament/admin/instructor_resource.payment_type.mixed')])
+                            ->default('per_session')
+                            ->required()
+                            ->live()
+                            ->columnSpan(1),
+
+                        TextInput::make('hourly_rate')
+                            ->label(fn($get) => $get('payment_type') === 'hourly'
+                                ? __('filament/admin/instructor_resource.hourly_rate_hourly')
+                                : __('filament/admin/instructor_resource.hourly_rate_per_session'))
+                            ->numeric()
+                            ->prefix('ج.م')
+                            ->minValue(0)
+                            ->default(100)
+                            ->visible(fn($get) => in_array($get('payment_type'), ['per_session', 'hourly', 'mixed']))
+                            ->helperText('المبلغ الذي يحصل عليه المدرس مقابل كل سيشن أو ساعة')
+                            ->columnSpan(1),
+
+                        TextInput::make('base_salary')
+                            ->label(__('filament/admin/instructor_resource.base_salary'))
+                            ->numeric()
+                            ->prefix('ج.م')
+                            ->minValue(0)
+                            ->default(0)
+                            ->visible(fn($get) => in_array($get('payment_type'), ['fixed', 'mixed']))
+                            ->helperText('الراتب الشهري الثابت (إن وجد)')
+                            ->columnSpan(1),
+
+                        RichEditor::make('payment_notes')
+                            ->label(__('filament/admin/instructor_resource.payment_notes'))
+                            ->placeholder('أي ملاحظات خاصة بنظام الدفع أو الاستحقاقات')
+                            ->columnSpanFull(),
+                    ])
+                    ->columns(3)
+                    ->collapsible(),
+
+                Section::make('معلومات الاتصال')
+                    ->schema([
+                        TextInput::make('phone')
+                            ->label(__('filament/admin/instructor_resource.phone'))
+                            ->tel()
+                            ->maxLength(20)
+                            ->columnSpan(1),
+                        TextInput::make('emergency_contact')
+                            ->label(__('filament/admin/instructor_resource.emergency_contact'))
+                            ->maxLength(255)
+                            ->columnSpan(1),
+                    ])
+                    ->columns(2),
+            ]);
+    }
+}

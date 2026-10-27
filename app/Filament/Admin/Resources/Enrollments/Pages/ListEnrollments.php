@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Enrollments\Pages;
+
+use App\Filament\Admin\Resources\Enrollments\EnrollmentResource;
+use Filament\Actions\CreateAction;
+use Filament\Resources\Pages\ListRecords;
+
+class ListEnrollments extends ListRecords
+{
+    protected static string $resource = EnrollmentResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        $actions = [];
+
+        if (!auth()->user()->is_super_admin) {
+            $actions[] = CreateAction::make();
+        }
+
+        $actions[] = \Filament\Actions\Action::make('enrollment_reports')
+            ->label('تقارير الاشتراكات')
+            ->icon('heroicon-o-presentation-chart-line')
+            ->color('gray')
+            ->url('/admin/reporting-center-page?section=enrollments');
+
+        return $actions;
+    }
+    public function getTitle(): string
+    {
+        return __('filament/admin/list_enrollments.title');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/list_enrollments.title');
+    }
+
+}

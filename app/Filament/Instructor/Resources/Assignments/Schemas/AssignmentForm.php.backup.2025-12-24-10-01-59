@@ -1,0 +1,64 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\Assignments\Schemas;
+
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\FileUpload;
+use Filament\Schemas\Schema;
+use App\Models\Group;
+
+class AssignmentForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Select::make('group_id')
+                    ->label('المجموعة')
+                    ->options(function () {
+                        return Group::where('instructor_id', auth()->id())
+                            ->where('tenant_id', auth()->user()->tenant_id)
+                            ->where('status', 'active')
+                            ->pluck('name', 'id');
+                    })
+                    ->required()
+                    ->searchable(),
+                TextInput::make('title')
+                    ->label('عنوان الواجب')
+                    ->required()
+                    ->maxLength(255),
+                Textarea::make('description')
+                    ->label('الوصف')
+                    ->columnSpanFull()
+                    ->rows(4),
+                FileUpload::make('attachment_path')
+                    ->label('ملف مرفق')
+                    ->directory('assignments')
+                    ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
+                    ->maxSize(10240),
+                DatePicker::make('due_date')
+                    ->label('تاريخ التسليم')
+                    ->required()
+                    ->native(false)
+                    ->minDate(now()),
+                TextInput::make('max_score')
+                    ->label('الدرجة القصوى')
+                    ->required()
+                    ->numeric()
+                    ->default(100)
+                    ->minValue(1)
+                    ->maxValue(1000),
+                Select::make('status')
+                    ->label('الحالة')
+                    ->options([
+                        'active' => 'نشط',
+                        'closed' => 'مغلق'
+                    ])
+                    ->default('active')
+                    ->required(),
+            ]);
+    }
+}

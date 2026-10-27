@@ -1,0 +1,210 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Exams\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use Filament\Actions\ViewAction;
+use Filament\Notifications\Notification;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\BadgeColumn;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Filters\Filter;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+
+class ExamsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('title')
+                    ->label(__('filament/admin/exam_resource.title'))
+                    ->searchable()
+                    ->sortable()
+                    ->weight('bold')
+                    ->description(fn($record) => $record->description ? \Str::limit($record->description, 50) : null),
+
+                TextColumn::make('tenant.name')
+                    ->label('الفرع')
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->visible(fn() => auth()->user()?->is_super_admin ?? false),
+                    
+                TextColumn::make('course.name')
+                    ->label(__('filament/admin/exam_resource.course.name'))
+                    ->sortable()
+                    ->searchable(),
+
+                TextColumn::make('group.name')
+                    ->label(__('filament/admin/exam_resource.group.name'))
+                    ->sortable()
+                    ->searchable(),
+
+                BadgeColumn::make('type')
+                    ->label(__('filament/admin/exam_resource.type'))
+                    ->colors([
+                        'primary' => 'quiz',
+                        'warning' => 'midterm',
+                        'danger' => 'final',
+                        'success' => 'assignment',
+                        'info' => 'project',
+                    ])
+                    ->icons([
+                        'heroicon-o-clipboard-document-check' => 'quiz',
+                        'heroicon-o-document-text' => 'midterm',
+                        'heroicon-o-academic-cap' => 'final',
+                        'heroicon-o-paper-clip' => 'assignment',
+                        'heroicon-o-briefcase' => 'project',
+                    ])
+                    ->formatStateUsing(fn($state) => match ($state) {
+                        'quiz' => 'كويز',
+                        'midterm' => 'ميدتيرم',
+                        'final' => 'فاينال',
+                        'assignment' => 'تكليف',
+                        'project' => 'مشروع',
+                        default => $state,
+                    }),
+
+                BadgeColumn::make('status')
+                    ->label(__('filament/admin/exam_resource.status'))
+                    ->colors([
+                        'gray' => 'scheduled',
+                        'warning' => 'in_progress',
+                        'success' => 'completed',
+                        'danger' => 'cancelled',
+                    ])
+                    ->formatStateUsing(fn($state) => match ($state) {
+                        'scheduled' => 'مجدول',
+                        'in_progress' => 'جاري',
+                        'completed' => 'مكتمل',
+                        'cancelled' => 'ملغي',
+                        default => $state,
+                    }),
+
+                TextColumn::make('exam_date')
+                    ->label(__('filament/admin/exam_resource.exam_date'))
+                    ->dateTime('d/m/Y h:i A')
+                    ->sortable()
+                    ->description(fn($record) => $record->duration . ' دقيقة'),
+
+                TextColumn::make('total_marks')
+                    ->label(__('filament/admin/exam_resource.total_marks'))
+                    ->numeric()
+                    ->sortable()
+                    ->suffix(' درجة')
+                    ->description(fn($record) => 'النجاح: ' . $record->passing_marks),
+
+                TextColumn::make('instructor.full_name')
+                    ->label(__('filament/admin/exam_resource.instructor.full_name'))
+                    ->sortable()
+                    ->toggleable()
+                    ->getStateUsing(fn($record) => $record->instructor ? $record->instructor->first_name . ' ' . $record->instructor->last_name : '-'),
+
+                TextColumn::make('grades_count')
+                    ->label(__('filament/admin/exam_resource.grades_count'))
+                    ->counts('grades')
+                    ->sortable()
+                    ->toggleable(),
+
+                TextColumn::make('created_at')
+                    ->label(__('filament/admin/exam_resource.created_at'))
+                    ->dateTime('d/m/Y')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+
+                TextColumn::make('updated_at')
+                    ->label(__('filament/admin/exam_resource.updated_at'))
+                    ->dateTime('d/m/Y')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                
+                SelectFilter::make('tenant_id')
+                    ->label('الفرع')
+                    ->relationship('tenant', 'name')
+                    ->searchable()
+                    ->preload()
+                    ->multiple()
+                    ->visible(fn() => auth()->user()?->is_super_admin ?? false),
+SelectFilter::make('type')
+                    ->label('نوع الامتحان')
+                    ->options([
+                        'quiz' => 'كويز',
+                        'midterm' => 'ميدتيرم',
+                        'final' => 'فاينال',
+                        'assignment' => 'تكليف',
+                        'project' => 'مشروع',
+                    ])
+                    ->multiple(),
+
+                SelectFilter::make('status')
+                    ->label('الحالة')
+                    ->options([
+                        'scheduled' => 'مجدول',
+                        'in_progress' => 'جاري',
+                        'completed' => 'مكتمل',
+                        'cancelled' => 'ملغي',
+                    ])
+                    ->multiple(),
+
+                SelectFilter::make('course_id')
+                    ->label('الكورس')
+                    ->relationship('course', 'name', fn($query) => $query->where('status', 'active'))
+                    ->searchable()
+                    ->preload(),
+
+                SelectFilter::make('group_id')
+                    ->label('المجموعة')
+                    ->relationship('group', 'name', fn($query) => $query->where('status', 'active'))
+                    ->searchable()
+                    ->preload(),
+
+                Filter::make('upcoming')
+                    ->label('الامتحانات القادمة')
+                    ->query(fn(Builder $query): Builder => $query->where('exam_date', '>', now()))
+                    ->toggle(),
+
+                Filter::make('past')
+                    ->label('الامتحانات السابقة')
+                    ->query(fn(Builder $query): Builder => $query->where('exam_date', '<', now()))
+                    ->toggle(),
+
+                TrashedFilter::make(),
+            ])
+            ->recordActions([
+                ViewAction::make(),
+                EditAction::make(),
+                DeleteAction::make()
+                    ->using(function ($record, DeleteAction $action) {
+                        try {
+                            $record->delete();
+                        } catch (\Exception $e) {
+                            Notification::make()
+                                ->danger()
+                                ->title('لا يمكن حذف الامتحان')
+                                ->body($e->getMessage())
+                                ->persistent()
+                                ->send();
+                            $action->halt();
+                        }
+                    }),
+            ])
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                    ForceDeleteBulkAction::make(),
+                    RestoreBulkAction::make(),
+                ]),
+            ])
+            ->defaultSort('exam_date', 'desc');
+    }
+}

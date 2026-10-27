@@ -1,0 +1,174 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Exams\Schemas;
+
+use App\Models\Course;
+use App\Models\Group;
+use App\Models\Instructor;
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Get;
+use Filament\Schemas\Schema;
+
+class ExamForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Section::make('معلومات أساسية')
+                    ->description('البيانات الأساسية للامتحان')
+                    ->schema([
+                        Grid::make(3)
+                            ->schema([
+                                Select::make('tenant_id')
+                                    ->label(__('filament/admin/exam_resource.tenant_id'))
+                                    ->relationship('tenant', 'name')
+                                    ->required()
+                                    ->searchable()
+                                    ->preload()
+                                    ->default(fn() => auth()->user()?->tenant_id)
+                                    ->disabled(fn() => !auth()->user()?->hasRole('super_admin')),
+
+                                Select::make('course_id')
+                                    ->label(__('filament/admin/exam_resource.course_id'))
+                                    ->relationship('course', 'name')
+                                    ->required()
+                                    ->searchable()
+                                    ->preload()
+                                    ->live()
+                                    ->afterStateUpdated(fn($state, callable $set) => $set('group_id', null)),
+
+                                Select::make('group_id')
+                                    ->label(__('filament/admin/exam_resource.group_id'))
+                                    ->options(function (Get $get) {
+                                        $courseId = $get('course_id');
+                                        if (!$courseId) {
+                                            return [];
+                                        }
+                                        return Group::where('course_id', $courseId)->pluck('name', 'id');
+                                    })
+                                    ->required()
+                                    ->searchable()
+                                    ->disabled(fn(Get $get) => !$get('course_id')),
+                            ]),
+
+                        Grid::make(2)
+                            ->schema([
+                                Select::make('instructor_id')
+                                    ->label(__('filament/admin/exam_resource.instructor_id'))
+                                    ->options(function (Get $get) {
+                                        return Instructor::query()
+                                            ->get()
+                                            ->mapWithKeys(fn($instructor) => [
+                                                $instructor->id => $instructor->first_name . ' ' . $instructor->last_name
+                                            ]);
+                                    })
+                                    ->searchable()
+                                    ->preload(),
+
+                                Select::make('type')
+                                    ->label(__('filament/admin/exam_resource.type'))
+                                    ->options([
+                                        'quiz' => __('filament/admin/exam_resource.type.quiz'),
+                                        'midterm' => __('filament/admin/exam_resource.type.midterm'),
+                                        'final' => __('filament/admin/exam_resource.type.final'),
+                                        'assignment' => __('filament/admin/exam_resource.type.assignment'),
+                                        'project' => __('filament/admin/exam_resource.type.project')
+                                    ])
+                                    ->default('quiz')
+                                    ->required()
+                                    ->native(false),
+                            ]),
+
+                        TextInput::make('title')
+                            ->label(__('filament/admin/exam_resource.title'))
+                            ->required()
+                            ->maxLength(255)
+                            ->columnSpanFull(),
+
+                        Textarea::make('description')
+                            ->label(__('filament/admin/exam_resource.description'))
+                            ->rows(3)
+                            ->columnSpanFull(),
+                    ])->columns(1),
+
+                Section::make('التفاصيل والتوقيت')
+                    ->description('تفاصيل الامتحان والدرجات')
+                    ->schema([
+                        Grid::make(3)
+                            ->schema([
+                                DateTimePicker::make('exam_date')
+                                    ->label(__('filament/admin/exam_resource.exam_date'))
+                                    ->required()
+                                    ->native(false)
+                                    ->seconds(false)
+                                    ->minDate(now()),
+
+                                TextInput::make('duration')
+                                    ->label(__('filament/admin/exam_resource.duration'))
+                                    ->required()
+                                    ->numeric()
+                                    ->default(60)
+                                    ->suffix('دقيقة')
+                                    ->minValue(1)
+                                    ->maxValue(300),
+
+                                Select::make('status')
+                                    ->label(__('filament/admin/exam_resource.status'))
+                                    ->options([
+                                        'scheduled' => __('filament/admin/exam_resource.status.scheduled'),
+                                        'in_progress' => __('filament/admin/exam_resource.status.in_progress'),
+                                        'completed' => __('filament/admin/exam_resource.status.completed'),
+                                        'cancelled' => __('filament/admin/exam_resource.status.cancelled')
+                                    ])
+                                    ->default('scheduled')
+                                    ->required()
+                                    ->native(false),
+                            ]),
+
+                        Grid::make(2)
+                            ->schema([
+                                TextInput::make('total_marks')
+                                    ->label(__('filament/admin/exam_resource.total_marks'))
+                                    ->required()
+                                    ->numeric()
+                                    ->default(100)
+                                    ->suffix('درجة')
+                                    ->minValue(1)
+                                    ->live()
+                                    ->afterStateUpdated(function ($state, callable $get, callable $set) {
+                                        $passingMarks = $get('passing_marks');
+                                        if ($passingMarks && $passingMarks > $state) {
+                                            $set('passing_marks', round($state * 0.5));
+                                        }
+                                    }),
+
+                                TextInput::make('passing_marks')
+                                    ->label(__('filament/admin/exam_resource.passing_marks'))
+                                    ->required()
+                                    ->numeric()
+                                    ->suffix('درجة')
+                                    ->minValue(1)
+                                    ->rules([
+                                        fn(Get $get): \Closure => function (string $attribute, $value, \Closure $fail) use ($get) {
+                                            if ($value > $get('total_marks')) {
+                                                $fail('درجة النجاح يجب أن تكون أقل من أو تساوي الدرجة الكلية');
+                                            }
+                                        },
+                                    ]),
+                            ]),
+
+                        Textarea::make('instructions')
+                            ->label(__('filament/admin/exam_resource.instructions'))
+                            ->rows(4)
+                            ->columnSpanFull()
+                            ->placeholder('أدخل تعليمات الامتحان للطلاب...'),
+                    ])->columns(1),
+            ]);
+    }
+}

@@ -1,0 +1,165 @@
+<?php
+
+namespace App\Filament\Student\Pages;
+
+use BackedEnum;
+use Filament\Tables;
+use Filament\Pages\Page;
+use App\Models\Attendance;
+use App\Models\Enrollment;
+use Filament\Tables\Table;
+use Filament\Actions\Action;
+use Filament\Tables\Contracts\HasTable;
+use Illuminate\Database\Eloquent\Builder;
+use Filament\Tables\Concerns\InteractsWithTable;
+
+class MyCourses extends Page implements HasTable
+{
+    use InteractsWithTable;
+
+    protected string $view = 'filament.student.pages.my-courses';
+
+    protected static string | BackedEnum | null $navigationIcon = 'heroicon-o-academic-cap';
+    
+    protected static ?int $navigationSort = 10;
+
+    public static function getNavigationLabel(): string
+    {
+        return __('مجموعاتي وكورساتي');
+    }
+
+    public function getTitle(): string
+    {
+        return __('مجموعاتي وكورساتي');
+    }
+
+    public function getHeading(): string
+    {
+        return __('مجموعاتي وكورساتي');
+    }
+
+    public function table(Table $table): Table
+    {
+        $student = auth()->user()->student;
+
+        return $table
+            ->query(
+                Enrollment::query()
+                    ->where('student_id', $student?->id)
+                    ->where('status', 'active')
+                    ->with(['group.course', 'group.instructor.user', 'group.attendanceSessions'])
+            )
+            ->columns([
+                Tables\Columns\TextColumn::make('group.course.name')
+                    ->label(__('الكورس'))
+                    ->searchable()
+                    ->sortable()
+                    ->weight('bold')
+                    ->icon('heroicon-o-book-open')
+                    ->color('primary'),
+
+                Tables\Columns\TextColumn::make('group.name')
+                    ->label(__('المجموعة'))
+                    ->searchable()
+                    ->badge()
+                    ->color('success'),
+
+                Tables\Columns\TextColumn::make('group.instructor.user.name')
+                    ->label(__('المدرس'))
+                    ->icon('heroicon-o-user'),
+
+                Tables\Columns\TextColumn::make('group.schedule')
+                    ->label(__('المواعيد'))
+                    ->wrap()
+                    ->html()
+                    ->formatStateUsing(function ($state) {
+                        if (!$state) return '-';
+                        $schedules = is_string($state) ? json_decode($state, true) : $state;
+                        if (!is_array($schedules)) return '-';
+                        
+                        $days = [
+                            'saturday' => 'السبت',
+                            'sunday' => 'الأحد',
+                            'monday' => 'الاثنين',
+                            'tuesday' => 'الثلاثاء',
+                            'wednesday' => 'الأربعاء',
+                            'thursday' => 'الخميس',
+                            'friday' => 'الجمعة',
+                        ];
+                        
+                        $formatted = [];
+                        foreach ($schedules as $schedule) {
+                            $day = $days[$schedule['day']] ?? $schedule['day'];
+                            $formatted[] = "<strong>{$day}</strong>: {$schedule['start_time']} - {$schedule['end_time']}";
+                        }
+                        return implode('<br>', $formatted);
+                    }),
+
+                Tables\Columns\TextColumn::make('attendance_rate')
+                    ->label(__('نسبة الحضور'))
+                    ->formatStateUsing(function ($record) use ($student) {
+                        $totalSessions = $record->group->attendanceSessions()->count();
+                        if ($totalSessions == 0) return '0%';
+                        
+                        $presentCount = Attendance::where('student_id', $student->id)
+                            ->whereHas('session', function ($q) use ($record) {
+                                $q->where('group_id', $record->group_id);
+                            })
+                            ->where('status', 'present')
+                            ->count();
+                        
+                        $rate = round(($presentCount / $totalSessions) * 100);
+                        return "{$rate}%";
+                    })
+                    ->badge()
+                    ->color(fn ($state) => match (true) {
+                        intval($state) >= 90 => 'success',
+                        intval($state) >= 75 => 'warning',
+                        default => 'danger',
+                    }),
+
+                Tables\Columns\TextColumn::make('enrolled_at')
+                    ->label(__('تاريخ الالتحاق'))
+                    ->date('d/m/Y')
+                    ->sortable(),
+
+                Tables\Columns\TextColumn::make('status')
+                    ->label(__('الحالة'))
+                    ->badge()
+                    ->formatStateUsing(fn ($state) => match ($state) {
+                        'active' => 'نشط',
+                        'completed' => 'مكتمل',
+                        'dropped' => 'منسحب',
+                        default => $state,
+                    })
+                    ->color(fn ($state) => match ($state) {
+                        'active' => 'success',
+                        'completed' => 'info',
+                        'dropped' => 'danger',
+                        default => 'gray',
+                    }),
+            ])
+            ->filters([
+                Tables\Filters\SelectFilter::make('group.course_id')
+                    ->label(__('الكورس'))
+                    ->relationship('group.course', 'name'),
+            ])
+            ->actions([
+                Action::make('view_details')
+                    ->label(__('التفاصيل'))
+                    ->icon('heroicon-o-eye')
+                    ->color('info')
+                    ->modalHeading(fn ($record) => __('تفاصيل') . ' ' . $record->group->course->name)
+                    ->modalContent(fn ($record) => view('filament.student.pages.course-details-modal', [
+                        'enrollment' => $record,
+                        'student' => auth()->user()->student,
+                    ]))
+                    ->modalWidth('5xl')
+                    ->modalSubmitAction(false)
+                    ->modalCancelActionLabel(__('إغلاق')),
+            ])
+            ->emptyStateHeading(__('لا توجد كورسات'))
+            ->emptyStateDescription(__('لم تلتحق بأي كورسات بعد'))
+            ->emptyStateIcon('heroicon-o-academic-cap');
+    }
+}

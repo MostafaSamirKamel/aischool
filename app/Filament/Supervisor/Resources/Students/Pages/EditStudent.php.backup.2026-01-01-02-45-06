@@ -1,0 +1,35 @@
+<?php
+
+namespace App\Filament\Supervisor\Resources\Students\Pages;
+
+use App\Filament\Supervisor\Resources\Students\StudentResource;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\ForceDeleteAction;
+use Filament\Actions\RestoreAction;
+use Filament\Actions\ViewAction;
+use Filament\Resources\Pages\EditRecord;
+
+class EditStudent extends EditRecord
+{
+    protected static string $resource = StudentResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            ViewAction::make(),
+            DeleteAction::make(),
+            ForceDeleteAction::make(),
+            RestoreAction::make(),
+        ];
+    }
+    public function getTitle(): string
+    {
+        return __('filament/supervisor/edit_student.title');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/supervisor/edit_student.title');
+    }
+
+}

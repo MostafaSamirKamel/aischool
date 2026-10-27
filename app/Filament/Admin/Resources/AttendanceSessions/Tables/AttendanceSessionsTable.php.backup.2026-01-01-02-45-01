@@ -1,0 +1,159 @@
+<?php
+
+namespace App\Filament\Admin\Resources\AttendanceSessions\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use Filament\Actions\ViewAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Filters\Filter;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+
+class AttendanceSessionsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('attendance_date')
+                    ->label(__('filament/admin/attendance_session_resource.attendance_date'))
+                    ->date('Y-m-d')
+                    ->sortable()
+                    ->searchable(),
+
+                TextColumn::make('tenant.name')
+                    ->label(__('filament/admin/attendance_session_resource.tenant.name'))
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->visible(fn() => auth()->user()?->is_super_admin ?? false),
+                    
+                TextColumn::make('course.name')
+                     ->label(__('filament/admin/attendance_session_resource.course.name'))
+                    ->searchable()
+                    ->sortable(),
+
+                TextColumn::make('group.name')
+                    ->label(__('filament/admin/attendance_session_resource.group.name'))
+                    ->searchable()
+                    ->sortable(),
+
+                TextColumn::make('department.name')
+                    ->label(__('filament/admin/attendance_session_resource.department.name'))
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable(),
+
+                TextColumn::make('classroom')
+                    ->label(__('filament/admin/attendance_session_resource.classroom'))
+                    ->searchable()
+                    ->toggleable(),
+
+                TextColumn::make('present_count')
+                    ->label(__('filament/admin/attendance_session_resource.present_count'))
+                    ->badge()
+                    ->color('success')
+                    ->getStateUsing(fn($record) => $record->present_count),
+
+                TextColumn::make('absent_count')
+                    ->label(__('filament/admin/attendance_session_resource.absent_count'))
+                    ->badge()
+                    ->color('danger')
+                    ->getStateUsing(fn($record) => $record->absent_count),
+
+                TextColumn::make('late_count')
+                    ->label(__('filament/admin/attendance_session_resource.late_count'))
+                    ->badge()
+                    ->color('warning')
+                    ->getStateUsing(fn($record) => $record->late_count),
+
+                TextColumn::make('total_students')
+                    ->label(__('filament/admin/attendance_session_resource.total_students'))
+                    ->getStateUsing(fn($record) => $record->total_students),
+
+                TextColumn::make('attendance_rate')
+                    ->label(__('filament/admin/attendance_session_resource.attendance_rate'))
+                    ->suffix('%')
+                    ->getStateUsing(fn($record) => $record->attendance_rate),
+
+                TextColumn::make('recordedBy.name')
+                    ->label(__('filament/admin/attendance_session_resource.recorded_by.name'))
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->sortable(),
+
+                TextColumn::make('created_at')
+                    ->label(__('filament/admin/attendance_session_resource.created_at'))
+                    ->dateTime('Y-m-d H:i')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->defaultSort('attendance_date', 'desc')
+            ->filters([
+                SelectFilter::make('tenant_id')
+                    ->label(__('filament/admin/attendance_session_resource.filter.tenant'))
+                    ->relationship('tenant', 'name')
+                    ->searchable()
+                    ->preload()
+                    ->multiple()
+                    ->visible(fn() => auth()->user()?->is_super_admin ?? false),
+
+                SelectFilter::make('course_id')
+                    ->label(__('filament/admin/attendance_session_resource.filter.course'))
+                    ->relationship('course', 'name')
+                    ->multiple()
+                    ->preload(),
+
+                SelectFilter::make('group_id')
+                    ->label(__('filament/admin/attendance_session_resource.filter.group'))
+                    ->relationship('group', 'name')
+                    ->multiple()
+                    ->preload(),
+
+                SelectFilter::make('department_id')
+                    ->label(__('filament/admin/attendance_session_resource.filter.department'))
+                    ->relationship('department', 'name')
+                    ->multiple()
+                    ->preload(),
+
+                Filter::make('attendance_date')
+                    ->label(__('filament/admin/attendance_session_resource.filter.date'))
+                    ->form([
+                        \Filament\Forms\Components\DatePicker::make('from')
+                            ->label(__('filament/admin/attendance_session_resource.filter.from')),
+                        \Filament\Forms\Components\DatePicker::make('until')
+                            ->label(__('filament/admin/attendance_session_resource.filter.until')),
+                    ])
+                    ->query(function (Builder $query, array $data): Builder {
+                        return $query
+                            ->when(
+                                $data['from'],
+                                fn(Builder $query, $date): Builder => $query->whereDate('attendance_date', '>=', $date),
+                            )
+                            ->when(
+                                $data['until'],
+                                fn(Builder $query, $date): Builder => $query->whereDate('attendance_date', '<=', $date),
+                            );
+                    }),
+
+                TrashedFilter::make()
+                    ->label(__('filament/admin/attendance_session_resource.filter.trashed')),
+            ])
+            ->recordActions([
+                ViewAction::make(),
+                EditAction::make(),
+            ])
+            ->bulkActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                    ForceDeleteBulkAction::make(),
+                    RestoreBulkAction::make(),
+                ]),
+            ]);
+    }
+}

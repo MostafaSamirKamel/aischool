@@ -1,0 +1,3568 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل المستخدم - نظام إدارة المدرسة الذكية</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        .company-info {
+            font-size: 1.1em;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 20px 40px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: white;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 50px;
+            scroll-margin-top: 20px;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #764ba2;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h4 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .steps {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .steps ol {
+            padding-right: 20px;
+        }
+
+        .steps li {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-right: 5px solid #667eea;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 10px;
+            border-right: 5px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .screen-preview {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-right: 4px solid #764ba2;
+        }
+
+        .tip {
+            background: #d1ecf1;
+            padding: 15px;
+            border-radius: 10px;
+            border-right: 4px solid #17a2b8;
+            margin: 15px 0;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .company-footer {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #667eea;
+        }
+
+        /* أزرار الوصول السريع */
+        .quick-access-btn {
+            transition: all 0.3s ease;
+        }
+
+        .quick-access-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 نظام إدارة المدرسة الذكية</h1>
+            <p>دليل شامل لاستخدام النظام بكل سهولة ووضوح</p>
+            <p style="font-size: 1.1em; margin-top: 15px; opacity: 0.9;">نظام حديث ومتطور - Php Laravel 12 & Filament 4 &
+                Multitenancy</p>
+            <p style="font-size: 1em; margin-top: 10px; opacity: 0.95;">✨ رابط واحد - توجيه تلقائي - 4 لوحات تحكم متخصصة</p>
+            <p style="font-size: 1.1em; margin-top: 15px; opacity: 0.95; color: #ffd700;">🆕 جديد: نظام الأدوار المتقدم |
+                SMS
+                Notifications | التقارير المتطورة | Calendar View</p>
+            <div class="company-info">
+                <strong>🏢 تم التصميم والتطوير والبرمجة بواسطة:</strong><br>
+                شركة المبتكر العربي للبرمجيات
+            </div>
+        </header>
+    
+        <nav>
+            <ul>
+                <li><a href="#about">عن النظام</a></li>
+                <li><a href="#roles">المستخدمون</a></li>
+                <li><a href="#admin">لوحة المدير</a></li>
+                <li><a href="#secretary-attendance">حضور السكرتيرة</a></li>
+                <li><a href="#latest-updates">آخر التحديثات</a></li>
+                <li><a href="#instructor">لوحة المعلم</a></li>
+                <li><a href="#student">لوحة الطالب</a></li>
+                <li><a href="#parent">لوحة ولي الأمر</a></li>
+                <li><a href="#financial">النظام المالي</a></li>
+                <li><a href="#vaults">نظام الخزائن</a></li>
+                <li><a href="#main-screens-guide">🎓 الشاشات الرئيسية</a></li>
+                <li><a href="#treasury-report">💰 تقرير الخزينة</a></li>
+                <li><a href="#sms-notifications">📱 SMS</a></li>
+                <li><a href="#roles-permissions-advanced">🔐 الأدوار والصلاحيات</a></li>
+                <li><a href="#exams">الامتحانات</a></li>
+                <li><a href="#features">المميزات</a></li>
+            </ul>
+        </nav>
+    
+        <!-- أزرار الوصول السريع -->
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 0; margin: 0; border-bottom: 3px solid #667eea;">
+            <h3 style="color: #667eea; text-align: center; margin-bottom: 20px; font-size: 1.5em;">⚡ الوصول السريع للشاشات
+                الرئيسية</h3>
+    
+            <!-- أزرار الشاشات الرئيسية -->
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-bottom: 20px;">
+                <a href="#students-screen" class="quick-access-btn"
+                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.1em; box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3); display: inline-block;">
+                    👥 شاشة الطلاب
+                </a>
+                <a href="#enrollments-screen" class="quick-access-btn"
+                    style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.1em; box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3); display: inline-block;">
+                    📝 شاشة التسجيلات
+                </a>
+                <a href="#payments-screen" class="quick-access-btn"
+                    style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.1em; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3); display: inline-block;">
+                    💵 شاشة المدفوعات
+                </a>
+            </div>
+    
+            <!-- أزرار أجزاء شاشة الطلاب -->
+            <details style="margin: 15px 0; border: 1px solid #667eea; border-radius: 8px; padding: 10px;">
+                <summary style="cursor: pointer; font-weight: 600; color: #667eea; padding: 5px;">👥 أجزاء شاشة الطلاب
+                </summary>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
+                    <a href="#students-part1"
+                        style="background: #667eea; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">📝
+                        البيانات الأساسية</a>
+                    <a href="#students-part2"
+                        style="background: #667eea; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">👨‍👩‍👦
+                        أولياء الأمور</a>
+                    <a href="#students-part3"
+                        style="background: #667eea; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">📚
+                        المجموعات</a>
+                    <a href="#students-part4"
+                        style="background: #667eea; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">📷
+                        الصورة والمستندات</a>
+                    <a href="#students-part5"
+                        style="background: #667eea; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">💡
+                        ملاحظات هامة</a>
+                </div>
+            </details>
+    
+            <!-- أزرار أجزاء شاشة التسجيلات -->
+            <details style="margin: 15px 0; border: 1px solid #10b981; border-radius: 8px; padding: 10px;">
+                <summary style="cursor: pointer; font-weight: 600; color: #10b981; padding: 5px;">📝 أجزاء شاشة التسجيلات
+                </summary>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
+                    <a href="#enrollments-part1"
+                        style="background: #10b981; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">📌
+                        معلومات التسجيل</a>
+                    <a href="#enrollments-part2"
+                        style="background: #10b981; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">💰
+                        التفاصيل المالية</a>
+                    <a href="#enrollments-part3"
+                        style="background: #10b981; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">📅
+                        نظام التقسيط</a>
+                </div>
+            </details>
+    
+            <!-- أزرار أجزاء شاشة المدفوعات -->
+            <details style="margin: 15px 0; border: 1px solid #f59e0b; border-radius: 8px; padding: 10px;">
+                <summary style="cursor: pointer; font-weight: 600; color: #f59e0b; padding: 5px;">💵 أجزاء شاشة المدفوعات
+                </summary>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
+                    <a href="#payments-part1"
+                        style="background: #f59e0b; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">📋
+                        معلومات التسجيل</a>
+                    <a href="#payments-part2"
+                        style="background: #f59e0b; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">📅
+                        جدول الأقساط</a>
+                    <a href="#payments-part3"
+                        style="background: #f59e0b; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">📚
+                        الكورسات والمحاضرات</a>
+                    <a href="#payments-part4"
+                        style="background: #f59e0b; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">💳
+                        إدخال الدفعة</a>
+                    <a href="#payments-part5"
+                        style="background: #f59e0b; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">⚡
+                        التوزيع التلقائي</a>
+                    <a href="#payments-part6"
+                        style="background: #f59e0b; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95em;">📋
+                        مثال عملي</a>
+                </div>
+            </details>
+        </div>
+    
+        <div class="content">
+            <!-- عن النظام -->
+            <section id="about">
+                <h2>📖 ما هو النظام؟</h2>
+    
+                <div class="card">
+                    <h4>نظام إدارة مدرسية متكامل بتوجيه ذكي</h4>
+                    <p>نظام شامل لإدارة العملية التعليمية بطريقة إلكترونية حديثة، يساعد المدارس على تنظيم وإدارة جميع
+    
+                    <div
+                        style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h3 style="color: #ffd700; margin-bottom: 10px;">🔐 نظام الأدوار والصلاحيات المتقدم - جديد!</h3>
+                        <ul style="margin-right: 20px; line-height: 2;">
+                            <li>✅ إضافة حقل <strong>Panel Type</strong> لتصنيف الأدوار حسب البانل</li>
+                            <li>✅ فلترة ذكية للصلاحيات: كل دور يرى فقط صلاحيات البانل الخاص به</li>
+                            <li>✅ 4 أدوار جديدة جاهزة: instructor_manager, student_manager, parent_manager,
+                                supervisor_manager
+                            </li>
+                            <li>✅ الأدوار الإدارية (super_admin, branch_manager) ترى جميع الصلاحيات</li>
+                            <li>✅ واجهة مخصصة مع بطاقات ملونة حسب نوع البانل</li>
+                            <li>✅ Resource Schema منفصل متوافق مع Filament 4</li>
+                            <li>✅ Trait متقدم لفلترة Resources/Pages/Widgets حسب namespace</li>
+                            <li>✅ جدول محسّن مع Badges ملونة وإحصائيات الصلاحيات</li>
+                        </ul>
+                    </div>
+    
+                    <div
+                        style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h3 style="color: #ffd700; margin-bottom: 10px;">📊 نظام التقارير المتقدمة - جديد!</h3>
+                        <ul style="margin-right: 20px; line-height: 2;">
+                            <li>✅ تقارير إدارية شاملة مع رسوم بيانية (Chart.js)</li>
+                            <li>✅ تقرير المدرس: أداء المجموعات + الجلسات + الامتحانات</li>
+                            <li>✅ تقرير الطالب: متوسط الدرجات + نسبة الحضور + تطور الأداء</li>
+                            <li>✅ تقرير ولي الأمر: متابعة شاملة لجميع الأبناء</li>
+                            <li>✅ رسوم بيانية تفاعلية (Line, Bar Charts)</li>
+                            <li>✅ تحليلات آخر 6 أشهر لكل مستخدم</li>
+                            <li>✅ مقارنة الفروع للـ Super Admin</li>
+                            <li>✅ ألوان ديناميكية حسب الأداء</li>
+                        </ul>
+                    </div>
+    
+                    <div
+                        style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h3 style="color: #ffd700; margin-bottom: 10px;">� نظام الرسائل النصية SMS - جديد!</h3>
+                        <ul style="margin-right: 20px; line-height: 2;">
+                            <li>✅ إرسال تلقائي للإشعارات عبر SMS لأولياء الأمور والطلاب</li>
+                            <li>✅ دعم 5 مزودين: Twilio | Vonage | Vodafone Egypt | Log</li>
+                            <li>✅ 5 قوالب رسائل جاهزة (غياب، درجات، امتحانات، واجبات، مدفوعات)</li>
+                            <li>✅ Rate Limiting ذكي: 10 رسائل/دقيقة، 100/ساعة</li>
+                            <li>✅ تحويل تلقائي للأرقام المصرية (+20xxxxxxxxxx)</li>
+                            <li>✅ Queue Support - إرسال في الخلفية بدون تأخير</li>
+                            <li>✅ صفحة إعدادات SMS مع زر اختبار فوري</li>
+                            <li>✅ Widget إحصائيات مباشر في Dashboard</li>
+                            <li>✅ سجل كامل لجميع الرسائل مع فلترة متقدمة</li>
+                            <li>✅ تكامل كامل مع نظام الإشعارات الموجود</li>
+                        </ul>
+                    </div>
+    
+                    <div
+                        style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h3 style="color: #ffd700; margin-bottom: 10px;">�📅 نظام Calendar View التفاعلي - جديد!</h3>
+                        <ul style="margin-right: 20px; line-height: 2;">
+                            <li>✅ تقويم تفاعلي في جميع اللوحات (FullCalendar.js)</li>
+                            <li>✅ عرض الجلسات والامتحانات والواجبات في تقويم واحد</li>
+                            <li>✅ أيقونات وألوان مميزة لكل نوع حدث</li>
+                            <li>✅ للطالب: رموز حالة الحضور (✅ حاضر، ❌ غائب، ⏰ متأخر)</li>
+                            <li>✅ لولي الأمر: عرض أحداث جميع الأبناء في تقويم واحد</li>
+                            <li>✅ للمدرس: جدول جلساته وامتحاناته وواجباته</li>
+                            <li>✅ للإداري: نظرة شاملة على كل الأنشطة</li>
+                            <li>✅ 4 طرق عرض: شهري، أسبوعي، يومي، قائمة</li>
+                            <li>✅ تفاصيل كاملة عند الضغط على أي حدث</li>
+                        </ul>
+                    </div>
+    
+                    <div
+                        style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h3 style="color: #ffd700; margin-bottom: 10px;">🔔 نظام الإشعارات التلقائية - محدث!</h3>
+                        <ul style="margin-right: 20px; line-height: 2;">
+                            <li>✅ 5 أنواع إشعارات: حضور، درجات، واجبات، امتحانات، مدفوعات</li>
+                            <li>✅ إرسال تلقائي عبر Observers (Database + Email)</li>
+                            <li>✅ Widgets إشعارات في جميع اللوحات</li>
+                            <li>✅ عداد الإشعارات غير المقروءة</li>
+                            <li>✅ تحديد الإشعار كمقروء أو تحديد الكل</li>
+                            <li>✅ إشعارات موجهة للأطراف المعنية فقط</li>
+                        </ul>
+                    </div>
+    
+                    <div
+                        style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h3 style="color: #ffd700; margin-bottom: 10px;">👨‍💼 نظام المشرفين الكامل</h3>
+                        <ul style="margin-right: 20px; line-height: 2;">
+                            <li>✅ Panel منفصل للمشرفين على /supervisor</li>
+                            <li>✅ Dashboard متخصص مع 3 Widgets إحصائية</li>
+                            <li>✅ عرض المجموعات المُشرف عليها فقط</li>
+                            <li>✅ متابعة الطلاب في المجموعات</li>
+                            <li>✅ مراجعة سجلات الحضور والغياب</li>
+                            <li>✅ تقارير شاملة عن أداء المجموعات</li>
+                            <li>✅ ربط المشرف بالمجموعات من Admin Panel</li>
+                            <li>✅ صلاحيات قراءة فقط (View Only)</li>
+                        </ul>
+                    </div>
+                    <div
+                        style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h3 style="color: #ffd700; margin-bottom: 10px;">👨‍🏫 نظام المدرس المتطور - محدث!</h3>
+                        <ul style="margin-right: 20px; line-height: 2;">
+                            <li>✅ 12 Resources كاملة للإدارة الشاملة</li>
+                            <li>✅ 10 Widgets احترافية في Dashboard</li>
+                            <li>✅ نظام التواصل داخل المجموعات (Group Messages)</li>
+                            <li>✅ إدارة الطلاب والجلسات والحضور</li>
+                            <li>✅ إدارة الواجبات والامتحانات</li>
+                            <li>✅ عرض المدفوعات والمراجعات</li>
+                            <li>✅ إحصائيات متقدمة للأداء</li>
+                            <li>✅ واجهة معربة بالكامل</li>
+                        </ul>
+                    </div>
+    
+                    <div
+                        style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h3 style="color: #ffd700; margin-bottom: 10px;">🏦 نظام الخزائن المتقدم</h3>
+                        <ul style="margin-right: 20px; line-height: 2;">
+                            <li>✅ 3 خزائن مستقلة: نقدي 💵 | فودافون كاش 📱 | إنستاباي 💳</li>
+                            <li>✅ Widget أرصدة الخزائن مع تنبيهات الرصيد السالب</li>
+                            <li>✅ تقرير معاملات شامل لجميع الخزائن</li>
+                            <li>✅ تقرير الحركة اليومية لكل خزينة</li>
+                            <li>✅ نظام التسوية (Reconciliation) مع السكرتيرة</li>
+                            <li>✅ ربط تلقائي: كل معاملة مالية مرتبطة بخزينة محددة</li>
+                        </ul>
+                    </div>
+    
+                    <div
+                        style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h3 style="color: #ffd700; margin-bottom: 10px;">📄 نظام الامتحانات المحسّن</h3>
+                        <ul style="margin-right: 20px; line-height: 2;">
+                            <li>✅ رفع ملفات PDF للامتحانات بشكل آمن</li>
+                            <li>✅ عرض احترافي مع تصميم Bootstrap جميل</li>
+                            <li>✅ معاينة مباشرة أو فتح في نافذة جديدة</li>
+                            <li>✅ حماية الملفات في private storage</li>
+                            <li>✅ تحقق من الصلاحيات قبل العرض</li>
+                        </ul>
+                    </div>
+    
+                    <div
+                        style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                        <h3 style="color: #ffd700; margin-bottom: 10px;">🎨 تحسينات واجهة المستخدم</h3>
+                        <ul style="margin-right: 20px; line-height: 2;">
+                            <li>✅ لوحة تحكم المعلم: 12 Resources + 10 Widgets</li>
+                            <li>✅ لوحة تحكم الطالب: Dashboard احترافي بألوان جذابة</li>
+                            <li>✅ لوحة تحكم ولي الأمر: تبديل سهل بين الأبناء</li>
+                            <li>✅ لوحة تحكم المشرف: متابعة شاملة للمجموعات</li>
+                            <li>✅ أيقونات تعبيرية في كل مكان</li>
+                            <li>✅ تأثيرات حركية سلسة ومريحة للعين</li>
+                        </ul>
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.15); padding: 20px; border-radius: 10px;">
+                        <h3 style="color: #ffd700; margin-bottom: 10px;">🔐 نظام تسجيل الدخول المتعدد الخيارات</h3>
+                        <ul style="margin-right: 20px; line-height: 2;">
+                            <li>✅ تسجيل الدخول بالبريد الإلكتروني (Email) 📧</li>
+                            <li>✅ تسجيل الدخول برقم الموبايل (Phone) 📱</li>
+                            <li>✅ تسجيل الدخول باسم المستخدم (Username) 👤</li>
+                            <li>✅ اختيار الطريقة المناسبة لك بكل مرونة</li>
+                            <li>✅ حقل username اختياري في جميع نماذج إنشاء الحسابات</li>
+                            <li>✅ أمان عالي مع تشفير كامل لكلمات المرور</li>
+                        </ul>
+                    </div>
+            </section>
+    
+            <!-- عن النظام -->
+            <section id="about">
+                <h2>📖 ما هو النظام؟</h2>
+    
+                <div class="card">
+                    <h4>نظام إدارة مدرسية متكامل بتوجيه ذكي</h4>
+                    <p>نظام شامل لإدارة العملية التعليمية بطريقة إلكترونية حديثة، يساعد المدارس على تنظيم وإدارة جميع
+                        الأنشطة التعليمية والإدارية بسهولة وفعالية.</p>
+                    <div class="highlight" style="margin-top: 15px;">
+                        <strong>🎯 ميزة التوجيه التلقائي الذكي:</strong><br>
+                        رابط واحد فقط للدخول (<code>http://localhost:8000</code>) - يتم توجيهك تلقائياً إلى لوحة التحكم
+                        المناسبة لدورك!
+                    </div>
+                </div>
+    
+                <h3>🎯 الهدف من النظام</h3>
+                <div class="feature-box">
+                    <p><strong>تسهيل العملية التعليمية</strong> من خلال توفير منصة واحدة تجمع المدير والمعلمين والطلاب،
+                        وتمكنهم من إدارة الدراسة والمواد والاختبارات والنتائج بكل سهولة.</p>
+                </div>
+    
+                <h3>👥 من يستخدم النظام؟ (6 أدوار مختلفة)</h3>
+                <div class="steps">
+                    <ol>
+                        <li><strong>المدير العام (Super Admin):</strong> صلاحيات كاملة - إدارة كل شيء في النظام</li>
+                        <li><strong>مدير الفرع (Branch Manager):</strong> إدارة فرع محدد - طلاب ومعلمين وعمليات الفرع</li>
+                        <li><strong>السكرتارية (Secretary):</strong> إدارة الطلاب والمدفوعات - مساعدة إدارية</li>
+                        <li><strong>المعلمون (Instructor):</strong> إدارة المواد والدروس والاختبارات والطلاب</li>
+                        <li><strong>الطلاب (Student):</strong> متابعة الدراسة والاختبارات والنتائج والمدفوعات</li>
+                        <li><strong>أولياء الأمور (Parent):</strong> متابعة أداء الأبناء الدراسي والمالي</li>
+                    </ol>
+                </div>
+                <div class="tip">
+                    <strong>💡 ملاحظة هامة:</strong> كل دور له لوحة تحكم خاصة به، والنظام يوجهك تلقائياً للوحة الصحيحة عند
+                    تسجيل الدخول!
+                </div>
+                <h3>🔐 طرق تسجيل الدخول المتعددة</h3>
+                <div class="card">
+                    <h4>مرونة كاملة في اختيار طريقة الدخول</h4>
+                    <p>النظام يدعم <strong>ثلاث طرق مختلفة</strong> لتسجيل الدخول، اختر الطريقة الأسهل بالنسبة لك:</p>
+    
+                    <div
+                        style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: white; margin-bottom: 15px;">📧 1. البريد الإلكتروني (Email)</h4>
+                        <p style="margin: 10px 0;">استخدم عنوان البريد الإلكتروني المسجل في النظام</p>
+                        <code
+                            style="background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 5px; display: block; margin-top: 10px;">
+                                                        مثال: admin@school.com
+                                                    </code>
+                    </div>
+    
+                    <div
+                        style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: white; margin-bottom: 15px;">📱 2. رقم الموبايل (Phone)</h4>
+                        <p style="margin: 10px 0;">استخدم رقم الهاتف المسجل في النظام</p>
+                        <code
+                            style="background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 5px; display: block; margin-top: 10px;">
+                                                        مثال: 01234567890
+                                                    </code>
+                    </div>
+    
+                    <div
+                        style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: white; margin-bottom: 15px;">👤 3. اسم المستخدم (Username)</h4>
+                        <p style="margin: 10px 0;">استخدم اسم مستخدم فريد (إذا تم تعيينه)</p>
+                        <code
+                            style="background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 5px; display: block; margin-top: 10px;">
+                                                        مثال: ahmed123 أو teacher_ahmed
+                                                    </code>
+                    </div>
+    
+                    <div class="highlight" style="margin-top: 20px;">
+                        <strong>💡 نصيحة:</strong><br>
+                        • اسم المستخدم (Username) <strong>اختياري</strong> ويمكن إضافته عند إنشاء الحساب<br>
+                        • يمكن استخدامه لتسهيل تسجيل الدخول بدلاً من كتابة البريد الإلكتروني الطويل<br>
+                        • يجب أن يكون فريداً (غير مكرر) ويحتوي على أحرف وأرقام فقط<br>
+                        • كلمة المرور مطلوبة في جميع الطرق (على الأقل 8 أحرف)
+                    </div>
+    
+                    <div
+                        style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-top: 20px; border-right: 4px solid #4caf50;">
+                        <strong style="color: #2e7d32;">✅ أين أجد حقل Username؟</strong>
+                        <ul style="margin: 10px 0 0 20px; color: #333;">
+                            <li>عند إنشاء مستخدم جديد مباشرة</li>
+                            <li>عند إنشاء مدرس (يتم إنشاء حساب تلقائياً)</li>
+                            <li>عند إنشاء طالب (يتم إنشاء حساب تلقائياً)</li>
+                            <li>عند إنشاء ولي أمر (يتم إنشاء حساب تلقائياً)</li>
+                            <li>في جدول المستخدمين (يمكن إخفاؤه/إظهاره)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- أنواع المستخدمين -->
+            <section id="roles">
+                <h2>👥 أنواع المستخدمين في النظام</h2>
+    
+                <div class="card">
+                    <h4>� المدير العام - Super Admin</h4>
+                    <p><strong>صلاحيات كاملة على النظام بالكامل</strong></p>
+                    <ul style="margin-right: 20px; margin-top: 15px;">
+                        <li>✅ إدارة جميع الفروع والمنظمات</li>
+                        <li>✅ إضافة وتعديل جميع المستخدمين (مديري فروع، سكرتارية، معلمين، طلاب)</li>
+                        <li>✅ التحكم الكامل في الصلاحيات والأدوار</li>
+                        <li>✅ مراجعة جميع التقارير المالية والإحصائيات</li>
+                        <li>✅ إعدادات النظام العامة والمتقدمة</li>
+                        <li>✅ الوصول إلى لوحة التحكم: <code>/admin</code></li>
+                    </ul>
+                </div>
+    
+                <div class="card">
+                    <h4>🏢 مدير الفرع - Branch Manager</h4>
+                    <p><strong>مسؤول عن إدارة فرع محدد</strong></p>
+                    <ul style="margin-right: 20px; margin-top: 15px;">
+                        <li>✅ إدارة طلاب ومعلمين الفرع فقط</li>
+                        <li>✅ مراجعة تقارير وإحصائيات الفرع</li>
+                        <li>✅ متابعة العمليات المالية للفرع</li>
+                        <li>✅ إدارة الأقسام والصفوف في الفرع</li>
+                        <li>✅ الوصول إلى لوحة التحكم: <code>/admin</code></li>
+                    </ul>
+                </div>
+    
+                <div class="card">
+                    <h4>📋 السكرتارية - Secretary</h4>
+                    <p><strong>مساعد إداري للعمليات اليومية</strong></p>
+                    <ul style="margin-right: 20px; margin-top: 15px;">
+                        <li>✅ عرض وإضافة وتعديل بيانات الطلاب</li>
+                        <li>✅ عرض وإضافة وتعديل المدفوعات</li>
+                        <li>✅ العمل كمشرف على المجموعات</li>
+                        <li>✅ متابعة حضور الطلاب</li>
+                        <li>✅ الوصول إلى لوحة التحكم: <code>/admin</code></li>
+                        <li>⚠️ لا يمكنه حذف البيانات</li>
+                    </ul>
+                </div>
+    
+                <div class="card">
+                    <h4>👨‍💼 المشرف - Supervisor</h4>
+                    <p><strong>متابعة ومراقبة المجموعات الدراسية</strong></p>
+                    <ul style="margin-right: 20px; margin-top: 15px;">
+                        <li>✅ عرض المجموعات المُشرف عليها فقط</li>
+                        <li>✅ متابعة حضور وغياب الطلاب</li>
+                        <li>✅ عرض بيانات الطلاب في المجموعات</li>
+                        <li>✅ مراجعة سجلات الجلسات</li>
+                        <li>✅ إحصائيات وتقارير الأداء</li>
+                        <li>✅ الوصول إلى لوحة التحكم: <code>/supervisor</code></li>
+                        <li>⚠️ صلاحيات قراءة فقط (View Only)</li>
+                    </ul>
+                </div>
+    
+                <div class="card">
+                    <h4>👨‍🏫 المعلم/المدرس - Instructor</h4>
+                    <p><strong>إدارة المحتوى التعليمي والتفاعل مع الطلاب</strong></p>
+                    <ul style="margin-right: 20px; margin-top: 15px;">
+                        <li>✅ إدارة 12 Resource كاملة</li>
+                        <li>✅ عرض الطلاب في المجموعات</li>
+                        <li>✅ إدارة الجلسات وتسجيل الحضور</li>
+                        <li>✅ إنشاء وإدارة الواجبات والامتحانات</li>
+                        <li>✅ إضافة موارد تعليمية (ملفات، روابط)</li>
+                        <li>✅ التواصل مع الطلاب عبر رسائل المجموعات</li>
+                        <li>✅ عرض المدفوعات والمراجعات</li>
+                        <li>✅ Dashboard متقدم مع 10 Widgets</li>
+                        <li>✅ الوصول إلى لوحة التحكم: <code>/instructor</code></li>
+                    </ul>
+                </div>
+    
+                <div class="card">
+                    <h4>🎓 الطالب - Student</h4>
+                    <p><strong>الدارس المسجل في المدرسة</strong></p>
+                    <ul style="margin-right: 20px; margin-top: 15px;">
+                        <li>✅ عرض المجموعات المسجل فيها</li>
+                        <li>✅ الوصول للموارد التعليمية</li>
+                        <li>✅ أداء الواجبات والامتحانات</li>
+                        <li>✅ عرض الدرجات والنتائج</li>
+                        <li>✅ متابعة سجل الحضور</li>
+                        <li>✅ عرض المدفوعات</li>
+                        <li>✅ تقييم المدرسين</li>
+                        <li>✅ التواصل عبر رسائل المجموعات</li>
+                        <li>✅ Dashboard مع 10+ Widgets</li>
+                        <li>✅ الوصول إلى لوحة التحكم: <code>/student</code></li>
+                    </ul>
+                </div>
+    
+                <div class="card">
+                    <h4>👨‍👩‍👧 ولي الأمر - Parent</h4>
+                    <p><strong>متابعة أبناءه في المدرسة</strong></p>
+                    <ul style="margin-right: 20px; margin-top: 15px;">
+                        <li>✅ عرض جميع الأبناء المسجلين</li>
+                        <li>✅ متابعة درجات الأبناء</li>
+                        <li>✅ مراجعة سجلات الحضور والغياب</li>
+                        <li>✅ عرض مدفوعات كل ابن</li>
+                        <li>✅ Dashboard مع إحصائيات شاملة</li>
+                        <li>✅ الوصول إلى لوحة التحكم: <code>/parent</code></li>
+                    </ul>
+                </div>
+            </section>
+    
+            <!-- لوحة المدير -->
+            <section id="admin">
+                <h2>🏢 لوحة تحكم المدير</h2>
+                <li>يحل الاختبارات المتاحة له</li>
+                <li>يشاهد درجاته ونتائجه</li>
+                <li>يتابع تقدمه الدراسي</li>
+                <li>يشاهد حالة مدفوعاته وسجل الحضور</li>
+                <li>✅ الوصول إلى لوحة التحكم: <code>/student</code></li>
+                </ul>
+        </div>
+    
+        <div class="card">
+            <h4>👨‍👩‍👧‍👦 ولي الأمر - Parent</h4>
+            <p><strong>متابعة أداء الأبناء وتقدمهم الدراسي</strong></p>
+            <ul style="margin-right: 20px; margin-top: 15px;">
+                <li>✅ متابعة تقدم الأبناء الدراسي</li>
+                <li>✅ مشاهدة درجات ونتائج الأبناء</li>
+                <li>✅ متابعة حضور وغياب الأبناء</li>
+                <li>✅ مراجعة المدفوعات المطلوبة والمسددة</li>
+                <li>✅ التواصل مع المدرسة والمعلمين</li>
+                <li>✅ الوصول إلى لوحة التحكم: <code>/parent</code></li>
+            </ul>
+        </div>
+    
+        <div class="card">
+            <h4>👨‍👩‍👧‍👦 ولي الأمر</h4>
+            <p><strong>المسؤول عن متابعة أبنائه الطلاب</strong></p>
+            <ul style="margin-right: 20px; margin-top: 15px;">
+                <li>يتابع أداء أبنائه الدراسي</li>
+                <li>يشاهد نتائج الاختبارات</li>
+                <li>يراجع سجل الحضور والغياب</li>
+                <li>يتابع المدفوعات والمتأخرات</li>
+                <li>يتواصل مع المعلمين والإدارة</li>
+            </ul>
+        </div>
+        </section>
+
+        <!-- حضور وانصراف السكرتيرة -->
+        <section id="secretary-attendance">
+            <h2>🕒 حضور وانصراف السكرتيرة</h2>
+
+            <div class="highlight">
+                <strong>⏱️ توقيت السيرفر:</strong> يتم الاعتماد على توقيت السيرفر فقط (Africa/Cairo)، ولا يتم استخدام توقيت جهاز المستخدم.
+            </div>
+
+            <div class="card">
+                <h4>🎯 الهدف</h4>
+                <p>تسجيل حضور وانصراف السكرتيرة بسهولة عبر زرين فقط مع منع التكرار وحساب ساعات العمل تلقائياً.</p>
+            </div>
+
+            <h3>✅ القواعد الأساسية</h3>
+            <div class="steps">
+                <ol>
+                    <li>يوجد زران فقط: <strong>تسجيل حضور</strong> و<strong>تسجيل انصراف</strong>.</li>
+                    <li>لكل يوم <strong>سجل واحد فقط</strong> ولا يُسمح بالتكرار.</li>
+                    <li>عند تسجيل الحضور يتم حفظ تاريخ اليوم ووقت الحضور من السيرفر.</li>
+                    <li>لا يمكن تسجيل الانصراف بدون وجود حضور مسبق.</li>
+                    <li>عند الانصراف يتم حفظ وقت الانصراف وحساب ساعات العمل تلقائياً:</li>
+                </ol>
+                <div class="screen-preview">
+                    ساعات العمل = وقت الانصراف − وقت الحضور
+                </div>
+            </div>
+
+            <h3>📊 الإحصائيات الشهرية</h3>
+            <div class="card">
+                <ul style="margin-right: 20px;">
+                    <li>عدد أيام الحضور في الشهر.</li>
+                    <li>إجمالي ساعات العمل في الشهر.</li>
+                    <li>سجل كامل لكل يوم مع أوقات الحضور والانصراف.</li>
+                </ul>
+            </div>
+
+            <div class="tip">
+                <strong>🔐 صلاحيات التعديل:</strong> التعديل على السجلات مسموح فقط للمسؤولين (Branch Manager / Super Admin).
+            </div>
+        </section>
+    
+        <!-- لوحة المدير -->
+        <section id="admin">
+            <h2>🎛️ لوحة تحكم المدير</h2>
+    
+            <div class="highlight">
+                <strong>💡 ملاحظة مهمة:</strong> المدير لديه صلاحيات كاملة على النظام بأكمله
+            </div>
+    
+            <h3>📊 الشاشة الرئيسية (لوحة التحكم)</h3>
+            <div class="screen-preview">
+                <p><strong>ماذا تعرض؟</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>عدد الطلاب المسجلين</li>
+                    <li>عدد المعلمين</li>
+                    <li>عدد المواد الدراسية</li>
+                    <li>عدد الاختبارات</li>
+                    <li>إحصائيات عامة عن المدرسة</li>
+                </ul>
+            </div>
+    
+            <h3>🏫 شاشة الأقسام</h3>
+            <div class="card">
+                <h4>إدارة الأقسام الدراسية</h4>
+                <div class="steps">
+                    <p><strong>خطوات العمل:</strong></p>
+                    <ol>
+                        <li>اضغط على "الأقسام" من القائمة الجانبية</li>
+                        <li>لإضافة قسم جديد: اضغط "إضافة قسم"</li>
+                        <li>اكتب اسم القسم (مثل: القسم العلمي، القسم الأدبي)</li>
+                        <li>اكتب وصف مختصر عن القسم</li>
+                        <li>اضغط "حفظ"</li>
+                    </ol>
+                </div>
+                <div class="tip">
+                    <strong>💡 نصيحة:</strong> يمكنك تعديل أو حذف أي قسم بالضغط على الأزرار المخصصة
+                </div>
+            </div>
+    
+            <h3>📚 شاشة الصفوف الدراسية</h3>
+            <div class="card">
+                <h4>إدارة الصفوف (المراحل الدراسية)</h4>
+                <div class="steps">
+                    <p><strong>خطوات العمل:</strong></p>
+                    <ol>
+                        <li>اضغط على "الصفوف" من القائمة</li>
+                        <li>لإضافة صف جديد: اضغط "إضافة صف"</li>
+                        <li>اكتب اسم الصف (مثل: الصف الأول، الصف الثاني)</li>
+                        <li>حدد القسم الذي ينتمي له هذا الصف</li>
+                        <li>اكتب وصف مختصر</li>
+                        <li>اضغط "حفظ"</li>
+                    </ol>
+                </div>
+            </div>
+    
+            <h3>👥 شاشة المستخدمين</h3>
+            <div class="card">
+                <h4>إدارة المعلمين والطلاب</h4>
+                <div class="steps">
+                    <p><strong>لإضافة معلم جديد:</strong></p>
+                    <ol>
+                        <li>اضغط على "المستخدمين" من القائمة</li>
+                        <li>اضغط "إضافة مستخدم"</li>
+                        <li>اكتب الاسم الكامل</li>
+                        <li>اكتب البريد الإلكتروني</li>
+                        <li>اختر الدور: "معلم"</li>
+                        <li>أدخل كلمة المرور</li>
+                        <li>اضغط "حفظ"</li>
+                    </ol>
+                </div>
+                <div class="steps">
+                    <p><strong>لإضافة طالب جديد:</strong></p>
+                    <ol>
+                        <li>نفس الخطوات السابقة</li>
+                        <li>لكن اختر الدور: "طالب"</li>
+                        <li>حدد الصف الدراسي للطالب</li>
+                    </ol>
+                </div>
+                <div class="tip">
+                    <strong>💡 مهم:</strong> احفظ بيانات الدخول لكل مستخدم (البريد الإلكتروني وكلمة المرور)
+                </div>
+            </div>
+    
+            <h3>📖 شاشة المواد الدراسية</h3>
+            <div class="card">
+                <h4>إدارة المواد</h4>
+                <div class="steps">
+                    <p><strong>خطوات إضافة مادة:</strong></p>
+                    <ol>
+                        <li>اضغط على "المواد" من القائمة</li>
+                        <li>اضغط "إضافة مادة"</li>
+                        <li>اكتب اسم المادة (مثل: الرياضيات، اللغة العربية)</li>
+                        <li>اكتب رمز المادة (اختصار)</li>
+                        <li>اكتب وصف المادة</li>
+                        <li>حدد الصف الدراسي</li>
+                        <li>حدد المعلم المسؤول عن المادة</li>
+                        <li>اضغط "حفظ"</li>
+                    </ol>
+                </div>
+            </div>
+    
+            <h3>📝 شاشة الاختبارات</h3>
+            <div class="card">
+                <h4>مراجعة وإدارة الاختبارات</h4>
+                <p>المدير يستطيع:</p>
+                <ul style="margin-right: 20px;">
+                    <li>مشاهدة جميع الاختبارات في النظام</li>
+                    <li>مراجعة تفاصيل أي اختبار</li>
+                    <li>حذف اختبارات إذا لزم الأمر</li>
+                    <li>مشاهدة نتائج الطلاب</li>
+                </ul>
+            </div>
+    
+            <h3>📊 شاشة التقارير</h3>
+            <div class="card">
+                <h4>التقارير والإحصائيات</h4>
+                <p>يمكن للمدير مشاهدة:</p>
+                <ul style="margin-right: 20px;">
+                    <li>تقارير أداء الطلاب</li>
+                    <li>إحصائيات المواد الدراسية</li>
+                    <li>تقارير حضور وغياب</li>
+                    <li>نتائج الاختبارات</li>
+                    <li>تقارير عامة عن المدرسة</li>
+                </ul>
+            </div>
+    
+            <h3>⚙️ شاشة الإعدادات</h3>
+            <div class="card">
+                <h4>إعدادات النظام</h4>
+                <p>تشمل:</p>
+                <ul style="margin-right: 20px;">
+                    <li>معلومات المدرسة (الاسم، الشعار، العنوان)</li>
+                    <li>إعدادات البريد الإلكتروني</li>
+                    <li>إعدادات اللغة</li>
+                    <li>إعدادات الأمان والصلاحيات</li>
+                    <li>النسخ الاحتياطي</li>
+                    <li>إدارة الصلاحيات والأدوار (Shield)</li>
+                </ul>
+            </div>
+            <h3>💰 النظام المالي</h3>
+            <div class="card">
+                <h4>إدارة الشؤون المالية</h4>
+                <p>المدير يستطيع:</p>
+                <ul style="margin-right: 20px;">
+                    <li>إدارة فئات المصروفات والإيرادات</li>
+                    <li>تسجيل المصروفات اليومية</li>
+                    <li>تسجيل الإيرادات (يتم الربط التلقائي بمدفوعات الطلاب)</li>
+                    <li>مشاهدة التقارير المالية الشاملة</li>
+                    <li>تحليل الإيرادات والمصروفات بالرسوم البيانية</li>
+                    <li>حساب صافي الربح وهامش الربح</li>
+                </ul>
+                <div class="tip">
+                    <strong>💡 ميزة ذكية:</strong> عند استلام مدفوعات من الطلاب، يتم إنشاء إيراد تلقائياً في النظام المالي
+                </div>
+            </div>
+        </section>
+
+        <!-- آخر التحديثات -->
+        <section id="latest-updates">
+            <h2>🆕 آخر التحديثات في النظام</h2>
+
+            <div class="card">
+                <h4>🧾 تسجيل حضور الطلاب بالباركود</h4>
+                <ul style="margin-right: 20px;">
+                    <li>شاشة جديدة لتسجيل الحضور عبر الباركود.</li>
+                    <li>تسجيل تلقائي داخل جلسة اليوم الخاصة بمجموعة الطالب.</li>
+                    <li>يمنع التكرار إذا تم تسجيل الحضور مسبقاً.</li>
+                </ul>
+                <div class="tip">
+                    <strong>الوصول:</strong> لوحة الإدارة → الحضور → تسجيل حضور بالباركود
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>⏱️ حضور وانصراف السكرتيرة</h4>
+                <ul style="margin-right: 20px;">
+                    <li>زران فقط لتسجيل الحضور والانصراف.</li>
+                    <li>سجل واحد يومياً مع حساب ساعات العمل تلقائياً.</li>
+                    <li>يعتمد على توقيت السيرفر فقط ولا يسمح بالتعديل إلا للمسؤولين.</li>
+                </ul>
+                <div class="tip">
+                    <strong>الوصول:</strong> لوحة الإدارة → الحضور → حضور السكرتيرة
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>💵 كاشير بالباركود داخل المدفوعات</h4>
+                <ul style="margin-right: 20px;">
+                    <li>إدخال باركود الطالب لتحديد بياناته تلقائياً في شاشة المدفوعات.</li>
+                    <li>تحديث الرصيد والمدفوعات تلقائياً بعد اختيار الطالب.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h4>🏦 فلاتر الخزائن حسب الفروع</h4>
+                <ul style="margin-right: 20px;">
+                    <li>فلتر فرع في جدول الخزائن للأدمن الرئيسي.</li>
+                    <li>فلتر فرع في تقرير الحركة اليومية للخزائن.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h4>💼 نظام المرتبات (مهندسين + سكرتارية)</h4>
+                <ul style="margin-right: 20px;">
+                    <li>تسجيل صرف المرتبات مع اختيار الموظف (مهندس/سكرتارية).</li>
+                    <li>ربط الصرف بالخزينة وطريقة الدفع.</li>
+                    <li>إجراءات سريعة لتحويل الحالة إلى مدفوع.</li>
+                </ul>
+                <div class="tip">
+                    <strong>الوصول:</strong> لوحة الإدارة → الإدارة المالية → المرتبات
+                </div>
+            </div>
+        </section>
+    
+        <!-- لوحة المعلم -->
+        <section id="instructor">
+            <h2>👨‍🏫 لوحة تحكم المعلم/المدرس</h2>
+    
+            <div class="highlight">
+                <strong>💡 ملاحظة:</strong> المعلم يرى فقط المجموعات والطلاب المرتبطين به
+            </div>
+    
+            <h3>📊 الشاشة الرئيسية المتطورة</h3>
+            <div class="screen-preview">
+                <p><strong>Dashboard احترافي مع 10 Widgets:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>📊 إحصائيات المدرس (Stats Widget)</li>
+                    <li>📈 معدل الحضور (Attendance Rate Chart)</li>
+                    <li>👥 المجموعات القادمة (Upcoming Groups)</li>
+                    <li>📅 الجلسات القادمة (Upcoming Sessions)</li>
+                    <li>📝 الواجبات الأخيرة (Recent Assignments)</li>
+                    <li>📊 رسم بياني للتسليمات (Submissions Chart)</li>
+                    <li>💰 إحصائيات المدفوعات (Payment Stats)</li>
+                    <li>⭐ إحصائيات المراجعات (Review Stats)</li>
+                    <li>💬 رسائل المجموعات (Group Messages Widget)</li>
+                    <li>✅ إحصائيات الحضور (Attendance Stats)</li>
+                </ul>
+            </div>
+    
+            <h3>📚 12 Resources للإدارة الكاملة</h3>
+            <div class="card">
+                <h4>1️⃣ الطلاب (Students)</h4>
+                <p>عرض جميع الطلاب في المجموعات التي يدرسها المعلم</p>
+            </div>
+            <div class="card">
+                <h4>2️⃣ المجموعات (Groups)</h4>
+                <p>إدارة وعرض المجموعات المسندة للمعلم</p>
+            </div>
+    
+            <div class="card">
+                <h4>3️⃣ جلسات الحضور (Attendance Sessions)</h4>
+                <p>
+                    يقوم المدرّس بتسجيل الجلسة، ويتم تسجيلها تلقائيًا على مستوى المجموعة والجروب والكورس المسجّل به الطالب، مع حفظها على النظام.
+                    وعند اكتمال عدد الجلسات المحددة لكل كورس، يتم تحويل حالة الكورس من نشط إلى منتهي تلقائيًا.
+                </p>
+            </div>
+    
+            <div class="card">
+                <h4>4️⃣ الجداول الزمنية (Session Schedules)</h4>
+                <p>جدول الحصص والمواعيد</p>
+            </div>
+            <div class="card">
+                <h4>5️⃣ الواجبات (Assignments)</h4>
+                <p>إنشاء واجبات ومراجعة تسليمات الطلاب</p>
+            </div>
+    
+            <div class="card">
+                <h4>6️⃣ تسليمات الواجبات (Assignment Submissions)</h4>
+                <p>مراجعة وتقييم واجبات الطلاب</p>
+            </div>
+    
+            <div class="card">
+                <h4>7️⃣ الامتحانات (Exams)</h4>
+                <p>إنشاء امتحانات ورفع ملفات PDF</p>
+            </div>
+    
+            <div class="card">
+                <h4>8️⃣ محاولات الامتحانات (Exam Attempts)</h4>
+                <p>عرض ومراجعة إجابات الطلاب</p>
+            </div>
+    
+            <div class="card">
+                <h4>9️⃣ الموارد التعليمية (Learning Resources)</h4>
+                <p>رفع وإدارة الملفات والمحتوى التعليمي</p>
+            </div>
+            <div class="card">
+                <h4>🔟 رسائل المجموعات (Group Messages)</h4>
+                <p>نظام تواصل متقدم داخل المجموعات مع الطلاب</p>
+            </div>
+    
+            <div class="card">
+                <h4>1️⃣1️⃣ مراجعات المدرس (Instructor Reviews)</h4>
+                <p>عرض تقييمات الطلاب للمدرس</p>
+            </div>
+    
+            <div class="card">
+                <h4>1️⃣2️⃣ مدفوعات المدرس (Instructor Payments)</h4>
+                <p>عرض المدفوعات والرواتب</p>
+            </div>
+            <h3>💬 نظام التواصل داخل المجموعات</h3>
+            <div class="card">
+                <h4>ميزات متقدمة:</h4>
+                <ul style="margin-right: 20px;">
+                    <li>✅ 4 أنواع رسائل: عامة، إعلان، تذكير، طارئة</li>
+                    <li>✅ 4 مستويات أولوية: منخفضة، عادية، عالية، طارئة</li>
+                    <li>✅ جدولة الرسائل للإرسال لاحقاً</li>
+                    <li>✅ إرفاق ملفات مع الرسائل</li>
+                    <li>✅ تتبع من قرأ الرسالة</li>
+                    <li>✅ واجهة محادثة احترافية</li>
+                </ul>
+            </div>
+    
+            <h3>📊 تقارير وإحصائيات متقدمة</h3>
+            <div class="card">
+                <h4>يمكن للمعلم مشاهدة:</h4>
+                <ul style="margin-right: 20px;">
+                    <li>تقرير أداء الطلاب في مجموعاته</li>
+                    <li>إحصائيات الحضور لكل مجموعة</li>
+                    <li>نسب نجاح الطلاب في الامتحانات</li>
+                    <li>معدل تسليم الواجبات</li>
+                    <li>تقييمات الطلاب له</li>
+                </ul>
+            </div>
+        </section>
+    
+        <!-- لوحة الطالب -->
+        <section id="student">
+            <h2>🎓 لوحة الطالب</h2>
+    
+            <div class="highlight">
+                <strong>💡 ملاحظة:</strong> الطالب يرى فقط المواد المسجل فيها والاختبارات المتاحة له
+            </div>
+    
+            <h3>📊 الشاشة الرئيسية</h3>
+            <div class="screen-preview">
+                <p><strong>ماذا يرى الطالب؟</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>المواد الدراسية المسجل فيها</li>
+                    <li>الاختبارات القادمة</li>
+                    <li>آخر النتائج</li>
+                    <li>معدله الدراسي</li>
+                </ul>
+            </div>
+    
+            <h3>📚 شاشة موادي</h3>
+            <div class="card">
+                <h4>دراسة المواد</h4>
+                <div class="steps">
+                    <p><strong>خطوات الدراسة:</strong></p>
+                    <ol>
+                        <li>اضغط على "موادي" من القائمة</li>
+                        <li>اختر المادة المراد دراستها</li>
+                        <li>ستظهر قائمة الدروس</li>
+                        <li>اضغط على أي درس لفتحه</li>
+                        <li>اقرأ المحتوى أو شاهد الفيديوهات</li>
+                        <li>حمّل الملفات المرفقة إذا وجدت</li>
+                    </ol>
+                </div>
+    
+                <div class="tip">
+                    <strong>💡 نصيحة:</strong> رتب دروسك حسب الأولوية وادرس بانتظام
+                </div>
+            </div>
+    
+            <h3>📝 شاشة الاختبارات</h3>
+            <div class="card">
+                <h4>حل الاختبارات</h4>
+    
+                <div class="steps">
+                    <p><strong>خطوات حل الاختبار:</strong></p>
+                    <ol>
+                        <li>اضغط على "الاختبارات" من القائمة</li>
+                        <li>ستجد قائمة بالاختبارات المتاحة</li>
+                        <li>اضغط "ابدأ الاختبار"</li>
+                        <li>اقرأ التعليمات جيداً</li>
+                        <li>لاحظ المدة المتبقية أعلى الشاشة</li>
+                        <li>أجب على الأسئلة واحداً تلو الآخر</li>
+                        <li>يمكنك التنقل بين الأسئلة</li>
+                        <li>بعد الانتهاء: اضغط "إرسال الاختبار"</li>
+                    </ol>
+                </div>
+    
+                <div class="highlight">
+                    <strong>⚠️ تحذير مهم:</strong>
+                    <ul style="margin-right: 20px; margin-top: 10px;">
+                        <li>عند بدء الاختبار، سيبدأ العداد التنازلي تلقائياً</li>
+                        <li>لا تغلق الصفحة أثناء الاختبار</li>
+                        <li>عند انتهاء الوقت، سيُرسل الاختبار تلقائياً</li>
+                        <li>لا يمكن إعادة الاختبار بعد إرساله</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <h3>📊 شاشة النتائج</h3>
+            <div class="card">
+                <h4>مشاهدة الدرجات والنتائج</h4>
+                <div class="steps">
+                    <p><strong>خطوات مشاهدة النتائج:</strong></p>
+                    <ol>
+                        <li>اضغط على "نتائجي" من القائمة</li>
+                        <li>ستظهر قائمة بجميع الاختبارات المنتهية</li>
+                        <li>اضغط على أي اختبار لمشاهدة التفاصيل</li>
+                        <li>يمكنك رؤية:
+                            <ul>
+                                <li>درجتك الكلية</li>
+                                <li>الدرجة من كام</li>
+                                <li>النسبة المئوية</li>
+                                <li>إجاباتك الصحيحة والخاطئة</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+    
+            <h3>📈 شاشة التقدم الدراسي</h3>
+            <div class="card">
+                <h4>متابعة مستواك</h4>
+                <p>يمكنك مشاهدة:</p>
+                <ul style="margin-right: 20px;">
+                    <li>معدلك العام</li>
+                    <li>معدلك في كل مادة</li>
+                    <li>عدد الاختبارات التي أديتها</li>
+                    <li>تقدمك في كل مادة</li>
+                    <li>مقارنة أدائك عبر الوقت</li>
+                </ul>
+            </div>
+    
+            <h3>⚙️ شاشة الملف الشخصي</h3>
+            <div class="card">
+                <h4>معلوماتك الشخصية</h4>
+                <p>يمكنك:</p>
+                <ul style="margin-right: 20px;">
+                    <li>مشاهدة معلوماتك الأساسية</li>
+                    <li>تعديل كلمة المرور</li>
+                    <li>تحديث صورتك الشخصية</li>
+                    <li>تعديل معلومات الاتصال</li>
+                </ul>
+            </div>
+            <h3>📊 لوحة المعلومات الذكية</h3>
+            <div class="card">
+                <h4>Dashboard احترافي للطالب</h4>
+                <p>لوحة معلومات متقدمة تعرض:</p>
+                <ul style="margin-right: 20px;">
+                    <li><strong>بطاقات إحصائية:</strong> الكورسات النشطة، نسبة الحضور، المدفوعات</li>
+                    <li><strong>جدول الكورسات:</strong> مع شريط تقدم لكل كورس</li>
+                    <li><strong>سجل الحضور:</strong> آخر 10 محاضرات بحالة كل حضور</li>
+                    <li><strong>سجل المدفوعات:</strong> تحديث تلقائي كل 30 ثانية</li>
+                    <li><strong>تصميم ملون:</strong> ألوان جذابة وتأثيرات حركية</li>
+                </ul>
+                <div class="highlight">
+                    <strong>🎨 ميزة خاصة:</strong> التصميم يستخدم Tailwind CSS بشكل احترافي مع animations جميلة
+                </div>
+            </div>
+        </section>
+    
+        <!-- 📌 نظام إدارة كورسات الطالب -->
+        <section id="student-courses-management" style="margin-top: 50px;">
+            <h2
+                style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: white; padding: 30px; border-radius: 15px; text-align: center;">
+                📌 نظام إدارة كورسات الطالب المتقدم
+            </h2>
+    
+            <div class="highlight"
+                style="background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%); border: 2px solid #8b5cf6; padding: 20px; border-radius: 15px; margin: 20px 0;">
+                <strong>💡 نظام مشابه للنظام الجامعي:</strong> الطالب يرى كل الكورسات المتاحة، ويختار المواد التي يريدها،
+                وتضاف مباشرة لملفه التعليمي مع إمكانية التحكم في حالة الكورس والمجموعة.
+            </div>
+    
+            <details open style="margin: 30px 0; border: 2px solid #8b5cf6; border-radius: 15px; padding: 0;">
+                <summary
+                    style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: white; padding: 20px; cursor: pointer; font-size: 1.3em; font-weight: 700; border-radius: 13px 13px 0 0; list-style: none;">
+                    📚 آلية الاختيار والإضافة
+                </summary>
+                <div style="padding: 30px;">
+                    <h4>الخطوات الأساسية:</h4>
+    
+                    <div class="steps" style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <p><strong>1️⃣ عرض الكورسات المتاحة:</strong></p>
+                        <ul style="margin-right: 20px;">
+                            <li>عند فتح صفحة التسجيل، يرى الطالب قائمة بجميع الكورسات المتاحة</li>
+                            <li>كل كورس يظهر مع: الاسم، المعلم، السعر، عدد الحصص (12 حصة)</li>
+                            <li>بجانب كل كورس زر <strong>"اختيار"</strong> أزرق</li>
+                        </ul>
+                    </div>
+    
+                    <div class="steps" style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <p><strong>2️⃣ الاختيار والإضافة:</strong></p>
+                        <ul style="margin-right: 20px;">
+                            <li>الطالب يضغط على زر "اختيار" بجانب الكورس</li>
+                            <li>الكورس يضاف مباشرة لقسم <strong>"الكورسات المختارة"</strong> في نفس الصفحة</li>
+                            <li>الزر يتحول إلى <strong>"تم الاختيار"</strong> (معطل)</li>
+                            <li>يمكن إضافة أكثر من كورس (مثل نظام الجامعة: 6 مواد)</li>
+                        </ul>
+                    </div>
+    
+                    <div class="steps" style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <p><strong>3️⃣ عرض الكورسات المختارة:</strong></p>
+                        <ul style="margin-right: 20px;">
+                            <li>كل كورس مضاف يظهر في قائمة منفصلة مع:
+                                <ul>
+                                    <li>اسم الكورس</li>
+                                    <li>اسم المعلم</li>
+                                    <li>عدد الحصص (مثال: 12 حصة)</li>
+                                    <li>السعر</li>
+                                    <li><strong>زر الحالة</strong> بجانب الكورس</li>
+                                    <li>عداد الحصص الحالية (السيشن رقم كام من 12)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+    
+            <details open style="margin: 30px 0; border: 2px solid #8b5cf6; border-radius: 15px; padding: 0;">
+                <summary
+                    style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: white; padding: 20px; cursor: pointer; font-size: 1.3em; font-weight: 700; border-radius: 13px 13px 0 0; list-style: none;">
+                    🔘 زر حالة الكورس
+                </summary>
+                <div style="padding: 30px;">
+                    <h4>الحالات الثلاث:</h4>
+    
+                    <div
+                        style="background: linear-gradient(135deg, #fef08a 0%, #fef3c7 100%); padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 5px solid #f59e0b;">
+                        <h5 style="color: #92400e;">⭕ حالة 1: غير نشط (Inactive)</h5>
+                        <ul style="margin-right: 20px;">
+                            <li><strong>الوصف:</strong> الكورس مضاف ولكن الطالب لم يختر مجموعة بعد</li>
+                            <li><strong>لون الزر:</strong> برتقالي/رمادي</li>
+                            <li><strong>نص الزر:</strong> "غير نشط - اختر مجموعة"</li>
+                            <li><strong>الوظيفة:</strong> عند الضغط، تظهر نافذة منبثقة بالمجموعات</li>
+                            <li><strong>الانتقال:</strong> بعد اختيار مجموعة → يتحول إلى "نشط"</li>
+                        </ul>
+                    </div>
+    
+                    <div
+                        style="background: linear-gradient(135deg, #86efac 0%, #bbf7d0 100%); padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 5px solid #10b981;">
+                        <h5 style="color: #065f46;">🟢 حالة 2: نشط (Active)</h5>
+                        <ul style="margin-right: 20px;">
+                            <li><strong>الوصف:</strong> الطالب مسجل في مجموعة ويتابع الحصص</li>
+                            <li><strong>لون الزر:</strong> أخضر</li>
+                            <li><strong>نص الزر:</strong> "نشط - المجموعة: [اسم المجموعة]"</li>
+                            <li><strong>الوظيفة:</strong> عند الضغط، يمكن تغيير المجموعة بشروط</li>
+                            <li><strong>عداد الحصص:</strong> يظهر السيشن الحالي (مثال: "السيشن 5 من 12")</li>
+                            <li><strong>شروط التغيير:</strong> المجموعة الجديدة يجب أن تكون في نفس الحصة أو أقل</li>
+                        </ul>
+                    </div>
+    
+                    <div
+                        style="background: linear-gradient(135deg, #bfdbfe 0%, #dbeafe 100%); padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 5px solid #3b82f6;">
+                        <h5 style="color: #1e3a8a;">✅ حالة 3: مكتمل (Completed)</h5>
+                        <ul style="margin-right: 20px;">
+                            <li><strong>الوصف:</strong> الكورس انتهى (اكتمل 12 حصة)</li>
+                            <li><strong>لون الزر:</strong> أزرق/رمادي معطل</li>
+                            <li><strong>نص الزر:</strong> "مكتمل - غير قابل للتعديل"</li>
+                            <li><strong>الوظيفة:</strong> معطل تماماً (لا يمكن الضغط عليه)</li>
+                            <li><strong>السجل:</strong> محفوظ في السجل التعليمي دائماً</li>
+                            <li><strong>النقاط:</strong> يظهر "12 من 12 حصة"</li>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+    
+            <details open style="margin: 30px 0; border: 2px solid #8b5cf6; border-radius: 15px; padding: 0;">
+                <summary
+                    style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: white; padding: 20px; cursor: pointer; font-size: 1.3em; font-weight: 700; border-radius: 13px 13px 0 0; list-style: none;">
+                    🎯 تفعيل وتغيير المجموعة
+                </summary>
+                <div style="padding: 30px;">
+                    <h4>العملية بالتفصيل:</h4>
+    
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                        <h5 style="color: #667eea;">من غير نشط إلى نشط:</h5>
+                        <div class="screen-preview">
+                            <pre>
+    ❌ غير نشط
+        ↓ (الطالب يضغط الزر)
+        ↓ (تظهر نافذة بالمجموعات المتاحة)
+        ↓ (يختار مجموعة)
+    ✅ نشط
+        ↓ (يظهر اسم المجموعة والسيشن الحالي)
+                                </pre>
+                        </div>
+                    </div>
+    
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                        <h5 style="color: #667eea;">تغيير المجموعة (الكورس نشط):</h5>
+                        <ul style="margin-right: 20px;">
+                            <li>💡 <strong>الشروط:</strong>
+                                <ul>
+                                    <li>المجموعة الجديدة يجب أن تكون في نفس الحصة أو حصة أقل</li>
+                                    <li>مثال: إذا كان الطالب في السيشن 5، لا يمكن الانتقال لمجموعة في السيشن 7</li>
+                                </ul>
+                            </li>
+                            <li>📋 <strong>المجموعات المعروضة:</strong>
+                                <ul>
+                                    <li>فقط المجموعات من نفس الكورس</li>
+                                    <li>وحسب الشروط التعليمية</li>
+                                </ul>
+                            </li>
+                            <li>✅ <strong>التحديث:</strong> تغيير المجموعة يتم فوراً</li>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+    
+            <details open style="margin: 30px 0; border: 2px solid #8b5cf6; border-radius: 15px; padding: 0;">
+                <summary
+                    style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: white; padding: 20px; cursor: pointer; font-size: 1.3em; font-weight: 700; border-radius: 13px 13px 0 0; list-style: none;">
+                    ⏱️ نظام عداد السيشنات (الحصص)
+                </summary>
+                <div style="padding: 30px;">
+                    <h4>كيفية عمل العداد:</h4>
+    
+                    <div
+                        style="background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 5px solid #ec4899;">
+                        <h5 style="color: #831843;">1️⃣ بداية الكورس</h5>
+                        <ul style="margin-right: 20px;">
+                            <li>الكورس يحتوي على <strong>12 حصة (سيشن)</strong></li>
+                            <li>عند بدء الكورس، يكون الطالب في <strong>السيشن 0 من 12</strong></li>
+                        </ul>
+                    </div>
+    
+                    <div
+                        style="background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 5px solid #ec4899;">
+                        <h5 style="color: #831843;">2️⃣ تسجيل السيشن من قبل المعلم</h5>
+                        <ul style="margin-right: 20px;">
+                            <li>قبل بدء كل حصة، المعلم يسجل في لوحة التحكم:
+                                <ul>
+                                    <li>"بدء السيشن رقم X"</li>
+                                </ul>
+                            </li>
+                            <li>عند التسجيل:</li>
+                            <li>✅ العداد يتحديث تلقائياً للطالب</li>
+                            <li>✅ يصبح <strong>"السيشن X من 12"</strong></li>
+                            <li>✅ جميع الطلاب النشطين في الكورس يرون الرقم نفسه</li>
+                        </ul>
+                    </div>
+    
+                    <div
+                        style="background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); padding: 20px; border-radius: 10px; margin: 20px 0; border-left: 5px solid #ec4899;">
+                        <h5 style="color: #831843;">3️⃣ انتهاء الكورس</h5>
+                        <ul style="margin-right: 20px;">
+                            <li>عند تسجيل السيشن رقم 12:</li>
+                            <li>✅ حالة الكورس تتحول تلقائياً إلى <strong>"مكتمل"</strong></li>
+                            <li>✅ الزر يصبح معطلاً ولا يمكن تغييره</li>
+                            <li>✅ الكورس ينتقل للسجل التعليمي النهائي</li>
+                        </ul>
+                    </div>
+    
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                        <h4>🎯 ملخص العداد:</h4>
+                        <div class="screen-preview">
+                            <pre>
+    السيشن يبدأ من: 0 من 12
+    المعلم يسجل: بدء السيشن 1
+    الطالب يرى: ✅ السيشن 1 من 12
+    
+    المعلم يسجل: بدء السيشن 2
+    الطالب يرى: ✅ السيشن 2 من 12
+    
+    ...
+    
+    المعلم يسجل: بدء السيشن 12
+    الطالب يرى: ✅ السيشن 12 من 12 + حالة مكتمل
+                                </pre>
+                        </div>
+                    </div>
+                </div>
+            </details>
+    
+            <details open style="margin: 30px 0; border: 2px solid #8b5cf6; border-radius: 15px; padding: 0;">
+                <summary
+                    style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: white; padding: 20px; cursor: pointer; font-size: 1.3em; font-weight: 700; border-radius: 13px 13px 0 0; list-style: none;">
+                    📊 عرض عداد السيشن في جميع المكان
+                </summary>
+                <div style="padding: 30px;">
+                    <h4>أماكن ظهور العداد:</h4>
+    
+                    <div style="background: #f0f4f8; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                        <h5>1️⃣ في صفحة التسجيل (Enrollments):</h5>
+                        <ul style="margin-right: 20px;">
+                            <li>💠 <strong>بجانب اسم الكورس:</strong> "السيشن 5 من 12"</li>
+                            <li>💠 <strong>في حالة الكورس:</strong> نشط - السيشن 5 من 12</li>
+                            <li>💠 <strong>شريط التقدم:</strong> يعرض 5/12 بصرياً</li>
+                        </ul>
+                    </div>
+    
+                    <div style="background: #f0f4f8; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                        <h5>2️⃣ في Student Dashboard (لوحة الطالب):</h5>
+                        <ul style="margin-right: 20px;">
+                            <li>💠 <strong>بطاقة الكورس:</strong> تعرض "السيشن X من 12"</li>
+                            <li>💠 <strong>شريط التقدم:</strong> يعرض التقدم المرئي (مثال: 5/12 خضراء و 7/12 رمادية)</li>
+                            <li>💠 <strong>نسبة التقدم:</strong> "41% من الكورس مكتمل"</li>
+                        </ul>
+                    </div>
+    
+                    <div style="background: #f0f4f8; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                        <h5>3️⃣ في صفحة الكورسات (My Courses):</h5>
+                        <ul style="margin-right: 20px;">
+                            <li>💠 <strong>قائمة الكورسات:</strong> كل كورس يظهر مع "السيشن X من 12"</li>
+                            <li>💠 <strong>بطاقة الكورس:</strong> تفاصيل كاملة مع العداد</li>
+                        </ul>
+                    </div>
+    
+                    <div style="background: #f0f4f8; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                        <h5>4️⃣ في نافذة اختيار المجموعة:</h5>
+                        <ul style="margin-right: 20px;">
+                            <li>💠 <strong>عند فتح نافذة المجموعات:</strong> يظهر السيشن الحالي</li>
+                            <li>💠 <strong>تحذير:</strong> "المجموعات قبل السيشن 5 متاحة فقط"</li>
+                        </ul>
+                    </div>
+    
+                    <div style="background: #f0f4f8; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                        <h5>5️⃣ في صفحة الباركود (للاستخدام المستقبلي):</h5>
+                        <ul style="margin-right: 20px;">
+                            <li>💠 <strong>سجل الحضور:</strong> يظهر "السيشن 5 - حاضر/غائب"</li>
+                            <li>💠 <strong>للتحقق من الطالب:</strong> "الطالب في السيشن 5 من كورس Scratch"</li>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+    
+            <details open style="margin: 30px 0; border: 2px solid #8b5cf6; border-radius: 15px; padding: 0;">
+                <summary
+                    style="background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: white; padding: 20px; cursor: pointer; font-size: 1.3em; font-weight: 700; border-radius: 13px 13px 0 0; list-style: none;">
+                    📋 ملخص سريع للنظام
+                </summary>
+                <div style="padding: 30px;">
+                    <div class="screen-preview"
+                        style="background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%); padding: 20px;">
+                        <h4 style="text-align: center; color: #6d28d9;">🎯 خطوات العملية من البداية للنهاية</h4>
+                        <table style="width: 100%; margin-top: 20px; border-collapse: collapse;">
+                            <tr style="background: #8b5cf6; color: white;">
+                                <th style="padding: 12px; border: 1px solid #6d28d9; text-align: right;">الخطوة</th>
+                                <th style="padding: 12px; border: 1px solid #6d28d9; text-align: right;">الوصف</th>
+                                <th style="padding: 12px; border: 1px solid #6d28d9; text-align: right;">النتيجة</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid #e0e0e0; background: #f8f9fa;">1️⃣ اختيار الكورس
+                                </td>
+                                <td style="padding: 12px; border: 1px solid #e0e0e0; background: #f8f9fa;">الطالب يضغط
+                                    "اختيار"</td>
+                                <td style="padding: 12px; border: 1px solid #e0e0e0; background: #f8f9fa;">الكورس يضاف (غير
+                                    نشط)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid #e0e0e0;">2️⃣ اختيار المجموعة</td>
+                                <td style="padding: 12px; border: 1px solid #e0e0e0;">يضغط على زر "غير نشط"</td>
+                                <td style="padding: 12px; border: 1px solid #e0e0e0;">الكورس يصير نشط</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid #e0e0e0; background: #f8f9fa;">3️⃣ بدء الحصص
+                                </td>
+                                <td style="padding: 12px; border: 1px solid #e0e0e0; background: #f8f9fa;">المعلم يسجل
+                                    السيشن</td>
+                                <td style="padding: 12px; border: 1px solid #e0e0e0; background: #f8f9fa;">العداد يتحديث
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border: 1px solid #e0e0e0;">4️⃣ انتهاء الكورس</td>
+                                <td style="padding: 12px; border: 1px solid #e0e0e0;">السيشن 12 مكتمل</td>
+                                <td style="padding: 12px; border: 1px solid #e0e0e0;">حالة = مكتمل</td>
+                            </tr>
+                        </table>
+    
+                        <h4 style="text-align: center; color: #6d28d9; margin-top: 30px;">🔑 المبادئ الأساسية</h4>
+                        <ul style="margin-right: 20px; margin-top: 15px;">
+                            <li>✅ <strong>اختيار الكورس = حجز</strong> في ملف الطالب</li>
+                            <li>✅ <strong>اختيار المجموعة = تفعيل</strong> الكورس</li>
+                            <li>✅ <strong>تغيير المجموعة مسموح</strong> بشروط تعليمية (نفس السيشن أو أقل)</li>
+                            <li>✅ <strong>الكورس المكتمل لا يتغير</strong> (محفوظ دائماً)</li>
+                            <li>✅ <strong>العداد يظهر في كل مكان</strong> يرى فيه الطالب الكورس</li>
+                            <li>✅ <strong>المعلم يحكم بدء السيشنات</strong> من لوحة التحكم</li>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+    
+        </section>
+    
+        <!-- لوحة ولي الأمر -->
+        <section id="parent">
+            <h2>👨‍👩‍👧‍👦 لوحة تحكم ولي الأمر</h2>
+    
+            <div class="highlight">
+                <strong>💡 ملاحظة:</strong> ولي الأمر يمكنه متابعة عدة أبناء من نفس الحساب
+            </div>
+    
+            <h3>📊 الشاشة الرئيسية</h3>
+            <div class="screen-preview">
+                <p><strong>ماذا يرى ولي الأمر؟</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>قائمة أبنائه المسجلين في النظام</li>
+                    <li>أزرار جميلة لاختيار الطالب المراد متابعته</li>
+                    <li>إحصائيات شاملة عن الطالب المختار</li>
+                    <li>تحديث فوري للبيانات عند التبديل بين الأبناء</li>
+                </ul>
+            </div>
+    
+            <h3>👶 اختيار الطالب</h3>
+            <div class="card">
+                <h4>التبديل بين الأبناء</h4>
+                <div class="steps">
+                    <p><strong>خطوات المتابعة:</strong></p>
+                    <ol>
+                        <li>سجل الدخول بحساب ولي الأمر</li>
+                        <li>ستظهر قائمة بجميع أبنائك</li>
+                        <li>اضغط على زر اسم الطالب المراد متابعته</li>
+                        <li>ستظهر جميع البيانات الخاصة به فوراً</li>
+                        <li>يمكنك التبديل بين الأبناء في أي وقت</li>
+                    </ol>
+                </div>
+                <div class="tip">
+                    <strong>💡 سهل ومريح:</strong> تصميم جميل بأزرار كبيرة وواضحة مع علامة ✓ على الطالب المختار
+                </div>
+            </div>
+    
+            <h3>📈 إحصائيات الطالب</h3>
+            <div class="card">
+                <h4>بطاقات معلوماتية شاملة</h4>
+                <p>تعرض 4 بطاقات رئيسية:</p>
+                <ul style="margin-right: 20px;">
+                    <li><strong>الكورسات النشطة:</strong> عدد الكورسات المسجل فيها</li>
+                    <li><strong>نسبة الحضور:</strong> مع عدد أيام الحضور من الإجمالي</li>
+                    <li><strong>إجمالي المدفوعات:</strong> المبلغ المدفوع بالكامل</li>
+                    <li><strong>المدفوعات المعلقة:</strong> مع تحذير إذا وجدت متأخرات</li>
+                </ul>
+            </div>
+    
+            <h3>📚 متابعة الكورسات</h3>
+            <div class="card">
+                <h4>تفاصيل دراسة الطالب</h4>
+                <p>جدول يعرض:</p>
+                <ul style="margin-right: 20px;">
+                    <li>أسماء الكورسات التي يدرسها</li>
+                    <li>المدرس لكل كورس</li>
+                    <li>نسبة التقدم في كل كورس (شريط تقدم ملون)</li>
+                    <li>حالة التسجيل (نشط، مكتمل، ملغي)</li>
+                </ul>
+            </div>
+    
+            <h3>📅 سجل الحضور والغياب</h3>
+            <div class="card">
+                <h4>متابعة انتظام الطالب</h4>
+                <p>يعرض:</p>
+                <ul style="margin-right: 20px;">
+                    <li>تاريخ كل محاضرة</li>
+                    <li>اسم الكورس</li>
+                    <li>حالة الحضور: ✓ حاضر، ✗ غائب، ⏰ متأخر، 📝 غياب بعذر</li>
+                    <li>ملاحظات المعلم إن وجدت</li>
+                </ul>
+            </div>
+    
+            <h3>💳 سجل المدفوعات</h3>
+            <div class="card">
+                <h4>الشؤون المالية للطالب</h4>
+                <p>جدول تفصيلي يعرض:</p>
+                <ul style="margin-right: 20px;">
+                    <li>رقم كل دفعة (يمكن نسخه بضغطة واحدة)</li>
+                    <li>الكورس المرتبط بالدفعة</li>
+                    <li>المبلغ المطلوب</li>
+                    <li>طريقة الدفع (نقدي، بنك، بطاقة، إلخ)</li>
+                    <li>حالة الدفع (مدفوع ✓، معلق ⏳، متأخر ⚠️)</li>
+                    <li>التاريخ المتوقع والفعلي للدفع</li>
+                </ul>
+            </div>
+    
+            <h3>🎯 مميزات لوحة ولي الأمر</h3>
+            <div class="highlight">
+                <p><strong>✨ تصميم احترافي:</strong></p>
+                <ul style="margin-right: 20px; margin-top: 10px;">
+                    <li>ألوان جذابة ومتدرجة</li>
+                    <li>أيقونات واضحة وتعبيرية</li>
+                    <li>تحديث فوري للبيانات عند التبديل</li>
+                    <li>شرائط تقدم ملونة</li>
+                    <li>تنبيهات للمدفوعات المعلقة</li>
+                    <li>سهولة في التنقل والاستخدام</li>
+                </ul>
+            </div>
+        </section>
+    
+        <!-- النظام المالي -->
+        <section id="financial">
+            <h2>💰 النظام المالي المتكامل</h2>
+    
+            <div class="highlight">
+                <strong>🎯 نظام مالي احترافي:</strong> إدارة كاملة للمصروفات والإيرادات مع تقارير تحليلية
+            </div>
+    
+            <h3>📂 فئات المصروفات</h3>
+            <div class="card">
+                <h4>تنظيم أنواع المصروفات</h4>
+                <div class="steps">
+                    <p><strong>خطوات الإضافة:</strong></p>
+                    <ol>
+                        <li>اضغط على "الإدارة المالية" → "فئات المصروفات"</li>
+                        <li>اضغط "إضافة فئة مصروف"</li>
+                        <li>اكتب الاسم (مثل: رواتب، كهرباء، صيانة)</li>
+                        <li>اكتب رمز الفئة</li>
+                        <li>اكتب وصف مختصر</li>
+                        <li>اضغط "حفظ"</li>
+                    </ol>
+                </div>
+            </div>
+    
+            <h3>💸 تسجيل المصروفات</h3>
+            <div class="card">
+                <h4>إدارة المصاريف اليومية</h4>
+                <div class="steps">
+                    <p><strong>لإضافة مصروف جديد:</strong></p>
+                    <ol>
+                        <li>اضغط على "المصروفات" من القائمة</li>
+                        <li>اضغط "إضافة مصروف"</li>
+                        <li>حدد فئة المصروف</li>
+                        <li>اكتب عنوان المصروف</li>
+                        <li>أدخل المبلغ</li>
+                        <li>حدد تاريخ المصروف</li>
+                        <li>اختر طريقة الدفع</li>
+                        <li>أضف رقم الفاتورة واسم المورد (اختياري)</li>
+                        <li>اكتب ملاحظات إضافية</li>
+                        <li>حدد الحالة (مدفوع، معلق، ملغي)</li>
+                    </ol>
+                </div>
+            </div>
+    
+            <h3>📂 فئات الإيرادات</h3>
+            <div class="card">
+                <h4>تصنيف مصادر الدخل</h4>
+                <p>نفس خطوات فئات المصروفات، لكن للإيرادات (مثل: رسوم دراسية، تبرعات، خدمات إضافية)</p>
+            </div>
+    
+            <h3>💰 تسجيل الإيرادات</h3>
+            <div class="card">
+                <h4>إدارة الدخل</h4>
+                <div class="steps">
+                    <p><strong>لإضافة إيراد جديد:</strong></p>
+                    <ol>
+                        <li>اضغط على "الإيرادات" من القائمة</li>
+                        <li>اضغط "إضافة إيراد"</li>
+                        <li>حدد فئة الإيراد</li>
+                        <li>اكتب عنوان الإيراد</li>
+                        <li>أدخل المبلغ</li>
+                        <li>حدد تاريخ الإيراد</li>
+                        <li>اختر طريقة الدفع</li>
+                        <li>أضف رقم الفاتورة واسم العميل</li>
+                        <li>حدد الحالة (مستلم، معلق)</li>
+                    </ol>
+                </div>
+                <div class="highlight">
+                    <strong>🤖 ربط تلقائي ذكي:</strong> عند استلام مدفوعات من الطلاب، يتم إنشاء إيراد تلقائياً مربوط بالطالب
+                    والكورس!
+                </div>
+            </div>
+    
+            <h3>📊 التقارير المالية</h3>
+            <div class="card">
+                <h4>تحليلات مالية شاملة</h4>
+                <p><strong>لوحة معلومات احترافية بتصميم عصري تعرض:</strong></p>
+    
+                <h4 style="color: #10b981; margin-top: 20px;">📈 بطاقات إحصائية ملونة:</h4>
+                <ul style="margin-right: 20px;">
+                    <li><strong style="color: #10b981;">إجمالي الإيرادات</strong> - بطاقة خضراء مع أيقونة نقود</li>
+                    <li><strong style="color: #ef4444;">إجمالي المصروفات</strong> - بطاقة حمراء مع أيقونة دولار</li>
+                    <li><strong style="color: #3b82f6;">صافي الربح</strong> - بطاقة زرقاء (أو برتقالية إذا خسارة)</li>
+                    <li><strong style="color: #8b5cf6;">هامش الربح</strong> - بطاقة بنفسجية بالنسبة المئوية</li>
+                </ul>
+    
+                <h4 style="color: #667eea; margin-top: 20px;">🎨 رسوم بيانية تفاعلية:</h4>
+                <ul style="margin-right: 20px;">
+                    <li><strong>Pie Chart:</strong> الإيرادات حسب الفئة بألوان متدرجة</li>
+                    <li><strong>Doughnut Chart:</strong> المصروفات حسب الفئة</li>
+                    <li>Tooltips جميلة عند التمرير</li>
+                    <li>Legend أسفل كل رسم بنقاط دائرية</li>
+                    <li>تأثيرات حركية عند التحميل</li>
+                </ul>
+    
+                <h4 style="color: #f59e0b; margin-top: 20px;">✨ مميزات التصميم:</h4>
+                <ul style="margin-right: 20px;">
+                    <li>Gradients احترافية لكل بطاقة</li>
+                    <li>Shadow effects جميلة</li>
+                    <li>Hover animations سلسة</li>
+                    <li>أيقونات كبيرة وواضحة</li>
+                    <li>ألوان متناسقة ومريحة للعين</li>
+                    <li>أرقام ضخمة وواضحة</li>
+                    <li>Emojis تعبيرية (📈 📉 💰 📊)</li>
+                </ul>
+            </div>
+    
+            <h3>💡 الاستخدام الأمثل للنظام المالي</h3>
+            <div class="tip">
+                <strong>نصائح مهمة:</strong>
+                <ul style="margin-right: 20px; margin-top: 10px;">
+                    <li>أنشئ الفئات أولاً قبل تسجيل المصروفات والإيرادات</li>
+                    <li>سجّل جميع المصروفات فور حدوثها</li>
+                    <li>راجع التقارير المالية دورياً</li>
+                    <li>استفد من الربط التلقائي لمدفوعات الطلاب</li>
+                    <li>احفظ الفواتير والمستندات المالية</li>
+                    <li>حدد طريقة الدفع بدقة لكل معاملة</li>
+                </ul>
+            </div>
+        </section>
+    
+        <!-- نظام الخزائن المتقدم -->
+        <section id="vaults">
+            <h2>🏦 نظام الخزائن المتقدم</h2>
+    
+            <div class="highlight">
+                <strong>🎯 نظام خزائن ذكي:</strong> إدارة 3 أنواع من الخزائن بشكل منفصل تماماً - نقدي، فودافون كاش، إنستاباي
+            </div>
+    
+            <h3>💵 أنواع الخزائن</h3>
+            <div class="card">
+                <h4>3 خزائن مستقلة تماماً</h4>
+                <ul style="margin-right: 20px;">
+                    <li><strong>💵 الخزينة النقدية (Cash):</strong> للمعاملات النقدية المباشرة</li>
+                    <li><strong>📱 فودافون كاش (Vodafone Cash):</strong> للمدفوعات عبر فودافون كاش</li>
+                    <li><strong>💳 إنستاباي (InstaPay):</strong> للتحويلات البنكية السريعة</li>
+                </ul>
+                <div class="tip">
+                    <strong>💡 ملاحظة:</strong> كل خزينة مستقلة تماماً ولها رصيد منفصل - لا يوجد خلط بين الخزائن!
+                </div>
+            </div>
+    
+            <h3>📊 Widget أرصدة الخزائن</h3>
+            <div class="card">
+                <h4>عرض فوري للأرصدة في Dashboard</h4>
+                <p><strong>يعرض تلقائياً:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>رصيد كل خزينة بشكل منفصل</li>
+                    <li>تفصيل: الإيرادات | مدفوعات الطلاب | المصروفات</li>
+                    <li>💰 الإجمالي الكلي لجميع الخزائن</li>
+                    <li>⚠️ تنبيه فوري عند وجود رصيد سالب (إطار أحمر)</li>
+                    <li>أيقونات ملونة مميزة لكل خزينة</li>
+                </ul>
+                <div class="highlight">
+                    <strong>🚨 تنبيهات ذكية:</strong> عند وجود رصيد سالب، يظهر إشعار منبثق فوري مع تفاصيل الخزائن السالبة!
+                </div>
+            </div>
+    
+            <h3>💰 تسجيل المعاملات المالية</h3>
+            <div class="card">
+                <h4>ربط كل معاملة بخزينة محددة</h4>
+                <div class="steps">
+                    <p><strong>عند إضافة مصروف أو إيراد أو دفعة:</strong></p>
+                    <ol>
+                        <li>افتح نموذج الإضافة (مصروف/إيراد/دفعة طالب)</li>
+                        <li><strong>اختر الخزينة</strong> من القائمة المنسدلة</li>
+                        <li>اكمل باقي البيانات</li>
+                        <li>احفظ - سيتم تحديث رصيد الخزينة تلقائياً!</li>
+                    </ol>
+                </div>
+                <div class="tip">
+                    <strong>⚡ ميزة سريعة:</strong> يمكنك إنشاء خزينة جديدة مباشرة من نموذج المصروفات دون الخروج!
+                </div>
+            </div>
+    
+            <h3>📋 تقرير معاملات الخزائن</h3>
+            <div class="card">
+                <h4>صفحة مخصصة لجميع معاملات الخزائن</h4>
+                <p><strong>الوصول:</strong> لوحة المدير → الخزائن → تقرير المعاملات</p>
+                <p><strong>يعرض:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>جميع المعاملات من 3 مصادر (إيرادات، مصروفات، مدفوعات طلاب)</li>
+                    <li>التاريخ ونوع المعاملة والخزينة والمبلغ</li>
+                    <li><strong>الرصيد بعد كل عملية</strong> - متابعة دقيقة</li>
+                    <li>فلترة قوية: حسب الخزينة، النوع، التاريخ</li>
+                    <li>إحصائيات في الأعلى: إجمالي الرصيد، عدد المعاملات</li>
+                </ul>
+                <div class="highlight">
+                    <strong>🎨 تصميم مميز:</strong> بطاقات إحصائية ملونة + جدول تفاعلي + أيقونات للتمييز بين الأنواع
+                </div>
+            </div>
+    
+            <h3>📅 تقرير الحركة اليومية</h3>
+            <div class="card">
+                <h4>Widget ذكي للحركة اليومية</h4>
+                <p><strong>جدول تفصيلي يعرض لكل خزينة:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>رصيد أول اليوم</li>
+                    <li>إيرادات اليوم</li>
+                    <li>مدفوعات الطلاب اليوم</li>
+                    <li>إجمالي الوارد</li>
+                    <li>مصروفات اليوم</li>
+                    <li>صافي الحركة اليومية (+ أو -)</li>
+                    <li>رصيد نهاية اليوم</li>
+                </ul>
+                <div class="tip">
+                    <strong>📆 اختر التاريخ:</strong> يمكنك تغيير التاريخ لعرض حركة أي يوم تريده!
+                </div>
+            </div>
+    
+            <h3>✅ نظام التسوية (Reconciliation)</h3>
+            <div class="card">
+                <h4>مطابقة رصيد النظام مع الرصيد الفعلي</h4>
+                <p><strong>الوصول:</strong> لوحة المدير → تسويات الخزائن</p>
+                <div class="steps">
+                    <p><strong>خطوات عمل التسوية:</strong></p>
+                    <ol>
+                        <li>اضغط "إنشاء تسوية جديدة"</li>
+                        <li>اختر الخزينة</li>
+                        <li>حدد تاريخ التسوية</li>
+                        <li><strong>رصيد النظام</strong> يظهر تلقائياً!</li>
+                        <li>أدخل <strong>الرصيد الفعلي</strong> من السكرتيرة</li>
+                        <li>النظام يحسب <strong>الفرق</strong> تلقائياً</li>
+                        <li>أضف ملاحظات إذا وجد فرق</li>
+                        <li>احفظ</li>
+                    </ol>
+                </div>
+                <div class="highlight">
+                    <strong>🔄 سير العمل:</strong>
+                    <ul style="margin-right: 20px; margin-top: 10px;">
+                        <li>⏳ قيد المراجعة (Pending) - بعد الإنشاء</li>
+                        <li>✅ معتمدة (Approved) - بعد الموافقة</li>
+                        <li>❌ مرفوضة (Rejected) - إذا كان هناك خطأ</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <h3>🎯 الفوائد الرئيسية</h3>
+            <div class="card">
+                <h4>لماذا نظام الخزائن المتقدم؟</h4>
+                <ul style="margin-right: 20px;">
+                    <li>✅ <strong>استقلالية تامة:</strong> كل خزينة منفصلة - لا خلط ولا تداخل</li>
+                    <li>✅ <strong>تتبع دقيق:</strong> كل معاملة مربوطة بخزينتها الصحيحة</li>
+                    <li>✅ <strong>حسابات تلقائية:</strong> الرصيد يتحدث فوراً مع كل عملية</li>
+                    <li>✅ <strong>تنبيهات ذكية:</strong> إشعار فوري للرصيد السالب</li>
+                    <li>✅ <strong>تقارير شاملة:</strong> معاملات، حركة يومية، تسويات</li>
+                    <li>✅ <strong>سهولة في الاستخدام:</strong> واجهة بسيطة وواضحة</li>
+                    <li>✅ <strong>Multi-Tenancy:</strong> كل فرع له خزائنه المستقلة</li>
+                </ul>
+            </div>
+    
+            <h3>💡 نصائح الاستخدام</h3>
+            <div class="tip">
+                <strong>للحصول على أفضل النتائج:</strong>
+                <ul style="margin-right: 20px; margin-top: 10px;">
+                    <li>اختر الخزينة دائماً عند إضافة أي معاملة مالية</li>
+                    <li>راجع أرصدة الخزائن يومياً من Dashboard</li>
+                    <li>استخدم تقرير الحركة اليومية للمراجعة السريعة</li>
+                    <li>اعمل تسوية أسبوعية مع السكرتيرة</li>
+                    <li>انتبه للتنبيهات الحمراء (رصيد سالب)</li>
+                    <li>استخدم الفلاتر في تقرير المعاملات للبحث السريع</li>
+                </ul>
+            </div>
+        </section>
+    
+        <!-- 🎓 الدليل الشامل للشاشات الرئيسية -->
+        <section id="main-screens-guide" style="margin-top: 50px;">
+            <h2
+                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 15px; text-align: center;">
+                🎓 الدليل الشامل للشاشات الرئيسية
+            </h2>
+    
+            <!-- شاشة تسجيل بيانات الطلاب -->
+            <details id="students-screen" open
+                style="margin: 30px 0; border: 2px solid #667eea; border-radius: 15px; padding: 0; scroll-margin-top: 100px;">
+                <summary
+                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; cursor: pointer; font-size: 1.5em; font-weight: 700; border-radius: 13px 13px 0 0; list-style: none;">
+                    👥 دليل شاشة تسجيل بيانات الطلاب (Students)
+                </summary>
+                <div style="padding: 30px;">
+    
+                    <details id="students-part1" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #667eea; border-radius: 9px 9px 0 0;">
+                            📝 الجزء الأول: البيانات الأساسية للطالب
+                        </summary>
+                        <div style="padding: 20px;">
+                            <h4>معلومات الطالب الشخصية:</h4>
+    
+                            <h5>1. البيانات الإلزامية:</h5>
+                            <ul style="margin-right: 20px;">
+                                <li><strong>الاسم الأول (First Name):</strong> اسم الطالب الأول - إلزامي</li>
+                                <li><strong>اسم العائلة (Last Name):</strong> اسم العائلة - إلزامي</li>
+                                <li><strong>الاسم بالكامل (Full Name):</strong> يُنشأ تلقائياً من الاسم الأول + اسم العائلة
+                                </li>
+                                <li><strong>تاريخ الميلاد (Date of Birth):</strong> مهم لحساب العمر والمرحلة الدراسية</li>
+                                <li><strong>النوع (Gender):</strong> ذكر / أنثى</li>
+                            </ul>
+    
+                            <h5>2. كود الطالب (Student Code):</h5>
+                            <ul style="margin-right: 20px;">
+                                <li><strong>يتم توليده تلقائياً</strong> بتنسيق: <code>STU</code> + السنة + رقم تسلسلي</li>
+                                <li>مثال: <code>STU202600001</code>, <code>STU202600002</code></li>
+                                <li>فريد لكل طالب ولا يتكرر</li>
+                                <li>يُستخدم للبحث السريع عن الطالب</li>
+                            </ul>
+    
+                            <h5>3. معلومات الاتصال:</h5>
+                            <ul style="margin-right: 20px;">
+                                <li><strong>رقم الهاتف الأساسي (Phone):</strong> رقم هاتف الطالب أو ولي الأمر - إلزامي</li>
+                                <li><strong>رقم هاتف بديل (Alt Phone):</strong> اختياري</li>
+                                <li><strong>البريد الإلكتروني (Email):</strong> اختياري - يُستخدم للإشعارات</li>
+                                <li><strong>العنوان (Address):</strong> العنوان الكامل - اختياري</li>
+                            </ul>
+                        </div>
+                    </details>
+    
+                    <details id="students-part2" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #667eea; border-radius: 9px 9px 0 0;">
+                            👨‍👩‍👦 الجزء الثاني: بيانات أولياء الأمور
+                        </summary>
+                        <div style="padding: 20px;">
+                            <h4>معلومات ولي الأمر:</h4>
+    
+                            <h5>1. البيانات الأساسية:</h5>
+                            <ul style="margin-right: 20px;">
+                                <li><strong>نوع ولي الأمر:</strong> أب / أم / وصي</li>
+                                <li><strong>اسم ولي الأمر:</strong> الاسم الكامل</li>
+                                <li><strong>رقم الهاتف:</strong> رقم تواصل ولي الأمر - إلزامي</li>
+                                <li><strong>البريد الإلكتروني:</strong> لإرسال الإشعارات والتقارير</li>
+                                <li><strong>المهنة:</strong> مهنة ولي الأمر - اختياري</li>
+                                <li><strong>العلاقة بالطالب:</strong> أب / أم / جد / عم / وصي</li>
+                            </ul>
+    
+                            <h5>2. إنشاء حساب لولي الأمر (اختياري):</h5>
+                            <ul style="margin-right: 20px;">
+                                <li>✅ يمكن إنشاء حساب لولي الأمر للدخول للـ <strong>Parent Panel</strong></li>
+                                <li>يُرسل بريد إلكتروني ببيانات الدخول</li>
+                                <li>يمكن لولي الأمر متابعة: الحضور والغياب، الدرجات، المدفوعات، التواصل مع المعلمين</li>
+                            </ul>
+    
+                            <h5>3. ولي أمر متعدد:</h5>
+                            <ul style="margin-right: 20px;">
+                                <li>يمكن إضافة <strong>أكثر من ولي أمر</strong> للطالب الواحد</li>
+                                <li>مثال: الأب + الأم</li>
+                            </ul>
+                        </div>
+                    </details>
+    
+                    <details id="students-part3" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #667eea; border-radius: 9px 9px 0 0;">
+                            📚 الجزء الثالث: المجموعات والتسجيل
+                        </summary>
+                        <div style="padding: 20px;">
+                            <h4>تسجيل الطالب في المجموعات:</h4>
+    
+                            <h5>1. اختيار المجموعات (Multiple Selection):</h5>
+                            <ul style="margin-right: 20px;">
+                                <li><strong>اختيار متعدد:</strong> يمكن تسجيل الطالب في <strong>أكثر من مجموعة</strong></li>
+                                <li>عرض المجموعات المتاحة مع: اسم المجموعة، الكورس المرتبط، المعلم المسؤول، عدد الطلاب
+                                    الحالي</li>
+                            </ul>
+    
+                            <h5>2. طريقة الحفظ:</h5>
+                            <ul style="margin-right: 20px;">
+                                <li>يتم حفظ المجموعات في جدول pivot: <code>group_student</code></li>
+                                <li>كل صف يمثل ربط بين طالب ومجموعة</li>
+                                <li>يمكن التعديل لاحقاً (إضافة/حذف مجموعات)</li>
+                            </ul>
+    
+                            <h5>3. العرض في بطاقة الطالب:</h5>
+                            <ul style="margin-right: 20px;">
+                                <li>تظهر جميع المجموعات المسجلة في تبويب منفصل</li>
+                                <li>لكل مجموعة: اسم المجموعة، الكورس، المعلم، حالة التسجيل</li>
+                            </ul>
+                        </div>
+                    </details>
+    
+                    <details id="students-part4" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #667eea; border-radius: 9px 9px 0 0;">
+                            📷 الجزء الرابع: الصورة والمستندات
+                        </summary>
+                        <div style="padding: 20px;">
+                            <h4>صورة الطالب:</h4>
+                            <ul style="margin-right: 20px;">
+                                <li>✅ رفع صورة شخصية للطالب</li>
+                                <li>الصيغ المدعومة: JPG, PNG, JPEG</li>
+                                <li>الحجم الأقصى: 2MB</li>
+                                <li>تُعرض في البطاقة الشخصية وجميع التقارير</li>
+                            </ul>
+    
+                            <h4>المستندات:</h4>
+                            <ul style="margin-right: 20px;">
+                                <li>شهادة الميلاد</li>
+                                <li>صورة بطاقة ولي الأمر</li>
+                                <li>آخر شهادة دراسية</li>
+                                <li>أي مستندات أخرى</li>
+                            </ul>
+                        </div>
+                    </details>
+    
+                    <details id="students-part5" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #667eea; border-radius: 9px 9px 0 0;">
+                            💡 الجزء الخامس: ملاحظات هامة
+                        </summary>
+                        <div style="padding: 20px;">
+                            <div class="tip">
+                                <h4>نصائح عند تسجيل الطالب:</h4>
+                                <ul style="margin-right: 20px;">
+                                    <li>🔴 <strong>تأكد من إدخال رقم هاتف صحيح</strong> - مهم للتواصل</li>
+                                    <li>📅 <strong>تاريخ الميلاد دقيق</strong> - يؤثر على التقارير والإحصائيات</li>
+                                    <li>👥 <strong>تسجيل المجموعات من شاشة الطالب</strong> - أسهل وأسرع</li>
+                                    <li>💰 <strong>التسجيل المالي من شاشة Enrollments</strong> - ليس من شاشة Students</li>
+                                    <li>✅ <strong>مراجعة البيانات قبل الحفظ</strong> - التعديل لاحقاً يحتاج صلاحيات</li>
+                                </ul>
+                            </div>
+    
+                            <div class="highlight" style="margin-top: 20px;">
+                                <h4>الفرق بين الشاشات:</h4>
+                                <table style="width: 100%; margin-top: 10px;">
+                                    <tr>
+                                        <th>الشاشة</th>
+                                        <th>الوظيفة</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Students</strong></td>
+                                        <td>إدخال بيانات الطالب الشخصية + المجموعات</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Enrollments</strong></td>
+                                        <td>التسجيل المالي + اختيار الكورسات + الأقساط</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Payments</strong></td>
+                                        <td>تسجيل المدفوعات والأقساط</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </details>
+    
+                </div>
+            </details>
+    
+            <!-- شاشة التسجيلات -->
+            <details id="enrollments-screen" open
+                style="margin: 30px 0; border: 2px solid #10b981; border-radius: 15px; padding: 0; scroll-margin-top: 100px;">
+                <summary
+                    style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 20px; cursor: pointer; font-size: 1.5em; font-weight: 700; border-radius: 13px 13px 0 0; list-style: none;">
+                    📝 دليل شاشة التسجيلات (Enrollments)
+                </summary>
+                <div style="padding: 30px;">
+
+                    <!-- نظام إدارة الكورسات الجديد -->
+                    <div
+                        style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-left: 5px solid #f59e0b; padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+                        <h3 style="color: #d97706; margin-bottom: 10px;">⭐ جديد: نظام إدارة الكورسات المتقدم</h3>
+                        <p style="color: #92400e; margin-bottom: 10px;">تم إضافة نظام متقدم لإدارة الكورسات في صفحة
+                            <strong>"تسجيلاتي"</strong> للطالب:</p>
+                        <ul style="color: #92400e; margin-right: 20px;">
+                            <li>✅ <strong>3 حالات للكورس:</strong> غير نشط ↔ نشط ↔ مكتمل</li>
+                            <li>✅ <strong>عداد السيشنات:</strong> يظهر الحصة الحالية من 12</li>
+                            <li>✅ <strong>اختيار المجموعة الذكي:</strong> مع فحص التوافقية</li>
+                            <li>✅ <strong>تحديث تلقائي:</strong> عند تسجيل المعلم لسيشن جديد</li>
+                        </ul>
+                        <p style="color: #92400e; margin-top: 10px; font-size: 0.9em;">📖 <strong>للمزيد:</strong> انظر قسم "نظام إدارة
+                            كورسات الطالب المتقدم" أسفل هذه الصفحة</p>
+                    </div>
+                    <details id="enrollments-part1" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #10b981; border-radius: 9px 9px 0 0;">
+                            📌 الجزء الأول: معلومات التسجيل الأساسية
+                        </summary>
+                        <div style="padding: 20px;">
+                            <h4>أ) اختيار الطالب:</h4>
+                            <ul style="margin-right: 20px;">
+                                <li>اختر الطالب من القائمة باستخدام كود الطالب</li>
+                                <li>البحث بكود الطالب أو الاسم</li>
+                                <li>يظهر: كود الطالب - اسم الطالب</li>
+                            </ul>
+    
+                            <h4>ب) اختيار المجموعة (Group) - إلزامي:</h4>
+                            <ul style="margin-right: 20px;">
+                                <li><strong>المجموعة إلزامية</strong> ولا يمكن التسجيل بدونها</li>
+                                <li>عند اختيار المجموعة، يتم:
+                                    <ul>
+                                        <li>تحديد الكورس الأساسي تلقائياً</li>
+                                        <li>حساب سعر الكورس الأساسي تلقائياً</li>
+                                    </ul>
+                                </li>
+                                <li>يظهر: اسم المجموعة - اسم الكورس</li>
+                            </ul>
+    
+                            <h4>ج) المسار التعليمي (Track) - اختياري:</h4>
+                            <ul style="margin-right: 20px;">
+                                <li><strong>للتصنيف فقط</strong> - غير إلزامي</li>
+                                <li>يمكن ترك المسار فارغاً</li>
+                                <li>يُستخدم لتنظيم التقارير والإحصائيات</li>
+                            </ul>
+    
+                            <h4>د) الكورسات الإضافية:</h4>
+                            <ul style="margin-right: 20px;">
+                                <li><strong>اختيار متعدد</strong> باستخدام Select (Multiple)</li>
+                                <li>عرض كل كورس مع سعره: <code>اسم الكورس - السعر ج.م</code></li>
+                                <li>يمكن البحث في الكورسات</li>
+                                <li>عند اختيار الكورسات:
+                                    <ul>
+                                        <li>✅ حساب الإجمالي تلقائياً</li>
+                                        <li>✅ تحديث المتبقي تلقائياً</li>
+                                        <li>✅ حفظ سعر كل كورس وقت التسجيل</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+    
+                    <details id="enrollments-part2" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #10b981; border-radius: 9px 9px 0 0;">
+                            💰 الجزء الثاني: التفاصيل المالية
+                        </summary>
+                        <div style="padding: 20px;">
+                            <h4>إجمالي قيمة الكورسات:</h4>
+                            <ul style="margin-right: 20px;">
+                                <li>يُحسب تلقائياً من مجموع أسعار الكورسات المختارة</li>
+                                <li>معطّل (للعرض فقط)</li>
+                                <li>يتحدث عند إضافة/حذف كورسات</li>
+                            </ul>
+    
+                            <h4>الخصم (Discount):</h4>
+                            <ul style="margin-right: 20px;">
+                                <li>أدخل قيمة الخصم بالجنيه</li>
+                                <li>يتم خصمه من الإجمالي</li>
+                                <li>يُحدث المتبقي تلقائياً</li>
+                            </ul>
+    
+                            <h4>المدفوع مقدماً (Paid Amount):</h4>
+                            <ul style="margin-right: 20px;">
+                                <li>المبلغ المدفوع عند التسجيل</li>
+                                <li>يُسجل في جدول enrollments</li>
+                                <li>يُحدث المتبقي تلقائياً</li>
+                            </ul>
+    
+                            <h4>المتبقي (Remaining):</h4>
+                            <ul style="margin-right: 20px;">
+                                <li>يُحسب تلقائياً بالمعادلة:</li>
+                            </ul>
+                            <div class="screen-preview">
+                                <pre>المتبقي = إجمالي الكورسات - الخصم - المدفوع مقدماً</pre>
+                            </div>
+                            <ul style="margin-right: 20px;">
+                                <li>معطّل (للعرض فقط)</li>
+                                <li>يتحدث عند تغيير أي من: الكورسات، الخصم، أو المدفوع</li>
+                            </ul>
+                        </div>
+                    </details>
+    
+                    <details id="enrollments-part3" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #10b981; border-radius: 9px 9px 0 0;">
+                            📅 الجزء الثالث: نظام التقسيط (Installments)
+                        </summary>
+                        <div style="padding: 20px;">
+                            <h4>نوع الدفع (Payment Plan):</h4>
+                            <ul style="margin-right: 20px;">
+                                <li><strong>دفعة واحدة (Full):</strong> دفع المبلغ كاملاً</li>
+                                <li><strong>أقساط (Installments):</strong> تقسيط المبلغ</li>
+                            </ul>
+    
+                            <h4>عند اختيار نظام الأقساط:</h4>
+                            <ol style="margin-right: 20px;">
+                                <li><strong>عدد الأقساط (Installments Count):</strong>
+                                    <ul>
+                                        <li>أدخل عدد الأقساط (من 2 إلى 12)</li>
+                                        <li>يظهر قسم "تفاصيل الأقساط" تلقائياً</li>
+                                    </ul>
+                                </li>
+                                <li><strong>تفاصيل الأقساط (Repeater):</strong>
+                                    <ul>
+                                        <li><strong>رقم القسط:</strong> يتم ترقيمه تلقائياً (1، 2، 3...)</li>
+                                        <li><strong>المبلغ:</strong> قيمة القسط بالجنيه</li>
+                                        <li><strong>تاريخ الاستحقاق:</strong> متى يجب دفع هذا القسط</li>
+                                        <li><strong>الحالة:</strong> قيد الانتظار / مدفوع / متأخر / مدفوع جزئياً</li>
+                                        <li><strong>المبلغ المدفوع:</strong> المبلغ المدفوع فعلياً من هذا القسط (افتراضي: 0)
+                                        </li>
+                                        <li><strong>تاريخ الدفع:</strong> متى تم الدفع (اختياري)</li>
+                                        <li><strong>ملاحظات:</strong> أي ملاحظات إضافية</li>
+                                    </ul>
+                                </li>
+                            </ol>
+    
+                            <div class="highlight" style="margin-top: 20px;">
+                                <h4>مثال عملي:</h4>
+                                <div class="screen-preview">
+                                    <pre>
+                        الطالب: أحمد محمد (STD-001)
+                        المجموعة: مجموعة البرمجة - كورس Python
+                        المسار: مسار البرمجة (اختياري)
+                        الكورسات الإضافية: 
+                          - HTML/CSS - 500 ج.م
+                          - JavaScript - 800 ج.م
+                        
+                        الإجمالي: 1800 ج.م (كورس المجموعة 500 + HTML 500 + JS 800)
+                        الخصم: 200 ج.م
+                        المدفوع مقدماً: 500 ج.م
+                        المتبقي: 1100 ج.م (1800 - 200 - 500)
+                        
+                        نوع الدفع: أقساط
+                        عدد الأقساط: 3
+                        
+                        القسط #1:
+                        - المبلغ: 400 ج.م
+                        - تاريخ الاستحقاق: 15/02/2026
+                        - الحالة: قيد الانتظار
+                        
+                        القسط #2:
+                        - المبلغ: 350 ج.م
+                        - تاريخ الاستحقاق: 15/03/2026
+                        - الحالة: قيد الانتظار
+                        
+                        القسط #3:
+                        - المبلغ: 350 ج.م
+                        - تاريخ الاستحقاق: 15/04/2026
+                        - الحالة: قيد الانتظار
+                                                            </pre>
+                                </div>
+                            </div>
+    
+                            <div class="tip" style="margin-top: 20px;">
+                                <h4>ملاحظات مهمة:</h4>
+                                <ul style="margin-right: 20px;">
+                                    <li>🔴 <strong>المجموعة إلزامية</strong> - لا يمكن التسجيل بدونها</li>
+                                    <li>⚪ <strong>المسار اختياري</strong> - للتصنيف فقط</li>
+                                    <li>📝 <strong>رقم القسط يُحسب تلقائياً</strong> - لا تقلق بشأنه</li>
+                                    <li>💰 <strong>الأسعار تُحفظ وقت التسجيل</strong> - التغييرات المستقبلية لا تؤثر</li>
+                                    <li>✅ <strong>الحسابات تلقائية</strong> - الإجمالي والمتبقي يتحدثان تلقائياً</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+    
+                </div>
+            </details>
+    
+            <!-- شاشة المدفوعات -->
+            <details id="payments-screen" open
+                style="margin: 30px 0; border: 2px solid #f59e0b; border-radius: 15px; padding: 0; scroll-margin-top: 100px;">
+                <summary
+                    style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 20px; cursor: pointer; font-size: 1.5em; font-weight: 700; border-radius: 13px 13px 0 0; list-style: none;">
+                    💵 نظام المدفوعات الشامل (Payments)
+                </summary>
+                <div style="padding: 30px;">
+    
+                    <details id="payments-part1" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #f59e0b; border-radius: 9px 9px 0 0;">
+                            📋 الجزء الأول: معلومات التسجيل والمدفوعات
+                        </summary>
+                        <div style="padding: 20px;">
+                            <h4>عند إنشاء دفعة جديدة:</h4>
+    
+                            <h5>1️⃣ اختيار الطالب:</h5>
+                            <ul style="margin-right: 20px;">
+                                <li>اختر الطالب من القائمة</li>
+                                <li>يظهر تلقائياً جميع بيانات التسجيل الأخير النشط</li>
+                            </ul>
+    
+                            <h5>2️⃣ معلومات التسجيل (تظهر تلقائياً):</h5>
+                            <ul style="margin-right: 20px;">
+                                <li><strong>المسار:</strong> المسار المسجل فيه الطالب (للتصنيف)</li>
+                                <li><strong>إجمالي قيمة الكورسات:</strong> مجموع أسعار جميع الكورسات المسجلة</li>
+                                <li><strong>الخصم:</strong> الخصم الممنوح في التسجيل</li>
+                                <li><strong>كود التسجيل:</strong> كود التسجيل الفريد (مثل: ENR202600001)</li>
+                            </ul>
+    
+                            <h5>3️⃣ تفاصيل المدفوعات (عرض تفصيلي):</h5>
+                            <div class="highlight">
+                                <p><strong>قسم جديد يعرض بالتفصيل:</strong></p>
+                                <table style="width: 100%; margin-top: 10px;">
+                                    <tr>
+                                        <th>الحقل</th>
+                                        <th>الوصف</th>
+                                        <th>الأيقونة</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>المدفوع مقدماً</strong></td>
+                                        <td>المبلغ المدفوع عند التسجيل (من جدول enrollments)</td>
+                                        <td>💰</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>مدفوعات أخرى سابقة</strong></td>
+                                        <td>مجموع المدفوعات السابقة المكتملة (من جدول payments)</td>
+                                        <td>📋</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>إجمالي المدفوع</strong></td>
+                                        <td>المدفوع مقدماً + المدفوعات الأخرى</td>
+                                        <td>✅</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>المتبقي</strong></td>
+                                        <td>الإجمالي - الخصم - إجمالي المدفوع</td>
+                                        <td>⚠️</td>
+                                    </tr>
+                                </table>
+                            </div>
+    
+                            <div class="screen-preview" style="margin-top: 15px;">
+                                <h5>المعادلة:</h5>
+                                <pre>
+                        إجمالي المدفوع = enrollment.paid_amount + Σ(payments.amount WHERE status='completed')
+                        المتبقي = Σ(enrollment_courses.course_price) - enrollment.discount - إجمالي المدفوع
+                                                        </pre>
+                            </div>
+                        </div>
+                    </details>
+    
+                    <details id="payments-part2" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #f59e0b; border-radius: 9px 9px 0 0;">
+                            📅 الجزء الثاني: جدول الأقساط والحالات
+                        </summary>
+                        <div style="padding: 20px;">
+                            <h4>4️⃣ جدول الأقساط (إذا كان التسجيل بنظام التقسيط):</h4>
+    
+                            <p>يظهر جدول شامل لجميع الأقساط:</p>
+                            <table style="width: 100%; margin-top: 10px;">
+                                <tr>
+                                    <th>رقم القسط</th>
+                                    <th>المبلغ</th>
+                                    <th>تاريخ الاستحقاق</th>
+                                    <th>المبلغ المدفوع</th>
+                                    <th>المتبقي</th>
+                                    <th>تاريخ الدفع</th>
+                                    <th>الحالة</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>400 ج.م</td>
+                                    <td>15/01/2026</td>
+                                    <td>400 ج.م</td>
+                                    <td>0 ج.م</td>
+                                    <td>10/01/2026</td>
+                                    <td>✅ مدفوع</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>350 ج.م</td>
+                                    <td>15/02/2026</td>
+                                    <td>150 ج.م</td>
+                                    <td>200 ج.م</td>
+                                    <td>-</td>
+                                    <td>⚠️ مدفوع جزئياً</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>350 ج.م</td>
+                                    <td>15/03/2026</td>
+                                    <td>0 ج.م</td>
+                                    <td>350 ج.م</td>
+                                    <td>-</td>
+                                    <td>⏳ قيد الانتظار</td>
+                                </tr>
+                                <tr style="background: #f8f9fa; font-weight: bold;">
+                                    <td><strong>الإجمالي</strong></td>
+                                    <td><strong>1100 ج.م</strong></td>
+                                    <td>-</td>
+                                    <td><strong>550 ج.م</strong></td>
+                                    <td><strong>550 ج.م</strong></td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </table>
+    
+                            <div class="tip" style="margin-top: 15px;">
+                                <h5>حالات القسط:</h5>
+                                <ul style="margin-right: 20px;">
+                                    <li>✅ <strong>مدفوع (Paid):</strong> تم دفع القسط كاملاً</li>
+                                    <li>⚠️ <strong>مدفوع جزئياً (Partial):</strong> تم دفع جزء من القسط</li>
+                                    <li>🔴 <strong>متأخر (Overdue):</strong> تجاوز تاريخ الاستحقاق ولم يُدفع</li>
+                                    <li>⏳ <strong>قيد الانتظار (Pending):</strong> لم يحن وقته بعد</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+    
+                    <details id="payments-part3" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #f59e0b; border-radius: 9px 9px 0 0;">
+                            📚 الجزء الثالث: الكورسات والمحاضرات
+                        </summary>
+                        <div style="padding: 20px;">
+                            <h4>5️⃣ الكورسات والمحاضرات:</h4>
+    
+                            <p>قسم تفصيلي لكل كورس مسجل:</p>
+    
+                            <h5>البطاقة الإحصائية لكل كورس:</h5>
+                            <ul style="margin-right: 20px;">
+                                <li>📚 <strong>إجمالي المحاضرات:</strong> العدد الكلي</li>
+                                <li>✅ <strong>تم شرحها:</strong> المحاضرات المكتملة</li>
+                                <li>⏰ <strong>متبقية:</strong> المحاضرات المتبقية</li>
+                                <li>📊 <strong>شريط تقدم:</strong> نسبة الإنجاز (مثل: 60%)</li>
+                            </ul>
+    
+                            <h5>جدول المحاضرات:</h5>
+                            <table style="width: 100%; margin-top: 10px;">
+                                <tr>
+                                    <th>التاريخ</th>
+                                    <th>اليوم</th>
+                                    <th>من</th>
+                                    <th>إلى</th>
+                                    <th>الحالة</th>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-10</td>
+                                    <td>الأحد</td>
+                                    <td>10:00 AM</td>
+                                    <td>12:00 PM</td>
+                                    <td>✅ منتهية</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-12</td>
+                                    <td>الثلاثاء</td>
+                                    <td>10:00 AM</td>
+                                    <td>12:00 PM</td>
+                                    <td>🔵 جارية</td>
+                                </tr>
+                                <tr>
+                                    <td>2026-01-15</td>
+                                    <td>الجمعة</td>
+                                    <td>10:00 AM</td>
+                                    <td>12:00 PM</td>
+                                    <td>🟡 مجدولة</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </details>
+    
+                    <details id="payments-part4" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #f59e0b; border-radius: 9px 9px 0 0;">
+                            💳 الجزء الرابع: إدخال الدفعة الجديدة
+                        </summary>
+                        <div style="padding: 20px;">
+                            <h4>6️⃣ معلومات الدفعة اليوم:</h4>
+                            <ul style="margin-right: 20px;">
+                                <li><strong>كود الدفعة:</strong> يتم توليده تلقائياً (مثل: PAY20260100001)</li>
+                                <li><strong>المبلغ المدفوع اليوم:</strong> أدخل المبلغ
+                                    <ul>
+                                        <li>يظهر افتراضياً المبلغ المتبقي</li>
+                                        <li>يمكن تعديله للدفع الجزئي</li>
+                                    </ul>
+                                </li>
+                            </ul>
+    
+                            <h4>7️⃣ تفاصيل الدفع:</h4>
+                            <ul style="margin-right: 20px;">
+                                <li><strong>طريقة الدفع:</strong> نقدي / بطاقة / تحويل بنكي / أونلاين</li>
+                                <li><strong>تاريخ الدفع:</strong> تاريخ اليوم افتراضياً</li>
+                                <li><strong>تاريخ الاستحقاق:</strong> (اختياري)</li>
+                                <li><strong>الحالة:</strong> معلق / مكتمل / فاشل / مسترجع</li>
+                            </ul>
+    
+                            <h4>8️⃣ معلومات إضافية:</h4>
+                            <ul style="margin-right: 20px;">
+                                <li><strong>رقم المعاملة:</strong> (اختياري)</li>
+                                <li><strong>استلمت بواسطة:</strong> المستخدم الذي استلم الدفعة</li>
+                                <li><strong>ملاحظات:</strong> أي ملاحظات إضافية</li>
+                            </ul>
+                        </div>
+                    </details>
+    
+                    <details id="payments-part5" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #f59e0b; border-radius: 9px 9px 0 0;">
+                            ⚡ الجزء الخامس: آلية التوزيع التلقائي للمدفوعات
+                        </summary>
+                        <div style="padding: 20px;">
+                            <h4>آلية توزيع المدفوعات على الأقساط:</h4>
+    
+                            <p>عند حفظ دفعة جديدة، يتم:</p>
+                            <ol style="margin-right: 20px;">
+                                <li><strong>توزيع تلقائي على الأقساط:</strong>
+                                    <ul>
+                                        <li>يبدأ من أقدم قسط (حسب تاريخ الاستحقاق)</li>
+                                        <li>يدفع القسط كاملاً أو جزء منه</li>
+                                        <li>ينتقل للقسط التالي إذا تبقى مبلغ</li>
+                                    </ul>
+                                </li>
+                                <li><strong>تحديث حالة القسط:</strong>
+                                    <ul>
+                                        <li>إذا دُفع كاملاً → حالة "مدفوع"</li>
+                                        <li>إذا دُفع جزء منه → حالة "مدفوع جزئياً"</li>
+                                        <li>يتم حفظ تاريخ الدفع تلقائياً</li>
+                                    </ul>
+                                </li>
+                                <li><strong>تحديث إجمالي المدفوع:</strong>
+                                    <ul>
+                                        <li>يتم تحديث <code>enrollment.paid_amount</code> تلقائياً</li>
+                                        <li>يظهر في الدفعة التالية ضمن "إجمالي المدفوع"</li>
+                                    </ul>
+                                </li>
+                            </ol>
+    
+                            <div class="tip" style="margin-top: 15px;">
+                                <h4>ملاحظات مهمة:</h4>
+                                <ul style="margin-right: 20px;">
+                                    <li>💡 <strong>التوزيع التلقائي:</strong> المدفوعات توزع تلقائياً على الأقساط المستحقة
+                                    </li>
+                                    <li>📊 <strong>التحديث الفوري:</strong> جميع الأرصدة تتحدث فوراً بعد كل دفعة</li>
+                                    <li>🔄 <strong>الدفعة التالية:</strong> عند فتح دفعة جديدة، ستجد كل شيء محدث</li>
+                                    <li>📈 <strong>التقارير الدقيقة:</strong> جميع الحسابات دقيقة ومتزامنة</li>
+                                    <li>⚡ <strong>لا حاجة لحسابات يدوية:</strong> كل شيء تلقائي ومحسوب</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </details>
+    
+                    <details id="payments-part6" open
+                        style="margin: 20px 0; border: 1px solid #e0e0e0; border-radius: 10px; scroll-margin-top: 100px;">
+                        <summary
+                            style="background: #f8f9fa; padding: 15px; cursor: pointer; font-size: 1.2em; font-weight: 600; color: #f59e0b; border-radius: 9px 9px 0 0;">
+                            📋 الجزء السادس: مثال عملي شامل
+                        </summary>
+                        <div style="padding: 20px;">
+                            <div class="screen-preview">
+                                <pre>
+                        طالب: أحمد محمد
+                        التسجيل: ENR202600001
+                        إجمالي الكورسات: 2000 ج.م
+                        الخصم: 200 ج.م
+                        المدفوع مقدماً: 300 ج.م
+                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                        
+                        تفاصيل المدفوعات:
+                        💰 المدفوع مقدماً (عند التسجيل): 300 ج.م
+                        📋 مدفوعات أخرى سابقة: 500 ج.م
+                        ✅ إجمالي المدفوع: 800 ج.م
+                        ⚠️ المتبقي: 1000 ج.م
+                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                        
+                        جدول الأقساط:
+                        ┌───┬────────┬──────────┬───────────┬──────────┬───────────┬──────────────┐
+                        │ # │ المبلغ │ الاستحقاق│ المدفوع  │ المتبقي │ تاريخ الدفع│   الحالة    │
+                        ├───┼────────┼──────────┼───────────┼──────────┼───────────┼──────────────┤
+                        │ 1 │ 500 ج.م│ 15/01/26 │ 500 ج.م  │ 0 ج.م   │ 10/01/26  │ ✅ مدفوع    │
+                        │ 2 │ 500 ج.م│ 15/02/26 │ 200 ج.م  │ 300 ج.م │ 05/02/26  │ ⚠️ جزئي     │
+                        │ 3 │ 500 ج.م│ 15/03/26 │ 0 ج.م    │ 500 ج.م │ -         │ ⏳ قيد الانتظار│
+                        └───┴────────┴──────────┴───────────┴──────────┴───────────┴──────────────┘
+                        إجمالي: 1500 ج.م     مدفوع: 700 ج.م     متبقي: 800 ج.م
+                        
+                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                        الكورسات والمحاضرات:
+                        
+                        📚 كورس Python (C-0015) - 600 ج.م
+                           ├─ إجمالي المحاضرات: 12
+                           ├─ تم شرحها: 8
+                           ├─ متبقية: 4
+                           └─ التقدم: ████████░░░░ 67%
+                        
+                        📚 كورس HTML/CSS (C-0023) - 500 ج.م
+                           ├─ إجمالي المحاضرات: 10
+                           ├─ تم شرحها: 5
+                           ├─ متبقية: 5
+                           └─ التقدم: █████░░░░░ 50%
+                        
+                        📚 كورس JavaScript (C-0024) - 900 ج.م
+                           ├─ إجمالي المحاضرات: 15
+                           ├─ تم شرحها: 3
+                           ├─ متبقية: 12
+                           └─ التقدم: ██░░░░░░░░ 20%
+                        
+                        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                        دفعة جديدة:
+                        كود الدفعة: PAY20260100002
+                        المبلغ المدفوع: 400 ج.م
+                        طريقة الدفع: نقدي
+                        تاريخ الدفع: 09/01/2026
+                        
+                        سيتم توزيع المبلغ:
+                        → 300 ج.م للقسط #2 (يصبح مدفوع كاملاً)
+                        → 100 ج.م للقسط #3 (يصبح مدفوع جزئياً)
+                        
+                        بعد الدفع:
+                        ✅ إجمالي المدفوع: 1200 ج.م
+                        ⚠️ المتبقي: 600 ج.م
+                                                        </pre>
+                            </div>
+                        </div>
+                    </details>
+    
+                </div>
+            </details>
+    
+        </section>
+    
+        <!-- تقرير الخزينة -->
+        <section id="treasury-report">
+            <h2>💰 دليل تقرير الخزينة (Treasury Report)</h2>
+    
+            <div class="highlight">
+                <strong>🎯 تقرير شامل:</strong> يعرض جميع المعاملات المالية للمؤسسة من مدفوعات، إيرادات، ومصروفات
+            </div>
+    
+            <h3>📊 نظرة عامة على التقرير</h3>
+            <div class="card">
+                <h4>ما هو تقرير الخزينة؟</h4>
+                <p>تقرير شامل يعرض جميع المعاملات المالية للمؤسسة من مدفوعات، إيرادات، ومصروفات.</p>
+    
+                <div class="steps">
+                    <p><strong>الوصول للتقرير:</strong></p>
+                    <ul>
+                        <li>من القائمة الرئيسية → <strong>Reports</strong> → <strong>Treasury Report</strong></li>
+                        <li>الصلاحية المطلوبة: <strong>Admin</strong> أو <strong>Accountant</strong></li>
+                    </ul>
+                </div>
+    
+                <p><strong>المعلومات المعروضة:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li><strong>إجمالي الإيرادات</strong> - مجموع المدفوعات المكتملة</li>
+                    <li><strong>إجمالي المصروفات</strong> - المصاريف والرواتب</li>
+                    <li><strong>الرصيد الحالي</strong> - الإيرادات - المصروفات</li>
+                    <li><strong>عدد المعاملات</strong> - إجمالي العمليات المالية</li>
+                </ul>
+            </div>
+    
+            <h3>🔍 الفلترة والبحث</h3>
+            <div class="card">
+                <h4>خيارات الفلترة المتقدمة</h4>
+    
+                <p><strong>1. حسب التاريخ:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li><strong>من تاريخ:</strong> بداية الفترة</li>
+                    <li><strong>إلى تاريخ:</strong> نهاية الفترة</li>
+                    <li><strong>اختصارات:</strong> اليوم / هذا الأسبوع / هذا الشهر / هذه السنة</li>
+                </ul>
+    
+                <p><strong>2. حسب نوع المعاملة:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>✅ <strong>إيرادات (Revenues):</strong>
+                        <ul>
+                            <li>مدفوعات الطلاب</li>
+                            <li>رسوم التسجيل</li>
+                            <li>مدفوعات متأخرة</li>
+                        </ul>
+                    </li>
+                    <li>❌ <strong>مصروفات (Expenses):</strong>
+                        <ul>
+                            <li>رواتب الموظفين</li>
+                            <li>فواتير ومستلزمات</li>
+                            <li>صيانة وإصلاحات</li>
+                        </ul>
+                    </li>
+                </ul>
+    
+                <p><strong>3. حسب طريقة الدفع:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>نقدي (Cash)</li>
+                    <li>بطاقة ائتمان (Credit Card)</li>
+                    <li>تحويل بنكي (Bank Transfer)</li>
+                    <li>أونلاين (Online Payment)</li>
+                </ul>
+    
+                <p><strong>4. حسب الحالة:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>مكتمل (Completed)</li>
+                    <li>معلق (Pending)</li>
+                    <li>فاشل (Failed)</li>
+                    <li>مسترجع (Refunded)</li>
+                </ul>
+            </div>
+    
+            <h3>📋 تفاصيل المعاملات</h3>
+            <div class="card">
+                <h4>جدول المعاملات التفصيلي</h4>
+    
+                <div class="screen-preview">
+                    <p><strong>عرض جدول شامل يتضمن:</strong></p>
+                    <ul style="margin-right: 20px;">
+                        <li><strong>التاريخ:</strong> تاريخ ووقت المعاملة</li>
+                        <li><strong>كود المعاملة:</strong> رقم فريد (مثل: PAY20260100001)</li>
+                        <li><strong>النوع:</strong> إيراد / مصروف</li>
+                        <li><strong>الطالب/الجهة:</strong> اسم الطالب أو الجهة</li>
+                        <li><strong>المبلغ:</strong> قيمة المعاملة بالجنيه</li>
+                        <li><strong>الطريقة:</strong> كيف تم الدفع</li>
+                        <li><strong>الحالة:</strong> حالة المعاملة (✅ مكتمل / ⏳ معلق)</li>
+                        <li><strong>العمليات:</strong> زر عرض التفاصيل</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <h3>📈 التقارير والإحصائيات</h3>
+            <div class="card">
+                <h4>إحصائيات الخزينة الشاملة</h4>
+    
+                <p><strong>1. ملخص شهري:</strong></p>
+                <div class="screen-preview">
+                    <pre
+                        style="font-family: 'Cairo', monospace; background: #f8f9fa; padding: 20px; border-radius: 10px; border-right: 4px solid #667eea;">
+                            يناير 2026
+                            ═══════════════════════
+                            💰 إجمالي الإيرادات: 45,000 ج.م
+                            ❌ إجمالي المصروفات: 25,000 ج.م
+                            ✅ الرصيد النهائي: 20,000 ج.م
+                            📊 عدد المعاملات: 156 عملية
+                                        </pre>
+                </div>
+    
+                <p><strong>2. توزيع الإيرادات:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>مدفوعات التسجيل: 60%</li>
+                    <li>مدفوعات الأقساط: 35%</li>
+                    <li>رسوم إضافية: 5%</li>
+                </ul>
+    
+                <p><strong>3. توزيع المصروفات:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>رواتب: 70%</li>
+                    <li>مستلزمات: 15%</li>
+                    <li>فواتير: 10%</li>
+                    <li>صيانة: 5%</li>
+                </ul>
+    
+                <p><strong>4. طرق الدفع الأكثر استخداماً:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>نقدي: 55%</li>
+                    <li>بنك: 30%</li>
+                    <li>بطاقة: 10%</li>
+                    <li>أونلاين: 5%</li>
+                </ul>
+            </div>
+    
+            <h3>📥 التصدير والطباعة</h3>
+            <div class="card">
+                <h4>خيارات متعددة للتصدير</h4>
+    
+                <p><strong>1. صيغ التصدير المتاحة:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li><strong>PDF</strong> - للطباعة الرسمية</li>
+                    <li><strong>Excel</strong> - للتحليل والمعالجة</li>
+                    <li><strong>CSV</strong> - للاستيراد في برامج أخرى</li>
+                </ul>
+    
+                <p><strong>2. خيارات الطباعة:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>طباعة التقرير الكامل</li>
+                    <li>طباعة فترة محددة</li>
+                    <li>طباعة معاملات محددة فقط</li>
+                </ul>
+    
+                <p><strong>3. البيانات المصدرة:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>جميع المعاملات حسب الفلتر المطبق</li>
+                    <li>الإحصائيات والملخصات</li>
+                    <li>الرسوم البيانية (للـ PDF)</li>
+                </ul>
+            </div>
+    
+            <h3>🔒 الصلاحيات والأمان</h3>
+            <div class="card">
+                <h4>من يمكنه الوصول؟</h4>
+                <ul style="margin-right: 20px;">
+                    <li>✅ <strong>Super Admin</strong> - وصول كامل لجميع المعاملات</li>
+                    <li>✅ <strong>Owner</strong> - وصول لمعاملات المؤسسة الخاصة به</li>
+                    <li>✅ <strong>Accountant</strong> - عرض التقارير فقط (بدون تعديل)</li>
+                    <li>❌ <strong>Instructor/Student/Parent</strong> - لا يمكنهم الوصول</li>
+                </ul>
+    
+                <div class="tip">
+                    <strong>سجل المراجعة (Audit Log):</strong>
+                    <ul style="margin-right: 20px; margin-top: 10px;">
+                        <li>تسجيل كل عملية عرض للتقرير</li>
+                        <li>من شاهد التقرير ومتى</li>
+                        <li>الفلاتر المستخدمة</li>
+                        <li>العمليات المصدّرة</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    
+        <!-- نظام الامتحانات المحسّن -->
+        <section id="exams">
+            <h2>📝 نظام الامتحانات المحسّن</h2>
+    
+            <div class="highlight">
+                <strong>🎯 تحديث جديد:</strong> عرض ملفات PDF للامتحانات بشكل احترافي وآمن
+            </div>
+    
+            <h3>📄 عرض ملفات PDF</h3>
+            <div class="card">
+                <h4>للمدرسين: رفع ملفات الامتحانات</h4>
+                <div class="steps">
+                    <p><strong>خطوات رفع ملف PDF:</strong></p>
+                    <ol>
+                        <li>افتح صفحة تعديل الامتحان</li>
+                        <li>انتقل إلى قسم "ملف الامتحان"</li>
+                        <li>اضغط "اختر ملف" أو اسحب الملف</li>
+                        <li>النظام يقبل فقط ملفات PDF (آمن ومحمي)</li>
+                        <li>احفظ - سيتم رفع الملف مباشرة</li>
+                    </ol>
+                </div>
+                <div class="tip">
+                    <strong>🔒 أمان:</strong> الملفات محفوظة في مجلد خاص محمي - لا يمكن الوصول لها مباشرة من المتصفح
+                </div>
+            </div>
+    
+            <h3>👁️ معاينة ملف الامتحان</h3>
+            <div class="card">
+                <h4>عرض احترافي بتصميم Bootstrap</h4>
+                <p><strong>المميزات:</strong></p>
+                <ul style="margin-right: 20px;">
+                    <li>🎨 بطاقة جميلة بتدرج لوني (gradient)</li>
+                    <li>📄 أيقونة ملف PDF كبيرة وواضحة</li>
+                    <li>👆 زر "عرض الملف" لفتح PDF داخل الصفحة</li>
+                    <li>🔗 رابط "فتح في نافذة جديدة" لفتح PDF في تبويب منفصل</li>
+                    <li>✅ تصميم responsive - يعمل على كل الأجهزة</li>
+                </ul>
+                <div class="highlight">
+                    <strong>🔐 الحماية:</strong> النظام يتحقق من صلاحية المستخدم قبل عرض أي ملف
+                </div>
+            </div>
+    
+            <h3>📱 للطلاب: الوصول للامتحانات</h3>
+            <div class="card">
+                <h4>سهولة في الاستخدام</h4>
+                <p>الطالب يستطيع:</p>
+                <ul style="margin-right: 20px;">
+                    <li>مشاهدة الامتحانات المتاحة له</li>
+                    <li>فتح ملف PDF مباشرة من صفحة الامتحان</li>
+                    <li>تكبير وتصغير الملف للقراءة المريحة</li>
+                    <li>تنزيل الملف للمراجعة offline</li>
+                </ul>
+            </div>
+    
+            <h3>🔄 تحديثات أخرى للامتحانات</h3>
+            <div class="card">
+                <h4>تحسينات الأداء</h4>
+                <ul style="margin-right: 20px;">
+                    <li>✅ تخزين آمن للملفات في private storage</li>
+                    <li>✅ روابط ديناميكية محمية</li>
+                    <li>✅ تحقق من نوع الملف (PDF فقط)</li>
+                    <li>✅ معالجة أخطاء محسّنة (404، غير مصرح)</li>
+                    <li>✅ واجهة عرض جميلة مع Bootstrap</li>
+                </ul>
+            </div>
+        </section>
+    
+        <!-- نظام الرسائل النصية SMS -->
+        <section id="sms-notifications">
+            <h2>📱 نظام الرسائل النصية (SMS Notifications)</h2>
+    
+            <div class="highlight">
+                <strong>🎯 تواصل فوري وتلقائي:</strong> إرسال إشعارات SMS تلقائية لأولياء الأمور والطلاب عند كل حدث مهم في
+                النظام!
+            </div>
+    
+            <h3>🌟 ما هو نظام SMS؟</h3>
+            <div class="card">
+                <h4>نظام إشعارات ذكي عبر الرسائل النصية</h4>
+                <p>نظام متكامل يرسل تلقائياً رسائل نصية SMS لأولياء الأمور والطلاب في الحالات التالية:</p>
+                <ul style="margin-right: 20px; line-height: 1.8;">
+                    <li>📊 <strong>تسجيل حضور أو غياب:</strong> إشعار فوري لولي الأمر عن حضور/غياب الطالب</li>
+                    <li>📝 <strong>نتيجة امتحان:</strong> إرسال الدرجة والنسبة المئوية فور إضافتها</li>
+                    <li>💰 <strong>تأكيد مدفوعات:</strong> رسالة تأكيد عند استلام أي دفعة</li>
+                    <li>🎓 <strong>امتحان جديد:</strong> تذكير بموعد الامتحان والمدة والمجموعة</li>
+                    <li>📚 <strong>واجب جديد:</strong> إشعار بواجب جديد مع موعد التسليم</li>
+                </ul>
+            </div>
+    
+            <h3>🚀 المزودين المدعومين</h3>
+            <div class="card">
+                <h4>5 مزودي خدمة SMS للاختيار من بينهم</h4>
+    
+                <div class="feature-box">
+                    <strong>🌍 Twilio</strong> - مزود عالمي يدعم جميع دول العالم
+                    <ul style="margin-right: 20px; margin-top: 10px;">
+                        <li>تغطية عالمية ممتازة</li>
+                        <li>موثوقية عالية</li>
+                        <li>سهل التفعيل والاستخدام</li>
+                    </ul>
+                </div>
+    
+                <div class="feature-box">
+                    <strong>🌍 Vonage / Nexmo</strong> - مزود عالمي آخر
+                    <ul style="margin-right: 20px; margin-top: 10px;">
+                        <li>خدمة عالمية موثوقة</li>
+                        <li>أسعار تنافسية</li>
+                        <li>دعم فني ممتاز</li>
+                    </ul>
+                </div>
+    
+                <div class="feature-box">
+                    <strong>🇪🇬 Vodafone Egypt</strong> - مزود مصري محلي
+                    <ul style="margin-right: 20px; margin-top: 10px;">
+                        <li>متخصص في الأرقام المصرية</li>
+                        <li>سرعة توصيل عالية داخل مصر</li>
+                        <li>دعم فني محلي</li>
+                    </ul>
+                </div>
+    
+                <div class="feature-box">
+                    <strong>🧪 Log Driver</strong> - للاختبار (بدون إرسال فعلي)
+                    <ul style="margin-right: 20px; margin-top: 10px;">
+                        <li>يحفظ الرسائل في السجلات فقط</li>
+                        <li>مثالي للاختبار والتطوير</li>
+                        <li>لا يكلف أي رسوم</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <h3>⚙️ كيفية إعداد النظام</h3>
+            <div class="steps">
+                <h4>خطوات التفعيل للمدير:</h4>
+                <ol>
+                    <li><strong>افتح صفحة الإعدادات:</strong> من القائمة الجانبية، اضغط "إعدادات SMS"</li>
+                    <li><strong>اختر المزود:</strong> حدد مزود الخدمة المناسب لك:
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>للاختبار: اختر "Log"</li>
+                            <li>للاستخدام الفعلي: اختر Twilio أو Vonage أو Vodafone</li>
+                        </ul>
+                    </li>
+                    <li><strong>أدخل بيانات المزود:</strong>
+                        <ul style="margin-right: 20px; margin-top: 5px;">
+                            <li>Twilio: SID + Token + رقم المرسل</li>
+                            <li>Vonage: API Key + Secret + اسم المرسل</li>
+                            <li>Vodafone: Username + Password + اسم المرسل</li>
+                        </ul>
+                    </li>
+                    <li><strong>ضبط Rate Limiting:</strong> حدد عدد الرسائل المسموح بها (افتراضي: 10/دقيقة، 100/ساعة)</li>
+                    <li><strong>فعّل Queue:</strong> لإرسال الرسائل في الخلفية بدون تأخير</li>
+                    <li><strong>احفظ الإعدادات:</strong> اضغط زر "حفظ الإعدادات"</li>
+                    <li><strong>اختبر النظام:</strong> اضغط "اختبار الإرسال" للتأكد من العمل</li>
+                </ol>
+            </div>
+    
+            <h3>📊 مراقبة الرسائل</h3>
+            <div class="card">
+                <h4>سجل شامل لجميع الرسائل المرسلة</h4>
+    
+                <div class="screen-preview">
+                    <strong>في صفحة "سجل الرسائل النصية" يمكنك:</strong>
+                    <ul style="margin-right: 20px; margin-top: 10px;">
+                        <li>عرض جميع الرسائل المرسلة</li>
+                        <li>معرفة حالة كل رسالة (مرسل ✅ | فاشل ❌ | قيد الانتظار ⏳)</li>
+                        <li>رؤية المزود المستخدم لكل رسالة</li>
+                        <li>البحث برقم الهاتف</li>
+                        <li>الفلترة حسب الحالة، المزود، أو التاريخ</li>
+                        <li>عرض تفاصيل أي رسالة</li>
+                    </ul>
+                </div>
+    
+                <div class="screen-preview">
+                    <strong>Widget الإحصائيات في Dashboard:</strong>
+                    <ul style="margin-right: 20px; margin-top: 10px;">
+                        <li>📱 <strong>إجمالي الرسائل:</strong> مع رسم بياني لآخر 7 أيام</li>
+                        <li>✅ <strong>رسائل مرسلة:</strong> مع معدل النجاح</li>
+                        <li>❌ <strong>رسائل فاشلة:</strong> مع تنبيه إذا كانت أكثر من 0</li>
+                        <li>📅 <strong>رسائل اليوم:</strong> عدد الرسائل المرسلة اليوم</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <h3>💡 القوالب الجاهزة</h3>
+            <div class="card">
+                <h4>5 قوالب رسائل معدّة مسبقاً</h4>
+                <p>يمكنك استخدام القوالب الجاهزة أو تعديلها حسب حاجتك:</p>
+    
+                <div class="feature-box">
+                    <strong>1️⃣ إشعار الغياب:</strong><br>
+                    <code>"عزيزي ولي الأمر، نفيدكم بأن الطالب/ة {student_name} كان غائباً/ة اليوم {date}"</code>
+                </div>
+    
+                <div class="feature-box">
+                    <strong>2️⃣ إشعار التأخير:</strong><br>
+                    <code>"إشعار تأخير الطالب {student_name} في تاريخ {date}"</code>
+                </div>
+    
+                <div class="feature-box">
+                    <strong>3️⃣ تذكير امتحان:</strong><br>
+                    <code>"تذكير: امتحان {exam_title} في {exam_date} الساعة {exam_time}"</code>
+                </div>
+    
+                <div class="feature-box">
+                    <strong>4️⃣ تأكيد دفعة:</strong><br>
+                    <code>"تم استلام دفعة بمبلغ {amount} جنيه بنجاح"</code>
+                </div>
+    
+                <div class="feature-box">
+                    <strong>5️⃣ درجة جديدة:</strong><br>
+                    <code>"تم إضافة درجة جديدة للطالب {student_name} في {exam_title}"</code>
+                </div>
+            </div>
+    
+            <h3>🔐 الأمان والخصوصية</h3>
+            <div class="card">
+                <h4>حماية كاملة لبياناتك</h4>
+                <ul style="margin-right: 20px;">
+                    <li>🔒 <strong>API Keys محمية:</strong> جميع المفاتيح محفوظة بشكل آمن في ملف .env</li>
+                    <li>⏱️ <strong>Rate Limiting:</strong> منع إساءة الاستخدام بحد أقصى للإرسال</li>
+                    <li>✅ <strong>Phone Validation:</strong> التأكد من صحة الأرقام قبل الإرسال</li>
+                    <li>📝 <strong>Database Logging:</strong> سجل كامل لكل عملية للمراجعة</li>
+                    <li>🔄 <strong>تحويل تلقائي:</strong> الأرقام المصرية تُحول تلقائياً للصيغة الدولية (+20)</li>
+                </ul>
+            </div>
+    
+            <h3>💰 التكاليف</h3>
+            <div class="tip">
+                <strong>💵 ملاحظات هامة عن التكاليف:</strong>
+                <ul style="margin-right: 20px; margin-top: 10px;">
+                    <li>كل مزود له أسعاره الخاصة (عادة بضعة قروش/رسالة)</li>
+                    <li>Log Driver مجاني تماماً (للاختبار فقط)</li>
+                    <li>يمكنك مراقبة عدد الرسائل المرسلة من Widget الإحصائيات</li>
+                    <li>Rate Limiting يحميك من إرسال آلاف الرسائل عن طريق الخطأ</li>
+                </ul>
+            </div>
+    
+            <h3>🚀 متى يتم إرسال الرسائل؟</h3>
+            <div class="card">
+                <h4>الإرسال التلقائي - بدون تدخل يدوي!</h4>
+                <p>النظام يرسل الرسائل تلقائياً في هذه الحالات:</p>
+    
+                <div class="screen-preview">
+                    <strong>1️⃣ عند تسجيل حضور/غياب:</strong>
+                    <ul style="margin-right: 20px; margin-top: 5px;">
+                        <li>يُرسَل لولي الأمر فوراً</li>
+                        <li>يحتوي على اسم الطالب، الحالة، التاريخ، المجموعة</li>
+                    </ul>
+                </div>
+    
+                <div class="screen-preview">
+                    <strong>2️⃣ عند إضافة درجة امتحان:</strong>
+                    <ul style="margin-right: 20px; margin-top: 5px;">
+                        <li>يُرسَل للطالب وولي الأمر</li>
+                        <li>يحتوي على اسم الامتحان والدرجة والنسبة المئوية</li>
+                    </ul>
+                </div>
+    
+                <div class="screen-preview">
+                    <strong>3️⃣ عند تأكيد دفعة:</strong>
+                    <ul style="margin-right: 20px; margin-top: 5px;">
+                        <li>يُرسَل لولي الأمر</li>
+                        <li>يحتوي على المبلغ والحالة</li>
+                    </ul>
+                </div>
+    
+                <div class="screen-preview">
+                    <strong>4️⃣ عند إضافة امتحان جديد:</strong>
+                    <ul style="margin-right: 20px; margin-top: 5px;">
+                        <li>يُرسَل لجميع طلاب المجموعة</li>
+                        <li>يحتوي على اسم الامتحان، الموعد، المدة</li>
+                    </ul>
+                </div>
+    
+                <div class="screen-preview">
+                    <strong>5️⃣ عند إضافة واجب جديد:</strong>
+                    <ul style="margin-right: 20px; margin-top: 5px;">
+                        <li>يُرسَل لجميع طلاب المجموعة</li>
+                        <li>يحتوي على اسم الواجب وموعد التسليم</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    
+        <!-- ============================================ -->
+        <!-- نظام الأدوار والصلاحيات المتقدم -->
+        <!-- ============================================ -->
+        <section id="roles-permissions-advanced" style="margin-top: 60px;">
+            <h2>🔐 نظام الأدوار والصلاحيات المتقدم</h2>
+    
+            <div class="info-box">
+                <strong>📋 ما هو النظام؟</strong>
+                <p>نظام متطور لإدارة الأدوار والصلاحيات يسمح بتخصيص الوصول لكل panel بشكل منفصل، مع فلترة ذكية للصلاحيات حسب
+                    نوع
+                    المستخدم.</p>
+            </div>
+    
+            <h3 style="color: #2563eb; margin-top: 40px;">🎯 الميزة الرئيسية: Panel Type</h3>
+    
+            <div class="card" style="background: linear-gradient(135deg, #667eea22 0%, #764ba233 100%);">
+                <h4>🔑 أنواع الأدوار الخمسة:</h4>
+                <div class="screen-preview">
+                    <strong>1️⃣ Admin Panel (إداري كامل)</strong>
+                    <ul style="margin-right: 20px; margin-top: 5px;">
+                        <li>✅ يرى <strong>جميع</strong> الصلاحيات من كل الـ panels</li>
+                        <li>✅ للأدوار: super_admin, branch_manager, secretary</li>
+                        <li>✅ التحكم الكامل في النظام</li>
+                    </ul>
+                </div>
+    
+                <div class="screen-preview">
+                    <strong>2️⃣ Instructor Panel (المدرسين)</strong>
+                    <ul style="margin-right: 20px; margin-top: 5px;">
+                        <li>✅ يرى فقط صلاحيات <code>App\Filament\Instructor\*</code></li>
+                        <li>✅ مثال: Groups, Students, Assignments, Exams</li>
+                        <li>✅ لا يرى صلاحيات المؤسسات أو الإدارة</li>
+                    </ul>
+                </div>
+    
+                <div class="screen-preview">
+                    <strong>3️⃣ Student Panel (الطلاب)</strong>
+                    <ul style="margin-right: 20px; margin-top: 5px;">
+                        <li>✅ يرى فقط صلاحيات <code>App\Filament\Student\*</code></li>
+                        <li>✅ مثال: Grades, Payments, Assignments, Attendance</li>
+                        <li>✅ تحكم محدود في نطاق الطالب فقط</li>
+                    </ul>
+                </div>
+    
+                <div class="screen-preview">
+                    <strong>4️⃣ Parent Panel (أولياء الأمور)</strong>
+                    <ul style="margin-right: 20px; margin-top: 5px;">
+                        <li>✅ يرى فقط صلاحيات <code>App\Filament\Parent\*</code></li>
+                        <li>✅ مثال: Children Reports, Payments, Messages</li>
+                        <li>✅ متابعة الأبناء فقط</li>
+                    </ul>
+                </div>
+    
+                <div class="screen-preview">
+                    <strong>5️⃣ Supervisor Panel (المشرفين)</strong>
+                    <ul style="margin-right: 20px; margin-top: 5px;">
+                        <li>✅ يرى فقط صلاحيات <code>App\Filament\Supervisor\*</code></li>
+                        <li>✅ مثال: Groups Monitoring, Attendance Reviews</li>
+                        <li>✅ صلاحيات قراءة فقط (View Only)</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <h3 style="color: #2563eb; margin-top: 40px;">📂 البنية الفنية (Filament 4 Compatible)</h3>
+    
+            <div class="code-block">
+                <pre>app/Filament/Admin/Resources/Roles/
+                            ├── RoleResource.php        ← الملف الرئيسي
+                            ├── Schemas/
+                            │   └── RoleSchema.php     ← Form منفصل
+                            ├── Tables/
+                            │   └── RolesTable.php     ← Table منفصل
+                            └── Pages/
+                                ├── ListRoles.php
+                                ├── CreateRole.php
+                                ├── EditRole.php
+                                └── ViewRole.php
+                            
+                            app/Filament/Traits/
+                            └── HasPanelFilteredPermissions.php  ← الفلترة الذكية</pre>
+            </div>
+    
+            <h3 style="color: #2563eb; margin-top: 40px;">🎨 واجهة المستخدم</h3>
+    
+            <div class="card">
+                <h4>📋 جدول الأدوار المحسّن:</h4>
+                <ul style="line-height: 2;">
+                    <li>✅ عمود <strong>Panel Type</strong> مع Badges ملونة</li>
+                    <li>🔴 أحمر للـ Admin Panel</li>
+                    <li>🟠 برتقالي للـ Instructor</li>
+                    <li>🟢 أخضر للـ Student</li>
+                    <li>🔵 أزرق للـ Parent</li>
+                    <li>🟣 بنفسجي للـ Supervisor</li>
+                    <li>✅ عداد الصلاحيات (Permissions Count)</li>
+                    <li>✅ تاريخ آخر تحديث</li>
+                </ul>
+            </div>
+    
+            <div class="card">
+                <h4>📝 فورم إنشاء/تعديل الدور:</h4>
+                <div class="screen-preview">
+                    <strong>الحقول الرئيسية:</strong>
+                    <ul style="margin-right: 20px; margin-top: 5px;">
+                        <li><strong>اسم الدور:</strong> مثال instructor_manager</li>
+                        <li><strong>نوع البانل:</strong> قائمة منسدلة مع أيقونات</li>
+                        <li><strong>Select All:</strong> تحديد/إلغاء جميع الصلاحيات</li>
+                        <li><strong>Permissions Tabs:</strong> Resources | Pages | Widgets</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <h3 style="color: #2563eb; margin-top: 40px;">⚙️ كيفية الاستخدام</h3>
+    
+            <div class="step-box">
+                <strong>الخطوة 1: إنشاء دور جديد</strong>
+                <ol style="margin-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>اذهب إلى: <code>Admin Panel → الإعدادات → الأدوار والصلاحيات</code></li>
+                    <li>اضغط على <strong>إنشاء</strong></li>
+                    <li>أدخل اسم الدور (مثال: <code>instructor_manager</code>)</li>
+                    <li>اختر <strong>نوع البانل</strong> من القائمة المنسدلة</li>
+                </ol>
+            </div>
+    
+            <div class="step-box">
+                <strong>الخطوة 2: الفلترة التلقائية</strong>
+                <p style="margin-top: 10px;">بمجرد اختيار Panel Type، ستظهر فقط الصلاحيات المتعلقة بهذا البانل:</p>
+                <ul style="margin-right: 20px; margin-top: 5px;">
+                    <li>✅ Resources: فقط resources البانل المختار</li>
+                    <li>✅ Pages: فقط صفحات البانل المختار</li>
+                    <li>✅ Widgets: فقط widgets البانل المختار</li>
+                </ul>
+            </div>
+    
+            <div class="step-box">
+                <strong>الخطوة 3: تحديد الصلاحيات</strong>
+                <ol style="margin-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>انتقل بين التبويبات الثلاثة: Resources | Pages | Widgets</li>
+                    <li>حدد الصلاحيات المطلوبة لكل resource</li>
+                    <li>مثال: <code>viewAny, view, create, update, delete</code></li>
+                    <li>استخدم <strong>Select All</strong> لتحديد الكل بسرعة</li>
+                </ol>
+            </div>
+    
+            <div class="step-box">
+                <strong>الخطوة 4: إسناد الدور للمستخدمين</strong>
+                <ol style="margin-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>اذهب إلى: <code>Admin Panel → المستخدمين</code></li>
+                    <li>افتح ملف المستخدم المطلوب</li>
+                    <li>في قسم <strong>الأدوار</strong>، اختر الدور المناسب</li>
+                    <li>احفظ التغييرات</li>
+                </ol>
+            </div>
+    
+            <h3 style="color: #2563eb; margin-top: 40px;">🎁 الأدوار الجاهزة (Pre-seeded)</h3>
+    
+            <div class="info-box" style="background: #f0fdf4;">
+                <strong>4 أدوار تم إنشاؤها تلقائياً:</strong>
+                <ul style="margin-right: 20px; margin-top: 10px; line-height: 2;">
+                    <li>✅ <strong>instructor_manager</strong> (panel_type: instructor)</li>
+                    <li>✅ <strong>student_manager</strong> (panel_type: student)</li>
+                    <li>✅ <strong>parent_manager</strong> (panel_type: parent)</li>
+                    <li>✅ <strong>supervisor_manager</strong> (panel_type: supervisor)</li>
+                </ul>
+                <p style="margin-top: 10px;">يمكنك تعديل صلاحياتهم مباشرة أو استخدامهم كما هم!</p>
+            </div>
+    
+            <h3 style="color: #2563eb; margin-top: 40px;">🔧 التفاصيل التقنية</h3>
+    
+            <div class="card">
+                <h4>📊 Database Schema:</h4>
+                <div class="code-block">
+                    <pre>roles table:
+                            ├── id
+                            ├── name
+                            ├── panel_type  ← جديد! (nullable)
+                            ├── guard_name
+                            ├── created_at
+                            └── updated_at
+                            
+                            Index: panel_type (للبحث السريع)</pre>
+                </div>
+            </div>
+    
+            <div class="card">
+                <h4>🧩 HasPanelFilteredPermissions Trait:</h4>
+                <ul style="line-height: 2;">
+                    <li>✅ <code>getPanelType()</code> - جلب panel_type من الفورم</li>
+                    <li>✅ <code>getResourceEntitiesSchema()</code> - فلترة Resources</li>
+                    <li>✅ <code>getPageOptions()</code> - فلترة Pages</li>
+                    <li>✅ <code>getWidgetOptions()</code> - فلترة Widgets</li>
+                    <li>✅ فلترة بناءً على namespace: <code>str_starts_with($fqcn, $panelNamespace)</code></li>
+                </ul>
+            </div>
+    
+            <h3 style="color: #2563eb; margin-top: 40px;">💡 نصائح الاستخدام</h3>
+    
+            <div class="warning-box">
+                <strong>⚠️ للأدوار الإدارية (super_admin, branch_manager):</strong>
+                <p>اترك حقل <strong>Panel Type</strong> فارغاً (null) حتى تظهر لهم جميع الصلاحيات من كل الـ panels!</p>
+            </div>
+    
+            <div class="info-box" style="background: #eff6ff;">
+                <strong>💼 للأدوار المتخصصة:</strong>
+                <p>اختر Panel Type المناسب، وستظهر فقط الصلاحيات ذات الصلة، مما يسهل التخصيص ويمنع الأخطاء.</p>
+            </div>
+    
+            <div class="info-box" style="background: #fef3c7;">
+                <strong>🔄 Plugins Configuration:</strong>
+                <p>تم إضافة جميع الـ plugins الضرورية (Shield, Health, Backgrounds, StickyHeader) لجميع الـ panels لضمان
+                    التوافق
+                    الكامل!</p>
+            </div>
+        </section>
+    
+        <!-- المميزات -->
+        <section id="features">
+            <h2>✨ مميزات النظام</h2>
+    
+            <div class="card">
+                <h4>🌐 سهل الاستخدام</h4>
+                <p>واجهة بسيطة وواضحة باللغة العربية، يمكن لأي شخص استخدامها بسهولة دون تعقيدات.</p>
+            </div>
+    
+            <div class="card">
+                <h4>📱 يعمل على جميع الأجهزة</h4>
+                <p>يمكنك الدخول للنظام من الكمبيوتر، الجوال، أو التابلت بنفس الكفاءة.</p>
+            </div>
+    
+            <div class="card">
+                <h4>🔒 آمن ومحمي</h4>
+                <p>كل مستخدم له حساب خاص محمي بكلمة مرور، ولا يمكنه رؤية إلا ما يخصه فقط.</p>
+            </div>
+    
+            <div class="card">
+                <h4>⚡ سريع وفعّال</h4>
+                <p>النظام يعمل بسرعة عالية ويوفر الوقت والجهد على الجميع.</p>
+            </div>
+    
+            <div class="card">
+                <h4>📊 تقارير شاملة</h4>
+                <p>تقارير دقيقة ومفصلة عن أداء الطلاب وسير العملية التعليمية.</p>
+            </div>
+    
+            <div class="card">
+                <h4>🎯 اختبارات ذكية</h4>
+                <p>نظام اختبارات متقدم مع تصحيح تلقائي وحساب الدرجات بدقة.</p>
+            </div>
+    
+            <div class="card">
+                <h4>📧 إشعارات تلقائية</h4>
+                <p>يرسل النظام إشعارات للمستخدمين عن الاختبارات والنتائج والتحديثات المهمة.</p>
+            </div>
+    
+            <div class="card">
+                <h4>🎨 تصميم عصري</h4>
+                <p>ألوان جميلة وتصميم احترافي يجعل الاستخدام ممتعاً ومريحاً للعين.</p>
+            </div>
+            <div class="card">
+                <h4>💰 نظام مالي متكامل</h4>
+                <p>إدارة شاملة للمصروفات والإيرادات مع تقارير تحليلية وربط تلقائي لمدفوعات الطلاب.</p>
+            </div>
+    
+            <div class="card">
+                <h4>🏦 نظام الخزائن المتقدم (جديد!)</h4>
+                <p>3 خزائن مستقلة (نقدي، فودافون كاش، إنستاباي) مع تقارير يومية وتسويات آلية وتنبيهات للرصيد السالب.</p>
+            </div>
+    
+            <div class="card">
+                <h4>📄 عرض ملفات PDF محسّن (جديد!)</h4>
+                <p>رفع وعرض ملفات امتحانات PDF بشكل احترافي وآمن مع تصميم Bootstrap جميل.</p>
+            </div>
+    
+            <div class="card">
+                <h4>👨‍👩‍👧‍👦 لوحة ولي الأمر المحسّنة</h4>
+                <p>واجهة مخصصة لأولياء الأمور لمتابعة أداء أبنائهم الدراسي والمالي والحضور مع إمكانية التبديل بين الأبناء.
+                </p>
+            </div>
+    
+            <div class="card">
+                <h4>📊 Dashboard احترافي</h4>
+                <p>لوحات معلومات ذكية للطالب وولي الأمر والمعلم بتصميم عصري وألوان جذابة وتحديث تلقائي.</p>
+            </div>
+    
+            <div class="card">
+                <h4>🎨 تصميم عصري متجاوب</h4>
+                <p>واجهة جميلة بألوان متدرجة، أيقونات تعبيرية، وتأثيرات حركية تجعل الاستخدام ممتعاً على كل الأجهزة.</p>
+            </div>
+    
+            <div class="card">
+                <h4>⚡ أداء عالي وسرعة فائقة</h4>
+                <p>بنيت على Laravel 12 و Filament 4 لضمان سرعة استجابة ممتازة وأداء موثوق.</p>
+            </div>
+    
+            <div class="card">
+                <h4>🔔 إشعارات ذكية</h4>
+                <p>تنبيهات فورية للأحداث المهمة: رصيد سالب، امتحانات قادمة، مدفوعات معلقة، نتائج جديدة.</p>
+            </div>
+    
+            <div class="card">
+                <h4>🔄 Multi-Tenancy</h4>
+                <p>دعم كامل لعدة فروع بعزل تام للبيانات - كل فرع له بياناته المستقلة والمحمية.</p>
+            </div>
+    
+            <div class="card">
+                <h4>🌐 دعم كامل للغة العربية</h4>
+                <p>واجهة عربية 100% بخطوط واضحة واتجاه RTL صحيح مع دعم المصطلحات التعليمية العربية.</p>
+            </div>
+    </div>
+    
+    <div class="card">
+        <h4>🔐 نظام صلاحيات متقدم</h4>
+        <p>Shield Permissions - إدارة دقيقة للصلاحيات والأدوار لكل مستخدم في النظام.</p>
+    </div>
+    
+    <div class="card">
+        <h4>🏢 Multi-Tenancy</h4>
+        <p>النظام يدعم تعدد المستأجرين - كل مدرسة لها بياناتها المنفصلة تماماً.</p>
+    </div>
+    
+    <div class="card">
+        <h4>🌍 متعدد اللغات</h4>
+        <p>دعم كامل للغة العربية والإنجليزية مع إمكانية إضافة لغات أخرى بسهولة.</p>
+    </div>
+    </section>
+    
+    <!-- نصائح عامة -->
+    <section>
+        <h2>💡 نصائح مهمة للاستخدام الأمثل</h2>
+    
+        <div class="tip">
+            <strong>للمدير:</strong>
+            <ul style="margin-right: 20px; margin-top: 10px;">
+                <li>ابدأ بإنشاء الأقسام والصفوف الدراسية أولاً</li>
+                <li>ثم أضف المعلمين والطلاب وأولياء الأمور</li>
+                <li>أسند كل معلم للمواد المناسبة له</li>
+                <li>راجع التقارير بانتظام لمتابعة الأداء</li>
+                <li>أنشئ فئات المصروفات والإيرادات قبل البدء بالتسجيل المالي</li>
+                <li>راقب التقارير المالية دورياً لمعرفة الوضع المالي</li>
+                <li>استخدم نظام الصلاحيات لتحديد من يستطيع الوصول لماذا</li>
+            </ul>
+        </div>
+    
+        <div class="tip">
+            <strong>للمعلم:</strong>
+            <ul style="margin-right: 20px; margin-top: 10px;">
+                <li>نظّم محتوى موادك بشكل منطقي ومتسلسل</li>
+                <li>ضع اختبارات بسيطة ومتدرجة في الصعوبة</li>
+                <li>راجع الأسئلة قبل نشر الاختبار</li>
+                <li>تابع أداء طلابك باستمرار</li>
+                <li>استخدم التقارير لتحسين أسلوب التدريس</li>
+            </ul>
+        </div>
+    
+        <div class="tip">
+            <strong>للطالب:</strong>
+            <ul style="margin-right: 20px; margin-top: 10px;">
+                <li>ادرس الدروس بانتظام قبل الاختبارات</li>
+                <li>اقرأ تعليمات الاختبار بعناية</li>
+                <li>احرص على وجود اتصال إنترنت مستقر أثناء الاختبار</li>
+                <li>لا تؤجل الاختبارات حتى اللحظة الأخيرة</li>
+                <li>راجع نتائجك لتعرف نقاط قوتك وضعفك</li>
+                <li>تابع لوحة المعلومات بانتظام لمعرفة تقدمك</li>
+                <li>راقب حالة مدفوعاتك وتأكد من السداد في الوقت المناسب</li>
+            </ul>
+        </div>
+    
+        <div class="tip">
+            <strong>لولي الأمر:</strong>
+            <ul style="margin-right: 20px; margin-top: 10px;">
+                <li>راجع لوحة المعلومات يومياً لمتابعة أبنائك</li>
+                <li>تأكد من انتظام الحضور</li>
+                <li>راقب المدفوعات المعلقة وسددها في الوقت المحدد</li>
+                <li>تابع نتائج الاختبارات وناقشها مع أبنائك</li>
+                <li>تواصل مع المعلمين عند الحاجة</li>
+                <li>استخدم ميزة التبديل بين الأبناء لمتابعة الجميع</li>
+            </ul>
+        </div>
+    
+        <div class="highlight">
+            <h3 style="margin-bottom: 15px;">🎯 خطوات البداية السريعة</h3>
+            <p><strong>للمدير - ابدأ الآن:</strong></p>
+            <ol style="margin-right: 20px; font-size: 1.1em;">
+                <li>سجّل الدخول بحساب المدير</li>
+                <li>أنشئ الأقسام والصفوف الدراسية</li>
+                <li>أضف المعلمين والطلاب وأولياء الأمور</li>
+                <li>أنشئ المواد الدراسية وأسندها للمعلمين</li>
+                <li>أنشئ فئات المصروفات والإيرادات</li>
+                <li>سجّل المصاريف والإيرادات</li>
+                <li>راجع التقارير المالية والتعليمية</li>
+                <li>ابدأ العمل!</li>
+            </ol>
+        </div>
+    </section>
+    
+    <!-- الدعم والمساعدة -->
+    <section>
+        <h2>🆘 هل تحتاج مساعدة؟</h2>
+    
+        <div class="card">
+            <h4>📞 الدعم الفني</h4>
+            <p>إذا واجهت أي مشكلة أو كان لديك أي استفسار، يمكنك التواصل مع فريق الدعم الفني.</p>
+            <div class="highlight" style="margin-top: 15px;">
+                <p><strong>💼 شركة المبتكر العربي للبرمجيات</strong></p>
+                <p>نحن هنا لمساعدتك في أي وقت</p>
+            </div>
+        </div>
+    
+        <div class="card">
+            <h4>📖 التعلم والتدريب</h4>
+            <p>يمكنك دائماً العودة لهذا الدليل لمراجعة أي خطوة أو معرفة كيفية استخدام أي ميزة في النظام.</p>
+        </div>
+    </section>
+    </div>
+    
+    <footer>
+        <p>جميع الحقوق محفوظة © 2025</p>
+        <div class="company-footer">
+            🏢 تم التصميم والتطوير والبرمجة بواسطة<br>
+            شركة المبتكر العربي للبرمجيات
+        </div>
+        </footer>
+    </div>
+</body>
+</html>

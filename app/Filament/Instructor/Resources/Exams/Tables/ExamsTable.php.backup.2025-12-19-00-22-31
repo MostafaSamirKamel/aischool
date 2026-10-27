@@ -1,0 +1,89 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Exams\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Tables\Table;
+
+class ExamsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('tenant.name')
+                    ->label(__('filament/admin/exam_resource.tenant.name'))
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('course.name')
+                    ->label(__('filament/admin/exam_resource.course.name'))
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('group.name')
+                    ->label(__('filament/admin/exam_resource.group.name'))
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('instructor.id')
+                    ->label(__('filament/admin/exam_resource.instructor.id'))
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('title')
+                    ->label(__('filament/admin/exam_resource.title'))
+                    ->searchable(),
+                TextColumn::make('type')
+                    ->label(__('filament/admin/exam_resource.type')),
+                TextColumn::make('exam_date')
+                    ->label(__('filament/admin/exam_resource.exam_date'))
+                    ->dateTime()
+                    ->sortable(),
+                TextColumn::make('duration')
+                    ->label(__('filament/admin/exam_resource.duration'))
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('total_marks')
+                    ->label(__('filament/admin/exam_resource.total_marks'))
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('passing_marks')
+                    ->label(__('filament/admin/exam_resource.passing_marks'))
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('status')
+                    ->label(__('filament/admin/exam_resource.status')),
+                TextColumn::make('created_at')
+                    ->label(__('filament/admin/exam_resource.created_at'))
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('updated_at')
+                    ->label(__('filament/admin/exam_resource.updated_at'))
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('deleted_at')
+                    ->label(__('filament/admin/exam_resource.deleted_at'))
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                TrashedFilter::make(),
+            ])
+            ->recordActions([
+                EditAction::make(),
+            ])
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                    ForceDeleteBulkAction::make(),
+                    RestoreBulkAction::make(),
+                ]),
+            ]);
+    }
+}

@@ -1,0 +1,192 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Admins\Schemas;
+
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\RichEditor;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Schema;
+use Filament\Schemas\Components\Utilities\Get;
+use Filament\Schemas\Components\Utilities\Set;
+use App\Services\NationalIdParser;
+
+class AdminForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->columns(2)
+            ->components([
+                Section::make('إنشاء حساب مستخدم (اختياري)')
+                    ->description('قم بتفعيل هذا الخيار إذا أردت إنشاء حساب مستخدم للإداري')
+                    ->schema([
+                        Toggle::make('create_user_account')
+                            ->label(__('filament/admin/admin_resource.create_user_account'))
+                            ->live()
+                            ->default(false)
+                            ->columnSpanFull(),
+
+                        TextInput::make('user_name')
+                            ->label(__('filament/admin/admin_resource.user_name'))
+                            ->required(fn (Get $get) => $get('create_user_account'))
+                            ->maxLength(255)
+                            ->placeholder('أدخل اسم الإداري الكامل')
+                            ->visible(fn(Get $get) => $get('create_user_account'))
+                            ->columnSpan(1),
+
+                        TextInput::make('user_email')
+                            ->label(__('filament/admin/admin_resource.user_email'))
+                            ->email()
+                            ->required(fn (Get $get) => $get('create_user_account'))
+                            ->unique('users', 'email', ignoreRecord: true)
+                            ->maxLength(255)
+                            ->placeholder('example@email.com')
+                            ->visible(fn(Get $get) => $get('create_user_account'))
+                            ->columnSpan(1),
+
+                        TextInput::make('user_password')
+                            ->label(__('filament/admin/admin_resource.user_password'))
+                            ->password()
+                            ->required(fn($context, Get $get) => $context === 'create' && $get('create_user_account'))
+                            ->dehydrated(fn ($state) => filled($state))
+                            ->minLength(8)
+                            ->placeholder('على الأقل 8 أحرف')
+                            ->visible(fn(Get $get) => $get('create_user_account'))
+                            ->columnSpan(1),
+                    ])
+                    ->columns(2)
+                    ->collapsed(),
+
+                Section::make('المعلومات الأساسية')
+                    ->schema([
+                        TextInput::make('employee_code')
+                            ->label(__('filament/admin/admin_resource.employee_code'))
+                            ->required()
+                            ->unique(ignoreRecord: true)
+                            ->maxLength(50)
+                            ->placeholder('مثال: ADM001')
+                            ->columnSpan(1),
+
+                        TextInput::make('job_title')
+                            ->label(__('filament/admin/admin_resource.job_title'))
+                            ->required()
+                            ->maxLength(255)
+                            ->placeholder('مثال: مدير إداري')
+                            ->columnSpan(1),
+
+                        Select::make('department_id')
+                            ->label(__('filament/admin/admin_resource.department_id'))
+                            ->relationship('department', 'name', fn($query) => $query->where('is_active', true))
+                            ->searchable()
+                            ->preload()
+                            ->columnSpan(1),
+                    ])
+                    ->columns(2),
+
+                Section::make('البيانات الشخصية')
+                    ->schema([
+                        TextInput::make('national_id')
+                            ->label(__('filament/admin/admin_resource.national_id'))
+                            ->maxLength(14)
+                            ->unique('admins', 'national_id', ignoreRecord: true)
+                            ->lazy()
+                            ->afterStateUpdated(function (Set $set, ?string $state) {
+                                if (!empty($state) && strlen($state) === 14) {
+                                    $parsed = NationalIdParser::parse($state);
+                                    if ($parsed) {
+                                        $set('birth_date', $parsed['birth_date']);
+                                        $set('gender', $parsed['gender']);
+                                        $set('governorate', $parsed['governorate_name']);
+                                    }
+                                }
+                            })
+                            ->helperText('سيتم استخراج تاريخ الميلاد والجنس والمحافظة تلقائياً عند الخروج من الحقل')
+                            ->columnSpanFull(),
+
+                        DatePicker::make('birth_date')
+                            ->label(__('filament/admin/admin_resource.birth_date'))
+                            ->native(false)
+                            ->maxDate(now())
+                            ->columnSpan(1)
+                            ->live(onBlur: true)
+                            ->afterStateUpdated(function (Set $set, $state) {
+                                if ($state) {
+                                    $birthDate = \Carbon\Carbon::parse($state);
+                                    $now = now();
+                                    $diff = $birthDate->diff($now);
+                                    $age = sprintf('%d سنة و %d شهر و %d يوم', $diff->y, $diff->m, $diff->d);
+                                    $set('age_display', $age);
+                                }
+                            }),
+
+                        TextInput::make('age_display')
+                            ->label(__('filament/admin/admin_resource.age_display'))
+                            ->disabled()
+                            ->dehydrated(false)
+                            ->default(function ($record) {
+                                return $record?->age;
+                            })
+                            ->placeholder('سيتم حسابه تلقائياً')
+                            ->columnSpan(1),
+
+                        Select::make('gender')
+                            ->label(__('filament/admin/admin_resource.gender'))
+                            ->options(['male' => __('filament/admin/admin_resource.gender.male'), 'female' => __('filament/admin/admin_resource.gender.female')])
+                            ->native(false)
+                            ->columnSpan(1),
+
+                        TextInput::make('governorate')
+                            ->label(__('filament/admin/admin_resource.governorate'))
+                            ->maxLength(255)
+                            ->columnSpan(1),
+
+                        TextInput::make('phone')
+                            ->label(__('filament/admin/admin_resource.phone'))
+                            ->tel()
+                            ->maxLength(20)
+                            ->columnSpan(1),
+
+                        TextInput::make('emergency_contact')
+                            ->label(__('filament/admin/admin_resource.emergency_contact'))
+                            ->maxLength(255)
+                            ->columnSpan(1),
+
+                        Select::make('status')
+                            ->label(__('filament/admin/admin_resource.status'))
+                            ->options([
+                                'active' => __('filament/admin/admin_resource.status.active'),
+                                'inactive' => __('filament/admin/admin_resource.status.inactive'),
+                                'on_leave' => __('filament/admin/admin_resource.status.on_leave'),
+                            ])
+                            ->default('active')
+                            ->required()
+                            ->native(false)
+                            ->columnSpan(1),
+                    ])
+                    ->columns(2),
+
+                Section::make('المعلومات المالية والوظيفية')
+                    ->schema([
+                        DatePicker::make('hire_date')
+                            ->label(__('filament/admin/admin_resource.hire_date'))
+                            ->native(false)
+                            ->columnSpan(1),
+
+                        TextInput::make('salary')
+                            ->label(__('filament/admin/admin_resource.salary'))
+                            ->numeric()
+                            ->prefix('EGP')
+                            ->columnSpan(1),
+
+                        RichEditor::make('notes')
+                            ->label(__('filament/admin/admin_resource.notes'))
+                            ->columnSpanFull(),
+                    ])
+                    ->columns(2)
+                    ->collapsed(),
+            ]);
+    }
+}

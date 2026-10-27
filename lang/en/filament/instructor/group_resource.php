@@ -1,0 +1,35 @@
+<?php
+
+return [
+
+    'capacity' => 'Capacity',
+    'classroom.name' => 'Name',
+    'classroom_id' => 'Classroom',
+    'completed_sessions' => 'Completed Sessions',
+    'course.name' => 'Name',
+    'course_id' => 'Course',
+    'end_date' => 'End Date',
+    'enrollments_count' => 'Enrollments Count',
+    'instructor_id' => 'Instructor',
+    'max_students' => 'Max Students',
+    'model_label' => 'مجموعة',
+    'name' => 'Name',
+    'navigation_label' => 'مجموعاتي',
+    'notes' => 'Notes',
+    'plural_model_label' => 'المجموعات',
+    'schedule' => 'Schedule',
+    'start_date' => 'Start Date',
+    'status' => 'Status',
+    'status.active' => 'Active',
+    'status.cancelled' => 'Cancelled',
+    'status.completed' => 'Completed',
+    'status.filament/instructor/group_resource.status.active' => 'filament/instructor/group_resource.status.active',
+    'status.filament/instructor/group_resource.status.cancelled' => 'filament/instructor/group_resource.status.cancelled',
+    'status.filament/instructor/group_resource.status.completed' => 'filament/instructor/group_resource.status.completed',
+    'status.filament/instructor/group_resource.status.pending' => 'filament/instructor/group_resource.status.pending',
+    'status.pending' => 'Pending',
+    'status_default' => 'Status Default',
+    'supervisor_id' => 'Supervisor',
+    'tenant_id' => 'Tenant',
+
+];

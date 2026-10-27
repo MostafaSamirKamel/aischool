@@ -1,0 +1,198 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\Exams\Schemas;
+
+use App\Models\Group;
+use App\Models\Course;
+use App\Models\Instructor;
+use Filament\Schemas\Schema;
+use Filament\Forms\Components\Select;
+use Filament\Schemas\Components\Grid;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\ViewField;
+use Filament\Schemas\Components\Utilities\Get;
+
+class ExamForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Section::make('معلومات أساسية')
+                    ->description('البيانات الأساسية للامتحان')
+                    ->schema([
+                        Grid::make(2)
+                            ->schema([
+                                Select::make('course_id')
+                                    ->label(__('filament/instructor/exam_resource.course_id'))
+                                    ->relationship('course', 'name', fn($query) => $query->where('status', 'active'))
+                                    ->required()
+                                    ->searchable()
+                                    ->preload()
+                                    ->live()
+                                    ->afterStateUpdated(fn($state, callable $set) => $set('group_id', null)),
+
+                                Select::make('group_id')
+                                    ->label(__('filament/instructor/exam_resource.group_id'))
+                                    ->options(function (Get $get) {
+                                        $courseId = $get('course_id');
+                                        if (!$courseId) {
+                                            return [];
+                                        }
+                                        // المدرس يشوف بس مجموعاته
+                                        return Group::where('course_id', $courseId)
+                                            ->where('instructor_id', auth()->id())
+                                            ->where('status', 'active')
+                                            ->pluck('name', 'id');
+                                    })
+                                    ->required()
+                                    ->searchable()
+                                    ->disabled(fn(Get $get) => !$get('course_id')),
+                            ]),
+
+                        Grid::make(2)
+                            ->schema([
+                                Select::make('type')
+                                    ->label(__('filament/instructor/exam_resource.type'))
+                                    ->options([
+                                        'quiz' => __('filament/instructor/exam_resource.type.quiz'),
+                                        'midterm' => __('filament/instructor/exam_resource.type.midterm'),
+                                        'final' => __('filament/instructor/exam_resource.type.final'),
+                                        'assignment' => __('filament/instructor/exam_resource.type.assignment'),
+                                        'project' => __('filament/instructor/exam_resource.type.project')
+                                    ])
+                                    ->default('quiz')
+                                    ->required()
+                                    ->native(false),
+                            ]),
+
+                        TextInput::make('title')
+                            ->label(__('filament/instructor/exam_resource.title'))
+                            ->required()
+                            ->maxLength(255)
+                            ->columnSpanFull(),
+
+                        RichEditor::make('description')
+                            ->label(__('filament/instructor/exam_resource.description'))
+                            ->columnSpanFull(),
+                    ])->columns(1),
+
+                Section::make('التفاصيل والتوقيت')
+                    ->description('تفاصيل الامتحان والدرجات')
+                    ->schema([
+                        Grid::make(3)
+                            ->schema([
+                                DateTimePicker::make('exam_date')
+                                    ->label(__('filament/instructor/exam_resource.exam_date'))
+                                    ->required()
+                                    ->native(false)
+                                    ->seconds(false)
+                                    ->minDate(now()),
+
+                                TextInput::make('duration')
+                                    ->label(__('filament/instructor/exam_resource.duration'))
+                                    ->required()
+                                    ->numeric()
+                                    ->default(60)
+                                    ->suffix('دقيقة')
+                                    ->minValue(1)
+                                    ->maxValue(300),
+
+                                Select::make('status')
+                                    ->label(__('filament/instructor/exam_resource.status'))
+                                    ->options([
+                                        'scheduled' => __('filament/instructor/exam_resource.status.scheduled'),
+                                        'in_progress' => __('filament/instructor/exam_resource.status.in_progress'),
+                                        'completed' => __('filament/instructor/exam_resource.status.completed'),
+                                        'cancelled' => __('filament/instructor/exam_resource.status.cancelled')
+                                    ])
+                                    ->default('scheduled')
+                                    ->required()
+                                    ->native(false),
+                            ]),
+
+                        Grid::make(2)
+                            ->schema([
+                                TextInput::make('total_marks')
+                                    ->label(__('filament/instructor/exam_resource.total_marks'))
+                                    ->required()
+                                    ->numeric()
+                                    ->default(100)
+                                    ->suffix('درجة')
+                                    ->minValue(1)
+                                    ->live()
+                                    ->afterStateUpdated(function ($state, callable $get, callable $set) {
+                                        $passingMarks = $get('passing_marks');
+                                        if ($passingMarks && $passingMarks > $state) {
+                                            $set('passing_marks', round($state * 0.5));
+                                        }
+                                    }),
+
+                                TextInput::make('passing_marks')
+                                    ->label(__('filament/instructor/exam_resource.passing_marks'))
+                                    ->required()
+                                    ->numeric()
+                                    ->suffix('درجة')
+                                    ->minValue(1)
+                                    ->rules([
+                                        fn(Get $get): \Closure => function (string $attribute, $value, \Closure $fail) use ($get) {
+                                            if ($value > $get('total_marks')) {
+                                                $fail('درجة النجاح يجب أن تكون أقل من أو تساوي الدرجة الكلية');
+                                            }
+                                        },
+                                    ]),
+                            ]),
+
+                        RichEditor::make('instructions')
+                            ->label(__('filament/instructor/exam_resource.instructions'))
+                            ->columnSpanFull(),
+
+                        FileUpload::make('pdf_file')
+                            ->label(__('filament/instructor/exam_resource.pdf_file'))
+                            ->helperText('رفع ملف PDF إذا كان الامتحان يحتوي على رسومات أو معادلات رياضية')
+                            ->acceptedFileTypes(['application/pdf'])
+                            ->maxSize(10240) // 10MB
+                            ->disk('local')
+                            ->directory('exams/pdfs')
+                            ->visibility('private')
+                            ->downloadable()
+                            ->openable()
+                            ->previewable()
+                            ->columnSpanFull(),
+
+                        ViewField::make('pdf_preview')
+                            ->label(__('filament/instructor/exam_resource.pdf_preview'))
+                            ->view('filament.instructor.components.pdf-preview')
+                            ->visible(fn($get) => !empty($get('pdf_file')))
+                            ->columnSpanFull(),
+
+                        FileUpload::make('images')
+                            ->label(__('filament/instructor/exam_resource.images'))
+                            ->helperText('رفع صور متعددة للامتحان (رسومات، معادلات، إلخ) - الصور ستظهر للطلاب أثناء حل الامتحان')
+                            ->image()
+                            ->multiple()
+                            ->maxFiles(10)
+                            ->maxSize(5120) // 5MB per image
+                            ->disk('local')
+                            ->directory('exams/images')
+                            ->visibility('private')
+                            ->downloadable()
+                            ->openable()
+                            ->previewable(true)
+                            ->reorderable()
+                            ->imageEditor()
+                            ->imageEditorAspectRatios([
+                                null,
+                                '16:9',
+                                '4:3',
+                                '1:1',
+                            ])
+                            ->columnSpanFull(),
+                    ])->columns(1),
+            ]);
+    }
+}

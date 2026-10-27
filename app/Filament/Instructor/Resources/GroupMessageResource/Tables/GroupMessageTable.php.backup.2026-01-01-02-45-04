@@ -1,0 +1,161 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\GroupMessageResource\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use Filament\Actions\ViewAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Tables\Table;
+
+class GroupMessageTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('group.name')
+                    ->label('المجموعة')
+                    ->searchable()
+                    ->sortable(),
+
+                TextColumn::make('subject')
+                    ->label('الموضوع')
+                    ->searchable()
+                    ->limit(50)
+                    ->tooltip(function (TextColumn $column): ?string {
+                        $state = $column->getState();
+                        if (strlen($state) <= 50) {
+                            return null;
+                        }
+                        return $state;
+                    }),
+
+                TextColumn::make('type')
+                    ->label('النوع')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'general' => 'gray',
+                        'homework' => 'success',
+                        'reminder' => 'warning',
+                        'announcement' => 'info',
+                        default => 'gray',
+                    })
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'announcement' => 'إعلان',
+                        'homework' => 'واجب',
+                        'reminder' => 'تذكير',
+                        'general' => 'عام',
+                        default => $state,
+                    }),
+
+                TextColumn::make('priority')
+                    ->label('الأولوية')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'low' => 'gray',
+                        'normal' => 'primary',
+                        'high' => 'warning',
+                        'urgent' => 'danger',
+                        default => 'gray',
+                    })
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'low' => 'منخفضة',
+                        'normal' => 'عادية',
+                        'high' => 'عالية',
+                        'urgent' => 'عاجلة',
+                        default => $state,
+                    }),
+
+                TextColumn::make('status')
+                    ->label('الحالة')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'draft' => 'gray',
+                        'scheduled' => 'warning',
+                        'sent' => 'success',
+                        'failed' => 'danger',
+                        default => 'gray',
+                    })
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'draft' => 'مسودة',
+                        'scheduled' => 'مجدولة',
+                        'sent' => 'مرسلة',
+                        'failed' => 'فشلت',
+                        default => $state,
+                    }),
+
+                TextColumn::make('recipients_count')
+                    ->label('المستلمون')
+                    ->sortable()
+                    ->alignCenter()
+                    ->badge()
+                    ->color('primary'),
+
+                TextColumn::make('read_count')
+                    ->label('القراءات')
+                    ->sortable()
+                    ->alignCenter()
+                    ->badge()
+                    ->color('success'),
+
+                TextColumn::make('sent_at')
+                    ->label('تاريخ الإرسال')
+                    ->dateTime('d/m/Y h:i A')
+                    ->sortable()
+                    ->toggleable(),
+
+                TextColumn::make('created_at')
+                    ->label('تاريخ الإنشاء')
+                    ->dateTime('d/m/Y h:i A')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                SelectFilter::make('group_id')
+                    ->label('المجموعة')
+                    ->relationship('group', 'name')
+                    ->searchable()
+                    ->preload(),
+
+                SelectFilter::make('type')
+                    ->label('النوع')
+                    ->options([
+                        'announcement' => 'إعلان',
+                        'homework' => 'واجب',
+                        'reminder' => 'تذكير',
+                        'general' => 'عام',
+                    ]),
+
+                SelectFilter::make('status')
+                    ->label('الحالة')
+                    ->options([
+                        'draft' => 'مسودة',
+                        'scheduled' => 'مجدولة',
+                        'sent' => 'مرسلة',
+                        'failed' => 'فشلت',
+                    ]),
+
+                TrashedFilter::make(),
+            ])
+            ->actions([
+                ViewAction::make(),
+                EditAction::make(),
+                DeleteAction::make(),
+            ])
+            ->bulkActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                    RestoreBulkAction::make(),
+                    ForceDeleteBulkAction::make(),
+                ]),
+            ])
+            ->defaultSort('created_at', 'desc');
+    }
+}

@@ -1,0 +1,33 @@
+<?php
+
+return [
+    'navigation_label' => 'المستخدمين',
+    'model_label' => 'المستخدم',
+    'plural_model_label' => 'المستخدمين',
+    'navigation_group' => 'الإعدادات والمستخدمين',
+
+    'name' => 'الاسم',
+    'email' => 'البريد الإلكتروني',
+    'username' => 'اسم المستخدم',
+    'image' => 'الصورة',
+    'password' => 'كلمة المرور',
+    'avatar' => 'الصورة الشخصية',
+    'date_of_birth' => 'تاريخ الميلاد',
+    'phone' => 'رقم الهاتف',
+    'address' => 'العنوان',
+    'job_title' => 'المسمى الوظيفي',
+    'qualification' => 'المؤهل العلمي',
+    'tenant_id' => 'الفرع',
+    'tenant.name' => 'الفرع',
+    'roles' => 'الصلاحيات',
+    'roles.name' => 'الدور',
+    'is_super_admin' => 'مدير نظام',
+    'is_tenant_owner' => 'مالك الفرع',
+    'user_type' => 'نوع المستخدم',
+    'super_admin' => 'مدير نظام',
+    'normal_user' => 'مستخدم عادي',
+    'no_tenant' => 'بدون فرع',
+    'status' => 'الحالة',
+    'active' => 'نشط',
+    'inactive' => 'غير نشط',
+];

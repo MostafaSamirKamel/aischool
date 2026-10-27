@@ -1,0 +1,87 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Tracks\Tables;
+
+use App\Filament\Exports\TrackExporter;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ExportAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Tables\Table;
+
+class TracksTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('name')
+                    ->label(__('filament/admin/track_resource.name'))
+                    ->searchable()
+                    ->sortable(),
+                    
+                TextColumn::make('description')
+                    ->label(__('filament/admin/track_resource.description'))
+                    ->limit(50)
+                    ->toggleable(),
+                    
+                TextColumn::make('courses_count')
+                    ->label(__('filament/admin/track_resource.courses_count'))
+                    ->counts('courses')
+                    ->sortable()
+                    ->badge(),
+                    
+                TextColumn::make('order')
+                    ->label(__('filament/admin/track_resource.order'))
+                    ->numeric()
+                    ->sortable(),
+                    
+                TextColumn::make('status')
+                    ->label(__('filament/admin/track_resource.status'))
+                    ->badge()
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'active' => 'نشط',
+                        'inactive' => 'غير نشط',
+                        default => $state,
+                    })
+                    ->color(fn (string $state): string => match ($state) {
+                        'active' => 'success',
+                        'inactive' => 'danger',
+                        default => 'gray',
+                    }),
+                    
+                TextColumn::make('created_at')
+                    ->label(__('filament/admin/track_resource.created_at'))
+                    ->dateTime('Y-m-d')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                TrashedFilter::make()
+                    ->label('المحذوفة'),
+            ])
+            ->recordActions([
+                EditAction::make()
+                    ->label('تعديل')
+                    ->visible(fn() => !auth()->user()->is_super_admin),
+            ])
+            ->toolbarActions([
+                ExportAction::make()
+                    ->label('تصدير')
+                    ->exporter(TrackExporter::class),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make()
+                        ->label('حذف'),
+                    ForceDeleteBulkAction::make()
+                        ->label('حذف نهائي'),
+                    RestoreBulkAction::make()
+                        ->label('استعادة'),
+                ]),
+            ])
+            ->defaultSort('order', 'asc');
+    }
+}

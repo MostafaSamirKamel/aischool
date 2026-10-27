@@ -1,0 +1,70 @@
+# Version control & IDE
+.git
+.gitignore
+.gitattributes
+.editorconfig
+.idea
+.vscode
+.fleet
+
+# Environment & credentials (NEVER commit or bake into images)
+.env
+.env.*
+!.env.example
+auth.json
+cookie.txt
+
+# Local vendor & node dependencies (re-installed cleanly during build)
+node_modules
+vendor
+
+# Framework caches & logs
+storage/logs/*
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/pail/*
+!storage/logs/.gitkeep
+!storage/framework/cache/data/.gitkeep
+!storage/framework/sessions/.gitkeep
+!storage/framework/views/.gitkeep
+
+# Local database files
+database/*.sqlite
+database/*.sqlite-journal
+
+# Temporary / testing files
+tests
+phpunit.xml
+.phpunit.cache
+.phpunit.result.cache
+*.log
+*.bak
+*.zip
+Ai School Ga.zip
+temp_zip_folder
+test_zip
+temp_*.php
+scratch*
+check_*.php
+debug_*.php
+dump_*.php
+final_test.php
+quick_*.php
+summary.php
+rebuild_*.php
+manual_*.php
+tables_columns.json
+routes_dump.json
+routes_inventory.json
+users_catalog_report.md
+ملخص_التحسينات.md
+*.sh
+*.bat
+*.ps1
+
+# Public scripts that should not be exposed in production
+public/clear-cache.php
+public/fix_permissions.php
+public/hot
+public/storage

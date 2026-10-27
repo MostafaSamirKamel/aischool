@@ -1,0 +1,16 @@
+{
+  "id": "ai-school-student-portal",
+  "name": "AI School | بوابة الطالب",
+  "short_name": "AI School",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html#/dashboard",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f8fc",
+  "theme_color": "#364fac",
+  "icons": [
+    {"src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

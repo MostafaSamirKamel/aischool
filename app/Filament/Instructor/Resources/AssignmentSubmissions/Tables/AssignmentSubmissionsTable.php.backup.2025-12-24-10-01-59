@@ -1,0 +1,83 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\AssignmentSubmissions\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\Action;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Table;
+
+class AssignmentSubmissionsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('assignment.title')
+                    ->label('الواجب')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('student.name')
+                    ->label('الطالب')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('submitted_at')
+                    ->label('تاريخ التسليم')
+                    ->dateTime()
+                    ->sortable()
+                    ->default('-'),
+                TextColumn::make('score')
+                    ->label('الدرجة')
+                    ->numeric()
+                    ->sortable()
+                    ->default('-')
+                    ->formatStateUsing(fn ($record) => $record->score ? $record->score . ' / ' . $record->assignment->max_score : '-'),
+                TextColumn::make('status')
+                    ->label('الحالة')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'pending' => 'warning',
+                        'submitted' => 'info',
+                        'graded' => 'success',
+                        'late' => 'danger',
+                        default => 'gray',
+                    })
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'pending' => 'معلق',
+                        'submitted' => 'تم التسليم',
+                        'graded' => 'تم التصحيح',
+                        'late' => 'متأخر',
+                        default => $state,
+                    }),
+                TextColumn::make('graded_at')
+                    ->label('تاريخ التصحيح')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                SelectFilter::make('status')
+                    ->label('الحالة')
+                    ->options([
+                        'pending' => 'معلق',
+                        'submitted' => 'تم التسليم',
+                        'graded' => 'تم التصحيح',
+                        'late' => 'متأخر',
+                    ]),
+                SelectFilter::make('assignment_id')
+                    ->label('الواجب')
+                    ->relationship('assignment', 'title'),
+            ])
+            ->recordActions([
+                EditAction::make()
+                    ->label('تصحيح'),
+            ])
+            ->toolbarActions([
+                //
+            ])
+            ->defaultSort('submitted_at', 'desc');
+    }
+}

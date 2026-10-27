@@ -1,0 +1,108 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Settings;
+
+use App\Filament\Admin\Resources\Settings\Pages\CreateSetting;
+use App\Filament\Admin\Resources\Settings\Pages\EditSetting;
+use App\Filament\Admin\Resources\Settings\Pages\ListSettings;
+use App\Filament\Admin\Resources\Settings\Schemas\SettingForm;
+use App\Filament\Admin\Resources\Settings\Tables\SettingsTable;
+use App\Models\Setting;
+use BackedEnum;
+use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+
+class SettingResource extends Resource
+{
+    protected static ?string $model = Setting::class;
+
+    protected static ?string $navigationLabel = null;
+
+    protected static ?string $modelLabel = null;
+
+    protected static ?string $pluralModelLabel = null;
+
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-cog-6-tooth';
+
+    protected static ?string $recordTitleAttribute = 'Setting';
+
+    public static function getNavigationGroup(): string
+    {
+        return __('filament/admin/navigation.basic_data');
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        $user = auth()->user();
+        $query = static::getModel()::query();
+
+        if (!($user->is_super_admin && is_null($user->tenant_id))) {
+            $query->where('tenant_id', $user->tenant_id);
+        }
+
+        return (string) $query->count();
+    }
+
+    public static function getNavigationBadgeColor(): ?string
+    {
+        return 'info';
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        $user = auth()->user();
+
+        // Super admin بدون tenant_id يرى جميع السجلات
+        if ($user->is_super_admin && is_null($user->tenant_id)) {
+            return parent::getEloquentQuery();
+        }
+
+        // جميع المستخدمين الآخرين يرون فقط سجلات tenant الخاص بهم
+        return parent::getEloquentQuery()
+            ->where('tenant_id', $user->tenant_id);
+    }
+
+    public static function form(Schema $schema): Schema
+    {
+        return SettingForm::configure($schema);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return SettingsTable::configure($table);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListSettings::route('/'),
+            'create' => CreateSetting::route('/create'),
+            'edit' => EditSetting::route('/{record}/edit'),
+        ];
+    }
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/setting_resource.navigation_label');
+    }
+    public static function getModelLabel(): string
+    {
+        return __('filament/admin/setting_resource.model_label');
+    }
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament/admin/setting_resource.plural_model_label');
+    }
+
+
+
+}

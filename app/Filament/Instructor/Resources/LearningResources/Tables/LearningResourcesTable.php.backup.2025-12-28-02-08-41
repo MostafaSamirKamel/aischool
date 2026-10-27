@@ -1,0 +1,183 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\LearningResources\Tables;
+
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteAction;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\ViewAction;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Table;
+use Illuminate\Support\Facades\Storage;
+
+class LearningResourcesTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('title')
+                    ->label('العنوان')
+                    ->searchable()
+                    ->sortable()
+                    ->limit(30),
+
+                TextColumn::make('type')
+                    ->label('النوع')
+                    ->badge()
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'pdf' => 'PDF',
+                        'video' => 'فيديو',
+                        'presentation' => 'PPT',
+                        'document' => 'مستند',
+                        'image' => 'صورة',
+                        'audio' => 'صوت',
+                        'link' => 'رابط',
+                        default => 'أخرى',
+                    })
+                    ->color(fn (string $state): string => match ($state) {
+                        'pdf' => 'danger',
+                        'video' => 'info',
+                        'presentation' => 'warning',
+                        'document' => 'primary',
+                        'link' => 'success',
+                        default => 'gray',
+                    })
+                    ->icon(fn (string $state): string => match ($state) {
+                        'pdf' => 'heroicon-o-document-text',
+                        'video' => 'heroicon-o-video-camera',
+                        'presentation' => 'heroicon-o-presentation-chart-bar',
+                        'document' => 'heroicon-o-document',
+                        'image' => 'heroicon-o-photo',
+                        'audio' => 'heroicon-o-musical-note',
+                        'link' => 'heroicon-o-link',
+                        default => 'heroicon-o-document',
+                    }),
+
+                TextColumn::make('course.name')
+                    ->label('الكورس')
+                    ->sortable()
+                    ->default('-')
+                    ->toggleable(),
+
+                TextColumn::make('group.name')
+                    ->label('المجموعة')
+                    ->sortable()
+                    ->default('-')
+                    ->toggleable(),
+
+                TextColumn::make('visibility')
+                    ->label('الظهور')
+                    ->badge()
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'all' => 'الجميع',
+                        'course' => 'الكورس',
+                        'group' => 'المجموعة',
+                        default => $state,
+                    })
+                    ->color(fn (string $state): string => match ($state) {
+                        'all' => 'success',
+                        'course' => 'info',
+                        'group' => 'warning',
+                        default => 'gray',
+                    }),
+
+                TextColumn::make('file_size')
+                    ->label('الحجم')
+                    ->formatStateUsing(function ($record) {
+                        return $record->getFileSizeFormatted();
+                    })
+                    ->toggleable(),
+
+                TextColumn::make('download_count')
+                    ->label('التحميلات')
+                    ->badge()
+                    ->color('success')
+                    ->sortable()
+                    ->toggleable(),
+
+                TextColumn::make('view_count')
+                    ->label('المشاهدات')
+                    ->badge()
+                    ->color('info')
+                    ->sortable()
+                    ->toggleable(),
+
+                IconColumn::make('is_downloadable')
+                    ->label('قابل للتحميل')
+                    ->boolean()
+                    ->toggleable(),
+
+                IconColumn::make('is_active')
+                    ->label('نشط')
+                    ->boolean()
+                    ->sortable(),
+
+                TextColumn::make('created_at')
+                    ->label('تاريخ الإضافة')
+                    ->dateTime('Y-m-d H:i')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                SelectFilter::make('type')
+                    ->label('النوع')
+                    ->options([
+                        'pdf' => 'PDF',
+                        'video' => 'فيديو',
+                        'presentation' => 'عرض تقديمي',
+                        'document' => 'مستند',
+                        'image' => 'صورة',
+                        'audio' => 'صوت',
+                        'link' => 'رابط',
+                        'other' => 'أخرى',
+                    ]),
+
+                SelectFilter::make('visibility')
+                    ->label('الظهور')
+                    ->options([
+                        'all' => 'الجميع',
+                        'course' => 'الكورس',
+                        'group' => 'المجموعة',
+                    ]),
+
+                SelectFilter::make('is_active')
+                    ->label('الحالة')
+                    ->options([
+                        1 => 'نشط',
+                        0 => 'غير نشط',
+                    ]),
+
+                SelectFilter::make('course_id')
+                    ->label('الكورس')
+                    ->relationship('course', 'name'),
+
+                SelectFilter::make('group_id')
+                    ->label('المجموعة')
+                    ->relationship('group', 'name'),
+            ])
+            ->recordActions([
+                ViewAction::make()
+                    ->label('عرض')
+                    ->modalContent(fn ($record) => view('filament.instructor.modals.resource-details', [
+                        'resource' => $record
+                    ]))
+                    ->modalSubmitAction(false)
+                    ->modalCancelActionLabel('إغلاق'),
+                EditAction::make()
+                    ->label('تعديل'),
+                DeleteAction::make()
+                    ->label('حذف'),
+            ])
+            ->bulkActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make()
+                        ->label('حذف المحدد'),
+                ]),
+            ])
+            ->defaultSort('created_at', 'desc');
+    }
+}

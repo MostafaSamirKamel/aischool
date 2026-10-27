@@ -1,0 +1,148 @@
+<?php
+
+namespace App\Filament\Admin\Resources\VaultReconciliations\Schemas;
+
+use App\Models\Vault;
+use App\Models\Expense;
+use App\Models\Revenue;
+use App\Models\StudentPayment;
+use Filament\Schemas\Schema;
+use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Placeholder;
+
+class VaultReconciliationForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Section::make('بيانات التسوية')
+                    ->schema([
+                        Select::make('vault_id')
+                            ->label(__('filament/admin/vault_reconciliation_resource.vault_id'))
+                            ->relationship('vault', 'name', function ($query) {
+                                $user = auth()->user();
+                                if (!($user->is_super_admin && is_null($user->tenant_id))) {
+                                    $query->where('tenant_id', $user->tenant_id);
+                                }
+                                return $query->where('is_active', true);
+                            })
+                            ->required()
+                            ->live()
+                            ->afterStateUpdated(function ($state, callable $set, $get) {
+                                $date = $get('reconciliation_date');
+                                if ($state && $date) {
+                                    self::calculateSystemBalance($state, $date, $set);
+                                }
+                            })
+                            ->searchable()
+                            ->preload()
+                            ->columnSpanFull(),
+
+                        DatePicker::make('reconciliation_date')
+                            ->label(__('filament/admin/vault_reconciliation_resource.reconciliation_date'))
+                            ->default(now())
+                            ->required()
+                            ->live()
+                            ->afterStateUpdated(function ($state, $get, callable $set) {
+                                $vaultId = $get('vault_id');
+                                if ($vaultId && $state) {
+                                    self::calculateSystemBalance($vaultId, $state, $set);
+                                }
+                            }),
+
+                        Placeholder::make('system_balance_display')
+                            ->label('رصيد النظام (تلقائي)')
+                            ->content(
+                                fn($get): string =>
+                                number_format($get('system_balance') ?? 0, 2) . ' جنيه'
+                            ),
+
+                        TextInput::make('system_balance')
+                            ->label(__('filament/admin/vault_reconciliation_resource.system_balance'))
+                            ->numeric()
+                            ->default(0)
+                            ->disabled()
+                            ->dehydrated()
+                            ->hidden(),
+
+                        TextInput::make('actual_balance')
+                            ->label(__('filament/admin/vault_reconciliation_resource.actual_balance'))
+                            ->numeric()
+                            ->required()
+                            ->suffix('جنيه')
+                            ->live()
+                            ->afterStateUpdated(function ($state, $get, callable $set) {
+                                $systemBalance = $get('system_balance') ?? 0;
+                                $difference = $state - $systemBalance;
+                                $set('difference', $difference);
+                            }),
+
+                        Placeholder::make('difference_display')
+                            ->label('الفرق')
+                            ->content(function ($get): string {
+                                $diff = $get('difference') ?? 0;
+                                $color = $diff == 0 ? 'success' : ($diff > 0 ? 'info' : 'danger');
+                                $icon = $diff == 0 ? '✅' : ($diff > 0 ? '⬆️' : '⬇️');
+                                return $icon . ' ' . number_format(abs($diff), 2) . ' جنيه';
+                            }),
+
+                        TextInput::make('difference')
+                            ->label(__('filament/admin/vault_reconciliation_resource.difference'))
+                            ->numeric()
+                            ->default(0)
+                            ->disabled()
+                            ->dehydrated()
+                            ->hidden(),
+
+                        Textarea::make('notes')
+                            ->label(__('filament/admin/vault_reconciliation_resource.notes'))
+                            ->rows(3)
+                            ->columnSpanFull(),
+
+                        Select::make('status')
+                            ->label(__('filament/admin/vault_reconciliation_resource.status'))
+                            ->options(['pending' => __('filament/admin/vault_reconciliation_resource.status.pending'), 'approved' => __('filament/admin/vault_reconciliation_resource.status.approved'), 'rejected' => __('filament/admin/vault_reconciliation_resource.status.rejected')])
+                            ->default(__('filament/admin/vault_reconciliation_resource.status_default'))
+                            ->required()
+                            ->disabled(fn ($record) => $record && $record->status !== 'pending'),
+                    ])
+                    ->columns(2),
+            ]);
+    }
+
+    protected static function calculateSystemBalance($vaultId, $date, callable $set): void
+    {
+        $vault = Vault::find($vaultId);
+        if (!$vault) {
+            $set('system_balance', 0);
+            return;
+        }
+
+        // الرصيد الافتتاحي
+        $balance = $vault->opening_balance;
+
+        // الإيرادات حتى تاريخ التسوية
+        $revenues = Revenue::where('vault_id', $vaultId)
+            ->where('revenue_date', '<=', $date)
+            ->sum('amount');
+
+        // مدفوعات الطلاب حتى تاريخ التسوية
+        $studentPayments = StudentPayment::where('vault_id', $vaultId)
+            ->where('payment_date', '<=', $date)
+            ->where('status', 'completed')
+            ->sum('net_amount');
+
+        // المصروفات حتى تاريخ التسوية
+        $expenses = Expense::where('vault_id', $vaultId)
+            ->where('expense_date', '<=', $date)
+            ->sum('amount');
+
+        $systemBalance = $balance + $revenues + $studentPayments - $expenses;
+        $set('system_balance', $systemBalance);
+    }
+}

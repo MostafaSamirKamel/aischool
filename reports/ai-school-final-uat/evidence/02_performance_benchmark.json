@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-10-21T17:35:59+03:00",
+  "test_id": "UAT-PRF-01",
+  "environment": {
+    "engine": "SQLite",
+    "php_version": "8.2.12",
+    "dataset": "Staging School Dataset (184 users, 85 students, 93 enrollments, 91 payments)"
+  },
+  "database_query_latencies_ms": {
+    "user_with_roles_p50": 4.62,
+    "user_with_roles_p95": 9.44,
+    "students_with_enrollments_p50": 7.73,
+    "students_with_enrollments_p95": 14.28,
+    "attendance_records_p50": 1.82,
+    "attendance_records_p95": 3.65,
+    "vault_balances_p50": 1.27,
+    "vault_balances_p95": 2.45,
+    "installments_due_p50": 0.39,
+    "installments_due_p95": 0.78
+  },
+  "http_portal_page_load_times_ms": {
+    "admin_login_avg": 769.3,
+    "instructor_login_avg": 707.1,
+    "parent_login_avg": 837.2,
+    "student_login_avg": 1184.2,
+    "supervisor_login_avg": 819.5
+  },
+  "system_resources": {
+    "peak_memory_mb": 61.57,
+    "error_rate_percentage": 0.00
+  },
+  "result": "PASS"
+}

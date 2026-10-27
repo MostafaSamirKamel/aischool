@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل استخدام نظام AI School - الدليل الشامل</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 20px 40px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: white;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 50px;
+            scroll-margin-top: 20px;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #764ba2;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.8em;
+            margin: 25px 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-right: 5px solid #667eea;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .step-card:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-left: 15px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffd89b 0%, #19547b 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-right: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .success {
+            background: #d4edda;
+            border-right: 5px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .info {
+            background: #d1ecf1;
+            border-right: 5px solid #17a2b8;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .feature-box {
+            background: white;
+            border: 2px solid #667eea;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .feature-box h4 {
+            color: #764ba2;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .feature-box:hover h4 {
+            color: white;
+        }
+
+        .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin: 20px 0;
+            padding-right: 20px;
+        }
+
+        li {
+            margin: 12px 0;
+            padding-right: 10px;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 3px 8px;
+            border-radius: 5px;
+            color: #d63384;
+            font-family: 'Courier New', monospace;
+        }
+
+        .flow-diagram {
+            background: white;
+            border: 3px solid #667eea;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .flow-step {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .arrow {
+            font-size: 2em;
+            color: #764ba2;
+            margin: 0 10px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .panel-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .admin-badge {
+            background: #dc3545;
+            color: white;
+        }
+
+        .owner-badge {
+            background: #6f42c1;
+            color: white;
+        }
+
+        .instructor-badge {
+            background: #007bff;
+            color: white;
+        }
+
+        .student-badge {
+            background: #28a745;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-right: 40px;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            right: 9px;
+            top: 20px;
+            width: 2px;
+            height: calc(100% + 30px);
+            background: #667eea;
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .step-card {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 دليل نظام AI School</h1>
+            <p>الدليل الشامل لاستخدام نظام إدارة المدرسة الذكية</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#overview">📋 نظرة عامة</a></li>
+                <li><a href="#architecture">🏗️ البنية التقنية</a></li>
+                <li><a href="#first-steps">🚀 الخطوات الأولى</a></li>
+                <li><a href="#panels">🎛️ اللوحات</a></li>
+                <li><a href="#roles">👥 الأدوار</a></li>
+                <li><a href="#workflow">🔄 سير العمل</a></li>
+                <li><a href="#features">✨ المميزات</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <!-- نظرة عامة -->
+            <section id="overview">
+                <h2><span class="icon">📋</span> نظرة عامة على النظام</h2>
+                
+                <div class="highlight">
+                    <h3>🎯 ما هو AI School؟</h3>
+                    <p><strong>AI School</strong> هو نظام متكامل لإدارة المدارس والمؤسسات التعليمية، مبني على تقنية <strong>Laravel 11</strong> و<strong>Filament 3</strong>، يوفر حلولاً شاملة لإدارة العملية التعليمية بكفاءة عالية.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <div class="icon">🏢</div>
+                        <h4>Multi-Tenancy</h4>
+                        <p>نظام متعدد المستأجرين يسمح بإدارة مدارس متعددة</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="icon">🎛️</div>
+                        <h4>4 لوحات تحكم</h4>
+                        <p>لوحات منفصلة لكل دور في النظام</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="icon">🔐</div>
+                        <h4>نظام صلاحيات متقدم</h4>
+                        <p>تحكم دقيق في الصلاحيات لكل مستخدم</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="icon">📚</div>
+                        <h4>إدارة المحتوى</h4>
+                        <p>نظام شامل للدورات والموارد التعليمية</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="icon">👥</div>
+                        <h4>إدارة المستخدمين</h4>
+                        <p>طلاب، مدرسين، وإداريين</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="icon">🌍</div>
+                        <h4>متعدد اللغات</h4>
+                        <p>دعم كامل للعربية والإنجليزية</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- البنية التقنية -->
+            <section id="architecture">
+                <h2><span class="icon">🏗️</span> البنية التقنية للنظام</h2>
+
+                <div class="info">
+                    <h3>🔧 المكونات الأساسية</h3>
+                    <ul>
+                        <li><strong>Framework:</strong> Laravel 11</li>
+                        <li><strong>Admin Panel:</strong> Filament 3</li>
+                        <li><strong>Database:</strong> MySQL/PostgreSQL</li>
+                        <li><strong>Authentication:</strong> Laravel Sanctum</li>
+                        <li><strong>Roles & Permissions:</strong> Spatie Permission + Filament Shield</li>
+                        <li><strong>Multi-Tenancy:</strong> Custom Implementation</li>
+                    </ul>
+                </div>
+
+                <h3>📂 هيكل المشروع</h3>
+                <div class="step-card">
+                    <h4>🎯 المجلدات الرئيسية</h4>
+                    <ul>
+                        <li><code>app/Filament/</code> - يحتوي على اللوحات الأربعة (Admin, Owner, Instructor, Student)</li>
+                        <li><code>app/Models/</code> - نماذج البيانات (User, Course, Resource, Department, etc.)</li>
+                        <li><code>app/Policies/</code> - سياسات الصلاحيات</li>
+                        <li><code>database/migrations/</code> - ملفات قاعدة البيانات</li>
+                        <li><code>lang/</code> - ملفات الترجمة (ar/en)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- الخطوات الأولى -->
+            <section id="first-steps">
+                <h2><span class="icon">🚀</span> الخطوات الأولى - ابدأ من هنا!</h2>
+
+                <div class="warning">
+                    <strong>⚠️ مهم جداً:</strong> يجب اتباع هذه الخطوات بالترتيب لضمان عمل النظام بشكل صحيح
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="step-card">
+                            <h3><span class="step-number">1</span> التثبيت الأولي</h3>
+                            <p><strong>ما تحتاج لعمله:</strong></p>
+                            <ul>
+                                <li>استنساخ المشروع من Git أو نسخ الملفات</li>
+                                <li>تشغيل: <code>composer install</code></li>
+                                <li>تشغيل: <code>npm install</code></li>
+                                <li>نسخ <code>.env.example</code> إلى <code>.env</code></li>
+                                <li>تعديل إعدادات قاعدة البيانات في <code>.env</code></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="step-card">
+                            <h3><span class="step-number">2</span> إعداد قاعدة البيانات</h3>
+                            <p><strong>خطوات مهمة:</strong></p>
+                            <ul>
+                                <li>تشغيل: <code>php artisan key:generate</code></li>
+                                <li>تشغيل: <code>php artisan migrate</code> - لإنشاء الجداول</li>
+                                <li>تشغيل: <code>php artisan db:seed</code> - لإضافة البيانات الأولية</li>
+                                <li>تشغيل: <code>php artisan shield:generate</code> - لإنشاء الصلاحيات</li>
+                            </ul>
+                            <div class="success">
+                                ✅ الآن قاعدة البيانات جاهزة مع الأدوار والصلاحيات الأساسية
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="step-card">
+                            <h3><span class="step-number">3</span> إنشاء أول مستخدم (Super Admin)</h3>
+                            <p><strong>المستخدم الرئيسي:</strong></p>
+                            <ul>
+                                <li>تشغيل: <code>php artisan make:filament-user</code></li>
+                                <li>أدخل البيانات المطلوبة (الاسم، البريد، كلمة المرور)</li>
+                                <li>هذا المستخدم سيكون Super Admin بصلاحيات كاملة</li>
+                            </ul>
+                            <div class="info">
+                                📝 <strong>ملاحظة:</strong> احفظ بيانات الدخول في مكان آمن!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="step-card">
+                            <h3><span class="step-number">4</span> الدخول إلى لوحة التحكم</h3>
+                            <p><strong>الوصول إلى النظام:</strong></p>
+                            <ul>
+                                <li>تشغيل الخادم: <code>php artisan serve</code></li>
+                                <li>افتح المتصفح واذهب إلى: <code>http://localhost:8000/admin</code></li>
+                                <li>سجل الدخول ببيانات Super Admin</li>
+                            </ul>
+                            <div class="success">
+                                🎉 تهانينا! أنت الآن في لوحة Admin الرئيسية
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- اللوحات الأربعة -->
+            <section id="panels">
+                <h2><span class="icon">🎛️</span> اللوحات الأربعة - فهم النظام</h2>
+
+                <div class="highlight">
+                    <p>النظام يحتوي على <strong>4 لوحات منفصلة</strong>، كل لوحة مخصصة لدور معين ولها مميزاتها الخاصة</p>
+                </div>
+
+                <div class="step-card">
+                    <h3><span class="admin-badge">1. لوحة Admin</span></h3>
+                    <p><strong>🔗 الرابط:</strong> <code>/admin</code></p>
+                    <p><strong>👤 من يستخدمها:</strong> Super Admin و System Admin</p>
+                    <p><strong>⚡ الصلاحيات:</strong></p>
+                    <ul>
+                        <li>إدارة جميع المدارس (Tenants)</li>
+                        <li>إنشاء وتعديل المستخدمين من جميع الأنواع</li>
+                        <li>إدارة الأدوار والصلاحيات</li>
+                        <li>إعدادات النظام العامة</li>
+                        <li>عرض التقارير والإحصائيات الشاملة</li>
+                        <li>إدارة الأقسام والتخصصات</li>
+                    </ul>
+                    <div class="warning">
+                        <strong>⚠️ هام:</strong> هذه اللوحة للإدارة العليا فقط - تحكم كامل في النظام
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <h3><span class="owner-badge">2. لوحة Owner</span></h3>
+                    <p><strong>🔗 الرابط:</strong> <code>/owner</code></p>
+                    <p><strong>👤 من يستخدمها:</strong> مالك/مدير المدرسة</p>
+                    <p><strong>⚡ الصلاحيات:</strong></p>
+                    <ul>
+                        <li>إدارة مدرسته الخاصة فقط</li>
+                        <li>إضافة وإدارة المدرسين</li>
+                        <li>إدارة الطلاب والتسجيلات</li>
+                        <li>إنشاء وإدارة الدورات</li>
+                        <li>عرض تقارير وإحصائيات المدرسة</li>
+                        <li>إعدادات المدرسة الخاصة</li>
+                    </ul>
+                    <div class="info">
+                        📊 لوحة Owner هي المركز الإداري لكل مدرسة
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <h3><span class="instructor-badge">3. لوحة Instructor</span></h3>
+                    <p><strong>🔗 الرابط:</strong> <code>/instructor</code></p>
+                    <p><strong>👤 من يستخدمها:</strong> المدرسين</p>
+                    <p><strong>⚡ الصلاحيات:</strong></p>
+                    <ul>
+                        <li>عرض الدورات المخصصة له</li>
+                        <li>إدارة محتوى الدورات (Courses)</li>
+                        <li>إضافة وتعديل الموارد التعليمية (Resources)</li>
+                        <li>عرض الطلاب المسجلين في دوراته</li>
+                        <li>متابعة تقدم الطلاب</li>
+                        <li>التواصل مع الطلاب</li>
+                    </ul>
+                    <div class="success">
+                        👨‍🏫 لوحة المدرس - التركيز على التدريس وإدارة المحتوى
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <h3><span class="student-badge">4. لوحة Student</span></h3>
+                    <p><strong>🔗 الرابط:</strong> <code>/student</code></p>
+                    <p><strong>👤 من يستخدمها:</strong> الطلاب</p>
+                    <p><strong>⚡ الصلاحيات:</strong></p>
+                    <ul>
+                        <li>عرض الدورات المسجل فيها</li>
+                        <li>الوصول إلى الموارد التعليمية</li>
+                        <li>متابعة تقدمه الدراسي</li>
+                        <li>تسليم الواجبات</li>
+                        <li>عرض الدرجات والتقييمات</li>
+                        <li>التواصل مع المدرسين</li>
+                    </ul>
+                    <div class="info">
+                        🎓 لوحة الطالب - بيئة تعليمية بسيطة ومركزة
+                    </div>
+                </div>
+            </section>
+
+            <!-- الأدوار والصلاحيات -->
+            <section id="roles">
+                <h2><span class="icon">👥</span> نظام الأدوار والصلاحيات</h2>
+
+                <div class="highlight">
+                    <h3>🎯 فلسفة النظام</h3>
+                    <p>النظام يستخدم نموذج <strong>RBAC (Role-Based Access Control)</strong> مع تقسيم واضح للصلاحيات حسب الدور</p>
+                </div>
+
+                <h3>📋 الأدوار الأساسية في النظام</h3>
+
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <div class="icon">👑</div>
+                        <h4>Super Admin</h4>
+                        <span class="admin-badge">Admin Panel</span>
+                        <p>صلاحيات كاملة على كل شيء في النظام</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="icon">🏢</div>
+                        <h4>Owner</h4>
+                        <span class="owner-badge">Owner Panel</span>
+                        <p>مدير المدرسة - صلاحيات إدارية على مدرسته</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="icon">👨‍🏫</div>
+                        <h4>Instructor</h4>
+                        <span class="instructor-badge">Instructor Panel</span>
+                        <p>المدرس - إدارة الدورات والمحتوى</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="icon">🎓</div>
+                        <h4>Student</h4>
+                        <span class="student-badge">Student Panel</span>
+                        <p>الطالب - الوصول للمحتوى التعليمي</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <h3>🔐 كيف يعمل نظام الصلاحيات؟</h3>
+                    <ul>
+                        <li><strong>Shield Plugin:</strong> يولد صلاحيات تلقائية لكل Resource (view, create, update, delete)</li>
+                        <li><strong>Policies:</strong> تحدد من يستطيع فعل ماذا على كل Model</li>
+                        <li><strong>Panel Middleware:</strong> يتحقق من الدور قبل الدخول لكل لوحة</li>
+                        <li><strong>Custom Permissions:</strong> يمكن إضافة صلاحيات مخصصة حسب الحاجة</li>
+                    </ul>
+                </div>
+
+                <div class="warning">
+                    <h4>⚠️ قواعد مهمة</h4>
+                    <ul>
+                        <li>المستخدم يمكن أن يكون له أكثر من دور</li>
+                        <li>الصلاحيات تتراكم (إذا كان لديه دورين، يحصل على صلاحيات الاثنين)</li>
+                        <li>Super Admin يتجاوز جميع الفحوصات</li>
+                        <li>Policies لها الأولوية على Permissions العادية</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- سير العمل -->
+            <section id="workflow">
+                <h2><span class="icon">🔄</span> سير العمل - الترتيب الصحيح للعمليات</h2>
+
+                <div class="info">
+                    <p><strong>هذا القسم يشرح الترتيب المنطقي للعمل في النظام من البداية للنهاية</strong></p>
+                </div>
+
+                <div class="flow-diagram">
+                    <h3>📊 مخطط سير العمل الكامل</h3>
+                    <div style="margin: 30px 0;">
+                        <div class="flow-step">1. إعداد المدرسة</div>
+                        <span class="arrow">↓</span>
+                        <div class="flow-step">2. إنشاء الأقسام</div>
+                        <span class="arrow">↓</span>
+                        <div class="flow-step">3. إضافة المدرسين</div>
+                        <span class="arrow">↓</span>
+                        <div class="flow-step">4. إنشاء الدورات</div>
+                        <span class="arrow">↓</span>
+                        <div class="flow-step">5. إضافة الموارد</div>
+                        <span class="arrow">↓</span>
+                        <div class="flow-step">6. تسجيل الطلاب</div>
+                        <span class="arrow">↓</span>
+                        <div class="flow-step">7. بدء الدراسة</div>
+                    </div>
+                </div>
+
+                <h3>الخطوات التفصيلية</h3>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="step-card">
+                            <h3><span class="step-number">1</span> إعداد المدرسة (Tenant Setup)</h3>
+                            <p><strong>📍 اللوحة:</strong> <span class="admin-badge">Admin Panel</span></p>
+                            <p><strong>✅ الخطوات:</strong></p>
+                            <ul>
+                                <li>اذهب إلى: <strong>Multi-Tenancy → Tenants</strong></li>
+                                <li>انقر على: <strong>Create Tenant</strong></li>
+                                <li>أدخل: اسم المدرسة، النطاق (domain)، البيانات الأساسية</li>
+                                <li>حدد: Owner للمدرسة (أو أنشئ مستخدم جديد)</li>
+                                <li>احفظ وفعّل المدرسة</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="step-card">
+                            <h3><span class="step-number">2</span> إنشاء الأقسام (Departments)</h3>
+                            <p><strong>📍 اللوحة:</strong> <span class="owner-badge">Owner Panel</span></p>
+                            <p><strong>✅ الخطوات:</strong></p>
+                            <ul>
+                                <li>سجل دخول كـ Owner</li>
+                                <li>اذهب إلى: <strong>School Management → Departments</strong></li>
+                                <li>أضف الأقسام: مثل (علوم حاسب، رياضيات، لغات، إلخ)</li>
+                                <li>لكل قسم: اسم، وصف، حالة (نشط/غير نشط)</li>
+                            </ul>
+                            <div class="info">
+                                💡 الأقسام تساعد في تنظيم الدورات والمدرسين
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="step-card">
+                            <h3><span class="step-number">3</span> إضافة المدرسين (Instructors)</h3>
+                            <p><strong>📍 اللوحة:</strong> <span class="owner-badge">Owner Panel</span></p>
+                            <p><strong>✅ الخطوات:</strong></p>
+                            <ul>
+                                <li>اذهب إلى: <strong>User Management → Users</strong></li>
+                                <li>انقر: <strong>Create User</strong></li>
+                                <li>املأ البيانات: (الاسم، البريد، كلمة المرور)</li>
+                                <li><strong>مهم:</strong> اختر Role: <code>Instructor</code></li>
+                                <li>حدد: القسم المناسب للمدرس</li>
+                                <li>احفظ وأرسل بيانات الدخول للمدرس</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="step-card">
+                            <h3><span class="step-number">4</span> إنشاء الدورات (Courses)</h3>
+                            <p><strong>📍 اللوحة:</strong> <span class="owner-badge">Owner Panel</span> أو <span class="instructor-badge">Instructor Panel</span></p>
+                            <p><strong>✅ الخطوات:</strong></p>
+                            <ul>
+                                <li>اذهب إلى: <strong>Courses Management → Courses</strong></li>
+                                <li>انقر: <strong>Create Course</strong></li>
+                                <li>أدخل المعلومات:
+                                    <ul>
+                                        <li>عنوان الدورة</li>
+                                        <li>الوصف والأهداف</li>
+                                        <li>القسم المناسب</li>
+                                        <li>المدرس المسؤول</li>
+                                        <li>المدة والمستوى</li>
+                                        <li>السعر (إن وجد)</li>
+                                    </ul>
+                                </li>
+                                <li>احفظ الدورة</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="step-card">
+                            <h3><span class="step-number">5</span> إضافة الموارد التعليمية (Resources)</h3>
+                            <p><strong>📍 اللوحة:</strong> <span class="instructor-badge">Instructor Panel</span></p>
+                            <p><strong>✅ الخطوات:</strong></p>
+                            <ul>
+                                <li>افتح الدورة المطلوبة</li>
+                                <li>اذهب إلى: <strong>Resources</strong> داخل الدورة</li>
+                                <li>انقر: <strong>Add Resource</strong></li>
+                                <li>اختر نوع المورد:
+                                    <ul>
+                                        <li>فيديو (Video)</li>
+                                        <li>ملف PDF</li>
+                                        <li>رابط خارجي (Link)</li>
+                                        <li>نص (Text/Article)</li>
+                                    </ul>
+                                </li>
+                                <li>رتب الموارد حسب التسلسل المناسب</li>
+                            </ul>
+                            <div class="success">
+                                ✅ الآن الدورة جاهزة للطلاب!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="step-card">
+                            <h3><span class="step-number">6</span> تسجيل الطلاب (Student Enrollment)</h3>
+                            <p><strong>📍 اللوحة:</strong> <span class="owner-badge">Owner Panel</span></p>
+                            <p><strong>✅ الخطوات:</strong></p>
+                            <ul>
+                                <li><strong>إنشاء حسابات الطلاب:</strong>
+                                    <ul>
+                                        <li>اذهب إلى: <strong>User Management → Users</strong></li>
+                                        <li>أنشئ حساب لكل طالب</li>
+                                        <li>حدد Role: <code>Student</code></li>
+                                    </ul>
+                                </li>
+                                <li><strong>تسجيل الطلاب في الدورات:</strong>
+                                    <ul>
+                                        <li>اذهب إلى: <strong>Enrollments</strong></li>
+                                        <li>انقر: <strong>Create Enrollment</strong></li>
+                                        <li>اختر: الطالب والدورة</li>
+                                        <li>حدد: تاريخ البدء والانتهاء</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="step-card">
+                            <h3><span class="step-number">7</span> بدء الدراسة</h3>
+                            <p><strong>📍 اللوحة:</strong> <span class="student-badge">Student Panel</span></p>
+                            <p><strong>✅ ماذا يحدث:</strong></p>
+                            <ul>
+                                <li>الطالب يسجل دخول إلى: <code>/student</code></li>
+                                <li>يرى دوراته المسجلة</li>
+                                <li>يمكنه الوصول للموارد التعليمية</li>
+                                <li>يتابع تقدمه وإنجازاته</li>
+                            </ul>
+                            <div class="success">
+                                🎉 النظام يعمل بشكل كامل!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- المميزات المتقدمة -->
+            <section id="features">
+                <h2><span class="icon">✨</span> المميزات المتقدمة</h2>
+
+                <div class="step-card">
+                    <h3>🌍 نظام متعدد اللغات (Localization)</h3>
+                    <ul>
+                        <li>دعم كامل للعربية والإنجليزية</li>
+                        <li>التبديل السهل بين اللغات</li>
+                        <li>جميع النصوص قابلة للترجمة</li>
+                        <li>ملفات الترجمة في: <code>lang/ar/</code> و <code>lang/en/</code></li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <h3>📊 التقارير والإحصائيات</h3>
+                    <ul>
+                        <li>Widgets على Dashboard لكل لوحة</li>
+                        <li>إحصائيات عن الطلاب والدورات</li>
+                        <li>تقارير الأداء والتقدم</li>
+                        <li>رسوم بيانية تفاعلية</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <h3>🔔 نظام الإشعارات</h3>
+                    <ul>
+                        <li>إشعارات داخل النظام</li>
+                        <li>إشعارات عبر البريد الإلكتروني</li>
+                        <li>إخطارات للأحداث المهمة</li>
+                        <li>تتبع النشاطات (Activity Log)</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <h3>⚙️ نظام الإعدادات (Settings)</h3>
+                    <ul>
+                        <li>إعدادات عامة للنظام</li>
+                        <li>إعدادات خاصة لكل مدرسة (Tenant)</li>
+                        <li>تخصيص المظهر والألوان</li>
+                        <li>إعدادات البريد الإلكتروني</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <h3>🔒 الأمان والحماية</h3>
+                    <ul>
+                        <li>تشفير كلمات المرور</li>
+                        <li>تسجيل محاولات الدخول</li>
+                        <li>حماية من CSRF</li>
+                        <li>Rate Limiting على API</li>
+                        <li>Two-Factor Authentication (قيد التطوير)</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <h3>📱 واجهة متجاوبة (Responsive)</h3>
+                    <ul>
+                        <li>تعمل على جميع الأجهزة</li>
+                        <li>تصميم متجاوب للموبايل والتابلت</li>
+                        <li>تجربة مستخدم سلسة</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- نصائح مهمة -->
+            <section>
+                <h2><span class="icon">💡</span> نصائح مهمة للاستخدام الأمثل</h2>
+
+                <div class="warning">
+                    <h3>⚠️ أخطاء شائعة يجب تجنبها</h3>
+                    <ul>
+                        <li><strong>لا تحذف Super Admin:</strong> دائماً احتفظ بحساب واحد على الأقل</li>
+                        <li><strong>لا تعطي صلاحيات زائدة:</strong> أعط كل مستخدم الصلاحيات المناسبة فقط</li>
+                        <li><strong>لا تنسى النسخ الاحتياطي:</strong> احتفظ بنسخة من قاعدة البيانات دورياً</li>
+                        <li><strong>تحقق من الأدوار:</strong> قبل منح الوصول، تأكد من الدور الصحيح</li>
+                    </ul>
+                </div>
+
+                <div class="success">
+                    <h3>✅ أفضل الممارسات</h3>
+                    <ul>
+                        <li><strong>رتب المحتوى:</strong> نظم الدورات والموارد بشكل منطقي</li>
+                        <li><strong>استخدم الأقسام:</strong> قسّم المحتوى لسهولة الوصول</li>
+                        <li><strong>راقب الأداء:</strong> تابع الإحصائيات بانتظام</li>
+                        <li><strong>تواصل مع المستخدمين:</strong> استخدم نظام الإشعارات</li>
+                        <li><strong>حدّث النظام:</strong> ابقَ على اطلاع بالتحديثات</li>
+                    </ul>
+                </div>
+
+                <div class="info">
+                    <h3>📚 موارد إضافية</h3>
+                    <ul>
+                        <li><strong>Laravel Documentation:</strong> <a href="https://laravel.com/docs" target="_blank">laravel.com/docs</a></li>
+                        <li><strong>Filament Documentation:</strong> <a href="https://filamentphp.com/docs" target="_blank">filamentphp.com/docs</a></li>
+                        <li><strong>Shield Plugin:</strong> <a href="https://github.com/bezhanSalleh/filament-shield" target="_blank">github.com/bezhanSalleh/filament-shield</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- خلاصة سريعة -->
+            <section>
+                <h2><span class="icon">📋</span> خلاصة سريعة - المرجع السريع</h2>
+
+                <div class="highlight">
+                    <h3>🎯 الروابط المهمة</h3>
+                    <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                        <thead>
+                            <tr style="background: rgba(255,255,255,0.2); border-bottom: 2px solid white;">
+                                <th style="padding: 15px; text-align: right; color: white;">اللوحة</th>
+                                <th style="padding: 15px; text-align: right; color: white;">الرابط</th>
+                                <th style="padding: 15px; text-align: right; color: white;">المستخدمون</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.3);">Admin Panel</td>
+                                <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.3);"><code>/admin</code></td>
+                                <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.3);">Super Admin</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.3);">Owner Panel</td>
+                                <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.3);"><code>/owner</code></td>
+                                <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.3);">School Owner</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.3);">Instructor Panel</td>
+                                <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.3);"><code>/instructor</code></td>
+                                <td style="padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.3);">Teachers</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px;">Student Panel</td>
+                                <td style="padding: 12px;"><code>/student</code></td>
+                                <td style="padding: 12px;">Students</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="step-card">
+                    <h3>⚡ أوامر مهمة</h3>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <td style="padding: 10px; border-bottom: 1px solid #ddd;"><code>php artisan serve</code></td>
+                            <td style="padding: 10px; border-bottom: 1px solid #ddd;">تشغيل الخادم المحلي</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border-bottom: 1px solid #ddd;"><code>php artisan migrate</code></td>
+                            <td style="padding: 10px; border-bottom: 1px solid #ddd;">تشغيل ملفات قاعدة البيانات</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border-bottom: 1px solid #ddd;"><code>php artisan shield:generate</code></td>
+                            <td style="padding: 10px; border-bottom: 1px solid #ddd;">إنشاء الصلاحيات</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border-bottom: 1px solid #ddd;"><code>php artisan make:filament-user</code></td>
+                            <td style="padding: 10px; border-bottom: 1px solid #ddd;">إنشاء مستخدم Super Admin</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;"><code>php artisan optimize:clear</code></td>
+                            <td style="padding: 10px;">مسح الكاش</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <h3>🎓 AI School System</h3>
+            <p>نظام إدارة مدرسية متكامل | Laravel 11 + Filament 3</p>
+            <p style="margin-top: 15px; opacity: 0.8;">© 2025 - جميع الحقوق محفوظة</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                تم تطويره بـ ❤️ باستخدام أحدث التقنيات
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.step-card, .feature-box').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.5s ease-out';
+            observer.observe(el);
+        });
+
+        // Print functionality
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.key === 'p') {
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>

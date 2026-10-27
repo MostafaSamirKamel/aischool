@@ -1,0 +1,45 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-tn0RQdqM.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/css/filament-admin-theme.css": {
+    "file": "assets/filament-admin-theme-8Ua_CKQy.css",
+    "src": "resources/css/filament-admin-theme.css",
+    "isEntry": true,
+    "name": "filament-admin-theme",
+    "names": [
+      "filament-admin-theme.css"
+    ]
+  },
+  "resources/css/filament/admin/theme.css": {
+    "file": "assets/theme-m-zyb6aB.css",
+    "src": "resources/css/filament/admin/theme.css"
+  },
+  "resources/css/filament/instructor/theme.css": {
+    "file": "assets/theme-CdzXuYT9.css",
+    "src": "resources/css/filament/instructor/theme.css",
+    "isEntry": true,
+    "name": "theme",
+    "names": [
+      "theme.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CAiCLEjY.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/shield-permissions.js": {
+    "file": "assets/shield-permissions-BxM73CTA.js",
+    "name": "shield-permissions",
+    "src": "resources/js/shield-permissions.js",
+    "isEntry": true
+  }
+}

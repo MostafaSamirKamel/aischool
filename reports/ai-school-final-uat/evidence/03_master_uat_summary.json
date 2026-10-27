@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-10-21T17:55:39+03:00",
+  "test_id": "UAT-REG-01",
+  "full_suite_execution": {
+    "total_tests": 362,
+    "passed": 362,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "assertions": 1522,
+    "duration_seconds": 101.85,
+    "framework": "PHPUnit / Pest / Laravel Test Runner",
+    "result": "PASS"
+  },
+  "master_uat_feature_suite": {
+    "file": "tests/Feature/MasterProductionAcceptanceTest.php",
+    "tests": 11,
+    "passed": 11,
+    "failed": 0,
+    "assertions": 56,
+    "duration_seconds": 3.75,
+    "result": "PASS"
+  }
+}

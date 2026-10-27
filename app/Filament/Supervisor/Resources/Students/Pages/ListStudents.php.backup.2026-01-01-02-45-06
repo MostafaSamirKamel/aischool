@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Filament\Supervisor\Resources\Students\Pages;
+
+use App\Filament\Supervisor\Resources\Students\StudentResource;
+use Filament\Actions\CreateAction;
+use Filament\Resources\Pages\ListRecords;
+
+class ListStudents extends ListRecords
+{
+    protected static string $resource = StudentResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            CreateAction::make(),
+        ];
+    }
+    public function getTitle(): string
+    {
+        return __('filament/supervisor/list_students.title');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/supervisor/list_students.title');
+    }
+
+}

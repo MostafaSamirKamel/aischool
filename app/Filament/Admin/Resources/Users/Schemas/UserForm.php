@@ -1,0 +1,142 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Users\Schemas;
+
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
+use Filament\Schemas\Schema;
+
+class UserForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->columns(2)
+            ->components([
+                TextInput::make('name')
+                    ->label(__('filament/admin/user_resource.name'))
+                    ->required()
+                    ->maxLength(255),
+
+                TextInput::make('username')
+                    ->label(__('filament/admin/user_resource.username'))
+                    ->unique('users', 'username', modifyRuleUsing: function ($rule, $get, $record) {
+                        return $record ? $rule->ignore($record->id) : $rule;
+                    })
+                    ->alphaNum()
+                    ->helperText('يمكن استخدامه لتسجيل الدخول')
+                    ->maxLength(255),
+
+                TextInput::make('email')
+                    ->label(__('filament/admin/user_resource.email'))
+                    ->email()
+                    ->required()
+                    ->unique('users', 'email', modifyRuleUsing: function ($rule, $get, $record) {
+                        return $record ? $rule->ignore($record->id) : $rule;
+                    })
+                    ->maxLength(255),
+
+                FileUpload::make('image')
+                    ->label(__('filament/admin/user_resource.image'))
+                    ->image()
+                    ->directory('users')
+                    ->imageEditor()
+                    ->imageEditorAspectRatios(['1:1', '4:3', '16:9'])
+                    ->maxSize(2048)
+                    ->columnSpan(2),
+
+                TextInput::make('password')
+                    ->label(__('filament/admin/user_resource.password'))
+                    ->password()
+                    ->required(fn($context) => $context === 'create')
+                    ->dehydrated(fn($state) => filled($state))
+                    ->dehydrateStateUsing(fn($state) => filled($state) ? bcrypt($state) : null)
+                    ->minLength(8)
+                    ->maxLength(255)
+                    ->placeholder('على الأقل 8 أحرف')
+                    ->helperText('اتركه فارغاً إذا كنت لا تريد تغيير كلمة المرور'),
+                FileUpload::make('avatar')
+                    ->label(__('filament/admin/user_resource.avatar'))
+                    ->preserveFilenames()
+                    // ->multiple()
+                    ->openable()
+                    ->downloadable()
+                    ->previewable(true)
+                    ->directory('avatars')
+                    ->imageEditor()
+                    ->imageEditorAspectRatios([null, '16:9', '4:3', '1:1'])
+                    ->image()
+                // ->avatar()
+                ,
+
+
+                DatePicker::make('date_of_birth')
+                    ->label(__('filament/admin/user_resource.date_of_birth')),
+                TextInput::make('phone')
+                    ->label(__('filament/admin/user_resource.phone'))
+                    ->tel()
+                    ->maxLength(20),
+                RichEditor::make('address')
+                    ->label(__('filament/admin/user_resource.address'))
+                    ->columnSpan('full')
+                    ->toolbarButtons([
+                        'bold',
+                        'italic',
+                        'underline',
+                        'bulletList',
+                        'orderedList',
+                    ]),
+                TextInput::make('job_title')
+                    ->label(__('filament/admin/user_resource.job_title'))
+                    ->maxLength(255),
+                TextInput::make('qualification')
+                    ->label(__('filament/admin/user_resource.qualification'))
+                    ->maxLength(255),
+                Select::make('tenant_id')
+                    ->label(__('filament/admin/user_resource.tenant_id'))
+                    ->relationship('tenant', 'name', function ($query) {
+                        // Super admin فقط يرى جميع الفروع
+                        return $query->where('is_active', true);
+                    })
+                    ->searchable()
+                    ->preload()
+                    ->required(fn() => auth()->user()->is_super_admin)
+                    ->visible(fn() => auth()->user()->is_super_admin),
+                Select::make('roles')
+                    ->label(__('filament/admin/user_resource.roles'))
+                    ->relationship('roles', 'name', function ($query) {
+                        // إذا لم يكن super_admin، لا يظهر له دور super_admin ولا panel_user
+                        if (!auth()->user()->is_super_admin) {
+                            $query->whereNotIn('name', ['super_admin', 'panel_user']);
+                        }
+                        return $query;
+                    })
+                    ->multiple()
+                    ->preload()
+                    ->searchable()
+                    ->columnSpan('full'),
+                Toggle::make('is_super_admin')
+                    ->label(__('filament/admin/user_resource.is_super_admin'))
+                    ->helperText('إذا تم تفعيل هذا، سيتمكن المستخدم من رؤية جميع الفروع')
+                    ->default(false)
+                    ->visible(fn() => auth()->user()->is_super_admin),
+                Toggle::make('is_tenant_owner')
+                    ->label(__('filament/admin/user_resource.is_tenant_owner'))
+                    ->helperText('مالك الفرع لا يمكن حذفه')
+                    ->default(false)
+                    ->visible(fn() => auth()->user()->is_super_admin),
+                Select::make('status')
+                    ->label(__('filament/admin/user_resource.status'))
+                    ->options([
+                        'active' => __('filament/admin/user_resource.active'),
+                        'inactive' => __('filament/admin/user_resource.inactive'),
+                    ])
+                    ->default('active')
+                    ->required(),
+            ]);
+    }
+}

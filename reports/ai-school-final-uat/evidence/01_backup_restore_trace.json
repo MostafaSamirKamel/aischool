@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-10-21T17:35:14+03:00",
+  "test_id": "UAT-BAK-01",
+  "operation": "database_backup_and_isolated_restore",
+  "source_db": "database/database.sqlite",
+  "source_size_bytes": 2666496,
+  "backup_file": "database/backups/backup_uat_preflight.sqlite",
+  "target_restored_db": "database/backups/restore_verification.sqlite",
+  "restore_duration_seconds": 0.0155,
+  "sqlite_pragma_integrity_check": "ok",
+  "foreign_key_violations": 0,
+  "verification_counts": {
+    "users": 184,
+    "students": 85,
+    "student_parents": 75,
+    "courses": 12,
+    "groups": 18,
+    "enrollments": 93,
+    "installments": 114,
+    "payments": 91,
+    "attendance_sessions": 42,
+    "attendance_records": 35,
+    "vaults": 6
+  },
+  "count_match_percentage": 100.0,
+  "result": "PASS"
+}

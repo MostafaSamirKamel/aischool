@@ -1,0 +1,37 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Enrollments\Pages;
+
+use App\Filament\Admin\Resources\Enrollments\EnrollmentResource;
+use Filament\Notifications\Notification;
+use Filament\Resources\Pages\CreateRecord;
+
+class CreateEnrollment extends CreateRecord
+{
+    protected static string $resource = EnrollmentResource::class;
+
+    public function mount(): void
+    {
+        parent::mount();
+
+        if (auth()->user()->is_super_admin) {
+            Notification::make()
+                ->title(__('filament/admin/create_enrollment.غيرمصرح'))
+                ->body('الأدمن الرئيسي لا يمكنه إنشاء سجلات في هذا القسم')
+                ->danger()
+                ->send();
+
+            $this->redirect(EnrollmentResource::getUrl('index'));
+        }
+    }
+    public function getTitle(): string
+    {
+        return __('filament/admin/create_enrollment.title');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/create_enrollment.title');
+    }
+
+}

@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'navigation_label' => 'الكورسات',
+    'model_label' => 'كورس',
+    'plural_model_label' => 'الكورسات',
+    'tenant.name' => 'الفرع',
+    'track_id' => 'المسار التعليمي',
+    'track.name' => 'المسار التعليمي',
+    'name' => 'اسم الكورس',
+    'description' => 'الوصف',
+    'duration_months' => 'المدة (شهور)',
+    'sessions_count' => 'عدد الجلسات',
+    'price' => 'السعر',
+    'groups_count' => 'عدد المجموعات',
+    'status' => 'الحالة',
+    'status.draft' => 'مسودة',
+    'status.active' => 'نشط',
+    'status.archived' => 'مؤرشف',
+    'status_default' => 'active',
+    'order' => 'الترتيب',
+    'prerequisites' => 'المتطلبات',
+    'prerequisite' => 'متطلب',
+    'created_at' => 'تاريخ الإنشاء',
+];

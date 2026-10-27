@@ -1,0 +1,51 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Grades\Pages;
+
+use App\Filament\Admin\Resources\Grades\GradeResource;
+use Filament\Actions\CreateAction;
+use Filament\Resources\Pages\ListRecords;
+use Illuminate\Database\Eloquent\Builder;
+
+class ListGrades extends ListRecords
+{
+    protected static string $resource = GradeResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        $user = auth()->user();
+        $actions = [];
+
+        // المستخدم الرئيسي لا يمكنه إضافة درجات
+        if (!$user->is_super_admin) {
+            $actions[] = CreateAction::make();
+        }
+
+        return $actions;
+    }
+
+    protected function getTableQuery(): Builder
+    {
+        $user = auth()->user();
+        $query = parent::getTableQuery();
+
+        // Instructor: يرى درجات طلاب مجموعاته فقط
+        if ($user->hasRole('instructor')) {
+            return $query->whereHas('enrollment.group', function ($q) use ($user) {
+                $q->where('instructor_id', $user->id);
+            });
+        }
+
+        return $query;
+    }
+    public function getTitle(): string
+    {
+        return __('filament/admin/list_grades.title');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/list_grades.title');
+    }
+
+}

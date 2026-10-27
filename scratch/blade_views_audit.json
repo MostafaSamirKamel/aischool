@@ -1,0 +1,1463 @@
+{
+    "total_svgs": 115,
+    "total_student_icons": 59,
+    "total_blade_icons": 207,
+    "issues": [
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 9,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-academic-cap",
+            "detail": "Blade component <x-heroicon-o-academic-cap /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 22,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-bell-alert",
+            "detail": "Blade component <x-heroicon-o-bell-alert /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 28,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-clipboard-document-check",
+            "detail": "Blade component <x-heroicon-o-clipboard-document-check /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 34,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-document-text",
+            "detail": "Blade component <x-heroicon-o-document-text /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 40,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-user-group",
+            "detail": "Blade component <x-heroicon-o-user-group /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 46,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-clipboard-document-list",
+            "detail": "Blade component <x-heroicon-o-clipboard-document-list /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 52,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-phone-arrow-up-right",
+            "detail": "Blade component <x-heroicon-o-phone-arrow-up-right /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 58,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-chart-bar",
+            "detail": "Blade component <x-heroicon-o-chart-bar /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 120,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-magnifying-glass",
+            "detail": "Blade component <x-heroicon-o-magnifying-glass /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 262,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-phone",
+            "detail": "Blade component <x-heroicon-m-phone /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 272,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-device-phone-mobile",
+            "detail": "Blade component <x-heroicon-m-device-phone-mobile /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 314,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-check-circle",
+            "detail": "Blade component <x-heroicon-o-check-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 539,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-clock",
+            "detail": "Blade component <x-heroicon-m-clock /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 656,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-x-mark",
+            "detail": "Blade component <x-heroicon-m-x-mark /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 697,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-x-mark",
+            "detail": "Blade component <x-heroicon-m-x-mark /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 740,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-x-mark",
+            "detail": "Blade component <x-heroicon-m-x-mark /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 771,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-x-mark",
+            "detail": "Blade component <x-heroicon-m-x-mark /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 815,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-x-mark",
+            "detail": "Blade component <x-heroicon-m-x-mark /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\barcode-print.blade.php",
+            "line": 333,
+            "type": "svg_missing_viewbox",
+            "name": "svg",
+            "detail": "SVG tag missing viewBox attribute"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 9,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-presentation-chart-line",
+            "detail": "Blade component <x-heroicon-o-presentation-chart-line /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 21,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-bookmark",
+            "detail": "Blade component <x-heroicon-o-bookmark /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 28,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-table-cells",
+            "detail": "Blade component <x-heroicon-o-table-cells /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 32,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-document-text",
+            "detail": "Blade component <x-heroicon-o-document-text /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 36,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-down-tray",
+            "detail": "Blade component <x-heroicon-o-arrow-down-tray /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 43,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-path",
+            "detail": "Blade component <x-heroicon-o-arrow-path /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 52,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-funnel",
+            "detail": "Blade component <x-heroicon-o-funnel /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 144,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-magnifying-glass",
+            "detail": "Blade component <x-heroicon-o-magnifying-glass /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 194,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-user-plus",
+            "detail": "Blade component <x-heroicon-o-user-plus /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 201,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-left",
+            "detail": "Blade component <x-heroicon-o-arrow-left /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 209,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-document-check",
+            "detail": "Blade component <x-heroicon-o-document-check /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 223,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-banknotes",
+            "detail": "Blade component <x-heroicon-o-banknotes /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 237,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-clock",
+            "detail": "Blade component <x-heroicon-o-clock /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 254,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-wallet",
+            "detail": "Blade component <x-heroicon-o-wallet /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 287,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-academic-cap",
+            "detail": "Blade component <x-heroicon-o-academic-cap /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 1178,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-magnifying-glass-plus",
+            "detail": "Blade component <x-heroicon-o-magnifying-glass-plus /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 1182,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-x-mark",
+            "detail": "Blade component <x-heroicon-o-x-mark /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+            "line": 45,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-document-chart-bar",
+            "detail": "Filament icon 'heroicon-o-document-chart-bar' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+            "line": 293,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-user",
+            "detail": "Filament icon 'heroicon-o-user' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 113,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-chevron-right",
+            "detail": "Blade component <x-heroicon-m-chevron-right /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 117,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-calendar-days",
+            "detail": "Blade component <x-heroicon-m-calendar-days /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 131,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-chevron-left",
+            "detail": "Blade component <x-heroicon-m-chevron-left /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 151,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-clock",
+            "detail": "Blade component <x-heroicon-m-clock /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 159,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-table-cells",
+            "detail": "Blade component <x-heroicon-m-table-cells /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 203,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-magnifying-glass",
+            "detail": "Blade component <x-heroicon-m-magnifying-glass /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 378,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-map-pin",
+            "detail": "Blade component <x-heroicon-m-map-pin /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 519,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-calendar-days",
+            "detail": "Blade component <x-heroicon-m-calendar-days /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 81,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-check-circle",
+            "detail": "Blade component <x-heroicon-o-check-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 83,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-x-circle",
+            "detail": "Blade component <x-heroicon-o-x-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 101,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-s-check-circle",
+            "detail": "Blade component <x-heroicon-s-check-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 103,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-s-x-circle",
+            "detail": "Blade component <x-heroicon-s-x-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 45,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-check-circle",
+            "detail": "Blade component <x-heroicon-o-check-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 47,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-x-circle",
+            "detail": "Blade component <x-heroicon-o-x-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 65,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-s-check-circle",
+            "detail": "Blade component <x-heroicon-s-check-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 67,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-s-x-circle",
+            "detail": "Blade component <x-heroicon-s-x-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\students\\pages\\issue-certificate.blade.php",
+            "line": 16,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-document-text",
+            "detail": "Blade component <x-heroicon-o-document-text /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\students\\pages\\student-transcript.blade.php",
+            "line": 152,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-down-tray",
+            "detail": "Blade component <x-heroicon-o-arrow-down-tray /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 7,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-adjustments-horizontal",
+            "detail": "Filament icon 'heroicon-o-adjustments-horizontal' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 17,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-document-chart-bar",
+            "detail": "Filament icon 'heroicon-o-document-chart-bar' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 36,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-building-library",
+            "detail": "Filament icon 'heroicon-o-building-library' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 40,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-calendar",
+            "detail": "Filament icon 'heroicon-o-calendar' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 68,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-wallet",
+            "detail": "Filament icon 'heroicon-o-wallet' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 82,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-list-bullet",
+            "detail": "Filament icon 'heroicon-o-list-bullet' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 123,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-inbox",
+            "detail": "Filament icon 'heroicon-o-inbox' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 140,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-arrow-trending-up",
+            "detail": "Filament icon 'heroicon-o-arrow-trending-up' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 154,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-arrow-trending-down",
+            "detail": "Filament icon 'heroicon-o-arrow-trending-down' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 168,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-calculator",
+            "detail": "Filament icon 'heroicon-o-calculator' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\components\\attachments-list.blade.php",
+            "line": 25,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-paper-clip",
+            "detail": "Blade component <x-heroicon-o-paper-clip /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\components\\employee-top-navbar.blade.php",
+            "line": 173,
+            "type": "unknown_filament_icon",
+            "name": "$item[",
+            "detail": "Filament icon '$item[' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 25,
+            "type": "unknown_filament_icon",
+            "name": "$icon",
+            "detail": "Filament icon '$icon' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 94,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-eye",
+            "detail": "Filament icon 'heroicon-o-eye' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 101,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-arrow-down-tray",
+            "detail": "Filament icon 'heroicon-o-arrow-down-tray' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 109,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-link",
+            "detail": "Filament icon 'heroicon-o-link' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 898,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-academic-cap",
+            "detail": "Blade component <x-heroicon-o-academic-cap /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 929,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-right",
+            "detail": "Blade component <x-heroicon-o-arrow-right /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 934,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-right",
+            "detail": "Blade component <x-heroicon-o-arrow-right /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 939,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-right",
+            "detail": "Blade component <x-heroicon-o-arrow-right /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 944,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-right",
+            "detail": "Blade component <x-heroicon-o-arrow-right /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 981,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-pencil",
+            "detail": "Blade component <x-heroicon-o-pencil /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 985,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-clock",
+            "detail": "Blade component <x-heroicon-o-clock /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1013,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-magnifying-glass",
+            "detail": "Blade component <x-heroicon-o-magnifying-glass /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1116,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-eye",
+            "detail": "Blade component <x-heroicon-o-eye /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1127,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-pencil-square",
+            "detail": "Blade component <x-heroicon-o-pencil-square /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1137,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-path",
+            "detail": "Blade component <x-heroicon-o-arrow-path /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1148,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-clock",
+            "detail": "Blade component <x-heroicon-o-clock /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1158,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-users",
+            "detail": "Blade component <x-heroicon-o-users /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1202,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrows-right-left",
+            "detail": "Blade component <x-heroicon-o-arrows-right-left /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1212,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-calendar-days",
+            "detail": "Blade component <x-heroicon-o-calendar-days /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1222,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-clipboard-document-list",
+            "detail": "Blade component <x-heroicon-o-clipboard-document-list /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1232,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-clock",
+            "detail": "Blade component <x-heroicon-o-clock /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1242,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-document-check",
+            "detail": "Blade component <x-heroicon-o-document-check /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1256,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-book-open",
+            "detail": "Blade component <x-heroicon-o-book-open /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1263,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-document-check",
+            "detail": "Blade component <x-heroicon-o-document-check /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1270,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-inbox-arrow-down",
+            "detail": "Blade component <x-heroicon-o-inbox-arrow-down /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1277,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-chart-bar",
+            "detail": "Blade component <x-heroicon-o-chart-bar /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1304,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-plus-circle",
+            "detail": "Blade component <x-heroicon-o-plus-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1331,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-right",
+            "detail": "Blade component <x-heroicon-o-arrow-right /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1339,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-document-magnifying-glass",
+            "detail": "Blade component <x-heroicon-o-document-magnifying-glass /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1365,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-calendar",
+            "detail": "Blade component <x-heroicon-o-calendar /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1393,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-chevron-left",
+            "detail": "Blade component <x-heroicon-o-chevron-left /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1405,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-calendar",
+            "detail": "Blade component <x-heroicon-o-calendar /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1461,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-chevron-left",
+            "detail": "Blade component <x-heroicon-o-chevron-left /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1493,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-calendar",
+            "detail": "Blade component <x-heroicon-o-calendar /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1501,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-chevron-left",
+            "detail": "Blade component <x-heroicon-o-chevron-left /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1555,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-eye-slash",
+            "detail": "Blade component <x-heroicon-o-eye-slash /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1558,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-check-badge",
+            "detail": "Blade component <x-heroicon-o-check-badge /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1564,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-right",
+            "detail": "Blade component <x-heroicon-o-arrow-right /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1641,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-eye",
+            "detail": "Blade component <x-heroicon-o-eye /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1652,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-path",
+            "detail": "Blade component <x-heroicon-o-arrow-path /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1684,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-plus-circle",
+            "detail": "Blade component <x-heroicon-o-plus-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1693,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-document-text",
+            "detail": "Blade component <x-heroicon-o-document-text /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1731,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-calendar",
+            "detail": "Blade component <x-heroicon-o-calendar /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1762,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-pencil",
+            "detail": "Blade component <x-heroicon-o-pencil /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1769,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-chevron-left",
+            "detail": "Blade component <x-heroicon-o-chevron-left /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1797,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-magnifying-glass",
+            "detail": "Blade component <x-heroicon-o-magnifying-glass /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1901,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-eye",
+            "detail": "Blade component <x-heroicon-o-eye /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1909,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-inbox",
+            "detail": "Blade component <x-heroicon-o-inbox /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1937,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-magnifying-glass",
+            "detail": "Blade component <x-heroicon-o-magnifying-glass /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2010,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-identification",
+            "detail": "Blade component <x-heroicon-o-identification /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2018,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-user-group",
+            "detail": "Blade component <x-heroicon-o-user-group /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2134,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrows-pointing-out",
+            "detail": "Blade component <x-heroicon-o-arrows-pointing-out /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2147,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-chevron-right",
+            "detail": "Blade component <x-heroicon-o-chevron-right /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2150,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-chevron-left",
+            "detail": "Blade component <x-heroicon-o-chevron-left /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2170,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-photo",
+            "detail": "Blade component <x-heroicon-o-photo /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2185,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-academic-cap",
+            "detail": "Blade component <x-heroicon-o-academic-cap /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2249,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-document-text",
+            "detail": "Blade component <x-heroicon-o-document-text /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2255,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-check-badge",
+            "detail": "Blade component <x-heroicon-o-check-badge /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2263,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-left",
+            "detail": "Blade component <x-heroicon-o-arrow-left /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2807,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-chevron-right",
+            "detail": "Blade component <x-heroicon-o-chevron-right /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2810,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-chevron-left",
+            "detail": "Blade component <x-heroicon-o-chevron-left /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 47,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-information-circle",
+            "detail": "Filament icon 'heroicon-o-information-circle' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 81,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-check-circle",
+            "detail": "Filament icon 'heroicon-o-check-circle' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 91,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-clock",
+            "detail": "Filament icon 'heroicon-o-clock' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 101,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-x-circle",
+            "detail": "Filament icon 'heroicon-o-x-circle' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 111,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-document-text",
+            "detail": "Filament icon 'heroicon-o-document-text' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 150,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-check",
+            "detail": "Filament icon 'heroicon-o-check' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 156,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-user-group",
+            "detail": "Filament icon 'heroicon-o-user-group' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 679,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-academic-cap",
+            "detail": "Blade component <x-heroicon-o-academic-cap /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 684,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-path",
+            "detail": "Blade component <x-heroicon-o-arrow-path /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 840,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-eye",
+            "detail": "Blade component <x-heroicon-o-eye /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 851,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-users",
+            "detail": "Blade component <x-heroicon-o-users /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 898,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-x-mark",
+            "detail": "Blade component <x-heroicon-o-x-mark /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 910,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-magnifying-glass-plus",
+            "detail": "Blade component <x-heroicon-o-magnifying-glass-plus /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 913,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-magnifying-glass-minus",
+            "detail": "Blade component <x-heroicon-o-magnifying-glass-minus /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 927,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-chevron-right",
+            "detail": "Blade component <x-heroicon-o-chevron-right /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 930,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-chevron-left",
+            "detail": "Blade component <x-heroicon-o-chevron-left /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 944,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-photo",
+            "detail": "Blade component <x-heroicon-o-photo /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 973,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-chat-bubble-left-right",
+            "detail": "Blade component <x-heroicon-o-chat-bubble-left-right /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 1066,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-document-text",
+            "detail": "Blade component <x-heroicon-o-document-text /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 1072,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-check-badge",
+            "detail": "Blade component <x-heroicon-o-check-badge /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 1081,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-left",
+            "detail": "Blade component <x-heroicon-o-arrow-left /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 1087,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-information-circle",
+            "detail": "Blade component <x-heroicon-o-information-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 81,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-check-circle",
+            "detail": "Blade component <x-heroicon-o-check-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 83,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-x-circle",
+            "detail": "Blade component <x-heroicon-o-x-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 101,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-s-check-circle",
+            "detail": "Blade component <x-heroicon-s-check-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 103,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-s-x-circle",
+            "detail": "Blade component <x-heroicon-s-x-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 45,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-check-circle",
+            "detail": "Blade component <x-heroicon-o-check-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 47,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-x-circle",
+            "detail": "Blade component <x-heroicon-o-x-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 65,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-s-check-circle",
+            "detail": "Blade component <x-heroicon-s-check-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 67,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-s-x-circle",
+            "detail": "Blade component <x-heroicon-s-x-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\attendance-details-modal.blade.php",
+            "line": 53,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-arrow-right-on-rectangle",
+            "detail": "Filament icon 'heroicon-o-arrow-right-on-rectangle' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\attendance-details-modal.blade.php",
+            "line": 58,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-arrow-left-on-rectangle",
+            "detail": "Filament icon 'heroicon-o-arrow-left-on-rectangle' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\course-details-modal.blade.php",
+            "line": 72,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-calendar",
+            "detail": "Filament icon 'heroicon-o-calendar' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\submission-details-modal.blade.php",
+            "line": 38,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-document",
+            "detail": "Filament icon 'heroicon-o-document' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 36,
+            "type": "unknown_filament_icon",
+            "name": "$icon",
+            "detail": "Filament icon '$icon' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 99,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-user",
+            "detail": "Filament icon 'heroicon-o-user' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 104,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-academic-cap",
+            "detail": "Filament icon 'heroicon-o-academic-cap' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 110,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-user-group",
+            "detail": "Filament icon 'heroicon-o-user-group' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 121,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-calendar",
+            "detail": "Filament icon 'heroicon-o-calendar' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 128,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-arrow-path",
+            "detail": "Filament icon 'heroicon-o-arrow-path' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 143,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-document",
+            "detail": "Filament icon 'heroicon-o-document' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 151,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-link",
+            "detail": "Filament icon 'heroicon-o-link' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 168,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-check-circle",
+            "detail": "Filament icon 'heroicon-o-check-circle' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\widgets\\student-switcher.blade.php",
+            "line": 5,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-user-group",
+            "detail": "Blade component <x-heroicon-o-user-group /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\widgets\\student-switcher.blade.php",
+            "line": 27,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-information-circle",
+            "detail": "Blade component <x-heroicon-o-information-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\attendance-details-modal.blade.php",
+            "line": 53,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-arrow-right-on-rectangle",
+            "detail": "Filament icon 'heroicon-o-arrow-right-on-rectangle' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\attendance-details-modal.blade.php",
+            "line": 58,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-arrow-left-on-rectangle",
+            "detail": "Filament icon 'heroicon-o-arrow-left-on-rectangle' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 628,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-document-text",
+            "detail": "Blade component <x-heroicon-o-document-text /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 632,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-star",
+            "detail": "Blade component <x-heroicon-o-star /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 636,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-clock",
+            "detail": "Blade component <x-heroicon-o-clock /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 673,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-information-circle",
+            "detail": "Blade component <x-heroicon-o-information-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 682,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-shield-check",
+            "detail": "Blade component <x-heroicon-o-shield-check /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 688,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-document-magnifying-glass",
+            "detail": "Blade component <x-heroicon-o-document-magnifying-glass /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 727,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-s-check-circle",
+            "detail": "Blade component <x-heroicon-s-check-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 754,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-arrow-right",
+            "detail": "Blade component <x-heroicon-o-arrow-right /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 763,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-paper-airplane",
+            "detail": "Blade component <x-heroicon-o-paper-airplane /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 36,
+            "type": "unknown_filament_icon",
+            "name": "$icon",
+            "detail": "Filament icon '$icon' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 99,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-user",
+            "detail": "Filament icon 'heroicon-o-user' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 104,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-academic-cap",
+            "detail": "Filament icon 'heroicon-o-academic-cap' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 110,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-user-group",
+            "detail": "Filament icon 'heroicon-o-user-group' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 121,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-calendar",
+            "detail": "Filament icon 'heroicon-o-calendar' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 128,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-arrow-path",
+            "detail": "Filament icon 'heroicon-o-arrow-path' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 143,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-document",
+            "detail": "Filament icon 'heroicon-o-document' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 151,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-link",
+            "detail": "Filament icon 'heroicon-o-link' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 168,
+            "type": "unknown_filament_icon",
+            "name": "heroicon-o-check-circle",
+            "detail": "Filament icon 'heroicon-o-check-circle' not recognized"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\educational-alerts.blade.php",
+            "line": 8,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-bell-alert",
+            "detail": "Blade component <x-heroicon-o-bell-alert /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\educational-alerts.blade.php",
+            "line": 26,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-check-circle",
+            "detail": "Blade component <x-heroicon-o-check-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\educational-alerts.blade.php",
+            "line": 69,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-arrow-left",
+            "detail": "Blade component <x-heroicon-m-arrow-left /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\group-profiles.blade.php",
+            "line": 24,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-plus-circle",
+            "detail": "Blade component <x-heroicon-o-plus-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\group-profiles.blade.php",
+            "line": 67,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-academic-cap",
+            "detail": "Blade component <x-heroicon-o-academic-cap /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\group-profiles.blade.php",
+            "line": 86,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-clipboard-document-list",
+            "detail": "Blade component <x-heroicon-o-clipboard-document-list /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\instructor-profiles.blade.php",
+            "line": 24,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-plus-circle",
+            "detail": "Blade component <x-heroicon-o-plus-circle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\instructor-profiles.blade.php",
+            "line": 30,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-academic-cap",
+            "detail": "Blade component <x-heroicon-o-academic-cap /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\instructor-profiles.blade.php",
+            "line": 77,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-user-group",
+            "detail": "Blade component <x-heroicon-o-user-group /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\instructor-profiles.blade.php",
+            "line": 104,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-exclamation-triangle",
+            "detail": "Blade component <x-heroicon-o-exclamation-triangle /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\instructor-profiles.blade.php",
+            "line": 140,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-academic-cap",
+            "detail": "Blade component <x-heroicon-o-academic-cap /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\widgets\\daily-priority-queue-widget.blade.php",
+            "line": 9,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-queue-list",
+            "detail": "Blade component <x-heroicon-o-queue-list /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\widgets\\daily-priority-queue-widget.blade.php",
+            "line": 28,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-o-check-badge",
+            "detail": "Blade component <x-heroicon-o-check-badge /> not found in heroicons"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\widgets\\daily-priority-queue-widget.blade.php",
+            "line": 66,
+            "type": "unknown_heroicon_component",
+            "name": "heroicon-m-arrow-left",
+            "detail": "Blade component <x-heroicon-m-arrow-left /> not found in heroicons"
+        }
+    ]
+}

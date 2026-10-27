@@ -1,0 +1,239 @@
+<?php
+
+namespace App\Filament\Student\Pages;
+
+use BackedEnum;
+use App\Models\Exam;
+use Filament\Tables;
+use Filament\Pages\Page;
+use App\Models\Enrollment;
+use Filament\Tables\Table;
+use App\Models\ExamAttempt;
+use Filament\Actions\Action;
+use Filament\Tables\Contracts\HasTable;
+use Illuminate\Database\Eloquent\Builder;
+use Filament\Tables\Concerns\InteractsWithTable;
+
+class MyExams extends Page implements HasTable
+{
+    use InteractsWithTable;
+
+    protected string $view = 'filament.student.pages.my-exams';
+
+    protected static string | BackedEnum | null $navigationIcon = 'heroicon-o-document-text';
+    
+    protected static ?int $navigationSort = 20;
+
+    public static function getNavigationLabel(): string
+    {
+        return __('امتحاناتي');
+    }
+
+    public function getTitle(): string
+    {
+        return __('امتحاناتي ونتائجي');
+    }
+
+    public function getHeading(): string
+    {
+        return __('امتحاناتي ونتائجي');
+    }
+
+    public function table(Table $table): Table
+    {
+        $student = auth()->user()->student;
+        
+        // Get all group IDs the student is enrolled in
+        $groupIds = Enrollment::where('student_id', $student?->id)
+            ->where('status', 'active')
+            ->pluck('group_id');
+
+        return $table
+            ->query(
+                Exam::query()
+                    ->whereIn('group_id', $groupIds)
+                    ->with(['group.course', 'attempts' => function ($q) use ($student) {
+                        $q->where('student_id', $student?->id);
+                    }])
+                    ->orderBy('exam_date', 'desc')
+            )
+            ->columns([
+                Tables\Columns\TextColumn::make('title')
+                    ->label(__('عنوان الامتحان'))
+                    ->searchable()
+                    ->weight('bold')
+                    ->icon('heroicon-o-document-text')
+                    ->color('primary'),
+
+                Tables\Columns\TextColumn::make('group.course.name')
+                    ->label(__('الكورس'))
+                    ->badge()
+                    ->color('info'),
+
+                Tables\Columns\TextColumn::make('group.name')
+                    ->label(__('المجموعة'))
+                    ->badge()
+                    ->color('success'),
+
+                Tables\Columns\TextColumn::make('exam_date')
+                    ->label(__('تاريخ الامتحان'))
+                    ->date('d/m/Y')
+                    ->sortable()
+                    ->icon('heroicon-o-calendar'),
+
+                Tables\Columns\TextColumn::make('duration')
+                    ->label(__('المدة'))
+                    ->formatStateUsing(fn ($state) => $state ? "{$state} " . __('دقيقة') : '-')
+                    ->icon('heroicon-o-clock'),
+
+                Tables\Columns\TextColumn::make('total_marks')
+                    ->label(__('الدرجة الكلية'))
+                    ->badge()
+                    ->color('warning'),
+
+                Tables\Columns\TextColumn::make('status')
+                    ->label(__('الحالة'))
+                    ->formatStateUsing(function ($record) use ($student) {
+                        $attempt = $record->attempts->first();
+                        
+                        if (!$attempt) {
+                            // Check if exam is available
+                            if ($record->exam_date && $record->exam_date->isFuture()) {
+                                return 'قادم';
+                            }
+                            return 'لم يتم الحل';
+                        }
+                        
+                        if ($attempt->completed_at) {
+                            return 'مكتمل';
+                        }
+                        
+                        return 'جاري الحل';
+                    })
+                    ->badge()
+                    ->color(function ($record) use ($student) {
+                        $attempt = $record->attempts->first();
+                        
+                        if (!$attempt) {
+                            if ($record->exam_date && $record->exam_date->isFuture()) {
+                                return 'info';
+                            }
+                            return 'warning';
+                        }
+                        
+                        if ($attempt->completed_at) {
+                            return 'success';
+                        }
+                        
+                        return 'primary';
+                    }),
+
+                Tables\Columns\TextColumn::make('score')
+                    ->label(__('درجتي'))
+                    ->formatStateUsing(function ($record) use ($student) {
+                        $attempt = $record->attempts->first();
+                        
+                        if (!$attempt || !$attempt->completed_at) {
+                            return '-';
+                        }
+                        
+                        $score = $attempt->score ?? 0;
+                        $total = $record->total_marks;
+                        $percentage = $total > 0 ? round(($score / $total) * 100) : 0;
+                        
+                        return "{$score} / {$total} ({$percentage}%)";
+                    })
+                    ->badge()
+                    ->color(function ($record) use ($student) {
+                        $attempt = $record->attempts->first();
+                        
+                        if (!$attempt || !$attempt->completed_at) {
+                            return 'gray';
+                        }
+                        
+                        $percentage = $record->total_marks > 0 
+                            ? round(($attempt->score / $record->total_marks) * 100) 
+                            : 0;
+                        
+                        return match (true) {
+                            $percentage >= 85 => 'success',
+                            $percentage >= 70 => 'info',
+                            $percentage >= 50 => 'warning',
+                            default => 'danger',
+                        };
+                    }),
+            ])
+            ->filters([
+                Tables\Filters\SelectFilter::make('group_id')
+                    ->label(__('المجموعة'))
+                    ->relationship('group', 'name'),
+                    
+                Tables\Filters\Filter::make('completed')
+                    ->label(__('مكتمل'))
+                    ->query(function (Builder $query) use ($student) {
+                        return $query->whereHas('attempts', function ($q) use ($student) {
+                            $q->where('student_id', $student->id)
+                              ->whereNotNull('completed_at');
+                        });
+                    }),
+                    
+                Tables\Filters\Filter::make('not_taken')
+                    ->label(__('لم يتم الحل'))
+                    ->query(function (Builder $query) use ($student) {
+                        return $query->whereDoesntHave('attempts', function ($q) use ($student) {
+                            $q->where('student_id', $student->id);
+                        });
+                    }),
+            ])
+            ->actions([
+                Action::make('take_exam')
+                    ->label(__('ابدأ الامتحان'))
+                    ->icon('heroicon-o-pencil-square')
+                    ->color('success')
+                    ->visible(function ($record) use ($student) {
+                        $attempt = $record->attempts->first();
+                        
+                        // Show if no attempt or not completed
+                        if (!$attempt || !$attempt->completed_at) {
+                            // Check if exam is available (not future dated)
+                            if ($record->exam_date && $record->exam_date->isFuture()) {
+                                return false;
+                            }
+                            return true;
+                        }
+                        
+                        return false;
+                    })
+                    ->url(fn ($record) => route('filament.student.resources.student-exams.take', ['record' => $record->id])),
+
+                Action::make('view_result')
+                    ->label(__('عرض النتيجة'))
+                    ->icon('heroicon-o-eye')
+                    ->color('info')
+                    ->visible(function ($record) use ($student) {
+                        $attempt = $record->attempts->first();
+                        return $attempt && $attempt->completed_at;
+                    })
+                    ->url(function ($record) use ($student) {
+                        $attempt = $record->attempts->first();
+                        return $attempt ? route('filament.student.resources.student-exams.result', ['record' => $attempt->id]) : '#';
+                    }),
+
+                Action::make('view_details')
+                    ->label(__('التفاصيل'))
+                    ->icon('heroicon-o-information-circle')
+                    ->color('gray')
+                    ->modalHeading(fn ($record) => $record->title)
+                    ->modalContent(fn ($record) => view('filament.student.pages.exam-details-modal', [
+                        'exam' => $record,
+                        'student' => $student,
+                    ]))
+                    ->modalWidth('3xl')
+                    ->modalSubmitAction(false)
+                    ->modalCancelActionLabel(__('إغلاق')),
+            ])
+            ->emptyStateHeading(__('لا توجد امتحانات'))
+            ->emptyStateDescription(__('لا توجد امتحانات متاحة حالياً'))
+            ->emptyStateIcon('heroicon-o-document-text');
+    }
+}

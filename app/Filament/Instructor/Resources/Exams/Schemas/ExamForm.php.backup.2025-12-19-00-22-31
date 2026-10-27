@@ -1,0 +1,72 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Exams\Schemas;
+
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
+use Filament\Schemas\Schema;
+
+class ExamForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Select::make('tenant_id')
+                    ->label(__('filament/admin/exam_resource.tenant_id'))
+                    ->relationship('tenant', 'name')
+                    ->required(),
+                Select::make('course_id')
+                    ->label(__('filament/admin/exam_resource.course_id'))
+                    ->relationship('course', 'name')
+                    ->required(),
+                Select::make('group_id')
+                    ->label(__('filament/admin/exam_resource.group_id'))
+                    ->relationship('group', 'name')
+                    ->required(),
+                Select::make('instructor_id')
+                    ->label(__('filament/admin/exam_resource.instructor_id'))
+                    ->relationship('instructor', 'id')
+                    ->default(__('filament/admin/exam_resource.instructor_id_default')),
+                TextInput::make('title')
+                    ->label(__('filament/admin/exam_resource.title'))
+                    ->required(),
+                Textarea::make('description')
+                    ->label(__('filament/admin/exam_resource.description'))
+                    ->default(null)
+                    ->columnSpanFull(),
+                Select::make('type')
+                    ->label(__('filament/admin/exam_resource.type'))
+                    ->options(['quiz' => __('filament/admin/exam_resource.type.quiz'), 'midterm' => __('filament/admin/exam_resource.type.midterm'), 'final' => __('filament/admin/exam_resource.type.final'), 'assignment' => __('filament/admin/exam_resource.type.assignment'), 'project' => __('filament/admin/exam_resource.type.project')])
+                    ->default('quiz')
+                    ->required(),
+                DateTimePicker::make('exam_date')
+                    ->label(__('filament/admin/exam_resource.exam_date'))
+                    ->required(),
+                TextInput::make('duration')
+                    ->label(__('filament/admin/exam_resource.duration'))
+                    ->required()
+                    ->numeric()
+                    ->default(60),
+                TextInput::make('total_marks')
+                    ->label(__('filament/admin/exam_resource.total_marks'))
+                    ->required()
+                    ->numeric(),
+                TextInput::make('passing_marks')
+                    ->label(__('filament/admin/exam_resource.passing_marks'))
+                    ->required()
+                    ->numeric(),
+                Select::make('status')
+                    ->label(__('filament/admin/exam_resource.status'))
+                    ->options(['scheduled' => __('filament/admin/exam_resource.status.scheduled'), 'in_progress' => __('filament/admin/exam_resource.status.in_progress'), 'completed' => __('filament/admin/exam_resource.status.completed'), 'cancelled' => __('filament/admin/exam_resource.status.cancelled')])
+                    ->default('scheduled')
+                    ->required(),
+                Textarea::make('instructions')
+                    ->label(__('filament/admin/exam_resource.instructions'))
+                    ->default(null)
+                    ->columnSpanFull(),
+            ]);
+    }
+}

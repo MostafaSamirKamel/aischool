@@ -1,0 +1,416 @@
+{
+    "app\\Filament\\Admin\\Resources\\Admins\\Tables\\AdminsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Admins\\Tables\\AdminsTable.php",
+        "actions": [
+            {
+                "type": "ViewAction",
+                "name": ""
+            },
+            {
+                "type": "EditAction",
+                "name": ""
+            }
+        ],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\AssignmentSubmissionResource\\Tables\\AssignmentSubmissionsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\AssignmentSubmissionResource\\Tables\\AssignmentSubmissionsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\AttendanceSessions\\Tables\\AttendanceSessionsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\AttendanceSessions\\Tables\\AttendanceSessionsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Classrooms\\Tables\\ClassroomsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Tables\\ClassroomsTable.php",
+        "actions": [],
+        "icons": [
+            "'heroicon-o-calendar-days'"
+        ],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Courses\\Tables\\CoursesTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Courses\\Tables\\CoursesTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Departments\\Tables\\DepartmentsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Departments\\Tables\\DepartmentsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Enrollments\\Tables\\EnrollmentsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Tables\\EnrollmentsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Exams\\Tables\\ExamsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Exams\\Tables\\ExamsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\ExpenseCategories\\Tables\\ExpenseCategoriesTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\ExpenseCategories\\Tables\\ExpenseCategoriesTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Expenses\\Tables\\ExpensesTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\Tables\\ExpensesTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Grades\\Tables\\GradesTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Grades\\Tables\\GradesTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Groups\\Tables\\GroupsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Groups\\Tables\\GroupsTable.php",
+        "actions": [],
+        "icons": [
+            "'heroicon-o-users'"
+        ],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Instructors\\Tables\\InstructorsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Instructors\\Tables\\InstructorsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Nationalities\\Tables\\NationalitiesTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Nationalities\\Tables\\NationalitiesTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Occupations\\Tables\\OccupationsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Occupations\\Tables\\OccupationsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Payments\\Tables\\PaymentsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Payments\\Tables\\PaymentsTable.php",
+        "actions": [
+            {
+                "type": "EditAction",
+                "name": ""
+            }
+        ],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\RevenueCategories\\Tables\\RevenueCategoriesTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\RevenueCategories\\Tables\\RevenueCategoriesTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Revenues\\Tables\\RevenuesTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Revenues\\Tables\\RevenuesTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Roles\\Tables\\RolesTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Tables\\RolesTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\SalaryPayments\\Tables\\SalaryPaymentsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\SalaryPayments\\Tables\\SalaryPaymentsTable.php",
+        "actions": [],
+        "icons": [
+            "'heroicon-o-banknotes'"
+        ],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Settings\\Tables\\SettingsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Settings\\Tables\\SettingsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\SmsConfigs\\Tables\\SmsConfigsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\SmsConfigs\\Tables\\SmsConfigsTable.php",
+        "actions": [
+            {
+                "type": "EditAction",
+                "name": ""
+            }
+        ],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\SmsLogResource\\Tables\\SmsLogsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\SmsLogResource\\Tables\\SmsLogsTable.php",
+        "actions": [
+            {
+                "type": "ViewAction",
+                "name": ""
+            },
+            {
+                "type": "DeleteAction",
+                "name": ""
+            }
+        ],
+        "icons": [
+            "'heroicon-o-phone'"
+        ],
+        "has_empty_state_icon": true
+    },
+    "app\\Filament\\Admin\\Resources\\StudentParents\\Tables\\StudentParentsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\StudentParents\\Tables\\StudentParentsTable.php",
+        "actions": [
+            {
+                "type": "EditAction",
+                "name": ""
+            }
+        ],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Students\\Tables\\StudentsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Students\\Tables\\StudentsTable.php",
+        "actions": [],
+        "icons": [
+            "'heroicon-o-academic-cap'",
+            "'heroicon-o-printer'"
+        ],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php",
+        "actions": [
+            {
+                "type": "EditAction",
+                "name": ""
+            },
+            {
+                "type": "DeleteAction",
+                "name": ""
+            }
+        ],
+        "icons": [
+            "'heroicon-o-user'",
+            "'heroicon-o-identification'",
+            "'heroicon-o-phone'",
+            "'heroicon-o-envelope'",
+            "'heroicon-o-user-group'",
+            "Heroicon::OutlineCheckCircle"
+        ],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Tenants\\Tables\\TenantsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Tenants\\Tables\\TenantsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Tracks\\Tables\\TracksTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Tracks\\Tables\\TracksTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Users\\Tables\\UsersTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Users\\Tables\\UsersTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+        "actions": [],
+        "icons": [
+            "fn ($state",
+            "'heroicon-o-check-circle'",
+            "'heroicon-o-x-circle'"
+        ],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\Vaults\\Tables\\VaultsTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Tables\\VaultsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Admin\\Resources\\VaultTransfers\\Tables\\VaultTransfersTable.php": {
+        "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\Tables\\VaultTransfersTable.php",
+        "actions": [],
+        "icons": [
+            "'heroicon-o-check-circle'",
+            "'heroicon-o-x-circle'"
+        ],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Instructor\\Resources\\Assignments\\Tables\\AssignmentsTable.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\Assignments\\Tables\\AssignmentsTable.php",
+        "actions": [],
+        "icons": [
+            "'heroicon-o-academic-cap'"
+        ],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Instructor\\Resources\\AssignmentSubmissions\\Tables\\AssignmentSubmissionsTable.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\AssignmentSubmissions\\Tables\\AssignmentSubmissionsTable.php",
+        "actions": [],
+        "icons": [
+            "'heroicon-o-photo'"
+        ],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Tables\\AttendanceSessionsTable.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Tables\\AttendanceSessionsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Instructor\\Resources\\Exams\\Tables\\ExamsTable.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\Tables\\ExamsTable.php",
+        "actions": [],
+        "icons": [
+            "fn($state"
+        ],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Instructor\\Resources\\GroupMessageResource\\Tables\\GroupMessageTable.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\GroupMessageResource\\Tables\\GroupMessageTable.php",
+        "actions": [
+            {
+                "type": "ViewAction",
+                "name": ""
+            },
+            {
+                "type": "EditAction",
+                "name": ""
+            },
+            {
+                "type": "DeleteAction",
+                "name": ""
+            }
+        ],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+        "actions": [
+            {
+                "type": "ViewAction",
+                "name": ""
+            }
+        ],
+        "icons": [
+            "'heroicon-o-calendar'",
+            "'heroicon-o-check-circle'",
+            "'heroicon-o-academic-cap'",
+            "'heroicon-o-currency-dollar'",
+            "'heroicon-o-calculator'",
+            "'heroicon-o-briefcase'",
+            "'heroicon-o-gift'",
+            "'heroicon-o-minus-circle'",
+            "'heroicon-o-banknotes'",
+            "fn($state",
+            "'heroicon-o-calendar-days'",
+            "fn($state",
+            "'heroicon-o-eye'"
+        ],
+        "has_empty_state_icon": true
+    },
+    "app\\Filament\\Instructor\\Resources\\InstructorReviews\\Tables\\InstructorReviewsTable.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\InstructorReviews\\Tables\\InstructorReviewsTable.php",
+        "actions": [
+            {
+                "type": "ViewAction",
+                "name": ""
+            }
+        ],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Instructor\\Resources\\LearningResources\\Tables\\LearningResourcesTable.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\Tables\\LearningResourcesTable.php",
+        "actions": [],
+        "icons": [
+            "fn (string $state"
+        ],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+        "actions": [
+            {
+                "type": "ViewAction",
+                "name": ""
+            }
+        ],
+        "icons": [
+            "'heroicon-o-check-circle'",
+            "'heroicon-o-clipboard-document-check'",
+            "'heroicon-o-x-circle'"
+        ],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Instructor\\Resources\\StudentMessages\\Tables\\StudentMessagesTable.php": {
+        "file": "app\\Filament\\Instructor\\Resources\\StudentMessages\\Tables\\StudentMessagesTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Parent\\Resources\\Messages\\Tables\\MessagesTable.php": {
+        "file": "app\\Filament\\Parent\\Resources\\Messages\\Tables\\MessagesTable.php",
+        "actions": [],
+        "icons": [
+            "'heroicon-o-eye'"
+        ],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Student\\Resources\\InstructorReviewResource\\Tables\\InstructorReviewsTable.php": {
+        "file": "app\\Filament\\Student\\Resources\\InstructorReviewResource\\Tables\\InstructorReviewsTable.php",
+        "actions": [
+            {
+                "type": "EditAction",
+                "name": ""
+            },
+            {
+                "type": "DeleteAction",
+                "name": ""
+            }
+        ],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Supervisor\\Resources\\AttendanceSessions\\Tables\\AttendanceSessionsTable.php": {
+        "file": "app\\Filament\\Supervisor\\Resources\\AttendanceSessions\\Tables\\AttendanceSessionsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Supervisor\\Resources\\Groups\\Tables\\GroupsTable.php": {
+        "file": "app\\Filament\\Supervisor\\Resources\\Groups\\Tables\\GroupsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    },
+    "app\\Filament\\Supervisor\\Resources\\Students\\Tables\\StudentsTable.php": {
+        "file": "app\\Filament\\Supervisor\\Resources\\Students\\Tables\\StudentsTable.php",
+        "actions": [],
+        "icons": [],
+        "has_empty_state_icon": false
+    }
+}

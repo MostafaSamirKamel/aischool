@@ -1,0 +1,71 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\Assignments\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Tables\Table;
+
+class AssignmentsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('title')
+                    ->label('عنوان الواجب')
+                    ->searchable()
+                    ->sortable(),
+                TextColumn::make('group.name')
+                    ->label('المجموعة')
+                    ->sortable(),
+                TextColumn::make('due_date')
+                    ->label('تاريخ التسليم')
+                    ->date()
+                    ->sortable(),
+                TextColumn::make('max_score')
+                    ->label('الدرجة القصوى')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('submissions_count')
+                    ->label('عدد التسليمات')
+                    ->counts('submissions')
+                    ->sortable(),
+                TextColumn::make('status')
+                    ->label('الحالة')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'active' => 'success',
+                        'closed' => 'danger',
+                        default => 'gray',
+                    })
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'active' => 'نشط',
+                        'closed' => 'مغلق',
+                        default => $state,
+                    }),
+                TextColumn::make('created_at')
+                    ->label('تاريخ الإنشاء')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                //
+            ])
+            ->recordActions([
+                EditAction::make(),
+            ])
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                ]),
+            ])
+            ->defaultSort('due_date', 'desc');
+    }
+}

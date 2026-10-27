@@ -1,0 +1,5142 @@
+{
+    "total_usages": 718,
+    "broken_or_missing": [
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 381,
+            "icon": "fi-shield-resource-section",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 412,
+            "icon": "fi-shield-group-section",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 497,
+            "icon": "fi-shield-group-section",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 123,
+            "icon": "fi-shield-resource-section",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 152,
+            "icon": "fi-shield-group-section",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 328,
+            "icon": "fi-shield-group-section",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "app\\Providers\\AppServiceProvider.php",
+            "line": 72,
+            "icon": "fi-fixed-positioning-context",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "app\\Providers\\AppServiceProvider.php",
+            "line": 73,
+            "icon": "fi-fixed-positioning-context",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "app\\Providers\\Filament\\ParentPanelProvider.php",
+            "line": 71,
+            "icon": "fi-main-sidebar",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "app\\Providers\\Filament\\StudentPanelProvider.php",
+            "line": 73,
+            "icon": "fi-main-sidebar",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-daterangepicker-filter\\date-range-picker.blade.php",
+            "line": 108,
+            "icon": "fi-fo-text-input",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\forms\\components\\browser-sessions.blade.php",
+            "line": 12,
+            "icon": "fi-in-entry",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\livewire\\browser-sessions-form.blade.php",
+            "line": 2,
+            "icon": "fi-sc-form",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\livewire\\custom-fields-form.blade.php",
+            "line": 1,
+            "icon": "fi-sc-form",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\livewire\\delete-account-form.blade.php",
+            "line": 2,
+            "icon": "fi-sc-form",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\livewire\\edit-password-form.blade.php",
+            "line": 1,
+            "icon": "fi-sc-form",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\livewire\\edit-profile-form.blade.php",
+            "line": 1,
+            "icon": "fi-sc-form",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\livewire\\multi-factor-authentication.blade.php",
+            "line": 2,
+            "icon": "fi-sc-form",
+            "reason": "Icon name not found in blade-heroicons or filament/support"
+        }
+    ],
+    "student_icon_missing": [],
+    "all_usages": [
+        {
+            "file": "app\\Enums\\PaymentMethod.php",
+            "line": 27,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Enums\\PaymentMethod.php",
+            "line": 28,
+            "icon": "heroicon-o-building-library",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Enums\\PaymentMethod.php",
+            "line": 29,
+            "icon": "heroicon-o-credit-card",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Enums\\PaymentMethod.php",
+            "line": 30,
+            "icon": "heroicon-o-globe-alt",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Enums\\PaymentMethod.php",
+            "line": 31,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\AcademicFollowUpCenter.php",
+            "line": 31,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\BarcodeAttendance.php",
+            "line": 23,
+            "icon": "heroicon-o-qr-code",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\BarcodePrint.php",
+            "line": 20,
+            "icon": "heroicon-o-printer",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\BaseFilamentPage.php",
+            "line": 15,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\GenerateInstructorPayments.php",
+            "line": 20,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\GenerateInstructorPayments.php",
+            "line": 50,
+            "icon": "heroicon-o-currency-dollar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\GenerateInstructorPayments.php",
+            "line": 105,
+            "icon": "heroicon-o-user",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\InstallmentsDueMonth.php",
+            "line": 25,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\InstallmentsDueToday.php",
+            "line": 25,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\InstallmentsDueWeek.php",
+            "line": 25,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\ReportingCenterPage.php",
+            "line": 25,
+            "icon": "heroicon-o-presentation-chart-line",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\Reports\\AllInstallmentsReport.php",
+            "line": 21,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\Reports\\CourseFinancialReport.php",
+            "line": 17,
+            "icon": "heroicon-o-currency-dollar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\Reports\\InstallmentsReport.php",
+            "line": 17,
+            "icon": "heroicon-o-document-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\ScheduledTasks.php",
+            "line": 21,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\SecretaryAttendance.php",
+            "line": 19,
+            "icon": "heroicon-o-finger-print",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\UsersReport.php",
+            "line": 104,
+            "icon": "heroicon-o-check-badge",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\UsersReport.php",
+            "line": 105,
+            "icon": "heroicon-o-x-mark",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\UsersReport.php",
+            "line": 113,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\UsersReport.php",
+            "line": 114,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\UsersReport.php",
+            "line": 173,
+            "icon": "heroicon-o-printer",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\UsersReport.php",
+            "line": 179,
+            "icon": "heroicon-o-arrow-down-tray",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\UsersReport.php",
+            "line": 186,
+            "icon": "heroicon-o-arrow-down-tray",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\VaultReport.php",
+            "line": 38,
+            "icon": "heroicon-o-document-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\AssignmentResource\\ExamAttemptResource.php",
+            "line": 69,
+            "icon": "heroicon-o-user",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Pages\\ClassroomAvailability.php",
+            "line": 24,
+            "icon": "heroicon-o-calendar-days",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Pages\\ClassroomAvailability.php",
+            "line": 76,
+            "icon": "heroicon-o-list-bullet",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Pages\\ClassroomAvailability.php",
+            "line": 82,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Pages\\ListClassrooms.php",
+            "line": 19,
+            "icon": "heroicon-o-calendar-days",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Tables\\ClassroomsTable.php",
+            "line": 99,
+            "icon": "heroicon-o-calendar-days",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Actions\\CancelSubscriptionAction.php",
+            "line": 27,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Actions\\CancelSubscriptionAction.php",
+            "line": 60,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Actions\\CancelSubscriptionAction.php",
+            "line": 104,
+            "icon": "heroicon-o-chat-bubble-bottom-center-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Actions\\CancelSubscriptionAction.php",
+            "line": 117,
+            "icon": "heroicon-o-currency-dollar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Actions\\ExecuteRefundAction.php",
+            "line": 24,
+            "icon": "heroicon-o-currency-dollar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Pages\\ListEnrollments.php",
+            "line": 23,
+            "icon": "heroicon-o-presentation-chart-line",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Pages\\ViewEnrollment.php",
+            "line": 25,
+            "icon": "heroicon-o-hashtag",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Pages\\ViewEnrollment.php",
+            "line": 73,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Exams\\Pages\\ListExams.php",
+            "line": 25,
+            "icon": "heroicon-o-presentation-chart-line",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Exams\\RelationManagers\\AttemptsRelationManager.php",
+            "line": 100,
+            "icon": "heroicon-o-clipboard-document-list",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Exams\\RelationManagers\\QuestionsRelationManager.php",
+            "line": 131,
+            "icon": "heroicon-o-plus",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Exams\\RelationManagers\\QuestionsRelationManager.php",
+            "line": 155,
+            "icon": "heroicon-o-question-mark-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Exams\\Tables\\ExamsTable.php",
+            "line": 61,
+            "icon": "heroicon-o-clipboard-document-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Exams\\Tables\\ExamsTable.php",
+            "line": 62,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Exams\\Tables\\ExamsTable.php",
+            "line": 63,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Exams\\Tables\\ExamsTable.php",
+            "line": 64,
+            "icon": "heroicon-o-paper-clip",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Exams\\Tables\\ExamsTable.php",
+            "line": 65,
+            "icon": "heroicon-o-briefcase",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Expenses\\Widgets\\VaultBalancesWidget.php",
+            "line": 64,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Expenses\\Widgets\\VaultBalancesWidget.php",
+            "line": 82,
+            "icon": "heroicon-o-currency-dollar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Groups\\Tables\\GroupsTable.php",
+            "line": 150,
+            "icon": "heroicon-o-users",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\AdminInstructorEvaluationAppealResource.php",
+            "line": 25,
+            "icon": "heroicon-o-scale",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\AdminInstructorEvaluationAppealResource.php",
+            "line": 114,
+            "icon": "heroicon-o-check-badge",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\Pages\\ViewAdminInstructorEvaluationAppeal.php",
+            "line": 30,
+            "icon": "heroicon-o-check-badge",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\OverdueInstallmentResource\\Pages\\ListOverdueInstallments.php",
+            "line": 18,
+            "icon": "heroicon-o-arrow-down-tray",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\OverdueInstallmentResource.php",
+            "line": 31,
+            "icon": "heroicon-o-exclamation-triangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\OverdueInstallmentResource.php",
+            "line": 273,
+            "icon": "heroicon-o-bell",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\OverdueInstallmentResource.php",
+            "line": 290,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Payments\\Pages\\ListPayments.php",
+            "line": 23,
+            "icon": "heroicon-o-presentation-chart-line",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 381,
+            "icon": "fi-shield-resource-section",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 388,
+            "icon": "heroicon-o-folder",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 412,
+            "icon": "fi-shield-group-section",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 469,
+            "icon": "heroicon-o-folder",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 497,
+            "icon": "fi-shield-group-section",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SalaryPayments\\Tables\\SalaryPaymentsTable.php",
+            "line": 91,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsConfigs\\Pages\\EditSmsConfig.php",
+            "line": 38,
+            "icon": "heroicon-o-paper-airplane",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsConfigs\\Schemas\\SmsConfigForm.php",
+            "line": 60,
+            "icon": "heroicon-o-globe-alt",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsConfigs\\Schemas\\SmsConfigForm.php",
+            "line": 80,
+            "icon": "heroicon-o-globe-alt",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsConfigs\\Schemas\\SmsConfigForm.php",
+            "line": 99,
+            "icon": "heroicon-o-map-pin",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsLogResource\\Pages\\ListSmsLogs.php",
+            "line": 18,
+            "icon": "heroicon-o-cog-6-tooth",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsLogResource\\Tables\\SmsLogsTable.php",
+            "line": 23,
+            "icon": "heroicon-o-phone",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsLogResource\\Tables\\SmsLogsTable.php",
+            "line": 110,
+            "icon": "heroicon-o-chat-bubble-left-right",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\StudentFollowUpTaskResource.php",
+            "line": 37,
+            "icon": "heroicon-o-clipboard-document-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\StudentFollowUpTaskResource.php",
+            "line": 220,
+            "icon": "heroicon-o-check-badge",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Students\\Pages\\ListStudents.php",
+            "line": 23,
+            "icon": "heroicon-o-presentation-chart-line",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Students\\RelationManagers\\CanceledSubscriptionsRelationManager.php",
+            "line": 130,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Students\\RelationManagers\\CanceledSubscriptionsRelationManager.php",
+            "line": 193,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Students\\Tables\\StudentsTable.php",
+            "line": 178,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Students\\Tables\\StudentsTable.php",
+            "line": 200,
+            "icon": "heroicon-o-printer",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource.php",
+            "line": 25,
+            "icon": "heroicon-o-document-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource.php",
+            "line": 120,
+            "icon": "heroicon-o-chat-bubble-left",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource.php",
+            "line": 140,
+            "icon": "heroicon-o-question-mark-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource.php",
+            "line": 160,
+            "icon": "heroicon-o-arrow-path",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ListAdminSupervisionReports.php",
+            "line": 17,
+            "icon": "heroicon-o-presentation-chart-line",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ViewAdminSupervisionReport.php",
+            "line": 32,
+            "icon": "heroicon-o-chat-bubble-left",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ViewAdminSupervisionReport.php",
+            "line": 54,
+            "icon": "heroicon-o-question-mark-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ViewAdminSupervisionReport.php",
+            "line": 76,
+            "icon": "heroicon-o-arrow-path",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php",
+            "line": 34,
+            "icon": "heroicon-o-user",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php",
+            "line": 44,
+            "icon": "heroicon-o-identification",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php",
+            "line": 49,
+            "icon": "heroicon-o-phone",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php",
+            "line": 55,
+            "icon": "heroicon-o-envelope",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php",
+            "line": 97,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+            "line": 56,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+            "line": 57,
+            "icon": "heroicon-o-arrow-up",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+            "line": 57,
+            "icon": "heroicon-o-arrow-down",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+            "line": 116,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+            "line": 129,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\Tables\\VaultTransfersTable.php",
+            "line": 152,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\Tables\\VaultTransfersTable.php",
+            "line": 184,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\VaultTransferResource.php",
+            "line": 27,
+            "icon": "heroicon-o-arrow-path",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\AttendanceStatsWidget.php",
+            "line": 62,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\AttendanceStatsWidget.php",
+            "line": 68,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\AttendanceStatsWidget.php",
+            "line": 73,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\AttendanceStatsWidget.php",
+            "line": 78,
+            "icon": "heroicon-o-arrow-trending-up",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\AttendanceStatsWidget.php",
+            "line": 78,
+            "icon": "heroicon-o-arrow-trending-down",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\EnrollmentReportStats.php",
+            "line": 32,
+            "icon": "heroicon-m-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\EnrollmentReportStats.php",
+            "line": 37,
+            "icon": "heroicon-m-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\EnrollmentReportStats.php",
+            "line": 42,
+            "icon": "heroicon-m-trophy",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\EnrollmentReportStats.php",
+            "line": 47,
+            "icon": "heroicon-m-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\ExamsOverviewWidget.php",
+            "line": 38,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\ExamsOverviewWidget.php",
+            "line": 44,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\ExamsOverviewWidget.php",
+            "line": 49,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\ExamsOverviewWidget.php",
+            "line": 55,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\FinancialReportStats.php",
+            "line": 32,
+            "icon": "heroicon-m-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\FinancialReportStats.php",
+            "line": 37,
+            "icon": "heroicon-m-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\FinancialReportStats.php",
+            "line": 42,
+            "icon": "heroicon-m-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\FinancialReportStats.php",
+            "line": 47,
+            "icon": "heroicon-m-arrow-uturn-left",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\GradesStatsWidget.php",
+            "line": 42,
+            "icon": "heroicon-o-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\GradesStatsWidget.php",
+            "line": 48,
+            "icon": "heroicon-o-calculator",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\GradesStatsWidget.php",
+            "line": 53,
+            "icon": "heroicon-o-trophy",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\GradesStatsWidget.php",
+            "line": 58,
+            "icon": "heroicon-o-star",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\PerformanceReportStats.php",
+            "line": 42,
+            "icon": "heroicon-m-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\PerformanceReportStats.php",
+            "line": 47,
+            "icon": "heroicon-m-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\PerformanceReportStats.php",
+            "line": 52,
+            "icon": "heroicon-m-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\PerformanceReportStats.php",
+            "line": 61,
+            "icon": "heroicon-m-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\SmsStatsWidget.php",
+            "line": 36,
+            "icon": "heroicon-o-chat-bubble-left-right",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\SmsStatsWidget.php",
+            "line": 42,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\SmsStatsWidget.php",
+            "line": 47,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\SmsStatsWidget.php",
+            "line": 47,
+            "icon": "heroicon-o-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\SmsStatsWidget.php",
+            "line": 52,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\StatsOverview.php",
+            "line": 68,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\StatsOverview.php",
+            "line": 74,
+            "icon": "heroicon-o-clipboard-document-list",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\StatsOverview.php",
+            "line": 80,
+            "icon": "heroicon-o-rectangle-stack",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\StatsOverview.php",
+            "line": 94,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\StudentReportStats.php",
+            "line": 31,
+            "icon": "heroicon-m-users",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\StudentReportStats.php",
+            "line": 36,
+            "icon": "heroicon-m-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\StudentReportStats.php",
+            "line": 41,
+            "icon": "heroicon-m-user",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Widgets\\StudentReportStats.php",
+            "line": 46,
+            "icon": "heroicon-m-user",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Components\\EmployeeTopNavbar.php",
+            "line": 28,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Components\\EmployeeTopNavbar.php",
+            "line": 37,
+            "icon": "heroicon-o-book-open",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Components\\EmployeeTopNavbar.php",
+            "line": 46,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Components\\EmployeeTopNavbar.php",
+            "line": 55,
+            "icon": "heroicon-o-chart-bar-square",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Components\\EmployeeTopNavbar.php",
+            "line": 63,
+            "icon": "heroicon-o-cog-6-tooth",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Components\\EmployeeTopNavbar.php",
+            "line": 76,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Components\\EmployeeTopNavbar.php",
+            "line": 84,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Components\\EmployeeTopNavbar.php",
+            "line": 92,
+            "icon": "heroicon-o-document-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Components\\EmployeeTopNavbar.php",
+            "line": 103,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Components\\EmployeeTopNavbar.php",
+            "line": 110,
+            "icon": "heroicon-o-sparkles",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Components\\EmployeeTopNavbar.php",
+            "line": 238,
+            "icon": "heroicon-o-squares-plus",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Pages\\HomeworkReviewCenter.php",
+            "line": 38,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Pages\\MyGroups.php",
+            "line": 62,
+            "icon": "heroicon-o-building-office-2",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Pages\\MyGroups.php",
+            "line": 157,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Pages\\MyGroups.php",
+            "line": 163,
+            "icon": "heroicon-o-users",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Pages\\MyGroups.php",
+            "line": 187,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Assignments\\Tables\\AssignmentsTable.php",
+            "line": 67,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AssignmentSubmissions\\Tables\\AssignmentSubmissionsTable.php",
+            "line": 79,
+            "icon": "heroicon-o-photo",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\AttendanceReports.php",
+            "line": 191,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\AttendanceReports.php",
+            "line": 200,
+            "icon": "heroicon-o-pencil",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\TakeAttendance.php",
+            "line": 389,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\TakeAttendance.php",
+            "line": 395,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+            "line": 127,
+            "icon": "heroicon-o-information-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+            "line": 135,
+            "icon": "heroicon-o-exclamation-triangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+            "line": 141,
+            "icon": "heroicon-o-exclamation-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+            "line": 151,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+            "line": 168,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\RelationManagers\\AttemptsRelationManager.php",
+            "line": 97,
+            "icon": "heroicon-o-clipboard-document-list",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\RelationManagers\\QuestionsRelationManager.php",
+            "line": 221,
+            "icon": "heroicon-o-plus",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\RelationManagers\\QuestionsRelationManager.php",
+            "line": 240,
+            "icon": "heroicon-o-question-mark-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Tables\\ExamsTable.php",
+            "line": 60,
+            "icon": "heroicon-o-clipboard-document-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Tables\\ExamsTable.php",
+            "line": 61,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Tables\\ExamsTable.php",
+            "line": 62,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Tables\\ExamsTable.php",
+            "line": 63,
+            "icon": "heroicon-o-paper-clip",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Tables\\ExamsTable.php",
+            "line": 64,
+            "icon": "heroicon-o-briefcase",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Tables\\ExamsTable.php",
+            "line": 106,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\GroupMessageResource\\Pages\\CreateGroupMessage.php",
+            "line": 64,
+            "icon": "heroicon-o-envelope",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorEvaluations\\InstructorMyEvaluationResource.php",
+            "line": 21,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorMyEvaluation.php",
+            "line": 32,
+            "icon": "heroicon-o-chat-bubble-bottom-center-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorMyEvaluation.php",
+            "line": 64,
+            "icon": "heroicon-o-shield-exclamation",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorExamAttemptResource\\InstructorExamAttemptResource.php",
+            "line": 70,
+            "icon": "heroicon-o-user",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\InstructorPaymentResource.php",
+            "line": 19,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 20,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 41,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 50,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 56,
+            "icon": "heroicon-o-currency-dollar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 62,
+            "icon": "heroicon-o-calculator",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 70,
+            "icon": "heroicon-o-briefcase",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 77,
+            "icon": "heroicon-o-gift",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 85,
+            "icon": "heroicon-o-minus-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 94,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 108,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 109,
+            "icon": "heroicon-o-check-badge",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 110,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 111,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 112,
+            "icon": "heroicon-o-question-mark-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 127,
+            "icon": "heroicon-o-calendar-days",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 146,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 147,
+            "icon": "heroicon-o-building-library",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 148,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 149,
+            "icon": "heroicon-o-globe-alt",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 150,
+            "icon": "heroicon-o-question-mark-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 209,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 220,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorReviews\\InstructorReviewResource.php",
+            "line": 19,
+            "icon": "heroicon-o-star",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\LearningResourceResource.php",
+            "line": 28,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\Tables\\LearningResourcesTable.php",
+            "line": 49,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\Tables\\LearningResourcesTable.php",
+            "line": 50,
+            "icon": "heroicon-o-video-camera",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\Tables\\LearningResourcesTable.php",
+            "line": 51,
+            "icon": "heroicon-o-presentation-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\Tables\\LearningResourcesTable.php",
+            "line": 52,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\Tables\\LearningResourcesTable.php",
+            "line": 53,
+            "icon": "heroicon-o-photo",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\Tables\\LearningResourcesTable.php",
+            "line": 54,
+            "icon": "heroicon-o-musical-note",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\Tables\\LearningResourcesTable.php",
+            "line": 55,
+            "icon": "heroicon-o-link",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\Tables\\LearningResourcesTable.php",
+            "line": 56,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\SessionScheduleResource.php",
+            "line": 23,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+            "line": 92,
+            "icon": "heroicon-o-exclamation-triangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+            "line": 93,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+            "line": 101,
+            "icon": "heroicon-o-check-badge",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+            "line": 102,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+            "line": 161,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+            "line": 174,
+            "icon": "heroicon-o-clipboard-document-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+            "line": 193,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\StudentMessages\\Tables\\StudentMessagesTable.php",
+            "line": 68,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\StudentMessages\\Tables\\StudentMessagesTable.php",
+            "line": 69,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SupervisoryObservations\\InstructorSupervisoryObservationResource.php",
+            "line": 25,
+            "icon": "heroicon-o-clipboard-document-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SupervisoryObservations\\InstructorSupervisoryObservationResource.php",
+            "line": 121,
+            "icon": "heroicon-o-paper-airplane",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SupervisoryObservations\\Pages\\ViewInstructorSupervisoryObservation.php",
+            "line": 31,
+            "icon": "heroicon-o-paper-airplane",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\AttendanceStatsWidget.php",
+            "line": 82,
+            "icon": "heroicon-m-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\AttendanceStatsWidget.php",
+            "line": 88,
+            "icon": "heroicon-m-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\AttendanceStatsWidget.php",
+            "line": 93,
+            "icon": "heroicon-m-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\AttendanceStatsWidget.php",
+            "line": 98,
+            "icon": "heroicon-m-exclamation-triangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorPaymentStatsWidget.php",
+            "line": 99,
+            "icon": "heroicon-o-calendar-days",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorPaymentStatsWidget.php",
+            "line": 110,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorPaymentStatsWidget.php",
+            "line": 116,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorPaymentStatsWidget.php",
+            "line": 121,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorPaymentStatsWidget.php",
+            "line": 126,
+            "icon": "heroicon-o-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorPaymentStatsWidget.php",
+            "line": 131,
+            "icon": "heroicon-o-currency-dollar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorReviewStatsWidget.php",
+            "line": 51,
+            "icon": "heroicon-o-star",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorReviewStatsWidget.php",
+            "line": 62,
+            "icon": "heroicon-o-users",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorReviewStatsWidget.php",
+            "line": 67,
+            "icon": "heroicon-o-trophy",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorReviewStatsWidget.php",
+            "line": 72,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorStatsWidget.php",
+            "line": 60,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorStatsWidget.php",
+            "line": 66,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorStatsWidget.php",
+            "line": 71,
+            "icon": "heroicon-o-clipboard-document-list",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\InstructorStatsWidget.php",
+            "line": 76,
+            "icon": "heroicon-o-document-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\RecentAssignmentsWidget.php",
+            "line": 67,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\UpcomingSessionsWidget.php",
+            "line": 94,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\GroupMessages.php",
+            "line": 22,
+            "icon": "heroicon-o-envelope",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\GroupMessages.php",
+            "line": 83,
+            "icon": "heroicon-o-exclamation-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\GroupMessages.php",
+            "line": 84,
+            "icon": "heroicon-o-minus-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\GroupMessages.php",
+            "line": 85,
+            "icon": "heroicon-o-information-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\GroupMessages.php",
+            "line": 134,
+            "icon": "heroicon-o-envelope",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 22,
+            "icon": "heroicon-o-calendar-days",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 57,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 74,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 94,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 95,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 96,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 97,
+            "icon": "heroicon-o-information-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 105,
+            "icon": "heroicon-o-arrow-right-on-rectangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 111,
+            "icon": "heroicon-o-arrow-left-on-rectangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 153,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 167,
+            "icon": "heroicon-o-calendar-days",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyCourses.php",
+            "line": 20,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyCourses.php",
+            "line": 70,
+            "icon": "heroicon-o-book-open",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyCourses.php",
+            "line": 95,
+            "icon": "heroicon-o-user",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyCourses.php",
+            "line": 211,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyCourses.php",
+            "line": 227,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 21,
+            "icon": "heroicon-o-credit-card",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 61,
+            "icon": "heroicon-o-hashtag",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 87,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 93,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 160,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 176,
+            "icon": "heroicon-o-arrow-down-tray",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 184,
+            "icon": "heroicon-o-credit-card",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Resources\\Messages\\Tables\\MessagesTable.php",
+            "line": 27,
+            "icon": "heroicon-o-information-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Resources\\Messages\\Tables\\MessagesTable.php",
+            "line": 28,
+            "icon": "heroicon-o-exclamation-triangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Resources\\Messages\\Tables\\MessagesTable.php",
+            "line": 29,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Resources\\Messages\\Tables\\MessagesTable.php",
+            "line": 30,
+            "icon": "heroicon-o-bell-alert",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Resources\\Messages\\Tables\\MessagesTable.php",
+            "line": 76,
+            "icon": "heroicon-o-envelope-open",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Resources\\Messages\\Tables\\MessagesTable.php",
+            "line": 77,
+            "icon": "heroicon-o-envelope",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Resources\\Messages\\Tables\\MessagesTable.php",
+            "line": 117,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Widgets\\StatsOverviewWidget.php",
+            "line": 50,
+            "icon": "heroicon-m-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Widgets\\StatsOverviewWidget.php",
+            "line": 55,
+            "icon": "heroicon-m-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Widgets\\StatsOverviewWidget.php",
+            "line": 60,
+            "icon": "heroicon-m-clipboard-document-list",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\Dashboard.php",
+            "line": 13,
+            "icon": "heroicon-o-home",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\ExamResult.php",
+            "line": 12,
+            "icon": "heroicon-o-document-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\GroupMessages.php",
+            "line": 19,
+            "icon": "heroicon-o-chat-bubble-left-right",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\GroupMessages.php",
+            "line": 80,
+            "icon": "heroicon-o-exclamation-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\GroupMessages.php",
+            "line": 81,
+            "icon": "heroicon-o-minus-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\GroupMessages.php",
+            "line": 82,
+            "icon": "heroicon-o-information-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\GroupMessages.php",
+            "line": 131,
+            "icon": "heroicon-o-envelope",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAssignments.php",
+            "line": 21,
+            "icon": "heroicon-o-pencil-square",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 20,
+            "icon": "heroicon-o-calendar-days",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 55,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 72,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 92,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 93,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 94,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 95,
+            "icon": "heroicon-o-information-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 103,
+            "icon": "heroicon-o-arrow-right-on-rectangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 109,
+            "icon": "heroicon-o-arrow-left-on-rectangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 151,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 165,
+            "icon": "heroicon-o-calendar-days",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyCourses.php",
+            "line": 13,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyExams.php",
+            "line": 16,
+            "icon": "heroicon-o-check-badge",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyPayments.php",
+            "line": 15,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\StudentEnrollments.php",
+            "line": 17,
+            "icon": "heroicon-o-clipboard-document-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\StudentEnrollments.php",
+            "line": 51,
+            "icon": "heroicon-o-hashtag",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\StudentLearningResources.php",
+            "line": 14,
+            "icon": "heroicon-o-folder",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\StudentLearningResources.php",
+            "line": 177,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\StudentLearningResources.php",
+            "line": 178,
+            "icon": "heroicon-o-video-camera",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\StudentLearningResources.php",
+            "line": 179,
+            "icon": "heroicon-o-presentation-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\StudentLearningResources.php",
+            "line": 180,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\StudentLearningResources.php",
+            "line": 181,
+            "icon": "heroicon-o-photo",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\StudentLearningResources.php",
+            "line": 182,
+            "icon": "heroicon-o-musical-note",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\StudentLearningResources.php",
+            "line": 183,
+            "icon": "heroicon-o-link",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\StudentLearningResources.php",
+            "line": 184,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\StudentReports.php",
+            "line": 18,
+            "icon": "heroicon-o-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\TakeExam.php",
+            "line": 18,
+            "icon": "heroicon-o-pencil-square",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Resources\\InstructorReviewResource.php",
+            "line": 23,
+            "icon": "heroicon-o-star",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\AttendanceWidget.php",
+            "line": 41,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\AttendanceWidget.php",
+            "line": 57,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\AttendanceWidget.php",
+            "line": 78,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\AttendanceWidget.php",
+            "line": 79,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\AttendanceWidget.php",
+            "line": 80,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\AttendanceWidget.php",
+            "line": 81,
+            "icon": "heroicon-o-information-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\PaymentsWidget.php",
+            "line": 45,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\StatsOverviewWidget.php",
+            "line": 50,
+            "icon": "heroicon-m-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\StatsOverviewWidget.php",
+            "line": 55,
+            "icon": "heroicon-m-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\StatsOverviewWidget.php",
+            "line": 60,
+            "icon": "heroicon-m-clipboard-document-list",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Pages\\EducationalAlertsPage.php",
+            "line": 11,
+            "icon": "heroicon-o-bell-alert",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Pages\\GroupSupervisionProfilePage.php",
+            "line": 12,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Pages\\InstructorSupervisionProfilePage.php",
+            "line": 12,
+            "icon": "heroicon-o-identification",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\InstructorEvaluationResource.php",
+            "line": 32,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\InstructorEvaluationResource.php",
+            "line": 280,
+            "icon": "heroicon-o-arrow-up-tray",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\Pages\\ListInstructorEvaluations.php",
+            "line": 18,
+            "icon": "heroicon-o-plus-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorEvaluation.php",
+            "line": 32,
+            "icon": "heroicon-o-arrow-up-tray",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorEvaluation.php",
+            "line": 50,
+            "icon": "heroicon-o-chat-bubble-left-right",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ListSupervisionReports.php",
+            "line": 21,
+            "icon": "heroicon-o-bolt",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ListSupervisionReports.php",
+            "line": 41,
+            "icon": "heroicon-o-calendar-days",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ListSupervisionReports.php",
+            "line": 61,
+            "icon": "heroicon-o-plus-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ViewSupervisionReport.php",
+            "line": 37,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ViewSupervisionReport.php",
+            "line": 58,
+            "icon": "heroicon-o-chat-bubble-bottom-center-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\SupervisionReportResource.php",
+            "line": 31,
+            "icon": "heroicon-o-document-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\SupervisionReportResource.php",
+            "line": 216,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\Pages\\ListSupervisoryObservations.php",
+            "line": 18,
+            "icon": "heroicon-o-plus-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\Pages\\ViewSupervisoryObservation.php",
+            "line": 31,
+            "icon": "heroicon-o-check-badge",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\Pages\\ViewSupervisoryObservation.php",
+            "line": 52,
+            "icon": "heroicon-o-arrow-uturn-left",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\SupervisoryObservationResource.php",
+            "line": 33,
+            "icon": "heroicon-o-clipboard-document-list",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\SupervisoryObservationResource.php",
+            "line": 251,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\SupervisoryObservationResource.php",
+            "line": 271,
+            "icon": "heroicon-o-arrow-uturn-left",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Widgets\\SupervisorStatsWidget.php",
+            "line": 30,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Widgets\\SupervisorStatsWidget.php",
+            "line": 35,
+            "icon": "heroicon-o-exclamation-triangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Widgets\\SupervisorStatsWidget.php",
+            "line": 40,
+            "icon": "heroicon-o-user-minus",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Widgets\\SupervisorStatsWidget.php",
+            "line": 45,
+            "icon": "heroicon-o-clipboard-document-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Widgets\\SupervisorStatsWidget.php",
+            "line": 50,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Widgets\\SupervisorStatsWidget.php",
+            "line": 55,
+            "icon": "heroicon-o-arrow-trending-down",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Widgets\\SupervisorStatsWidget.php",
+            "line": 60,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Widgets\\SupervisorStatsWidget.php",
+            "line": 65,
+            "icon": "heroicon-o-clipboard-document-list",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Widgets\\SupervisorStatsWidget.php",
+            "line": 70,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 123,
+            "icon": "fi-shield-resource-section",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 130,
+            "icon": "heroicon-o-folder",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 152,
+            "icon": "fi-shield-group-section",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 300,
+            "icon": "heroicon-o-folder",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 328,
+            "icon": "fi-shield-group-section",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Filament\\Widgets\\NotificationsWidget.php",
+            "line": 28,
+            "icon": "heroicon-o-bell",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Models\\WhatsAppLog.php",
+            "line": 80,
+            "icon": "heroicon-o-chat-bubble-left-right",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Models\\WhatsAppLog.php",
+            "line": 81,
+            "icon": "heroicon-o-photo",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Models\\WhatsAppLog.php",
+            "line": 82,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Models\\WhatsAppLog.php",
+            "line": 83,
+            "icon": "heroicon-o-envelope",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Notifications\\AttendanceNotification.php",
+            "line": 45,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Notifications\\AttendanceNotification.php",
+            "line": 45,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Notifications\\CourseCompletedNotification.php",
+            "line": 67,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Notifications\\CourseCompletedNotification.php",
+            "line": 83,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Notifications\\NewAssignmentNotification.php",
+            "line": 32,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Notifications\\NewExamNotification.php",
+            "line": 32,
+            "icon": "heroicon-o-clipboard-document-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Notifications\\NewGradeNotification.php",
+            "line": 38,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Notifications\\PaymentNotification.php",
+            "line": 41,
+            "icon": "heroicon-o-currency-dollar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Providers\\AppServiceProvider.php",
+            "line": 72,
+            "icon": "fi-fixed-positioning-context",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Providers\\AppServiceProvider.php",
+            "line": 73,
+            "icon": "fi-fixed-positioning-context",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Providers\\Filament\\ParentPanelProvider.php",
+            "line": 71,
+            "icon": "fi-main-sidebar",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "app\\Providers\\Filament\\StudentPanelProvider.php",
+            "line": 73,
+            "icon": "fi-main-sidebar",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 9,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 22,
+            "icon": "heroicon-o-bell-alert",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 28,
+            "icon": "heroicon-o-clipboard-document-check",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 34,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 40,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 46,
+            "icon": "heroicon-o-clipboard-document-list",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 52,
+            "icon": "heroicon-o-phone-arrow-up-right",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 58,
+            "icon": "heroicon-o-chart-bar",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 120,
+            "icon": "heroicon-o-magnifying-glass",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 262,
+            "icon": "heroicon-m-phone",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 272,
+            "icon": "heroicon-m-device-phone-mobile",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 314,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 539,
+            "icon": "heroicon-m-clock",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 656,
+            "icon": "heroicon-m-x-mark",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 697,
+            "icon": "heroicon-m-x-mark",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 740,
+            "icon": "heroicon-m-x-mark",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 771,
+            "icon": "heroicon-m-x-mark",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+            "line": 815,
+            "icon": "heroicon-m-x-mark",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\barcode-attendance.blade.php",
+            "line": 552,
+            "icon": "heroicon-o-qr-code",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\barcode-print.blade.php",
+            "line": 302,
+            "icon": "heroicon-o-printer",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 155,
+            "icon": "heroicon-o-home",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 156,
+            "icon": "heroicon-o-user-plus",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 157,
+            "icon": "heroicon-o-document-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 158,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 159,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 160,
+            "icon": "heroicon-o-wallet",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 161,
+            "icon": "heroicon-o-calculator",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 162,
+            "icon": "heroicon-o-identification",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 163,
+            "icon": "heroicon-o-arrow-uturn-left",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 164,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 165,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 166,
+            "icon": "heroicon-o-briefcase",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 167,
+            "icon": "heroicon-o-building-office-2",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 168,
+            "icon": "heroicon-o-bell-alert",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 169,
+            "icon": "heroicon-o-bookmark",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 170,
+            "icon": "heroicon-o-cog-6-tooth",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 9,
+            "icon": "heroicon-o-presentation-chart-line",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 21,
+            "icon": "heroicon-o-bookmark",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 28,
+            "icon": "heroicon-o-table-cells",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 32,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 36,
+            "icon": "heroicon-o-arrow-down-tray",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 43,
+            "icon": "heroicon-o-arrow-path",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 52,
+            "icon": "heroicon-o-funnel",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 144,
+            "icon": "heroicon-o-magnifying-glass",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 194,
+            "icon": "heroicon-o-user-plus",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 201,
+            "icon": "heroicon-o-arrow-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 209,
+            "icon": "heroicon-o-document-check",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 223,
+            "icon": "heroicon-o-banknotes",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 237,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 254,
+            "icon": "heroicon-o-wallet",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 287,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 1178,
+            "icon": "heroicon-o-magnifying-glass-plus",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\reporting-center-page.blade.php",
+            "line": 1182,
+            "icon": "heroicon-o-x-mark",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\scheduled-tasks.blade.php",
+            "line": 75,
+            "icon": "heroicon-o-currency-dollar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\scheduled-tasks.blade.php",
+            "line": 83,
+            "icon": "heroicon-o-bell",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\scheduled-tasks.blade.php",
+            "line": 91,
+            "icon": "heroicon-o-play",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+            "line": 45,
+            "icon": "heroicon-o-document-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+            "line": 123,
+            "icon": "heroicon-o-printer",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+            "line": 293,
+            "icon": "heroicon-o-user",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 113,
+            "icon": "heroicon-m-chevron-right",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 117,
+            "icon": "heroicon-m-calendar-days",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 131,
+            "icon": "heroicon-m-chevron-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 151,
+            "icon": "heroicon-m-clock",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 159,
+            "icon": "heroicon-m-table-cells",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 203,
+            "icon": "heroicon-m-magnifying-glass",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 378,
+            "icon": "heroicon-m-map-pin",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+            "line": 519,
+            "icon": "heroicon-m-calendar-days",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 81,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 83,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 101,
+            "icon": "heroicon-s-check-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 103,
+            "icon": "heroicon-s-x-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 45,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 47,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 65,
+            "icon": "heroicon-s-check-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 67,
+            "icon": "heroicon-s-x-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\students\\pages\\issue-certificate.blade.php",
+            "line": 16,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\students\\pages\\student-transcript.blade.php",
+            "line": 152,
+            "icon": "heroicon-o-arrow-down-tray",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 7,
+            "icon": "heroicon-o-adjustments-horizontal",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 17,
+            "icon": "heroicon-o-document-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 36,
+            "icon": "heroicon-o-building-library",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 40,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 48,
+            "icon": "heroicon-o-printer",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 68,
+            "icon": "heroicon-o-wallet",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 82,
+            "icon": "heroicon-o-list-bullet",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 123,
+            "icon": "heroicon-o-inbox",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 140,
+            "icon": "heroicon-o-arrow-trending-up",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 154,
+            "icon": "heroicon-o-arrow-trending-down",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-report.blade.php",
+            "line": 168,
+            "icon": "heroicon-o-calculator",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\admin\\widgets\\barcode-attendance-shortcut.blade.php",
+            "line": 14,
+            "icon": "heroicon-o-qr-code",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\components\\attachments-list.blade.php",
+            "line": 25,
+            "icon": "heroicon-o-paper-clip",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 6,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 7,
+            "icon": "heroicon-o-video-camera",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 8,
+            "icon": "heroicon-o-presentation-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 9,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 10,
+            "icon": "heroicon-o-photo",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 11,
+            "icon": "heroicon-o-musical-note",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 12,
+            "icon": "heroicon-o-link",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 13,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 94,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 101,
+            "icon": "heroicon-o-arrow-down-tray",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+            "line": 109,
+            "icon": "heroicon-o-link",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 898,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 929,
+            "icon": "heroicon-o-arrow-right",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 934,
+            "icon": "heroicon-o-arrow-right",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 939,
+            "icon": "heroicon-o-arrow-right",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 944,
+            "icon": "heroicon-o-arrow-right",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 981,
+            "icon": "heroicon-o-pencil",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 985,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1013,
+            "icon": "heroicon-o-magnifying-glass",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1116,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1127,
+            "icon": "heroicon-o-pencil-square",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1137,
+            "icon": "heroicon-o-arrow-path",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1148,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1158,
+            "icon": "heroicon-o-users",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1202,
+            "icon": "heroicon-o-arrows-right-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1212,
+            "icon": "heroicon-o-calendar-days",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1222,
+            "icon": "heroicon-o-clipboard-document-list",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1232,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1242,
+            "icon": "heroicon-o-document-check",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1256,
+            "icon": "heroicon-o-book-open",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1263,
+            "icon": "heroicon-o-document-check",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1270,
+            "icon": "heroicon-o-inbox-arrow-down",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1277,
+            "icon": "heroicon-o-chart-bar",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1304,
+            "icon": "heroicon-o-plus-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1331,
+            "icon": "heroicon-o-arrow-right",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1339,
+            "icon": "heroicon-o-document-magnifying-glass",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1365,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1393,
+            "icon": "heroicon-o-chevron-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1405,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1461,
+            "icon": "heroicon-o-chevron-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1493,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1501,
+            "icon": "heroicon-o-chevron-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1555,
+            "icon": "heroicon-o-eye-slash",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1558,
+            "icon": "heroicon-o-check-badge",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1564,
+            "icon": "heroicon-o-arrow-right",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1641,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1652,
+            "icon": "heroicon-o-arrow-path",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1684,
+            "icon": "heroicon-o-plus-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1693,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1731,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1762,
+            "icon": "heroicon-o-pencil",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1769,
+            "icon": "heroicon-o-chevron-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1797,
+            "icon": "heroicon-o-magnifying-glass",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1901,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1909,
+            "icon": "heroicon-o-inbox",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 1937,
+            "icon": "heroicon-o-magnifying-glass",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2010,
+            "icon": "heroicon-o-identification",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2018,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2134,
+            "icon": "heroicon-o-arrows-pointing-out",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2147,
+            "icon": "heroicon-o-chevron-right",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2150,
+            "icon": "heroicon-o-chevron-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2170,
+            "icon": "heroicon-o-photo",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2185,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2249,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2255,
+            "icon": "heroicon-o-check-badge",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2263,
+            "icon": "heroicon-o-arrow-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2807,
+            "icon": "heroicon-o-chevron-right",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+            "line": 2810,
+            "icon": "heroicon-o-chevron-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 47,
+            "icon": "heroicon-o-information-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 81,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 91,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 101,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 111,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 150,
+            "icon": "heroicon-o-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\pages\\take-attendance.blade.php",
+            "line": 156,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 679,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 684,
+            "icon": "heroicon-o-arrow-path",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 840,
+            "icon": "heroicon-o-eye",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 851,
+            "icon": "heroicon-o-users",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 898,
+            "icon": "heroicon-o-x-mark",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 910,
+            "icon": "heroicon-o-magnifying-glass-plus",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 913,
+            "icon": "heroicon-o-magnifying-glass-minus",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 927,
+            "icon": "heroicon-o-chevron-right",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 930,
+            "icon": "heroicon-o-chevron-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 944,
+            "icon": "heroicon-o-photo",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 973,
+            "icon": "heroicon-o-chat-bubble-left-right",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 1066,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 1072,
+            "icon": "heroicon-o-check-badge",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 1081,
+            "icon": "heroicon-o-arrow-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+            "line": 1087,
+            "icon": "heroicon-o-information-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 81,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 83,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 101,
+            "icon": "heroicon-s-check-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exam-attempts\\view-details.blade.php",
+            "line": 103,
+            "icon": "heroicon-s-x-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 45,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 47,
+            "icon": "heroicon-o-x-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 65,
+            "icon": "heroicon-s-check-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\instructor\\resources\\exams\\relation-managers\\attempt-details.blade.php",
+            "line": 67,
+            "icon": "heroicon-s-x-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\attendance-details-modal.blade.php",
+            "line": 53,
+            "icon": "heroicon-o-arrow-right-on-rectangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\attendance-details-modal.blade.php",
+            "line": 58,
+            "icon": "heroicon-o-arrow-left-on-rectangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\course-details-modal.blade.php",
+            "line": 72,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\submission-details-modal.blade.php",
+            "line": 38,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 9,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 10,
+            "icon": "heroicon-o-video-camera",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 11,
+            "icon": "heroicon-o-presentation-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 12,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 13,
+            "icon": "heroicon-o-photo",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 14,
+            "icon": "heroicon-o-musical-note",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 15,
+            "icon": "heroicon-o-link",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 16,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 99,
+            "icon": "heroicon-o-user",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 104,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 110,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 121,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 128,
+            "icon": "heroicon-o-arrow-path",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 143,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 151,
+            "icon": "heroicon-o-link",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+            "line": 168,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-message-modal.blade.php",
+            "line": 12,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-message-modal.blade.php",
+            "line": 19,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-message-modal.blade.php",
+            "line": 58,
+            "icon": "heroicon-o-paper-clip",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-message-modal.blade.php",
+            "line": 71,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\pages\\view-message-modal.blade.php",
+            "line": 78,
+            "icon": "heroicon-o-arrow-down-tray",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\widgets\\student-switcher.blade.php",
+            "line": 5,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\parent\\widgets\\student-switcher.blade.php",
+            "line": 27,
+            "icon": "heroicon-o-information-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\attendance-details-modal.blade.php",
+            "line": 53,
+            "icon": "heroicon-o-arrow-right-on-rectangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\attendance-details-modal.blade.php",
+            "line": 58,
+            "icon": "heroicon-o-arrow-left-on-rectangle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 12,
+            "icon": "calendar-days",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 19,
+            "icon": "sparkles",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 22,
+            "icon": "arrow-left",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 26,
+            "icon": "code-2",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 27,
+            "icon": "star",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 28,
+            "icon": "sparkles",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 35,
+            "icon": "book-open",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 39,
+            "icon": "calendar-check",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 43,
+            "icon": "notebook-pen",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 47,
+            "icon": "clipboard-check",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 59,
+            "icon": "chevron-left",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 66,
+            "icon": "code-2",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 74,
+            "icon": "calendar-days",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 75,
+            "icon": "arrow-left",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 82,
+            "icon": "book-open",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 94,
+            "icon": "clipboard-check",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 98,
+            "icon": "folder",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 102,
+            "icon": "wallet",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 106,
+            "icon": "calendar-check",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 110,
+            "icon": "message-circle",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 114,
+            "icon": "chart-no-axes-column-increasing",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 118,
+            "icon": "star",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 122,
+            "icon": "check-square",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 133,
+            "icon": "calendar-days",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 142,
+            "icon": "medal",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 150,
+            "icon": "arrow-left",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 157,
+            "icon": "chevron-left",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+            "line": 160,
+            "icon": "clipboard-check",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+            "line": 231,
+            "icon": "notebook-pen",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+            "line": 251,
+            "icon": "notebook-pen",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+            "line": 257,
+            "icon": "check-circle",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+            "line": 263,
+            "icon": "medal",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+            "line": 269,
+            "icon": "clock-3",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+            "line": 285,
+            "icon": "notebook-pen",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+            "line": 335,
+            "icon": "notebook-pen",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-courses.blade.php",
+            "line": 10,
+            "icon": "book-open",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-courses.blade.php",
+            "line": 24,
+            "icon": "book-open",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-courses.blade.php",
+            "line": 32,
+            "icon": "users",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-courses.blade.php",
+            "line": 34,
+            "icon": "user-round",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-courses.blade.php",
+            "line": 37,
+            "icon": "clock-3",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-courses.blade.php",
+            "line": 47,
+            "icon": "book-open",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-exams.blade.php",
+            "line": 10,
+            "icon": "clipboard-check",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-exams.blade.php",
+            "line": 31,
+            "icon": "clipboard-check",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-exams.blade.php",
+            "line": 37,
+            "icon": "check-circle",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-exams.blade.php",
+            "line": 43,
+            "icon": "calendar-days",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-exams.blade.php",
+            "line": 49,
+            "icon": "medal",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-exams.blade.php",
+            "line": 63,
+            "icon": "clipboard-check",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-exams.blade.php",
+            "line": 76,
+            "icon": "clock-3",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-exams.blade.php",
+            "line": 92,
+            "icon": "clipboard-check",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-payments.blade.php",
+            "line": 13,
+            "icon": "wallet",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-payments.blade.php",
+            "line": 20,
+            "icon": "receipt",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-payments.blade.php",
+            "line": 26,
+            "icon": "check-circle",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-payments.blade.php",
+            "line": 32,
+            "icon": "star",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-payments.blade.php",
+            "line": 38,
+            "icon": "file-text",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-payments.blade.php",
+            "line": 49,
+            "icon": "triangle-alert",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-payments.blade.php",
+            "line": 67,
+            "icon": "receipt",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-payments.blade.php",
+            "line": 81,
+            "icon": "receipt",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-payments.blade.php",
+            "line": 115,
+            "icon": "calendar-days",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\my-payments.blade.php",
+            "line": 124,
+            "icon": "info",
+            "valid": true,
+            "type": "student-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 628,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 632,
+            "icon": "heroicon-o-star",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 636,
+            "icon": "heroicon-o-clock",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 673,
+            "icon": "heroicon-o-information-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 682,
+            "icon": "heroicon-o-shield-check",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 688,
+            "icon": "heroicon-o-document-magnifying-glass",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 727,
+            "icon": "heroicon-s-check-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 754,
+            "icon": "heroicon-o-arrow-right",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\take-exam.blade.php",
+            "line": 763,
+            "icon": "heroicon-o-paper-airplane",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 9,
+            "icon": "heroicon-o-document-text",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 10,
+            "icon": "heroicon-o-video-camera",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 11,
+            "icon": "heroicon-o-presentation-chart-bar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 12,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 13,
+            "icon": "heroicon-o-photo",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 14,
+            "icon": "heroicon-o-musical-note",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 15,
+            "icon": "heroicon-o-link",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 16,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 99,
+            "icon": "heroicon-o-user",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 104,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 110,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 121,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 128,
+            "icon": "heroicon-o-arrow-path",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 143,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 151,
+            "icon": "heroicon-o-link",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+            "line": 168,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-message-modal.blade.php",
+            "line": 12,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-message-modal.blade.php",
+            "line": 19,
+            "icon": "heroicon-o-calendar",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-message-modal.blade.php",
+            "line": 58,
+            "icon": "heroicon-o-paper-clip",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-message-modal.blade.php",
+            "line": 71,
+            "icon": "heroicon-o-document",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\student\\pages\\view-message-modal.blade.php",
+            "line": 78,
+            "icon": "heroicon-o-arrow-down-tray",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\educational-alerts.blade.php",
+            "line": 8,
+            "icon": "heroicon-o-bell-alert",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\educational-alerts.blade.php",
+            "line": 26,
+            "icon": "heroicon-o-check-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\educational-alerts.blade.php",
+            "line": 69,
+            "icon": "heroicon-m-arrow-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\group-profiles.blade.php",
+            "line": 24,
+            "icon": "heroicon-o-plus-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\group-profiles.blade.php",
+            "line": 67,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\group-profiles.blade.php",
+            "line": 86,
+            "icon": "heroicon-o-clipboard-document-list",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\instructor-profiles.blade.php",
+            "line": 24,
+            "icon": "heroicon-o-plus-circle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\instructor-profiles.blade.php",
+            "line": 30,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\instructor-profiles.blade.php",
+            "line": 77,
+            "icon": "heroicon-o-user-group",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\instructor-profiles.blade.php",
+            "line": 104,
+            "icon": "heroicon-o-exclamation-triangle",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\pages\\instructor-profiles.blade.php",
+            "line": 140,
+            "icon": "heroicon-o-academic-cap",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\widgets\\daily-priority-queue-widget.blade.php",
+            "line": 9,
+            "icon": "heroicon-o-queue-list",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\widgets\\daily-priority-queue-widget.blade.php",
+            "line": 28,
+            "icon": "heroicon-o-check-badge",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\supervisor\\widgets\\daily-priority-queue-widget.blade.php",
+            "line": 66,
+            "icon": "heroicon-m-arrow-left",
+            "valid": true,
+            "type": "blade-component"
+        },
+        {
+            "file": "resources\\views\\filament\\widgets\\notifications-widget.blade.php",
+            "line": 57,
+            "icon": "heroicon-o-check",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\filament\\widgets\\notifications-widget.blade.php",
+            "line": 67,
+            "icon": "heroicon-o-bell-slash",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-daterangepicker-filter\\date-range-picker.blade.php",
+            "line": 108,
+            "icon": "fi-fo-text-input",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\forms\\components\\browser-sessions.blade.php",
+            "line": 12,
+            "icon": "fi-in-entry",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\forms\\components\\browser-sessions.blade.php",
+            "line": 18,
+            "icon": "heroicon-o-computer-desktop",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\forms\\components\\browser-sessions.blade.php",
+            "line": 23,
+            "icon": "heroicon-o-device-phone-mobile",
+            "valid": true,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\livewire\\browser-sessions-form.blade.php",
+            "line": 2,
+            "icon": "fi-sc-form",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\livewire\\custom-fields-form.blade.php",
+            "line": 1,
+            "icon": "fi-sc-form",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\livewire\\delete-account-form.blade.php",
+            "line": 2,
+            "icon": "fi-sc-form",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\livewire\\edit-password-form.blade.php",
+            "line": 1,
+            "icon": "fi-sc-form",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\livewire\\edit-profile-form.blade.php",
+            "line": 1,
+            "icon": "fi-sc-form",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "resources\\views\\vendor\\filament-edit-profile\\livewire\\multi-factor-authentication.blade.php",
+            "line": 2,
+            "icon": "fi-sc-form",
+            "valid": false,
+            "type": "blade-icon"
+        },
+        {
+            "file": "config\\filament-authentication-log.php",
+            "line": 24,
+            "icon": "heroicon-o-shield-check",
+            "valid": true,
+            "type": "blade-icon"
+        }
+    ]
+}

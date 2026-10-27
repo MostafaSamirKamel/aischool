@@ -1,0 +1,165 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\LearningResources\Schemas;
+
+use App\Models\Course;
+use App\Models\Group;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Radio;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Get;
+use Filament\Schemas\Components\Grid;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Schema;
+
+class LearningResourceForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->schema([
+                Section::make('معلومات المادة')
+                    ->schema([
+                        TextInput::make('title')
+                            ->label('عنوان المادة')
+                            ->required()
+                            ->maxLength(255)
+                            ->columnSpanFull(),
+
+                        Textarea::make('description')
+                            ->label('وصف المادة')
+                            ->rows(3)
+                            ->maxLength(1000)
+                            ->columnSpanFull(),
+
+                        Grid::make(2)
+                            ->schema([
+                                Select::make('type')
+                                    ->label('نوع المادة')
+                                    ->required()
+                                    ->options([
+                                        'pdf' => 'PDF',
+                                        'video' => 'فيديو',
+                                        'presentation' => 'عرض تقديمي (PPT)',
+                                        'document' => 'مستند (Word, Excel)',
+                                        'image' => 'صورة',
+                                        'audio' => 'صوت',
+                                        'link' => 'رابط خارجي',
+                                        'other' => 'أخرى',
+                                    ])
+                                    ->native(false)
+                                    ->live(),
+
+                                Radio::make('visibility')
+                                    ->label('الظهور')
+                                    ->options([
+                                        'all' => 'جميع الطلاب',
+                                        'course' => 'طلاب الكورس فقط',
+                                        'group' => 'طلاب المجموعة فقط',
+                                    ])
+                                    ->default('all')
+                                    ->required()
+                                    ->inline()
+                                    ->live(),
+                            ]),
+                    ]),
+
+                Section::make('ربط المادة')
+                    ->schema([
+                        Grid::make(2)
+                            ->schema([
+                                Select::make('course_id')
+                                    ->label('الكورس (اختياري)')
+                                    ->searchable()
+                                    ->options(function () {
+                                        return Course::whereHas('groups', function ($query) {
+                                            $query->where('instructor_id', auth()->id());
+                                        })
+                                        ->pluck('name', 'id');
+                                    })
+                                    ->live()
+                                    ->visible(fn (Get $get) => in_array($get('visibility'), ['course', 'group'])),
+
+                                Select::make('group_id')
+                                    ->label('المجموعة (اختياري)')
+                                    ->searchable()
+                                    ->options(function (Get $get) {
+                                        $query = Group::where('instructor_id', auth()->id());
+                                        
+                                        if ($courseId = $get('course_id')) {
+                                            $query->where('course_id', $courseId);
+                                        }
+                                        
+                                        return $query->pluck('name', 'id');
+                                    })
+                                    ->visible(fn (Get $get) => $get('visibility') === 'group'),
+                            ]),
+                    ])
+                    ->visible(fn (Get $get) => in_array($get('visibility'), ['course', 'group'])),
+
+                Section::make('رفع الملف أو الرابط')
+                    ->schema([
+                        FileUpload::make('file_path')
+                            ->label('رفع ملف')
+                            ->disk('public')
+                            ->directory('learning-resources')
+                            ->maxSize(51200) // 50MB
+                            ->acceptedFileTypes([
+                                'application/pdf',
+                                'application/msword',
+                                'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                                'application/vnd.ms-excel',
+                                'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                                'application/vnd.ms-powerpoint',
+                                'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+                                'image/*',
+                                'video/*',
+                                'audio/*',
+                            ])
+                            ->previewable()
+                            ->downloadable()
+                            ->openable()
+                            ->visible(fn (Get $get) => $get('type') !== 'link')
+                            ->helperText('الحد الأقصى: 50 ميجابايت')
+                            ->afterStateUpdated(function ($state, callable $set) {
+                                if ($state) {
+                                    // Get file info
+                                    $file = is_array($state) ? $state[0] : $state;
+                                    if ($file instanceof \Livewire\Features\SupportFileUploads\TemporaryUploadedFile) {
+                                        $set('file_name', $file->getClientOriginalName());
+                                        $set('file_size', round($file->getSize() / 1024, 2)); // KB
+                                        $set('file_extension', $file->getClientOriginalExtension());
+                                    }
+                                }
+                            }),
+
+                        TextInput::make('external_link')
+                            ->label('رابط خارجي')
+                            ->url()
+                            ->maxLength(500)
+                            ->visible(fn (Get $get) => $get('type') === 'link')
+                            ->helperText('مثال: رابط يوتيوب، جوجل درايف، إلخ')
+                            ->columnSpanFull(),
+                    ]),
+
+                Section::make('الإعدادات')
+                    ->schema([
+                        Grid::make(2)
+                            ->schema([
+                                Toggle::make('is_downloadable')
+                                    ->label('قابل للتحميل')
+                                    ->default(true)
+                                    ->helperText('السماح للطلاب بتحميل الملف'),
+
+                                Toggle::make('is_active')
+                                    ->label('نشط')
+                                    ->default(true)
+                                    ->helperText('إظهار المادة للطلاب'),
+                            ]),
+                    ]),
+            ]);
+    }
+}

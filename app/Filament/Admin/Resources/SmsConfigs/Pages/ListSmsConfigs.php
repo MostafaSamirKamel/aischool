@@ -1,0 +1,38 @@
+<?php
+
+namespace App\Filament\Admin\Resources\SmsConfigs\Pages;
+
+use App\Filament\Admin\Resources\SmsConfigs\SmsConfigResource;
+use Filament\Resources\Pages\ListRecords;
+
+class ListSmsConfigs extends ListRecords
+{
+    protected static string $resource = SmsConfigResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        $actions = [];
+
+        if (!auth()->user()->is_super_admin) {
+            $actions[] = \Filament\Actions\CreateAction::make();
+        }
+
+        return $actions;
+    }
+
+    public function getTitle(): string
+    {
+        return __('filament/admin/sms_settings.title');
+    }
+
+    public function getHeading(): string
+    {
+        return __('filament/admin/sms_settings.heading');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/list_sms_configs.title');
+    }
+
+}

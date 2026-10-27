@@ -1,0 +1,96 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\AttendanceSessions\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\Filter;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+
+class AttendanceSessionsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('attendance_date')
+                    ->label('التاريخ')
+                    ->date()
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('group.name')
+                    ->label('المجموعة')
+                    ->sortable(),
+                TextColumn::make('course.name')
+                    ->label('المقرر')
+                    ->sortable(),
+                TextColumn::make('classroom')
+                    ->label('القاعة')
+                    ->default('-'),
+                TextColumn::make('records_count')
+                    ->label('عدد الطلاب')
+                    ->counts('records')
+                    ->sortable(),
+                TextColumn::make('present_count')
+                    ->label('حاضر')
+                    ->getStateUsing(function ($record) {
+                        return $record->records()->where('status', 'present')->count();
+                    })
+                    ->color('success'),
+                TextColumn::make('absent_count')
+                    ->label('غائب')
+                    ->getStateUsing(function ($record) {
+                        return $record->records()->where('status', 'absent')->count();
+                    })
+                    ->color('danger'),
+                TextColumn::make('late_count')
+                    ->label('متأخر')
+                    ->getStateUsing(function ($record) {
+                        return $record->records()->where('status', 'late')->count();
+                    })
+                    ->color('warning'),
+                TextColumn::make('created_at')
+                    ->label('تاريخ الإنشاء')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                SelectFilter::make('group_id')
+                    ->label('المجموعة')
+                    ->relationship('group', 'name'),
+                Filter::make('attendance_date')
+                    ->label('تاريخ الحضور')
+                    ->form([
+                        \Filament\Forms\Components\DatePicker::make('from')
+                            ->label('من'),
+                        \Filament\Forms\Components\DatePicker::make('until')
+                            ->label('إلى'),
+                    ])
+                    ->query(function (Builder $query, array $data): Builder {
+                        return $query
+                            ->when(
+                                $data['from'],
+                                fn (Builder $query, $date): Builder => $query->whereDate('attendance_date', '>=', $date),
+                            )
+                            ->when(
+                                $data['until'],
+                                fn (Builder $query, $date): Builder => $query->whereDate('attendance_date', '<=', $date),
+                            );
+                    }),
+            ])
+            ->recordActions([
+                EditAction::make(),
+            ])
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                ]),
+            ])
+            ->defaultSort('attendance_date', 'desc');
+    }
+}

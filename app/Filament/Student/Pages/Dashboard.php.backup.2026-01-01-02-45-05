@@ -1,0 +1,68 @@
+<?php
+
+namespace App\Filament\Student\Pages;
+
+use Filament\Pages\Dashboard as BaseDashboard;
+
+class Dashboard extends BaseDashboard
+{
+    public function getTitle(): string
+    {
+        return __('filament/student/dashboard.title');
+    }
+
+    public function getHeading(): string
+    {
+        $hour = now()->hour;
+        if ($hour < 12) {
+            $greeting = __('dashboard.greetings.morning');
+        } elseif ($hour < 17) {
+            $greeting = __('dashboard.greetings.afternoon');
+        } else {
+            $greeting = __('dashboard.greetings.evening');
+        }
+        return $greeting . ' ' . auth()->user()->name . '! 👋';
+    }
+
+    public function getSubheading(): ?string
+    {
+        return __('filament/student/dashboard.subheading');
+    }
+
+    public function getView(): string
+    {
+        return 'filament.student.pages.dashboard';
+    }
+
+    public function getHeaderWidgets(): array
+    {
+        return [
+            \App\Filament\Student\Widgets\StatsOverviewWidget::class,
+        ];
+    }
+
+    public function getWidgets(): array
+    {
+        return [
+            \App\Filament\Student\Widgets\MyCoursesWidget::class,
+            \App\Filament\Student\Widgets\UpcomingAssignmentsWidget::class,
+            \App\Filament\Student\Widgets\RecentGradesWidget::class,
+            \App\Filament\Student\Widgets\AttendanceWidget::class,
+            \App\Filament\Student\Widgets\PaymentsWidget::class,
+        ];
+    }
+
+    public function getColumns(): int | array
+    {
+        return [
+            'md' => 2,
+            'xl' => 3,
+        ];
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/student/dashboard.title');
+    }
+
+}

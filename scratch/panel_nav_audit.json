@@ -1,0 +1,917 @@
+{
+    "resources": {
+        "admin": {
+            "App\\Filament\\Admin\\Resources\\Admins\\AdminResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Admins\\AdminResource",
+                "model": "App\\Models\\Admin",
+                "label": "الإداريين",
+                "group": "الموارد البشرية",
+                "nav_icon": "o-user-group",
+                "active_nav_icon": "o-user-group",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\AssignmentResource\\ExamAttemptResource": {
+                "class": "App\\Filament\\Admin\\Resources\\AssignmentResource\\ExamAttemptResource",
+                "model": "App\\Models\\ExamAttempt",
+                "label": "الامتحانات الإلكترونية",
+                "group": "الامتحانات والتقييم",
+                "nav_icon": "o-clipboard-document-list",
+                "active_nav_icon": "o-clipboard-document-list",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\AttendanceSessions\\AttendanceSessionResource": {
+                "class": "App\\Filament\\Admin\\Resources\\AttendanceSessions\\AttendanceSessionResource",
+                "model": "App\\Models\\AttendanceSession",
+                "label": "سجلات الحضور",
+                "group": "الطلاب والتسجيل",
+                "nav_icon": "o-calendar-days",
+                "active_nav_icon": "o-calendar-days",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Classrooms\\ClassroomResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Classrooms\\ClassroomResource",
+                "model": "App\\Models\\Classroom",
+                "label": "القاعات",
+                "group": "المحتوى التعليمي",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Courses\\CourseResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Courses\\CourseResource",
+                "model": "App\\Models\\Course",
+                "label": "الكورسات",
+                "group": "المحتوى التعليمي",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Departments\\DepartmentResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Departments\\DepartmentResource",
+                "model": "App\\Models\\Department",
+                "label": "أقسام المؤسسة",
+                "group": "البيانات الأساسية",
+                "nav_icon": "o-building-office-2",
+                "active_nav_icon": "o-building-office-2",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Enrollments\\EnrollmentResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Enrollments\\EnrollmentResource",
+                "model": "App\\Models\\Enrollment",
+                "label": "تسجيل الطلاب بالكورسات والمجموعات",
+                "group": "الطلاب والتسجيل",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Exams\\ExamResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Exams\\ExamResource",
+                "model": "App\\Models\\Exam",
+                "label": "الامتحانات",
+                "group": "الامتحانات والتقييم",
+                "nav_icon": "o-academic-cap",
+                "active_nav_icon": "o-academic-cap",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\ExpenseCategories\\ExpenseCategoryResource": {
+                "class": "App\\Filament\\Admin\\Resources\\ExpenseCategories\\ExpenseCategoryResource",
+                "model": "App\\Models\\ExpenseCategory",
+                "label": "فئات المصروفات",
+                "group": "الإدارة المالية",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Expenses\\ExpenseResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Expenses\\ExpenseResource",
+                "model": "App\\Models\\Expense",
+                "label": "المصروفات",
+                "group": "الإدارة المالية",
+                "nav_icon": "o-banknotes",
+                "active_nav_icon": "o-banknotes",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Grades\\GradeResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Grades\\GradeResource",
+                "model": "App\\Models\\Grade",
+                "label": "النتائج الرسمية",
+                "group": "الامتحانات والتقييم",
+                "nav_icon": "o-chart-bar",
+                "active_nav_icon": "o-chart-bar",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Groups\\GroupResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Groups\\GroupResource",
+                "model": "App\\Models\\Group",
+                "label": "المجموعات",
+                "group": "المحتوى التعليمي",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\AdminInstructorEvaluationAppealResource": {
+                "class": "App\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\AdminInstructorEvaluationAppealResource",
+                "model": "App\\Models\\InstructorEvaluationAppeal",
+                "label": "اعتراضات تقييمات المهندسين",
+                "group": "التقارير والمتابعة",
+                "nav_icon": "heroicon-o-scale",
+                "active_nav_icon": "heroicon-o-scale",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Resources\\Instructors\\InstructorResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Instructors\\InstructorResource",
+                "model": "App\\Models\\Instructor",
+                "label": "المدرسين",
+                "group": "الموارد البشرية",
+                "nav_icon": "o-user-group",
+                "active_nav_icon": "o-user-group",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Nationalities\\NationalityResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Nationalities\\NationalityResource",
+                "model": "App\\Models\\Nationality",
+                "label": "الجنسيات",
+                "group": "البيانات الأساسية",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Occupations\\OccupationResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Occupations\\OccupationResource",
+                "model": "App\\Models\\Occupation",
+                "label": "المهن",
+                "group": "البيانات الأساسية",
+                "nav_icon": "o-briefcase",
+                "active_nav_icon": "o-briefcase",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\OverdueInstallmentResource": {
+                "class": "App\\Filament\\Admin\\Resources\\OverdueInstallmentResource",
+                "model": "App\\Models\\Installment",
+                "label": "الأقساط المتأخرة",
+                "group": "التقارير المالية",
+                "nav_icon": "heroicon-o-exclamation-triangle",
+                "active_nav_icon": "heroicon-o-exclamation-triangle",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Resources\\Payments\\PaymentResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Payments\\PaymentResource",
+                "model": "App\\Models\\Payment",
+                "label": "المدفوعات",
+                "group": "الطلاب والتسجيل",
+                "nav_icon": "o-currency-dollar",
+                "active_nav_icon": "o-currency-dollar",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\RevenueCategories\\RevenueCategoryResource": {
+                "class": "App\\Filament\\Admin\\Resources\\RevenueCategories\\RevenueCategoryResource",
+                "model": "App\\Models\\RevenueCategory",
+                "label": "فئات الإيرادات",
+                "group": "الإدارة المالية",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Revenues\\RevenueResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Revenues\\RevenueResource",
+                "model": "App\\Models\\Revenue",
+                "label": "الإيرادات",
+                "group": "الإدارة المالية",
+                "nav_icon": "o-currency-dollar",
+                "active_nav_icon": "o-currency-dollar",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Roles\\RoleResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Roles\\RoleResource",
+                "model": "Spatie\\Permission\\Models\\Role",
+                "label": "الأدوار",
+                "group": "الإدارة والمستخدمين",
+                "nav_icon": "heroicon-o-shield-check",
+                "active_nav_icon": "heroicon-s-shield-check",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Resources\\SalaryPayments\\SalaryPaymentResource": {
+                "class": "App\\Filament\\Admin\\Resources\\SalaryPayments\\SalaryPaymentResource",
+                "model": "App\\Models\\SalaryPayment",
+                "label": "المرتبات",
+                "group": "الإدارة المالية",
+                "nav_icon": "o-banknotes",
+                "active_nav_icon": "o-banknotes",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Settings\\SettingResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Settings\\SettingResource",
+                "model": "App\\Models\\Setting",
+                "label": "الإعدادات",
+                "group": "البيانات الأساسية",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\SmsConfigs\\SmsConfigResource": {
+                "class": "App\\Filament\\Admin\\Resources\\SmsConfigs\\SmsConfigResource",
+                "model": "App\\Models\\SmsConfig",
+                "label": "إعدادات الرسائل",
+                "group": "البيانات الأساسية",
+                "nav_icon": "o-device-phone-mobile",
+                "active_nav_icon": "o-device-phone-mobile",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\SmsLogResource\\SmsLogResource": {
+                "class": "App\\Filament\\Admin\\Resources\\SmsLogResource\\SmsLogResource",
+                "model": "App\\Models\\SmsLog",
+                "label": "سجل الرسائل",
+                "group": "الطلاب والتسجيل",
+                "nav_icon": "o-chat-bubble-left-right",
+                "active_nav_icon": "o-chat-bubble-left-right",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\StudentFollowUpTaskResource": {
+                "class": "App\\Filament\\Admin\\Resources\\StudentFollowUpTaskResource",
+                "model": "App\\Models\\StudentFollowUpTask",
+                "label": "متابعة الطلاب",
+                "group": "إدارة الطلاب",
+                "nav_icon": "heroicon-o-clipboard-document-check",
+                "active_nav_icon": "heroicon-o-clipboard-document-check",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Resources\\StudentParents\\StudentParentResource": {
+                "class": "App\\Filament\\Admin\\Resources\\StudentParents\\StudentParentResource",
+                "model": "App\\Models\\StudentParent",
+                "label": "أولياء الأمور",
+                "group": "الموارد البشرية",
+                "nav_icon": "o-users",
+                "active_nav_icon": "o-users",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Students\\StudentResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Students\\StudentResource",
+                "model": "App\\Models\\Student",
+                "label": "الطلاب",
+                "group": "الموارد البشرية",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource": {
+                "class": "App\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource",
+                "model": "App\\Models\\SupervisionReport",
+                "label": "تقارير الإشراف التعليمي للفروع",
+                "group": "التقارير والمتابعة",
+                "nav_icon": "heroicon-o-document-chart-bar",
+                "active_nav_icon": "heroicon-o-document-chart-bar",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Resources\\Supervisors\\SupervisorResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Supervisors\\SupervisorResource",
+                "model": "App\\Models\\Supervisor",
+                "label": "المشرفون",
+                "group": "الموارد البشرية",
+                "nav_icon": "o-user-circle",
+                "active_nav_icon": "o-user-circle",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Tenants\\TenantResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Tenants\\TenantResource",
+                "model": "App\\Models\\Tenant",
+                "label": "المؤسسات",
+                "group": "الإدارة والمستخدمين",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Tracks\\TrackResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Tracks\\TrackResource",
+                "model": "App\\Models\\Track",
+                "label": "المسارات التعليمية",
+                "group": "المحتوى التعليمي",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\Users\\UserResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Users\\UserResource",
+                "model": "App\\Models\\User",
+                "label": "المستخدمين",
+                "group": "الإدارة والمستخدمين",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\VaultReconciliations\\VaultReconciliationResource": {
+                "class": "App\\Filament\\Admin\\Resources\\VaultReconciliations\\VaultReconciliationResource",
+                "model": "App\\Models\\VaultReconciliation",
+                "label": "تسويات الخزائن",
+                "group": "الإدارة المالية",
+                "nav_icon": "o-clipboard-document-check",
+                "active_nav_icon": "o-clipboard-document-check",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Resources\\VaultTransfers\\VaultTransferResource": {
+                "class": "App\\Filament\\Admin\\Resources\\VaultTransfers\\VaultTransferResource",
+                "model": "App\\Models\\VaultTransfer",
+                "label": "التحويلات بين الخزائن",
+                "group": "الإدارة المالية",
+                "nav_icon": "heroicon-o-arrow-path",
+                "active_nav_icon": "heroicon-o-arrow-path",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Resources\\Vaults\\VaultResource": {
+                "class": "App\\Filament\\Admin\\Resources\\Vaults\\VaultResource",
+                "model": "App\\Models\\Vault",
+                "label": "الخزائن",
+                "group": "الإدارة المالية",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            }
+        },
+        "instructor": {
+            "App\\Filament\\Instructor\\Resources\\AssignmentSubmissions\\AssignmentSubmissionResource": {
+                "class": "App\\Filament\\Instructor\\Resources\\AssignmentSubmissions\\AssignmentSubmissionResource",
+                "model": "App\\Models\\AssignmentSubmission",
+                "label": "تسليمات الواجبات",
+                "group": "إدارة المحتوى",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Instructor\\Resources\\Assignments\\AssignmentResource": {
+                "class": "App\\Filament\\Instructor\\Resources\\Assignments\\AssignmentResource",
+                "model": "App\\Models\\Assignment",
+                "label": "الواجبات",
+                "group": "إدارة المحتوى",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Instructor\\Resources\\AttendanceSessions\\AttendanceSessionResource": {
+                "class": "App\\Filament\\Instructor\\Resources\\AttendanceSessions\\AttendanceSessionResource",
+                "model": "App\\Models\\AttendanceSession",
+                "label": "جلسات الحضور",
+                "group": "إدارة المجموعات",
+                "nav_icon": "o-rectangle-stack",
+                "active_nav_icon": "o-rectangle-stack",
+                "valid_icon": false
+            },
+            "App\\Filament\\Instructor\\Resources\\Exams\\ExamResource": {
+                "class": "App\\Filament\\Instructor\\Resources\\Exams\\ExamResource",
+                "model": "App\\Models\\Exam",
+                "label": "الامتحانات",
+                "group": "إدارة المحتوى",
+                "nav_icon": "o-academic-cap",
+                "active_nav_icon": "o-academic-cap",
+                "valid_icon": false
+            },
+            "App\\Filament\\Instructor\\Resources\\GroupMessageResource\\GroupMessageResource": {
+                "class": "App\\Filament\\Instructor\\Resources\\GroupMessageResource\\GroupMessageResource",
+                "model": "App\\Models\\GroupMessage",
+                "label": "رسائل المجموعات",
+                "group": "التواصل",
+                "nav_icon": "o-envelope",
+                "active_nav_icon": "o-envelope",
+                "valid_icon": false
+            },
+            "App\\Filament\\Instructor\\Resources\\InstructorEvaluations\\InstructorMyEvaluationResource": {
+                "class": "App\\Filament\\Instructor\\Resources\\InstructorEvaluations\\InstructorMyEvaluationResource",
+                "model": "App\\Models\\InstructorEvaluation",
+                "label": "تقييماتي التعليمية الرسمية",
+                "group": "المتابعة الإشرافية",
+                "nav_icon": "heroicon-o-academic-cap",
+                "active_nav_icon": "heroicon-o-academic-cap",
+                "valid_icon": true
+            },
+            "App\\Filament\\Instructor\\Resources\\InstructorExamAttemptResource\\InstructorExamAttemptResource": {
+                "class": "App\\Filament\\Instructor\\Resources\\InstructorExamAttemptResource\\InstructorExamAttemptResource",
+                "model": "App\\Models\\ExamAttempt",
+                "label": "نتائج الطلاب",
+                "group": "التدريس",
+                "nav_icon": "o-clipboard-document-check",
+                "active_nav_icon": "o-clipboard-document-check",
+                "valid_icon": false
+            },
+            "App\\Filament\\Instructor\\Resources\\InstructorPayments\\InstructorPaymentResource": {
+                "class": "App\\Filament\\Instructor\\Resources\\InstructorPayments\\InstructorPaymentResource",
+                "model": "App\\Models\\InstructorPayment",
+                "label": "أجوري",
+                "group": "الإدارة",
+                "nav_icon": "heroicon-o-banknotes",
+                "active_nav_icon": "heroicon-o-banknotes",
+                "valid_icon": true
+            },
+            "App\\Filament\\Instructor\\Resources\\InstructorReviews\\InstructorReviewResource": {
+                "class": "App\\Filament\\Instructor\\Resources\\InstructorReviews\\InstructorReviewResource",
+                "model": "App\\Models\\InstructorReview",
+                "label": "تقييماتي",
+                "group": "الإدارة",
+                "nav_icon": "heroicon-o-star",
+                "active_nav_icon": "heroicon-o-star",
+                "valid_icon": true
+            },
+            "App\\Filament\\Instructor\\Resources\\LearningResources\\LearningResourceResource": {
+                "class": "App\\Filament\\Instructor\\Resources\\LearningResources\\LearningResourceResource",
+                "model": "App\\Models\\LearningResource",
+                "label": "المصادر التعليمية",
+                "group": "إدارة المجموعات",
+                "nav_icon": "heroicon-o-document-text",
+                "active_nav_icon": "heroicon-o-document-text",
+                "valid_icon": true
+            },
+            "App\\Filament\\Instructor\\Resources\\SessionSchedules\\SessionScheduleResource": {
+                "class": "App\\Filament\\Instructor\\Resources\\SessionSchedules\\SessionScheduleResource",
+                "model": "App\\Models\\SessionSchedule",
+                "label": "جدول السيشنات",
+                "group": "إدارة المحتوى",
+                "nav_icon": "heroicon-o-calendar",
+                "active_nav_icon": "heroicon-o-calendar",
+                "valid_icon": true
+            },
+            "App\\Filament\\Instructor\\Resources\\StudentMessages\\StudentMessageResource": {
+                "class": "App\\Filament\\Instructor\\Resources\\StudentMessages\\StudentMessageResource",
+                "model": "App\\Models\\StudentMessage",
+                "label": "رسائل الطلاب",
+                "group": "التواصل",
+                "nav_icon": "o-envelope",
+                "active_nav_icon": "o-envelope",
+                "valid_icon": false
+            },
+            "App\\Filament\\Instructor\\Resources\\SupervisoryObservations\\InstructorSupervisoryObservationResource": {
+                "class": "App\\Filament\\Instructor\\Resources\\SupervisoryObservations\\InstructorSupervisoryObservationResource",
+                "model": "App\\Models\\SupervisoryObservation",
+                "label": "توجيهاتي الإشرافية",
+                "group": "المتابعة الإشرافية",
+                "nav_icon": "heroicon-o-clipboard-document-check",
+                "active_nav_icon": "heroicon-o-clipboard-document-check",
+                "valid_icon": true
+            }
+        },
+        "parent": {
+            "App\\Filament\\Parent\\Resources\\Messages\\MessagesResource": {
+                "class": "App\\Filament\\Parent\\Resources\\Messages\\MessagesResource",
+                "model": "App\\Models\\StudentMessage",
+                "label": "الرسائل والإشعارات",
+                "group": "التواصل",
+                "nav_icon": "o-envelope",
+                "active_nav_icon": "o-envelope",
+                "valid_icon": false
+            }
+        },
+        "student": {
+            "App\\Filament\\Student\\Resources\\InstructorReviewResource": {
+                "class": "App\\Filament\\Student\\Resources\\InstructorReviewResource",
+                "model": "App\\Models\\InstructorReview",
+                "label": "تقييمات المدرسين",
+                "group": null,
+                "nav_icon": "heroicon-o-star",
+                "active_nav_icon": "heroicon-o-star",
+                "valid_icon": true
+            }
+        },
+        "supervisor": {
+            "App\\Filament\\Supervisor\\Resources\\AttendanceSessions\\AttendanceSessionResource": {
+                "class": "App\\Filament\\Supervisor\\Resources\\AttendanceSessions\\AttendanceSessionResource",
+                "model": "App\\Models\\AttendanceSession",
+                "label": "جلسات الحضور",
+                "group": "الإشراف",
+                "nav_icon": "o-clipboard-document-check",
+                "active_nav_icon": "o-clipboard-document-check",
+                "valid_icon": false
+            },
+            "App\\Filament\\Supervisor\\Resources\\Groups\\GroupResource": {
+                "class": "App\\Filament\\Supervisor\\Resources\\Groups\\GroupResource",
+                "model": "App\\Models\\Group",
+                "label": "المجموعات",
+                "group": "الإشراف",
+                "nav_icon": "o-user-group",
+                "active_nav_icon": "o-user-group",
+                "valid_icon": false
+            },
+            "App\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\InstructorEvaluationResource": {
+                "class": "App\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\InstructorEvaluationResource",
+                "model": "App\\Models\\InstructorEvaluation",
+                "label": "تقييمات جودة التدريس",
+                "group": "الإشراف التعليمي",
+                "nav_icon": "heroicon-o-academic-cap",
+                "active_nav_icon": "heroicon-o-academic-cap",
+                "valid_icon": true
+            },
+            "App\\Filament\\Supervisor\\Resources\\Students\\StudentResource": {
+                "class": "App\\Filament\\Supervisor\\Resources\\Students\\StudentResource",
+                "model": "App\\Models\\Student",
+                "label": "الطلاب",
+                "group": "الإشراف",
+                "nav_icon": "o-academic-cap",
+                "active_nav_icon": "o-academic-cap",
+                "valid_icon": false
+            },
+            "App\\Filament\\Supervisor\\Resources\\SupervisionReports\\SupervisionReportResource": {
+                "class": "App\\Filament\\Supervisor\\Resources\\SupervisionReports\\SupervisionReportResource",
+                "model": "App\\Models\\SupervisionReport",
+                "label": "التقارير الإشرافية والإدارية",
+                "group": "الإشراف التعليمي",
+                "nav_icon": "heroicon-o-document-chart-bar",
+                "active_nav_icon": "heroicon-o-document-chart-bar",
+                "valid_icon": true
+            },
+            "App\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\SupervisoryObservationResource": {
+                "class": "App\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\SupervisoryObservationResource",
+                "model": "App\\Models\\SupervisoryObservation",
+                "label": "الملاحظات والتوجيهات الإشرافية",
+                "group": "الإشراف التعليمي",
+                "nav_icon": "heroicon-o-clipboard-document-list",
+                "active_nav_icon": "heroicon-o-clipboard-document-list",
+                "valid_icon": true
+            }
+        }
+    },
+    "pages": {
+        "admin": {
+            "App\\Filament\\Admin\\Pages\\AcademicFollowUpCenter": {
+                "class": "App\\Filament\\Admin\\Pages\\AcademicFollowUpCenter",
+                "label": "مركز متابعة الطلاب",
+                "group": "متابعة الطلاب",
+                "nav_icon": "heroicon-o-academic-cap",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\AdvancedReports": {
+                "class": "App\\Filament\\Admin\\Pages\\AdvancedReports",
+                "label": "التقارير المتقدمة",
+                "group": "التقارير",
+                "nav_icon": "o-chart-bar",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Pages\\BarcodeAttendance": {
+                "class": "App\\Filament\\Admin\\Pages\\BarcodeAttendance",
+                "label": "تسجيل حضور بالباركود",
+                "group": "الطلاب والتسجيل",
+                "nav_icon": "heroicon-o-qr-code",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\BarcodePrint": {
+                "class": "App\\Filament\\Admin\\Pages\\BarcodePrint",
+                "label": "طباعة الباركود",
+                "group": "الطلاب والتسجيل",
+                "nav_icon": "heroicon-o-printer",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\GenerateInstructorPayments": {
+                "class": "App\\Filament\\Admin\\Pages\\GenerateInstructorPayments",
+                "label": "توليد أجور المدرسين",
+                "group": "إدارة الأجور",
+                "nav_icon": "heroicon-o-banknotes",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\InstallmentsDueMonth": {
+                "class": "App\\Filament\\Admin\\Pages\\InstallmentsDueMonth",
+                "label": "أقساط الشهر",
+                "group": "تقارير الأقساط",
+                "nav_icon": "heroicon-o-banknotes",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\InstallmentsDueToday": {
+                "class": "App\\Filament\\Admin\\Pages\\InstallmentsDueToday",
+                "label": "أقساط اليوم",
+                "group": "تقارير الأقساط",
+                "nav_icon": "heroicon-o-banknotes",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\InstallmentsDueWeek": {
+                "class": "App\\Filament\\Admin\\Pages\\InstallmentsDueWeek",
+                "label": "أقساط الأسبوع",
+                "group": "تقارير الأقساط",
+                "nav_icon": "heroicon-o-banknotes",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\ReportingCenterPage": {
+                "class": "App\\Filament\\Admin\\Pages\\ReportingCenterPage",
+                "label": "مركز التقارير الموحد",
+                "group": "التقارير",
+                "nav_icon": "heroicon-o-presentation-chart-line",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\Reports\\AllInstallmentsReport": {
+                "class": "App\\Filament\\Admin\\Pages\\Reports\\AllInstallmentsReport",
+                "label": "تقرير جميع الأقساط",
+                "group": "التقارير المالية",
+                "nav_icon": "heroicon-o-banknotes",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\Reports\\CourseFinancialReport": {
+                "class": "App\\Filament\\Admin\\Pages\\Reports\\CourseFinancialReport",
+                "label": "تقرير إيرادات الكورسات",
+                "group": "التقارير المالية",
+                "nav_icon": "heroicon-o-currency-dollar",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\Reports\\InstallmentsReport": {
+                "class": "App\\Filament\\Admin\\Pages\\Reports\\InstallmentsReport",
+                "label": "تقرير الأقساط المستحقة",
+                "group": "التقارير المالية",
+                "nav_icon": "heroicon-o-document-chart-bar",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\ScheduledTasks": {
+                "class": "App\\Filament\\Admin\\Pages\\ScheduledTasks",
+                "label": "المهام المجدولة",
+                "group": "إعدادات النظام",
+                "nav_icon": "heroicon-o-clock",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\SecretaryAttendance": {
+                "class": "App\\Filament\\Admin\\Pages\\SecretaryAttendance",
+                "label": "حضور السكرتيرة",
+                "group": "الموارد البشرية",
+                "nav_icon": "heroicon-o-finger-print",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\StudentPortfolioReport": {
+                "class": "App\\Filament\\Admin\\Pages\\StudentPortfolioReport",
+                "label": "بورتفوليو الطالب",
+                "group": "التقارير",
+                "nav_icon": "o-clipboard-document-list",
+                "valid_icon": false
+            },
+            "App\\Filament\\Admin\\Pages\\UsersReport": {
+                "class": "App\\Filament\\Admin\\Pages\\UsersReport",
+                "label": "تقرير المستخدمين",
+                "group": "التقارير",
+                "nav_icon": "heroicon-o-document-text",
+                "valid_icon": true
+            },
+            "App\\Filament\\Admin\\Pages\\VaultReport": {
+                "class": "App\\Filament\\Admin\\Pages\\VaultReport",
+                "label": "تقرير الخزينة",
+                "group": "التقارير المالية",
+                "nav_icon": "heroicon-o-document-chart-bar",
+                "valid_icon": true
+            },
+            "Filament\\Pages\\Dashboard": {
+                "class": "Filament\\Pages\\Dashboard",
+                "label": "لوحة التحكم",
+                "group": null,
+                "nav_icon": "home",
+                "valid_icon": false
+            }
+        },
+        "instructor": {
+            "App\\Filament\\Instructor\\Pages\\Dashboard": {
+                "class": "App\\Filament\\Instructor\\Pages\\Dashboard",
+                "label": "لوحة تحكم المدرس",
+                "group": null,
+                "nav_icon": "home",
+                "valid_icon": false
+            },
+            "App\\Filament\\Instructor\\Pages\\HomeworkReviewCenter": {
+                "class": "App\\Filament\\Instructor\\Pages\\HomeworkReviewCenter",
+                "label": "المركز الأكاديمي الشامل",
+                "group": "التدريس",
+                "nav_icon": "heroicon-o-academic-cap",
+                "valid_icon": true
+            },
+            "App\\Filament\\Instructor\\Pages\\InstructorReports": {
+                "class": "App\\Filament\\Instructor\\Pages\\InstructorReports",
+                "label": "تقاريري",
+                "group": "الإدارة",
+                "nav_icon": "o-chart-bar",
+                "valid_icon": false
+            },
+            "App\\Filament\\Instructor\\Pages\\MyGroups": {
+                "class": "App\\Filament\\Instructor\\Pages\\MyGroups",
+                "label": "مجموعاتي",
+                "group": "إدارة المجموعات",
+                "nav_icon": "o-user-group",
+                "valid_icon": false
+            }
+        },
+        "parent": {
+            "App\\Filament\\Parent\\Pages\\Dashboard": {
+                "class": "App\\Filament\\Parent\\Pages\\Dashboard",
+                "label": "لوحة التحكم",
+                "group": null,
+                "nav_icon": "o-home",
+                "valid_icon": false
+            },
+            "App\\Filament\\Parent\\Pages\\GroupMessages": {
+                "class": "App\\Filament\\Parent\\Pages\\GroupMessages",
+                "label": "رسائل المجموعة",
+                "group": null,
+                "nav_icon": "heroicon-o-envelope",
+                "valid_icon": true
+            },
+            "App\\Filament\\Parent\\Pages\\MyAttendance": {
+                "class": "App\\Filament\\Parent\\Pages\\MyAttendance",
+                "label": "سجل الحضور",
+                "group": null,
+                "nav_icon": "heroicon-o-calendar-days",
+                "valid_icon": true
+            },
+            "App\\Filament\\Parent\\Pages\\MyCourses": {
+                "class": "App\\Filament\\Parent\\Pages\\MyCourses",
+                "label": "كورسات الطالب",
+                "group": null,
+                "nav_icon": "heroicon-o-academic-cap",
+                "valid_icon": true
+            },
+            "App\\Filament\\Parent\\Pages\\MyPayments": {
+                "class": "App\\Filament\\Parent\\Pages\\MyPayments",
+                "label": "مدفوعاتي",
+                "group": null,
+                "nav_icon": "heroicon-o-credit-card",
+                "valid_icon": true
+            },
+            "App\\Filament\\Parent\\Pages\\StudentReports": {
+                "class": "App\\Filament\\Parent\\Pages\\StudentReports",
+                "label": "تقارير الطالب",
+                "group": null,
+                "nav_icon": "o-chart-bar",
+                "valid_icon": false
+            }
+        },
+        "student": {
+            "App\\Filament\\Student\\Pages\\Dashboard": {
+                "class": "App\\Filament\\Student\\Pages\\Dashboard",
+                "label": "الرئيسية",
+                "group": null,
+                "nav_icon": "heroicon-o-home",
+                "valid_icon": true
+            },
+            "App\\Filament\\Student\\Pages\\ExamResult": {
+                "class": "App\\Filament\\Student\\Pages\\ExamResult",
+                "label": "Exam Result",
+                "group": null,
+                "nav_icon": "heroicon-o-document-check",
+                "valid_icon": true
+            },
+            "App\\Filament\\Student\\Pages\\GroupMessages": {
+                "class": "App\\Filament\\Student\\Pages\\GroupMessages",
+                "label": "رسائل المجموعة",
+                "group": null,
+                "nav_icon": "heroicon-o-chat-bubble-left-right",
+                "valid_icon": true
+            },
+            "App\\Filament\\Student\\Pages\\MyAssignments": {
+                "class": "App\\Filament\\Student\\Pages\\MyAssignments",
+                "label": "واجباتي",
+                "group": null,
+                "nav_icon": "heroicon-o-pencil-square",
+                "valid_icon": true
+            },
+            "App\\Filament\\Student\\Pages\\MyAttendance": {
+                "class": "App\\Filament\\Student\\Pages\\MyAttendance",
+                "label": "سجل الحضور",
+                "group": null,
+                "nav_icon": "heroicon-o-calendar-days",
+                "valid_icon": true
+            },
+            "App\\Filament\\Student\\Pages\\MyCourses": {
+                "class": "App\\Filament\\Student\\Pages\\MyCourses",
+                "label": "مجموعاتي وكورساتي",
+                "group": null,
+                "nav_icon": "heroicon-o-academic-cap",
+                "valid_icon": true
+            },
+            "App\\Filament\\Student\\Pages\\MyExams": {
+                "class": "App\\Filament\\Student\\Pages\\MyExams",
+                "label": "امتحاناتي",
+                "group": null,
+                "nav_icon": "heroicon-o-check-badge",
+                "valid_icon": true
+            },
+            "App\\Filament\\Student\\Pages\\MyPayments": {
+                "class": "App\\Filament\\Student\\Pages\\MyPayments",
+                "label": "مدفوعاتي",
+                "group": null,
+                "nav_icon": "heroicon-o-banknotes",
+                "valid_icon": true
+            },
+            "App\\Filament\\Student\\Pages\\StudentEnrollments": {
+                "class": "App\\Filament\\Student\\Pages\\StudentEnrollments",
+                "label": "تسجيلاتي",
+                "group": null,
+                "nav_icon": "heroicon-o-clipboard-document-check",
+                "valid_icon": true
+            },
+            "App\\Filament\\Student\\Pages\\StudentLearningResources": {
+                "class": "App\\Filament\\Student\\Pages\\StudentLearningResources",
+                "label": "المصادر التعليمية",
+                "group": null,
+                "nav_icon": "heroicon-o-folder",
+                "valid_icon": true
+            },
+            "App\\Filament\\Student\\Pages\\StudentReports": {
+                "class": "App\\Filament\\Student\\Pages\\StudentReports",
+                "label": "تقاريري",
+                "group": null,
+                "nav_icon": "heroicon-o-chart-bar",
+                "valid_icon": true
+            },
+            "App\\Filament\\Student\\Pages\\TakeExam": {
+                "class": "App\\Filament\\Student\\Pages\\TakeExam",
+                "label": "Take Exam",
+                "group": null,
+                "nav_icon": "heroicon-o-pencil-square",
+                "valid_icon": true
+            }
+        },
+        "supervisor": {
+            "App\\Filament\\Supervisor\\Pages\\EducationalAlertsPage": {
+                "class": "App\\Filament\\Supervisor\\Pages\\EducationalAlertsPage",
+                "label": "التنبيهات التعليمية الذكية",
+                "group": "الإشراف التعليمي",
+                "nav_icon": "heroicon-o-bell-alert",
+                "valid_icon": true
+            },
+            "App\\Filament\\Supervisor\\Pages\\GroupSupervisionProfilePage": {
+                "class": "App\\Filament\\Supervisor\\Pages\\GroupSupervisionProfilePage",
+                "label": "الملفات الإشرافية للمجموعات",
+                "group": "الإشراف التعليمي",
+                "nav_icon": "heroicon-o-user-group",
+                "valid_icon": true
+            },
+            "App\\Filament\\Supervisor\\Pages\\InstructorSupervisionProfilePage": {
+                "class": "App\\Filament\\Supervisor\\Pages\\InstructorSupervisionProfilePage",
+                "label": "الملفات الإشرافية للمهندسين",
+                "group": "الإشراف التعليمي",
+                "nav_icon": "heroicon-o-identification",
+                "valid_icon": true
+            },
+            "Filament\\Pages\\Dashboard": {
+                "class": "Filament\\Pages\\Dashboard",
+                "label": "لوحة التحكم",
+                "group": null,
+                "nav_icon": "home",
+                "valid_icon": false
+            }
+        }
+    },
+    "widgets": {
+        "admin": {
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\AdminCalendarWidget.php": "App\\Filament\\Admin\\Widgets\\AdminCalendarWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\AttendanceStatsWidget.php": "App\\Filament\\Admin\\Widgets\\AttendanceStatsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\BarcodeAttendanceShortcut.php": "App\\Filament\\Admin\\Widgets\\BarcodeAttendanceShortcut",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\EnrollmentReportStats.php": "App\\Filament\\Admin\\Widgets\\EnrollmentReportStats",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\FinancialReportStats.php": "App\\Filament\\Admin\\Widgets\\FinancialReportStats",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\PerformanceReportStats.php": "App\\Filament\\Admin\\Widgets\\PerformanceReportStats",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\StatsOverview.php": "App\\Filament\\Admin\\Widgets\\StatsOverview",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\StudentReportStats.php": "App\\Filament\\Admin\\Widgets\\StudentReportStats",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\TenantSwitcher.php": "App\\Filament\\Admin\\Widgets\\TenantSwitcher",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\UserInfoWidget.php": "App\\Filament\\Admin\\Widgets\\UserInfoWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\VaultDailyMovement.php": "App\\Filament\\Admin\\Widgets\\VaultDailyMovement",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\AdminNotificationsWidget.php": "App\\Filament\\Admin\\Widgets\\AdminNotificationsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\ExamsOverviewWidget.php": "App\\Filament\\Admin\\Widgets\\ExamsOverviewWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\RevenueChart.php": "App\\Filament\\Admin\\Widgets\\RevenueChart",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\GradesStatsWidget.php": "App\\Filament\\Admin\\Widgets\\GradesStatsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\StudentGrowthChart.php": "App\\Filament\\Admin\\Widgets\\StudentGrowthChart",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\EnrollmentStatusChart.php": "App\\Filament\\Admin\\Widgets\\EnrollmentStatusChart",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\UpcomingExamsWidget.php": "App\\Filament\\Admin\\Widgets\\UpcomingExamsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\GradesDistributionWidget.php": "App\\Filament\\Admin\\Widgets\\GradesDistributionWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\PaymentMethodsChart.php": "App\\Filament\\Admin\\Widgets\\PaymentMethodsChart",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\SmsStatsWidget.php": "App\\Filament\\Admin\\Widgets\\SmsStatsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\TopCoursesChart.php": "App\\Filament\\Admin\\Widgets\\TopCoursesChart"
+        },
+        "instructor": {
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\InstructorCalendarWidget.php": "App\\Filament\\Instructor\\Widgets\\InstructorCalendarWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\InstructorNotificationsWidget.php": "App\\Filament\\Instructor\\Widgets\\InstructorNotificationsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\InstructorPaymentStatsWidget.php": "App\\Filament\\Instructor\\Widgets\\InstructorPaymentStatsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\InstructorStatsWidget.php": "App\\Filament\\Instructor\\Widgets\\InstructorStatsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\SubmissionsChartWidget.php": "App\\Filament\\Instructor\\Widgets\\SubmissionsChartWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\UpcomingSessionsWidget.php": "App\\Filament\\Instructor\\Widgets\\UpcomingSessionsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\InstructorReviewStatsWidget.php": "App\\Filament\\Instructor\\Widgets\\InstructorReviewStatsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\UpcomingGroupsWidget.php": "App\\Filament\\Instructor\\Widgets\\UpcomingGroupsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\RecentAssignmentsWidget.php": "App\\Filament\\Instructor\\Widgets\\RecentAssignmentsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\AttendanceRateChartWidget.php": "App\\Filament\\Instructor\\Widgets\\AttendanceRateChartWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\AttendanceStatsWidget.php": "App\\Filament\\Instructor\\Widgets\\AttendanceStatsWidget"
+        },
+        "parent": {
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\ChildrenSelectorWidget.php": "App\\Filament\\Parent\\Widgets\\ChildrenSelectorWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\OverdueInstallmentsWidget.php": "App\\Filament\\Parent\\Widgets\\OverdueInstallmentsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\StatsOverviewWidget.php": "App\\Filament\\Parent\\Widgets\\StatsOverviewWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\StudentSwitcher.php": "App\\Filament\\Parent\\Widgets\\StudentSwitcher",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\MyCoursesWidget.php": "App\\Filament\\Parent\\Widgets\\MyCoursesWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\ParentStudentCoursesWidget.php": "App\\Filament\\Parent\\Widgets\\ParentStudentCoursesWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\RecentGradesWidget.php": "App\\Filament\\Parent\\Widgets\\RecentGradesWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\AttendanceWidget.php": "App\\Filament\\Parent\\Widgets\\AttendanceWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\PaymentsWidget.php": "App\\Filament\\Parent\\Widgets\\PaymentsWidget"
+        },
+        "student": {
+            "0": "Filament\\Widgets\\AccountWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\OverdueInstallmentsWidget.php": "App\\Filament\\Student\\Widgets\\OverdueInstallmentsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\StatsOverviewWidget.php": "App\\Filament\\Student\\Widgets\\StatsOverviewWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\MyCoursesWidget.php": "App\\Filament\\Student\\Widgets\\MyCoursesWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\StudentCoursesProgressWidget.php": "App\\Filament\\Student\\Widgets\\StudentCoursesProgressWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\UpcomingAssignmentsWidget.php": "App\\Filament\\Student\\Widgets\\UpcomingAssignmentsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\RecentGradesWidget.php": "App\\Filament\\Student\\Widgets\\RecentGradesWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\AttendanceWidget.php": "App\\Filament\\Student\\Widgets\\AttendanceWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\PaymentsWidget.php": "App\\Filament\\Student\\Widgets\\PaymentsWidget"
+        },
+        "supervisor": {
+            "0": "Filament\\Widgets\\AccountWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Widgets\\SupervisorCalendarWidget.php": "App\\Filament\\Supervisor\\Widgets\\SupervisorCalendarWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Widgets\\SupervisorNotificationsWidget.php": "App\\Filament\\Supervisor\\Widgets\\SupervisorNotificationsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Widgets\\SupervisorStatsWidget.php": "App\\Filament\\Supervisor\\Widgets\\SupervisorStatsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Widgets\\DailyPriorityQueueWidget.php": "App\\Filament\\Supervisor\\Widgets\\DailyPriorityQueueWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Widgets\\SupervisorGroupsWidget.php": "App\\Filament\\Supervisor\\Widgets\\SupervisorGroupsWidget",
+            "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Widgets\\RecentAttendanceWidget.php": "App\\Filament\\Supervisor\\Widgets\\RecentAttendanceWidget"
+        }
+    }
+}

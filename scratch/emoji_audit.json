@@ -1,0 +1,3212 @@
+[
+    {
+        "file": "resources\\views\\filament\\admin\\components\\installments-info.blade.php",
+        "line": 39,
+        "emojis": "📋",
+        "snippet": "<span style=\"font-size: 32px;\">📋</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\installments-info.blade.php",
+        "line": 68,
+        "emojis": "💰",
+        "snippet": "<span style=\"font-size: 26px;\">💰</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\installments-info.blade.php",
+        "line": 78,
+        "emojis": "✅",
+        "snippet": "<span style=\"font-size: 26px;\">✅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\installments-info.blade.php",
+        "line": 93,
+        "emojis": "🚨",
+        "snippet": "{{-- Group 1: 🚨 Overdue Installments --}}"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\installments-info.blade.php",
+        "line": 98,
+        "emojis": "🚨",
+        "snippet": "<span class=\"text-xl\">🚨</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\installments-info.blade.php",
+        "line": 132,
+        "emojis": "🚨",
+        "snippet": "🚨 متأخر"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\installments-info.blade.php",
+        "line": 188,
+        "emojis": "📅",
+        "snippet": "{{-- Group 3: 📅 Future Installments --}}"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\installments-info.blade.php",
+        "line": 193,
+        "emojis": "📅",
+        "snippet": "<span class=\"text-xl\">📅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\installments-info.blade.php",
+        "line": 223,
+        "emojis": "⚠",
+        "snippet": "⚠️ مدفوع جزئياً"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\installments-info.blade.php",
+        "line": 239,
+        "emojis": "✅",
+        "snippet": "{{-- Group 4: ✅ Fully Paid Installments History --}}"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\installments-info.blade.php",
+        "line": 244,
+        "emojis": "✅",
+        "snippet": "<span class=\"text-xl\">✅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\installments-info.blade.php",
+        "line": 273,
+        "emojis": "✅",
+        "snippet": "✅ مسدد بالكامل"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\installments-info.blade.php",
+        "line": 286,
+        "emojis": "📭",
+        "snippet": "<span class=\"text-4xl block mb-2\">📭</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\payment-preview-card.blade.php",
+        "line": 16,
+        "emojis": "⚡",
+        "snippet": "<span class=\"text-3xl\">⚡</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\payment-preview-card.blade.php",
+        "line": 23,
+        "emojis": "🏛",
+        "snippet": "🏛️ الخزنة المستلمة: <span class=\"font-bold\">{{ $vaultName }}</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\payment-preview-card.blade.php",
+        "line": 53,
+        "emojis": "⚠",
+        "snippet": "<span>⚠️</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\payment-preview-card.blade.php",
+        "line": 62,
+        "emojis": "🎯",
+        "snippet": "<span>🎯</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\payment-preview-card.blade.php",
+        "line": 92,
+        "emojis": "✅",
+        "snippet": "✅ مدفوع بالكامل"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\payment-preview-card.blade.php",
+        "line": 96,
+        "emojis": "⚠",
+        "snippet": "⚠️ مدفوع جزئياً"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\student-payments-history.blade.php",
+        "line": 10,
+        "emojis": "🧾",
+        "snippet": "<span class=\"text-2xl\">🧾</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\student-payments-history.blade.php",
+        "line": 53,
+        "emojis": "💵",
+        "snippet": "'cash' => '💵 نقدي',"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\student-payments-history.blade.php",
+        "line": 54,
+        "emojis": "💳",
+        "snippet": "'card' => '💳 بطاقة',"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\student-payments-history.blade.php",
+        "line": 55,
+        "emojis": "🏛",
+        "snippet": "'bank_transfer' => '🏛️ تحويل بنكي',"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\student-payments-history.blade.php",
+        "line": 56,
+        "emojis": "📱",
+        "snippet": "'online', 'mobile_wallet' => '📱 محفظة إلكترونية',"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\components\\student-payments-history.blade.php",
+        "line": 68,
+        "emojis": "✅",
+        "snippet": "✅ مكتمل"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\enrollments\\installments-section.blade.php",
+        "line": 315,
+        "emojis": "📋",
+        "snippet": "<span style=\"font-size: 32px;\">📋</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\enrollments\\installments-section.blade.php",
+        "line": 326,
+        "emojis": "📊",
+        "snippet": "<p class=\"inst-stat-label\">📊 إجمالي الأقساط</p>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\enrollments\\installments-section.blade.php",
+        "line": 333,
+        "emojis": "💰",
+        "snippet": "<p class=\"inst-stat-label\">💰 المبلغ الكلي</p>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\enrollments\\installments-section.blade.php",
+        "line": 340,
+        "emojis": "✅",
+        "snippet": "<p class=\"inst-stat-label\">✅ المدفوع</p>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\enrollments\\installments-section.blade.php",
+        "line": 385,
+        "emojis": "✅",
+        "snippet": "'paid' => ['class' => 'inst-badge--paid', 'icon' => '✅', 'label' => 'مكتمل'],"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\enrollments\\installments-section.blade.php",
+        "line": 386,
+        "emojis": "⚠",
+        "snippet": "'partial' => ['class' => 'inst-badge--partial', 'icon' => '⚠️', 'label' => 'سداد جزئي'],"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\enrollments\\installments-section.blade.php",
+        "line": 399,
+        "emojis": "📅",
+        "snippet": "<p class=\"inst-details-date\">📅 موعد الاستحقاق: {{ $installment->due_date->format('d/m/Y') }}</p>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\enrollments\\installments-section.blade.php",
+        "line": 404,
+        "emojis": "🚨",
+        "snippet": "<p style=\"font-size: 12px; color: #dc2626; font-weight: 600; margin-top: 4px;\">🚨 متأخر {{ $daysOverdue }} يوم</p>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\enrollments\\installments-section.blade.php",
+        "line": 444,
+        "emojis": "📭",
+        "snippet": "<span style=\"font-size: 64px;\">📭</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\academic-follow-up-center.blade.php",
+        "line": 719,
+        "emojis": "⚠",
+        "snippet": "<p class=\"text-[11px] text-gray-500 mt-1\">⚠️ ملاحظة: اختيار <strong>\"لم يرد\"</strong> أو <strong>\"الرقم غير متاح\"</strong> يسجل المحاولة ويحافظ على حالة المهمة <strong>\"جديدة\"</strong> دون إغلاقها.</p>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\barcode-attendance.blade.php",
+        "line": 572,
+        "emojis": "✓",
+        "snippet": "<h3>{{ $lastResult['recorded'] ? '✓ تم التسجيل بنجاح!' : '⏱ مسجل مسبقاً' }}</h3>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\barcode-attendance.blade.php",
+        "line": 619,
+        "emojis": "✓",
+        "snippet": "<div class=\"barcode-metric-value\">{{ $lastResult['recorded'] ? '✓ حاضر' : '⏱ مسجل' }}</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\barcode-print.blade.php",
+        "line": 241,
+        "emojis": "🎫",
+        "snippet": "<h1 class=\"barcode-header-title\">🎫 طباعة بطاقات الباركود</h1>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\barcode-print.blade.php",
+        "line": 247,
+        "emojis": "👨🎓",
+        "snippet": "<option value=\"students\">👨‍🎓 الطلاب</option>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\barcode-print.blade.php",
+        "line": 248,
+        "emojis": "👨🏫",
+        "snippet": "<option value=\"instructors\">👨‍🏫 المدرسين</option>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\barcode-print.blade.php",
+        "line": 249,
+        "emojis": "👔",
+        "snippet": "<option value=\"secretaries\">👔 السكرتارية</option>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\barcode-print.blade.php",
+        "line": 255,
+        "emojis": "🔍",
+        "snippet": "<input type=\"text\" wire:model.live.debounce.500ms=\"search\" placeholder=\"🔍 اكتب اسم أو كود...\">"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\barcode-print.blade.php",
+        "line": 317,
+        "emojis": "📭",
+        "snippet": "<div class=\"barcode-empty-icon\">📭</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 67,
+        "emojis": "🖨",
+        "snippet": "<span>🖨️</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 74,
+        "emojis": "📅",
+        "snippet": "📅 تقرير أقساط الشهر - {{ now()->translatedFormat('F Y') }}"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 85,
+        "emojis": "📊",
+        "snippet": "<div class=\"text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1\">📊 إجمالي الأقساط</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 92,
+        "emojis": "⚠",
+        "snippet": "<div class=\"text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1\">⚠️ متأخرة</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 99,
+        "emojis": "📅",
+        "snippet": "<div class=\"text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1\">📅 اليوم</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 106,
+        "emojis": "🔜",
+        "snippet": "<div class=\"text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1\">🔜 قادمة</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 117,
+        "emojis": "📊",
+        "snippet": "<option value=\"all\">📊 الكل ({{ $stats['total']['count'] }})</option>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 118,
+        "emojis": "⚠",
+        "snippet": "<option value=\"overdue\">⚠️ المتأخرة ({{ $stats['overdue']['count'] }})</option>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 119,
+        "emojis": "📅",
+        "snippet": "<option value=\"today\">📅 اليوم ({{ $stats['today']['count'] }})</option>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 120,
+        "emojis": "🔜",
+        "snippet": "<option value=\"upcoming\">🔜 القادمة ({{ $stats['upcoming']['count'] }})</option>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 153,
+        "emojis": "✅",
+        "snippet": "✅ مسدد"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 157,
+        "emojis": "⚠",
+        "snippet": "⚠️ جزئي"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 161,
+        "emojis": "❌",
+        "snippet": "❌ غير مسدد"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-month.blade.php",
+        "line": 172,
+        "emojis": "✅",
+        "snippet": "<span class=\"text-5xl\">✅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-today.blade.php",
+        "line": 94,
+        "emojis": "🖨",
+        "snippet": "<span>🖨️</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-today.blade.php",
+        "line": 101,
+        "emojis": "📅",
+        "snippet": "📅 تقرير أقساط اليوم - {{ now()->translatedFormat('l، d F Y') }}"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-today.blade.php",
+        "line": 114,
+        "emojis": "📊",
+        "snippet": "<div class=\"text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1\">📊 إجمالي الأقساط</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-today.blade.php",
+        "line": 119,
+        "emojis": "💰",
+        "snippet": "<div class=\"text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1\">💰 المبلغ الكلي</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-today.blade.php",
+        "line": 124,
+        "emojis": "✅",
+        "snippet": "<div class=\"text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1\">✅ المدفوع</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-today.blade.php",
+        "line": 161,
+        "emojis": "✅",
+        "snippet": "✅ مسدد"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-today.blade.php",
+        "line": 165,
+        "emojis": "⚠",
+        "snippet": "⚠️ جزئي"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-today.blade.php",
+        "line": 169,
+        "emojis": "❌",
+        "snippet": "❌ غير مسدد"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-today.blade.php",
+        "line": 180,
+        "emojis": "✅",
+        "snippet": "<span class=\"text-5xl\">✅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 67,
+        "emojis": "🖨",
+        "snippet": "<span>🖨️</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 74,
+        "emojis": "📆",
+        "snippet": "📆 تقرير أقساط الأسبوع"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 85,
+        "emojis": "📊",
+        "snippet": "<div class=\"text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1\">📊 إجمالي الأقساط</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 92,
+        "emojis": "⚠",
+        "snippet": "<div class=\"text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1\">⚠️ متأخرة</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 99,
+        "emojis": "📅",
+        "snippet": "<div class=\"text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1\">📅 اليوم</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 106,
+        "emojis": "🔜",
+        "snippet": "<div class=\"text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1\">🔜 قادمة</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 117,
+        "emojis": "📊",
+        "snippet": "<option value=\"all\">📊 الكل ({{ $stats['total']['count'] }})</option>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 118,
+        "emojis": "⚠",
+        "snippet": "<option value=\"overdue\">⚠️ المتأخرة ({{ $stats['overdue']['count'] }})</option>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 119,
+        "emojis": "📅",
+        "snippet": "<option value=\"today\">📅 اليوم ({{ $stats['today']['count'] }})</option>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 120,
+        "emojis": "🔜",
+        "snippet": "<option value=\"upcoming\">🔜 القادمة ({{ $stats['upcoming']['count'] }})</option>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 178,
+        "emojis": "✅",
+        "snippet": "✅ مسدد"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 182,
+        "emojis": "⚠",
+        "snippet": "⚠️ جزئي"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 186,
+        "emojis": "❌",
+        "snippet": "❌ غير مسدد"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 199,
+        "emojis": "📊",
+        "snippet": "<h4 class=\"text-base font-bold text-slate-800 dark:text-slate-100 mb-3\">📊 إجمالي الأسبوع:</h4>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\installments-due-week.blade.php",
+        "line": 209,
+        "emojis": "✅",
+        "snippet": "<span class=\"text-5xl\">✅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report-pdf.blade.php",
+        "line": 83,
+        "emojis": "📋",
+        "snippet": "<span style=\"font-size: 36px;\">📋</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report-pdf.blade.php",
+        "line": 135,
+        "emojis": "✅",
+        "snippet": "<span style=\"font-size: 80px; display: block; margin-bottom: 16px;\">✅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 39,
+        "emojis": "📊",
+        "snippet": "<span style=\"font-size: 20px;\">📊</span> تصدير Excel"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 46,
+        "emojis": "📄",
+        "snippet": "<span style=\"font-size: 20px;\">📄</span> تصدير PDF"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 53,
+        "emojis": "🖨",
+        "snippet": "<span style=\"font-size: 20px;\">🖨️</span> طباعة"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 62,
+        "emojis": "🔍",
+        "snippet": "<span style=\"font-size: 36px;\">🔍</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 144,
+        "emojis": "📅",
+        "snippet": "<span style=\"font-size: 48px; opacity: 0.3;\">📅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 162,
+        "emojis": "📆",
+        "snippet": "<span style=\"font-size: 48px; opacity: 0.3;\">📆</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 180,
+        "emojis": "🗓",
+        "snippet": "<span style=\"font-size: 48px; opacity: 0.3;\">🗓️</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 206,
+        "emojis": "📊",
+        "snippet": "<span style=\"font-size: 32px;\">📊</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 216,
+        "emojis": "💰",
+        "snippet": "<span style=\"font-size: 32px;\">💰</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 226,
+        "emojis": "✅",
+        "snippet": "<span style=\"font-size: 32px;\">✅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 246,
+        "emojis": "🚨",
+        "snippet": "<span style=\"font-size: 32px;\">🚨</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 256,
+        "emojis": "⚠",
+        "snippet": "<span style=\"font-size: 32px;\">⚠️</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 280,
+        "emojis": "📋",
+        "snippet": "<span style=\"font-size: 32px;\">📋</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\all-installments-report.blade.php",
+        "line": 333,
+        "emojis": "📭",
+        "snippet": "<span style=\"font-size: 64px; display: block; margin-bottom: 16px;\">📭</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\course-financial-report.blade.php",
+        "line": 9,
+        "emojis": "📊",
+        "snippet": "<span style=\"font-size: 20px;\">📊</span> تصدير Excel"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\course-financial-report.blade.php",
+        "line": 16,
+        "emojis": "📄",
+        "snippet": "<span style=\"font-size: 20px;\">📄</span> تصدير PDF"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\course-financial-report.blade.php",
+        "line": 23,
+        "emojis": "🖨",
+        "snippet": "<span style=\"font-size: 20px;\">🖨️</span> طباعة"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\installments-report-pdf.blade.php",
+        "line": 26,
+        "emojis": "📊",
+        "snippet": "📊"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\installments-report-pdf.blade.php",
+        "line": 41,
+        "emojis": "🔔",
+        "snippet": "<div style=\"font-size: 40px;\">🔔</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\installments-report-pdf.blade.php",
+        "line": 98,
+        "emojis": "✅",
+        "snippet": "<div style=\"font-size: 48px; margin-bottom: 16px;\">✅</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\installments-report.blade.php",
+        "line": 44,
+        "emojis": "📊",
+        "snippet": "<span style=\"font-size: 20px;\">📊</span> تصدير Excel"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\installments-report.blade.php",
+        "line": 51,
+        "emojis": "📄",
+        "snippet": "<span style=\"font-size: 20px;\">📄</span> تصدير PDF"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\installments-report.blade.php",
+        "line": 58,
+        "emojis": "🖨",
+        "snippet": "<span style=\"font-size: 20px;\">🖨️</span> طباعة"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\installments-report.blade.php",
+        "line": 67,
+        "emojis": "🔍",
+        "snippet": "<span style=\"font-size: 36px;\">🔍</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\installments-report.blade.php",
+        "line": 133,
+        "emojis": "📊",
+        "snippet": "📊"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\installments-report.blade.php",
+        "line": 151,
+        "emojis": "📅",
+        "snippet": "<div style=\"font-size: 36px;\">📅</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\installments-report.blade.php",
+        "line": 177,
+        "emojis": "📆",
+        "snippet": "<div style=\"font-size: 36px;\">📆</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\installments-report.blade.php",
+        "line": 203,
+        "emojis": "🗓",
+        "snippet": "<div style=\"font-size: 36px;\">🗓️</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\installments-report.blade.php",
+        "line": 233,
+        "emojis": "🔔",
+        "snippet": "<div style=\"font-size: 40px;\">🔔</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\reports\\installments-report.blade.php",
+        "line": 294,
+        "emojis": "✅",
+        "snippet": "<div style=\"font-size: 48px; margin-bottom: 16px;\">✅</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\scheduled-tasks.blade.php",
+        "line": 13,
+        "emojis": "⚙",
+        "snippet": "⚙️ إعداد Cron Job على السيرفر"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\scheduled-tasks.blade.php",
+        "line": 37,
+        "emojis": "📋",
+        "snippet": "<h4 class=\"font-semibold text-blue-900 dark:text-blue-300 mb-2\">📋 خطوات cPanel:</h4>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\scheduled-tasks.blade.php",
+        "line": 48,
+        "emojis": "🖥",
+        "snippet": "<h4 class=\"font-semibold text-green-900 dark:text-green-300 mb-2\">🖥️ خطوات Terminal:</h4>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\scheduled-tasks.blade.php",
+        "line": 120,
+        "emojis": "📅",
+        "snippet": "📅 {{ $task['schedule'] }}"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\scheduled-tasks.blade.php",
+        "line": 180,
+        "emojis": "📚",
+        "snippet": "<h4 class=\"font-semibold text-gray-900 dark:text-white mb-3\">📚 ملفات التوثيق</h4>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\scheduled-tasks.blade.php",
+        "line": 196,
+        "emojis": "🔧",
+        "snippet": "<h4 class=\"font-semibold text-gray-900 dark:text-white mb-3\">🔧 أوامر مفيدة</h4>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 304,
+        "emojis": "📋",
+        "snippet": "📋 سجل حضورك وانصرافك"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 316,
+        "emojis": "✅",
+        "snippet": "<span style=\"font-size: 1.5rem;\">✅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 327,
+        "emojis": "👋",
+        "snippet": "<span style=\"font-size: 1.5rem;\">👋</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 335,
+        "emojis": "📅",
+        "snippet": "<div class=\"today-stat-label\">📅 تاريخ اليوم</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 342,
+        "emojis": "🕐",
+        "snippet": "<div class=\"today-stat-label\">🕐 وقت الحضور</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 349,
+        "emojis": "🕐",
+        "snippet": "<div class=\"today-stat-label\">🕐 وقت الانصراف</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 367,
+        "emojis": "📊",
+        "snippet": "📊 إحصائيات الشهر الحالي"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 374,
+        "emojis": "📆",
+        "snippet": "<div class=\"stat-icon\">📆</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 390,
+        "emojis": "📜",
+        "snippet": "📜 سجل الحضور لهذا الشهر"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 399,
+        "emojis": "📅",
+        "snippet": "<th style=\"text-align: right;\">📅 التاريخ</th>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 400,
+        "emojis": "🕐",
+        "snippet": "<th style=\"text-align: right;\">🕐 الحضور</th>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 401,
+        "emojis": "🕐",
+        "snippet": "<th style=\"text-align: right;\">🕐 الانصراف</th>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 404,
+        "emojis": "⚙",
+        "snippet": "<th style=\"text-align: right;\">⚙️ إدارة</th>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 431,
+        "emojis": "✏",
+        "snippet": "✏️ تعديل"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 439,
+        "emojis": "📭",
+        "snippet": "<div style=\"font-size: 3rem; margin-bottom: 1rem;\">📭</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 453,
+        "emojis": "🔧",
+        "snippet": "🔧 تعديل إداري للسجلات"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 463,
+        "emojis": "🕐",
+        "snippet": "🕐 وقت الحضور"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 473,
+        "emojis": "🕐",
+        "snippet": "🕐 وقت الانصراف"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 488,
+        "emojis": "✅",
+        "snippet": "✅ حفظ التعديلات"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 495,
+        "emojis": "❌",
+        "snippet": "❌ إلغاء"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\secretary-attendance.blade.php",
+        "line": 501,
+        "emojis": "👆",
+        "snippet": "<div style=\"font-size: 3rem; margin-bottom: 1rem;\">👆</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report-pdf.blade.php",
+        "line": 25,
+        "emojis": "📄",
+        "snippet": "<div style=\"background: rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 16px; border: 1px solid rgba(255, 255, 255, 0.3);\">📄</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report-pdf.blade.php",
+        "line": 53,
+        "emojis": "💰",
+        "snippet": "<div style=\"background: rgba(255, 255, 255, 0.25); border-radius: 24px; padding: 16px; border: 1px solid rgba(255, 255, 255, 0.3);\">💰</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report-pdf.blade.php",
+        "line": 69,
+        "emojis": "📋",
+        "snippet": "<span style=\"font-size: 30px;\">📋</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report-pdf.blade.php",
+        "line": 90,
+        "emojis": "📈📉",
+        "snippet": "{{ $transaction['is_income'] ? '📈' : '📉' }}"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report-pdf.blade.php",
+        "line": 117,
+        "emojis": "📈",
+        "snippet": "<div style=\"background: rgba(255, 255, 255, 0.25); border-radius: 16px; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.3);\">📈</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report-pdf.blade.php",
+        "line": 132,
+        "emojis": "📉",
+        "snippet": "<div style=\"background: rgba(255, 255, 255, 0.25); border-radius: 16px; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.3);\">📉</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report-pdf.blade.php",
+        "line": 147,
+        "emojis": "💰",
+        "snippet": "<div style=\"background: rgba(255, 255, 255, 0.25); border-radius: 16px; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.3);\">💰</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 32,
+        "emojis": "⚙",
+        "snippet": "⚙️"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 59,
+        "emojis": "📊",
+        "snippet": "<span style=\"font-size: 20px;\">📊</span> تصدير Excel"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 66,
+        "emojis": "📄",
+        "snippet": "<span style=\"font-size: 20px;\">📄</span> تصدير PDF"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 73,
+        "emojis": "🖨",
+        "snippet": "<span style=\"font-size: 20px;\">🖨️</span> طباعة"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 89,
+        "emojis": "📄",
+        "snippet": "📄"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 101,
+        "emojis": "🏛",
+        "snippet": "🏛️"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 111,
+        "emojis": "📅",
+        "snippet": "📅"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 146,
+        "emojis": "💰",
+        "snippet": "💰"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 168,
+        "emojis": "📋",
+        "snippet": "📋"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 191,
+        "emojis": "📅",
+        "snippet": "📅 {{ \\Carbon\\Carbon::parse($transaction['date'])->format('d/m/Y') }}"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 195,
+        "emojis": "📈📉",
+        "snippet": "{{ $transaction['is_income'] ? '📈' : '📉' }}"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 216,
+        "emojis": "📭",
+        "snippet": "📭"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 237,
+        "emojis": "📈",
+        "snippet": "📈"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 255,
+        "emojis": "📉",
+        "snippet": "📉"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 273,
+        "emojis": "💰",
+        "snippet": "💰"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 300,
+        "emojis": "👤",
+        "snippet": "👤"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\pages\\vault-report.blade.php",
+        "line": 309,
+        "emojis": "🏢",
+        "snippet": "🏢"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+        "line": 257,
+        "emojis": "✕",
+        "snippet": "✕ إعادة ضبط التصفية"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+        "line": 310,
+        "emojis": "🏛",
+        "snippet": "🏛️"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+        "line": 320,
+        "emojis": "🟢",
+        "snippet": "🟢"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+        "line": 330,
+        "emojis": "🟠",
+        "snippet": "🟠"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+        "line": 340,
+        "emojis": "📚",
+        "snippet": "📚"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+        "line": 371,
+        "emojis": "⚠",
+        "snippet": "⚠️ تعارض مواعيد"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+        "line": 385,
+        "emojis": "👥",
+        "snippet": "<span>👥 السعة القصوى:</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+        "line": 472,
+        "emojis": "👨🏫",
+        "snippet": "<span>👨‍🏫 {{ $slot['instructor'] }}</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+        "line": 484,
+        "emojis": "⚠",
+        "snippet": "⚠️ تنبيه: يوجد تداخل زمني مع مجموعة أخرى في نفس القاعة بنفس التوقيت!"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+        "line": 497,
+        "emojis": "💡",
+        "snippet": "<span>💡 سعة القاعة تتيح إضافة مجموعة جديدة حتى <strong>{{ $item['capacity'] }} طالب</strong> في الأوقات الخضراء.</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+        "line": 503,
+        "emojis": "🏛",
+        "snippet": "<div class=\"text-4xl\">🏛️</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+        "line": 570,
+        "emojis": "🟢",
+        "snippet": "<span class=\"text-green-600 block text-xs\">🟢 شاغرة بالكامل</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\classrooms\\pages\\classroom-availability.blade.php",
+        "line": 587,
+        "emojis": "✓",
+        "snippet": "✓ متاح {{ $dayData['stats']['available_hours'] }} ساعة"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\enrollments\\widgets\\enrollment-installments.blade.php",
+        "line": 397,
+        "emojis": "📋",
+        "snippet": "<h2>📋 جدول الأقساط</h2>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\enrollments\\widgets\\enrollment-installments.blade.php",
+        "line": 406,
+        "emojis": "📊",
+        "snippet": "<div class=\"inst-stat-label\">📊 إجمالي الأقساط</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\enrollments\\widgets\\enrollment-installments.blade.php",
+        "line": 410,
+        "emojis": "💰",
+        "snippet": "<div class=\"inst-stat-label\">💰 المبلغ الكلي</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\enrollments\\widgets\\enrollment-installments.blade.php",
+        "line": 414,
+        "emojis": "✅",
+        "snippet": "<div class=\"inst-stat-label\">✅ المدفوع</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\enrollments\\widgets\\enrollment-installments.blade.php",
+        "line": 454,
+        "emojis": "✅",
+        "snippet": "'paid' => ['class' => 'inst-badge--paid', 'icon' => '✅', 'label' => 'مكتمل'],"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\enrollments\\widgets\\enrollment-installments.blade.php",
+        "line": 455,
+        "emojis": "⚠",
+        "snippet": "'partial' => ['class' => 'inst-badge--partial', 'icon' => '⚠️', 'label' => 'جزئي'],"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\enrollments\\widgets\\enrollment-installments.blade.php",
+        "line": 466,
+        "emojis": "📅",
+        "snippet": "<p class=\"inst-card-date\">📅 الاستحقاق: {{ $installment->due_date->format('d/m/Y') }}</p>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\enrollments\\widgets\\enrollment-installments.blade.php",
+        "line": 506,
+        "emojis": "📭",
+        "snippet": "<div class=\"inst-empty-icon\">📭</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\exam-attempts\\view-details.blade.php",
+        "line": 33,
+        "emojis": "✓✗",
+        "snippet": "{{ $attempt->passed ? 'ناجح ✓' : 'راسب ✗' }}"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\students\\pages\\issue-certificate.blade.php",
+        "line": 29,
+        "emojis": "🎓",
+        "snippet": "<div class=\"text-6xl mb-4\">🎓</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-transactions.blade.php",
+        "line": 32,
+        "emojis": "💰",
+        "snippet": "<span class=\"text-2xl\">💰</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-transactions.blade.php",
+        "line": 50,
+        "emojis": "📊",
+        "snippet": "<span class=\"text-2xl\">📊</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\resources\\vaults\\pages\\vault-transactions.blade.php",
+        "line": 75,
+        "emojis": "📅",
+        "snippet": "<span class=\"text-2xl\">📅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\calendar-widget.blade.php",
+        "line": 8,
+        "emojis": "📅",
+        "snippet": "📅 التقويم العام"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 17,
+        "emojis": "📚",
+        "snippet": "<span class=\"text-4xl\">📚</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 46,
+        "emojis": "📚",
+        "snippet": "<div class=\"text-5xl mb-3 group-hover:scale-110 transition-transform\">📚</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 52,
+        "emojis": "📚",
+        "snippet": "<div class=\"absolute -bottom-4 -right-4 text-8xl opacity-10\">📚</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 59,
+        "emojis": "✅",
+        "snippet": "<div class=\"text-5xl mb-3 group-hover:scale-110 transition-transform\">✅</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 65,
+        "emojis": "✅",
+        "snippet": "<div class=\"absolute -bottom-4 -right-4 text-8xl opacity-10\">✅</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 72,
+        "emojis": "✓",
+        "snippet": "<div class=\"text-5xl mb-3 group-hover:scale-110 transition-transform\">✓</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 78,
+        "emojis": "✓",
+        "snippet": "<div class=\"absolute -bottom-4 -right-4 text-8xl opacity-10\">✓</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 88,
+        "emojis": "📊",
+        "snippet": "<span class=\"text-2xl\">📊</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 101,
+        "emojis": "📚",
+        "snippet": "<span class=\"text-xl\">📚</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 135,
+        "emojis": "✓",
+        "snippet": "<span class=\"text-xl\">✓</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 190,
+        "emojis": "⚠",
+        "snippet": "<span class=\"text-3xl\">⚠️</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 196,
+        "emojis": "⚠",
+        "snippet": "⚠️ خطأ: الحضور أعلى من المحاضرات المكتملة!"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 215,
+        "emojis": "📅",
+        "snippet": "<span class=\"text-3xl group-hover:scale-110 transition-transform\">📅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 231,
+        "emojis": "📅",
+        "snippet": "<th class=\"px-5 py-4 text-right text-sm font-black text-white\">📅 التاريخ</th>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 232,
+        "emojis": "📆",
+        "snippet": "<th class=\"px-5 py-4 text-right text-sm font-black text-white\">📆 اليوم</th>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 235,
+        "emojis": "📊",
+        "snippet": "<th class=\"px-5 py-4 text-center text-sm font-black text-white\">📊 الحالة</th>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 248,
+        "emojis": "✅",
+        "snippet": "<span>✅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 253,
+        "emojis": "🔵",
+        "snippet": "<span>🔵</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 258,
+        "emojis": "📅",
+        "snippet": "<span>📅</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 263,
+        "emojis": "❌",
+        "snippet": "<span>❌</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 277,
+        "emojis": "📭",
+        "snippet": "<div class=\"text-6xl mb-3\">📭</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\enrollment-courses-widget.blade.php",
+        "line": 285,
+        "emojis": "📚",
+        "snippet": "<div class=\"text-8xl mb-5 animate-bounce\">📚</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\tenant-switcher.blade.php",
+        "line": 27,
+        "emojis": "📋",
+        "snippet": "📋 الفرع الحالي"
+    },
+    {
+        "file": "resources\\views\\filament\\admin\\widgets\\tenant-switcher.blade.php",
+        "line": 48,
+        "emojis": "🏢",
+        "snippet": "🏢 {{ $tenant->name }}"
+    },
+    {
+        "file": "resources\\views\\filament\\components\\screen-guide-modal.blade.php",
+        "line": 15,
+        "emojis": "💡",
+        "snippet": "<span style=\"font-size: 1rem;\">💡</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\components\\screen-guide-modal.blade.php",
+        "line": 41,
+        "emojis": "📖",
+        "snippet": "📖"
+    },
+    {
+        "file": "resources\\views\\filament\\components\\screen-guide-modal.blade.php",
+        "line": 66,
+        "emojis": "📌",
+        "snippet": "<strong>📌 الغرض من الشاشة:</strong> {{ $guide['summary'] }}"
+    },
+    {
+        "file": "resources\\views\\filament\\components\\screen-guide-modal.blade.php",
+        "line": 72,
+        "emojis": "🚀",
+        "snippet": "<span>🚀</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\components\\screen-guide-modal.blade.php",
+        "line": 78,
+        "emojis": "✔",
+        "snippet": "<span style=\"color: #16a34a; font-weight: 800;\">✔</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\components\\screen-guide-modal.blade.php",
+        "line": 88,
+        "emojis": "📋",
+        "snippet": "<span>📋</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\components\\screen-guide-modal.blade.php",
+        "line": 106,
+        "emojis": "💡",
+        "snippet": "<span style=\"font-size: 1.1rem;\">💡</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\components\\shield-collapse-controls.blade.php",
+        "line": 52,
+        "emojis": "🎛",
+        "snippet": "🎛️"
+    },
+    {
+        "file": "resources\\views\\filament\\components\\shield-collapse-controls.blade.php",
+        "line": 77,
+        "emojis": "🔽",
+        "snippet": "<span>🔽 توسيع الكل (فتح الجميع)</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\components\\shield-collapse-controls.blade.php",
+        "line": 89,
+        "emojis": "🔼",
+        "snippet": "<span>🔼 طي الكل (إغلاق الجميع)</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\components\\shield-collapse-controls.blade.php",
+        "line": 100,
+        "emojis": "📁",
+        "snippet": "<span>📁 فتح الأقسام الرئيسية فقط</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+        "line": 77,
+        "emojis": "📚",
+        "snippet": "📚 {{ $resource->course->name }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\modals\\resource-details.blade.php",
+        "line": 82,
+        "emojis": "👥",
+        "snippet": "👥 {{ $resource->group->name }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 961,
+        "emojis": "📚",
+        "snippet": "📚 {{ $asg->group?->course?->name }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 964,
+        "emojis": "👥",
+        "snippet": "👥 مجموعة: {{ $asg->group?->name }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 970,
+        "emojis": "📅",
+        "snippet": "📅 الموعد النهائي: {{ $asg->due_date ? $asg->due_date->format('Y-m-d') : 'مفتوح' }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1054,
+        "emojis": "✓",
+        "snippet": "<span class=\"hrc-pill-badge hrc-pill-success\">✓ تم التسليم في الموعد</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1058,
+        "emojis": "⚠",
+        "snippet": "<span class=\"hrc-pill-badge hrc-pill-danger\">⚠️ متأخر ولم يسلّم</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1098,
+        "emojis": "✓",
+        "snippet": "<span style=\"font-size: 0.82rem; font-weight: 800; color: var(--hrc-emerald);\">✓ تم التصحيح والاعتماد</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1100,
+        "emojis": "📝",
+        "snippet": "<span style=\"font-size: 0.82rem; font-weight: 800; color: var(--hrc-purple);\">📝 مسودة تقييم</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1185,
+        "emojis": "📚",
+        "snippet": "📚 مقرر: {{ $group->course?->name ?? 'غير محدد' }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1188,
+        "emojis": "👥",
+        "snippet": "👥 مجموعة: {{ $group->name }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1192,
+        "emojis": "👨🏫",
+        "snippet": "👨‍🏫 المعلم: {{ $group->instructor->user->name }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1322,
+        "emojis": "📅",
+        "snippet": "📅 {{ $sess['date']->format('Y-m-d') }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1389,
+        "emojis": "⚡✓",
+        "snippet": "{{ $awaitCount > 0 ? '⚡ يتطلب تصحيح' : '✓ مصحح' }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1420,
+        "emojis": "📅",
+        "snippet": "📅 {{ $s['date']->format('Y-m-d') }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1431,
+        "emojis": "📚",
+        "snippet": "📚 {{ $s['assignments_count'] }} واجب مرتبط"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1457,
+        "emojis": "⚡✓",
+        "snippet": "{{ $s['pending_count'] > 0 ? '⚡ يتطلب تصحيح' : '✓ منجز' }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1474,
+        "emojis": "📂",
+        "snippet": "📂 واجبات عامة للمجموعة (غير مرتبطة بسيشن محدد)"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1498,
+        "emojis": "✓",
+        "snippet": "<span class=\"hrc-action-indicator completed\">✓ متاح للتصحيح</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1531,
+        "emojis": "🌐",
+        "snippet": "🌐 امتحان شامل للمجموعة (بدون سيشن)"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1600,
+        "emojis": "✓",
+        "snippet": "<span class=\"hrc-pill-badge hrc-pill-success\">✓ تم إتمام الاختبار</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1625,
+        "emojis": "✓",
+        "snippet": "✓ منشورة ومعتمدة"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1717,
+        "emojis": "✓",
+        "snippet": "✓ منشور"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1870,
+        "emojis": "📷",
+        "snippet": "📷 {{ $sub->image_count }} صورة"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1887,
+        "emojis": "✓",
+        "snippet": "✓ مصحح ومعتمد"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 1996,
+        "emojis": "⚠",
+        "snippet": "⚠️ تنبيه درجة منخفضة (< 50%)"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2000,
+        "emojis": "✓",
+        "snippet": "✓ المستوى منتظم"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2108,
+        "emojis": "✓",
+        "snippet": "<span class=\"hrc-pill-badge hrc-pill-success\">✓ سُلّم في الموعد</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2120,
+        "emojis": "✕",
+        "snippet": "✕"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2218,
+        "emojis": "✓",
+        "snippet": "✓ منشورة ومعتمدة للطالب وولي الأمر والسكرتيرة"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2256,
+        "emojis": "✓",
+        "snippet": "<span>تم التصحيح ✓ (نشر فوري)</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2282,
+        "emojis": "✕",
+        "snippet": "<button type=\"button\" wire:click=\"closeHomeworkModal\" style=\"background: none; border: none; font-size: 1.5rem; color: var(--hrc-text-muted); cursor: pointer;\">✕</button>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2350,
+        "emojis": "✕",
+        "snippet": "<button type=\"button\" wire:click=\"$set('isExtensionModalOpen', false)\" style=\"background: none; border: none; font-size: 1.5rem; color: var(--hrc-text-muted); cursor: pointer;\">✕</button>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2385,
+        "emojis": "✕",
+        "snippet": "<button type=\"button\" wire:click=\"$set('isResubmissionModalOpen', false)\" style=\"background: none; border: none; font-size: 1.5rem; color: var(--hrc-text-muted); cursor: pointer;\">✕</button>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2424,
+        "emojis": "✕",
+        "snippet": "<button type=\"button\" wire:click=\"$set('isGradeCorrectionModalOpen', false)\" style=\"background: none; border: none; font-size: 1.5rem; color: var(--hrc-text-muted); cursor: pointer;\">✕</button>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2466,
+        "emojis": "✕",
+        "snippet": "<button type=\"button\" wire:click=\"closeExamModal\" style=\"background: none; border: none; font-size: 1.5rem; color: var(--hrc-text-muted); cursor: pointer;\">✕</button>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2550,
+        "emojis": "✕",
+        "snippet": "<button type=\"button\" wire:click=\"$set('isRetakeModalOpen', false)\" style=\"background: none; border: none; font-size: 1.5rem; color: var(--hrc-text-muted); cursor: pointer;\">✕</button>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2600,
+        "emojis": "✕",
+        "snippet": "<button type=\"button\" wire:click=\"closeStudentAttemptsModal\" style=\"background: none; border: none; font-size: 1.5rem; color: var(--hrc-text-muted); cursor: pointer;\">✕</button>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2656,
+        "emojis": "✕",
+        "snippet": "<button type=\"button\" wire:click=\"closeStudentAcademicProfile\" style=\"background: none; border: none; font-size: 1.5rem; color: var(--hrc-text-muted); cursor: pointer;\">✕</button>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\homework-review-center.blade.php",
+        "line": 2796,
+        "emojis": "✕",
+        "snippet": "<button type=\"button\" wire:click=\"closeLightbox\" class=\"hrc-zoom-btn\" style=\"background: rgba(239, 68, 68, 0.7);\" title=\"إغلاق\">✕</button>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\pages\\view-session-schedule.blade.php",
+        "line": 56,
+        "emojis": "✓",
+        "snippet": "✓ تم تسجيل الحضور"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+        "line": 638,
+        "emojis": "📚",
+        "snippet": "📚 {{ $record->course?->name ?? ($record->group?->course?->name ?? 'مقرر عام') }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+        "line": 641,
+        "emojis": "👥",
+        "snippet": "👥 مجموعة: {{ $record->group?->name ?? 'غير محددة' }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+        "line": 645,
+        "emojis": "🎯",
+        "snippet": "🎯 الجلسة {{ $record->session_number ?? 'المرتبطة' }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+        "line": 767,
+        "emojis": "✓",
+        "snippet": "✓ تم التسليم في الموعد — بانتظار التصحيح"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+        "line": 775,
+        "emojis": "⚠",
+        "snippet": "⚠️ متأخر ولم يسلّم"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+        "line": 788,
+        "emojis": "🖼",
+        "snippet": "🖼️ {{ $imagesCount }} {{ $imagesCount == 1 ? 'صورة' : 'صور' }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+        "line": 819,
+        "emojis": "✓",
+        "snippet": "✓ تم التصحيح والاعتماد"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+        "line": 823,
+        "emojis": "📝",
+        "snippet": "📝 مسودة تقييم"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+        "line": 880,
+        "emojis": "✓",
+        "snippet": "✓ سُلّم في الموعد"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+        "line": 1070,
+        "emojis": "✓",
+        "snippet": "{{-- Primary Action: تم التصحيح ✓ --}}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\assignments\\pages\\manage-assignment-submissions.blade.php",
+        "line": 1073,
+        "emojis": "✓",
+        "snippet": "<span>تم التصحيح ✓</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\exam-attempts\\view-details.blade.php",
+        "line": 33,
+        "emojis": "✓✗",
+        "snippet": "{{ $attempt->passed ? 'ناجح ✓' : 'راسب ✗' }}"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\exams\\modals\\images-preview.blade.php",
+        "line": 16,
+        "emojis": "🔍",
+        "snippet": "🔍 عرض بحجم كامل"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\exams\\modals\\images-preview.blade.php",
+        "line": 49,
+        "emojis": "✓",
+        "snippet": "<span class=\"text-green-600 font-bold\">✓</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\exams\\modals\\images-preview.blade.php",
+        "line": 53,
+        "emojis": "✓",
+        "snippet": "<span class=\"text-green-600 font-bold\">✓</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\resources\\exams\\modals\\images-preview.blade.php",
+        "line": 57,
+        "emojis": "✓",
+        "snippet": "<span class=\"text-green-600 font-bold\">✓</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\instructor\\widgets\\calendar-widget.blade.php",
+        "line": 8,
+        "emojis": "📅",
+        "snippet": "📅 التقويم - جدول الأعمال"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\components\\message-attachments.blade.php",
+        "line": 9,
+        "emojis": "📄",
+        "snippet": "'pdf' => '📄',"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\components\\message-attachments.blade.php",
+        "line": 10,
+        "emojis": "📝",
+        "snippet": "'doc', 'docx' => '📝',"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\components\\message-attachments.blade.php",
+        "line": 11,
+        "emojis": "🖼",
+        "snippet": "'jpg', 'jpeg', 'png', 'gif' => '🖼️',"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\components\\message-attachments.blade.php",
+        "line": 12,
+        "emojis": "📎",
+        "snippet": "default => '📎'"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\components\\mobile-navigation.blade.php",
+        "line": 105,
+        "emojis": "👨👦",
+        "snippet": "<span>👨‍👦</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+        "line": 57,
+        "emojis": "📄",
+        "snippet": "'pdf' => '📄 PDF',"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+        "line": 58,
+        "emojis": "🎥",
+        "snippet": "'video' => '🎥 فيديو',"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+        "line": 59,
+        "emojis": "📊",
+        "snippet": "'presentation' => '📊 عرض تقديمي',"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+        "line": 60,
+        "emojis": "📝",
+        "snippet": "'document' => '📝 مستند',"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+        "line": 61,
+        "emojis": "🖼",
+        "snippet": "'image' => '🖼️ صورة',"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+        "line": 62,
+        "emojis": "🎵",
+        "snippet": "'audio' => '🎵 صوت',"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+        "line": 63,
+        "emojis": "🔗",
+        "snippet": "'link' => '🔗 رابط',"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\pages\\view-learning-resource.blade.php",
+        "line": 64,
+        "emojis": "📎",
+        "snippet": "default => '📎 أخرى',"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\widgets\\children-selector.blade.php",
+        "line": 5,
+        "emojis": "👨🎓",
+        "snippet": "👨‍🎓"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\widgets\\children-selector.blade.php",
+        "line": 32,
+        "emojis": "✓",
+        "snippet": "<span class=\"text-sm font-bold ms-1\">✓</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\widgets\\overdue-installments.blade.php",
+        "line": 12,
+        "emojis": "⚠",
+        "snippet": "⚠️ تنبيه: أقساط متأخرة لأبنائك"
+    },
+    {
+        "file": "resources\\views\\filament\\parent\\widgets\\overdue-installments.blade.php",
+        "line": 48,
+        "emojis": "💡",
+        "snippet": "💡 للتواصل مع الإدارة لترتيب السداد، يرجى الاتصال على الأرقام المتاحة."
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\assignment-details-modal.blade.php",
+        "line": 144,
+        "emojis": "📅",
+        "snippet": "📅 {{ $assignment->due_date ? $assignment->due_date->format('d/m/Y') : '-' }}"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\assignment-details-modal.blade.php",
+        "line": 159,
+        "emojis": "📝",
+        "snippet": "<h6 style=\"font-weight: bold; margin-bottom: 0.75rem; color: #212529;\">📝 {{ __('filament/student/my_assignments.assignment_description') }}</h6>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\assignment-details-modal.blade.php",
+        "line": 169,
+        "emojis": "📎",
+        "snippet": "<h6 style=\"font-weight: bold; margin-bottom: 0.75rem; color: #212529;\">📎 {{ __('filament/student/my_assignments.attached_file') }}</h6>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\assignment-details-modal.blade.php",
+        "line": 174,
+        "emojis": "👁",
+        "snippet": "👁️ {{ __('filament/student/my_assignments.view_file_btn') }}"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\assignment-details-modal.blade.php",
+        "line": 187,
+        "emojis": "🔗",
+        "snippet": "<h6 style=\"font-weight: bold; margin-bottom: 0.75rem; color: #212529;\">🔗 {{ __('filament/student/my_assignments.external_link_label') }}</h6>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\assignment-details-modal.blade.php",
+        "line": 191,
+        "emojis": "🌐",
+        "snippet": "🌐 {{ __('filament/student/my_assignments.open_link_btn') }}"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+        "line": 7,
+        "emojis": "✨",
+        "snippet": "<div class=\"eyebrow\">رحلتك التعليمية ✨</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+        "line": 8,
+        "emojis": "👋",
+        "snippet": "<h1>أهلاً {{ explode(' ', $student->user->name ?? auth()->user()->name)[0] }} <span>👋</span></h1>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\dashboard.blade.php",
+        "line": 66,
+        "emojis": "✦",
+        "snippet": "<div class=\"course-art violet\"><x-student-icon name=\"code-2\" size=\"25\"/><span class=\"spark\">✦</span></div>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\exam-details-modal.blade.php",
+        "line": 23,
+        "emojis": "🎓",
+        "snippet": "<div class=\"mi-icon\" style=\"background:#e0e7ff;\">🎓</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\exam-details-modal.blade.php",
+        "line": 28,
+        "emojis": "👥",
+        "snippet": "<div class=\"mi-icon\" style=\"background:#d1fae5;\">👥</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\exam-details-modal.blade.php",
+        "line": 33,
+        "emojis": "📅",
+        "snippet": "<div class=\"mi-icon\" style=\"background:#dbeafe;\">📅</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\exam-details-modal.blade.php",
+        "line": 48,
+        "emojis": "✅",
+        "snippet": "<div class=\"mi-icon\" style=\"background:#d1fae5;\">✅</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\exam-details-modal.blade.php",
+        "line": 68,
+        "emojis": "🏆📋",
+        "snippet": "<span>{{ $passed ? '🏆' : '📋' }}</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\exam-details-modal.blade.php",
+        "line": 102,
+        "emojis": "✏",
+        "snippet": "<span>✏️</span> الامتحان جاري الحل ولم يكتمل بعد"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\exam-details-modal.blade.php",
+        "line": 106,
+        "emojis": "📄",
+        "snippet": "<span>📄</span> لم تؤدِ هذا الامتحان بعد"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\exam-result.blade.php",
+        "line": 128,
+        "emojis": "🏆📋",
+        "snippet": "<div style=\"font-size:3rem; margin-bottom:8px;\">{{ $passed ? '🏆' : '📋' }}</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\exam-result.blade.php",
+        "line": 204,
+        "emojis": "✓",
+        "snippet": "if ($isCorrect)       { $qBadgeClass = 'bg-success'; $qBadgeLabel = 'صحيح ✓'; }"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\exam-result.blade.php",
+        "line": 205,
+        "emojis": "✗",
+        "snippet": "elseif ($isAnswered)  { $qBadgeClass = 'bg-danger';  $qBadgeLabel = 'خطأ ✗'; }"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 290,
+        "emojis": "📚",
+        "snippet": "<span>📚 {{ $a['course'] }}</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 292,
+        "emojis": "👨🏫",
+        "snippet": "<span>👨‍🏫 {{ $a['instructor_name'] }}</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 294,
+        "emojis": "📅",
+        "snippet": "<span>📅 التسليم: {{ $a['due'] }}</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 307,
+        "emojis": "📷",
+        "snippet": "📷 {{ $a['images_count'] }} {{ $a['images_count'] == 1 ? 'صورة' : 'صور' }}"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 325,
+        "emojis": "📤",
+        "snippet": "<span>📤 تسليم الواجب</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 327,
+        "emojis": "🌟",
+        "snippet": "<span>🌟 عرض التقييم ({{ $a['score'] }}/10)</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 329,
+        "emojis": "👁",
+        "snippet": "<span>👁️ عرض التسليم</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 357,
+        "emojis": "✕",
+        "snippet": ">✕</button>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 365,
+        "emojis": "👨🏫",
+        "snippet": "<span>👨‍🏫 المعلم:</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 369,
+        "emojis": "📅",
+        "snippet": "<span>📅 الموعد النهائي:</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 373,
+        "emojis": "🎯",
+        "snippet": "<span>🎯 الدرجة القصوى:</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 377,
+        "emojis": "🏷",
+        "snippet": "<span>🏷️ الحالة:</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 395,
+        "emojis": "📝",
+        "snippet": "<strong style=\"display: block; margin-bottom: 0.4rem; color: #1e293b;\">📝 تعليمات الواجب:</strong>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 402,
+        "emojis": "📎",
+        "snippet": "<span style=\"font-size: 0.9rem; color: #334155;\">📎 مرفق الواجب من المعلم:</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 407,
+        "emojis": "📥",
+        "snippet": ">تحميل المرفق 📥</a>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 419,
+        "emojis": "✓",
+        "snippet": "<div style=\"font-weight: 700; font-size: 1.05rem;\">تم اعتماد النتيجة ✓</div>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 426,
+        "emojis": "💬",
+        "snippet": "<strong style=\"display: block; font-weight: 800; margin-bottom: 0.4rem; font-size: 1rem;\">💬 ملاحظات المهندس:</strong>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 434,
+        "emojis": "📷",
+        "snippet": "📷 صور الحل المسلمة ({{ $activeSubmission->image_count }} صور):"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 448,
+        "emojis": "💡",
+        "snippet": "<small style=\"color: #64748b; margin-top: 0.4rem; display: block;\">💡 اضغط على أي صورة لتكبيرها واستعراضها بالحجم الكامل.</small>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 462,
+        "emojis": "✓",
+        "snippet": "✓ تم استلام واجبك بنجاح!"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 471,
+        "emojis": "📷",
+        "snippet": "📷 صور الحل المسلمة ({{ $activeSubmission->image_count }} صور):"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 485,
+        "emojis": "💡",
+        "snippet": "<small style=\"color: #64748b; margin-top: 0.4rem; display: block;\">💡 يمكنك النقر على أي صورة لمعاينتها بالحجم الكامل.</small>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 500,
+        "emojis": "📸",
+        "snippet": "📸 رفع صور حل الواجب (من 1 إلى 5 صور):"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 506,
+        "emojis": "📷",
+        "snippet": "<span style=\"font-size: 1.3rem;\">📷</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 520,
+        "emojis": "🖼",
+        "snippet": "<span style=\"font-size: 1.3rem;\">🖼️</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 609,
+        "emojis": "🚀",
+        "snippet": "<span wire:loading.remove wire:target=\"submitHomework\">🚀 تسليم الواجب الآن</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\my-assignments.blade.php",
+        "line": 628,
+        "emojis": "✕",
+        "snippet": "<button type=\"button\" class=\"hw-lightbox-close\" wire:click=\"closeLightbox\">✕</button>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\student-learning-resources.blade.php",
+        "line": 259,
+        "emojis": "📘",
+        "snippet": "📘"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\submission-details-modal.blade.php",
+        "line": 173,
+        "emojis": "📅",
+        "snippet": "<span class=\"info-label\">📅 {{ __('filament/student/my_assignments.submission_date') }}</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\submission-details-modal.blade.php",
+        "line": 177,
+        "emojis": "🏷",
+        "snippet": "<span class=\"info-label\">🏷️ {{ __('filament/student/my_assignments.status') }}</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\submission-details-modal.blade.php",
+        "line": 180,
+        "emojis": "✓",
+        "snippet": "<span class=\"badge-pill status-badge-graded\">✓ {{ __('filament/student/my_assignments.status_graded') }}</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\submission-details-modal.blade.php",
+        "line": 191,
+        "emojis": "💭",
+        "snippet": "<h6 style=\"font-weight: bold; margin-bottom: 0.75rem; color: #212529;\">💭 {{ __('filament/student/my_assignments.your_notes') }}</h6>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\submission-details-modal.blade.php",
+        "line": 201,
+        "emojis": "📎",
+        "snippet": "<h6 style=\"font-weight: bold; margin-bottom: 0.75rem; color: #212529;\">📎 {{ __('filament/student/my_assignments.uploaded_file') }}</h6>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\submission-details-modal.blade.php",
+        "line": 205,
+        "emojis": "👁",
+        "snippet": "👁️ {{ __('filament/student/my_assignments.view_file') }}"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\submission-details-modal.blade.php",
+        "line": 235,
+        "emojis": "💬",
+        "snippet": "<h6 style=\"font-weight: bold; margin-bottom: 0.75rem; color: #212529;\">💬 {{ __('filament/student/my_assignments.teacher_notes') }}</h6>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+        "line": 57,
+        "emojis": "📄",
+        "snippet": "'pdf' => '📄 PDF',"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+        "line": 58,
+        "emojis": "🎥",
+        "snippet": "'video' => '🎥 فيديو',"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+        "line": 59,
+        "emojis": "📊",
+        "snippet": "'presentation' => '📊 عرض تقديمي',"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+        "line": 60,
+        "emojis": "📝",
+        "snippet": "'document' => '📝 مستند',"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+        "line": 61,
+        "emojis": "🖼",
+        "snippet": "'image' => '🖼️ صورة',"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+        "line": 62,
+        "emojis": "🎵",
+        "snippet": "'audio' => '🎵 صوت',"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+        "line": 63,
+        "emojis": "🔗",
+        "snippet": "'link' => '🔗 رابط',"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\pages\\view-learning-resource.blade.php",
+        "line": 64,
+        "emojis": "📎",
+        "snippet": "default => '📎 أخرى',"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\widgets\\overdue-installments.blade.php",
+        "line": 99,
+        "emojis": "⚠",
+        "snippet": "<h3 style=\"margin: 0 0 0.2rem 0; font-size: 1.1rem; font-weight: 800; color: #ffffff;\">⚠️ تنبيه: لديك أقساط متأخرة</h3>"
+    },
+    {
+        "file": "resources\\views\\filament\\student\\widgets\\overdue-installments.blade.php",
+        "line": 147,
+        "emojis": "💡",
+        "snippet": "💡 للتواصل مع الإدارة لترتيب السداد، يرجى الاتصال على الأرقام المتاحة في قسم الاتصال."
+    },
+    {
+        "file": "resources\\views\\filament\\student\\widgets\\student-courses-progress.blade.php",
+        "line": 216,
+        "emojis": "🎓",
+        "snippet": "<span>🎓</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\supervisor\\pages\\group-profiles.blade.php",
+        "line": 41,
+        "emojis": "👨🏫",
+        "snippet": "👨‍🏫 المهندس المحاضر: <span class=\"font-semibold text-white\">{{ $groupProfileData['instructor']?->user?->name ?? 'غير محدد' }}</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\supervisor\\pages\\instructor-profiles.blade.php",
+        "line": 48,
+        "emojis": "📚",
+        "snippet": "<span>📚 التخصص: {{ $profileData['specialization'] }}</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\supervisor\\pages\\instructor-profiles.blade.php",
+        "line": 50,
+        "emojis": "🏢",
+        "snippet": "<span>🏢 القسم: {{ $profileData['department'] }}</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\supervisor\\pages\\instructor-profiles.blade.php",
+        "line": 52,
+        "emojis": "✉",
+        "snippet": "<span>✉️ {{ $profileData['email'] }}</span>"
+    },
+    {
+        "file": "resources\\views\\filament\\supervisor\\widgets\\calendar-widget.blade.php",
+        "line": 8,
+        "emojis": "📅",
+        "snippet": "📅 تقويم المجموعات"
+    },
+    {
+        "file": "resources\\views\\filament\\widgets\\notifications-widget.blade.php",
+        "line": 5,
+        "emojis": "🔔",
+        "snippet": "<span>🔔 الإشعارات</span>"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\course-status-button.blade.php",
+        "line": 17,
+        "emojis": "🟢",
+        "snippet": "🟢 نشط"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\course-status-button.blade.php",
+        "line": 19,
+        "emojis": "✅",
+        "snippet": "✅ مكتمل"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\course-status-button.blade.php",
+        "line": 39,
+        "emojis": "📖",
+        "snippet": "📖 {{ $this->enrollmentCourse->course->name }}"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\course-status-button.blade.php",
+        "line": 45,
+        "emojis": "✕",
+        "snippet": "✕"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\course-status-button.blade.php",
+        "line": 62,
+        "emojis": "👥",
+        "snippet": "👥 {{ $group['name'] }}"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\course-status-button.blade.php",
+        "line": 99,
+        "emojis": "✓",
+        "snippet": "اختر ✓"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\course-status-button.blade.php",
+        "line": 117,
+        "emojis": "🔍",
+        "snippet": "<p class=\"text-lg\">🔍 لا توجد مجموعات متاحة</p>"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\enrollment-courses-manager.blade.php",
+        "line": 5,
+        "emojis": "📚",
+        "snippet": "📚 الكورسات المسجلة"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\enrollment-courses-manager.blade.php",
+        "line": 13,
+        "emojis": "📖",
+        "snippet": "📖 {{ $enrollmentCourse->course->name }}"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\enrollment-courses-manager.blade.php",
+        "line": 18,
+        "emojis": "👨🏫",
+        "snippet": "<span>👨‍🏫 <strong>المعلم:</strong> {{ optional(optional($enrollmentCourse->group->instructor)->user)->name ?? 'غير محدد' }}</span>"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\enrollment-courses-manager.blade.php",
+        "line": 19,
+        "emojis": "📍",
+        "snippet": "<span>📍 <strong>المجموعة:</strong>"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\enrollment-courses-manager.blade.php",
+        "line": 56,
+        "emojis": "🟢",
+        "snippet": "🟢 نشط"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\enrollment-courses-manager.blade.php",
+        "line": 62,
+        "emojis": "✅",
+        "snippet": "✅ مكتمل"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\enrollment-courses-manager.blade.php",
+        "line": 92,
+        "emojis": "✕",
+        "snippet": "✕"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\enrollment-courses-manager.blade.php",
+        "line": 103,
+        "emojis": "👨🏫",
+        "snippet": "<p>👨‍🏫 المعلم: {{ $group['instructor'] }}</p>"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\enrollment-courses-manager.blade.php",
+        "line": 104,
+        "emojis": "📊",
+        "snippet": "<p>📊 السيشن: {{ $group['completed_sessions'] }}/12</p>"
+    },
+    {
+        "file": "resources\\views\\livewire\\student\\enrollment-courses-manager.blade.php",
+        "line": 105,
+        "emojis": "👥",
+        "snippet": "<p>👥 السعة: {{ $group['capacity'] }} طالب</p>"
+    },
+    {
+        "file": "resources\\views\\pdf\\certificate.blade.php",
+        "line": 152,
+        "emojis": "🎓",
+        "snippet": "<div class=\"logo\">🎓</div>"
+    },
+    {
+        "file": "resources\\views\\pdf\\certificate.blade.php",
+        "line": 195,
+        "emojis": "✓",
+        "snippet": "✓<br>مُعتمد"
+    },
+    {
+        "file": "resources\\views\\pdf\\student-transcript.blade.php",
+        "line": 202,
+        "emojis": "✓",
+        "snippet": "<span class=\"status-pass\">✓ ناجح</span>"
+    },
+    {
+        "file": "resources\\views\\pdf\\student-transcript.blade.php",
+        "line": 204,
+        "emojis": "✗",
+        "snippet": "<span class=\"status-fail\">✗ راسب</span>"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Pages\\BaseFilamentPage.php",
+        "line": 23,
+        "emojis": "⚠",
+        "snippet": "* ⚠️ تنبيه: استخدم دائماً هذا الـ type للـ navigationIcon"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Pages\\BaseFilamentPage.php",
+        "line": 30,
+        "emojis": "⚠",
+        "snippet": "* ⚠️ تنبيه: استخدم دائماً هذا الـ type للـ navigationGroup"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Pages\\BaseFilamentPage.php",
+        "line": 37,
+        "emojis": "⚠",
+        "snippet": "* ⚠️ تنبيه: الـ $view يجب أن يكون non-static property"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Pages\\Reports\\AllInstallmentsReport.php",
+        "line": 153,
+        "emojis": "🚫",
+        "snippet": "return ['status' => 'ملغي / معفى', 'color' => 'gray', 'icon' => '🚫'];"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Pages\\Reports\\AllInstallmentsReport.php",
+        "line": 155,
+        "emojis": "✅",
+        "snippet": "return ['status' => 'مكتمل', 'color' => 'green', 'icon' => '✅'];"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Pages\\Reports\\AllInstallmentsReport.php",
+        "line": 157,
+        "emojis": "⚠",
+        "snippet": "return ['status' => 'سداد جزئي', 'color' => 'yellow', 'icon' => '⚠️'];"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Pages\\Reports\\AllInstallmentsReport.php",
+        "line": 159,
+        "emojis": "🔔",
+        "snippet": "return ['status' => 'متأخر', 'color' => 'red', 'icon' => '🔔'];"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Actions\\CancelSubscriptionAction.php",
+        "line": 128,
+        "emojis": "⚠",
+        "snippet": "return new HtmlString('<span class=\"text-amber-600 font-medium\">⚠️ ليس لديك صلاحية صرف استرداد مالي من الخزنة. يمكنك إلغاء التسجيل فقط بدون استرداد.</span>');"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Pages\\CreateEnrollment.php",
+        "line": 82,
+        "emojis": "⚠",
+        "snippet": "// ⚠️ ملاحظة: الأقساط محسوبة بعد خصم المقدم"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Schemas\\EnrollmentForm.php",
+        "line": 201,
+        "emojis": "⚠",
+        "snippet": "return new HtmlString('<div class=\"p-3 text-sm text-amber-800 rounded-lg bg-amber-50 dark:bg-gray-800 dark:text-amber-300 border border-amber-300\" role=\"alert\"><span class=\"font-bold\">⚠️ تنبيه: </span>' . e($msg) . '</div>');"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\Tables\\ExpensesTable.php",
+        "line": 76,
+        "emojis": "💵",
+        "snippet": "'cash' => '💵 ' . $record->vault->name,"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\Tables\\ExpensesTable.php",
+        "line": 77,
+        "emojis": "📱",
+        "snippet": "'vodafone' => '📱 ' . $record->vault->name,"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\Tables\\ExpensesTable.php",
+        "line": 78,
+        "emojis": "💳",
+        "snippet": "'instapay' => '💳 ' . $record->vault->name,"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\Tables\\ExpensesTable.php",
+        "line": 79,
+        "emojis": "💰",
+        "snippet": "default => '💰 ' . ($record->vault?->name ?? '')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\Widgets\\VaultBalancesWidget.php",
+        "line": 42,
+        "emojis": "💵",
+        "snippet": "'cash' => '💵',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\Widgets\\VaultBalancesWidget.php",
+        "line": 43,
+        "emojis": "📱",
+        "snippet": "'vodafone' => '📱',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\Widgets\\VaultBalancesWidget.php",
+        "line": 44,
+        "emojis": "💳",
+        "snippet": "'instapay' => '💳',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\Widgets\\VaultBalancesWidget.php",
+        "line": 49,
+        "emojis": "💰",
+        "snippet": "$icon = $vaultIcons[$vault->type] ?? '💰';"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\Widgets\\VaultBalancesWidget.php",
+        "line": 67,
+        "emojis": "⚠",
+        "snippet": "$stat->description('⚠️ رصيد سالب')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\Widgets\\VaultBalancesWidget.php",
+        "line": 79,
+        "emojis": "💰",
+        "snippet": "$totalStat = Stat::make('💰 الإجمالي الكلي', number_format($totalBalance, 2) . ' جنيه')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\Widgets\\VaultBalancesWidget.php",
+        "line": 85,
+        "emojis": "⚠",
+        "snippet": "$totalStat->description('⚠️ إجمالي سالب - يرجى مراجعة الخزائن')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Expenses\\Widgets\\VaultBalancesWidget.php",
+        "line": 104,
+        "emojis": "⚠",
+        "snippet": "->title('⚠️ تحذير: رصيد سالب في الخزائن')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Payments\\Schemas\\PaymentForm.php",
+        "line": 177,
+        "emojis": "🏷",
+        "snippet": "->label('🏷️ الخصومات المعتمدة')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Payments\\Schemas\\PaymentForm.php",
+        "line": 186,
+        "emojis": "💰",
+        "snippet": "->label('💰 المسدد مقدماً (عند التسجيل)')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Payments\\Schemas\\PaymentForm.php",
+        "line": 194,
+        "emojis": "📋",
+        "snippet": "->label('📋 مدفوعات الأقساط السابقة')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Payments\\Schemas\\PaymentForm.php",
+        "line": 202,
+        "emojis": "✅",
+        "snippet": "->label('✅ إجمالي المسدد حتى الآن')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Payments\\Schemas\\PaymentForm.php",
+        "line": 211,
+        "emojis": "⚠",
+        "snippet": "->label('⚠️ المتبقي الإجمالي المطلوب')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Payments\\Schemas\\PaymentForm.php",
+        "line": 282,
+        "emojis": "✅",
+        "snippet": "'completed' => '✅ مكتمل (ترحيل فوري للخزينة والأقساط)',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Payments\\Schemas\\PaymentForm.php",
+        "line": 284,
+        "emojis": "❌",
+        "snippet": "'failed' => '❌ فاشل',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Revenues\\Tables\\RevenuesTable.php",
+        "line": 76,
+        "emojis": "💵",
+        "snippet": "'cash' => '💵 ' . $record->vault->name,"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Revenues\\Tables\\RevenuesTable.php",
+        "line": 77,
+        "emojis": "📱",
+        "snippet": "'vodafone' => '📱 ' . $record->vault->name,"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Revenues\\Tables\\RevenuesTable.php",
+        "line": 78,
+        "emojis": "💳",
+        "snippet": "'instapay' => '💳 ' . $record->vault->name,"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Revenues\\Tables\\RevenuesTable.php",
+        "line": 79,
+        "emojis": "💰",
+        "snippet": "default => '💰 ' . ($record->vault?->name ?? '')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+        "line": 348,
+        "emojis": "📁",
+        "snippet": "return '📁 نماذج وصلاحيات عامة / أخرى';"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+        "line": 392,
+        "emojis": "✔",
+        "snippet": "->label('تحديد كل صلاحيات القسم ✔️')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+        "line": 402,
+        "emojis": "❌",
+        "snippet": "->label('إلغاء تحديد القسم ❌')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+        "line": 439,
+        "emojis": "📁",
+        "snippet": "return '📁 صفحات وتقارير عامة / أخرى';"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+        "line": 481,
+        "emojis": "✔",
+        "snippet": "->label('تحديد كل صفحات القسم ✔️')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+        "line": 489,
+        "emojis": "❌",
+        "snippet": "->label('إلغاء تحديد القسم ❌')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Schemas\\RoleInfolist.php",
+        "line": 37,
+        "emojis": "🔐",
+        "snippet": "'admin' => '🔐 Admin Panel',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Schemas\\RoleInfolist.php",
+        "line": 38,
+        "emojis": "👨🏫",
+        "snippet": "'instructor' => '👨‍🏫 Instructor Panel',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Schemas\\RoleInfolist.php",
+        "line": 39,
+        "emojis": "🎓",
+        "snippet": "'student' => '🎓 Student Panel',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Schemas\\RoleInfolist.php",
+        "line": 40,
+        "emojis": "👨👩👧",
+        "snippet": "'parent' => '👨‍👩‍👧 Parent Panel',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Schemas\\RoleInfolist.php",
+        "line": 41,
+        "emojis": "👁",
+        "snippet": "'supervisor' => '👁️ Supervisor Panel',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Schemas\\RoleSchema.php",
+        "line": 43,
+        "emojis": "🔐",
+        "snippet": "'admin' => '🔐 Admin Panel (كل الصلاحيات)',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Schemas\\RoleSchema.php",
+        "line": 44,
+        "emojis": "👨🏫",
+        "snippet": "'instructor' => '👨‍🏫 Instructor Panel',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Schemas\\RoleSchema.php",
+        "line": 45,
+        "emojis": "🎓",
+        "snippet": "'student' => '🎓 Student Panel',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Schemas\\RoleSchema.php",
+        "line": 46,
+        "emojis": "👨👩👧",
+        "snippet": "'parent' => '👨‍👩‍👧 Parent Panel',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Schemas\\RoleSchema.php",
+        "line": 47,
+        "emojis": "👁",
+        "snippet": "'supervisor' => '👁️ Supervisor Panel',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Tables\\RolesTable.php",
+        "line": 38,
+        "emojis": "🔐",
+        "snippet": "'admin' => '🔐 Admin',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Tables\\RolesTable.php",
+        "line": 39,
+        "emojis": "👨🏫",
+        "snippet": "'instructor' => '👨‍🏫 Instructor',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Tables\\RolesTable.php",
+        "line": 40,
+        "emojis": "🎓",
+        "snippet": "'student' => '🎓 Student',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Tables\\RolesTable.php",
+        "line": 41,
+        "emojis": "👨👩👧",
+        "snippet": "'parent' => '👨‍👩‍👧 Parent',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Roles\\Tables\\RolesTable.php",
+        "line": 42,
+        "emojis": "👁",
+        "snippet": "'supervisor' => '👁️ Supervisor',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Students\\Pages\\IssueCertificate.php",
+        "line": 72,
+        "emojis": "⚠",
+        "snippet": "->content('⚠️ ملاحظة: يجب أن يكون الطالب قد نجح في جميع امتحانات الكورس لإصدار الشهادة'),"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Students\\Schemas\\StudentForm.php",
+        "line": 362,
+        "emojis": "➕",
+        "snippet": "->addActionLabel('➕ إضافة ولي أمر آخر')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Schemas\\VaultReconciliationForm.php",
+        "line": 90,
+        "emojis": "✅",
+        "snippet": "$icon = $diff == 0 ? '✅' : ($diff > 0 ? '⬆️' : '⬇️');"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+        "line": 30,
+        "emojis": "💵",
+        "snippet": "'cash' => '💵 ' . $record->vault->name,"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+        "line": 31,
+        "emojis": "📱",
+        "snippet": "'vodafone' => '📱 ' . $record->vault->name,"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+        "line": 32,
+        "emojis": "💳",
+        "snippet": "'instapay' => '💳 ' . $record->vault->name,"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+        "line": 33,
+        "emojis": "💰",
+        "snippet": "default => '💰 ' . ($record->vault?->name ?? '')"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Pages\\VaultTransactions.php",
+        "line": 63,
+        "emojis": "💰",
+        "snippet": "'revenue' => '💰 إيراد',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Pages\\VaultTransactions.php",
+        "line": 64,
+        "emojis": "🎓",
+        "snippet": "'student_payment' => '🎓 تحصيل طالب',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Pages\\VaultTransactions.php",
+        "line": 65,
+        "emojis": "💵",
+        "snippet": "'salary_payment' => '💵 صرف راتب',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Pages\\VaultTransactions.php",
+        "line": 66,
+        "emojis": "💸",
+        "snippet": "'expense' => '💸 مصروف',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Pages\\VaultTransactions.php",
+        "line": 67,
+        "emojis": "🔄",
+        "snippet": "'transfer_in' => '🔄 تحويل وارد',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Pages\\VaultTransactions.php",
+        "line": 68,
+        "emojis": "🔁",
+        "snippet": "'transfer_out' => '🔁 تحويل صادر',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Pages\\VaultTransactions.php",
+        "line": 118,
+        "emojis": "💰",
+        "snippet": "'revenue' => '💰 إيراد',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Pages\\VaultTransactions.php",
+        "line": 119,
+        "emojis": "🎓",
+        "snippet": "'student_payment' => '🎓 تحصيل طالب',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Pages\\VaultTransactions.php",
+        "line": 120,
+        "emojis": "💵",
+        "snippet": "'salary_payment' => '💵 صرف راتب',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Pages\\VaultTransactions.php",
+        "line": 121,
+        "emojis": "💸",
+        "snippet": "'expense' => '💸 مصروف',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Pages\\VaultTransactions.php",
+        "line": 122,
+        "emojis": "🔄",
+        "snippet": "'transfer_in' => '🔄 تحويل وارد',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Pages\\VaultTransactions.php",
+        "line": 123,
+        "emojis": "🔁",
+        "snippet": "'transfer_out' => '🔁 تحويل صادر',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Tables\\VaultsTable.php",
+        "line": 36,
+        "emojis": "💵",
+        "snippet": "'cash' => '💵 نقدي',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Tables\\VaultsTable.php",
+        "line": 37,
+        "emojis": "📱",
+        "snippet": "'vodafone' => '📱 فودافون كاش',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Tables\\VaultsTable.php",
+        "line": 38,
+        "emojis": "💳",
+        "snippet": "'instapay' => '💳 إنستاباي',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Tables\\VaultsTable.php",
+        "line": 95,
+        "emojis": "💵",
+        "snippet": "'cash' => '💵 نقدي',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Tables\\VaultsTable.php",
+        "line": 96,
+        "emojis": "📱",
+        "snippet": "'vodafone' => '📱 فودافون كاش',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\Vaults\\Tables\\VaultsTable.php",
+        "line": 97,
+        "emojis": "💳",
+        "snippet": "'instapay' => '💳 إنستاباي',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\Schemas\\VaultTransferForm.php",
+        "line": 39,
+        "emojis": "✅",
+        "snippet": "'completed' => '✅ مكتمل',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\Schemas\\VaultTransferForm.php",
+        "line": 40,
+        "emojis": "❌",
+        "snippet": "'cancelled' => '❌ ملغي',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\Tables\\VaultTransfersTable.php",
+        "line": 67,
+        "emojis": "✅",
+        "snippet": "'completed' => '✅ مكتمل',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\Tables\\VaultTransfersTable.php",
+        "line": 68,
+        "emojis": "❌",
+        "snippet": "'cancelled' => '❌ ملغي',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\Tables\\VaultTransfersTable.php",
+        "line": 98,
+        "emojis": "✅",
+        "snippet": "'completed' => '✅ مكتمل',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\Tables\\VaultTransfersTable.php",
+        "line": 99,
+        "emojis": "❌",
+        "snippet": "'cancelled' => '❌ ملغي',"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Widgets\\AdminCalendarWidget.php",
+        "line": 54,
+        "emojis": "📊",
+        "snippet": "'title' => '📊 جلسة: ' . $session->group->name,"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Widgets\\AdminCalendarWidget.php",
+        "line": 82,
+        "emojis": "📝",
+        "snippet": "'title' => '📝 امتحان: ' . $exam->title,"
+    },
+    {
+        "file": "app\\Filament\\Admin\\Widgets\\AdminCalendarWidget.php",
+        "line": 110,
+        "emojis": "📚",
+        "snippet": "'title' => '📚 واجب: ' . $assignment->title,"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Pages\\HomeworkReviewCenter.php",
+        "line": 600,
+        "emojis": "🚀",
+        "snippet": "Notification::make()->title('تم إنشاء الواجب وربطه بالسيشن بنجاح! 🚀')->success()->send();"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Pages\\HomeworkReviewCenter.php",
+        "line": 675,
+        "emojis": "🔄",
+        "snippet": "->title(\"تم منح إذن إعادة تسليم للطالب: {$student->user?->name} بنجاح! 🔄\")"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Pages\\HomeworkReviewCenter.php",
+        "line": 767,
+        "emojis": "🌟",
+        "snippet": "Notification::make()->title('تم اعتماد ونشر نتائج الامتحان للطلاب وأولياء الأمور رسمياً! 🌟')->success()->send();"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Pages\\HomeworkReviewCenter.php",
+        "line": 853,
+        "emojis": "📝",
+        "snippet": "Notification::make()->title('تم إنشاء الامتحان بنجاح! 📝')->success()->send();"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Pages\\HomeworkReviewCenter.php",
+        "line": 952,
+        "emojis": "🔄",
+        "snippet": "->title(\"تم منح إذن إعادة الامتحان للطالب: {$student->user?->name} بنجاح! 🔄\")"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Pages\\HomeworkReviewCenter.php",
+        "line": 1229,
+        "emojis": "📝",
+        "snippet": "->title('تم حفظ مسودة التقييم بنجاح 📝')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Pages\\HomeworkReviewCenter.php",
+        "line": 1266,
+        "emojis": "🌟",
+        "snippet": "->title('تم اعتماد ونشر النتيجة رسمياً! 🌟')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Pages\\HomeworkReviewCenter.php",
+        "line": 1303,
+        "emojis": "🎉",
+        "snippet": "->title('تم تصحيح جميع التسليمات المتاحة لهذا الواجب! 🎉')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Assignments\\Pages\\ManageAssignmentSubmissions.php",
+        "line": 196,
+        "emojis": "🎉",
+        "snippet": "->title('تم الانتهاء من تصحيح كافة الحلول المسلّمة! 🎉')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Assignments\\Pages\\ManageAssignmentSubmissions.php",
+        "line": 233,
+        "emojis": "📝",
+        "snippet": "->title('تم حفظ مسودة التقييم بنجاح 📝')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Assignments\\Pages\\ManageAssignmentSubmissions.php",
+        "line": 247,
+        "emojis": "✓",
+        "snippet": "* Primary action: Instant Grading & Publication (تم التصحيح ✓)"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Assignments\\Pages\\ManageAssignmentSubmissions.php",
+        "line": 291,
+        "emojis": "🌟",
+        "snippet": "->title('تم اعتماد ونشر النتيجة رسمياً! 🌟')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Schemas\\AttendanceSessionForm.php",
+        "line": 111,
+        "emojis": "✅",
+        "snippet": "'present' => '✅ حاضر',"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Schemas\\AttendanceSessionForm.php",
+        "line": 112,
+        "emojis": "❌",
+        "snippet": "'absent' => '❌ غائب',"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Schemas\\AttendanceSessionForm.php",
+        "line": 114,
+        "emojis": "📝",
+        "snippet": "'excused' => '📝 غياب بعذر'"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Schemas\\AttendanceSessionForm.php",
+        "line": 151,
+        "emojis": "🎯",
+        "snippet": "->label('🎯 الالتزام')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Schemas\\AttendanceSessionForm.php",
+        "line": 162,
+        "emojis": "👁",
+        "snippet": "->label('👁️ التركيز')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Schemas\\AttendanceSessionForm.php",
+        "line": 173,
+        "emojis": "🙋",
+        "snippet": "->label('🙋 المشاركة')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Schemas\\AttendanceSessionForm.php",
+        "line": 199,
+        "emojis": "👤",
+        "snippet": ": '👤 طالب جديد'"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\CreateExam.php",
+        "line": 114,
+        "emojis": "✅",
+        "snippet": "return '✅ تم إنشاء الامتحان بنجاح';"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+        "line": 32,
+        "emojis": "❌",
+        "snippet": "->title(__('filament/instructor/edit_exam.❌خطأفيعددالأسئلة'))"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+        "line": 50,
+        "emojis": "❌",
+        "snippet": "->title('❌ خطأ في السؤال رقم <strong>' . $question->order . '</strong>')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+        "line": 65,
+        "emojis": "❌",
+        "snippet": "->title('❌ خطأ في السؤال رقم <strong>' . $question->order . '</strong>')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+        "line": 78,
+        "emojis": "⚠",
+        "snippet": "->title('⚠️ تحذير: السؤال رقم <strong>' . $question->order . '</strong>')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+        "line": 101,
+        "emojis": "❌",
+        "snippet": "->title(__('filament/instructor/edit_exam.❌خطأفيمجموعالدرجات'))"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+        "line": 129,
+        "emojis": "📊",
+        "snippet": "$statusParts[] = \"📊 عدد الأسئلة: {$questionsCount}\";"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+        "line": 136,
+        "emojis": "⚠",
+        "snippet": "$statusParts[] = \"⚠️ يجب إضافة \" . (3 - $questionsCount) . \" سؤال آخر\";"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+        "line": 143,
+        "emojis": "⚠",
+        "snippet": "$statusParts[] = \"⚠️ زيادة: \" . abs($difference) . \" درجة\";"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+        "line": 145,
+        "emojis": "⚠",
+        "snippet": "$statusParts[] = \"⚠️ نقص: \" . abs($difference) . \" درجة\";"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+        "line": 152,
+        "emojis": "✅",
+        "snippet": "$statusParts[] = \"✅ جاهز للحفظ\";"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\RelationManagers\\QuestionsRelationManager.php",
+        "line": 128,
+        "emojis": "❌",
+        "snippet": "->title('❌ خطأ في عدد الاختيارات')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\Exams\\RelationManagers\\QuestionsRelationManager.php",
+        "line": 149,
+        "emojis": "❌",
+        "snippet": "->title('❌ خطأ')"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Schemas\\SessionScheduleForm.php",
+        "line": 140,
+        "emojis": "✅",
+        "snippet": "return '✅ لا توجد تضاربات في الجدول';"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Schemas\\SessionScheduleForm.php",
+        "line": 147,
+        "emojis": "⚠",
+        "snippet": "$html .= '<div class=\"text-red-600 font-semibold\">⚠️ تضارب مع جدول المدرس:</div>';"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Schemas\\SessionScheduleForm.php",
+        "line": 156,
+        "emojis": "⚠",
+        "snippet": "$html .= '<div class=\"text-orange-600 font-semibold\">⚠️ تضارب في القاعة:</div>';"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Schemas\\SessionScheduleForm.php",
+        "line": 165,
+        "emojis": "⚠",
+        "snippet": "$html .= '<div class=\"text-yellow-600 font-semibold\">⚠️ تضارب مع طلاب:</div>';"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Widgets\\InstructorCalendarWidget.php",
+        "line": 38,
+        "emojis": "📊",
+        "snippet": "'title' => '📊 جلسة: ' . $session->group->name,"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Widgets\\InstructorCalendarWidget.php",
+        "line": 61,
+        "emojis": "📝",
+        "snippet": "'title' => '📝 امتحان: ' . $exam->title,"
+    },
+    {
+        "file": "app\\Filament\\Instructor\\Widgets\\InstructorCalendarWidget.php",
+        "line": 84,
+        "emojis": "📚",
+        "snippet": "'title' => '📚 واجب: ' . $assignment->title,"
+    },
+    {
+        "file": "app\\Filament\\Parent\\Pages\\Dashboard.php",
+        "line": 28,
+        "emojis": "👋",
+        "snippet": "return $greeting . ' ' . auth()->user()->name . '! 👋' ."
+    },
+    {
+        "file": "app\\Filament\\Parent\\Resources\\Messages\\Pages\\ViewMessage.php",
+        "line": 35,
+        "emojis": "📋",
+        "snippet": "'info' => '📋 معلومة',"
+    },
+    {
+        "file": "app\\Filament\\Parent\\Resources\\Messages\\Pages\\ViewMessage.php",
+        "line": 36,
+        "emojis": "⚠",
+        "snippet": "'warning' => '⚠️ تحذير',"
+    },
+    {
+        "file": "app\\Filament\\Parent\\Resources\\Messages\\Pages\\ViewMessage.php",
+        "line": 37,
+        "emojis": "✅",
+        "snippet": "'success' => '✅ نجاح',"
+    },
+    {
+        "file": "app\\Filament\\Parent\\Resources\\Messages\\Pages\\ViewMessage.php",
+        "line": 38,
+        "emojis": "🔔",
+        "snippet": "'urgent' => '🔔 عاجل',"
+    },
+    {
+        "file": "app\\Filament\\Student\\Pages\\MyAssignments.php",
+        "line": 228,
+        "emojis": "🚀",
+        "snippet": "->title('تم تسليم الواجب بنجاح! 🚀')"
+    },
+    {
+        "file": "app\\Filament\\Supervisor\\Widgets\\SupervisorCalendarWidget.php",
+        "line": 42,
+        "emojis": "📊",
+        "snippet": "'title' => '📊 جلسة: ' . $session->group->name,"
+    },
+    {
+        "file": "app\\Filament\\Supervisor\\Widgets\\SupervisorCalendarWidget.php",
+        "line": 64,
+        "emojis": "📝",
+        "snippet": "'title' => '📝 امتحان: ' . $exam->title,"
+    },
+    {
+        "file": "app\\Filament\\Supervisor\\Widgets\\SupervisorCalendarWidget.php",
+        "line": 86,
+        "emojis": "📚",
+        "snippet": "'title' => '📚 واجب: ' . $assignment->title,"
+    },
+    {
+        "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+        "line": 94,
+        "emojis": "📁",
+        "snippet": "return '📁 نماذج وصلاحيات عامة / أخرى';"
+    },
+    {
+        "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+        "line": 134,
+        "emojis": "✔",
+        "snippet": "->label('تحديد كل صلاحيات القسم ✔️')"
+    },
+    {
+        "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+        "line": 143,
+        "emojis": "❌",
+        "snippet": "->label('إلغاء تحديد القسم ❌')"
+    },
+    {
+        "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+        "line": 270,
+        "emojis": "📁",
+        "snippet": "return '📁 صفحات وتقارير عامة / أخرى';"
+    },
+    {
+        "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+        "line": 312,
+        "emojis": "✔",
+        "snippet": "->label('تحديد كل صفحات القسم ✔️')"
+    },
+    {
+        "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+        "line": 320,
+        "emojis": "❌",
+        "snippet": "->label('إلغاء تحديد القسم ❌')"
+    }
+]

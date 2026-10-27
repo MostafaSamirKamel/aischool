@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Instructors\Pages;
+
+use App\Filament\Admin\Resources\Instructors\InstructorResource;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\ForceDeleteAction;
+use Filament\Actions\RestoreAction;
+use Filament\Resources\Pages\EditRecord;
+
+class EditInstructor extends EditRecord
+{
+    protected static string $resource = InstructorResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        $user = auth()->user();
+        $actions = [];
+
+        // المستخدم الرئيسي لا يمكنه حذف مدرسين
+        if (!$user->is_super_admin) {
+            $actions[] = DeleteAction::make();
+            $actions[] = ForceDeleteAction::make();
+            $actions[] = RestoreAction::make();
+        }
+
+        return $actions;
+    }
+    public function getTitle(): string
+    {
+        return __('filament/admin/edit_instructor.title');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/edit_instructor.title');
+    }
+
+}

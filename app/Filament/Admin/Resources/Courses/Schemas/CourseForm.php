@@ -1,0 +1,82 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Courses\Schemas;
+
+use Filament\Schemas\Schema;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Section;
+
+class CourseForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Section::make('معلومات أساسية')
+                    ->schema([
+                        TextInput::make('name')
+                            ->label(__('filament/admin/course_resource.name'))
+                            ->required()
+                            ->maxLength(255)
+                            ->columnSpanFull(),
+
+                        RichEditor::make('description')
+                            ->label(__('filament/admin/course_resource.description'))
+                            ->columnSpanFull(),
+                    ])
+                    ->columns(2),
+                    
+                Section::make('تفاصيل الكورس')
+                    ->schema([
+                        TextInput::make('duration_months')
+                            ->label(__('filament/admin/course_resource.duration_months'))
+                            ->numeric()
+                            ->minValue(1)
+                            ->maxValue(36),
+                            
+                        TextInput::make('sessions_count')
+                            ->label(__('filament/admin/course_resource.sessions_count'))
+                            ->numeric()
+                            ->minValue(1),
+                            
+                        TextInput::make('price')
+                            ->label(__('filament/admin/course_resource.price'))
+                            ->numeric()
+                            ->prefix('ج.م')
+                            ->minValue(0)
+                            ->step(0.01),
+                            
+                        TextInput::make('order')
+                            ->label(__('filament/admin/course_resource.order'))
+                            ->numeric()
+                            ->default(0)
+                            ->minValue(0)
+                            ->required(),
+                            
+                        Select::make('status')
+                            ->label(__('filament/admin/course_resource.status'))
+                            ->options(['draft' => __('filament/admin/course_resource.status.draft'), 'active' => __('filament/admin/course_resource.status.active'), 'archived' => __('filament/admin/course_resource.status.archived')])
+                            ->default(__('filament/admin/course_resource.status_default'))
+                            ->required(),
+                    ])
+                    ->columns(2),
+                    
+                Section::make('متطلبات الكورس')
+                    ->schema([
+                        Repeater::make('prerequisites')
+                            ->label(__('filament/admin/course_resource.prerequisites'))
+                            ->simple(
+                                TextInput::make('prerequisite')
+                                    ->label(__('filament/admin/course_resource.prerequisite'))
+                                    ->required()
+                            )
+                            ->columnSpanFull()
+                            ->defaultItems(0)
+                            ->addActionLabel('إضافة متطلب'),
+                    ]),
+            ]);
+    }
+}

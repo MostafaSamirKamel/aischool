@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\InstructorPayments\Pages;
+
+use App\Filament\Instructor\Resources\InstructorPayments\InstructorPaymentResource;
+use Filament\Resources\Pages\ListRecords;
+
+class ListInstructorPayments extends ListRecords
+{
+    protected static string $resource = InstructorPaymentResource::class;
+
+    public function getTitle(): string
+    {
+        return 'أجوري';
+    }
+}

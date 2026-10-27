@@ -1,0 +1,75 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Exams\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Tables\Table;
+
+class ExamsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('tenant.name')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('course.name')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('group.name')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('instructor.id')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('title')
+                    ->searchable(),
+                TextColumn::make('type'),
+                TextColumn::make('exam_date')
+                    ->dateTime()
+                    ->sortable(),
+                TextColumn::make('duration')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('total_marks')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('passing_marks')
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('status'),
+                TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('deleted_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                TrashedFilter::make(),
+            ])
+            ->recordActions([
+                EditAction::make(),
+            ])
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                    ForceDeleteBulkAction::make(),
+                    RestoreBulkAction::make(),
+                ]),
+            ]);
+    }
+}

@@ -1,0 +1,83 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Supervisors\Pages;
+
+use App\Models\User;
+use App\Models\Supervisor;
+use App\Filament\Admin\Resources\Supervisors\SupervisorResource;
+use Filament\Resources\Pages\CreateRecord;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
+use Filament\Notifications\Notification;
+
+class CreateSupervisor extends CreateRecord
+{
+    protected static string $resource = SupervisorResource::class;
+
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        // التحقق من عدم تكرار البريد الإلكتروني
+        if (User::where('email', $data['user_email'])->exists()) {
+            Notification::make()
+                ->danger()
+                ->title(__('filament/admin/create_supervisor.البريدالإلكترونيمستخدمبالفعل'))
+                ->body('هذا البريد الإلكتروني مسجل لمستخدم آخر')
+                ->send();
+
+            $this->halt();
+        }
+
+        // التحقق من عدم تكرار رقم الهاتف
+        if (Supervisor::where('phone', $data['phone'])->exists()) {
+            Notification::make()
+                ->danger()
+                ->title(__('filament/admin/create_supervisor.رقمالهاتفمستخدمبالفعل'))
+                ->body('هذا الرقم مسجل لمشرف آخر')
+                ->send();
+
+            $this->halt();
+        }
+
+        // التحقق من عدم تكرار رقم الهاتف في جدول المستخدمين
+        if (User::where('phone', $data['user_phone'])->exists()) {
+            Notification::make()
+                ->danger()
+                ->title(__('filament/admin/create_supervisor.رقمالهاتفمستخدمبالفعل'))
+                ->body('هذا الرقم مسجل لمستخدم آخر')
+                ->send();
+
+            $this->halt();
+        }
+
+        // إنشاء المستخدم أولاً
+        $user = User::create([
+            'name' => $data['user_name'],
+            'email' => $data['user_email'],
+            'phone' => $data['user_phone'],
+            'password' => Hash::make($data['user_password']),
+            'tenant_id' => auth()->user()->tenant_id,
+        ]);
+
+        // إعطاء دور المشرف
+        $user->assignRole('supervisor');
+
+        // استبدال بيانات المستخدم بـ user_id
+        $data['user_id'] = $user->id;
+        $data['tenant_id'] = $user->tenant_id;
+
+        // حذف الحقول المؤقتة
+        unset($data['user_name'], $data['user_email'], $data['user_phone'], $data['user_password']);
+
+        return $data;
+    }
+    public function getTitle(): string
+    {
+        return __('filament/admin/create_supervisor.title');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/create_supervisor.title');
+    }
+
+}

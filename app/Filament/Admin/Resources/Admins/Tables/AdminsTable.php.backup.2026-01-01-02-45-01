@@ -1,0 +1,94 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Admins\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use Filament\Actions\ViewAction;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Tables\Table;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\BadgeColumn;
+
+class AdminsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('employee_code')
+                    ->label(__('filament/admin/admin_resource.employee_code'))
+                    ->searchable()
+                    ->sortable(),
+                    
+                TextColumn::make('user.name')
+                    ->label(__('filament/admin/admin_resource.user.name'))
+                    ->searchable()
+                    ->sortable()
+                    ->default('—'),
+                    
+                TextColumn::make('job_title')
+                    ->label(__('filament/admin/admin_resource.job_title'))
+                    ->searchable()
+                    ->sortable(),
+                    
+                TextColumn::make('department.name')
+                    ->label(__('filament/admin/admin_resource.department.name'))
+                    ->searchable()
+                    ->sortable()
+                    ->default('—'),
+                    
+                TextColumn::make('phone')
+                    ->label(__('filament/admin/admin_resource.phone'))
+                    ->searchable(),
+                    
+                BadgeColumn::make('status')
+                    ->label(__('filament/admin/admin_resource.status'))
+                    ->colors([
+                        'success' => 'active',
+                        'danger' => 'inactive',
+                        'warning' => 'on_leave',
+                    ])
+                    ->formatStateUsing(fn(string $state): string => __("filament/admin/admin_resource.status.{$state}"))
+                    ->sortable(),
+                    
+                TextColumn::make('hire_date')
+                    ->label(__('filament/admin/admin_resource.hire_date'))
+                    ->date()
+                    ->sortable(),
+                    
+                TextColumn::make('age')
+                    ->label(__('filament/admin/admin_resource.age'))
+                    ->getStateUsing(fn($record) => $record->age)
+                    ->badge()
+                    ->color('success')
+                    ->sortable(query: function ($query, $direction) {
+                        return $query->orderBy('birth_date', $direction === 'asc' ? 'desc' : 'asc');
+                    })
+                    ->toggleable(isToggledHiddenByDefault: true),
+
+                TextColumn::make('created_at')
+                    ->label(__('filament/admin/admin_resource.created_at'))
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                TrashedFilter::make(),
+            ])
+            ->actions([
+                ViewAction::make(),
+                EditAction::make(),
+            ])
+            ->bulkActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                    ForceDeleteBulkAction::make(),
+                    RestoreBulkAction::make(),
+                ]),
+            ]);
+    }
+}

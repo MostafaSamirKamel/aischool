@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Classrooms\Pages;
+
+use App\Filament\Admin\Resources\Classrooms\ClassroomResource;
+use Filament\Actions\CreateAction;
+use Filament\Resources\Pages\ListRecords;
+
+class ListClassrooms extends ListRecords
+{
+    protected static string $resource = ClassroomResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        $actions = [];
+
+        if (!auth()->user()->is_super_admin) {
+            $actions[] = CreateAction::make();
+        }
+
+        return $actions;
+    }
+    public function getTitle(): string
+    {
+        return __('filament/admin/list_classrooms.title');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/list_classrooms.title');
+    }
+
+}

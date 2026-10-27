@@ -1,0 +1,79 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\Assignments\Tables;
+
+use App\Filament\Instructor\Resources\Assignments\AssignmentResource;
+use App\Models\Assignment;
+use Filament\Actions\Action;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Tables\Table;
+
+class AssignmentsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('title')
+                    ->label(__('filament/instructor/assignment_resource.title'))
+                    ->searchable()
+                    ->sortable(),
+                TextColumn::make('group.name')
+                    ->label(__('filament/instructor/assignment_resource.group.name'))
+                    ->sortable(),
+                TextColumn::make('due_date')
+                    ->label(__('filament/instructor/assignment_resource.due_date'))
+                    ->date()
+                    ->sortable(),
+                TextColumn::make('max_score')
+                    ->label(__('filament/instructor/assignment_resource.max_score'))
+                    ->numeric()
+                    ->sortable(),
+                TextColumn::make('submissions_count')
+                    ->label(__('filament/instructor/assignment_resource.submissions_count'))
+                    ->counts('submissions')
+                    ->sortable(),
+                TextColumn::make('status')
+                    ->label(__('filament/instructor/assignment_resource.status'))
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'active' => 'success',
+                        'closed' => 'danger',
+                        default => 'gray',
+                    })
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'active' => 'نشط',
+                        'closed' => 'مغلق',
+                        default => $state,
+                    }),
+                TextColumn::make('created_at')
+                    ->label(__('filament/instructor/assignment_resource.created_at'))
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                //
+            ])
+            ->recordActions([
+                Action::make('submissions')
+                    ->label('تسليمات الطلاب')
+                    ->icon('heroicon-o-academic-cap')
+                    ->color('primary')
+                    ->url(fn (Assignment $record): string => AssignmentResource::getUrl('submissions', ['record' => $record])),
+                EditAction::make(),
+            ])
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                ]),
+            ])
+            ->defaultSort('due_date', 'desc');
+    }
+}

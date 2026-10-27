@@ -1,0 +1,108 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\GroupMessageResource;
+
+use App\Models\GroupMessage;
+use App\Filament\Instructor\Resources\GroupMessageResource\Pages;
+use App\Filament\Instructor\Resources\GroupMessageResource\Schemas\GroupMessageForm;
+use App\Filament\Instructor\Resources\GroupMessageResource\Tables\GroupMessageTable;
+use BackedEnum;
+use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
+use UnitEnum;
+
+class GroupMessageResource extends Resource
+{
+    protected static ?string $model = GroupMessage::class;
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedEnvelope;
+
+    protected static ?string $navigationLabel = 'رسائل المجموعات';
+
+    protected static ?string $modelLabel = 'رسالة مجموعة';
+
+    protected static ?string $pluralModelLabel = 'رسائل المجموعات';
+
+    protected static ?int $navigationSort = 1;
+
+    protected static ?string $recordTitleAttribute = 'subject';
+
+    protected static UnitEnum|string|null $navigationGroup = 'التواصل';
+
+        public static function getNavigationLabel(): string
+    {
+        return 'رسائل المجموعات';
+    }
+
+        public static function getModelLabel(): string
+    {
+        return 'رسالة مجموعة';
+    }
+
+        public static function getPluralModelLabel(): string
+    {
+        return 'رسائل المجموعات';
+    }
+
+    public static function form(Schema $schema): Schema
+    {
+        return GroupMessageForm::configure($schema);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return GroupMessageTable::configure($table);
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        $user = auth()->user();
+        
+        // التأكد من أن المستخدم لديه حساب معلم
+        if (!$user || !$user->instructor) {
+            return parent::getEloquentQuery()->whereRaw('1 = 0');
+        }
+
+        // عرض رسائل المجموعات الخاصة بالمعلم فقط
+        return parent::getEloquentQuery()
+            ->whereHas('group', function ($query) use ($user) {
+                $query->where('instructor_id', $user->instructor->id);
+            })
+            ->withoutGlobalScopes([
+                SoftDeletingScope::class,
+            ]);
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => Pages\ListGroupMessages::route('/'),
+            'create' => Pages\CreateGroupMessage::route('/create'),
+            'view' => Pages\ViewGroupMessage::route('/{record}'),
+            'edit' => Pages\EditGroupMessage::route('/{record}/edit'),
+        ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        $user = auth()->user();
+        if (!$user || !$user->instructor) {
+            return null;
+        }
+
+        $draftCount = static::getEloquentQuery()
+            ->where('status', 'draft')
+            ->count();
+
+        return $draftCount > 0 ? (string) $draftCount : null;
+    }
+
+    public static function getNavigationBadgeColor(): ?string
+    {
+        return 'warning';
+    }
+}

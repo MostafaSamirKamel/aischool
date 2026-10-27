@@ -1,0 +1,211 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\Exams\Pages;
+
+use App\Filament\Instructor\Resources\Exams\ExamResource;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\ForceDeleteAction;
+use Filament\Actions\RestoreAction;
+use Filament\Actions\Action;
+use Filament\Resources\Pages\EditRecord;
+use Filament\Notifications\Notification;
+use Illuminate\Validation\ValidationException;
+use Filament\Forms\Components\ViewField;
+
+class EditExam extends EditRecord
+{
+    protected static string $resource = ExamResource::class;
+
+    protected function mutateFormDataBeforeFill(array $data): array
+    {
+        // إضافة عرض PDF إذا كان موجوداً
+        if (!empty($data['pdf_file'])) {
+            $data['pdf_preview'] = $data['pdf_file'];
+        }
+        return $data;
+    }
+
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        $this->validateExam();
+        return $data;
+    }
+
+    protected function validateExam(): void
+    {
+        $exam = $this->record;
+        $questions = $exam->questions()->with('options')->get();
+
+        // Validation 1: عدد الأسئلة لا يقل عن 3
+        if ($questions->count() < 3) {
+            Notification::make()
+                ->title('❌ خطأ في عدد الأسئلة')
+                ->body('يجب أن يحتوي الامتحان على <strong>3</strong> أسئلة على الأقل. العدد الحالي: <strong>' . $questions->count() . '</strong>')
+                ->danger()
+                ->persistent()
+                ->send();
+
+            throw ValidationException::withMessages([
+                'questions' => 'يجب أن يحتوي الامتحان على 3 أسئلة على الأقل',
+            ]);
+        }
+
+        // Validation 2: التحقق من عدد الاختيارات وأن كل سؤال له إجابة صحيحة واحدة فقط
+        foreach ($questions as $question) {
+            $optionsCount = $question->options()->count();
+
+            // التحقق من عدد الاختيارات (لا يقل عن 3)
+            if ($optionsCount < 3) {
+                Notification::make()
+                    ->title('❌ خطأ في السؤال رقم <strong>' . $question->order . '</strong>')
+                    ->body('السؤال "' . $question->question_text . '" يحتوي على <strong>' . $optionsCount . '</strong> اختيارات فقط. يجب أن يحتوي على <strong>3</strong> اختيارات على الأقل.')
+                    ->danger()
+                    ->persistent()
+                    ->send();
+
+                throw ValidationException::withMessages([
+                    'questions' => 'السؤال رقم ' . $question->order . ' يجب أن يحتوي على 3 اختيارات على الأقل',
+                ]);
+            }
+
+            $correctAnswersCount = $question->options()->where('is_correct', true)->count();
+
+            if ($correctAnswersCount > 1) {
+                Notification::make()
+                    ->title('❌ خطأ في السؤال رقم <strong>' . $question->order . '</strong>')
+                    ->body('السؤال "' . $question->question_text . '" يحتوي على <strong>' . $correctAnswersCount . '</strong> إجابات صحيحة. يسمح بإجابة صحيحة <strong>واحدة</strong> فقط.')
+                    ->danger()
+                    ->persistent()
+                    ->send();
+
+                throw ValidationException::withMessages([
+                    'questions' => 'السؤال رقم ' . $question->order . ' يحتوي على أكثر من إجابة صحيحة',
+                ]);
+            }
+
+            if ($correctAnswersCount === 0) {
+                Notification::make()
+                    ->title('⚠️ تحذير: السؤال رقم <strong>' . $question->order . '</strong>')
+                    ->body('السؤال "' . $question->question_text . '" لا يحتوي على إجابة صحيحة')
+                    ->warning()
+                    ->persistent()
+                    ->send();
+
+                throw ValidationException::withMessages([
+                    'questions' => 'السؤال رقم ' . $question->order . ' لا يحتوي على إجابة صحيحة',
+                ]);
+            }
+        }
+
+        // Validation 3: مجموع درجات الأسئلة يساوي مجموع درجات الامتحان
+        $totalQuestionsPoints = $questions->sum('points');
+        $examTotalMarks = $exam->total_marks;
+        $difference = $totalQuestionsPoints - $examTotalMarks;
+
+        if ($difference != 0) {
+            $message = $difference > 0
+                ? "مجموع درجات الأسئلة (<strong>{$totalQuestionsPoints}</strong>) أكبر من مجموع درجات الامتحان (<strong>{$examTotalMarks}</strong>) بفارق <strong>" . abs($difference) . "</strong> درجة"
+                : "مجموع درجات الأسئلة (<strong>{$totalQuestionsPoints}</strong>) أقل من مجموع درجات الامتحان (<strong>{$examTotalMarks}</strong>) بفارق <strong>" . abs($difference) . "</strong> درجة";
+
+            Notification::make()
+                ->title('❌ خطأ في مجموع الدرجات')
+                ->body($message)
+                ->danger()
+                ->persistent()
+                ->send();
+
+            throw ValidationException::withMessages([
+                'total_marks' => $message,
+            ]);
+        }
+    }
+
+    protected function getHeaderActions(): array
+    {
+        $exam = $this->record;
+        $questionsCount = $exam->questions()->count();
+        $totalQuestionsPoints = $exam->questions()->sum('points');
+        $examTotalMarks = $exam->total_marks;
+        $difference = $totalQuestionsPoints - $examTotalMarks;
+
+        $actions = [];
+
+        // رسالة توضيحية عن حالة الامتحان
+        if ($questionsCount > 0) {
+            $statusParts = [];
+            $statusColor = 'info';
+            $statusIcon = 'heroicon-o-information-circle';
+
+            $statusParts[] = "📊 عدد الأسئلة: {$questionsCount}";
+            $statusParts[] = "مجموع درجات الأسئلة: {$totalQuestionsPoints}";
+            $statusParts[] = "درجات الامتحان: {$examTotalMarks}";
+
+            if ($questionsCount < 3) {
+                $statusColor = 'danger';
+                $statusIcon = 'heroicon-o-exclamation-triangle';
+                $statusParts[] = "⚠️ يجب إضافة " . (3 - $questionsCount) . " سؤال آخر";
+            }
+
+            if ($difference != 0) {
+                $statusColor = 'warning';
+                $statusIcon = 'heroicon-o-exclamation-circle';
+                if ($difference > 0) {
+                    $statusParts[] = "⚠️ زيادة: " . abs($difference) . " درجة";
+                } else {
+                    $statusParts[] = "⚠️ نقص: " . abs($difference) . " درجة";
+                }
+            }
+
+            if ($questionsCount >= 3 && $difference == 0) {
+                $statusColor = 'success';
+                $statusIcon = 'heroicon-o-check-circle';
+                $statusParts[] = "✅ جاهز للحفظ";
+            }
+
+            $statusMessage = implode('  •  ', $statusParts);
+
+            $actions[] = Action::make('exam_status')
+                ->label(new \Illuminate\Support\HtmlString('<span style="color: white; font-weight: bold;">' . $statusMessage . '</span>'))
+                ->color($statusColor)
+                ->icon($statusIcon)
+                ->disabled();
+        }
+
+        return array_merge($actions, [
+            Action::make('add_questions')
+                ->label('📝 إضافة أسئلة')
+                ->color('success')
+                ->icon('heroicon-o-plus-circle')
+                ->visible(fn() => $questionsCount === 0)
+                ->action(function () {
+                    Notification::make()
+                        ->title('💡 انتقل إلى تبويب "الأسئلة"')
+                        ->body('اضغط على تبويب "الأسئلة" بالأسفل لإضافة أسئلة الامتحان')
+                        ->info()
+                        ->duration(5000)
+                        ->send();
+                }),
+            Action::make('view_pdf')
+                ->label('📄 عرض ملف PDF')
+                ->color('info')
+                ->icon('heroicon-o-document-text')
+                ->visible(fn() => $this->record->pdf_file)
+                ->url(fn() => route('exam.pdf', ['filename' => basename($this->record->pdf_file)]))
+                ->openUrlInNewTab(),
+            DeleteAction::make(),
+            ForceDeleteAction::make(),
+            RestoreAction::make(),
+        ]);
+    }
+
+    public function getTitle(): string
+    {
+        return __('filament/admin/edit_exam.title');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/edit_exam.title');
+    }
+
+}

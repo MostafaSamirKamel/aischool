@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل نظام إدارة المدارس الذكي</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --accent: #ff6b6b;
+            --success: #51cf66;
+            --warning: #ffd43b;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+        }
+
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8f9ff;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge-version {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Navigation */
+        .navbar-custom {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-custom .nav-link {
+            color: #667eea !important;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #764ba2 !important;
+            border-bottom-color: #764ba2;
+        }
+
+        /* Cards */
+        .card-feature {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .card-feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        .card-feature .card-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .card-feature .card-title {
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .card-feature .card-text {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Sections */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        /* Background Sections */
+        .bg-light-gradient {
+            background: linear-gradient(135deg, #f5f7ff 0%, #f0f4ff 100%);
+            padding: 80px 0;
+        }
+
+        .bg-white-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            color: #333;
+            font-size: 1.05rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: #667eea;
+            font-weight: bold;
+            margin-left: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Roles Section */
+        .role-card {
+            background: white;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .role-card:hover {
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+            border-left-color: #764ba2;
+        }
+
+        .role-card .role-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .role-card .role-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            margin-left: 10px;
+        }
+
+        .role-card .role-description {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .role-card .role-permissions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .role-card .permission-tag {
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            border: 1px solid #667eea;
+        }
+
+        /* Tech Stack */
+        .tech-badge {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 8px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* CTA Button */
+        .btn-custom {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-custom:hover {
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 10px 28px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-custom:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        /* Statistics */
+        .stat-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Timeline */
+        .timeline-item {
+            padding: 20px;
+            border-left: 3px solid #667eea;
+            margin-bottom: 25px;
+            background: white;
+            border-radius: 8px;
+            padding-left: 30px;
+        }
+
+        .timeline-item .timeline-date {
+            color: #667eea;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .timeline-title {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .timeline-item .timeline-text {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer-section {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-section h5 {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #667eea;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 40px;
+            text-align: center;
+            color: #bdc3c7;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* RTL Support */
+        .text-start-rtl {
+            text-align: right;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .card-feature .card-icon {
+                font-size: 2rem;
+            }
+        }
+
+        /* Hover Effects */
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        /* Badge Colors */
+        .badge-success {
+            background: #10b981;
+        }
+
+        .badge-warning {
+            background: #f59e0b;
+        }
+
+        .badge-info {
+            background: #3b82f6;
+        }
+
+        /* Code Block */
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            border-left: 4px solid #667eea;
+        }
+
+        .highlight-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        /* Accordion */
+        .accordion-button {
+            background: white;
+            color: #333;
+            font-weight: 600;
+            border: 1px solid #ddd;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: #f0f4ff;
+            color: #667eea;
+        }
+
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(102, 126, 234, 0.25);
+            border-color: #667eea;
+        }
+
+        /* Grid Items */
+        .grid-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .grid-item:hover {
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+        }
+
+        .grid-item h5 {
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .grid-item p {
+            color: #666;
+            margin: 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">
+            <i class="fas fa-graduation-cap" style="color: #667eea; margin-left: 10px;"></i>
+            AI School
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#overview">نظرة عامة</a></li>
+                <li class="nav-item"><a class="nav-link" href="#features">الميزات</a></li>
+                <li class="nav-item"><a class="nav-link" href="#panels">اللوحات</a></li>
+                <li class="nav-item"><a class="nav-link" href="#roles">الأدوار</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tech">التقنيات</a></li>
+                <li class="nav-item"><a class="nav-link" href="#quick-start">البدء السريع</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+    <div class="container" style="position: relative; z-index: 2;">
+        <div class="badge-version">
+            <i class="fas fa-rocket"></i> الإصدار 2.7.0
+        </div>
+        <h1>نظام إدارة المدرسه الذكيه</h1>
+        <p>منصة متعددة المؤسسات شاملة لإدارة المدارس والأكاديميات التعليميه</p>
+        <div class="mt-4">
+            <button class="btn btn-custom me-3" data-bs-toggle="modal" data-bs-target="#demoModal">عرض توضيحي</button>
+            <a href="#quick-start" class="btn btn-outline-custom">ابدأ الآن</a>
+        </div>
+    </div>
+</section>
+
+<!-- Overview Section -->
+<section id="overview" class="bg-white-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 fade-in-up">
+                <h2 class="section-title">ما هو نظام AI School؟</h2>
+                <p class="section-subtitle">
+                    نظام إدارة مؤسسات تعليمية متعدد الاستخدام مثل المدارس والأكاديميات ومراكز التدريب، مصمم بأحدث التقنيات لتوفير تجربة سلسة وفعالة.
+                </p>
+                <ul class="feature-list">
+                    <li>إدارة متكاملة للطلاب والمعلمين والدورات</li>
+                    <li>نظام مدفوعات وأقساط متقدم</li>
+                    <li>تتبع الحضور والدرجات والتقييمات</li>
+                    <li>عزل كامل للبيانات بين الفروع (Multi-Tenancy)</li>
+                    <li>تقارير شاملة وإحصائيات مفصلة</li>
+                    <li>دعم كامل للغة العربية</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <i class="fas fa-chart-line" style="font-size: 8rem; color: #667eea; opacity: 0.1;"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats Row -->
+        <div class="row mt-5">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="stat-box">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">لوحات تحكم رئيسية</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="stat-box">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">ميزة متقدمة</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="stat-box">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">موثوقية عالية</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="stat-box">
+                    <div class="stat-number">88%</div>
+                    <div class="stat-label">نسبة الإكمال</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="bg-light-gradient">
+    <div class="container">
+        <h2 class="section-title text-center">المميزات الرئيسية</h2>
+        <p class="section-subtitle text-center">نظام شامل يدعم جميع جوانب إدارة المؤسسات التعليمية</p>
+
+        <div class="row mt-5">
+            <!-- Feature 1 -->
+            <div class="col-lg-4 col-md-6 mb-4 fade-in-up">
+                <div class="card card-feature">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h5 class="card-title">إدارة الطلاب والمعلمين</h5>
+                        <p class="card-text">نظام متقدم لإدارة بيانات الطلاب والمعلمين مع دعم التصنيفات والفئات المختلفة</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-lg-4 col-md-6 mb-4 fade-in-up">
+                <div class="card card-feature">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h5 class="card-title">إدارة الكورسات والمجموعات</h5>
+                        <p class="card-text">نظام شامل لإدارة الكورسات والمجموعات الدراسية مع جدولة الجلسات</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-lg-4 col-md-6 mb-4 fade-in-up">
+                <div class="card card-feature">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h5 class="card-title">إدارة المدفوعات والأقساط</h5>
+                        <p class="card-text">نظام متقدم لإدارة المدفوعات والأقساط مع ملاحقة التأخير والتذكيرات</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-lg-4 col-md-6 mb-4 fade-in-up">
+                <div class="card card-feature">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h5 class="card-title">تتبع الحضور والدرجات</h5>
+                        <p class="card-text">نظام شامل لتتبع الحضور والدرجات والتقييمات مع تقارير تفصيلية</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="col-lg-4 col-md-6 mb-4 fade-in-up">
+                <div class="card card-feature">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h5 class="card-title">التقارير والإحصائيات</h5>
+                        <p class="card-text">تقارير شاملة وإحصائيات مفصلة لجميع جوانب المؤسسة التعليمية</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="col-lg-4 col-md-6 mb-4 fade-in-up">
+                <div class="card card-feature">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h5 class="card-title">أمان ومتعدد المؤسسات</h5>
+                        <p class="card-text">عزل كامل للبيانات بين المؤسسات مع نظام أدوار وصلاحيات متقدم</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Panels Section -->
+<section id="panels" class="bg-white-section">
+    <div class="container">
+        <h2 class="section-title text-center">لوحات التحكم الرئيسية</h2>
+        <p class="section-subtitle text-center">أربع واجهات متخصصة لكل دور في المinstitution</p>
+
+        <div class="row mt-5">
+            <!-- Admin Panel -->
+            <div class="col-lg-6 mb-4">
+                <div class="grid-item">
+                    <h5>
+                        <i class="fas fa-crown" style="color: #667eea;"></i> لوحة الإدارة (Admin Panel)
+                    </h5>
+                    <p>لوحة التحكم الرئيسية لمسؤول المؤسسة تتضمن:</p>
+                    <ul class="feature-list mt-3">
+                        <li>إدارة كاملة للطلاب والمعلمين والموظفين</li>
+                        <li>إدارة الكورسات والمجموعات والجدولة</li>
+                        <li>تقارير مالية وإدارة المدفوعات</li>
+                        <li>نظام الرسائل والإشعارات</li>
+                        <li>الإعدادات والتخصيصات المتقدمة</li>
+                        <li>صلاحيات كاملة على جميع الموارد</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Instructor Panel -->
+            <div class="col-lg-6 mb-4">
+                <div class="grid-item">
+                    <h5>
+                        <i class="fas fa-chalkboard-user" style="color: #667eea;"></i> لوحة المعلم (Instructor Panel)
+                    </h5>
+                    <p>لوحة متخصصة للمعلمين تتضمن:</p>
+                    <ul class="feature-list mt-3">
+                        <li>عرض الجروبات والطلاب المسجلين</li>
+                        <li>تسجيل الحضور والدرجات</li>
+                        <li>رفع المواد التعليمية والملفات</li>
+                        <li>تقييم أداء الطلاب</li>
+                        <li>رسائل الاتصال مع الطلاب</li>
+                        <li>إحصائيات الحضور والأداء</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Student Panel -->
+            <div class="col-lg-6 mb-4">
+                <div class="grid-item">
+                    <h5>
+                        <i class="fas fa-user-graduate" style="color: #667eea;"></i> لوحة الطالب (Student Portal)
+                    </h5>
+                    <p>بوابة الويب المتخصصة للطلاب تتضمن:</p>
+                    <ul class="feature-list mt-3">
+                        <li>متابعة التقدم الدراسي والنسب المئوية</li>
+                        <li>عرض الدرجات والتقييمات</li>
+                        <li>تتبع الحضور والغياب</li>
+                        <li>عرض الواجبات والمواد التعليمية</li>
+                        <li>عرض حالة المدفوعات والأقساط</li>
+                        <li>التواصل مع المعلم والإدارة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Parent Portal -->
+            <div class="col-lg-6 mb-4">
+                <div class="grid-item">
+                    <h5>
+                        <i class="fas fa-users-line" style="color: #667eea;"></i> بوابة الآباء (Parent Portal)
+                    </h5>
+                    <p>بوابة خاصة لأولياء الأمور توفر:</p>
+                    <ul class="feature-list mt-3">
+                        <li>متابعة تقدم الأبناء الدراسي</li>
+                        <li>عرض الدرجات والتقييمات</li>
+                        <li>تتبع الحضور والغياب</li>
+                        <li>عرض الفواتير والمدفوعات</li>
+                        <li>تقييم المعلم والمؤسسة</li>
+                        <li>الاتصال بالإدارة في الحالات الطارئة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Roles & Permissions Section -->
+<section id="roles" class="bg-light-gradient">
+    <div class="container">
+        <h2 class="section-title text-center">نظام الأدوار والصلاحيات</h2>
+        <p class="section-subtitle text-center">نظام متقدم للتحكم الدقيق في الصلاحيات</p>
+
+        <div class="row mt-5">
+            <!-- Super Admin Role -->
+            <div class="col-lg-6 mb-4">
+                <div class="role-card">
+                    <div class="role-title">مدير النظام العام (Super Admin)</div>
+                    <span class="role-badge badge-success">صلاحيات كاملة</span>
+                    <div class="role-description">
+                        مدير النظام الكامل الذي يدير جميع المؤسسات والمستخدمين
+                    </div>
+                    <div class="role-permissions">
+                        <span class="permission-tag">إدارة المؤسسات</span>
+                        <span class="permission-tag">إدارة الأدوار</span>
+                        <span class="permission-tag">إدارة المستخدمين</span>
+                        <span class="permission-tag">63 صلاحية</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Role -->
+            <div class="col-lg-6 mb-4">
+                <div class="role-card">
+                    <div class="role-title">مسؤول المؤسسة (Admin)</div>
+                    <span class="role-badge badge-info">صلاحيات موسعة</span>
+                    <div class="role-description">
+                        مدير المؤسسة التعليمية يدير جميع جوانب المؤسسة
+                    </div>
+                    <div class="role-permissions">
+                        <span class="permission-tag">إدارة الطلاب</span>
+                        <span class="permission-tag">إدارة المعلمين</span>
+                        <span class="permission-tag">إدارة الكورسات</span>
+                        <span class="permission-tag">49 صلاحية</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Instructor Role -->
+            <div class="col-lg-6 mb-4">
+                <div class="role-card">
+                    <div class="role-title">المعلم الأكاديمي (Instructor)</div>
+                    <span class="role-badge badge-warning">صلاحيات محدودة</span>
+                    <div class="role-description">
+                        المعلم يدير جروباته وطلابه والعمليات الأكاديمية
+                    </div>
+                    <div class="role-permissions">
+                        <span class="permission-tag">تسجيل الحضور</span>
+                        <span class="permission-tag">إدخال الدرجات</span>
+                        <span class="permission-tag">رفع المواد</span>
+                        <span class="permission-tag">20+ صلاحية</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Role -->
+            <div class="col-lg-6 mb-4">
+                <div class="role-card">
+                    <div class="role-title">مستخدم عادي (User)</div>
+                    <span class="role-badge badge-info">صلاحيات أساسية</span>
+                    <div class="role-description">
+                        مستخدم عادي بصلاحيات محدودة جداً
+                    </div>
+                    <div class="role-permissions">
+                        <span class="permission-tag">عرض البيانات</span>
+                        <span class="permission-tag">عمليات أساسية</span>
+                        <span class="permission-tag">10+ صلاحية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Permissions Matrix -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="highlight-box">
+                    <h5 class="mb-3">
+                        <i class="fas fa-info-circle"></i> ملخص الصلاحيات على الموارد
+                    </h5>
+                    <p class="mb-0">
+                        النظام يدعم 9 موارد رئيسية (الطلاب، الكورسات، المعلمين، الدفع، المجموعات، الجدولة، التقارير، الإعدادات، إدارة المؤسسة) 
+                        وكل مورد يحتوي على 7 عمليات (عرض، إنشاء، تعديل، حذف، استرجاع، حذف نهائي، عمليات خاصة)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technical Stack Section -->
+<section id="tech" class="bg-white-section">
+    <div class="container">
+        <h2 class="section-title text-center">التقنيات والمكتبات</h2>
+        <p class="section-subtitle text-center">نظام مبني على أحدث التقنيات الويب</p>
+
+        <div class="row mt-5">
+            <div class="col-lg-6">
+                <h5 class="mb-4">
+                    <i class="fas fa-server" style="color: #667eea;"></i> Backend
+                </h5>
+                <div>
+                    <span class="tech-badge">Laravel 12</span>
+                    <span class="tech-badge">PHP 8.3+</span>
+                    <span class="tech-badge">Eloquent ORM</span>
+                    <span class="tech-badge">Filament 4</span>
+                    <span class="tech-badge">Spatie Permission</span>
+                    <span class="tech-badge">Tenancy</span>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h5 class="mb-4">
+                    <i class="fas fa-laptop" style="color: #667eea;"></i> Frontend
+                </h5>
+                <div>
+                    <span class="tech-badge">Bootstrap 5</span>
+                    <span class="tech-badge">Livewire</span>
+                    <span class="tech-badge">Alpine.js</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">npm</span>
+                    <span class="tech-badge">Webpack</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <h5 class="mb-4">
+                    <i class="fas fa-database" style="color: #667eea;"></i> Database & Infrastructure
+                </h5>
+                <div>
+                    <span class="tech-badge">MySQL 8+</span>
+                    <span class="tech-badge">Redis Cache</span>
+                    <span class="tech-badge">Queue System</span>
+                    <span class="tech-badge">Seeding & Migrations</span>
+                    <span class="tech-badge">Global Scopes</span>
+                    <span class="tech-badge">Policies</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-box mt-5">
+            <h6>
+                <i class="fas fa-check-circle"></i> المميزات التقنية
+            </h6>
+            <ul class="mb-0 ps-3">
+                <li>عزل البيانات بين المؤسسات (Multi-Tenancy)</li>
+                <li>نظام الأدوار والصلاحيات المتقدم</li>
+                <li>التسجيل والتدقيق (Activity Logging & Auditing)</li>
+                <li>واجهة إدارة احترافية (Filament Admin Panel)</li>
+                <li>دعم كامل للغة العربية (RTL)</li>
+                <li>API RESTful متكامل</li>
+                <li>نظام الإخطارات والرسائل</li>
+                <li>التقارير المتقدمة والإحصائيات</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Start Section -->
+<section id="quick-start" class="bg-light-gradient">
+    <div class="container">
+        <h2 class="section-title text-center">دليل البدء السريع</h2>
+        <p class="section-subtitle text-center">تثبيت واستخدام النظام خطوة بخطوة</p>
+
+        <div class="row mt-5">
+            <div class="col-lg-8 offset-lg-2">
+                <!-- Step 1 -->
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-date">الخطوة 1</div>
+                    <div class="timeline-title">
+                        <i class="fas fa-download"></i> شروط النظام والتثبيت
+                    </div>
+                    <div class="timeline-text">
+                        <strong>المتطلبات:</strong>
+                        <ul class="mt-2 mb-0">
+                            <li>PHP 8.3 أو أحدث</li>
+                            <li>MySQL 8 أو أحدث</li>
+                            <li>Node.js 18+ وnpm</li>
+                            <li>Composer</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-date">الخطوة 2</div>
+                    <div class="timeline-title">
+                        <i class="fas fa-code"></i> استنساخ المشروع وتثبيت المكتبات
+                    </div>
+                    <div class="timeline-text">
+                        <div class="code-block">
+git clone &lt;repository-url&gt;<br>
+cd "Ai School"<br>
+composer install<br>
+npm install
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-date">الخطوة 3</div>
+                    <div class="timeline-title">
+                        <i class="fas fa-cog"></i> إعداد البيئة وقاعدة البيانات
+                    </div>
+                    <div class="timeline-text">
+                        <div class="code-block">
+cp .env.example .env<br>
+php artisan key:generate<br>
+php artisan migrate:fresh --seed
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-date">الخطوة 4</div>
+                    <div class="timeline-title">
+                        <i class="fas fa-play"></i> تشغيل النظام
+                    </div>
+                    <div class="timeline-text">
+                        <strong>نافذة طرفية 1:</strong>
+                        <div class="code-block mb-3">
+php artisan serve
+                        </div>
+                        <strong>نافذة طرفية 2:</strong>
+                        <div class="code-block mb-3">
+npm run dev
+                        </div>
+                        <strong>الوصول إلى:</strong>
+                        <div class="code-block mb-0">
+http://127.0.0.1:8000/admin
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-date">الخطوة 5</div>
+                    <div class="timeline-title">
+                        <i class="fas fa-sign-in-alt"></i> بيانات الدخول الافتراضية
+                    </div>
+                    <div class="timeline-text">
+                        <strong>البريد الإلكتروني:</strong> 
+                        <div class="code-block" style="margin: 10px 0;">
+admin@example.local
+                        </div>
+                        <strong>كلمة المرور:</strong>
+                        <div class="code-block" style="margin: 10px 0;">
+password
+                        </div>
+                        <p class="mb-0 mt-3">أو استخدم أي بيانات معرفة في seeders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Important Notes -->
+        <div class="row mt-5">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="highlight-box">
+                    <h6>
+                        <i class="fas fa-lightbulb"></i> نصائح مهمة
+                    </h6>
+                    <ul class="mb-0">
+                        <li>استخدم الأوامر الموجودة في terminal فقط، لا تستخدم صيغ أخرى</li>
+                        <li>تأكد من تثبيت جميع المتطلبات قبل البدء</li>
+                        <li>استخدم قاعدة بيانات منفصلة للتطوير</li>
+                        <li>لا تشارك بيانات الدخول في الإنتاج</li>
+                        <li>قم بنسخ احتياطي من قاعدة البيانات بانتظام</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Documentation Section -->
+<section class="bg-white-section">
+    <div class="container">
+        <h2 class="section-title text-center">الملفات التوثيقية</h2>
+        <p class="section-subtitle text-center">مراجع شاملة لكل جانب من جوانب النظام</p>
+
+        <div class="row mt-5">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card card-feature h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-file-alt" style="font-size: 2.5rem; color: #667eea; margin-bottom: 15px;"></i>
+                        <h5 class="card-title">README.md</h5>
+                        <p class="card-text text-muted">نظرة عامة على المشروع والموارد</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card card-feature h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-sitemap" style="font-size: 2.5rem; color: #667eea; margin-bottom: 15px;"></i>
+                        <h5 class="card-title">ARCHITECTURE_PLAN.md</h5>
+                        <p class="card-text text-muted">المعمارية والتصميم</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card card-feature h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-users-cog" style="font-size: 2.5rem; color: #667eea; margin-bottom: 15px;"></i>
+                        <h5 class="card-title">ROLES_AND_PERMISSIONS_GUIDE.md</h5>
+                        <p class="card-text text-muted">الأدوار والصلاحيات</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card card-feature h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-book-open" style="font-size: 2.5rem; color: #667eea; margin-bottom: 15px;"></i>
+                        <h5 class="card-title">USER_GUIDE.md</h5>
+                        <p class="card-text text-muted">دليل المستخدم الشامل</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <p class="mb-3">تجد جميع الملفات التوثيقية في مجلد المشروع الرئيسي</p>
+            <button class="btn btn-custom" onclick="alert('الملفات موجودة في مجلد المشروع')">عرض كل الملفات</button>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="bg-light-gradient">
+    <div class="container">
+        <h2 class="section-title text-center">الأسئلة الشائعة</h2>
+
+        <div class="row mt-5">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="accordion" id="faqAccordion">
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item mb-3 border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                ما الفرق بين Super Admin و Admin؟
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <strong>Super Admin:</strong> مدير النظام الذي يدير جميع المؤسسات والأدوار والصلاحيات وله وصول كامل لكل شيء.
+                                <br><br>
+                                <strong>Admin:</strong> مسؤول المؤسسة الفردية الذي يدير جوانب مؤسسته فقط دون الوصول لإدارة الأدوار أو المؤسسات الأخرى.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item mb-3 border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                هل يمكن تعديل الأدوار والصلاحيات؟
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                نعم، النظام يدعم تعديل الأدوار والصلاحيات من خلال لوحة التحكم، لكن فقط المسؤولون بصلاحيات كاملة يمكنهم القيام بذلك.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item mb-3 border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                ما هو Multi-Tenancy؟
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Multi-Tenancy يعني أن النظام الواحد يمكن أن يخدم عدة مؤسسات بنفس الوقت مع عزل كامل للبيانات بينهم. كل مؤسسة ترى بيانات نفسها فقط.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="accordion-item mb-3 border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                كم عدد المستخدمين الذين يمكن تسجيلهم؟
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                النظام يدعم عدد غير محدود من المستخدمين. الأداء يعتمد على مواصفات الخادم وقاعدة البيانات.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                هل النظام يدعم الدفع الإلكتروني؟
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                النظام الحالي يدعم تسجيل المدفوعات يدويًا. يمكن إضافة بوابات دفع مثل Stripe أو Fawry في المستقبل.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Checklist Section -->
+<section class="bg-white-section">
+    <div class="container">
+        <h2 class="section-title text-center">حالة الإكمال الحالية</h2>
+        <p class="section-subtitle text-center">ملخص موجز لما تم إنجازه وما تحت التطوير</p>
+
+        <div class="row mt-5">
+            <div class="col-lg-6">
+                <h5 class="mb-4">
+                    <i class="fas fa-check-circle" style="color: #10b981;"></i> المميزات المكتملة (88%)
+                </h5>
+                <ul class="feature-list">
+                    <li>لوحات التحكم الأربع (Admin, Instructor, Student, Parent)</li>
+                    <li>إدارة الطلاب والمعلمين والموظفين</li>
+                    <li>إدارة الكورسات والمجموعات الدراسية</li>
+                    <li>نظام الجدولة والحصص</li>
+                    <li>نظام المدفوعات والأقساط</li>
+                    <li>نظام الحضور والدرجات</li>
+                    <li>نظام الأدوار والصلاحيات</li>
+                    <li>نظام الإشعارات والرسائل</li>
+                    <li>نظام التقارير المتقدمة</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h5 class="mb-4">
+                    <i class="fas fa-hourglass-end" style="color: #f59e0b;"></i> تحت التطوير (12%)
+                </h5>
+                <ul class="feature-list">
+                    <li>تحسينات على نظام الحضور المتقدم</li>
+                    <li>نظام الشهادات والتخرج</li>
+                    <li>التقييمات والاستطلاعات</li>
+                    <li>نظام الواجبات والمشاريع</li>
+                    <li>المزيد من خيارات التقارير</li>
+                    <li>تكاملات إضافية</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="success-box mt-5">
+            <h6>
+                <i class="fas fa-rocket"></i> جاهز للاستخدام الفوري في الإنتاج
+            </h6>
+            <p class="mb-0">
+                النظام قد تم اختباره جيدًا وجاهز للاستخدام الفعلي في المؤسسات التعليمية. 
+                يمكن البدء باستخدامه فورًا مع إمكانية إضافة المزيد من الميزات حسب الحاجة.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- System Architecture Diagram Section -->
+<section class="bg-light-gradient">
+    <div class="container">
+        <h2 class="section-title text-center">معمارية النظام</h2>
+        <p class="section-subtitle text-center">كيفية تفاعل مكونات النظام مع بعضها</p>
+
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <div style="text-align: center; line-height: 2;">
+                        <div style="margin-bottom: 20px;">
+                            <div style="background: #667eea; color: white; padding: 15px; border-radius: 10px; display: inline-block; margin: 10px; min-width: 200px;">
+                                <strong>واجهة المستخدم</strong><br>
+                                <small>Admin Panel • Student Portal • Instructor Panel • Parent Portal</small>
+                            </div>
+                        </div>
+                        <div style="font-size: 1.5rem; color: #667eea;">↓</div>
+                        <div style="margin-bottom: 20px;">
+                            <div style="background: #764ba2; color: white; padding: 15px; border-radius: 10px; display: inline-block; margin: 10px; min-width: 200px;">
+                                <strong>طبقة التطبيق</strong><br>
+                                <small>Controllers • Services • Actions • Events</small>
+                            </div>
+                        </div>
+                        <div style="font-size: 1.5rem; color: #667eea;">↓</div>
+                        <div style="margin-bottom: 20px;">
+                            <div style="background: #667eea; color: white; padding: 15px; border-radius: 10px; display: inline-block; margin: 10px; min-width: 200px;">
+                                <strong>طبقة البيانات</strong><br>
+                                <small>Models • Eloquent ORM • Global Scopes • Policies</small>
+                            </div>
+                        </div>
+                        <div style="font-size: 1.5rem; color: #667eea;">↓</div>
+                        <div style="margin-bottom: 20px;">
+                            <div style="background: #764ba2; color: white; padding: 15px; border-radius: 10px; display: inline-block; margin: 10px; min-width: 200px;">
+                                <strong>قاعدة البيانات</strong><br>
+                                <small>MySQL Database • Multi-Tenant Tables • Relationships</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Features Highlights -->
+<section class="bg-white-section">
+    <div class="container">
+        <h2 class="section-title text-center">المميزات الرئيسية بالتفصيل</h2>
+
+        <div class="row mt-5">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="grid-item">
+                    <h5><i class="fas fa-graduation-cap" style="color: #667eea;"></i> إدارة الطلاب</h5>
+                    <p>نظام متقدم لإدارة بيانات الطلاب وتتبع تقدمهم الدراسي والمالي</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="grid-item">
+                    <h5><i class="fas fa-chalkboard-user" style="color: #667eea;"></i> إدارة المعلمين</h5>
+                    <p>تسجيل المعلمين وإدارة جروباتهم وتتبع أدائهم</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="grid-item">
+                    <h5><i class="fas fa-book" style="color: #667eea;"></i> إدارة الكورسات</h5>
+                    <p>نظام شامل لإدارة الكورسات والمجموعات والمواد التعليمية</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="grid-item">
+                    <h5><i class="fas fa-calendar-alt" style="color: #667eea;"></i> الجدولة والحصص</h5>
+                    <p>نظام ذكي لجدولة الحصص والسيشنات مع تجنب التضارب</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="grid-item">
+                    <h5><i class="fas fa-credit-card" style="color: #667eea;"></i> المدفوعات والأقساط</h5>
+                    <p>نظام متطور لإدارة المدفوعات والأقساط والملاحقة</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="grid-item">
+                    <h5><i class="fas fa-chart-line" style="color: #667eea;"></i> التقارير والتحليلات</h5>
+                    <p>تقارير شاملة وإحصائيات مفصلة لجميع جوانب المشروع</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Support & Contact Section -->
+<section class="bg-light-gradient">
+    <div class="container">
+        <h2 class="section-title text-center">الدعم والمساعدة</h2>
+
+        <div class="row mt-5">
+            <div class="col-lg-4 col-md-6 mb-4 text-center">
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-file-alt" style="font-size: 3rem; color: #667eea; margin-bottom: 15px;"></i>
+                    <h5>الدليل الشامل</h5>
+                    <p>راجع دليل المستخدم الشامل للإجابة على جميع أسئلتك</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 text-center">
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-users" style="font-size: 3rem; color: #667eea; margin-bottom: 15px;"></i>
+                    <h5>المجتمع</h5>
+                    <p>تواصل مع المطورين الآخرين واستفسر عن الأفكار والحلول</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 text-center">
+                <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <i class="fas fa-envelope" style="font-size: 3rem; color: #667eea; margin-bottom: 15px;"></i>
+                    <h5>التواصل المباشر</h5>
+                    <p>يمكنك التواصل مع فريق الدعم مباشرة عند الحاجة</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>عن النظام</h5>
+                <p>نظام إدارة متقدم لمدارس ومراكز التدريب يدعم Multi-Tenancy والأدوار المتقدمة</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>الملفات التوثيقية</h5>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="#overview">نظرة عامة</a></li>
+                    <li><a href="#features">الميزات</a></li>
+                    <li><a href="#panels">اللوحات</a></li>
+                    <li><a href="#roles">الأدوار</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>التقنيات</h5>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="#tech">Laravel 12</a></li>
+                    <li><a href="#tech">Filament 4</a></li>
+                    <li><a href="#tech">Bootstrap 5</a></li>
+                    <li><a href="#tech">MySQL</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>تتابعنا</h5>
+                <div>
+                    <a href="#" style="color: #bdc3c7; font-size: 1.5rem; margin-left: 10px;">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" style="color: #bdc3c7; font-size: 1.5rem; margin-left: 10px;">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" style="color: #bdc3c7; font-size: 1.5rem; margin-left: 10px;">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 نظام إدارة مدرسة البرمجة. جميع الحقوق محفوظة.</p>
+            <p>
+                مطور بـ <i class="fas fa-heart" style="color: #e74c3c;"></i> 
+                باستخدام Laravel و Filament
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- Demo Modal -->
+<div class="modal fade" id="demoModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">عرض توضيحي للنظام</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i> النظام متاح الآن للاستخدام
+                </div>
+                <h6>بيانات الدخول للعرض التوضيحي:</h6>
+                <ul>
+                    <li><strong>البريد:</strong> admin@example.local</li>
+                    <li><strong>كلمة المرور:</strong> password</li>
+                </ul>
+                <p>يمكنك الدخول مباشرة واستكشاف جميع الميزات</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                <button type="button" class="btn btn-custom">الدخول الآن</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-up');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.card-feature, .grid-item, .timeline-item').forEach(el => {
+        observer.observe(el);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<?php
+
+return [
+    'navigation_label' => 'مدفوعات الطلاب',
+    'navigation_group' => 'الإدارة المالية',
+    'model_label' => 'دفعة',
+    'plural_model_label' => 'المدفوعات',
+
+    'payment_info' => 'بيانات الدفعة',
+    'payment_info_description' => 'المعلومات الأساسية للدفعة',
+    'payment_items' => 'الكورسات المدفوعة',
+    'payment_items_description' => 'أضف الكورسات التي يتم دفع مصاريفها',
+
+    'payment_number' => 'رقم الدفعة',
+    'tenant.name' => 'الفرع',
+    'student_id' => 'الطالب',
+    'student.name' => 'اسم الطالب',
+    'student.user.name' => 'اسم الطالب',
+    'payment_date' => 'تاريخ الدفع',
+    'payment_method' => 'طريقة الدفع',
+    'status' => 'الحالة',
+    'total_amount' => 'المبلغ الإجمالي',
+    'discount' => 'الخصم',
+    'net_amount' => 'صافي المبلغ',
+    'vault_id' => 'الخزنة',
+    'vault.name' => 'الخزنة',
+    'notes' => 'ملاحظات',
+    'received_by.name' => 'استلم بواسطة',
+    'created_at' => 'تاريخ الإنشاء',
+
+    'payment_method.cash' => 'نقدي',
+    'payment_method.bank_transfer' => 'تحويل بنكي',
+    'payment_method.card' => 'بطاقة',
+    'payment_method.online' => 'أونلاين',
+    'payment_method.cheque' => 'شيك',
+
+    'status.pending' => 'قيد الانتظار',
+    'status.completed' => 'مكتمل',
+    'status.cancelled' => 'ملغي',
+
+    'items' => 'الكورسات',
+    'enrollment_id' => 'التسجيل',
+    'course.name' => 'الكورس',
+    'group.name' => 'المجموعة',
+    'course_price' => 'سعر الكورس',
+    'amount_paid' => 'المبلغ المدفوع',
+    'item_notes' => 'ملاحظات',
+    'add_course' => 'إضافة كورس',
+
+    'filter.tenant' => 'الفرع',
+    'filter.student' => 'الطالب',
+    'filter.payment_method' => 'طريقة الدفع',
+    'filter.status' => 'الحالة',
+    'filter.date' => 'التاريخ',
+    'filter.from' => 'من',
+    'filter.until' => 'إلى',
+    'filter.trashed' => 'المحذوفات',
+];

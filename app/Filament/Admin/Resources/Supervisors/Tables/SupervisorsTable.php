@@ -1,0 +1,151 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Supervisors\Tables;
+
+use Filament\Tables\Table;
+use Filament\Actions\Action;
+use Filament\Actions\EditAction;
+use Filament\Actions\ActionGroup;
+use Filament\Actions\DeleteAction;
+use Filament\Support\Colors\Color;
+use Filament\Support\Icons\Heroicon;
+use Filament\Actions\ViewAction;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Filters\TrashedFilter;
+
+class SupervisorsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                ImageColumn::make('profile_photo')
+                    ->label(__('filament/admin/supervisor_resource.profile_photo'))
+                    ->circular()
+                    ->defaultImageUrl(fn() => 'https://ui-avatars.com/api/?name=S&color=7F9CF5&background=EBF4FF'),
+
+                TextColumn::make('user.name')
+                    ->label(__('filament/admin/supervisor_resource.user.name'))
+                    ->searchable()
+                    ->sortable()
+                    ->icon('heroicon-o-user')
+                    ->color(Color::Blue)
+                    ->weight('bold'),
+
+                TextColumn::make('employee_number')
+                    ->label(__('filament/admin/supervisor_resource.employee_number'))
+                    ->searchable()
+                    ->sortable()
+                    ->copyable()
+                    ->copyMessage(__('filament/admin/supervisor_resource.copy_message'))
+                    ->icon('heroicon-o-identification'),
+
+                TextColumn::make('phone')
+                    ->label(__('filament/admin/supervisor_resource.phone'))
+                    ->searchable()
+                    ->icon('heroicon-o-phone')
+                    ->copyable(),
+
+                TextColumn::make('user.email')
+                    ->label(__('filament/admin/supervisor_resource.user.email'))
+                    ->searchable()
+                    ->icon('heroicon-o-envelope')
+                    ->copyable()
+                    ->toggleable(),
+
+                TextColumn::make('employment_type')
+                    ->label(__('filament/admin/supervisor_resource.employment_type'))
+                    ->badge()
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'full_time' => __('filament/admin/supervisor_resource.employment_type.full_time'),
+                        'part_time' => __('filament/admin/supervisor_resource.employment_type.part_time'),
+                        'contract' => __('filament/admin/supervisor_resource.employment_type.contract'),
+                        default => $state,
+                    })
+                    ->color(fn (string $state): string => match ($state) {
+                        'full_time' => 'success',
+                        'part_time' => 'warning',
+                        'contract' => 'info',
+                        default => 'gray',
+                    }),
+
+                TextColumn::make('status')
+                    ->label(__('filament/admin/supervisor_resource.status'))
+                    ->badge()
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'active' => __('filament/admin/supervisor_resource.status.active'),
+                        'inactive' => __('filament/admin/supervisor_resource.status.inactive'),
+                        'suspended' => __('filament/admin/supervisor_resource.status.suspended'),
+                        'terminated' => __('filament/admin/supervisor_resource.status.terminated'),
+                        default => $state,
+                    })
+                    ->color(fn (string $state): string => match ($state) {
+                        'active' => 'success',
+                        'inactive' => 'gray',
+                        'suspended' => 'warning',
+                        'terminated' => 'danger',
+                        default => 'gray',
+                    }),
+
+                TextColumn::make('groups_count')
+                    ->label(__('filament/admin/supervisor_resource.groups_count'))
+                    ->counts('groups')
+                    ->sortable()
+                    ->icon('heroicon-o-user-group')
+                    ->color(Color::Purple),
+
+                TextColumn::make('created_at')
+                    ->label(__('filament/admin/supervisor_resource.created_at'))
+                    ->dateTime('d/m/Y h:i A')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                SelectFilter::make('status')
+                    ->label(__('filament/admin/supervisor_resource.filter.status'))
+                    ->options([
+                        'active' => __('filament/admin/supervisor_resource.status.active'),
+                        'inactive' => __('filament/admin/supervisor_resource.status.inactive'),
+                        'suspended' => __('filament/admin/supervisor_resource.status.suspended'),
+                        'terminated' => __('filament/admin/supervisor_resource.status.terminated'),
+                    ])
+                    ->native(false),
+
+                SelectFilter::make('employment_type')
+                    ->label(__('filament/admin/supervisor_resource.filter.employment_type'))
+                    ->options([
+                        'full_time' => __('filament/admin/supervisor_resource.employment_type.full_time'),
+                        'part_time' => __('filament/admin/supervisor_resource.employment_type.part_time'),
+                        'contract' => __('filament/admin/supervisor_resource.employment_type.contract'),
+                    ])
+                    ->native(false),
+
+                TrashedFilter::make()
+                    ->label(__('filament/admin/supervisor_resource.filter.trashed')),
+            ])
+            ->actions([
+                ActionGroup::make([
+                    EditAction::make()
+                        ->label(__('filament/admin/supervisor_resource.action.edit'))
+                        ->visible(fn() => !(auth()->user()->is_super_admin && is_null(auth()->user()->tenant_id))),
+
+                    Action::make('activate')
+                        ->label(__('filament/admin/supervisor_resource.action.activate'))
+                        ->icon('heroicon-o-check-circle')
+                        ->color(Color::Green)
+                        ->visible(fn($record) => $record->status !== 'active' && !(auth()->user()->is_super_admin && is_null(auth()->user()->tenant_id)))
+                        ->requiresConfirmation()
+                        ->action(fn ($record) => $record->activate())
+                        ->successNotificationTitle(__('filament/admin/supervisor_resource.action.activate.success')),
+
+                    DeleteAction::make()
+                        ->label(__('filament/admin/supervisor_resource.action.delete'))
+                        ->visible(fn() => !(auth()->user()->is_super_admin && is_null(auth()->user()->tenant_id))),
+                ])
+            ])
+            ->defaultSort('created_at', 'desc');
+    }
+}

@@ -1,0 +1,70 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Exams\Schemas;
+
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
+use Filament\Schemas\Schema;
+
+class ExamForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Select::make('tenant_id')
+                    ->relationship('tenant', 'name')
+                    ->required(),
+                Select::make('course_id')
+                    ->relationship('course', 'name')
+                    ->required(),
+                Select::make('group_id')
+                    ->relationship('group', 'name')
+                    ->required(),
+                Select::make('instructor_id')
+                    ->relationship('instructor', 'id')
+                    ->default(null),
+                TextInput::make('title')
+                    ->required(),
+                Textarea::make('description')
+                    ->default(null)
+                    ->columnSpanFull(),
+                Select::make('type')
+                    ->options([
+            'quiz' => 'Quiz',
+            'midterm' => 'Midterm',
+            'final' => 'Final',
+            'assignment' => 'Assignment',
+            'project' => 'Project',
+        ])
+                    ->default('quiz')
+                    ->required(),
+                DateTimePicker::make('exam_date')
+                    ->required(),
+                TextInput::make('duration')
+                    ->required()
+                    ->numeric()
+                    ->default(60),
+                TextInput::make('total_marks')
+                    ->required()
+                    ->numeric(),
+                TextInput::make('passing_marks')
+                    ->required()
+                    ->numeric(),
+                Select::make('status')
+                    ->options([
+            'scheduled' => 'Scheduled',
+            'in_progress' => 'In progress',
+            'completed' => 'Completed',
+            'cancelled' => 'Cancelled',
+        ])
+                    ->default('scheduled')
+                    ->required(),
+                Textarea::make('instructions')
+                    ->default(null)
+                    ->columnSpanFull(),
+            ]);
+    }
+}

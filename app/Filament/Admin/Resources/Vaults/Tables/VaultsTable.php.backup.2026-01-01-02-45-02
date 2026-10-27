@@ -1,0 +1,104 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Vaults\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\DeleteAction;
+use Filament\Tables\Table;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\BadgeColumn;
+use Filament\Tables\Filters\SelectFilter;
+
+class VaultsTable
+{
+    public static function configure(Table $table): Table
+    {
+        // التحقق من أن المستخدم ليس أدمن رئيسي
+        $isSuperAdmin = auth()->user()->is_super_admin && is_null(auth()->user()->tenant_id);
+
+        return $table
+            ->columns([
+                TextColumn::make('name')
+                    ->label(__('filament/admin/vault_resource.name'))
+                    ->searchable()
+                    ->sortable()
+                    ->weight('bold'),
+
+                BadgeColumn::make('type')
+                    ->label('النوع')
+                    ->formatStateUsing(fn($state) => match ($state) {
+                        'cash' => '💵 نقدي',
+                        'vodafone' => '📱 فودافون كاش',
+                        'instapay' => '💳 إنستاباي',
+                        default => $state,
+                    })
+                    ->colors([
+                        'success' => 'cash',
+                        'warning' => 'vodafone',
+                        'info' => 'instapay',
+                    ]),
+
+                TextColumn::make('opening_balance')
+                    ->label(__('filament/admin/vault_resource.opening_balance'))
+                    ->money('EGP')
+                    ->sortable(),
+
+                TextColumn::make('current_balance')
+                    ->label(__('filament/admin/vault_resource.current_balance'))
+                    ->state(function ($record) {
+                        return $record->getCurrentBalance();
+                    })
+                    ->money('EGP')
+                    ->color(fn($state) => $state < 0 ? 'danger' : 'success')
+                    ->weight('bold'),
+
+                BadgeColumn::make('is_active')
+                    ->label('الحالة')
+                    ->formatStateUsing(fn($state) => $state ? 'نشط' : 'غير نشط')
+                    ->colors([
+                        'success' => true,
+                        'danger' => false,
+                    ]),
+
+                TextColumn::make('tenant.name')
+                    ->label(__('filament/admin/vault_resource.tenant.name'))
+                    ->searchable()
+                    ->sortable()
+                    ->toggleable()
+                    ->visible(fn() => auth()->user()->is_super_admin ?? false),
+
+                TextColumn::make('created_at')
+                    ->label(__('filament/admin/vault_resource.created_at'))
+                    ->dateTime('d-m-Y H:i')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                SelectFilter::make('type')
+                    ->label('نوع الخزينة')
+                    ->options([
+                        'cash' => '💵 نقدي',
+                        'vodafone' => '📱 فودافون كاش',
+                        'instapay' => '💳 إنستاباي',
+                    ]),
+
+                SelectFilter::make('is_active')
+                    ->label('الحالة')
+                    ->options([
+                        1 => 'نشط',
+                        0 => 'غير نشط',
+                    ]),
+            ])
+            ->recordActions($isSuperAdmin ? [] : [
+                EditAction::make(),
+                DeleteAction::make(),
+            ])
+            ->toolbarActions($isSuperAdmin ? [] : [
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                ]),
+            ]);
+    }
+}

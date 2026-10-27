@@ -1,0 +1,1348 @@
+{
+    "action_icons": [
+        {
+            "file": "app\\Filament\\Admin\\Pages\\GenerateInstructorPayments.php",
+            "line": 50,
+            "raw": "'heroicon-o-currency-dollar'",
+            "context": "->icon('heroicon-o-currency-dollar')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\GenerateInstructorPayments.php",
+            "line": 105,
+            "raw": "'heroicon-o-user'",
+            "context": "->icon('heroicon-o-user')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\UsersReport.php",
+            "line": 173,
+            "raw": "'heroicon-o-printer'",
+            "context": "->icon('heroicon-o-printer')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\UsersReport.php",
+            "line": 179,
+            "raw": "'heroicon-o-arrow-down-tray'",
+            "context": "->icon('heroicon-o-arrow-down-tray')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\UsersReport.php",
+            "line": 186,
+            "raw": "'heroicon-o-arrow-down-tray'",
+            "context": "->icon('heroicon-o-arrow-down-tray')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\AssignmentResource\\ExamAttemptResource.php",
+            "line": 69,
+            "raw": "'heroicon-o-user'",
+            "context": "->icon('heroicon-o-user'),"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Pages\\ClassroomAvailability.php",
+            "line": 76,
+            "raw": "'heroicon-o-list-bullet'",
+            "context": "->icon('heroicon-o-list-bullet')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Pages\\ClassroomAvailability.php",
+            "line": 82,
+            "raw": "'heroicon-o-calendar'",
+            "context": "->icon('heroicon-o-calendar')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Pages\\ListClassrooms.php",
+            "line": 19,
+            "raw": "'heroicon-o-calendar-days'",
+            "context": "->icon('heroicon-o-calendar-days')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Tables\\ClassroomsTable.php",
+            "line": 99,
+            "raw": "'heroicon-o-calendar-days'",
+            "context": "->icon('heroicon-o-calendar-days')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Actions\\CancelSubscriptionAction.php",
+            "line": 27,
+            "raw": "'heroicon-o-x-circle'",
+            "context": "->icon('heroicon-o-x-circle')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Actions\\CancelSubscriptionAction.php",
+            "line": 60,
+            "raw": "'heroicon-o-academic-cap'",
+            "context": "->icon('heroicon-o-academic-cap')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Actions\\CancelSubscriptionAction.php",
+            "line": 104,
+            "raw": "'heroicon-o-chat-bubble-bottom-center-text'",
+            "context": "->icon('heroicon-o-chat-bubble-bottom-center-text')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Actions\\CancelSubscriptionAction.php",
+            "line": 117,
+            "raw": "'heroicon-o-currency-dollar'",
+            "context": "->icon('heroicon-o-currency-dollar')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Actions\\ExecuteRefundAction.php",
+            "line": 24,
+            "raw": "'heroicon-o-currency-dollar'",
+            "context": "->icon('heroicon-o-currency-dollar')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Pages\\ListEnrollments.php",
+            "line": 23,
+            "raw": "'heroicon-o-presentation-chart-line'",
+            "context": "->icon('heroicon-o-presentation-chart-line')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Pages\\ViewEnrollment.php",
+            "line": 25,
+            "raw": "'heroicon-o-hashtag'",
+            "context": "->icon('heroicon-o-hashtag'),"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Pages\\ViewEnrollment.php",
+            "line": 73,
+            "raw": "'heroicon-o-x-circle'",
+            "context": "->icon('heroicon-o-x-circle')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Exams\\Pages\\ListExams.php",
+            "line": 25,
+            "raw": "'heroicon-o-presentation-chart-line'",
+            "context": "->icon('heroicon-o-presentation-chart-line')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Exams\\RelationManagers\\QuestionsRelationManager.php",
+            "line": 131,
+            "raw": "'heroicon-o-plus'",
+            "context": "->icon('heroicon-o-plus')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Expenses\\Widgets\\VaultBalancesWidget.php",
+            "line": 64,
+            "raw": "'heroicon-o-banknotes'",
+            "context": "->icon('heroicon-o-banknotes');"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Expenses\\Widgets\\VaultBalancesWidget.php",
+            "line": 82,
+            "raw": "'heroicon-o-currency-dollar'",
+            "context": "->icon('heroicon-o-currency-dollar');"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Groups\\Tables\\GroupsTable.php",
+            "line": 150,
+            "raw": "'heroicon-o-users'",
+            "context": "->icon('heroicon-o-users')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\AdminInstructorEvaluationAppealResource.php",
+            "line": 114,
+            "raw": "'heroicon-o-check-badge'",
+            "context": "->icon('heroicon-o-check-badge')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\Pages\\ViewAdminInstructorEvaluationAppeal.php",
+            "line": 30,
+            "raw": "'heroicon-o-check-badge'",
+            "context": "->icon('heroicon-o-check-badge')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\OverdueInstallmentResource\\Pages\\ListOverdueInstallments.php",
+            "line": 18,
+            "raw": "'heroicon-o-arrow-down-tray'",
+            "context": "->icon('heroicon-o-arrow-down-tray')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\OverdueInstallmentResource.php",
+            "line": 273,
+            "raw": "'heroicon-o-bell'",
+            "context": "->icon('heroicon-o-bell')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Payments\\Pages\\ListPayments.php",
+            "line": 23,
+            "raw": "'heroicon-o-presentation-chart-line'",
+            "context": "->icon('heroicon-o-presentation-chart-line')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 388,
+            "raw": "'heroicon-o-folder'",
+            "context": "->icon('heroicon-o-folder')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 469,
+            "raw": "'heroicon-o-folder'",
+            "context": "->icon('heroicon-o-folder')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SalaryPayments\\Tables\\SalaryPaymentsTable.php",
+            "line": 91,
+            "raw": "'heroicon-o-banknotes'",
+            "context": "->icon('heroicon-o-banknotes')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsConfigs\\Pages\\EditSmsConfig.php",
+            "line": 38,
+            "raw": "'heroicon-o-paper-airplane'",
+            "context": "->icon('heroicon-o-paper-airplane')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsConfigs\\Schemas\\SmsConfigForm.php",
+            "line": 60,
+            "raw": "'heroicon-o-globe-alt'",
+            "context": "->icon('heroicon-o-globe-alt')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsConfigs\\Schemas\\SmsConfigForm.php",
+            "line": 80,
+            "raw": "'heroicon-o-globe-alt'",
+            "context": "->icon('heroicon-o-globe-alt')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsConfigs\\Schemas\\SmsConfigForm.php",
+            "line": 99,
+            "raw": "'heroicon-o-map-pin'",
+            "context": "->icon('heroicon-o-map-pin')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsLogResource\\Pages\\ListSmsLogs.php",
+            "line": 18,
+            "raw": "'heroicon-o-cog-6-tooth'",
+            "context": "->icon('heroicon-o-cog-6-tooth')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsLogResource\\Tables\\SmsLogsTable.php",
+            "line": 23,
+            "raw": "'heroicon-o-phone'",
+            "context": "->icon('heroicon-o-phone'),"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\StudentFollowUpTaskResource.php",
+            "line": 220,
+            "raw": "'heroicon-o-check-badge'",
+            "context": "->icon('heroicon-o-check-badge')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Students\\Pages\\ListStudents.php",
+            "line": 23,
+            "raw": "'heroicon-o-presentation-chart-line'",
+            "context": "->icon('heroicon-o-presentation-chart-line')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Students\\RelationManagers\\CanceledSubscriptionsRelationManager.php",
+            "line": 130,
+            "raw": "'heroicon-o-eye'",
+            "context": "->icon('heroicon-o-eye')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Students\\Tables\\StudentsTable.php",
+            "line": 178,
+            "raw": "'heroicon-o-academic-cap'",
+            "context": "->icon('heroicon-o-academic-cap')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Students\\Tables\\StudentsTable.php",
+            "line": 200,
+            "raw": "'heroicon-o-printer'",
+            "context": "->icon('heroicon-o-printer')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource.php",
+            "line": 120,
+            "raw": "'heroicon-o-chat-bubble-left'",
+            "context": "->icon('heroicon-o-chat-bubble-left')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource.php",
+            "line": 140,
+            "raw": "'heroicon-o-question-mark-circle'",
+            "context": "->icon('heroicon-o-question-mark-circle')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource.php",
+            "line": 160,
+            "raw": "'heroicon-o-arrow-path'",
+            "context": "->icon('heroicon-o-arrow-path')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ListAdminSupervisionReports.php",
+            "line": 17,
+            "raw": "'heroicon-o-presentation-chart-line'",
+            "context": "->icon('heroicon-o-presentation-chart-line')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ViewAdminSupervisionReport.php",
+            "line": 32,
+            "raw": "'heroicon-o-chat-bubble-left'",
+            "context": "->icon('heroicon-o-chat-bubble-left')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ViewAdminSupervisionReport.php",
+            "line": 54,
+            "raw": "'heroicon-o-question-mark-circle'",
+            "context": "->icon('heroicon-o-question-mark-circle')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ViewAdminSupervisionReport.php",
+            "line": 76,
+            "raw": "'heroicon-o-arrow-path'",
+            "context": "->icon('heroicon-o-arrow-path')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php",
+            "line": 34,
+            "raw": "'heroicon-o-user'",
+            "context": "->icon('heroicon-o-user')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php",
+            "line": 44,
+            "raw": "'heroicon-o-identification'",
+            "context": "->icon('heroicon-o-identification'),"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php",
+            "line": 49,
+            "raw": "'heroicon-o-phone'",
+            "context": "->icon('heroicon-o-phone')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php",
+            "line": 55,
+            "raw": "'heroicon-o-envelope'",
+            "context": "->icon('heroicon-o-envelope')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php",
+            "line": 97,
+            "raw": "'heroicon-o-user-group'",
+            "context": "->icon('heroicon-o-user-group')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php",
+            "line": 137,
+            "raw": "Heroicon::OutlineCheckCircle",
+            "context": "// ->icon(Heroicon::OutlineCheckCircle)"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+            "line": 55,
+            "raw": "fn ($state",
+            "context": "->icon(fn ($state): string =>"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+            "line": 116,
+            "raw": "'heroicon-o-check-circle'",
+            "context": "->icon('heroicon-o-check-circle')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+            "line": 129,
+            "raw": "'heroicon-o-x-circle'",
+            "context": "->icon('heroicon-o-x-circle')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\Tables\\VaultTransfersTable.php",
+            "line": 152,
+            "raw": "'heroicon-o-check-circle'",
+            "context": "->icon('heroicon-o-check-circle')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\Tables\\VaultTransfersTable.php",
+            "line": 184,
+            "raw": "'heroicon-o-x-circle'",
+            "context": "->icon('heroicon-o-x-circle')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Pages\\MyGroups.php",
+            "line": 62,
+            "raw": "'heroicon-o-building-office-2'",
+            "context": "->icon('heroicon-o-building-office-2'),"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Pages\\MyGroups.php",
+            "line": 157,
+            "raw": "'heroicon-o-academic-cap'",
+            "context": "->icon('heroicon-o-academic-cap')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Pages\\MyGroups.php",
+            "line": 163,
+            "raw": "'heroicon-o-users'",
+            "context": "->icon('heroicon-o-users')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Assignments\\Tables\\AssignmentsTable.php",
+            "line": 67,
+            "raw": "'heroicon-o-academic-cap'",
+            "context": "->icon('heroicon-o-academic-cap')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AssignmentSubmissions\\Tables\\AssignmentSubmissionsTable.php",
+            "line": 79,
+            "raw": "'heroicon-o-photo'",
+            "context": "->icon('heroicon-o-photo')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\AttendanceReports.php",
+            "line": 191,
+            "raw": "'heroicon-o-eye'",
+            "context": "->icon('heroicon-o-eye')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\AttendanceReports.php",
+            "line": 200,
+            "raw": "'heroicon-o-pencil'",
+            "context": "->icon('heroicon-o-pencil')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\TakeAttendance.php",
+            "line": 389,
+            "raw": "'heroicon-o-check-circle'",
+            "context": "->icon('heroicon-o-check-circle')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\TakeAttendance.php",
+            "line": 395,
+            "raw": "'heroicon-o-x-circle'",
+            "context": "->icon('heroicon-o-x-circle')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+            "line": 160,
+            "raw": "$statusIcon",
+            "context": "->icon($statusIcon)"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+            "line": 168,
+            "raw": "'heroicon-o-document-text'",
+            "context": "->icon('heroicon-o-document-text')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\RelationManagers\\QuestionsRelationManager.php",
+            "line": 221,
+            "raw": "'heroicon-o-plus'",
+            "context": "->icon('heroicon-o-plus')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Tables\\ExamsTable.php",
+            "line": 106,
+            "raw": "fn($state",
+            "context": "->icon(fn($state) => $state ? 'heroicon-o-document-text' : null)"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\GroupMessageResource\\Pages\\CreateGroupMessage.php",
+            "line": 64,
+            "raw": "'heroicon-o-envelope'",
+            "context": "->icon('heroicon-o-envelope')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorMyEvaluation.php",
+            "line": 32,
+            "raw": "'heroicon-o-chat-bubble-bottom-center-text'",
+            "context": "->icon('heroicon-o-chat-bubble-bottom-center-text')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorMyEvaluation.php",
+            "line": 64,
+            "raw": "'heroicon-o-shield-exclamation'",
+            "context": "->icon('heroicon-o-shield-exclamation')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorExamAttemptResource\\InstructorExamAttemptResource.php",
+            "line": 70,
+            "raw": "'heroicon-o-user'",
+            "context": "->icon('heroicon-o-user'),"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 20,
+            "raw": "'heroicon-o-calendar'",
+            "context": "->icon('heroicon-o-calendar')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 41,
+            "raw": "'heroicon-o-check-circle'",
+            "context": "->icon('heroicon-o-check-circle')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 50,
+            "raw": "'heroicon-o-academic-cap'",
+            "context": "->icon('heroicon-o-academic-cap'),"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 56,
+            "raw": "'heroicon-o-currency-dollar'",
+            "context": "->icon('heroicon-o-currency-dollar'),"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 62,
+            "raw": "'heroicon-o-calculator'",
+            "context": "->icon('heroicon-o-calculator')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 70,
+            "raw": "'heroicon-o-briefcase'",
+            "context": "->icon('heroicon-o-briefcase'),"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 77,
+            "raw": "'heroicon-o-gift'",
+            "context": "->icon('heroicon-o-gift')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 85,
+            "raw": "'heroicon-o-minus-circle'",
+            "context": "->icon('heroicon-o-minus-circle')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 94,
+            "raw": "'heroicon-o-banknotes'",
+            "context": "->icon('heroicon-o-banknotes')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 107,
+            "raw": "fn($state",
+            "context": "->icon(fn($state) => match ($state) {"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 127,
+            "raw": "'heroicon-o-calendar-days'",
+            "context": "->icon('heroicon-o-calendar-days')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 145,
+            "raw": "fn($state",
+            "context": "->icon(fn($state) => match ($state) {"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorPayments\\Tables\\InstructorPaymentsTable.php",
+            "line": 209,
+            "raw": "'heroicon-o-eye'",
+            "context": "->icon('heroicon-o-eye'),"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\LearningResources\\Tables\\LearningResourcesTable.php",
+            "line": 48,
+            "raw": "fn (string $state",
+            "context": "->icon(fn (string $state): string => match ($state) {"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+            "line": 161,
+            "raw": "'heroicon-o-check-circle'",
+            "context": "->icon('heroicon-o-check-circle')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+            "line": 174,
+            "raw": "'heroicon-o-clipboard-document-check'",
+            "context": "->icon('heroicon-o-clipboard-document-check')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+            "line": 193,
+            "raw": "'heroicon-o-x-circle'",
+            "context": "->icon('heroicon-o-x-circle')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SupervisoryObservations\\InstructorSupervisoryObservationResource.php",
+            "line": 121,
+            "raw": "'heroicon-o-paper-airplane'",
+            "context": "->icon('heroicon-o-paper-airplane')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SupervisoryObservations\\Pages\\ViewInstructorSupervisoryObservation.php",
+            "line": 31,
+            "raw": "'heroicon-o-paper-airplane'",
+            "context": "->icon('heroicon-o-paper-airplane')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\RecentAssignmentsWidget.php",
+            "line": 67,
+            "raw": "'heroicon-o-eye'",
+            "context": "->icon('heroicon-o-eye'),"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\UpcomingSessionsWidget.php",
+            "line": 94,
+            "raw": "'heroicon-o-eye'",
+            "context": "->icon('heroicon-o-eye')"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\GroupMessages.php",
+            "line": 82,
+            "raw": "fn (string $state",
+            "context": "->icon(fn (string $state): string => match ($state) {"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 57,
+            "raw": "'heroicon-o-calendar'",
+            "context": "->icon('heroicon-o-calendar')"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 74,
+            "raw": "'heroicon-o-clock'",
+            "context": "->icon('heroicon-o-clock'),"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 93,
+            "raw": "fn ($state",
+            "context": "->icon(fn ($state) => match ($state) {"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 105,
+            "raw": "'heroicon-o-arrow-right-on-rectangle'",
+            "context": "->icon('heroicon-o-arrow-right-on-rectangle'),"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 111,
+            "raw": "'heroicon-o-arrow-left-on-rectangle'",
+            "context": "->icon('heroicon-o-arrow-left-on-rectangle'),"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 153,
+            "raw": "'heroicon-o-eye'",
+            "context": "->icon('heroicon-o-eye')"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyCourses.php",
+            "line": 70,
+            "raw": "'heroicon-o-book-open'",
+            "context": "->icon('heroicon-o-book-open')"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyCourses.php",
+            "line": 95,
+            "raw": "'heroicon-o-user'",
+            "context": "->icon('heroicon-o-user')"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyCourses.php",
+            "line": 211,
+            "raw": "'heroicon-o-eye'",
+            "context": "->icon('heroicon-o-eye')"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 61,
+            "raw": "'heroicon-o-hashtag'",
+            "context": "->icon('heroicon-o-hashtag')"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 87,
+            "raw": "'heroicon-o-banknotes'",
+            "context": "->icon('heroicon-o-banknotes'),"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 93,
+            "raw": "'heroicon-o-calendar'",
+            "context": "->icon('heroicon-o-calendar'),"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 160,
+            "raw": "'heroicon-o-document-text'",
+            "context": "->icon('heroicon-o-document-text')"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 176,
+            "raw": "'heroicon-o-arrow-down-tray'",
+            "context": "//     ->icon('heroicon-o-arrow-down-tray')"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Resources\\Messages\\Tables\\MessagesTable.php",
+            "line": 117,
+            "raw": "'heroicon-o-eye'",
+            "context": "->icon('heroicon-o-eye'),"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\GroupMessages.php",
+            "line": 79,
+            "raw": "fn (string $state",
+            "context": "->icon(fn (string $state): string => match ($state) {"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 55,
+            "raw": "'heroicon-o-calendar'",
+            "context": "->icon('heroicon-o-calendar')"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 72,
+            "raw": "'heroicon-o-clock'",
+            "context": "->icon('heroicon-o-clock'),"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 91,
+            "raw": "fn ($state",
+            "context": "->icon(fn ($state) => match ($state) {"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 103,
+            "raw": "'heroicon-o-arrow-right-on-rectangle'",
+            "context": "->icon('heroicon-o-arrow-right-on-rectangle'),"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 109,
+            "raw": "'heroicon-o-arrow-left-on-rectangle'",
+            "context": "->icon('heroicon-o-arrow-left-on-rectangle'),"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 151,
+            "raw": "'heroicon-o-eye'",
+            "context": "->icon('heroicon-o-eye')"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\StudentEnrollments.php",
+            "line": 51,
+            "raw": "'heroicon-o-hashtag'",
+            "context": "->icon('heroicon-o-hashtag')"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\AttendanceWidget.php",
+            "line": 41,
+            "raw": "'heroicon-o-calendar'",
+            "context": "->icon('heroicon-o-calendar'),"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\AttendanceWidget.php",
+            "line": 57,
+            "raw": "'heroicon-o-clock'",
+            "context": "->icon('heroicon-o-clock')"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\AttendanceWidget.php",
+            "line": 77,
+            "raw": "fn ($state",
+            "context": "->icon(fn ($state) => match ($state) {"
+        },
+        {
+            "file": "app\\Filament\\Student\\Widgets\\PaymentsWidget.php",
+            "line": 45,
+            "raw": "'heroicon-o-calendar'",
+            "context": "->icon('heroicon-o-calendar'),"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\InstructorEvaluationResource.php",
+            "line": 280,
+            "raw": "'heroicon-o-arrow-up-tray'",
+            "context": "->icon('heroicon-o-arrow-up-tray')"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\Pages\\ListInstructorEvaluations.php",
+            "line": 18,
+            "raw": "'heroicon-o-plus-circle'",
+            "context": "->icon('heroicon-o-plus-circle'),"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorEvaluation.php",
+            "line": 32,
+            "raw": "'heroicon-o-arrow-up-tray'",
+            "context": "->icon('heroicon-o-arrow-up-tray')"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorEvaluation.php",
+            "line": 50,
+            "raw": "'heroicon-o-chat-bubble-left-right'",
+            "context": "->icon('heroicon-o-chat-bubble-left-right')"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ListSupervisionReports.php",
+            "line": 21,
+            "raw": "'heroicon-o-bolt'",
+            "context": "->icon('heroicon-o-bolt')"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ListSupervisionReports.php",
+            "line": 41,
+            "raw": "'heroicon-o-calendar-days'",
+            "context": "->icon('heroicon-o-calendar-days')"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ListSupervisionReports.php",
+            "line": 61,
+            "raw": "'heroicon-o-plus-circle'",
+            "context": "->icon('heroicon-o-plus-circle'),"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ViewSupervisionReport.php",
+            "line": 37,
+            "raw": "'heroicon-o-check-circle'",
+            "context": "->icon('heroicon-o-check-circle')"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ViewSupervisionReport.php",
+            "line": 58,
+            "raw": "'heroicon-o-chat-bubble-bottom-center-text'",
+            "context": "->icon('heroicon-o-chat-bubble-bottom-center-text')"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\SupervisionReportResource.php",
+            "line": 216,
+            "raw": "'heroicon-o-check-circle'",
+            "context": "->icon('heroicon-o-check-circle')"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\Pages\\ListSupervisoryObservations.php",
+            "line": 18,
+            "raw": "'heroicon-o-plus-circle'",
+            "context": "->icon('heroicon-o-plus-circle'),"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\Pages\\ViewSupervisoryObservation.php",
+            "line": 31,
+            "raw": "'heroicon-o-check-badge'",
+            "context": "->icon('heroicon-o-check-badge')"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\Pages\\ViewSupervisoryObservation.php",
+            "line": 52,
+            "raw": "'heroicon-o-arrow-uturn-left'",
+            "context": "->icon('heroicon-o-arrow-uturn-left')"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\SupervisoryObservationResource.php",
+            "line": 251,
+            "raw": "'heroicon-o-check-circle'",
+            "context": "->icon('heroicon-o-check-circle')"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\SupervisoryObservationResource.php",
+            "line": 271,
+            "raw": "'heroicon-o-arrow-uturn-left'",
+            "context": "->icon('heroicon-o-arrow-uturn-left')"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 130,
+            "raw": "'heroicon-o-folder'",
+            "context": "->icon('heroicon-o-folder')"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 300,
+            "raw": "'heroicon-o-folder'",
+            "context": "->icon('heroicon-o-folder')"
+        }
+    ],
+    "button_issues": [
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Payments\\Schemas\\PaymentForm.php",
+            "line": 177,
+            "type": "emoji_in_label",
+            "label": "🏷️ الخصومات المعتمدة",
+            "context": "->label('🏷️ الخصومات المعتمدة')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Payments\\Schemas\\PaymentForm.php",
+            "line": 186,
+            "type": "emoji_in_label",
+            "label": "💰 المسدد مقدماً (عند التسجيل)",
+            "context": "->label('💰 المسدد مقدماً (عند التسجيل)')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Payments\\Schemas\\PaymentForm.php",
+            "line": 194,
+            "type": "emoji_in_label",
+            "label": "📋 مدفوعات الأقساط السابقة",
+            "context": "->label('📋 مدفوعات الأقساط السابقة')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Payments\\Schemas\\PaymentForm.php",
+            "line": 202,
+            "type": "emoji_in_label",
+            "label": "✅ إجمالي المسدد حتى الآن",
+            "context": "->label('✅ إجمالي المسدد حتى الآن')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Payments\\Schemas\\PaymentForm.php",
+            "line": 211,
+            "type": "emoji_in_label",
+            "label": "⚠️ المتبقي الإجمالي المطلوب",
+            "context": "->label('⚠️ المتبقي الإجمالي المطلوب')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 392,
+            "type": "emoji_in_label",
+            "label": "تحديد كل صلاحيات القسم ✔️",
+            "context": "->label('تحديد كل صلاحيات القسم ✔️')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 402,
+            "type": "emoji_in_label",
+            "label": "إلغاء تحديد القسم ❌",
+            "context": "->label('إلغاء تحديد القسم ❌')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 481,
+            "type": "emoji_in_label",
+            "label": "تحديد كل صفحات القسم ✔️",
+            "context": "->label('تحديد كل صفحات القسم ✔️')"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+            "line": 489,
+            "type": "emoji_in_label",
+            "label": "إلغاء تحديد القسم ❌",
+            "context": "->label('إلغاء تحديد القسم ❌')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Schemas\\AttendanceSessionForm.php",
+            "line": 151,
+            "type": "emoji_in_label",
+            "label": "🎯 الالتزام",
+            "context": "->label('🎯 الالتزام')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Schemas\\AttendanceSessionForm.php",
+            "line": 162,
+            "type": "emoji_in_label",
+            "label": "👁️ التركيز",
+            "context": "->label('👁️ التركيز')"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Schemas\\AttendanceSessionForm.php",
+            "line": 173,
+            "type": "emoji_in_label",
+            "label": "🙋 المشاركة",
+            "context": "->label('🙋 المشاركة')"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 134,
+            "type": "emoji_in_label",
+            "label": "تحديد كل صلاحيات القسم ✔️",
+            "context": "->label('تحديد كل صلاحيات القسم ✔️')"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 143,
+            "type": "emoji_in_label",
+            "label": "إلغاء تحديد القسم ❌",
+            "context": "->label('إلغاء تحديد القسم ❌')"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 312,
+            "type": "emoji_in_label",
+            "label": "تحديد كل صفحات القسم ✔️",
+            "context": "->label('تحديد كل صفحات القسم ✔️')"
+        },
+        {
+            "file": "app\\Filament\\Traits\\HasPanelFilteredPermissions.php",
+            "line": 320,
+            "type": "emoji_in_label",
+            "label": "إلغاء تحديد القسم ❌",
+            "context": "->label('إلغاء تحديد القسم ❌')"
+        }
+    ],
+    "table_actions": [
+        {
+            "file": "app\\Filament\\Admin\\Pages\\GenerateInstructorPayments.php",
+            "line": 48,
+            "action": "generateAll"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\GenerateInstructorPayments.php",
+            "line": 103,
+            "action": "generateSingle"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\UsersReport.php",
+            "line": 171,
+            "action": "print"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\UsersReport.php",
+            "line": 177,
+            "action": "export"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Pages\\UsersReport.php",
+            "line": 184,
+            "action": "export_selected"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Pages\\ClassroomAvailability.php",
+            "line": 74,
+            "action": "backToList"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Pages\\ClassroomAvailability.php",
+            "line": 80,
+            "action": "today"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Pages\\ListClassrooms.php",
+            "line": 17,
+            "action": "availability"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Classrooms\\Tables\\ClassroomsTable.php",
+            "line": 97,
+            "action": "availability"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Actions\\CancelSubscriptionAction.php",
+            "line": 25,
+            "action": "cancel_subscription"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Actions\\ExecuteRefundAction.php",
+            "line": 22,
+            "action": "execute_refund"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Enrollments\\Pages\\ListEnrollments.php",
+            "line": 21,
+            "action": "enrollment_reports"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Exams\\Pages\\ListExams.php",
+            "line": 23,
+            "action": "exam_reports"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Groups\\Tables\\GroupsTable.php",
+            "line": 148,
+            "action": "viewStudents"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\AdminInstructorEvaluationAppealResource.php",
+            "line": 112,
+            "action": "decide_appeal"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\Pages\\ViewAdminInstructorEvaluationAppeal.php",
+            "line": 28,
+            "action": "decide_appeal"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\OverdueInstallmentResource\\Pages\\ListOverdueInstallments.php",
+            "line": 16,
+            "action": "export"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\OverdueInstallmentResource.php",
+            "line": 271,
+            "action": "send_reminder"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Payments\\Pages\\ListPayments.php",
+            "line": 21,
+            "action": "collection_reports"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SalaryPayments\\Tables\\SalaryPaymentsTable.php",
+            "line": 89,
+            "action": "markPaid"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsConfigs\\Pages\\EditSmsConfig.php",
+            "line": 36,
+            "action": "test_sms"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SmsLogResource\\Pages\\ListSmsLogs.php",
+            "line": 16,
+            "action": "settings"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\StudentFollowUpTaskResource.php",
+            "line": 218,
+            "action": "complete"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Students\\Pages\\ListStudents.php",
+            "line": 21,
+            "action": "student_reports"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Students\\RelationManagers\\CanceledSubscriptionsRelationManager.php",
+            "line": 128,
+            "action": "view_cancellation_details"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Students\\Tables\\StudentsTable.php",
+            "line": 176,
+            "action": "viewCourses"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Students\\Tables\\StudentsTable.php",
+            "line": 198,
+            "action": "printBarcode"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource.php",
+            "line": 118,
+            "action": "add_comment"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource.php",
+            "line": 138,
+            "action": "request_clarification"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource.php",
+            "line": 158,
+            "action": "request_revision"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ListAdminSupervisionReports.php",
+            "line": 15,
+            "action": "supervision_reports_center"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ViewAdminSupervisionReport.php",
+            "line": 30,
+            "action": "add_comment"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ViewAdminSupervisionReport.php",
+            "line": 52,
+            "action": "request_clarification"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ViewAdminSupervisionReport.php",
+            "line": 74,
+            "action": "request_revision"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\Supervisors\\Tables\\SupervisorsTable.php",
+            "line": 135,
+            "action": "activate"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+            "line": 114,
+            "action": "approve"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultReconciliations\\Tables\\VaultReconciliationsTable.php",
+            "line": 127,
+            "action": "reject"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\Tables\\VaultTransfersTable.php",
+            "line": 150,
+            "action": "approve"
+        },
+        {
+            "file": "app\\Filament\\Admin\\Resources\\VaultTransfers\\Tables\\VaultTransfersTable.php",
+            "line": 182,
+            "action": "cancel"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Pages\\MyGroups.php",
+            "line": 154,
+            "action": "viewAcademicCenter"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Pages\\MyGroups.php",
+            "line": 161,
+            "action": "viewStudents"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Assignments\\Tables\\AssignmentsTable.php",
+            "line": 65,
+            "action": "submissions"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AssignmentSubmissions\\Tables\\AssignmentSubmissionsTable.php",
+            "line": 77,
+            "action": "review"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\AttendanceReports.php",
+            "line": 189,
+            "action": "viewDetails"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\AttendanceReports.php",
+            "line": 198,
+            "action": "edit"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\TakeAttendance.php",
+            "line": 387,
+            "action": "markAllPresent"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\TakeAttendance.php",
+            "line": 393,
+            "action": "markAllAbsent"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+            "line": 157,
+            "action": "exam_status"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam.php",
+            "line": 165,
+            "action": "view_pdf"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorMyEvaluation.php",
+            "line": 30,
+            "action": "add_comment"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorMyEvaluation.php",
+            "line": 62,
+            "action": "submit_formal_appeal"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+            "line": 159,
+            "action": "record_session"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+            "line": 172,
+            "action": "take_attendance"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SessionSchedules\\Tables\\SessionSchedulesTable.php",
+            "line": 191,
+            "action": "cancel"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SupervisoryObservations\\InstructorSupervisoryObservationResource.php",
+            "line": 119,
+            "action": "submit_correction"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Resources\\SupervisoryObservations\\Pages\\ViewInstructorSupervisoryObservation.php",
+            "line": 29,
+            "action": "submit_correction"
+        },
+        {
+            "file": "app\\Filament\\Instructor\\Widgets\\RecentAssignmentsWidget.php",
+            "line": 64,
+            "action": "view"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyAttendance.php",
+            "line": 151,
+            "action": "view_details"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyCourses.php",
+            "line": 209,
+            "action": "view_details"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 158,
+            "action": "view_receipt"
+        },
+        {
+            "file": "app\\Filament\\Parent\\Pages\\MyPayments.php",
+            "line": 174,
+            "action": "download_receipt"
+        },
+        {
+            "file": "app\\Filament\\Student\\Pages\\MyAttendance.php",
+            "line": 149,
+            "action": "view_details"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\InstructorEvaluationResource.php",
+            "line": 278,
+            "action": "publish_evaluation"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorEvaluation.php",
+            "line": 30,
+            "action": "publish_evaluation"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorEvaluation.php",
+            "line": 48,
+            "action": "respond_to_appeal"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ListSupervisionReports.php",
+            "line": 19,
+            "action": "generate_weekly_draft"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ListSupervisionReports.php",
+            "line": 39,
+            "action": "generate_monthly_draft"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ViewSupervisionReport.php",
+            "line": 35,
+            "action": "publish_report"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ViewSupervisionReport.php",
+            "line": 56,
+            "action": "respond_to_clarification"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisionReports\\SupervisionReportResource.php",
+            "line": 214,
+            "action": "publish_report"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\Pages\\ViewSupervisoryObservation.php",
+            "line": 29,
+            "action": "approve_completion"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\Pages\\ViewSupervisoryObservation.php",
+            "line": 50,
+            "action": "return_for_correction"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\SupervisoryObservationResource.php",
+            "line": 249,
+            "action": "approve_completion"
+        },
+        {
+            "file": "app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\SupervisoryObservationResource.php",
+            "line": 269,
+            "action": "return_for_correction"
+        }
+    ]
+}

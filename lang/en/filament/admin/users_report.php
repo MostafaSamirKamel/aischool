@@ -1,0 +1,37 @@
+<?php
+
+return [
+
+    'clinic' => 'Branch',
+    'created_at' => 'Registration Date',
+    'email' => 'Email',
+    'email_verified' => 'Email Verified',
+    'email_verified_filter' => 'Email Verified',
+    'export' => 'Export Excel',
+    'export_selected' => 'Export Selected',
+    'from_date' => 'From Date',
+    'from_date_filter' => 'From Date',
+    'is_super_admin' => 'Super Admin',
+    'last_update' => 'Last Update',
+    'model_label' => 'User Report',
+    'name' => 'Name',
+    'navigation_group' => 'Reports',
+    'navigation_icon' => 'heroicon-o-users',
+    'navigation_label' => 'Users Report',
+    'not_verified_only' => 'Not Verified Only',
+    'plural_model_label' => 'Users Reports',
+    'print' => 'Print',
+    'registration_date' => 'Registration Date',
+    'roles' => 'Roles',
+    'super_admin' => 'Super Admin',
+    'tenant_filter' => 'Branch',
+    'title' => 'Users Report',
+    'to_date' => 'To Date',
+    'to_date_filter' => 'To Date',
+    'unverified_only' => 'Unverified Only',
+    'updated_at' => 'Last Update',
+    'user_type' => 'User Type',
+    'user_type_filter' => 'User Type',
+    'verified_only' => 'Verified Only',
+
+];

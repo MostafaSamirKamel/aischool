@@ -1,0 +1,53 @@
+<?php
+
+return [
+    'navigation_label' => 'Paramètres',
+    'model_label' => 'Paramètre',
+    'plural_model_label' => 'Paramètres',
+    
+    '_section_header_1' => 'Informations sur l\'entreprise',
+    '_section_header_2' => 'Localisation géographique',
+    '_section_header_3' => 'Réseaux sociaux',
+    '_section_header_4' => 'Paramètres SEO',
+    '_section_header_5' => 'Paramètres de messagerie',
+    '_section_header_6' => 'Paramètres généraux',
+
+    'tenant_id' => 'Branche',
+    'company_name' => 'Nom de l\'entreprise',
+    'company_logo' => 'Logo de l\'entreprise',
+    'company_email' => 'E-mail de l\'entreprise',
+    'company_phone' => 'Téléphone de l\'entreprise',
+    'company_website' => 'Site web de l\'entreprise',
+    'company_whatsapp' => 'WhatsApp de l\'entreprise',
+    'company_address' => 'Adresse de l\'entreprise',
+    'about_company' => 'À propos de l\'entreprise',
+    'currency' => 'Devise',
+    'timezone' => 'Fuseau horaire',
+    'latitude' => 'Latitude',
+    'longitude' => 'Longitude',
+    'maintenance_mode' => 'Mode maintenance',
+    
+    'social_facebook' => 'Facebook',
+    'social_twitter' => 'Twitter',
+    'social_instagram' => 'Instagram',
+    'social_linkedin' => 'LinkedIn',
+    'social_youtube' => 'YouTube',
+    'social_telegram' => 'Telegram',
+    'social_tiktok' => 'TikTok',
+    'social_whatsapp' => 'WhatsApp',
+    
+    'seo_title' => 'Titre SEO',
+    'seo_description' => 'Description SEO',
+    'seo_keywords' => 'Mots-clés SEO',
+    'google_analytics_id' => 'ID Google Analytics',
+    'google_search_console' => 'Google Search Console',
+    
+    'mail_driver' => 'Driver de messagerie',
+    'mail_host' => 'Hôte de messagerie',
+    'mail_port' => 'Port de messagerie',
+    'mail_username' => 'Nom d\'utilisateur de messagerie',
+    'mail_password' => 'Mot de passe de messagerie',
+    'mail_encryption' => 'Chiffrement de messagerie',
+    'mail_from_name' => 'Nom de l\'expéditeur',
+    'mail_from_address' => 'Adresse de l\'expéditeur',
+];

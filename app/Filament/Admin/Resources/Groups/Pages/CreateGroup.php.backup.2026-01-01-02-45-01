@@ -1,0 +1,37 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Groups\Pages;
+
+use App\Filament\Admin\Resources\Groups\GroupResource;
+use Filament\Notifications\Notification;
+use Filament\Resources\Pages\CreateRecord;
+
+class CreateGroup extends CreateRecord
+{
+    protected static string $resource = GroupResource::class;
+
+    public function mount(): void
+    {
+        parent::mount();
+
+        if (auth()->user()->is_super_admin) {
+            Notification::make()
+                ->title(__('filament/admin/create_group.غيرمصرح'))
+                ->body('الأدمن الرئيسي لا يمكنه إنشاء سجلات في هذا القسم')
+                ->danger()
+                ->send();
+
+            $this->redirect(GroupResource::getUrl('index'));
+        }
+    }
+    public function getTitle(): string
+    {
+        return __('filament/admin/create_group.title');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/create_group.title');
+    }
+
+}

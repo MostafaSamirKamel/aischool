@@ -1,0 +1,135 @@
+@import 'tailwindcss';
+
+/* تحسينات مخصصة للوحة المدرس */
+
+/* Sidebar Styling */
+/* .fi-sidebar {
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%) !important;
+} */
+
+.fi-sidebar-nav-item {
+    @apply transition-all duration-200;
+}
+
+.fi-sidebar-nav-item:hover {
+    @apply bg-white/10 transform scale-105;
+}
+
+/* Cards */
+.fi-section {
+    @apply shadow-lg rounded-xl border-l-4 border-indigo-500;
+}
+
+/* Stats Cards */
+.fi-stats-card {
+    @apply bg-gradient-to-br from-white to-indigo-50 dark:from-gray-800 dark:to-indigo-900;
+}
+
+/* Tables */
+.fi-ta-table {
+    @apply rounded-xl overflow-hidden shadow-md;
+}
+
+.fi-ta-header {
+    @apply bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900;
+}
+
+/* Buttons */
+.fi-btn-primary {
+    @apply bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700;
+    @apply shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200;
+}
+
+/* Badges */
+.fi-badge {
+    @apply shadow-sm font-semibold;
+}
+
+/* Dashboard Widgets */
+.fi-wi-stats-overview-card {
+    @apply bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900;
+    @apply border-l-4;
+}
+
+.fi-wi-stats-overview-card:nth-child(1) {
+    @apply border-indigo-500;
+}
+
+.fi-wi-stats-overview-card:nth-child(2) {
+    @apply border-purple-500;
+}
+
+.fi-wi-stats-overview-card:nth-child(3) {
+    @apply border-pink-500;
+}
+
+.fi-wi-stats-overview-card:nth-child(4) {
+    @apply border-blue-500;
+}
+
+/* Charts */
+.fi-wi-chart {
+    @apply rounded-xl shadow-lg p-6 bg-white dark:bg-gray-800;
+}
+
+/* Top Navigation */
+.fi-topbar {
+    @apply shadow-md bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg;
+}
+
+/* Notifications */
+.fi-no-notification {
+    @apply rounded-lg shadow-md;
+}
+
+/* Forms */
+.fi-fo-field-wrp {
+    @apply space-y-2;
+}
+
+.fi-input {
+    @apply rounded-lg border-gray-300 focus:border-indigo-500 focus:ring-indigo-500;
+}
+
+/* Modal */
+.fi-modal {
+    @apply rounded-2xl shadow-2xl;
+}
+
+/* Brand Logo Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.fi-logo {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Page Header */
+.fi-header {
+    @apply border-b-4 border-indigo-500 pb-4 mb-6;
+}
+
+/* Action Buttons */
+.fi-ac-action {
+    @apply transition-all duration-200 hover:scale-105;
+}
+
+/* Dropdown */
+.fi-dropdown-list {
+    @apply rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700;
+}
+
+/* Tabs */
+.fi-tabs {
+    @apply border-b-2 border-indigo-500;
+}
+
+.fi-tabs-item-active {
+    @apply bg-gradient-to-r from-indigo-500 to-purple-500 text-white;
+}

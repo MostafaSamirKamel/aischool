@@ -1,0 +1,158 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Payments\Schemas;
+
+use Filament\Forms\Get;
+use Filament\Schemas\Schema;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\RichEditor;
+
+class PaymentForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Section::make('معلومات الطالب والتسجيل')
+                    ->description('اختر التسجيل أولاً لعرض بيانات الطالب والمجموعة')
+                    ->schema([
+                        Select::make('enrollment_id')
+                            ->label(__('filament/admin/payment_resource.enrollment_id'))
+                            ->relationship('enrollment', 'enrollment_code')
+                            ->getOptionLabelFromRecordUsing(fn ($record) => "{$record->enrollment_code} - {$record->student->user->name} ({$record->group->name})")
+                            ->searchable(['enrollment_code'])
+                            ->required()
+                            ->native(false)
+                            ->preload()
+                            ->live()
+                            ->afterStateUpdated(function ($state, callable $set) {
+                                if ($state) {
+                                    $enrollment = \App\Models\Enrollment::find($state);
+                                    if ($enrollment) {
+                                        $set('student_name', $enrollment->student->user->name ?? '-');
+                                        $set('group_name', $enrollment->group->name ?? '-');
+                                        $set('course_name', $enrollment->group->course->name ?? '-');
+                                        $set('total_fees', $enrollment->total_fees ?? 0);
+                                        $set('paid_amount', $enrollment->paid_amount ?? 0);
+                                        $set('remaining_balance', $enrollment->remaining_balance ?? 0);
+                                        $set('amount', $enrollment->remaining_balance ?? 0);
+                                    }
+                                }
+                            })
+                            ->columnSpanFull(),
+
+                        TextInput::make('student_name')
+                            ->label('اسم الطالب')
+                            ->disabled()
+                            ->dehydrated(false)
+                            ->placeholder('سيظهر بعد اختيار التسجيل'),
+
+                        TextInput::make('group_name')
+                            ->label('المجموعة')
+                            ->disabled()
+                            ->dehydrated(false)
+                            ->placeholder('سيظهر بعد اختيار التسجيل'),
+
+                        TextInput::make('course_name')
+                            ->label('المادة الدراسية')
+                            ->disabled()
+                            ->dehydrated(false)
+                            ->placeholder('سيظهر بعد اختيار التسجيل'),
+
+                        TextInput::make('total_fees')
+                            ->label('إجمالي الرسوم')
+                            ->disabled()
+                            ->dehydrated(false)
+                            ->prefix('ج.م')
+                            ->placeholder('0'),
+
+                        TextInput::make('paid_amount')
+                            ->label('المدفوع')
+                            ->disabled()
+                            ->dehydrated(false)
+                            ->prefix('ج.م')
+                            ->placeholder('0'),
+
+                        TextInput::make('remaining_balance')
+                            ->label('المتبقي')
+                            ->disabled()
+                            ->dehydrated(false)
+                            ->prefix('ج.م')
+                            ->placeholder('0')
+                            ->helperText('هذا المبلغ سيتم تعبئته تلقائياً في حقل المبلغ'),
+                    ])
+                    ->columns(3),
+
+                Section::make('معلومات الدفعة')
+                    ->schema([
+                        TextInput::make('payment_code')
+                            ->label(__('filament/admin/payment_resource.payment_code'))
+                            ->required()
+                            ->unique(ignoreRecord: true)
+                            ->default(fn () => \App\Models\Payment::generatePaymentCode())
+                            ->disabled()
+                            ->dehydrated(),
+
+                        TextInput::make('amount')
+                            ->label(__('filament/admin/payment_resource.amount'))
+                            ->required()
+                            ->numeric()
+                            ->prefix('ج.م')
+                            ->minValue(0)
+                            ->helperText('يمكنك تعديل المبلغ إذا كان الدفع جزئي'),
+                    ])
+                    ->columns(3),
+
+                Section::make('تفاصيل الدفع')
+                    ->schema([
+                        Select::make('payment_method')
+                            ->label(__('filament/admin/payment_resource.payment_method'))
+                            ->options(['cash' => __('filament/admin/payment_resource.payment_method.cash'), 'card' => __('filament/admin/payment_resource.payment_method.card'), 'bank_transfer' => __('filament/admin/payment_resource.payment_method.bank_transfer'), 'online' => __('filament/admin/payment_resource.payment_method.online')])
+                            ->required()
+                            ->native(false),
+
+                        DatePicker::make('payment_date')
+                            ->label(__('filament/admin/payment_resource.payment_date'))
+                            ->required()
+                            ->default(now())
+                            ->native(false),
+
+                        DatePicker::make('due_date')
+                            ->label(__('filament/admin/payment_resource.due_date'))
+                            ->native(false),
+
+                        Select::make('status')
+                            ->label(__('filament/admin/payment_resource.status'))
+                            ->options(['pending' => __('filament/admin/payment_resource.status.pending'), 'completed' => __('filament/admin/payment_resource.status.completed'), 'failed' => __('filament/admin/payment_resource.status.failed'), 'refunded' => __('filament/admin/payment_resource.status.refunded')])
+                            ->default(__('filament/admin/payment_resource.status_default'))
+                            ->required()
+                            ->native(false),
+                    ])
+                    ->columns(4),
+
+                Section::make('معلومات إضافية')
+                    ->schema([
+                        TextInput::make('transaction_reference')
+                            ->label(__('filament/admin/payment_resource.transaction_reference'))
+                            ->maxLength(255),
+
+                        Select::make('received_by')
+                            ->label(__('filament/admin/payment_resource.received_by'))
+                            ->relationship('receivedBy', 'name', fn($query) => $query->where('status', 'active'))
+                            ->searchable()
+                            ->native(false)
+                            ->preload()
+                            ->default(__('filament/admin/payment_resource.received_by_default')),
+
+                        RichEditor::make('notes')
+                            ->label(__('filament/admin/payment_resource.notes'))
+                            ->columnSpanFull(),
+                    ])
+                    ->columns(2)
+                    ->collapsed(),
+            ]);
+    }
+}

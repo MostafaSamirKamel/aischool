@@ -1,0 +1,1824 @@
+{
+    "timestamp": "2026-10-27T16:24:07+03:00",
+    "summary": {
+        "total_admin_routes": 141,
+        "total_instructor_routes": 44,
+        "total_supervisor_routes": 23,
+        "total_student_routes": 22,
+        "total_parent_routes": 10,
+        "total_other_routes": 22,
+        "total_routes": 262
+    },
+    "panels": {
+        "admin": {
+            "id": "admin",
+            "path": "admin",
+            "resources_count": 36,
+            "resources": [
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Admins\\AdminResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\AssignmentResource\\ExamAttemptResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\AttendanceSessions\\AttendanceSessionResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Classrooms\\ClassroomResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Courses\\CourseResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Departments\\DepartmentResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Enrollments\\EnrollmentResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Exams\\ExamResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\ExpenseCategories\\ExpenseCategoryResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Expenses\\ExpenseResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Grades\\GradeResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Groups\\GroupResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\AdminInstructorEvaluationAppealResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Instructors\\InstructorResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Nationalities\\NationalityResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Occupations\\OccupationResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\OverdueInstallmentResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Payments\\PaymentResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\RevenueCategories\\RevenueCategoryResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Revenues\\RevenueResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Roles\\RoleResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\SalaryPayments\\SalaryPaymentResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Settings\\SettingResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\SmsConfigs\\SmsConfigResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\SmsLogResource\\SmsLogResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\StudentFollowUpTaskResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\StudentParents\\StudentParentResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Students\\StudentResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\SupervisionReports\\AdminSupervisionReportResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Supervisors\\SupervisorResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Tenants\\TenantResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Tracks\\TrackResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Users\\UserResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\VaultReconciliations\\VaultReconciliationResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\VaultTransfers\\VaultTransferResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Resources\\Vaults\\VaultResource.php"
+            ],
+            "pages_count": 18,
+            "pages": [
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\AcademicFollowUpCenter.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\AdvancedReports.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\BarcodeAttendance.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\BarcodePrint.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\GenerateInstructorPayments.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\InstallmentsDueMonth.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\InstallmentsDueToday.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\InstallmentsDueWeek.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\ReportingCenterPage.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\Reports\\AllInstallmentsReport.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\Reports\\CourseFinancialReport.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\Reports\\InstallmentsReport.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\ScheduledTasks.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\SecretaryAttendance.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\StudentPortfolioReport.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\UsersReport.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Pages\\VaultReport.php",
+                0
+            ],
+            "widgets_count": 22,
+            "widgets": [
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\AdminCalendarWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\AttendanceStatsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\BarcodeAttendanceShortcut.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\EnrollmentReportStats.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\FinancialReportStats.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\PerformanceReportStats.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\StatsOverview.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\StudentReportStats.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\TenantSwitcher.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\UserInfoWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\VaultDailyMovement.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\AdminNotificationsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\ExamsOverviewWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\RevenueChart.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\GradesStatsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\StudentGrowthChart.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\EnrollmentStatusChart.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\UpcomingExamsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\GradesDistributionWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\PaymentMethodsChart.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\SmsStatsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Admin\\Widgets\\TopCoursesChart.php"
+            ]
+        },
+        "instructor": {
+            "id": "instructor",
+            "path": "instructor",
+            "resources_count": 13,
+            "resources": [
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Resources\\AssignmentSubmissions\\AssignmentSubmissionResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Resources\\Assignments\\AssignmentResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Resources\\AttendanceSessions\\AttendanceSessionResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Resources\\Exams\\ExamResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Resources\\GroupMessageResource\\GroupMessageResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Resources\\InstructorEvaluations\\InstructorMyEvaluationResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Resources\\InstructorExamAttemptResource\\InstructorExamAttemptResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Resources\\InstructorPayments\\InstructorPaymentResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Resources\\InstructorReviews\\InstructorReviewResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Resources\\LearningResources\\LearningResourceResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Resources\\SessionSchedules\\SessionScheduleResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Resources\\StudentMessages\\StudentMessageResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Resources\\SupervisoryObservations\\InstructorSupervisoryObservationResource.php"
+            ],
+            "pages_count": 4,
+            "pages": [
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Pages\\Dashboard.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Pages\\HomeworkReviewCenter.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Pages\\InstructorReports.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Pages\\MyGroups.php"
+            ],
+            "widgets_count": 11,
+            "widgets": [
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\InstructorCalendarWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\InstructorNotificationsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\InstructorPaymentStatsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\InstructorStatsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\SubmissionsChartWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\UpcomingSessionsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\InstructorReviewStatsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\UpcomingGroupsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\RecentAssignmentsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\AttendanceRateChartWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Instructor\\Widgets\\AttendanceStatsWidget.php"
+            ]
+        },
+        "supervisor": {
+            "id": "supervisor",
+            "path": "supervisor",
+            "resources_count": 6,
+            "resources": [
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Resources\\AttendanceSessions\\AttendanceSessionResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Resources\\Groups\\GroupResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\InstructorEvaluationResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Resources\\Students\\StudentResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Resources\\SupervisionReports\\SupervisionReportResource.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\SupervisoryObservationResource.php"
+            ],
+            "pages_count": 4,
+            "pages": [
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Pages\\EducationalAlertsPage.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Pages\\GroupSupervisionProfilePage.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Pages\\InstructorSupervisionProfilePage.php",
+                0
+            ],
+            "widgets_count": 7,
+            "widgets": [
+                0,
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Widgets\\SupervisorCalendarWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Widgets\\SupervisorNotificationsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Widgets\\SupervisorStatsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Widgets\\DailyPriorityQueueWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Widgets\\SupervisorGroupsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Supervisor\\Widgets\\RecentAttendanceWidget.php"
+            ]
+        },
+        "student": {
+            "id": "student",
+            "path": "student",
+            "resources_count": 1,
+            "resources": [
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Resources\\InstructorReviewResource.php"
+            ],
+            "pages_count": 12,
+            "pages": [
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Pages\\Dashboard.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Pages\\ExamResult.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Pages\\GroupMessages.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Pages\\MyAssignments.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Pages\\MyAttendance.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Pages\\MyCourses.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Pages\\MyExams.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Pages\\MyPayments.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Pages\\StudentEnrollments.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Pages\\StudentLearningResources.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Pages\\StudentReports.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Pages\\TakeExam.php"
+            ],
+            "widgets_count": 9,
+            "widgets": [
+                0,
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\OverdueInstallmentsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\StatsOverviewWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\MyCoursesWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\StudentCoursesProgressWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\UpcomingAssignmentsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\RecentGradesWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\AttendanceWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Student\\Widgets\\PaymentsWidget.php"
+            ]
+        },
+        "parent": {
+            "id": "parent",
+            "path": "parent",
+            "resources_count": 1,
+            "resources": [
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Resources\\Messages\\MessagesResource.php"
+            ],
+            "pages_count": 6,
+            "pages": [
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Pages\\Dashboard.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Pages\\GroupMessages.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Pages\\MyAttendance.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Pages\\MyCourses.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Pages\\MyPayments.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Pages\\StudentReports.php"
+            ],
+            "widgets_count": 9,
+            "widgets": [
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\ChildrenSelectorWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\OverdueInstallmentsWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\StatsOverviewWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\StudentSwitcher.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\MyCoursesWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\ParentStudentCoursesWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\RecentGradesWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\AttendanceWidget.php",
+                "D:\\ai_school_new-main (1)\\ai_school_new-main\\app\\Filament\\Parent\\Widgets\\PaymentsWidget.php"
+            ]
+        }
+    },
+    "routes": {
+        "admin": [
+            {
+                "uri": "admin/login",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.auth.login",
+                "action": "App\\Filament\\Pages\\Auth\\CustomLogin"
+            },
+            {
+                "uri": "admin/register",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.auth.register",
+                "action": "Filament\\Auth\\Pages\\Register"
+            },
+            {
+                "uri": "admin/logout",
+                "methods": "POST",
+                "name": "filament.admin.auth.logout",
+                "action": "Filament\\Auth\\Http\\Controllers\\LogoutController"
+            },
+            {
+                "uri": "admin/profile",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.auth.profile",
+                "action": "Filament\\Auth\\Pages\\EditProfile"
+            },
+            {
+                "uri": "admin/email-verification/prompt",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.auth.email-verification.prompt",
+                "action": "Filament\\Auth\\Pages\\EmailVerification\\EmailVerificationPrompt"
+            },
+            {
+                "uri": "admin/email-verification/verify/{id}/{hash}",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.auth.email-verification.verify",
+                "action": "Filament\\Auth\\Http\\Controllers\\EmailVerificationController"
+            },
+            {
+                "uri": "admin",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.dashboard",
+                "action": "Filament\\Pages\\Dashboard"
+            },
+            {
+                "uri": "admin/academic-follow-up-center",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.academic-follow-up-center",
+                "action": "App\\Filament\\Admin\\Pages\\AcademicFollowUpCenter"
+            },
+            {
+                "uri": "admin/advanced-reports",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.advanced-reports",
+                "action": "App\\Filament\\Admin\\Pages\\AdvancedReports"
+            },
+            {
+                "uri": "admin/barcode-attendance",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.barcode-attendance",
+                "action": "App\\Filament\\Admin\\Pages\\BarcodeAttendance"
+            },
+            {
+                "uri": "admin/barcode-print",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.barcode-print",
+                "action": "App\\Filament\\Admin\\Pages\\BarcodePrint"
+            },
+            {
+                "uri": "admin/generate-instructor-payments",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.generate-instructor-payments",
+                "action": "App\\Filament\\Admin\\Pages\\GenerateInstructorPayments"
+            },
+            {
+                "uri": "admin/installments-due-month",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.installments-due-month",
+                "action": "App\\Filament\\Admin\\Pages\\InstallmentsDueMonth"
+            },
+            {
+                "uri": "admin/installments-due-today",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.installments-due-today",
+                "action": "App\\Filament\\Admin\\Pages\\InstallmentsDueToday"
+            },
+            {
+                "uri": "admin/installments-due-week",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.installments-due-week",
+                "action": "App\\Filament\\Admin\\Pages\\InstallmentsDueWeek"
+            },
+            {
+                "uri": "admin/reporting-center-page",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.reporting-center-page",
+                "action": "App\\Filament\\Admin\\Pages\\ReportingCenterPage"
+            },
+            {
+                "uri": "admin/all-installments-report",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.all-installments-report",
+                "action": "App\\Filament\\Admin\\Pages\\Reports\\AllInstallmentsReport"
+            },
+            {
+                "uri": "admin/course-financial-report",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.course-financial-report",
+                "action": "App\\Filament\\Admin\\Pages\\Reports\\CourseFinancialReport"
+            },
+            {
+                "uri": "admin/installments-report",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.installments-report",
+                "action": "App\\Filament\\Admin\\Pages\\Reports\\InstallmentsReport"
+            },
+            {
+                "uri": "admin/scheduled-tasks",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.scheduled-tasks",
+                "action": "App\\Filament\\Admin\\Pages\\ScheduledTasks"
+            },
+            {
+                "uri": "admin/secretary-attendance",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.secretary-attendance",
+                "action": "App\\Filament\\Admin\\Pages\\SecretaryAttendance"
+            },
+            {
+                "uri": "admin/student-portfolio-report",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.student-portfolio-report",
+                "action": "App\\Filament\\Admin\\Pages\\StudentPortfolioReport"
+            },
+            {
+                "uri": "admin/users-report",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.users-report",
+                "action": "App\\Filament\\Admin\\Pages\\UsersReport"
+            },
+            {
+                "uri": "admin/vault-report",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.pages.vault-report",
+                "action": "App\\Filament\\Admin\\Pages\\VaultReport"
+            },
+            {
+                "uri": "admin/admins",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.admins.index",
+                "action": "App\\Filament\\Admin\\Resources\\Admins\\Pages\\ListAdmins"
+            },
+            {
+                "uri": "admin/admins/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.admins.create",
+                "action": "App\\Filament\\Admin\\Resources\\Admins\\Pages\\CreateAdmin"
+            },
+            {
+                "uri": "admin/admins/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.admins.view",
+                "action": "App\\Filament\\Admin\\Resources\\Admins\\Pages\\ViewAdmin"
+            },
+            {
+                "uri": "admin/admins/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.admins.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Admins\\Pages\\EditAdmin"
+            },
+            {
+                "uri": "admin/assignment-resource/exam-attempts",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.assignment-resource.exam-attempts.index",
+                "action": "App\\Filament\\Admin\\Resources\\AssignmentResource\\ExamAttemptResource\\Pages\\ListExamAttempts"
+            },
+            {
+                "uri": "admin/attendance-sessions",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.attendance-sessions.index",
+                "action": "App\\Filament\\Admin\\Resources\\AttendanceSessions\\Pages\\ListAttendanceSessions"
+            },
+            {
+                "uri": "admin/attendance-sessions/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.attendance-sessions.create",
+                "action": "App\\Filament\\Admin\\Resources\\AttendanceSessions\\Pages\\CreateAttendanceSession"
+            },
+            {
+                "uri": "admin/attendance-sessions/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.attendance-sessions.edit",
+                "action": "App\\Filament\\Admin\\Resources\\AttendanceSessions\\Pages\\EditAttendanceSession"
+            },
+            {
+                "uri": "admin/classrooms",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.classrooms.index",
+                "action": "App\\Filament\\Admin\\Resources\\Classrooms\\Pages\\ListClassrooms"
+            },
+            {
+                "uri": "admin/classrooms/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.classrooms.create",
+                "action": "App\\Filament\\Admin\\Resources\\Classrooms\\Pages\\CreateClassroom"
+            },
+            {
+                "uri": "admin/classrooms/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.classrooms.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Classrooms\\Pages\\EditClassroom"
+            },
+            {
+                "uri": "admin/classrooms/availability",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.classrooms.availability",
+                "action": "App\\Filament\\Admin\\Resources\\Classrooms\\Pages\\ClassroomAvailability"
+            },
+            {
+                "uri": "admin/courses",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.courses.index",
+                "action": "App\\Filament\\Admin\\Resources\\Courses\\Pages\\ListCourses"
+            },
+            {
+                "uri": "admin/courses/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.courses.create",
+                "action": "App\\Filament\\Admin\\Resources\\Courses\\Pages\\CreateCourse"
+            },
+            {
+                "uri": "admin/courses/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.courses.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Courses\\Pages\\EditCourse"
+            },
+            {
+                "uri": "admin/departments",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.departments.index",
+                "action": "App\\Filament\\Admin\\Resources\\Departments\\Pages\\ListDepartments"
+            },
+            {
+                "uri": "admin/departments/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.departments.create",
+                "action": "App\\Filament\\Admin\\Resources\\Departments\\Pages\\CreateDepartment"
+            },
+            {
+                "uri": "admin/departments/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.departments.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Departments\\Pages\\EditDepartment"
+            },
+            {
+                "uri": "admin/enrollments",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.enrollments.index",
+                "action": "App\\Filament\\Admin\\Resources\\Enrollments\\Pages\\ListEnrollments"
+            },
+            {
+                "uri": "admin/enrollments/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.enrollments.create",
+                "action": "App\\Filament\\Admin\\Resources\\Enrollments\\Pages\\CreateEnrollment"
+            },
+            {
+                "uri": "admin/enrollments/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.enrollments.view",
+                "action": "App\\Filament\\Admin\\Resources\\Enrollments\\Pages\\ViewEnrollment"
+            },
+            {
+                "uri": "admin/enrollments/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.enrollments.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Enrollments\\Pages\\EditEnrollment"
+            },
+            {
+                "uri": "admin/exams",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.exams.index",
+                "action": "App\\Filament\\Admin\\Resources\\Exams\\Pages\\ListExams"
+            },
+            {
+                "uri": "admin/exams/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.exams.create",
+                "action": "App\\Filament\\Admin\\Resources\\Exams\\Pages\\CreateExam"
+            },
+            {
+                "uri": "admin/exams/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.exams.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Exams\\Pages\\EditExam"
+            },
+            {
+                "uri": "admin/expense-categories",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.expense-categories.index",
+                "action": "App\\Filament\\Admin\\Resources\\ExpenseCategories\\Pages\\ListExpenseCategories"
+            },
+            {
+                "uri": "admin/expense-categories/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.expense-categories.create",
+                "action": "App\\Filament\\Admin\\Resources\\ExpenseCategories\\Pages\\CreateExpenseCategory"
+            },
+            {
+                "uri": "admin/expense-categories/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.expense-categories.edit",
+                "action": "App\\Filament\\Admin\\Resources\\ExpenseCategories\\Pages\\EditExpenseCategory"
+            },
+            {
+                "uri": "admin/expenses",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.expenses.index",
+                "action": "App\\Filament\\Admin\\Resources\\Expenses\\Pages\\ListExpenses"
+            },
+            {
+                "uri": "admin/expenses/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.expenses.create",
+                "action": "App\\Filament\\Admin\\Resources\\Expenses\\Pages\\CreateExpense"
+            },
+            {
+                "uri": "admin/expenses/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.expenses.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Expenses\\Pages\\EditExpense"
+            },
+            {
+                "uri": "admin/grades",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.grades.index",
+                "action": "App\\Filament\\Admin\\Resources\\Grades\\Pages\\ListGrades"
+            },
+            {
+                "uri": "admin/grades/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.grades.create",
+                "action": "App\\Filament\\Admin\\Resources\\Grades\\Pages\\CreateGrade"
+            },
+            {
+                "uri": "admin/grades/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.grades.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Grades\\Pages\\EditGrade"
+            },
+            {
+                "uri": "admin/grades/bulk-entry",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.grades.bulk-entry",
+                "action": "App\\Filament\\Admin\\Resources\\Grades\\Pages\\BulkGradeEntry"
+            },
+            {
+                "uri": "admin/groups",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.groups.index",
+                "action": "App\\Filament\\Admin\\Resources\\Groups\\Pages\\ListGroups"
+            },
+            {
+                "uri": "admin/groups/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.groups.create",
+                "action": "App\\Filament\\Admin\\Resources\\Groups\\Pages\\CreateGroup"
+            },
+            {
+                "uri": "admin/groups/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.groups.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Groups\\Pages\\EditGroup"
+            },
+            {
+                "uri": "admin/instructor-evaluation-appeals",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.instructor-evaluation-appeals.index",
+                "action": "App\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\Pages\\ListAdminInstructorEvaluationAppeals"
+            },
+            {
+                "uri": "admin/instructor-evaluation-appeals/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.instructor-evaluation-appeals.view",
+                "action": "App\\Filament\\Admin\\Resources\\InstructorEvaluationAppeals\\Pages\\ViewAdminInstructorEvaluationAppeal"
+            },
+            {
+                "uri": "admin/instructors",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.instructors.index",
+                "action": "App\\Filament\\Admin\\Resources\\Instructors\\Pages\\ListInstructors"
+            },
+            {
+                "uri": "admin/instructors/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.instructors.create",
+                "action": "App\\Filament\\Admin\\Resources\\Instructors\\Pages\\CreateInstructor"
+            },
+            {
+                "uri": "admin/instructors/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.instructors.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Instructors\\Pages\\EditInstructor"
+            },
+            {
+                "uri": "admin/nationalities",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.nationalities.index",
+                "action": "App\\Filament\\Admin\\Resources\\Nationalities\\Pages\\ListNationalities"
+            },
+            {
+                "uri": "admin/nationalities/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.nationalities.create",
+                "action": "App\\Filament\\Admin\\Resources\\Nationalities\\Pages\\CreateNationality"
+            },
+            {
+                "uri": "admin/nationalities/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.nationalities.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Nationalities\\Pages\\EditNationality"
+            },
+            {
+                "uri": "admin/occupations",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.occupations.index",
+                "action": "App\\Filament\\Admin\\Resources\\Occupations\\Pages\\ListOccupations"
+            },
+            {
+                "uri": "admin/occupations/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.occupations.create",
+                "action": "App\\Filament\\Admin\\Resources\\Occupations\\Pages\\CreateOccupation"
+            },
+            {
+                "uri": "admin/occupations/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.occupations.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Occupations\\Pages\\EditOccupation"
+            },
+            {
+                "uri": "admin/overdue-installments",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.overdue-installments.index",
+                "action": "App\\Filament\\Admin\\Resources\\OverdueInstallmentResource\\Pages\\ListOverdueInstallments"
+            },
+            {
+                "uri": "admin/overdue-installments/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.overdue-installments.edit",
+                "action": "App\\Filament\\Admin\\Resources\\OverdueInstallmentResource\\Pages\\EditOverdueInstallment"
+            },
+            {
+                "uri": "admin/payments",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.payments.index",
+                "action": "App\\Filament\\Admin\\Resources\\Payments\\Pages\\ListPayments"
+            },
+            {
+                "uri": "admin/payments/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.payments.create",
+                "action": "App\\Filament\\Admin\\Resources\\Payments\\Pages\\CreatePayment"
+            },
+            {
+                "uri": "admin/payments/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.payments.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Payments\\Pages\\EditPayment"
+            },
+            {
+                "uri": "admin/revenue-categories",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.revenue-categories.index",
+                "action": "App\\Filament\\Admin\\Resources\\RevenueCategories\\Pages\\ListRevenueCategories"
+            },
+            {
+                "uri": "admin/revenue-categories/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.revenue-categories.create",
+                "action": "App\\Filament\\Admin\\Resources\\RevenueCategories\\Pages\\CreateRevenueCategory"
+            },
+            {
+                "uri": "admin/revenue-categories/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.revenue-categories.edit",
+                "action": "App\\Filament\\Admin\\Resources\\RevenueCategories\\Pages\\EditRevenueCategory"
+            },
+            {
+                "uri": "admin/revenues",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.revenues.index",
+                "action": "App\\Filament\\Admin\\Resources\\Revenues\\Pages\\ListRevenues"
+            },
+            {
+                "uri": "admin/revenues/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.revenues.create",
+                "action": "App\\Filament\\Admin\\Resources\\Revenues\\Pages\\CreateRevenue"
+            },
+            {
+                "uri": "admin/revenues/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.revenues.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Revenues\\Pages\\EditRevenue"
+            },
+            {
+                "uri": "admin/shield/roles",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.shield.roles.index",
+                "action": "App\\Filament\\Admin\\Resources\\Roles\\Pages\\ListRoles"
+            },
+            {
+                "uri": "admin/shield/roles/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.shield.roles.create",
+                "action": "App\\Filament\\Admin\\Resources\\Roles\\Pages\\CreateRole"
+            },
+            {
+                "uri": "admin/shield/roles/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.shield.roles.view",
+                "action": "App\\Filament\\Admin\\Resources\\Roles\\Pages\\ViewRole"
+            },
+            {
+                "uri": "admin/shield/roles/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.shield.roles.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Roles\\Pages\\EditRole"
+            },
+            {
+                "uri": "admin/salary-payments",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.salary-payments.index",
+                "action": "App\\Filament\\Admin\\Resources\\SalaryPayments\\Pages\\ListSalaryPayments"
+            },
+            {
+                "uri": "admin/salary-payments/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.salary-payments.create",
+                "action": "App\\Filament\\Admin\\Resources\\SalaryPayments\\Pages\\CreateSalaryPayment"
+            },
+            {
+                "uri": "admin/salary-payments/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.salary-payments.edit",
+                "action": "App\\Filament\\Admin\\Resources\\SalaryPayments\\Pages\\EditSalaryPayment"
+            },
+            {
+                "uri": "admin/settings",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.settings.index",
+                "action": "App\\Filament\\Admin\\Resources\\Settings\\Pages\\ListSettings"
+            },
+            {
+                "uri": "admin/settings/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.settings.create",
+                "action": "App\\Filament\\Admin\\Resources\\Settings\\Pages\\CreateSetting"
+            },
+            {
+                "uri": "admin/settings/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.settings.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Settings\\Pages\\EditSetting"
+            },
+            {
+                "uri": "admin/sms-configs",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.sms-configs.index",
+                "action": "App\\Filament\\Admin\\Resources\\SmsConfigs\\Pages\\ListSmsConfigs"
+            },
+            {
+                "uri": "admin/sms-configs/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.sms-configs.create",
+                "action": "App\\Filament\\Admin\\Resources\\SmsConfigs\\Pages\\CreateSmsConfig"
+            },
+            {
+                "uri": "admin/sms-configs/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.sms-configs.edit",
+                "action": "App\\Filament\\Admin\\Resources\\SmsConfigs\\Pages\\EditSmsConfig"
+            },
+            {
+                "uri": "admin/sms-log-resource/sms-logs",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.sms-log-resource.sms-logs.index",
+                "action": "App\\Filament\\Admin\\Resources\\SmsLogResource\\Pages\\ListSmsLogs"
+            },
+            {
+                "uri": "admin/student-follow-up-tasks",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.student-follow-up-tasks.index",
+                "action": "App\\Filament\\Admin\\Resources\\StudentFollowUpTaskResource\\Pages\\ListStudentFollowUpTasks"
+            },
+            {
+                "uri": "admin/student-follow-up-tasks/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.student-follow-up-tasks.edit",
+                "action": "App\\Filament\\Admin\\Resources\\StudentFollowUpTaskResource\\Pages\\EditStudentFollowUpTask"
+            },
+            {
+                "uri": "admin/student-parents",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.student-parents.index",
+                "action": "App\\Filament\\Admin\\Resources\\StudentParents\\Pages\\ListStudentParents"
+            },
+            {
+                "uri": "admin/student-parents/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.student-parents.create",
+                "action": "App\\Filament\\Admin\\Resources\\StudentParents\\Pages\\CreateStudentParent"
+            },
+            {
+                "uri": "admin/student-parents/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.student-parents.edit",
+                "action": "App\\Filament\\Admin\\Resources\\StudentParents\\Pages\\EditStudentParent"
+            },
+            {
+                "uri": "admin/students",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.students.index",
+                "action": "App\\Filament\\Admin\\Resources\\Students\\Pages\\ListStudents"
+            },
+            {
+                "uri": "admin/students/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.students.create",
+                "action": "App\\Filament\\Admin\\Resources\\Students\\Pages\\CreateStudent"
+            },
+            {
+                "uri": "admin/students/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.students.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Students\\Pages\\EditStudent"
+            },
+            {
+                "uri": "admin/students/transcript",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.students.transcript",
+                "action": "App\\Filament\\Admin\\Resources\\Students\\Pages\\StudentTranscript"
+            },
+            {
+                "uri": "admin/students/certificate",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.students.certificate",
+                "action": "App\\Filament\\Admin\\Resources\\Students\\Pages\\IssueCertificate"
+            },
+            {
+                "uri": "admin/supervision-reports",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.supervision-reports.index",
+                "action": "App\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ListAdminSupervisionReports"
+            },
+            {
+                "uri": "admin/supervision-reports/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.supervision-reports.view",
+                "action": "App\\Filament\\Admin\\Resources\\SupervisionReports\\Pages\\ViewAdminSupervisionReport"
+            },
+            {
+                "uri": "admin/supervisors",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.supervisors.index",
+                "action": "App\\Filament\\Admin\\Resources\\Supervisors\\Pages\\ListSupervisors"
+            },
+            {
+                "uri": "admin/supervisors/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.supervisors.create",
+                "action": "App\\Filament\\Admin\\Resources\\Supervisors\\Pages\\CreateSupervisor"
+            },
+            {
+                "uri": "admin/supervisors/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.supervisors.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Supervisors\\Pages\\EditSupervisor"
+            },
+            {
+                "uri": "admin/tenants",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.tenants.index",
+                "action": "App\\Filament\\Admin\\Resources\\Tenants\\Pages\\ListTenants"
+            },
+            {
+                "uri": "admin/tenants/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.tenants.create",
+                "action": "App\\Filament\\Admin\\Resources\\Tenants\\Pages\\CreateTenant"
+            },
+            {
+                "uri": "admin/tenants/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.tenants.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Tenants\\Pages\\EditTenant"
+            },
+            {
+                "uri": "admin/tracks",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.tracks.index",
+                "action": "App\\Filament\\Admin\\Resources\\Tracks\\Pages\\ListTracks"
+            },
+            {
+                "uri": "admin/tracks/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.tracks.create",
+                "action": "App\\Filament\\Admin\\Resources\\Tracks\\Pages\\CreateTrack"
+            },
+            {
+                "uri": "admin/tracks/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.tracks.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Tracks\\Pages\\EditTrack"
+            },
+            {
+                "uri": "admin/users",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.users.index",
+                "action": "App\\Filament\\Admin\\Resources\\Users\\Pages\\ListUsers"
+            },
+            {
+                "uri": "admin/users/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.users.create",
+                "action": "App\\Filament\\Admin\\Resources\\Users\\Pages\\CreateUser"
+            },
+            {
+                "uri": "admin/users/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.users.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Users\\Pages\\EditUser"
+            },
+            {
+                "uri": "admin/vault-reconciliations",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.vault-reconciliations.index",
+                "action": "App\\Filament\\Admin\\Resources\\VaultReconciliations\\Pages\\ListVaultReconciliations"
+            },
+            {
+                "uri": "admin/vault-reconciliations/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.vault-reconciliations.create",
+                "action": "App\\Filament\\Admin\\Resources\\VaultReconciliations\\Pages\\CreateVaultReconciliation"
+            },
+            {
+                "uri": "admin/vault-reconciliations/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.vault-reconciliations.edit",
+                "action": "App\\Filament\\Admin\\Resources\\VaultReconciliations\\Pages\\EditVaultReconciliation"
+            },
+            {
+                "uri": "admin/vault-transfers",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.vault-transfers.index",
+                "action": "App\\Filament\\Admin\\Resources\\VaultTransfers\\Pages\\ListVaultTransfers"
+            },
+            {
+                "uri": "admin/vault-transfers/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.vault-transfers.create",
+                "action": "App\\Filament\\Admin\\Resources\\VaultTransfers\\Pages\\CreateVaultTransfer"
+            },
+            {
+                "uri": "admin/vault-transfers/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.vault-transfers.view",
+                "action": "App\\Filament\\Admin\\Resources\\VaultTransfers\\Pages\\ViewVaultTransfer"
+            },
+            {
+                "uri": "admin/vault-transfers/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.vault-transfers.edit",
+                "action": "App\\Filament\\Admin\\Resources\\VaultTransfers\\Pages\\EditVaultTransfer"
+            },
+            {
+                "uri": "admin/vaults",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.vaults.index",
+                "action": "App\\Filament\\Admin\\Resources\\Vaults\\Pages\\ListVaults"
+            },
+            {
+                "uri": "admin/vaults/create",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.vaults.create",
+                "action": "App\\Filament\\Admin\\Resources\\Vaults\\Pages\\CreateVault"
+            },
+            {
+                "uri": "admin/vaults/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.vaults.edit",
+                "action": "App\\Filament\\Admin\\Resources\\Vaults\\Pages\\EditVault"
+            },
+            {
+                "uri": "admin/vaults/transactions",
+                "methods": "GET|HEAD",
+                "name": "filament.admin.resources.vaults.transactions",
+                "action": "App\\Filament\\Admin\\Resources\\Vaults\\Pages\\VaultTransactions"
+            },
+            {
+                "uri": "admin/reports/all-installments/export-excel",
+                "methods": "GET|HEAD",
+                "name": "admin.reports.all-installments.export-excel",
+                "action": "Closure"
+            },
+            {
+                "uri": "admin/reports/all-installments/export-pdf",
+                "methods": "GET|HEAD",
+                "name": "admin.reports.all-installments.export-pdf",
+                "action": "Closure"
+            },
+            {
+                "uri": "admin/reports/installments/export-excel",
+                "methods": "GET|HEAD",
+                "name": "admin.reports.installments.export-excel",
+                "action": "Closure"
+            },
+            {
+                "uri": "admin/reports/installments/export-pdf",
+                "methods": "GET|HEAD",
+                "name": "admin.reports.installments.export-pdf",
+                "action": "Closure"
+            },
+            {
+                "uri": "admin/reports/course-financial/export-excel",
+                "methods": "GET|HEAD",
+                "name": "admin.reports.course-financial.export-excel",
+                "action": "Closure"
+            },
+            {
+                "uri": "admin/reports/course-financial/export-pdf",
+                "methods": "GET|HEAD",
+                "name": "admin.reports.course-financial.export-pdf",
+                "action": "Closure"
+            },
+            {
+                "uri": "admin/reports/vault/export-excel",
+                "methods": "GET|HEAD",
+                "name": "admin.reports.vault.export-excel",
+                "action": "Closure"
+            },
+            {
+                "uri": "admin/reports/vault/export-pdf",
+                "methods": "GET|HEAD",
+                "name": "admin.reports.vault.export-pdf",
+                "action": "Closure"
+            }
+        ],
+        "instructor": [
+            {
+                "uri": "instructor/login",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.auth.login",
+                "action": "App\\Filament\\Pages\\Auth\\CustomLogin"
+            },
+            {
+                "uri": "instructor/logout",
+                "methods": "POST",
+                "name": "filament.instructor.auth.logout",
+                "action": "Filament\\Auth\\Http\\Controllers\\LogoutController"
+            },
+            {
+                "uri": "instructor",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.pages.dashboard",
+                "action": "App\\Filament\\Instructor\\Pages\\Dashboard"
+            },
+            {
+                "uri": "instructor/homework-review-center",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.pages.homework-review-center",
+                "action": "App\\Filament\\Instructor\\Pages\\HomeworkReviewCenter"
+            },
+            {
+                "uri": "instructor/instructor-reports",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.pages.instructor-reports",
+                "action": "App\\Filament\\Instructor\\Pages\\InstructorReports"
+            },
+            {
+                "uri": "instructor/my-groups",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.pages.my-groups",
+                "action": "App\\Filament\\Instructor\\Pages\\MyGroups"
+            },
+            {
+                "uri": "instructor/assignment-submissions",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.assignment-submissions.index",
+                "action": "App\\Filament\\Instructor\\Resources\\AssignmentSubmissions\\Pages\\ListAssignmentSubmissions"
+            },
+            {
+                "uri": "instructor/assignment-submissions/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.assignment-submissions.edit",
+                "action": "App\\Filament\\Instructor\\Resources\\AssignmentSubmissions\\Pages\\EditAssignmentSubmission"
+            },
+            {
+                "uri": "instructor/assignments",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.assignments.index",
+                "action": "App\\Filament\\Instructor\\Resources\\Assignments\\Pages\\ListAssignments"
+            },
+            {
+                "uri": "instructor/assignments/create",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.assignments.create",
+                "action": "App\\Filament\\Instructor\\Resources\\Assignments\\Pages\\CreateAssignment"
+            },
+            {
+                "uri": "instructor/assignments/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.assignments.edit",
+                "action": "App\\Filament\\Instructor\\Resources\\Assignments\\Pages\\EditAssignment"
+            },
+            {
+                "uri": "instructor/assignments/{record}/submissions",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.assignments.submissions",
+                "action": "App\\Filament\\Instructor\\Resources\\Assignments\\Pages\\ManageAssignmentSubmissions"
+            },
+            {
+                "uri": "instructor/attendance-sessions",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.attendance-sessions.index",
+                "action": "App\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\ListAttendanceSessions"
+            },
+            {
+                "uri": "instructor/attendance-sessions/create",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.attendance-sessions.create",
+                "action": "App\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\CreateAttendanceSession"
+            },
+            {
+                "uri": "instructor/attendance-sessions/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.attendance-sessions.edit",
+                "action": "App\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\EditAttendanceSession"
+            },
+            {
+                "uri": "instructor/attendance-sessions/take-attendance",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.attendance-sessions.take",
+                "action": "App\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\TakeAttendance"
+            },
+            {
+                "uri": "instructor/attendance-sessions/reports",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.attendance-sessions.reports",
+                "action": "App\\Filament\\Instructor\\Resources\\AttendanceSessions\\Pages\\AttendanceReports"
+            },
+            {
+                "uri": "instructor/exams",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.exams.index",
+                "action": "App\\Filament\\Instructor\\Resources\\Exams\\Pages\\ListExams"
+            },
+            {
+                "uri": "instructor/exams/create",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.exams.create",
+                "action": "App\\Filament\\Instructor\\Resources\\Exams\\Pages\\CreateExam"
+            },
+            {
+                "uri": "instructor/exams/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.exams.edit",
+                "action": "App\\Filament\\Instructor\\Resources\\Exams\\Pages\\EditExam"
+            },
+            {
+                "uri": "instructor/exams/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.exams.view",
+                "action": "App\\Filament\\Instructor\\Resources\\Exams\\Pages\\ViewExam"
+            },
+            {
+                "uri": "instructor/group-message-resource/group-messages",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.group-message-resource.group-messages.index",
+                "action": "App\\Filament\\Instructor\\Resources\\GroupMessageResource\\Pages\\ListGroupMessages"
+            },
+            {
+                "uri": "instructor/group-message-resource/group-messages/create",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.group-message-resource.group-messages.create",
+                "action": "App\\Filament\\Instructor\\Resources\\GroupMessageResource\\Pages\\CreateGroupMessage"
+            },
+            {
+                "uri": "instructor/group-message-resource/group-messages/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.group-message-resource.group-messages.view",
+                "action": "App\\Filament\\Instructor\\Resources\\GroupMessageResource\\Pages\\ViewGroupMessage"
+            },
+            {
+                "uri": "instructor/group-message-resource/group-messages/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.group-message-resource.group-messages.edit",
+                "action": "App\\Filament\\Instructor\\Resources\\GroupMessageResource\\Pages\\EditGroupMessage"
+            },
+            {
+                "uri": "instructor/my-evaluations",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.my-evaluations.index",
+                "action": "App\\Filament\\Instructor\\Resources\\InstructorEvaluations\\Pages\\ListInstructorMyEvaluations"
+            },
+            {
+                "uri": "instructor/my-evaluations/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.my-evaluations.view",
+                "action": "App\\Filament\\Instructor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorMyEvaluation"
+            },
+            {
+                "uri": "instructor/instructor-exam-attempt-resource/instructor-exam-attempts",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.instructor-exam-attempt-resource.instructor-exam-attempts.index",
+                "action": "App\\Filament\\Instructor\\Resources\\InstructorExamAttemptResource\\Pages\\ListInstructorExamAttempts"
+            },
+            {
+                "uri": "instructor/instructor-payments",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.instructor-payments.index",
+                "action": "App\\Filament\\Instructor\\Resources\\InstructorPayments\\Pages\\ListInstructorPayments"
+            },
+            {
+                "uri": "instructor/instructor-payments/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.instructor-payments.view",
+                "action": "App\\Filament\\Instructor\\Resources\\InstructorPayments\\Pages\\ViewInstructorPayment"
+            },
+            {
+                "uri": "instructor/instructor-reviews",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.instructor-reviews.index",
+                "action": "App\\Filament\\Instructor\\Resources\\InstructorReviews\\Pages\\ListInstructorReviews"
+            },
+            {
+                "uri": "instructor/instructor-reviews/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.instructor-reviews.view",
+                "action": "App\\Filament\\Instructor\\Resources\\InstructorReviews\\Pages\\ViewInstructorReview"
+            },
+            {
+                "uri": "instructor/learning-resources",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.learning-resources.index",
+                "action": "App\\Filament\\Instructor\\Resources\\LearningResources\\Pages\\ListLearningResources"
+            },
+            {
+                "uri": "instructor/learning-resources/create",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.learning-resources.create",
+                "action": "App\\Filament\\Instructor\\Resources\\LearningResources\\Pages\\CreateLearningResource"
+            },
+            {
+                "uri": "instructor/learning-resources/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.learning-resources.edit",
+                "action": "App\\Filament\\Instructor\\Resources\\LearningResources\\Pages\\EditLearningResource"
+            },
+            {
+                "uri": "instructor/session-schedules",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.session-schedules.index",
+                "action": "App\\Filament\\Instructor\\Resources\\SessionSchedules\\Pages\\ListSessionSchedules"
+            },
+            {
+                "uri": "instructor/session-schedules/create",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.session-schedules.create",
+                "action": "App\\Filament\\Instructor\\Resources\\SessionSchedules\\Pages\\CreateSessionSchedule"
+            },
+            {
+                "uri": "instructor/session-schedules/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.session-schedules.edit",
+                "action": "App\\Filament\\Instructor\\Resources\\SessionSchedules\\Pages\\EditSessionSchedule"
+            },
+            {
+                "uri": "instructor/session-schedules/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.session-schedules.view",
+                "action": "App\\Filament\\Instructor\\Resources\\SessionSchedules\\Pages\\ViewSessionSchedule"
+            },
+            {
+                "uri": "instructor/student-messages",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.student-messages.index",
+                "action": "App\\Filament\\Instructor\\Resources\\StudentMessages\\Pages\\ListStudentMessages"
+            },
+            {
+                "uri": "instructor/student-messages/create",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.student-messages.create",
+                "action": "App\\Filament\\Instructor\\Resources\\StudentMessages\\Pages\\CreateStudentMessage"
+            },
+            {
+                "uri": "instructor/student-messages/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.student-messages.edit",
+                "action": "App\\Filament\\Instructor\\Resources\\StudentMessages\\Pages\\EditStudentMessage"
+            },
+            {
+                "uri": "instructor/supervisory-observations",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.supervisory-observations.index",
+                "action": "App\\Filament\\Instructor\\Resources\\SupervisoryObservations\\Pages\\ListInstructorSupervisoryObservations"
+            },
+            {
+                "uri": "instructor/supervisory-observations/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.instructor.resources.supervisory-observations.view",
+                "action": "App\\Filament\\Instructor\\Resources\\SupervisoryObservations\\Pages\\ViewInstructorSupervisoryObservation"
+            }
+        ],
+        "supervisor": [
+            {
+                "uri": "supervisor/login",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.auth.login",
+                "action": "App\\Filament\\Pages\\Auth\\CustomLogin"
+            },
+            {
+                "uri": "supervisor/logout",
+                "methods": "POST",
+                "name": "filament.supervisor.auth.logout",
+                "action": "Filament\\Auth\\Http\\Controllers\\LogoutController"
+            },
+            {
+                "uri": "supervisor/profile",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.auth.profile",
+                "action": "Filament\\Auth\\Pages\\EditProfile"
+            },
+            {
+                "uri": "supervisor",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.pages.dashboard",
+                "action": "Filament\\Pages\\Dashboard"
+            },
+            {
+                "uri": "supervisor/educational-alerts",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.pages.educational-alerts",
+                "action": "App\\Filament\\Supervisor\\Pages\\EducationalAlertsPage"
+            },
+            {
+                "uri": "supervisor/group-profiles",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.pages.group-profiles",
+                "action": "App\\Filament\\Supervisor\\Pages\\GroupSupervisionProfilePage"
+            },
+            {
+                "uri": "supervisor/instructor-profiles",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.pages.instructor-profiles",
+                "action": "App\\Filament\\Supervisor\\Pages\\InstructorSupervisionProfilePage"
+            },
+            {
+                "uri": "supervisor/attendance-sessions",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.attendance-sessions.index",
+                "action": "App\\Filament\\Supervisor\\Resources\\AttendanceSessions\\Pages\\ListAttendanceSessions"
+            },
+            {
+                "uri": "supervisor/attendance-sessions/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.attendance-sessions.view",
+                "action": "App\\Filament\\Supervisor\\Resources\\AttendanceSessions\\Pages\\ViewAttendanceSession"
+            },
+            {
+                "uri": "supervisor/groups",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.groups.index",
+                "action": "App\\Filament\\Supervisor\\Resources\\Groups\\Pages\\ListGroups"
+            },
+            {
+                "uri": "supervisor/groups/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.groups.view",
+                "action": "App\\Filament\\Supervisor\\Resources\\Groups\\Pages\\ViewGroup"
+            },
+            {
+                "uri": "supervisor/instructor-evaluations",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.instructor-evaluations.index",
+                "action": "App\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\Pages\\ListInstructorEvaluations"
+            },
+            {
+                "uri": "supervisor/instructor-evaluations/create",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.instructor-evaluations.create",
+                "action": "App\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\Pages\\CreateInstructorEvaluation"
+            },
+            {
+                "uri": "supervisor/instructor-evaluations/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.instructor-evaluations.view",
+                "action": "App\\Filament\\Supervisor\\Resources\\InstructorEvaluations\\Pages\\ViewInstructorEvaluation"
+            },
+            {
+                "uri": "supervisor/students",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.students.index",
+                "action": "App\\Filament\\Supervisor\\Resources\\Students\\Pages\\ListStudents"
+            },
+            {
+                "uri": "supervisor/students/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.students.view",
+                "action": "App\\Filament\\Supervisor\\Resources\\Students\\Pages\\ViewStudent"
+            },
+            {
+                "uri": "supervisor/supervision-reports",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.supervision-reports.index",
+                "action": "App\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ListSupervisionReports"
+            },
+            {
+                "uri": "supervisor/supervision-reports/create",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.supervision-reports.create",
+                "action": "App\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\CreateSupervisionReport"
+            },
+            {
+                "uri": "supervisor/supervision-reports/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.supervision-reports.edit",
+                "action": "App\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\EditSupervisionReport"
+            },
+            {
+                "uri": "supervisor/supervision-reports/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.supervision-reports.view",
+                "action": "App\\Filament\\Supervisor\\Resources\\SupervisionReports\\Pages\\ViewSupervisionReport"
+            },
+            {
+                "uri": "supervisor/supervisory-observations",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.supervisory-observations.index",
+                "action": "App\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\Pages\\ListSupervisoryObservations"
+            },
+            {
+                "uri": "supervisor/supervisory-observations/create",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.supervisory-observations.create",
+                "action": "App\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\Pages\\CreateSupervisoryObservation"
+            },
+            {
+                "uri": "supervisor/supervisory-observations/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.supervisor.resources.supervisory-observations.view",
+                "action": "App\\Filament\\Supervisor\\Resources\\SupervisoryObservations\\Pages\\ViewSupervisoryObservation"
+            }
+        ],
+        "student": [
+            {
+                "uri": "student/login",
+                "methods": "GET|HEAD",
+                "name": "filament.student.auth.login",
+                "action": "App\\Filament\\Pages\\Auth\\CustomLogin"
+            },
+            {
+                "uri": "student/logout",
+                "methods": "POST",
+                "name": "filament.student.auth.logout",
+                "action": "Filament\\Auth\\Http\\Controllers\\LogoutController"
+            },
+            {
+                "uri": "student",
+                "methods": "GET|HEAD",
+                "name": "filament.student.home",
+                "action": "Filament\\Http\\Controllers\\RedirectToHomeController"
+            },
+            {
+                "uri": "student/dashboard",
+                "methods": "GET|HEAD",
+                "name": "filament.student.pages.dashboard",
+                "action": "App\\Filament\\Student\\Pages\\Dashboard"
+            },
+            {
+                "uri": "student/my-exams/results/{attempt}",
+                "methods": "GET|HEAD",
+                "name": "filament.student.pages.my-exams.results.{attempt}",
+                "action": "App\\Filament\\Student\\Pages\\ExamResult"
+            },
+            {
+                "uri": "student/group-messages",
+                "methods": "GET|HEAD",
+                "name": "filament.student.pages.group-messages",
+                "action": "App\\Filament\\Student\\Pages\\GroupMessages"
+            },
+            {
+                "uri": "student/my-assignments",
+                "methods": "GET|HEAD",
+                "name": "filament.student.pages.my-assignments",
+                "action": "App\\Filament\\Student\\Pages\\MyAssignments"
+            },
+            {
+                "uri": "student/my-attendance",
+                "methods": "GET|HEAD",
+                "name": "filament.student.pages.my-attendance",
+                "action": "App\\Filament\\Student\\Pages\\MyAttendance"
+            },
+            {
+                "uri": "student/my-courses",
+                "methods": "GET|HEAD",
+                "name": "filament.student.pages.my-courses",
+                "action": "App\\Filament\\Student\\Pages\\MyCourses"
+            },
+            {
+                "uri": "student/my-exams",
+                "methods": "GET|HEAD",
+                "name": "filament.student.pages.my-exams",
+                "action": "App\\Filament\\Student\\Pages\\MyExams"
+            },
+            {
+                "uri": "student/my-payments",
+                "methods": "GET|HEAD",
+                "name": "filament.student.pages.my-payments",
+                "action": "App\\Filament\\Student\\Pages\\MyPayments"
+            },
+            {
+                "uri": "student/student-enrollments",
+                "methods": "GET|HEAD",
+                "name": "filament.student.pages.student-enrollments",
+                "action": "App\\Filament\\Student\\Pages\\StudentEnrollments"
+            },
+            {
+                "uri": "student/student-learning-resources",
+                "methods": "GET|HEAD",
+                "name": "filament.student.pages.student-learning-resources",
+                "action": "App\\Filament\\Student\\Pages\\StudentLearningResources"
+            },
+            {
+                "uri": "student/student-reports",
+                "methods": "GET|HEAD",
+                "name": "filament.student.pages.student-reports",
+                "action": "App\\Filament\\Student\\Pages\\StudentReports"
+            },
+            {
+                "uri": "student/my-exams/{exam}/take",
+                "methods": "GET|HEAD",
+                "name": "filament.student.pages.my-exams.{exam}.take",
+                "action": "App\\Filament\\Student\\Pages\\TakeExam"
+            },
+            {
+                "uri": "student/instructor-reviews",
+                "methods": "GET|HEAD",
+                "name": "filament.student.resources.instructor-reviews.index",
+                "action": "App\\Filament\\Student\\Resources\\InstructorReviewResource\\Pages\\ListInstructorReviews"
+            },
+            {
+                "uri": "student/instructor-reviews/create",
+                "methods": "GET|HEAD",
+                "name": "filament.student.resources.instructor-reviews.create",
+                "action": "App\\Filament\\Student\\Resources\\InstructorReviewResource\\Pages\\CreateInstructorReview"
+            },
+            {
+                "uri": "student/instructor-reviews/{record}/edit",
+                "methods": "GET|HEAD",
+                "name": "filament.student.resources.instructor-reviews.edit",
+                "action": "App\\Filament\\Student\\Resources\\InstructorReviewResource\\Pages\\EditInstructorReview"
+            },
+            {
+                "uri": "student/resources/{resource}/view",
+                "methods": "GET|HEAD",
+                "name": "student.resources.view",
+                "action": "App\\Http\\Controllers\\StudentResourceController@view"
+            },
+            {
+                "uri": "student/resources/{resource}/download",
+                "methods": "GET|HEAD",
+                "name": "student.resources.download",
+                "action": "App\\Http\\Controllers\\StudentResourceController@download"
+            },
+            {
+                "uri": "student/assignments/{id}/view",
+                "methods": "GET|HEAD",
+                "name": "student.assignment.view",
+                "action": "Closure"
+            },
+            {
+                "uri": "student/assignments/{id}/download",
+                "methods": "GET|HEAD",
+                "name": "student.assignment.download",
+                "action": "Closure"
+            }
+        ],
+        "parent": [
+            {
+                "uri": "parent/login",
+                "methods": "GET|HEAD",
+                "name": "filament.parent.auth.login",
+                "action": "App\\Filament\\Pages\\Auth\\CustomLogin"
+            },
+            {
+                "uri": "parent/logout",
+                "methods": "POST",
+                "name": "filament.parent.auth.logout",
+                "action": "Filament\\Auth\\Http\\Controllers\\LogoutController"
+            },
+            {
+                "uri": "parent",
+                "methods": "GET|HEAD",
+                "name": "filament.parent.pages.dashboard",
+                "action": "App\\Filament\\Parent\\Pages\\Dashboard"
+            },
+            {
+                "uri": "parent/group-messages",
+                "methods": "GET|HEAD",
+                "name": "filament.parent.pages.group-messages",
+                "action": "App\\Filament\\Parent\\Pages\\GroupMessages"
+            },
+            {
+                "uri": "parent/my-attendance",
+                "methods": "GET|HEAD",
+                "name": "filament.parent.pages.my-attendance",
+                "action": "App\\Filament\\Parent\\Pages\\MyAttendance"
+            },
+            {
+                "uri": "parent/my-courses",
+                "methods": "GET|HEAD",
+                "name": "filament.parent.pages.my-courses",
+                "action": "App\\Filament\\Parent\\Pages\\MyCourses"
+            },
+            {
+                "uri": "parent/my-payments",
+                "methods": "GET|HEAD",
+                "name": "filament.parent.pages.my-payments",
+                "action": "App\\Filament\\Parent\\Pages\\MyPayments"
+            },
+            {
+                "uri": "parent/student-reports",
+                "methods": "GET|HEAD",
+                "name": "filament.parent.pages.student-reports",
+                "action": "App\\Filament\\Parent\\Pages\\StudentReports"
+            },
+            {
+                "uri": "parent/messages",
+                "methods": "GET|HEAD",
+                "name": "filament.parent.resources.messages.index",
+                "action": "App\\Filament\\Parent\\Resources\\Messages\\Pages\\ListMessages"
+            },
+            {
+                "uri": "parent/messages/{record}",
+                "methods": "GET|HEAD",
+                "name": "filament.parent.resources.messages.view",
+                "action": "App\\Filament\\Parent\\Resources\\Messages\\Pages\\ViewMessage"
+            }
+        ],
+        "other": [
+            {
+                "uri": "filament/exports/{export}/download",
+                "methods": "GET|HEAD",
+                "name": "filament.exports.download",
+                "action": "Filament\\Actions\\Exports\\Http\\Controllers\\DownloadExport"
+            },
+            {
+                "uri": "filament/imports/{import}/failed-rows/download",
+                "methods": "GET|HEAD",
+                "name": "filament.imports.failed-rows.download",
+                "action": "Filament\\Actions\\Imports\\Http\\Controllers\\DownloadImportFailureCsv"
+            },
+            {
+                "uri": "livewire-00404abb/update",
+                "methods": "POST",
+                "name": "default-livewire.update",
+                "action": "Livewire\\Mechanisms\\HandleRequests\\HandleRequests@handleUpdate"
+            },
+            {
+                "uri": "livewire-00404abb/livewire.js",
+                "methods": "GET|HEAD",
+                "name": "unnamed",
+                "action": "Livewire\\Mechanisms\\FrontendAssets\\FrontendAssets@returnJavaScriptAsFile"
+            },
+            {
+                "uri": "livewire-00404abb/livewire.min.js.map",
+                "methods": "GET|HEAD",
+                "name": "unnamed",
+                "action": "Livewire\\Mechanisms\\FrontendAssets\\FrontendAssets@maps"
+            },
+            {
+                "uri": "livewire-00404abb/livewire.csp.min.js.map",
+                "methods": "GET|HEAD",
+                "name": "unnamed",
+                "action": "Livewire\\Mechanisms\\FrontendAssets\\FrontendAssets@cspMaps"
+            },
+            {
+                "uri": "livewire-00404abb/upload-file",
+                "methods": "POST",
+                "name": "livewire.upload-file",
+                "action": "Livewire\\Features\\SupportFileUploads\\FileUploadController@handle"
+            },
+            {
+                "uri": "livewire-00404abb/preview-file/{filename}",
+                "methods": "GET|HEAD",
+                "name": "livewire.preview-file",
+                "action": "Livewire\\Features\\SupportFileUploads\\FilePreviewController@handle"
+            },
+            {
+                "uri": "livewire-00404abb/js/{component}.js",
+                "methods": "GET|HEAD",
+                "name": "unnamed",
+                "action": "Closure"
+            },
+            {
+                "uri": "livewire-00404abb/css/{component}.css",
+                "methods": "GET|HEAD",
+                "name": "unnamed",
+                "action": "Closure"
+            },
+            {
+                "uri": "livewire-00404abb/css/{component}.global.css",
+                "methods": "GET|HEAD",
+                "name": "unnamed",
+                "action": "Closure"
+            },
+            {
+                "uri": "filament-excel/{path}",
+                "methods": "GET|HEAD",
+                "name": "filament-excel-download",
+                "action": "Closure"
+            },
+            {
+                "uri": "up",
+                "methods": "GET|HEAD",
+                "name": "unnamed",
+                "action": "Closure"
+            },
+            {
+                "uri": "/",
+                "methods": "GET|HEAD",
+                "name": "dashboard.redirect",
+                "action": "App\\Http\\Controllers\\DashboardRedirectController"
+            },
+            {
+                "uri": "locale/switch",
+                "methods": "POST",
+                "name": "locale.switch",
+                "action": "Closure"
+            },
+            {
+                "uri": "storage/exams/pdfs/{filename}",
+                "methods": "GET|HEAD",
+                "name": "exam.pdf",
+                "action": "Closure"
+            },
+            {
+                "uri": "exams/{exam}/image/{index}",
+                "methods": "GET|HEAD",
+                "name": "exam.image",
+                "action": "Closure"
+            },
+            {
+                "uri": "exams/questions/{question}/pdf",
+                "methods": "GET|HEAD",
+                "name": "exam.question.pdf",
+                "action": "Closure"
+            },
+            {
+                "uri": "exams/questions/{question}/image/{index}",
+                "methods": "GET|HEAD",
+                "name": "exam.question.image",
+                "action": "Closure"
+            },
+            {
+                "uri": "assignments/submissions/{submission}/image/{index?}",
+                "methods": "GET|HEAD",
+                "name": "assignments.submissions.image",
+                "action": "App\\Http\\Controllers\\AssignmentSubmissionMediaController@show"
+            },
+            {
+                "uri": "storage/{path}",
+                "methods": "GET|HEAD",
+                "name": "storage.local",
+                "action": "Closure"
+            },
+            {
+                "uri": "storage/{path}",
+                "methods": "PUT",
+                "name": "storage.local.upload",
+                "action": "Closure"
+            }
+        ]
+    }
+}

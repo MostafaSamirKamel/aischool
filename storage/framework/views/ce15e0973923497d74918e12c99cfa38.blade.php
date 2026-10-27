@@ -1,0 +1,1 @@
+<x-filament::icon :icon="$icon" class="w-5 h-5" />

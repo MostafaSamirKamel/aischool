@@ -1,0 +1,160 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Enrollments\Schemas;
+
+use Filament\Schemas\Schema;
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\DatePicker;
+use Filament\Schemas\Components\Utilities\Get;
+
+class EnrollmentForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Section::make('معلومات التسجيل')
+                    ->schema([
+                        Select::make('student_id')
+                            ->label(__('filament/admin/enrollment_resource.student_id'))
+                            ->relationship('student', 'student_code', fn($query) => $query->where('status', 'active'))
+                            ->getOptionLabelFromRecordUsing(fn ($record) => "{$record->student_code} - {$record->user->name}")
+                            ->searchable(['student_code'])
+                            ->required()
+                            ->native(false)
+                            ->preload(),
+                            
+                        Select::make('group_id')
+                            ->label(__('filament/admin/enrollment_resource.group_id'))
+                            ->relationship('group', 'name', fn($query) => $query->where('status', 'active'))
+                            ->searchable()
+                            ->required()
+                            ->native(false)
+                            ->preload()
+                            ->reactive()
+                            ->afterStateUpdated(function ($state, callable $set) {
+                                if ($state) {
+                                    $group = \App\Models\Group::find($state);
+                                    if ($group && $group->course) {
+                                        $set('total_amount', $group->course->price ?? 0);
+                                    }
+                                }
+                            }),
+                            
+                        TextInput::make('enrollment_code')
+                            ->label(__('filament/admin/enrollment_resource.enrollment_code'))
+                            ->required()
+                            ->unique(ignoreRecord: true)
+                            ->default(fn () => \App\Models\Enrollment::generateEnrollmentCode())
+                            ->disabled()
+                            ->dehydrated(),
+                            
+                        DatePicker::make('enrollment_date')
+                            ->label(__('filament/admin/enrollment_resource.enrollment_date'))
+                            ->required()
+                            ->default(now())
+                            ->native(false),
+                    ])
+                    ->columns(2),
+                    
+                Section::make('تفاصيل الدفع')
+                    ->schema([
+                        TextInput::make('total_amount')
+                            ->label(__('filament/admin/enrollment_resource.total_amount'))
+                            ->required()
+                            ->numeric()
+                            ->prefix('ج.م')
+                            ->minValue(0)
+                            ->reactive(),
+                            
+                        TextInput::make('discount')
+                            ->label(__('filament/admin/enrollment_resource.discount'))
+                            ->numeric()
+                            ->prefix('ج.م')
+                            ->minValue(0)
+                            ->default(0)
+                            ->reactive(),
+                            
+                        TextInput::make('paid_amount')
+                            ->label(__('filament/admin/enrollment_resource.paid_amount'))
+                            ->numeric()
+                            ->prefix('ج.م')
+                            ->minValue(0)
+                            ->default(0)
+                            ->reactive(),
+                            
+                        TextInput::make('remaining')
+                            ->label(__('filament/admin/enrollment_resource.remaining'))
+                            ->numeric()
+                            ->prefix('ج.م')
+                            ->disabled()
+                            ->dehydrated(false)
+                            ->reactive()
+                            ->afterStateHydrated(function ($component, $state, Get $get) {
+                                $total = floatval($get('total_amount') ?? 0);
+                                $discount = floatval($get('discount') ?? 0);
+                                $paid = floatval($get('paid_amount') ?? 0);
+                                $component->state($total - $discount - $paid);
+                            }),
+
+                        RichEditor::make('discount_reason')
+                            ->label(__('filament/admin/enrollment_resource.discount_reason'))
+                            ->columnSpanFull()
+                            ->visible(fn (Get $get) => floatval($get('discount') ?? 0) > 0),
+                    ])
+                    ->columns(4),
+                    
+                Section::make('خطة الدفع')
+                    ->schema([
+                        Select::make('payment_plan')
+                            ->label(__('filament/admin/enrollment_resource.payment_plan'))
+                            ->options(['full' => __('filament/admin/enrollment_resource.payment_plan.full'), 'installments' => __('filament/admin/enrollment_resource.payment_plan.installments')])
+                            ->default(__('filament/admin/enrollment_resource.payment_plan_default'))
+                            ->required()
+                            ->native(false)
+                            ->reactive(),
+                            
+                        TextInput::make('installments_count')
+                            ->label(__('filament/admin/enrollment_resource.installments_count'))
+                            ->numeric()
+                            ->minValue(2)
+                            ->maxValue(12)
+                            ->visible(fn (Get $get) => $get('payment_plan') === 'installments')
+                            ->required(fn (Get $get) => $get('payment_plan') === 'installments'),
+                    ])
+                    ->columns(2),
+                    
+                Section::make('التواريخ والحالة')
+                    ->schema([
+                        DatePicker::make('start_date')
+                            ->label(__('filament/admin/enrollment_resource.start_date'))
+                            ->native(false),
+                            
+                        DatePicker::make('end_date')
+                            ->label(__('filament/admin/enrollment_resource.end_date'))
+                            ->native(false)
+                            ->after('start_date'),
+                            
+                        Select::make('status')
+                            ->label(__('filament/admin/enrollment_resource.status'))
+                            ->options(['pending' => __('filament/admin/enrollment_resource.status.pending'), 'active' => __('filament/admin/enrollment_resource.status.active'), 'completed' => __('filament/admin/enrollment_resource.status.completed'), 'cancelled' => __('filament/admin/enrollment_resource.status.cancelled'), 'suspended' => __('filament/admin/enrollment_resource.status.suspended')])
+                            ->default(__('filament/admin/enrollment_resource.status_default'))
+                            ->required()
+                            ->native(false),
+                    ])
+                    ->columns(3),
+                    
+                Section::make('ملاحظات')
+                    ->schema([
+                        RichEditor::make('notes')
+                            ->label(__('filament/admin/enrollment_resource.notes'))
+                            ->columnSpanFull(),
+                    ])
+                    ->collapsed(),
+            ]);
+    }
+}

@@ -1,0 +1,121 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Groups;
+
+use App\Filament\Admin\Resources\Groups\Pages\CreateGroup;
+use App\Filament\Admin\Resources\Groups\Pages\EditGroup;
+use App\Filament\Admin\Resources\Groups\Pages\ListGroups;
+use App\Filament\Admin\Resources\Groups\Schemas\GroupForm;
+use App\Filament\Admin\Resources\Groups\Tables\GroupsTable;
+use App\Models\Group;
+use BackedEnum;
+use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
+
+class GroupResource extends Resource
+{
+    protected static ?string $model = Group::class;
+
+    protected static ?string $navigationLabel = null;
+
+    protected static ?string $modelLabel = null;
+
+    protected static ?string $pluralModelLabel = null;
+
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-user-group';
+
+    protected static ?string $recordTitleAttribute = 'name';
+    
+    protected static ?int $navigationSort = 4;
+
+    public static function getNavigationGroup(): string
+    {
+        return __('filament/admin/navigation.educational_content');
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        $user = auth()->user();
+        $query = static::getModel()::query();
+
+        if (!($user->is_super_admin && is_null($user->tenant_id))) {
+            $query->where('tenant_id', $user->tenant_id);
+        }
+
+        return (string) $query->count();
+    }
+
+    public static function getNavigationBadgeColor(): ?string
+    {
+        return 'success';
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        $user = auth()->user();
+
+        // Super admin بدون tenant_id يرى جميع السجلات
+        if ($user->is_super_admin && is_null($user->tenant_id)) {
+            return parent::getEloquentQuery()
+                ->with(['instructor.user', 'course', 'classroom']);
+        }
+
+        // جميع المستخدمين الآخرين يرون فقط سجلات tenant الخاص بهم
+        return parent::getEloquentQuery()
+            ->with(['instructor.user', 'course', 'classroom'])
+            ->where('tenant_id', $user->tenant_id);
+    }
+
+    public static function form(Schema $schema): Schema
+    {
+        return GroupForm::configure($schema);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return GroupsTable::configure($table);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListGroups::route('/'),
+            'create' => CreateGroup::route('/create'),
+            'edit' => EditGroup::route('/{record}/edit'),
+        ];
+    }
+
+    public static function getRecordRouteBindingEloquentQuery(): Builder
+    {
+        return parent::getRecordRouteBindingEloquentQuery()
+            ->withoutGlobalScopes([
+                SoftDeletingScope::class,
+            ]);
+    }
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/group_resource.navigation_label');
+    }
+    public static function getModelLabel(): string
+    {
+        return __('filament/admin/group_resource.model_label');
+    }
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament/admin/group_resource.plural_model_label');
+    }
+
+
+
+}

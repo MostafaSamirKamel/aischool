@@ -1,0 +1,222 @@
+<?php
+
+namespace App\Filament\Student\Pages;
+
+use App\Models\Enrollment;
+use App\Models\InstructorReview;
+use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Hidden;
+use Filament\Forms\Components\Radio;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Form;
+use Filament\Forms\Get;
+use Filament\Forms\Set;
+use Filament\Notifications\Notification;
+use Filament\Pages\Page;
+
+class ReviewInstructor extends Page
+{
+    protected string $view = 'filament.student.pages.review-instructor';
+
+    protected static ?string $navigationLabel = 'تقييم المدرسين';
+
+    protected static ?string $title = 'تقييم المدرسين';
+
+    protected static ?int $navigationSort = 40;
+
+    public static function getNavigationIcon(): ?string
+    {
+        return 'heroicon-o-star';
+    }
+
+    public static function getNavigationGroup(): ?string
+    {
+        return 'التعليم';
+    }
+
+    public ?array $data = [];
+
+    public function mount(): void
+    {
+        $this->form->fill();
+    }
+
+    public function form(Form $form): Form
+    {
+        return $form
+            ->schema([
+                Section::make('اختر المدرس والمجموعة')
+                    ->schema([
+                        Grid::make(2)
+                            ->schema([
+                                Select::make('group_id')
+                                    ->label('المجموعة')
+                                    ->required()
+                                    ->options(function () {
+                                        $student = auth()->user()->student;
+                                        if (!$student) return [];
+
+                                        return Enrollment::where('student_id', $student->id)
+                                            ->where('status', 'active')
+                                            ->with('group')
+                                            ->get()
+                                            ->pluck('group.name', 'group.id');
+                                    })
+                                    ->searchable()
+                                    ->live()
+                                    ->afterStateUpdated(function (Set $set, ?string $state) {
+                                        if ($state) {
+                                            $enrollment = Enrollment::where('group_id', $state)
+                                                ->where('student_id', auth()->user()->student->id)
+                                                ->first();
+                                                
+                                            if ($enrollment) {
+                                                $group = $enrollment->group;
+                                                $set('instructor_id', $group->instructor_id);
+                                                $set('course_id', $group->course_id);
+                                            }
+                                        }
+                                    }),
+
+                                Select::make('instructor_id')
+                                    ->label('المدرس')
+                                    ->required()
+                                    ->relationship('instructor.user', 'name')
+                                    ->disabled()
+                                    ->dehydrated(),
+
+                                Hidden::make('course_id'),
+                            ]),
+                    ]),
+
+                Section::make('التقييم')
+                    ->schema([
+                        Radio::make('rating')
+                            ->label('التقييم العام')
+                            ->required()
+                            ->options([
+                                5 => '⭐⭐⭐⭐⭐ ممتاز',
+                                4 => '⭐⭐⭐⭐ جيد جداً',
+                                3 => '⭐⭐⭐ جيد',
+                                2 => '⭐⭐ مقبول',
+                                1 => '⭐ ضعيف',
+                            ])
+                            ->inline()
+                            ->inlineLabel(false),
+
+                        Grid::make(3)
+                            ->schema([
+                                Select::make('aspects.teaching_quality')
+                                    ->label('جودة التدريس')
+                                    ->options([
+                                        5 => '⭐⭐⭐⭐⭐',
+                                        4 => '⭐⭐⭐⭐',
+                                        3 => '⭐⭐⭐',
+                                        2 => '⭐⭐',
+                                        1 => '⭐',
+                                    ]),
+
+                                Select::make('aspects.communication')
+                                    ->label('التواصل')
+                                    ->options([
+                                        5 => '⭐⭐⭐⭐⭐',
+                                        4 => '⭐⭐⭐⭐',
+                                        3 => '⭐⭐⭐',
+                                        2 => '⭐⭐',
+                                        1 => '⭐',
+                                    ]),
+
+                                Select::make('aspects.punctuality')
+                                    ->label('الالتزام بالمواعيد')
+                                    ->options([
+                                        5 => '⭐⭐⭐⭐⭐',
+                                        4 => '⭐⭐⭐⭐',
+                                        3 => '⭐⭐⭐',
+                                        2 => '⭐⭐',
+                                        1 => '⭐',
+                                    ]),
+
+                                Select::make('aspects.knowledge')
+                                    ->label('المعرفة العلمية')
+                                    ->options([
+                                        5 => '⭐⭐⭐⭐⭐',
+                                        4 => '⭐⭐⭐⭐',
+                                        3 => '⭐⭐⭐',
+                                        2 => '⭐⭐',
+                                        1 => '⭐',
+                                    ]),
+
+                                Select::make('aspects.interaction')
+                                    ->label('التفاعل')
+                                    ->options([
+                                        5 => '⭐⭐⭐⭐⭐',
+                                        4 => '⭐⭐⭐⭐',
+                                        3 => '⭐⭐⭐',
+                                        2 => '⭐⭐',
+                                        1 => '⭐',
+                                    ]),
+                            ]),
+
+                        Textarea::make('comment')
+                            ->label('التعليق (اختياري)')
+                            ->rows(4)
+                            ->maxLength(1000)
+                            ->columnSpanFull(),
+
+                        Toggle::make('is_anonymous')
+                            ->label('إخفاء اسمي (تقييم مجهول)')
+                            ->default(false)
+                            ->helperText('إذا تم تفعيل هذا الخيار، لن يظهر اسمك للمدرس'),
+                    ]),
+            ])
+            ->statePath('data');
+    }
+
+    public function submit(): void
+    {
+        $data = $this->form->getState();
+
+        // Check if student already reviewed this instructor for this group
+        $student = auth()->user()->student;
+        $existingReview = InstructorReview::where('student_id', $student->id)
+            ->where('instructor_id', $data['instructor_id'])
+            ->where('group_id', $data['group_id'])
+            ->first();
+
+        if ($existingReview) {
+            Notification::make()
+                ->title('لقد قيّمت هذا المدرس من قبل')
+                ->body('لا يمكنك تقييم نفس المدرس أكثر من مرة لنفس المجموعة.')
+                ->warning()
+                ->send();
+            return;
+        }
+
+        // Create review
+        InstructorReview::create([
+            'tenant_id' => auth()->user()->tenant_id,
+            'instructor_id' => $data['instructor_id'],
+            'course_id' => $data['course_id'],
+            'group_id' => $data['group_id'],
+            'reviewer_type' => 'student',
+            'student_id' => $student->id,
+            'rating' => $data['rating'],
+            'comment' => $data['comment'] ?? null,
+            'aspects' => $data['aspects'] ?? [],
+            'status' => 'pending', // Needs admin approval
+            'is_anonymous' => $data['is_anonymous'] ?? false,
+            'reviewer_ip' => request()->ip(),
+        ]);
+
+        Notification::make()
+            ->title('تم إرسال التقييم بنجاح')
+            ->body('سيتم مراجعة تقييمك من قبل الإدارة قبل نشره.')
+            ->success()
+            ->send();
+
+        $this->form->fill();
+    }
+}

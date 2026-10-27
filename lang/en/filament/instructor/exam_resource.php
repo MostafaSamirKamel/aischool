@@ -1,0 +1,36 @@
+<?php
+
+return [
+
+    'course.name' => 'Name',
+    'course_id' => 'Course',
+    'created_at' => 'Created',
+    'description' => 'Description',
+    'duration' => 'Duration',
+    'exam_date' => 'Exam Date',
+    'grades_count' => 'Grades Count',
+    'group.name' => 'Name',
+    'group_id' => 'Group',
+    'images' => 'Images',
+    'instructions' => 'Instructions',
+    'instructor.full_name' => 'Full Name',
+    'passing_marks' => 'Passing Marks',
+    'pdf_file' => 'Pdf File',
+    'pdf_preview' => 'Pdf Preview',
+    'status' => 'Status',
+    'status.filament/instructor/exam_resource.status.cancelled' => 'filament/instructor/exam_resource.status.cancelled',
+    'status.filament/instructor/exam_resource.status.completed' => 'filament/instructor/exam_resource.status.completed',
+    'status.filament/instructor/exam_resource.status.in_progress' => 'filament/instructor/exam_resource.status.in_progress',
+    'status.filament/instructor/exam_resource.status.scheduled' => 'filament/instructor/exam_resource.status.scheduled',
+    'tenant.name' => 'Name',
+    'title' => 'Title',
+    'total_marks' => 'Total Marks',
+    'type' => 'Type',
+    'type.filament/instructor/exam_resource.type.assignment' => 'filament/instructor/exam_resource.type.assignment',
+    'type.filament/instructor/exam_resource.type.final' => 'filament/instructor/exam_resource.type.final',
+    'type.filament/instructor/exam_resource.type.midterm' => 'filament/instructor/exam_resource.type.midterm',
+    'type.filament/instructor/exam_resource.type.project' => 'filament/instructor/exam_resource.type.project',
+    'type.filament/instructor/exam_resource.type.quiz' => 'filament/instructor/exam_resource.type.quiz',
+    'updated_at' => 'Updated',
+
+];

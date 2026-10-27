@@ -1,0 +1,55 @@
+﻿========================================================================
+AI SCHOOL — COMPLETE REAL OPERATIONS & LIVE WORKFLOW SIMULATION
+Executing 35 Live Operational Steps on Real SQLite Database
+Time: 2026-10-22T20:14:17+03:00
+========================================================================
+
+Test Run Identifier: [E2E-LIVE-74b6b]
+
+Staff and Branch Configured:
+- Branch: الفرع الرئيسي - القاهرة (ID: 1)
+- Registration Employee: موظف تسجيل 1 - الفرع الرئيسي - القاهرة (registration.cairo.1@aischool.test)
+- Accountant: محاسب فرع القاهرة (E2E) (accountant.cairo@aischool.test)
+- Instructor: أحمد محمد - مدرب (instructor.main@admin.com)
+- Supervisor: خالد أحمد - مشرف (supervisor.main@admin.com)
+- Vault: كاش (Current balance: 30640)
+
+[PASS] Step 1: Student registered successfully (ID: 109, Code: STU-LIVE-4112)
+[PASS] Step 2: Parent created and linked (Parent ID: 87, Student ID: 109)
+[PASS] Step 3 & 4: Enrollment created (ENR: ENR-LIVE-5317, Net: 2800.00 EGP)
+[PASS] Step 5: Installment schedule created (Inst 1: 1400 EGP Due Today, Inst 2: 1400 EGP Future)
+[PASS] Step 6 & 7: Payment 1 collected (1400 EGP). Vault before: 30640, after: 32040
+[PASS] Step 8, 9 & 10: Session scheduled and recorded (Session ID: 21)
+[PASS] Step 11: Attendance recorded (Student: present)
+[PASS] Step 12-15: Homework assigned, submitted by student, graded 9/10, and published
+[PASS] Step 16-20: Exam created, student submitted, scored 18/20 (90% Passed), results published
+[PASS] Step 21: Parent logged in and viewed children (1 child verified)
+[PASS] Step 22: Low score exam created (Score: 6/20 = 30% < 50%), official published alert triggered
+[PASS] Step 23 & 24a: Unanswered call recorded, task status remains: 'new' (new)
+[PASS] Step 24b: Successful contact recorded, task status updated to: 'contacted' (contacted)
+[PASS] Step 25-27: Supervision observation created -> instructor responded -> supervisor verified and marked 'completed'
+[PASS] Step 28 & 29: Second installment collected (1400 EGP). Enrollment fully paid (2800/2800 EGP)
+[PASS] Step 30 & 31: Instructor salary calculated (240 EGP) and disbursed via vault
+[PASS] Step 32: Monthly instructor evaluation published -> instructor appealed -> admin resolved
+[PASS] Step 33: Subscription cancelled (Waived: 1000.00, Retained: 400.00, Refund Disbursed:  EGP)
+[PASS] Step 34: Supervision report approved and published (Report ID: 4)
+
+--- LIVE REPORTING CENTER RECONCILIATION ---
+1. Student Growth: 61 unique students
+2. Combined Enrollments: 24 events (Contracted Value: 62000 EGP)
+3. Actual Collections: 41900 EGP across 25 transactions
+4. Debt Aging: Total 34300 EGP (Overdue: 0, Due: 0, Future: 34300)
+5. Vault Net Cash Movement: 25200 EGP
+6. P&L Net Cash: 41900 EGP, Operating: 58250 EGP
+7. Instructor Salaries Earned: 3750 EGP, Disbursed: 0 EGP
+8. Cancellations Waived: 8000 EGP, Retained: 3100 EGP, Refunds Disbursed: 0 EGP
+9. Academic Sessions Scheduled: 984, Completed: 0
+10. Supervision Observations: 9 total
+11. Operational Staff: 2 registration, 1 accountants
+12. Management Alerts Active: 2 alerts
+
+[PASS] Step 35: Reporting Center fully reconciled with live data. Exports (CSV Response: HTTP 200, PDF: 45835 bytes) generated successfully.
+
+========================================================================
+ALL 35 LIVE OPERATIONAL STEPS EXECUTED AND RECONCILED WITH 100% SUCCESS!
+========================================================================

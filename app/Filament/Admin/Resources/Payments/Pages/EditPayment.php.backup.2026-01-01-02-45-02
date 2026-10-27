@@ -1,0 +1,64 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Payments\Pages;
+
+use App\Filament\Admin\Resources\Payments\PaymentResource;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\ForceDeleteAction;
+use Filament\Actions\RestoreAction;
+use Filament\Notifications\Notification;
+use Filament\Resources\Pages\EditRecord;
+
+class EditPayment extends EditRecord
+{
+    protected static string $resource = PaymentResource::class;
+    
+    public function mount($record): void
+    {
+        parent::mount($record);
+        
+        if (auth()->user()->is_super_admin) {
+            Notification::make()
+                ->title(__('filament/admin/edit_payment.غيرمصرح'))
+                ->body('الأدمن الرئيسي لا يمكنه تعديل سجلات في هذا القسم')
+                ->danger()
+                ->send();
+                
+            $this->redirect(PaymentResource::getUrl('index'));
+        }
+    }
+
+    protected function getHeaderActions(): array
+    {
+        if (auth()->user()->is_super_admin) {
+            return [];
+        }
+        
+        return [
+            DeleteAction::make(),
+            ForceDeleteAction::make(),
+            RestoreAction::make(),
+        ];
+    }
+
+    public function getTitle(): string
+    {
+        return __('filament/admin/edit_payment.title');
+    }
+
+    public function getHeading(): string
+    {
+        return __('filament/admin/edit_payment.title');
+    }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/edit_payment.title');
+    }
+
+}

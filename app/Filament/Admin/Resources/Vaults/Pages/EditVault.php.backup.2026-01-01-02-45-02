@@ -1,0 +1,51 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Vaults\Pages;
+
+use App\Filament\Admin\Resources\Vaults\VaultResource;
+use Filament\Actions\DeleteAction;
+use Filament\Resources\Pages\EditRecord;
+use Filament\Notifications\Notification;
+
+class EditVault extends EditRecord
+{
+    protected static string $resource = VaultResource::class;
+
+    public function mount(int|string $record): void
+    {
+        parent::mount($record);
+
+        // منع الأدمن الرئيسي من التعديل
+        if (auth()->user()->is_super_admin && is_null(auth()->user()->tenant_id)) {
+            Notification::make()
+                ->title(__('filament/admin/edit_vault.غيرمصرح'))
+                ->body('الأدمن الرئيسي لا يمكنه تعديل الخزائن')
+                ->danger()
+                ->send();
+
+            $this->redirect(VaultResource::getUrl('index'));
+        }
+    }
+
+    protected function getHeaderActions(): array
+    {
+        // إخفاء زر الحذف عن الأدمن الرئيسي
+        if (auth()->user()->is_super_admin && is_null(auth()->user()->tenant_id)) {
+            return [];
+        }
+
+        return [
+            DeleteAction::make(),
+        ];
+    }
+    public function getTitle(): string
+    {
+        return __('filament/admin/edit_vault.title');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/edit_vault.title');
+    }
+
+}

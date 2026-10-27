@@ -1,0 +1,134 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Tenants;
+
+use App\Filament\Admin\Resources\Tenants\Pages\CreateTenant;
+use App\Filament\Admin\Resources\Tenants\Pages\EditTenant;
+use App\Filament\Admin\Resources\Tenants\Pages\ListTenants;
+use App\Filament\Admin\Resources\Tenants\Schemas\TenantForm;
+use App\Filament\Admin\Resources\Tenants\Tables\TenantsTable;
+use App\Models\Tenant;
+use BackedEnum;
+use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+
+class TenantResource extends Resource
+{
+    protected static ?string $model = Tenant::class;
+
+    protected static ?string $navigationLabel = null;
+
+    protected static ?string $modelLabel = null;
+
+    protected static ?string $pluralModelLabel = null;
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    protected static ?string $recordTitleAttribute = 'Tenant';
+
+    public static function getNavigationGroup(): string
+    {
+        return __('filament/admin/navigation.management_and_users');
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        $user = auth()->user();
+
+        if ($user->is_super_admin && is_null($user->tenant_id)) {
+            return (string) static::getModel()::count();
+        }
+
+        return null;
+    }
+
+    public static function getNavigationBadgeColor(): ?string
+    {
+        return 'danger';
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        $user = auth()->user();
+
+        // فقط Super admin بدون tenant_id يمكنه رؤية وإدارة Tenants
+        if ($user->is_super_admin && is_null($user->tenant_id)) {
+            return parent::getEloquentQuery();
+        }
+
+        // المستخدمون الآخرون لا يمكنهم الوصول لهذا Resource
+        // نعيد query فارغ
+        return parent::getEloquentQuery()->whereRaw('1 = 0');
+    }
+
+    // إخفاء TenantResource من القائمة للمستخدمين غير المصرح لهم
+    public static function shouldRegisterNavigation(): bool
+    {
+        $user = auth()->user();
+        return $user && $user->is_super_admin && is_null($user->tenant_id);
+    }
+
+    public static function canCreate(): bool
+    {
+        return auth()->user()->can('Create:Tenant');
+    }
+
+    public static function canEdit($record): bool
+    {
+        return auth()->user()->can('Update:Tenant');
+    }
+
+    public static function canDelete($record): bool
+    {
+        return auth()->user()->can('Delete:Tenant');
+    }
+
+    public static function canDeleteAny(): bool
+    {
+        return auth()->user()->can('Delete:Tenant');
+    }
+
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/tenant_resource.navigation_label');
+    }
+
+    public static function getModelLabel(): string
+    {
+        return __('filament/admin/tenant_resource.model_label');
+    }
+
+    public static function getPluralModelLabel(): string
+    {
+        return __('filament/admin/tenant_resource.plural_model_label');
+    }
+
+    public static function form(Schema $schema): Schema
+    {
+        return TenantForm::configure($schema);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return TenantsTable::configure($table);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => ListTenants::route('/'),
+            'create' => CreateTenant::route('/create'),
+            'edit' => EditTenant::route('/{record}/edit'),
+        ];
+    }
+}

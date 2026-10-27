@@ -1,0 +1,778 @@
+/* ==========================================================================
+   AI SCHOOL — MODERN STUDENT PORTAL SCOPED DESIGN SYSTEM
+   Brand Identity:
+     - Primary Blue: #364FAC (Deep: #293C85, Weak: #EEF2FF)
+     - Green Accent: #58BA47 (Deep: #1F7A18, Weak: #EAF7E6)
+     - Main Background: #F5F7FC
+     - Card / Paper: #FFFFFF
+     - Primary Text: #18243D
+     - Secondary Text: #64748B
+     - Border Color: #E5EAF3
+   ========================================================================== */
+
+.student-theme-wrapper {
+    --bg: #F5F7FC;
+    --paper: #FFFFFF;
+    --paper-soft: #F8FAFD;
+    --ink: #18243D;
+    --muted: #64748B;
+    --line: #E5EAF3;
+    --primary: #364FAC;
+    --primary-deep: #293C85;
+    --primary-weak: #EEF2FF;
+    --accent-green: #58BA47;
+    --sky: #F0F9FF;
+    --sky-ink: #0284C7;
+    --mint: #EAF7E6;
+    --mint-ink: #1F7A18;
+    --peach: #FFF4E5;
+    --peach-ink: #D97706;
+    --rose: #FFEBF0;
+    --rose-ink: #E11D48;
+    --shadow-sm: 0 1px 3px rgba(24, 36, 61, 0.04);
+    --shadow: 0 4px 16px -2px rgba(24, 36, 61, 0.05), 0 2px 6px -2px rgba(24, 36, 61, 0.03);
+    --shadow-md: 0 10px 25px -4px rgba(24, 36, 61, 0.08), 0 4px 10px -4px rgba(24, 36, 61, 0.04);
+    --radius: 18px;
+
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif !important;
+    color: var(--ink);
+    padding: 0.25rem 0.25rem 2.5rem;
+}
+
+/* Page Header Modern Banner */
+.student-theme-wrapper .page-header {
+    background: linear-gradient(135deg, #364FAC 0%, #293C85 100%) !important;
+    color: #FFFFFF !important;
+    padding: 2rem 2.25rem !important;
+    border-radius: var(--radius) !important;
+    margin-bottom: 2rem !important;
+    box-shadow: 0 10px 25px -3px rgba(54, 79, 172, 0.35) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: none !important;
+}
+
+.student-theme-wrapper .page-header h1,
+.student-theme-wrapper .page-header h2 {
+    font-size: 1.85rem !important;
+    font-weight: 850 !important;
+    color: #FFFFFF !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 0.35rem !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+}
+
+.student-theme-wrapper .page-header p {
+    font-size: 0.95rem !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500 !important;
+    margin-bottom: 0 !important;
+}
+
+.student-theme-wrapper .page-header::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -30px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.student-theme-wrapper .page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: -20px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(88, 186, 71, 0.3) 0%, rgba(88, 186, 71, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Section Titles with Green Accent Line */
+.student-theme-wrapper .section-head,
+.student-theme-wrapper .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 2rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--line);
+}
+
+.student-theme-wrapper .section-head h2,
+.student-theme-wrapper .section-title h2 {
+    font-size: 1.25rem;
+    font-weight: 850;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    letter-spacing: -0.01em;
+}
+
+.student-theme-wrapper .section-head h2::before,
+.student-theme-wrapper .section-title h2::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 18px;
+    background: linear-gradient(180deg, var(--primary) 0%, var(--accent-green) 100%);
+    border-radius: 4px;
+}
+
+/* Payment Hero Card */
+.student-theme-wrapper .payment-hero {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 1.85rem 2.25rem !important;
+    border-radius: var(--radius) !important;
+    background: linear-gradient(135deg, #364FAC 0%, #293C85 100%) !important;
+    color: #FFFFFF !important;
+    margin-bottom: 1.75rem !important;
+    box-shadow: 0 10px 25px -3px rgba(54, 79, 172, 0.35) !important;
+}
+
+.student-theme-wrapper .payment-hero span {
+    font-size: 0.95rem !important;
+    color: #E0E7FF !important;
+    font-weight: 600 !important;
+    display: block !important;
+}
+
+.student-theme-wrapper .payment-hero h2 {
+    font-size: 2.25rem !important;
+    font-weight: 900 !important;
+    margin: 0.4rem 0 !important;
+    color: #FFFFFF !important;
+    letter-spacing: -0.02em !important;
+}
+
+.student-theme-wrapper .payment-hero p {
+    font-size: 0.85rem !important;
+    color: #C7D2FE !important;
+    margin: 0 !important;
+}
+
+.student-theme-wrapper .wallet-visual {
+    width: 72px !important;
+    height: 72px !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(255, 255, 255, 0.18) !important;
+    backdrop-filter: blur(8px) !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Stats Cards Grid */
+.student-theme-wrapper .stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)) !important;
+    gap: 1.25rem !important;
+    margin-bottom: 2.25rem !important;
+}
+
+@media (min-width: 1200px) {
+    .student-theme-wrapper .stats-grid:has(> :nth-child(4)) {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+}
+
+.student-theme-wrapper .stat-card {
+    background: var(--paper) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: var(--radius) !important;
+    padding: 1.35rem 1.25rem !important;
+    box-shadow: var(--shadow) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 1.15rem !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
+}
+
+.student-theme-wrapper .stat-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: var(--shadow-md) !important;
+    border-color: #CBD5E1 !important;
+}
+
+.student-theme-wrapper .stat-top,
+.student-theme-wrapper .stat-icon,
+.student-theme-wrapper .ico-box {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    background: var(--primary-weak) !important;
+    color: var(--primary) !important;
+}
+
+.student-theme-wrapper .stat-icon.mint,
+.student-theme-wrapper .ico-box.mint {
+    background: var(--mint) !important;
+    color: var(--mint-ink) !important;
+}
+
+.student-theme-wrapper .stat-icon.blue,
+.student-theme-wrapper .ico-box.blue {
+    background: var(--sky) !important;
+    color: var(--sky-ink) !important;
+}
+
+.student-theme-wrapper .stat-icon.peach,
+.student-theme-wrapper .ico-box.peach {
+    background: var(--peach) !important;
+    color: var(--peach-ink) !important;
+}
+
+.student-theme-wrapper .stat-card strong,
+.student-theme-wrapper .stat-card .stat-value {
+    font-size: 1.85rem !important;
+    font-weight: 850 !important;
+    color: var(--ink) !important;
+    display: block !important;
+    line-height: 1.15 !important;
+}
+
+.student-theme-wrapper .stat-card span:not(.ico-box),
+.student-theme-wrapper .stat-card .stat-label {
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    color: var(--muted) !important;
+    display: block !important;
+    margin-top: 0.2rem !important;
+}
+
+/* Warnings and Alerts */
+.student-theme-wrapper .inline-warning {
+    background: var(--peach) !important;
+    border: 1px solid #FED7AA !important;
+    border-radius: 14px !important;
+    padding: 1rem 1.35rem !important;
+    color: #C2410C !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Pill Tabs */
+.student-theme-wrapper .pill-tabs {
+    display: flex !important;
+    gap: 0.65rem !important;
+    margin-bottom: 1.5rem !important;
+    border-bottom: 1px solid var(--line) !important;
+    padding-bottom: 0.75rem !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+}
+
+.student-theme-wrapper .pill-tabs button {
+    border: 1px solid var(--line) !important;
+    background: var(--paper) !important;
+    color: var(--muted) !important;
+    border-radius: 12px !important;
+    padding: 0.65rem 1.45rem !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+}
+
+.student-theme-wrapper .pill-tabs button.selected,
+.student-theme-wrapper .pill-tabs button:hover {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 4px 12px rgba(54, 79, 172, 0.25) !important;
+}
+
+/* Payment & Installment Rows */
+.student-theme-wrapper .stack {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.1rem !important;
+}
+
+.student-theme-wrapper .payment-line,
+.student-theme-wrapper .installment-line {
+    background: var(--paper) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: var(--radius) !important;
+    padding: 1.25rem 1.5rem !important;
+    box-shadow: var(--shadow) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1.25rem !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.student-theme-wrapper .payment-line:hover,
+.student-theme-wrapper .installment-line:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: var(--shadow-md) !important;
+    border-color: #CBD5E1 !important;
+}
+
+.student-theme-wrapper .payment-icon {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    background: var(--mint) !important;
+    color: var(--mint-ink) !important;
+}
+
+.student-theme-wrapper .payment-line > div:nth-child(2) {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+.student-theme-wrapper .payment-line strong {
+    font-size: 1.05rem !important;
+    font-weight: 750 !important;
+    color: var(--ink) !important;
+    display: block !important;
+}
+
+.student-theme-wrapper .payment-line small {
+    font-size: 0.85rem !important;
+    color: var(--muted) !important;
+    margin-top: 0.25rem !important;
+    display: block !important;
+}
+
+.student-theme-wrapper .payment-side {
+    text-align: left !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    gap: 0.35rem !important;
+}
+
+.student-theme-wrapper .payment-side strong {
+    font-size: 1.25rem !important;
+    font-weight: 850 !important;
+    color: var(--ink) !important;
+}
+
+/* Tasks / Exams Rows */
+.student-theme-wrapper .task-row {
+    background: var(--paper) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: var(--radius) !important;
+    padding: 1.25rem 1.45rem !important;
+    box-shadow: var(--shadow) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1.25rem !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.student-theme-wrapper .task-row:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: var(--shadow-md) !important;
+    border-color: #CBD5E1 !important;
+}
+
+.student-theme-wrapper .task-row-icon {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    background: var(--primary-weak) !important;
+    color: var(--primary) !important;
+}
+
+.student-theme-wrapper .task-row-icon.blue {
+    background: var(--sky) !important;
+    color: var(--sky-ink) !important;
+}
+
+.student-theme-wrapper .task-row-icon.peach {
+    background: var(--peach) !important;
+    color: var(--peach-ink) !important;
+}
+
+.student-theme-wrapper .task-row-info {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+.student-theme-wrapper .task-row-info strong {
+    font-size: 1.05rem !important;
+    font-weight: 750 !important;
+    color: var(--ink) !important;
+    display: block !important;
+}
+
+.student-theme-wrapper .task-row-info small {
+    font-size: 0.85rem !important;
+    color: var(--muted) !important;
+    margin-top: 0.25rem !important;
+    display: block !important;
+}
+
+.student-theme-wrapper .task-badges {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    margin-top: 0.65rem !important;
+    flex-wrap: wrap !important;
+    font-size: 0.8rem !important;
+    color: var(--muted) !important;
+}
+
+/* Status Badges */
+.student-theme-wrapper .status-pill,
+.student-theme-wrapper .status {
+    padding: 0.25rem 0.75rem !important;
+    border-radius: 999px !important;
+    font-size: 0.75rem !important;
+    font-weight: 750 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
+}
+
+.student-theme-wrapper .status-pill.status-completed,
+.student-theme-wrapper .status.success {
+    background: var(--mint) !important;
+    color: var(--mint-ink) !important;
+}
+
+.student-theme-wrapper .status-pill.status-upcoming,
+.student-theme-wrapper .status-pill.status-pending,
+.student-theme-wrapper .status.warning {
+    background: var(--peach) !important;
+    color: #B45309 !important;
+}
+
+.student-theme-wrapper .status-pill.status-expired,
+.student-theme-wrapper .status-pill.status-overdue,
+.student-theme-wrapper .status.danger {
+    background: var(--rose) !important;
+    color: var(--rose-ink) !important;
+}
+
+/* Course Grid & Cards */
+.student-theme-wrapper .course-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
+    margin-top: 1rem !important;
+}
+
+.student-theme-wrapper .course-grid.spacious {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.student-theme-wrapper .course-card {
+    background: var(--paper) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: var(--radius) !important;
+    box-shadow: var(--shadow) !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+    position: relative !important;
+}
+
+.student-theme-wrapper .course-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: var(--shadow-md) !important;
+    border-color: #CBD5E1 !important;
+}
+
+.student-theme-wrapper .course-art {
+    height: 110px !important;
+    background: linear-gradient(135deg, #364FAC 0%, #293C85 100%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #FFFFFF !important;
+    position: relative !important;
+}
+
+.student-theme-wrapper .course-art.blue {
+    background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%) !important;
+}
+
+.student-theme-wrapper .course-art.peach,
+.student-theme-wrapper .course-art.coral {
+    background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%) !important;
+}
+
+.student-theme-wrapper .course-art.mint {
+    background: linear-gradient(135deg, #58BA47 0%, #1F7A18 100%) !important;
+}
+
+.student-theme-wrapper .course-body {
+    padding: 1.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+}
+
+.student-theme-wrapper .course-status {
+    align-self: flex-start !important;
+    padding: 0.3rem 0.85rem !important;
+    border-radius: 999px !important;
+    font-size: 0.75rem !important;
+    font-weight: 750 !important;
+    margin-bottom: 0.85rem !important;
+}
+
+.student-theme-wrapper .course-status.status-active {
+    background: var(--primary-weak) !important;
+    color: var(--primary) !important;
+    border: 1px solid rgba(54, 79, 172, 0.2) !important;
+}
+
+.student-theme-wrapper .course-status.status-completed {
+    background: var(--mint) !important;
+    color: var(--mint-ink) !important;
+    border: 1px solid rgba(88, 186, 71, 0.2) !important;
+}
+
+.student-theme-wrapper .course-body h3 {
+    font-size: 1.2rem !important;
+    font-weight: 850 !important;
+    color: var(--ink) !important;
+    margin-bottom: 0.75rem !important;
+    line-height: 1.4 !important;
+}
+
+.student-theme-wrapper .course-meta {
+    font-size: 0.875rem !important;
+    color: var(--muted) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    margin-bottom: 0.4rem !important;
+}
+
+.student-theme-wrapper .btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.65rem 1.25rem !important;
+    border-radius: 12px !important;
+    font-size: 0.9rem !important;
+    font-weight: 750 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+}
+
+.student-theme-wrapper .btn.btn-outline {
+    background: var(--paper) !important;
+    border: 1px solid var(--line) !important;
+    color: var(--primary) !important;
+}
+
+.student-theme-wrapper .btn.btn-outline:hover:not(:disabled) {
+    background: var(--primary-weak) !important;
+    border-color: rgba(54, 79, 172, 0.3) !important;
+    color: var(--primary-deep) !important;
+}
+
+.student-theme-wrapper .btn.btn-primary {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 12px rgba(54, 79, 172, 0.25) !important;
+}
+
+.student-theme-wrapper .btn.btn-primary:hover:not(:disabled) {
+    background: var(--primary-deep) !important;
+}
+
+/* Service Tiles in Dashboard */
+.student-theme-wrapper .service-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 130px), 1fr)) !important;
+    gap: 1rem !important;
+}
+
+@media (min-width: 1024px) {
+    .student-theme-wrapper .service-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+}
+
+.student-theme-wrapper .service-tile {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+    gap: 0.65rem !important;
+    min-height: 105px !important;
+    background: var(--paper) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 15px !important;
+    padding: 0.85rem 0.5rem !important;
+    color: var(--ink) !important;
+    font-size: 0.85rem !important;
+    font-weight: 800 !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.student-theme-wrapper .service-tile:hover {
+    border-color: rgba(54, 79, 172, 0.3) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: var(--shadow) !important;
+    color: var(--primary) !important;
+}
+
+/* Responsive Rules */
+@media (max-width: 1200px) {
+    .student-theme-wrapper .course-grid.spacious {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .student-theme-wrapper .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .student-theme-wrapper {
+        padding-bottom: calc(85px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    .student-theme-wrapper .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.85rem !important;
+    }
+
+    .student-theme-wrapper .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.75rem !important;
+    }
+
+    .student-theme-wrapper .course-grid,
+    .student-theme-wrapper .course-grid.spacious {
+        grid-template-columns: 1fr !important;
+    }
+
+    .student-theme-wrapper .page-header {
+        padding: 1.5rem !important;
+    }
+
+    .student-theme-wrapper .page-header h1,
+    .student-theme-wrapper .page-header h2 {
+        font-size: 1.4rem !important;
+    }
+
+    .student-theme-wrapper .payment-hero {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1rem !important;
+        padding: 1.5rem !important;
+    }
+
+    .student-theme-wrapper .payment-line {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .student-theme-wrapper .payment-side {
+        align-items: flex-start !important;
+    }
+}
+
+@media (max-width: 580px) {
+    .student-theme-wrapper .task-row {
+        flex-wrap: wrap !important;
+        padding: 1rem !important;
+        gap: 0.85rem !important;
+    }
+
+    .student-theme-wrapper .task-row-info {
+        flex: 1 1 calc(100% - 66px) !important;
+    }
+
+    .student-theme-wrapper .task-row .btn {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: 42px !important;
+        font-size: 0.875rem !important;
+        margin-top: 0.35rem !important;
+        padding: 0.6rem 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .student-theme-wrapper .stats-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.65rem !important;
+    }
+
+    .student-theme-wrapper .stat-card {
+        padding: 1rem !important;
+        gap: 0.75rem !important;
+    }
+
+    .student-theme-wrapper .stat-card strong {
+        font-size: 1.35rem !important;
+    }
+
+    .student-theme-wrapper .stat-icon,
+    .student-theme-wrapper .ico-box {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .student-theme-wrapper .stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.65rem !important;
+    }
+
+    .student-theme-wrapper .service-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0.5rem !important;
+    }
+
+    .student-theme-wrapper .stat-card strong {
+        font-size: 1.25rem !important;
+    }
+
+    .student-theme-wrapper .payment-hero h2 {
+        font-size: 1.75rem !important;
+    }
+}

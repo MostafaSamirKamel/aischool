@@ -1,0 +1,84 @@
+<?php
+
+namespace App\Filament\Supervisor\Resources\Students\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\ForceDeleteBulkAction;
+use Filament\Actions\RestoreBulkAction;
+use Filament\Actions\ViewAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\BadgeColumn;
+use Filament\Tables\Filters\TrashedFilter;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Table;
+
+class StudentsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                ImageColumn::make('user.profile_photo')
+                    ->label('الصورة')
+                    ->circular(),
+
+                TextColumn::make('user.name')
+                    ->label('اسم الطالب')
+                    ->searchable()
+                    ->sortable(),
+
+                TextColumn::make('student_id')
+                    ->label('رقم الطالب')
+                    ->searchable(),
+
+                TextColumn::make('user.email')
+                    ->label('البريد الإلكتروني')
+                    ->searchable(),
+
+                TextColumn::make('user.phone')
+                    ->label('رقم الهاتف')
+                    ->searchable(),
+
+                TextColumn::make('groups_count')
+                    ->label('عدد المجموعات')
+                    ->counts('groups')
+                    ->badge()
+                    ->color('info'),
+
+                BadgeColumn::make('status')
+                    ->label('الحالة')
+                    ->colors([
+                        'success' => 'active',
+                        'warning' => 'inactive',
+                        'danger' => 'suspended',
+                    ])
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'active' => 'نشط',
+                        'inactive' => 'غير نشط',
+                        'suspended' => 'موقوف',
+                        default => $state,
+                    }),
+
+                TextColumn::make('enrollment_date')
+                    ->label('تاريخ التسجيل')
+                    ->date('Y-m-d')
+                    ->sortable(),
+            ])
+            ->filters([
+                SelectFilter::make('status')
+                    ->label('الحالة')
+                    ->options([
+                        'active' => 'نشط',
+                        'inactive' => 'غير نشط',
+                        'suspended' => 'موقوف',
+                    ]),
+                TrashedFilter::make(),
+            ])
+            ->recordActions([
+                ViewAction::make(),
+            ])
+            ->defaultSort('created_at', 'desc');
+    }
+}

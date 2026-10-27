@@ -1,0 +1,248 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Vaults\Pages;
+
+use App\Filament\Admin\Resources\Vaults\VaultResource;
+use App\Models\Vault;
+use App\Models\Expense;
+use App\Models\Revenue;
+use App\Models\StudentPayment;
+use Filament\Resources\Pages\Page;
+use Filament\Tables\Concerns\InteractsWithTable;
+use Filament\Tables\Contracts\HasTable;
+use Filament\Tables\Table;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Filters\Filter;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\Select;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Collection;
+
+class VaultTransactions extends Page implements HasTable
+{
+    use InteractsWithTable;
+
+    protected static string $resource = VaultResource::class;
+
+    protected string $view = 'filament.admin.resources.vaults.pages.vault-transactions';
+    
+    protected static ?string $navigationLabel = null;
+    
+    protected static ?string $title = null;
+
+    public function table(Table $table): Table
+    {
+        return $table
+            ->query($this->getTableQuery())
+            ->columns([
+                TextColumn::make('date')
+                    ->label(__('filament/admin/vault_transactions.التاريخ'))
+                    ->date('Y-m-d')
+                    ->sortable(),
+                
+                TextColumn::make('type')
+                    ->label(__('filament/admin/vault_transactions.النوع'))
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'revenue' => 'success',
+                        'student_payment' => 'info',
+                        'expense' => 'danger',
+                        default => 'gray',
+                    })
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'revenue' => '💰 إيراد',
+                        'student_payment' => '🎓 دفعة طالب',
+                        'expense' => '💸 مصروف',
+                        default => $state,
+                    }),
+                
+                TextColumn::make('vault_name')
+                    ->label(__('filament/admin/vault_transactions.الخزينة'))
+                    ->badge()
+                    ->searchable(),
+                
+                TextColumn::make('description')
+                    ->label(__('filament/admin/vault_transactions.البيان'))
+                    ->searchable()
+                    ->limit(50),
+                
+                TextColumn::make('amount')
+                    ->label(__('filament/admin/vault_transactions.المبلغ'))
+                    ->money('EGP')
+                    ->color(fn ($record): string => 
+                        $record->type === 'expense' ? 'danger' : 'success'
+                    ),
+                
+                TextColumn::make('balance')
+                    ->label(__('filament/admin/vault_transactions.الرصيدبعدالعملية'))
+                    ->money('EGP')
+                    ->color(fn ($state): string => $state >= 0 ? 'success' : 'danger'),
+                
+                TextColumn::make('reference')
+                    ->label(__('filament/admin/vault_transactions.المرجع'))
+                    ->searchable(),
+            ])
+            ->filters([
+                SelectFilter::make('vault_id')
+                    ->label(__('filament/admin/vault_transactions.الخزينة'))
+                    ->options(function () {
+                        $user = auth()->user();
+                        $query = Vault::query()->where('is_active', true);
+                        
+                        if (!($user->is_super_admin && is_null($user->tenant_id))) {
+                            $query->where('tenant_id', $user->tenant_id);
+                        }
+
+                        return $query->pluck('name', 'id');
+                    }),
+                
+                SelectFilter::make('type')
+                    ->label(__('filament/admin/vault_transactions.نوعالمعاملة'))
+                    ->options([
+                        'revenue' => '💰 إيراد',
+                        'student_payment' => '🎓 دفعة طالب',
+                        'expense' => '💸 مصروف',
+                    ]),
+            ])
+            ->defaultSort('date', 'desc')
+            ->paginated([15, 25, 50, 100])
+            ->striped();
+    }
+
+    protected function getTableQuery(): Builder
+    {
+        // سنستخدم نموذج فارغ ونستبدل البيانات لاحقاً
+        return Revenue::query()->whereRaw('1 = 0');
+    }
+
+    protected function paginateTableQuery(Builder $query): \Illuminate\Contracts\Pagination\Paginator
+    {
+        $perPage = $this->getTableRecordsPerPage();
+        $records = $this->getAllTransactions();
+
+        // تطبيق الفلاتر
+        $tableFilters = $this->tableFilters ?? [];
+
+        // فلتر الخزينة
+        if (!empty($tableFilters['vault_id']['value'])) {
+            $records = $records->where('vault_id', $tableFilters['vault_id']['value']);
+        }
+
+        // فلتر نوع المعاملة
+        if (!empty($tableFilters['type']['value'])) {
+            $records = $records->where('type', $tableFilters['type']['value']);
+        }
+
+        return new \Illuminate\Pagination\LengthAwarePaginator(
+            $records->forPage($this->getTablePage(), $perPage),
+            $records->count(),
+            $perPage,
+            $this->getTablePage(),
+            ['path' => request()->url()]
+        );
+    }
+
+    protected function getAllTransactions(): Collection
+    {
+        $user = auth()->user();
+        $tenantId = $user->tenant_id;
+
+        // جمع كل المعاملات من الجداول الثلاثة
+        $transactions = collect();
+
+        // الإيرادات
+        $revenues = Revenue::query()
+            ->when(!($user->is_super_admin && is_null($tenantId)), fn($q) => $q->where('tenant_id', $tenantId))
+            ->whereNotNull('vault_id')
+            ->with('vault')
+            ->get()
+            ->map(fn($r) => (object) [
+                'id' => 'R-' . $r->id,
+                'date' => $r->revenue_date,
+                'type' => 'revenue',
+                'vault_id' => $r->vault_id,
+                'vault_name' => $r->vault?->name ?? 'غير محدد',
+                'description' => $r->title ?? $r->description,
+                'amount' => $r->amount,
+                'reference' => $r->revenue_code ?? $r->invoice_number,
+                'balance' => 0,
+            ]);
+
+        // مدفوعات الطلاب
+        $studentPayments = StudentPayment::query()
+            ->when(!($user->is_super_admin && is_null($tenantId)), fn($q) => $q->where('tenant_id', $tenantId))
+            ->whereNotNull('vault_id')
+            ->where('status', 'completed')
+            ->with(['vault', 'student.user'])
+            ->get()
+            ->map(fn($p) => (object) [
+                'id' => 'SP-' . $p->id,
+                'date' => $p->payment_date,
+                'type' => 'student_payment',
+                'vault_id' => $p->vault_id,
+                'vault_name' => $p->vault?->name ?? 'غير محدد',
+                'description' => 'دفعة طالب: ' . ($p->student?->user?->name ?? 'غير محدد'),
+                'amount' => $p->net_amount,
+                'reference' => $p->payment_number,
+                'balance' => 0,
+            ]);
+
+        // المصروفات
+        $expenses = Expense::query()
+            ->when(!($user->is_super_admin && is_null($tenantId)), fn($q) => $q->where('tenant_id', $tenantId))
+            ->whereNotNull('vault_id')
+            ->with('vault')
+            ->get()
+            ->map(fn($e) => (object) [
+                'id' => 'E-' . $e->id,
+                'date' => $e->expense_date,
+                'type' => 'expense',
+                'vault_id' => $e->vault_id,
+                'vault_name' => $e->vault?->name ?? 'غير محدد',
+                'description' => $e->title ?? $e->description,
+                'amount' => $e->amount,
+                'reference' => $e->expense_code ?? $e->invoice_number,
+                'balance' => 0,
+            ]);
+
+        // دمج كل المعاملات
+        $allTransactions = $transactions
+            ->concat($revenues)
+            ->concat($studentPayments)
+            ->concat($expenses)
+            ->sortByDesc('date');
+
+        // حساب الرصيد التراكمي
+        $runningBalance = [];
+        foreach ($allTransactions->groupBy('vault_id') as $vaultId => $vaultTransactions) {
+            $vault = Vault::find($vaultId);
+            $balance = $vault?->opening_balance ?? 0;
+            
+            foreach ($vaultTransactions->sortBy('date') as $transaction) {
+                if ($transaction->type === 'expense') {
+                    $balance -= $transaction->amount;
+                } else {
+                    $balance += $transaction->amount;
+                }
+                $runningBalance[$transaction->id] = $balance;
+            }
+        }
+
+        // إضافة الرصيد إلى كل معاملة
+        return $allTransactions->map(function ($transaction) use ($runningBalance) {
+            $transaction->balance = $runningBalance[$transaction->id] ?? 0;
+            return $transaction;
+        });
+    }
+    public function getTitle(): string
+    {
+        return __('filament/admin/vault_transactions.title');
+    }
+    public static function getNavigationLabel(): string
+    {
+        return __('filament/admin/vault_transactions.navigation_label');
+    }
+
+
+}

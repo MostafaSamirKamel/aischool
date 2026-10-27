@@ -1,0 +1,298 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Supervisors\Schemas;
+
+use App\Models\User;
+use Filament\Schemas\Schema;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\TimePicker;
+
+class SupervisorForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                // معلومات المستخدم
+                Section::make(__('filament/admin/supervisor_resource.section.user_info'))
+                    ->schema([
+                        TextInput::make('user_name')
+                            ->label(__('filament/admin/supervisor_resource.user_name'))
+                            ->required()
+                            ->maxLength(255)
+                            ->placeholder('مثال: أحمد محمد'),
+
+                        TextInput::make('user_email')
+                            ->label(__('filament/admin/supervisor_resource.user_email'))
+                            ->email()
+                            ->required()
+                            ->unique(User::class, 'email', modifyRuleUsing: function ($rule, $get, $record) {
+                                return $record && $record->user_id ? $rule->ignore($record->user_id) : $rule;
+                            })
+                            ->maxLength(255)
+                            ->placeholder('example@domain.com'),
+
+                        TextInput::make('user_password')
+                            ->label(__('filament/admin/supervisor_resource.user_password'))
+                            ->password()
+                            ->required(fn($context) => $context === 'create')
+                            ->dehydrated(fn($state) => filled($state))
+                            ->minLength(8)
+                            ->placeholder('على الأقل 8 أحرف')
+                            ->helperText('اتركه فارغاً إذا كنت لا تريد تغيير كلمة المرور'),
+
+                        TextInput::make('user_phone')
+                            ->label(__('filament/admin/supervisor_resource.user_phone'))
+                            ->tel()
+                            ->required()
+                            ->unique(User::class, 'phone', modifyRuleUsing: function ($rule, $get, $record) {
+                                return $record && $record->user_id ? $rule->ignore($record->user_id) : $rule;
+                            })
+                            ->maxLength(255)
+                            ->placeholder(__('filament/admin/supervisor_resource.phone.placeholder')),
+
+                        TextInput::make('employee_number')
+                            ->label(__('filament/admin/supervisor_resource.employee_number'))
+                            ->required()
+                            ->unique('supervisors', 'employee_number', modifyRuleUsing: function ($rule, $get, $record) {
+                                return $record ? $rule->ignore($record->id) : $rule;
+                            })
+                            ->maxLength(255)
+                            ->default(fn() => 'SUP-' . str_pad(\App\Models\Supervisor::withoutGlobalScopes()->count() + 1, 3, '0', STR_PAD_LEFT))
+                            ->disabled()
+                            ->dehydrated()
+                            ->placeholder(__('filament/admin/supervisor_resource.employee_number.placeholder')),
+
+                        TextInput::make('national_id')
+                            ->label('الرقم القومي')
+                            ->required()
+                            ->unique('supervisors', 'national_id', modifyRuleUsing: function ($rule, $get, $record) {
+                                return $record ? $rule->ignore($record->id) : $rule;
+                            })
+                            ->maxLength(255)
+                            ->placeholder('27404241801395'),
+                    ])
+                    ->columns(3),
+
+                // المعلومات الشخصية
+                Section::make(__('filament/admin/supervisor_resource.section.personal_info'))
+                    ->schema([
+                        DatePicker::make('date_of_birth')
+                            ->label(__('filament/admin/supervisor_resource.date_of_birth'))
+                            ->required()
+                            ->maxDate(now()->subYears(18))
+                            ->displayFormat('d/m/Y'),
+
+                        Select::make('gender')
+                            ->label(__('filament/admin/supervisor_resource.gender'))
+                            ->options([
+                                'male' => __('filament/admin/supervisor_resource.gender.male'),
+                                'female' => __('filament/admin/supervisor_resource.gender.female'),
+                            ])
+                            ->required(),
+
+                        Select::make('nationality')
+                            ->label(__('filament/admin/supervisor_resource.nationality'))
+                            ->relationship('nationalityRelation', 'name')
+                            ->searchable()
+                            ->preload()
+                            ->default(fn() => \App\Models\Nationality::first()?->id)
+                            ->required(),
+                    ])
+                    ->columns(3),
+
+                // معلومات الاتصال
+                Section::make(__('filament/admin/supervisor_resource.section.contact_info'))
+                    ->schema([
+                        TextInput::make('emergency_contact_name')
+                            ->label(__('filament/admin/supervisor_resource.emergency_contact_name'))
+                            ->maxLength(255),
+
+                        TextInput::make('emergency_contact_phone')
+                            ->label(__('filament/admin/supervisor_resource.emergency_contact_phone'))
+                            ->tel()
+                            ->maxLength(255),
+
+                        TextInput::make('city')
+                            ->label(__('filament/admin/supervisor_resource.city'))
+                            ->maxLength(255),
+
+                        Textarea::make('address')
+                            ->label(__('filament/admin/supervisor_resource.address'))
+                            ->rows(3)
+                            ->columnSpanFull(),
+                    ])
+                    ->columns(2),
+
+                // معلومات التوظيف
+                Section::make(__('filament/admin/supervisor_resource.section.employment_info'))
+                    ->schema([
+                        DatePicker::make('hire_date')
+                            ->label(__('filament/admin/supervisor_resource.hire_date'))
+                            ->required()
+                            ->displayFormat('d/m/Y')
+                            ->default(now()),
+
+                        Select::make('employment_type')
+                            ->label(__('filament/admin/supervisor_resource.employment_type'))
+                            ->options([
+                                'full_time' => __('filament/admin/supervisor_resource.employment_type.full_time'),
+                                'part_time' => __('filament/admin/supervisor_resource.employment_type.part_time'),
+                                'contract' => __('filament/admin/supervisor_resource.employment_type.contract'),
+                            ])
+                            ->default('full_time')
+                            ->required(),
+
+                        Select::make('status')
+                            ->label(__('filament/admin/supervisor_resource.status'))
+                            ->options([
+                                'active' => __('filament/admin/supervisor_resource.status.active'),
+                                'inactive' => __('filament/admin/supervisor_resource.status.inactive'),
+                                'suspended' => __('filament/admin/supervisor_resource.status.suspended'),
+                                'terminated' => __('filament/admin/supervisor_resource.status.terminated'),
+                            ])
+                            ->default('active')
+                            ->required(),
+                    ])
+                    ->columns(3),
+
+                // المؤهلات والخبرة
+                Section::make(__('filament/admin/supervisor_resource.section.qualifications'))
+                    ->schema([
+                        TextInput::make('education_level')
+                            ->label(__('filament/admin/supervisor_resource.education_level'))
+                            ->maxLength(255)
+                            ->placeholder(__('filament/admin/supervisor_resource.education_level.placeholder')),
+
+                        TextInput::make('specialization')
+                            ->label(__('filament/admin/supervisor_resource.specialization'))
+                            ->maxLength(255)
+                            ->placeholder(__('filament/admin/supervisor_resource.specialization.placeholder')),
+
+                        TextInput::make('years_of_experience')
+                            ->label(__('filament/admin/supervisor_resource.years_of_experience'))
+                            ->numeric()
+                            ->default(0)
+                            ->minValue(0)
+                            ->maxValue(50),
+
+                        Textarea::make('certifications')
+                            ->label(__('filament/admin/supervisor_resource.certifications'))
+                            ->rows(3)
+                            ->placeholder(__('filament/admin/supervisor_resource.certifications.placeholder'))
+                            ->columnSpanFull(),
+                    ])
+                    ->columns(3)
+                    ->collapsible(),
+
+                // المعلومات المالية
+                Section::make(__('filament/admin/supervisor_resource.section.financial_info'))
+                    ->schema([
+                        TextInput::make('base_salary')
+                            ->label(__('filament/admin/supervisor_resource.base_salary'))
+                            ->numeric()
+                            ->prefix('ر.س')
+                            ->minValue(0)
+                            ->step(0.01),
+
+                        TextInput::make('allowances')
+                            ->label(__('filament/admin/supervisor_resource.allowances'))
+                            ->numeric()
+                            ->prefix('ر.س')
+                            ->default(0)
+                            ->minValue(0)
+                            ->step(0.01),
+
+                        Select::make('payment_type')
+                            ->label(__('filament/admin/supervisor_resource.payment_type'))
+                            ->options([
+                                'monthly' => __('filament/admin/supervisor_resource.payment_type.monthly'),
+                                'hourly' => __('filament/admin/supervisor_resource.payment_type.hourly'),
+                                'daily' => __('filament/admin/supervisor_resource.payment_type.daily'),
+                            ])
+                            ->default('monthly'),
+                    ])
+                    ->columns(3)
+                    ->collapsible(),
+
+                // أوقات العمل
+                Section::make(__('filament/admin/supervisor_resource.section.work_schedule'))
+                    ->schema([
+                        Select::make('work_days')
+                            ->label(__('filament/admin/supervisor_resource.work_days'))
+                            ->options([
+                                'sunday' => __('filament/admin/supervisor_resource.work_days.sunday'),
+                                'monday' => __('filament/admin/supervisor_resource.work_days.monday'),
+                                'tuesday' => __('filament/admin/supervisor_resource.work_days.tuesday'),
+                                'wednesday' => __('filament/admin/supervisor_resource.work_days.wednesday'),
+                                'thursday' => __('filament/admin/supervisor_resource.work_days.thursday'),
+                                'friday' => __('filament/admin/supervisor_resource.work_days.friday'),
+                                'saturday' => __('filament/admin/supervisor_resource.work_days.saturday'),
+                            ])
+                            ->multiple()
+                            ->placeholder(__('filament/admin/supervisor_resource.work_days.placeholder')),
+
+                        TimePicker::make('work_start_time')
+                            ->label(__('filament/admin/supervisor_resource.work_start_time'))
+                            ->seconds(false),
+
+                        TimePicker::make('work_end_time')
+                            ->label(__('filament/admin/supervisor_resource.work_end_time'))
+                            ->seconds(false),
+                    ])
+                    ->columns(3)
+                    ->collapsible(),
+
+                // المستندات
+                Section::make(__('filament/admin/supervisor_resource.section.documents'))
+                    ->schema([
+                        FileUpload::make('profile_photo')
+                            ->label(__('filament/admin/supervisor_resource.profile_photo'))
+                            ->image()
+                            ->imageEditor()
+                            ->directory('supervisors/photos')
+                            ->visibility('private')
+                            ->maxSize(2048)
+                            ->columnSpanFull(),
+
+                        FileUpload::make('resume_file')
+                            ->label(__('filament/admin/supervisor_resource.resume_file'))
+                            ->directory('supervisors/resumes')
+                            ->visibility('private')
+                            ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
+                            ->maxSize(5120),
+
+                        FileUpload::make('id_copy')
+                            ->label(__('filament/admin/supervisor_resource.id_copy'))
+                            ->directory('supervisors/ids')
+                            ->visibility('private')
+                            ->image()
+                            ->maxSize(2048),
+                    ])
+                    ->columns(2)
+                    ->collapsible(),
+
+                // ملاحظات إضافية
+                Section::make(__('filament/admin/supervisor_resource.section.additional_info'))
+                    ->schema([
+                        Textarea::make('bio')
+                            ->label(__('filament/admin/supervisor_resource.bio'))
+                            ->rows(3)
+                            ->placeholder(__('filament/admin/supervisor_resource.bio.placeholder'))
+                            ->columnSpanFull(),
+
+                        Textarea::make('notes')
+                            ->label(__('filament/admin/supervisor_resource.notes'))
+                            ->rows(3)
+                            ->placeholder(__('filament/admin/supervisor_resource.notes.placeholder'))
+                            ->columnSpanFull(),
+                    ])
+                    ->collapsible(),
+            ]);
+    }
+}

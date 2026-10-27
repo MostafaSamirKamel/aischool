@@ -1,0 +1,115 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\AttendanceSessions\Schemas;
+
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Section;
+use Filament\Schemas\Schema;
+use App\Models\Group;
+use App\Models\Student;
+
+class AttendanceSessionForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Section::make('معلومات الجلسة')
+                    ->schema([
+                        DatePicker::make('attendance_date')
+                            ->label('تاريخ الحضور')
+                            ->required()
+                            ->native(false)
+                            ->default(now()),
+                        Select::make('group_id')
+                            ->label('المجموعة')
+                            ->options(function () {
+                                return Group::where('instructor_id', auth()->id())
+                                    ->where('tenant_id', auth()->user()->tenant_id)
+                                    ->where('status', 'active')
+                                    ->pluck('name', 'id');
+                            })
+                            ->required()
+                            ->searchable()
+                            ->reactive()
+                            ->afterStateUpdated(function ($state, callable $set) {
+                                if ($state) {
+                                    $group = Group::find($state);
+                                    $set('course_id', $group?->course_id);
+                                    $set('department_id', $group?->course?->department_id);
+                                }
+                            }),
+                        TextInput::make('classroom')
+                            ->label('القاعة'),
+                        Textarea::make('session_notes')
+                            ->label('ملاحظات الجلسة')
+                            ->rows(3)
+                            ->columnSpanFull(),
+                    ])
+                    ->columns(2),
+                    
+                Section::make('تسجيل الحضور')
+                    ->schema([
+                        Repeater::make('attendance_records')
+                            ->relationship('records')
+                            ->schema([
+                                Select::make('student_id')
+                                    ->label('الطالب')
+                                    ->options(function (callable $get) {
+                                        $groupId = $get('../../group_id');
+                                        if (!$groupId) {
+                                            return [];
+                                        }
+                                        return Student::whereHas('enrollments', function ($query) use ($groupId) {
+                                            $query->where('group_id', $groupId);
+                                        })->pluck('name', 'id');
+                                    })
+                                    ->required()
+                                    ->searchable()
+                                    ->disableOptionsWhenSelectedInSiblingRepeaterItems(),
+                                Select::make('status')
+                                    ->label('الحالة')
+                                    ->options([
+                                        'present' => 'حاضر',
+                                        'absent' => 'غائب',
+                                        'late' => 'متأخر',
+                                        'excused' => 'غياب بعذر'
+                                    ])
+                                    ->required()
+                                    ->default('present')
+                                    ->reactive()
+                                    ->afterStateUpdated(function ($state, callable $set) {
+                                        if ($state === 'present') {
+                                            $set('check_in_time', now()->format('H:i'));
+                                        } elseif ($state === 'late') {
+                                            $set('check_in_time', now()->format('H:i'));
+                                        } else {
+                                            $set('check_in_time', null);
+                                        }
+                                    }),
+                                TextInput::make('check_in_time')
+                                    ->label('وقت الدخول')
+                                    ->time()
+                                    ->visible(fn (callable $get) => in_array($get('status'), ['present', 'late'])),
+                                Textarea::make('notes')
+                                    ->label('ملاحظات')
+                                    ->rows(2)
+                                    ->columnSpanFull(),
+                            ])
+                            ->columns(3)
+                            ->defaultItems(0)
+                            ->addActionLabel('إضافة طالب')
+                            ->collapsible()
+                            ->itemLabel(fn (array $state): ?string => 
+                                $state['student_id'] 
+                                    ? Student::find($state['student_id'])?->name 
+                                    : 'طالب جديد'
+                            ),
+                    ]),
+            ]);
+    }
+}

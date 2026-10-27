@@ -1,0 +1,62 @@
+<?php
+
+namespace App\Filament\Instructor\Resources\AssignmentSubmissions\Schemas;
+
+use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Placeholder;
+use Filament\Forms\Components\FileUpload;
+use Filament\Schemas\Schema;
+
+class AssignmentSubmissionForm
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                Section::make('معلومات التسليم')
+                    ->schema([
+                        Placeholder::make('assignment_title')
+                            ->label('عنوان الواجب')
+                            ->content(fn ($record) => $record?->assignment?->title ?? '-'),
+                        Placeholder::make('student_name')
+                            ->label('اسم الطالب')
+                            ->content(fn ($record) => $record?->student?->name ?? '-'),
+                        Placeholder::make('submitted_at')
+                            ->label('تاريخ التسليم')
+                            ->content(fn ($record) => $record?->submitted_at?->format('Y-m-d H:i') ?? 'لم يتم التسليم'),
+                        Placeholder::make('file_path')
+                            ->label('الملف المرفق')
+                            ->content(fn ($record) => $record?->file_path ? 'تم إرفاق ملف' : 'لا يوجد ملف'),
+                    ])
+                    ->columns(2),
+                    
+                Section::make('التقييم')
+                    ->schema([
+                        TextInput::make('score')
+                            ->label('الدرجة')
+                            ->numeric()
+                            ->minValue(0)
+                            ->maxValue(fn ($record) => $record?->assignment?->max_score ?? 100)
+                            ->helperText(fn ($record) => "الدرجة القصوى: " . ($record?->assignment?->max_score ?? 100)),
+                        Select::make('status')
+                            ->label('حالة التسليم')
+                            ->options([
+                                'pending' => 'معلق',
+                                'submitted' => 'تم التسليم',
+                                'graded' => 'تم التصحيح',
+                                'late' => 'متأخر'
+                            ])
+                            ->required(),
+                        Textarea::make('instructor_feedback')
+                            ->label('ملاحظات المدرس')
+                            ->rows(4)
+                            ->columnSpanFull(),
+                    ])
+                    ->columns(2),
+            ]);
+    }
+}

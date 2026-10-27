@@ -1,0 +1,1904 @@
+/* ==========================================================================
+   AI SCHOOL — UNIFIED ENTERPRISE DESIGN SYSTEM (MASTER THEME)
+   Role: Senior Product Designer & Enterprise SaaS UI/UX Architect
+   Scope: Unified Visual System Across All Employee-Facing Panels
+   Palette:
+     - Primary Brand Blue: #364FAC (Hover: #293C85, Light Weak: #EEF2FF)
+     - Green Accent: #58BA47 (Hover: #459637, Light Weak: #EAF7E6)
+     - Dark Navy Sidebar: #162746 (Header: #0F1D36, Hover: #1E355F, Active: #254580)
+     - Page Background (Light): #F8FAFC
+     - Card Background (Light): #FFFFFF
+     - Primary Text: #0F172A
+     - Secondary Text: #64748B
+     - Border Color: #E2E8F0
+     - Dark Mode Canvas: #0F172A
+     - Dark Mode Cards: #1E293B
+     - Dark Mode Border: #2A374F
+   ========================================================================== */
+
+/* 1. TYPOGRAPHY: TAJAWAL AS PRIMARY ARABIC FONT + INTER FOR ENGLISH/NUMBERS */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* ==========================================================================
+       SECTION 23: COMPLETE COLOR SYSTEM REDESIGN (AI SCHOOL ENTERPRISE SAAS)
+       ========================================================================== */
+    /* Primary Identity */
+    --ai-navy: #0F172A;
+    --ai-primary: #2563EB;
+    --ai-primary-hover: #1D4ED8;
+    --ai-primary-dark: #1E40AF;
+    --ai-primary-secondary: #3B82F6;
+    --ai-teal: #0F766E;
+    --ai-primary-weak: #EFF6FF;
+    --ai-primary-ring: rgba(37, 99, 235, 0.2);
+
+    --ai-accent: #16A34A;
+    --ai-accent-hover: #15803D;
+    --ai-accent-weak: #DCFCE7;
+    --ai-accent-dark: #166534;
+
+    /* Functional Colors */
+    --ai-success: #16A34A;
+    --ai-success-weak: #DCFCE7;
+    --ai-warning: #D97706;
+    --ai-warning-weak: #FEF3C7;
+    --ai-danger: #DC2626;
+    --ai-danger-weak: #FEE2E2;
+    --ai-info: #0284C7;
+    --ai-info-weak: #E0F2FE;
+
+    /* Sidebar Dark Navy System */
+    --ai-sidebar-bg: #0F172A;
+    --ai-sidebar-header-bg: #0A0F1D;
+    --ai-sidebar-hover: #1E293B;
+    --ai-sidebar-active: #2563EB;
+    --ai-sidebar-text: #E2E8F0;
+    --ai-sidebar-text-muted: #94A3B8;
+    --ai-sidebar-group: #8FA3C7;
+    --ai-sidebar-border: rgba(255, 255, 255, 0.08);
+
+    /* Light Theme (Canvas & Surfaces) */
+    --ai-bg: #F8FAFC;
+    --ai-bg-secondary: #F1F5F9;
+    --ai-card: #FFFFFF;
+    --ai-card-hover: #FAFCFF;
+    --ai-elevated: #FFFFFF;
+
+    /* Typography & Content Colors (Light) */
+    --ai-text: #0F172A;
+    --ai-text-secondary: #64748B;
+    --ai-text-muted: #94A3B8;
+
+    --ai-line: #E2E8F0;
+    --ai-line-darker: #CBD5E1;
+
+    /* Modern SaaS Shadows */
+    --ai-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+    --ai-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
+    --ai-shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 10px 20px -3px rgba(15, 23, 42, 0.08);
+    --ai-shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+
+    /* Radii */
+    --ai-radius-sm: 8px;
+    --ai-radius: 12px;
+    --ai-radius-md: 14px;
+    --ai-radius-lg: 18px;
+
+    /* Font Family */
+    --font-family-tajawal: 'Tajawal', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    /* ==========================================================================
+       CENTRALIZED DARK MODE PALETTE TOKENS (SECTION 23 APPROVED SPECIFICATION)
+       ========================================================================== */
+    --ai-dark-bg: #0B1220;              /* Main page background */
+    --ai-dark-card: #172033;            /* Card background */
+    --ai-dark-elevated: #1E293B;        /* Elevated Surface */
+    --ai-dark-sidebar: #0B1220;         /* Sidebar background */
+    --ai-dark-sidebar-header: #070D18;  /* Sidebar header background */
+    --ai-dark-topbar: #172033;          /* Topbar background */
+    --ai-dark-table-bg: #172033;        /* Table background */
+    --ai-dark-table-header: #1E293B;    /* Table header background */
+    --ai-dark-table-row-hover: #1E293B; /* Table row hover */
+    --ai-dark-modal: #172033;           /* Modal background */
+    --ai-dark-modal-footer: #0B1220;    /* Modal footer */
+    --ai-dark-input: #1E293B;           /* Input background */
+    --ai-dark-border: #334155;          /* Border color */
+    --ai-dark-text-primary: #F1F5F9;    /* Primary text */
+    --ai-dark-text-secondary: #CBD5E1;  /* Secondary text */
+    --ai-dark-text-muted: #94A3B8;      /* Muted text */
+    --ai-dark-link: #38BDF8;            /* Link/accent */
+    --ai-dark-btn-primary: #2563EB;     /* Primary button */
+    --ai-dark-success: #16A34A;         /* Success */
+    --ai-dark-warning: #D97706;         /* Warning */
+    --ai-dark-danger: #DC2626;          /* Error */
+    --ai-dark-info: #0284C7;            /* Information */
+}
+
+/* Global Font Application for Employee Panels */
+body,
+.fi-body,
+.fi-page,
+.fi-sidebar,
+.fi-topbar,
+.fi-ta,
+.fi-fo,
+.fi-modal,
+.fi-section,
+.fi-wi {
+    font-family: var(--font-family-tajawal) !important;
+    letter-spacing: normal !important;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   2. PAGE CANVAS & LAYOUT (DEFAULT LIGHT MODE)
+   ========================================================================== */
+body,
+.fi-body {
+    background-color: var(--ai-bg) !important;
+    color: var(--ai-text) !important;
+    min-height: 100vh;
+}
+
+.fi-page {
+    animation: aiPageEnter 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes aiPageEnter {
+    from {
+        opacity: 0.6;
+        transform: translateY(3px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typography Scale */
+h1.fi-header-heading,
+.fi-header-heading {
+    font-size: 1.45rem !important; /* 22-24px */
+    font-weight: 800 !important;
+    color: var(--ai-text) !important;
+    letter-spacing: -0.01em !important;
+}
+
+.fi-section-header-title {
+    font-size: 1.1rem !important; /* 17-18px */
+    font-weight: 700 !important;
+    color: var(--ai-text) !important;
+}
+
+.fi-header-subheading {
+    font-size: 0.85rem !important; /* 13-14px */
+    color: var(--ai-text-secondary) !important;
+}
+
+/* ==========================================================================
+   3. DARK NAVY SIDEBAR (APPROVED ENTERPRISE SPECIFICATION)
+   ========================================================================== */
+aside.fi-sidebar,
+.fi-sidebar,
+[x-data*="sidebar"],
+nav.fi-sidebar {
+    background: #162746 !important; /* Approved Dark Navy */
+    border-inline-end: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: -2px 0 16px rgba(10, 20, 40, 0.15) !important;
+    transition: width 0.22s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.22s ease !important;
+}
+
+/* Sidebar Header / Logo Area */
+.fi-sidebar-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 1.15rem 1.25rem !important;
+    background: #0F1D36 !important; /* Deepest Navy for Header */
+}
+
+.fi-sidebar-header a,
+.fi-sidebar-header span {
+    color: #FFFFFF !important;
+    font-weight: 850 !important;
+    font-size: 1.15rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* Sidebar Navigation Items */
+.fi-sidebar .fi-sidebar-item-button,
+.fi-sidebar .fi-sidebar-item-label,
+.fi-sidebar .fi-sidebar-nav-item,
+.fi-sidebar a,
+.fi-sidebar button {
+    color: #E2E8F0 !important; /* Crisp Readable Off-White */
+    font-weight: 500 !important;
+    font-size: 0.88rem !important;
+}
+
+.fi-sidebar-item > a,
+.fi-sidebar-item > button {
+    border-radius: var(--ai-radius-sm) !important;
+    padding: 0.55rem 0.85rem !important;
+    margin-inline: 0.5rem !important;
+    margin-block: 0.15rem !important;
+    color: #E2E8F0 !important;
+    transition: all 0.16s ease-in-out !important;
+    border: 1px solid transparent !important;
+}
+
+/* Sidebar Icons */
+.fi-sidebar .fi-sidebar-item-icon,
+.fi-sidebar svg,
+.fi-sidebar .fi-icon {
+    color: #94A3B8 !important;
+    transition: color 0.18s ease, transform 0.18s ease !important;
+}
+
+/* Hover State */
+.fi-sidebar-item > a:hover,
+.fi-sidebar-item > button:hover {
+    background-color: #1E355F !important;
+    color: #FFFFFF !important;
+    transform: translateX(-2px);
+}
+
+.fi-sidebar-item > a:hover svg,
+.fi-sidebar-item > button:hover svg {
+    color: #FFFFFF !important;
+    transform: scale(1.05);
+}
+
+/* Active Item State */
+.fi-sidebar-item-active > a,
+.fi-sidebar-item-active > button {
+    background: #254580 !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    position: relative !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* AI School Green Accent Active Bar */
+.fi-sidebar-item-active > a::before,
+.fi-sidebar-item-active > button::before {
+    content: '' !important;
+    position: absolute !important;
+    inset-inline-start: 0 !important;
+    top: 6px !important;
+    bottom: 6px !important;
+    width: 3.5px !important;
+    border-radius: 4px !important;
+    background: #58BA47 !important; /* AI School Brand Green */
+}
+
+.fi-sidebar-item-active > a svg,
+.fi-sidebar-item-active > button svg,
+.fi-sidebar-item-active .fi-sidebar-item-label {
+    color: #FFFFFF !important;
+}
+
+/* Group Labels & Group Headings */
+.fi-sidebar .fi-sidebar-group-label {
+    font-weight: 700 !important;
+    font-size: 0.74rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: #8FA3C7 !important;
+    padding-inline: 1rem !important;
+    margin-top: 0.85rem !important;
+    margin-bottom: 0.35rem !important;
+}
+
+.fi-sidebar-group-button {
+    border-radius: var(--ai-radius-sm) !important;
+    padding: 0.45rem 0.65rem !important;
+    margin-inline: 0.35rem !important;
+    transition: all 0.2s ease !important;
+    color: #CBD5E1 !important;
+}
+
+.fi-sidebar-group-button:hover {
+    background-color: #1E355F !important;
+    color: #FFFFFF !important;
+}
+
+/* Collapsed Sidebar */
+.fi-sidebar-collapsed .fi-sidebar-item-icon {
+    margin: 0 auto !important;
+}
+
+/* ==========================================================================
+   4. COMPACT & CLEAN HEADER (TOPBAR - 60-64PX HEIGHT)
+   ========================================================================== */
+.fi-topbar {
+    height: 62px !important;
+    min-height: 62px !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid var(--ai-line) !important;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 40 !important;
+}
+
+.fi-topbar nav a,
+.fi-topbar nav button {
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    padding: 0.4rem 0.75rem !important;
+    border-radius: var(--ai-radius-sm) !important;
+    transition: all 0.15s ease !important;
+    color: var(--ai-text) !important;
+}
+
+.fi-topbar nav a:hover,
+.fi-topbar nav button:hover {
+    background-color: var(--ai-bg-secondary) !important;
+    color: var(--ai-primary) !important;
+}
+
+.fi-topbar-open-collapse-sidebar-btn,
+.fi-topbar-close-collapse-sidebar-btn {
+    border-radius: var(--ai-radius-sm) !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid var(--ai-line) !important;
+    color: var(--ai-text-secondary) !important;
+    transition: all 0.2s ease !important;
+}
+
+.fi-topbar-open-collapse-sidebar-btn:hover,
+.fi-topbar-close-collapse-sidebar-btn:hover {
+    background-color: var(--ai-primary-weak) !important;
+    border-color: var(--ai-primary) !important;
+    color: var(--ai-primary) !important;
+}
+
+.fi-user-avatar {
+    border-radius: 10px !important;
+    border: 2px solid #FFFFFF !important;
+    box-shadow: 0 2px 6px rgba(54, 79, 172, 0.2) !important;
+}
+
+/* ==========================================================================
+   5. DASHBOARD KPI CARDS (STANDARDIZED METRIC CARDS)
+   ========================================================================== */
+.fi-wi-stats-overview-stat {
+    background: #FFFFFF !important;
+    border: 1px solid var(--ai-line) !important;
+    border-radius: var(--ai-radius-md) !important;
+    padding: 1.15rem 1.35rem !important;
+    box-shadow: var(--ai-shadow) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.fi-wi-stats-overview-stat:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--ai-shadow-md) !important;
+    border-color: #CBD5E1 !important;
+}
+
+.fi-wi-stats-overview-stat-value {
+    font-size: 1.65rem !important; /* 26px */
+    font-weight: 800 !important;
+    color: var(--ai-text) !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.2 !important;
+}
+
+.fi-wi-stats-overview-stat-label {
+    font-size: 0.88rem !important; /* 14px */
+    font-weight: 600 !important;
+    color: var(--ai-text-secondary) !important;
+    margin-bottom: 0.35rem !important;
+}
+
+.fi-wi-stats-overview-stat-description {
+    font-size: 0.78rem !important;
+    font-weight: 500 !important;
+}
+
+/* ==========================================================================
+   6. MEDIUM-DENSITY ENTERPRISE DATA TABLES
+   ========================================================================== */
+.fi-ta-ctn {
+    border-radius: var(--ai-radius-md) !important;
+    border: 1px solid var(--ai-line) !important;
+    box-shadow: var(--ai-shadow) !important;
+    background: #FFFFFF !important;
+    overflow: hidden !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.fi-ta-header-ctn {
+    padding: 1rem 1.25rem !important;
+    background: #FFFFFF !important;
+    border-bottom: 1px solid var(--ai-line) !important;
+}
+
+.fi-ta-content {
+    overflow-x: auto !important;
+    scrollbar-width: thin !important;
+}
+
+.fi-ta-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+/* Table Header */
+.fi-ta-table th {
+    background-color: #F8FAFC !important;
+    color: #475569 !important;
+    font-size: 0.82rem !important; /* 13px */
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    padding: 0.85rem 1.15rem !important;
+    border-bottom: 1px solid var(--ai-line) !important;
+    white-space: nowrap !important;
+}
+
+/* Medium-Density Row Height (48-52px) */
+.fi-ta-row {
+    transition: background-color 0.15s ease !important;
+}
+
+.fi-ta-row td {
+    padding: 0.82rem 1.15rem !important; /* Approx 48-50px total row height */
+    font-size: 0.88rem !important; /* 14px */
+    color: var(--ai-text) !important;
+    border-bottom: 1px solid #F1F5F9 !important;
+    vertical-align: middle !important;
+}
+
+.fi-ta-row:hover {
+    background-color: #F8FAFC !important;
+}
+
+/* Table Actions */
+.fi-ta-actions {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    flex-wrap: nowrap !important;
+}
+
+.fi-ta-actions .fi-icon-btn {
+    border-radius: var(--ai-radius-sm) !important;
+    padding: 0.35rem !important;
+    transition: all 0.15s ease !important;
+}
+
+.fi-ta-actions .fi-icon-btn:hover {
+    background-color: var(--ai-primary-weak) !important;
+    color: var(--ai-primary) !important;
+}
+
+/* Status Badges */
+.fi-badge {
+    border-radius: 9999px !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    padding: 0.25rem 0.65rem !important;
+    letter-spacing: normal !important;
+}
+
+/* ==========================================================================
+   7. FORMS, INPUTS & CONTROLS (42-44PX HEIGHT STANDARD)
+   ========================================================================== */
+.fi-fo-field-wrp-label {
+    font-size: 0.88rem !important; /* 14px */
+    font-weight: 600 !important;
+    color: #1E293B !important;
+    margin-bottom: 0.35rem !important;
+}
+
+.fi-input,
+.fi-select-input,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select {
+    height: 42px !important;
+    border-radius: var(--ai-radius-sm) !important;
+    border: 1px solid var(--ai-line-darker) !important;
+    background-color: #FFFFFF !important;
+    font-size: 0.88rem !important;
+    color: var(--ai-text) !important;
+    padding: 0.5rem 0.85rem !important;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.fi-input:focus,
+.fi-select-input:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--ai-primary) !important;
+    box-shadow: 0 0 0 3px var(--ai-primary-ring) !important;
+    outline: none !important;
+}
+
+textarea {
+    border-radius: var(--ai-radius-sm) !important;
+    border: 1px solid var(--ai-line-darker) !important;
+    padding: 0.65rem 0.85rem !important;
+    font-size: 0.88rem !important;
+}
+
+/* Validation Errors */
+.fi-fo-field-wrp-error-message {
+    font-size: 0.8rem !important;
+    color: var(--ai-danger) !important;
+    font-weight: 500 !important;
+    margin-top: 0.3rem !important;
+}
+
+/* ==========================================================================
+   8. BUTTONS & ACTIONS
+   ========================================================================== */
+.fi-btn {
+    border-radius: var(--ai-radius-sm) !important;
+    font-weight: 600 !important;
+    font-size: 0.88rem !important;
+    min-height: 42px !important;
+    padding: 0.55rem 1.15rem !important;
+    transition: all 0.16s ease-in-out !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.45rem !important;
+}
+
+.fi-btn-primary {
+    background-color: var(--ai-primary) !important;
+    color: #FFFFFF !important;
+    border: 1px solid transparent !important;
+    box-shadow: 0 1px 3px rgba(54, 79, 172, 0.25) !important;
+}
+
+.fi-btn-primary:hover {
+    background-color: var(--ai-primary-hover) !important;
+    box-shadow: 0 4px 10px rgba(54, 79, 172, 0.3) !important;
+    transform: translateY(-1px);
+}
+
+.fi-btn-secondary,
+.fi-btn-outlined {
+    background-color: #FFFFFF !important;
+    border: 1px solid var(--ai-line-darker) !important;
+    color: #334155 !important;
+}
+
+.fi-btn-secondary:hover,
+.fi-btn-outlined:hover {
+    background-color: var(--ai-bg-secondary) !important;
+    border-color: #94A3B8 !important;
+}
+
+/* Destructive Button */
+.fi-btn-danger,
+.fi-color-danger .fi-btn {
+    background-color: var(--ai-danger) !important;
+    color: #FFFFFF !important;
+}
+
+.fi-btn-danger:hover {
+    background-color: #DC2626 !important;
+}
+
+/* ==========================================================================
+   9. MODALS & DRAWERS
+   ========================================================================== */
+.fi-modal-window {
+    border-radius: var(--ai-radius-md) !important;
+    box-shadow: var(--ai-shadow-lg) !important;
+    border: 1px solid var(--ai-line) !important;
+    overflow: hidden !important;
+    max-height: 90vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.fi-modal-header {
+    padding: 1.15rem 1.35rem !important;
+    border-bottom: 1px solid var(--ai-line) !important;
+    background: #FFFFFF !important;
+}
+
+.fi-modal-header-heading {
+    font-size: 1.15rem !important;
+    font-weight: 750 !important;
+    color: var(--ai-text) !important;
+}
+
+.fi-modal-content {
+    padding: 1.35rem !important;
+    overflow-y: auto !important;
+}
+
+.fi-modal-footer {
+    padding: 1rem 1.35rem !important;
+    background: #F8FAFC !important;
+    border-top: 1px solid var(--ai-line) !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 0.75rem !important;
+}
+
+/* ==========================================================================
+   10. SECTIONS & CONTAINERS
+   ========================================================================== */
+.fi-section {
+    background: #FFFFFF !important;
+    border-radius: var(--ai-radius-md) !important;
+    border: 1px solid var(--ai-line) !important;
+    box-shadow: var(--ai-shadow) !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.fi-section-header {
+    padding: 1.15rem 1.35rem !important;
+    border-bottom: 1px solid var(--ai-line) !important;
+}
+
+.fi-section-content {
+    padding: 1.35rem !important;
+}
+
+/* ==========================================================================
+   11. PROFESSIONAL DARK MODE (SECTION 23 & 24 COMPLETE SPECIFICATION)
+   ========================================================================== */
+html.dark,
+html.dark body,
+.dark body,
+html.dark .fi-body,
+.dark .fi-body,
+html.dark .fi-page,
+.dark .fi-page,
+html.dark .fi-main,
+.dark .fi-main {
+    background-color: var(--ai-dark-bg) !important; /* #0B1220 */
+    color: var(--ai-dark-text-primary) !important;   /* #F1F5F9 */
+}
+
+/* Dark Mode Sidebar (#0B1220 / #070D18) */
+html.dark aside.fi-sidebar,
+.dark aside.fi-sidebar,
+html.dark .fi-sidebar,
+.dark .fi-sidebar,
+html.dark [x-data*="sidebar"],
+.dark [x-data*="sidebar"],
+html.dark nav.fi-sidebar,
+.dark nav.fi-sidebar {
+    background: var(--ai-dark-sidebar) !important;
+    border-inline-end-color: var(--ai-dark-border) !important;
+}
+
+html.dark .fi-sidebar-header,
+.dark .fi-sidebar-header {
+    background: var(--ai-dark-sidebar-header) !important;
+    border-bottom-color: var(--ai-dark-border) !important;
+}
+
+/* Dark Topbar (#172033) */
+html.dark .fi-topbar,
+.dark .fi-topbar,
+html.dark header.fi-topbar,
+.dark header.fi-topbar {
+    background: var(--ai-dark-topbar) !important;
+    border-bottom-color: var(--ai-dark-border) !important;
+}
+
+html.dark .fi-topbar nav a,
+.dark .fi-topbar nav a,
+html.dark .fi-topbar nav button,
+.dark .fi-topbar nav button {
+    color: var(--ai-dark-text-secondary) !important;
+}
+
+html.dark .fi-topbar nav a:hover,
+.dark .fi-topbar nav a:hover,
+html.dark .fi-topbar nav button:hover,
+.dark .fi-topbar nav button:hover {
+    background-color: var(--ai-dark-elevated) !important;
+    color: #FFFFFF !important;
+}
+
+html.dark .fi-topbar-open-collapse-sidebar-btn,
+.dark .fi-topbar-open-collapse-sidebar-btn,
+html.dark .fi-topbar-close-collapse-sidebar-btn,
+.dark .fi-topbar-close-collapse-sidebar-btn {
+    background-color: var(--ai-dark-card) !important;
+    border-color: var(--ai-dark-border) !important;
+    color: var(--ai-dark-text-secondary) !important;
+}
+
+/* Dark Cards, Sections & Widgets (#172033 Card Bg, #334155 Border) */
+html.dark .fi-section,
+.dark .fi-section,
+html.dark .fi-ta-ctn,
+.dark .fi-ta-ctn,
+html.dark .fi-card,
+.dark .fi-card,
+html.dark .fi-wi,
+.dark .fi-wi,
+html.dark .fi-wi-stats-overview-stat,
+.dark .fi-wi-stats-overview-stat,
+html.dark .installment-card,
+.dark .installment-card,
+html.dark .bootstrap-panel,
+.dark .bootstrap-panel,
+html.dark .bootstrap-card,
+.dark .bootstrap-card,
+html.dark .ai-quick-control-widget,
+.dark .ai-quick-control-widget {
+    background-color: var(--ai-dark-card) !important;
+    border-color: var(--ai-dark-border) !important;
+    color: var(--ai-dark-text-primary) !important;
+}
+
+html.dark .fi-section-header,
+.dark .fi-section-header,
+html.dark .fi-ta-header-ctn,
+.dark .fi-ta-header-ctn,
+html.dark .bootstrap-panel__header,
+.dark .bootstrap-panel__header,
+html.dark .ai-quick-control-header,
+.dark .ai-quick-control-header {
+    background-color: var(--ai-dark-card) !important;
+    border-bottom-color: var(--ai-dark-border) !important;
+}
+
+/* Dark Modals, Dialogs, Popups & Drawers (#172033) */
+html.dark .fi-modal-window,
+.dark .fi-modal-window,
+html.dark [role="dialog"],
+.dark [role="dialog"] {
+    background-color: var(--ai-dark-card) !important;
+    border: 1px solid var(--ai-dark-border) !important;
+    color: var(--ai-dark-text-primary) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6) !important;
+}
+
+html.dark .fi-modal-header,
+.dark .fi-modal-header {
+    background-color: var(--ai-dark-card) !important;
+    border-bottom: 1px solid var(--ai-dark-border) !important;
+    color: var(--ai-dark-text-primary) !important;
+}
+
+html.dark .fi-modal-header-heading,
+.dark .fi-modal-header-heading {
+    color: var(--ai-dark-text-primary) !important;
+}
+
+html.dark .fi-modal-content,
+.dark .fi-modal-content {
+    background-color: var(--ai-dark-card) !important;
+    color: var(--ai-dark-text-primary) !important;
+}
+
+html.dark .fi-modal-footer,
+.dark .fi-modal-footer {
+    background-color: var(--ai-dark-modal-footer) !important;
+    border-top: 1px solid var(--ai-dark-border) !important;
+}
+
+html.dark .fi-modal-close-btn,
+.dark .fi-modal-close-btn {
+    color: var(--ai-dark-text-muted) !important;
+}
+
+html.dark .fi-modal-close-btn:hover,
+.dark .fi-modal-close-btn:hover {
+    color: var(--ai-dark-text-primary) !important;
+    background-color: var(--ai-dark-elevated) !important;
+}
+
+/* Dark Dropdowns, Menus & Select Popovers (#172033 Surface, #334155 Border) */
+html.dark .fi-dropdown-panel,
+.dark .fi-dropdown-panel,
+html.dark .fi-popover-panel,
+.dark .fi-popover-panel,
+html.dark [role="menu"],
+.dark [role="menu"],
+html.dark [role="listbox"],
+.dark [role="listbox"] {
+    background-color: var(--ai-dark-card) !important;
+    border: 1px solid var(--ai-dark-border) !important;
+    color: var(--ai-dark-text-primary) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.dark .fi-dropdown-list-item,
+.dark .fi-dropdown-list-item,
+html.dark [role="menuitem"],
+.dark [role="menuitem"],
+html.dark [role="option"],
+.dark [role="option"] {
+    color: var(--ai-dark-text-primary) !important;
+}
+
+html.dark .fi-dropdown-list-item:hover,
+.dark .fi-dropdown-list-item:hover,
+html.dark .fi-dropdown-list-item:focus,
+.dark .fi-dropdown-list-item:focus,
+html.dark [role="menuitem"]:hover,
+.dark [role="menuitem"]:hover,
+html.dark [role="option"]:hover,
+.dark [role="option"]:hover,
+html.dark [role="option"][aria-selected="true"],
+.dark [role="option"][aria-selected="true"] {
+    background-color: var(--ai-dark-elevated) !important;
+    color: var(--ai-dark-text-primary) !important;
+}
+
+html.dark select option,
+.dark select option {
+    background-color: var(--ai-dark-card) !important;
+    color: var(--ai-dark-text-primary) !important;
+}
+
+html.dark input[type="date"]::-webkit-calendar-picker-indicator,
+.dark input[type="date"]::-webkit-calendar-picker-indicator,
+html.dark input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+.dark input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.85);
+}
+
+html.dark .flatpickr-calendar,
+.dark .flatpickr-calendar {
+    background: var(--ai-dark-card) !important;
+    border-color: var(--ai-dark-border) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.dark .flatpickr-day,
+.dark .flatpickr-day {
+    color: var(--ai-dark-text-primary) !important;
+}
+
+html.dark .flatpickr-day.selected,
+.dark .flatpickr-day.selected {
+    background: var(--ai-dark-btn-primary) !important;
+    border-color: var(--ai-dark-btn-primary) !important;
+    color: #ffffff !important;
+}
+
+html.dark .flatpickr-months,
+.dark .flatpickr-months {
+    background: var(--ai-dark-table-header) !important;
+    color: var(--ai-dark-text-primary) !important;
+}
+
+/* Dark Tables (#172033 Table Bg, #1E293B Table Header) */
+html.dark .fi-ta-table th,
+.dark .fi-ta-table th,
+html.dark .installment-table th,
+.dark .installment-table th,
+html.dark .bootstrap-table th,
+.dark .bootstrap-table th,
+html.dark table thead th,
+.dark table thead th,
+html.dark .table-light,
+.dark .table-light,
+html.dark .table-light th,
+.dark .table-light th {
+    background-color: var(--ai-dark-table-header) !important;
+    color: var(--ai-dark-text-secondary) !important;
+    border-bottom: 1px solid var(--ai-dark-border) !important;
+    font-weight: 700 !important;
+}
+
+html.dark .fi-ta-row td,
+.dark .fi-ta-row td,
+html.dark .fi-ta-table td,
+.dark .fi-ta-table td,
+html.dark .installment-table td,
+.dark .installment-table td,
+html.dark .bootstrap-table td,
+.dark .bootstrap-table td,
+html.dark table tbody td,
+.dark table tbody td {
+    background-color: var(--ai-dark-table-bg) !important;
+    color: var(--ai-dark-text-primary) !important;
+    border-bottom: 1px solid var(--ai-dark-border) !important;
+}
+
+html.dark .fi-ta-row:hover td,
+.dark .fi-ta-row:hover td,
+html.dark .installment-table tbody tr:hover td,
+.dark .installment-table tbody tr:hover td,
+html.dark .bootstrap-table tbody tr:hover td,
+.dark .bootstrap-table tbody tr:hover td,
+html.dark table tbody tr:hover td,
+.dark table tbody tr:hover td {
+    background-color: var(--ai-dark-table-row-hover) !important;
+}
+
+html.dark .fi-ta-pagination,
+.dark .fi-ta-pagination,
+html.dark .fi-pagination-record-select,
+.dark .fi-pagination-record-select {
+    background: var(--ai-dark-card) !important;
+    border-top-color: var(--ai-dark-border) !important;
+    color: var(--ai-dark-text-secondary) !important;
+}
+
+html.dark .fi-ta-empty-state,
+.dark .fi-ta-empty-state {
+    background-color: var(--ai-dark-card) !important;
+    color: var(--ai-dark-text-secondary) !important;
+}
+
+/* Dark Inputs, Selects & Form Controls (#1E293B Input Bg, #334155 Border) */
+html.dark .fi-input-wrp,
+.dark .fi-input-wrp {
+    background-color: var(--ai-dark-input) !important;
+    border-color: var(--ai-dark-border) !important;
+    color: var(--ai-dark-text-primary) !important;
+    box-shadow: none !important;
+}
+
+html.dark .fi-input-wrp input,
+.dark .fi-input-wrp input,
+html.dark .fi-input-wrp textarea,
+.dark .fi-input-wrp textarea,
+html.dark .fi-input,
+.dark .fi-input,
+html.dark .fi-select-input,
+.dark .fi-select-input,
+html.dark input[type="text"],
+.dark input[type="text"],
+html.dark input[type="number"],
+.dark input[type="number"],
+html.dark input[type="email"],
+.dark input[type="email"],
+html.dark input[type="password"],
+.dark input[type="password"],
+html.dark input[type="date"],
+.dark input[type="date"],
+html.dark input[type="search"],
+.dark input[type="search"],
+html.dark select,
+.dark select,
+html.dark textarea,
+.dark textarea,
+html.dark .ai-tenant-select,
+.dark .ai-tenant-select,
+html.dark .bootstrap-field input,
+.dark .bootstrap-field input,
+html.dark .bootstrap-field select,
+.dark .bootstrap-field select {
+    background-color: var(--ai-dark-input) !important;
+    border-color: var(--ai-dark-border) !important;
+    color: var(--ai-dark-text-primary) !important;
+}
+
+html.dark .fi-input-wrp:focus-within,
+.dark .fi-input-wrp:focus-within,
+html.dark .fi-input:focus,
+.dark .fi-input:focus,
+html.dark .fi-select-input:focus,
+.dark .fi-select-input:focus,
+html.dark input:focus,
+.dark input:focus,
+html.dark select:focus,
+.dark select:focus,
+html.dark textarea:focus,
+.dark textarea:focus {
+    border-color: var(--ai-dark-btn-primary) !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25) !important;
+}
+
+html.dark input::placeholder,
+.dark input::placeholder,
+html.dark textarea::placeholder,
+.dark textarea::placeholder {
+    color: var(--ai-dark-text-muted) !important;
+}
+
+html.dark .fi-fo-field-wrp-label,
+.dark .fi-fo-field-wrp-label,
+html.dark label,
+.dark label,
+html.dark .bootstrap-field label,
+.dark .bootstrap-field label {
+    color: var(--ai-dark-text-secondary) !important;
+}
+
+html.dark .fi-fo-field-wrp-helper-text,
+.dark .fi-fo-field-wrp-helper-text {
+    color: var(--ai-dark-text-muted) !important;
+}
+
+/* Dark Mode Unified Academic Center Components */
+html.dark .hrc-card,
+.dark .hrc-card,
+html.dark .hrc-header-box,
+.dark .hrc-header-box,
+html.dark .hrc-group-card,
+.dark .hrc-group-card,
+html.dark .hrc-table-wrapper,
+.dark .hrc-table-wrapper,
+html.dark .hrc-modal-box,
+.dark .hrc-modal-box,
+html.dark .hrc-stat-box,
+.dark .hrc-stat-box {
+    background-color: var(--ai-dark-card) !important;
+    border-color: var(--ai-dark-border) !important;
+    color: var(--ai-dark-text-primary) !important;
+}
+
+html.dark .hrc-header-box,
+.dark .hrc-header-box,
+html.dark .hrc-stat-box,
+.dark .hrc-stat-box {
+    background-color: var(--ai-dark-elevated) !important;
+}
+
+html.dark .hrc-table th,
+.dark .hrc-table th {
+    background-color: var(--ai-dark-table-header) !important;
+    color: var(--ai-dark-text-secondary) !important;
+    border-bottom: 1px solid var(--ai-dark-border) !important;
+}
+
+html.dark .hrc-table td,
+.dark .hrc-table td {
+    background-color: var(--ai-dark-table-bg) !important;
+    color: var(--ai-dark-text-primary) !important;
+    border-bottom: 1px solid var(--ai-dark-border) !important;
+}
+
+html.dark .hrc-table tbody tr:hover td,
+.dark .hrc-table tbody tr:hover td {
+    background-color: var(--ai-dark-table-row-hover) !important;
+}
+
+/* Headings, Subheadings & High Contrast Text Hierarchy */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark .fi-header-heading,
+.dark .fi-section-header-title,
+.dark .fi-modal-header-heading,
+.dark .fi-wi-stats-overview-stat-value,
+.dark [style*="color: #1e293b"],
+.dark [style*="color:#1e293b"],
+.dark [style*="color: #111827"],
+.dark [style*="color:#111827"] {
+    color: var(--ai-dark-text-primary) !important;
+}
+
+.dark .fi-header-subheading,
+.dark .fi-wi-stats-overview-stat-label,
+.dark .text-muted,
+.dark .text-gray-500,
+.dark .text-gray-600,
+.dark .text-slate-500,
+.dark [style*="color: #6b7280"],
+.dark [style*="color:#6b7280"] {
+    color: var(--ai-dark-text-muted) !important;
+}
+
+.dark .text-gray-700,
+.dark .text-gray-800,
+.dark .text-gray-900,
+.dark .text-slate-700,
+.dark .text-slate-800,
+.dark .text-slate-900 {
+    color: var(--ai-dark-text-primary) !important;
+}
+
+/* Restrained KPI Stat Cards for Dark Mode (Eliminates excessive neon gradients) */
+.dark .report-stat-card,
+.dark .grid > div[style*="linear-gradient(135deg, #667eea"],
+.dark .grid > div[style*="linear-gradient(135deg, #f093fb"],
+.dark .grid > div[style*="linear-gradient(135deg, #4facfe"],
+.dark .grid > div[style*="linear-gradient(135deg, #43e97b"] {
+    background: var(--ai-dark-card) !important;
+    border: 1px solid var(--ai-dark-border) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+}
+
+.dark .grid > div[style*="linear-gradient(135deg, #667eea"] > div:first-child,
+.dark .grid > div[style*="linear-gradient(135deg, #f093fb"] > div:first-child,
+.dark .grid > div[style*="linear-gradient(135deg, #4facfe"] > div:first-child,
+.dark .grid > div[style*="linear-gradient(135deg, #43e97b"] > div:first-child {
+    color: var(--ai-dark-text-muted) !important;
+}
+
+/* Status Badges in Dark Mode */
+.dark .status-badge-paid,
+.dark .badge-success,
+.dark .bg-success,
+.dark [style*="background: #d1fae5"],
+.dark [style*="background:#d1fae5"] {
+    background: rgba(52, 211, 153, 0.15) !important;
+    color: var(--ai-dark-success) !important;
+    border: 1px solid rgba(52, 211, 153, 0.3) !important;
+}
+
+.dark .status-badge-pending,
+.dark .status-pending,
+.dark .badge-warning,
+.dark .bg-warning,
+.dark [style*="background: #fef3c7"],
+.dark [style*="background:#fef3c7"] {
+    background: rgba(251, 191, 36, 0.15) !important;
+    color: var(--ai-dark-warning) !important;
+    border: 1px solid rgba(251, 191, 36, 0.3) !important;
+}
+
+.dark .status-badge-unpaid,
+.dark .status-partial,
+.dark .badge-danger,
+.dark .bg-danger,
+.dark [style*="background: #fecaca"],
+.dark [style*="background:#fecaca"],
+.dark [style*="background: #fee2e2"],
+.dark [style*="background:#fee2e2"] {
+    background: rgba(251, 113, 133, 0.15) !important;
+    color: var(--ai-dark-danger) !important;
+    border: 1px solid rgba(251, 113, 133, 0.3) !important;
+}
+
+/* Buttons in Dark Mode (#2563EB Primary Button) */
+.dark .fi-btn-primary,
+.dark .btn-primary,
+.dark .btn-pay {
+    background: var(--ai-dark-btn-primary) !important;
+    border-color: var(--ai-dark-btn-primary) !important;
+    color: #FFFFFF !important;
+}
+.dark .fi-btn-primary:hover,
+.dark .btn-primary:hover,
+.dark .btn-pay:hover {
+    background: #1d4ed8 !important;
+    border-color: #1d4ed8 !important;
+}
+
+.dark .fi-btn-secondary,
+.dark .fi-btn-outlined,
+.dark .btn-secondary {
+    background: var(--ai-dark-input) !important;
+    border-color: var(--ai-dark-border) !important;
+    color: var(--ai-dark-text-secondary) !important;
+}
+
+/* Dropdowns in Dark Mode */
+.dark .fi-dropdown-panel {
+    background: var(--ai-dark-card) !important;
+    border-color: var(--ai-dark-border) !important;
+    color: var(--ai-dark-text-primary) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark .fi-dropdown-list-item:hover,
+.dark .fi-dropdown-list-item-button:hover {
+    background-color: var(--ai-dark-table-row-hover) !important;
+    color: var(--ai-dark-text-primary) !important;
+}
+
+/* Dark Mode Utility Overrides for Custom Blade Components */
+.dark .bg-white {
+    background-color: var(--ai-dark-card) !important;
+}
+
+.dark .border-gray-200,
+.dark .border-gray-100,
+.dark .border-gray-300,
+.dark .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+    border-color: var(--ai-dark-border) !important;
+}
+
+.dark .bootstrap-card__value {
+    color: var(--ai-dark-text-primary) !important;
+}
+
+.dark .bootstrap-card__label,
+.dark .bootstrap-card__hint {
+    color: var(--ai-dark-text-muted) !important;
+}
+
+.dark .bootstrap-card--success {
+    border-color: rgba(52, 211, 153, 0.3) !important;
+    background: rgba(52, 211, 153, 0.1) !important;
+}
+
+.dark .bootstrap-card--danger {
+    border-color: rgba(251, 113, 133, 0.3) !important;
+    background: rgba(251, 113, 133, 0.1) !important;
+}
+
+.dark .bootstrap-card--warning {
+    border-color: rgba(251, 191, 36, 0.3) !important;
+    background: rgba(251, 191, 36, 0.1) !important;
+}
+
+.dark .bootstrap-card--primary {
+    border-color: rgba(56, 189, 248, 0.3) !important;
+    background: rgba(56, 189, 248, 0.1) !important;
+}
+
+/* ==========================================================================
+   12. MOBILE & RESPONSIVE BEHAVIOR (ALL VIEWPORTS 320PX - 1920PX)
+   ========================================================================== */
+html, body, .fi-body {
+    max-width: 100vw;
+    overflow-x: clip !important;
+}
+
+@media (max-width: 1024px) {
+    .fi-sidebar {
+        z-index: 50 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .fi-header-heading {
+        font-size: 1.25rem !important;
+    }
+
+    .fi-wi-stats-overview-stat {
+        padding: 1rem 1.15rem !important;
+    }
+
+    .fi-wi-stats-overview-stat-value {
+        font-size: 1.35rem !important;
+    }
+
+    .fi-ta-table th,
+    .fi-ta-row td {
+        padding: 0.75rem 0.85rem !important;
+    }
+
+    .fi-modal-window {
+        max-width: calc(100vw - 16px) !important;
+        margin: 8px !important;
+    }
+
+    /* Prevent mobile browser zoom on inputs */
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="search"],
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .fi-btn {
+        padding: 0.45rem 0.85rem !important;
+        font-size: 0.82rem !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .fi-header-heading {
+        font-size: 1.1rem !important;
+    }
+
+    .fi-wi-stats-overview-stat {
+        padding: 0.75rem 0.85rem !important;
+    }
+
+    .fi-wi-stats-overview-stat-value {
+        font-size: 1.2rem !important;
+    }
+
+    .fi-btn {
+        padding: 0.35rem 0.65rem !important;
+        font-size: 0.75rem !important;
+    }
+}
+
+/* ==========================================================================
+   13. GLOBAL INPUT, SELECT, DROPDOWN & MODAL CONTAINMENT (ENTERPRISE REPAIR)
+   Resolves text overflow, element overlap, RTL arrow/clear alignment,
+   and bidirectional Arabic/English labels across all application forms.
+   ========================================================================== */
+
+/* 13.1 Grid & Column Defensive Sizing */
+.fi-grid,
+.fi-sc,
+.fi-section-content {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.fi-grid-col {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.fi-fo-field-wrp,
+.fi-fo-field {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.fi-fo-field-label-col,
+.fi-fo-field-label-ctn,
+.fi-fo-field-label {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+}
+
+/* 13.2 Input Wrapper & Text Fields Containment */
+.fi-input-wrp {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.fi-input-wrp-content-ctn {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    flex: 1 1 0% !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+}
+
+.fi-input {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    text-overflow: ellipsis !important;
+}
+
+/* 13.3 Searchable Select Component Containment & Unclipped Dropdown Flow */
+.fi-fo-select-wrp,
+.fi-fo-select,
+.fi-fo-select .fi-input-wrp,
+.fi-fo-select .fi-input-wrp-content-ctn,
+.fi-select-input {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+}
+
+.fi-select-input-ctn {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+}
+
+/* Select Trigger Button */
+.fi-select-input .fi-select-input-btn {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: start !important;
+    padding-inline-start: 0.75rem !important;
+    padding-inline-end: 2.25rem !important;
+    position: relative !important;
+    cursor: pointer !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.25em 1.25em !important;
+}
+
+/* When clearable (has X icon), reserve enough padding so text never overlaps X or arrow */
+.fi-select-input .fi-select-input-ctn-clearable .fi-select-input-btn {
+    padding-inline-end: 3.75rem !important;
+}
+
+/* RTL Arrow Positioning */
+[dir="rtl"] .fi-select-input .fi-select-input-btn,
+:dir(rtl) .fi-select-input .fi-select-input-btn {
+    background-position: left 0.65rem center !important;
+}
+
+/* LTR Arrow Positioning */
+[dir="ltr"] .fi-select-input .fi-select-input-btn,
+:dir(ltr) .fi-select-input .fi-select-input-btn {
+    background-position: right 0.65rem center !important;
+}
+
+/* Value Container inside the button */
+.fi-select-input .fi-select-input-value-ctn {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+/* Single Selected Option Label: Ellipsis, Direction & Non-Overflow */
+.fi-select-input .fi-select-input-value-label {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    flex: 1 1 0% !important;
+    display: block !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    text-align: start !important;
+    unicode-bidi: plaintext !important;
+    line-height: 1.5 !important;
+}
+
+.fi-select-input .fi-select-input-placeholder {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    flex: 1 1 0% !important;
+    display: block !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    text-align: start !important;
+}
+
+/* Clear Selection Button (X) */
+.fi-select-input .fi-select-input-value-remove-btn {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 9999px !important;
+    transition: background-color 0.15s ease, color 0.15s ease !important;
+}
+
+/* RTL: Clear button sits next to the arrow (left: 2rem) */
+[dir="rtl"] .fi-select-input .fi-select-input-value-remove-btn,
+:dir(rtl) .fi-select-input .fi-select-input-value-remove-btn {
+    inset-inline-end: 2rem !important;
+    left: 2rem !important;
+    right: auto !important;
+}
+
+/* LTR: Clear button sits next to the arrow (right: 2rem) */
+[dir="ltr"] .fi-select-input .fi-select-input-value-remove-btn,
+:dir(ltr) .fi-select-input .fi-select-input-value-remove-btn {
+    inset-inline-end: 2rem !important;
+    right: 2rem !important;
+    left: auto !important;
+}
+
+/* 13.4 Multi-Select Badges & Tokens */
+.fi-select-input .fi-select-input-value-badges-ctn {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.35rem !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    align-items: center !important;
+}
+
+.fi-select-input .fi-select-input-value-badges-ctn .fi-badge {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 0.2rem 0.5rem !important;
+    border-radius: 6px !important;
+}
+
+.fi-select-input .fi-select-input-value-badges-ctn .fi-badge-label-ctn {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    flex: 1 1 auto !important;
+    overflow: hidden !important;
+}
+
+.fi-select-input .fi-select-input-value-badges-ctn .fi-badge-label {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    display: block !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    unicode-bidi: plaintext !important;
+}
+
+.fi-select-input .fi-select-input-value-badges-ctn .fi-badge-delete-btn {
+    flex-shrink: 0 !important;
+    margin-inline-start: 0.25rem !important;
+}
+
+/* 13.5 Native Select Element Containment */
+select.fi-select-input {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-align: start !important;
+    padding-inline-start: 0.75rem !important;
+    padding-inline-end: 2.25rem !important;
+}
+
+/* 13.6 Dropdown Floating Menu Panel */
+.fi-select-input .fi-dropdown-panel,
+.fi-dropdown-panel {
+    z-index: 99999 !important;
+    min-width: 100%;
+    max-width: min(calc(100vw - 24px), 640px) !important;
+    max-height: 280px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    color: #0F172A !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Ensure fixed-positioned dropdowns inside modals/tables preserve trigger button width */
+.fi-select-input .fi-dropdown-panel[style*="fixed"],
+.fi-dropdown-panel[style*="fixed"] {
+    min-width: auto !important;
+}
+
+.fi-select-input-search-ctn {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 10 !important;
+    padding: 0.5rem !important;
+    box-sizing: border-box !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+    background-color: #FFFFFF !important;
+}
+
+.dark .fi-select-input-search-ctn {
+    background-color: var(--ai-dark-card, #1E293B) !important;
+    border-bottom-color: var(--ai-dark-border, #334155) !important;
+}
+
+.fi-select-input-search-ctn input.fi-input {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    border-radius: 6px !important;
+    padding: 0.4rem 0.65rem !important;
+    text-align: start !important;
+    background-color: #F8FAFC !important;
+    border: 1px solid #CBD5E1 !important;
+    color: #0F172A !important;
+}
+
+.dark .fi-select-input-search-ctn input.fi-input {
+    background-color: var(--ai-dark-input, #172235) !important;
+    border-color: var(--ai-dark-border, #334155) !important;
+    color: var(--ai-dark-text-primary, #F8FAFC) !important;
+}
+
+.fi-select-input-options-ctn {
+    margin: 0 !important;
+    padding: 0.25rem 0 !important;
+    list-style: none !important;
+}
+
+.fi-select-input-option,
+.fi-dropdown-list-item {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0.55rem 0.85rem !important;
+    line-height: 1.4 !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: start !important;
+    cursor: pointer !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    unicode-bidi: plaintext !important;
+}
+
+.fi-select-input-option > span,
+.fi-dropdown-list-item > span {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    line-height: 1.4 !important;
+}
+
+/* 13.7 Prefixes, Suffixes & Input Groups */
+.fi-input-wrp-prefix,
+.fi-input-wrp-suffix {
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+    font-size: 0.875rem !important;
+    padding-inline: 0.75rem !important;
+    user-select: none !important;
+}
+
+.fi-input-wrp-label {
+    white-space: nowrap !important;
+}
+
+/* 13.8 Modal Windows & Responsive Grid Stacking */
+.fi-modal-window {
+    min-width: 0 !important;
+    max-width: min(calc(100vw - 32px), 860px) !important;
+    box-sizing: border-box !important;
+}
+
+.fi-modal-content {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-y: visible !important;
+}
+
+@media (max-width: 640px) {
+    .fi-modal-window .fi-grid,
+    .fi-modal-content .fi-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .fi-modal-window .fi-grid-col,
+    .fi-modal-content .fi-grid-col {
+        grid-column: span 1 / span 1 !important;
+    }
+}
+
+/* 13.9 Light Mode vs. Dark Mode Contrast */
+.fi-select-input .fi-select-input-btn {
+    background-color: #FFFFFF !important;
+    border-color: #E2E8F0 !important;
+    color: #0F172A !important;
+}
+
+.fi-select-input .fi-select-input-placeholder {
+    color: #94A3B8 !important;
+}
+
+.fi-select-input .fi-select-input-value-remove-btn {
+    color: #64748B !important;
+}
+
+.fi-select-input .fi-select-input-value-remove-btn:hover {
+    color: #0F172A !important;
+    background-color: #F1F5F9 !important;
+}
+
+.dark .fi-select-input .fi-select-input-btn {
+    background-color: var(--ai-dark-input, #172235) !important;
+    border-color: var(--ai-dark-border, #334155) !important;
+    color: var(--ai-dark-text-primary, #F8FAFC) !important;
+}
+
+.dark .fi-select-input .fi-select-input-placeholder {
+    color: var(--ai-dark-text-secondary, #94A3B8) !important;
+}
+
+.dark .fi-select-input .fi-select-input-value-remove-btn {
+    color: var(--ai-dark-text-secondary, #94A3B8) !important;
+}
+
+.dark .fi-select-input .fi-select-input-value-remove-btn:hover {
+    color: #FFFFFF !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .fi-select-input .fi-dropdown-panel {
+    background-color: var(--ai-dark-card, #1E293B) !important;
+    border-color: var(--ai-dark-border, #334155) !important;
+    color: var(--ai-dark-text-primary, #F8FAFC) !important;
+}
+
+.fi-select-input-option:hover,
+.fi-dropdown-list-item:hover,
+.fi-select-input-option.fi-selected,
+.fi-select-input-option[aria-selected="true"] {
+    background-color: #F1F5F9 !important;
+    color: #0F172A !important;
+}
+
+.dark .fi-select-input-option:hover,
+.dark .fi-dropdown-list-item:hover,
+.dark .fi-select-input-option.fi-selected,
+.dark .fi-select-input-option[aria-selected="true"] {
+    background-color: var(--ai-dark-table-row-hover, #1E2D44) !important;
+    color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   SECTION 14: ENTERPRISE UI/UX STABILIZATION & PRODUCTION ENHANCEMENTS
+   Scope: Modals System, Z-Index Hierarchy, Date Pickers, Responsive Layouts,
+          Student & Parent Safe-Areas, Image Previews, and Action Feedback
+   ========================================================================== */
+
+/* 14.1 Flatpickr Datepicker & Calendar Z-Index Safety */
+.flatpickr-calendar {
+    z-index: 999999 !important;
+    border-radius: var(--ai-radius, 12px) !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1) !important;
+    font-family: var(--font-family-tajawal) !important;
+}
+
+/* 14.2 Modal Sizing & Stacking Hierarchy */
+.fi-modal-window {
+    border-radius: var(--ai-radius-md, 14px) !important;
+    border: 1px solid var(--ai-line, #E2E8F0) !important;
+    box-shadow: var(--ai-shadow-lg) !important;
+    max-height: calc(100dvh - 2.5rem) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    margin: 1.25rem auto !important;
+}
+
+.dark .fi-modal-window {
+    background-color: var(--ai-dark-card, #172033) !important;
+    border-color: var(--ai-dark-border, #334155) !important;
+}
+
+.fi-modal-header {
+    flex-shrink: 0 !important;
+    padding: 1.15rem 1.5rem !important;
+    border-bottom: 1px solid var(--ai-line, #E2E8F0) !important;
+    background: #FFFFFF !important;
+}
+
+.dark .fi-modal-header {
+    background: var(--ai-dark-card, #172033) !important;
+    border-bottom-color: var(--ai-dark-border, #334155) !important;
+}
+
+.fi-modal-content {
+    flex: 1 1 auto !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 1.5rem !important;
+}
+
+.fi-modal-footer {
+    flex-shrink: 0 !important;
+    position: sticky !important;
+    bottom: 0 !important;
+    z-index: 10 !important;
+    padding: 1rem 1.5rem !important;
+    background: #F8FAFC !important;
+    border-top: 1px solid var(--ai-line, #E2E8F0) !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 0.75rem !important;
+}
+
+.dark .fi-modal-footer {
+    background: var(--ai-dark-bg, #0B1220) !important;
+    border-top-color: var(--ai-dark-border, #334155) !important;
+}
+
+/* Modal Responsive Boundary (Mobile Devices <= 640px) */
+@media (max-width: 640px) {
+    .fi-modal-window {
+        width: calc(100vw - 1rem) !important;
+        max-width: calc(100vw - 1rem) !important;
+        margin: 0.5rem auto !important;
+        max-height: calc(100dvh - 1rem) !important;
+    }
+    
+    .fi-modal-header {
+        padding: 1rem 1.15rem !important;
+    }
+    
+    .fi-modal-content {
+        padding: 1rem 1.15rem !important;
+    }
+    
+    .fi-modal-footer {
+        padding: 0.85rem 1.15rem !important;
+    }
+}
+
+/* 14.3 Student & Parent Mobile Safe Area Padding */
+.fi-panel-student .fi-main-ctn,
+.fi-panel-student .fi-page,
+.fi-panel-parent .fi-main-ctn,
+.fi-panel-parent .fi-page {
+    padding-bottom: 5.5rem !important;
+}
+
+@media (min-width: 1024px) {
+    .fi-panel-student .fi-main-ctn,
+    .fi-panel-student .fi-page,
+    .fi-panel-parent .fi-main-ctn,
+    .fi-panel-parent .fi-page {
+        padding-bottom: 2rem !important;
+    }
+}
+
+/* 14.4 Responsive Table Area Containment */
+.fi-ta-ctn {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: var(--ai-radius, 12px) !important;
+    overflow: hidden !important;
+}
+
+.fi-ta-content {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    width: 100% !important;
+}
+
+/* 14.5 Image Previews & Zoom Modal */
+.ai-image-preview-modal-img {
+    max-height: 80vh !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 14.6 Button Loading & Double-Click Protection Feedback */
+.fi-btn[disabled],
+.fi-btn.is-disabled {
+    opacity: 0.65 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+
+/* 14.7 Typography & RTL Bidi Neutralization for Code, Phones, and Dates */
+.fi-ta-cell-phone,
+.phone-number,
+input[type="tel"],
+input[type="number"],
+.currency-amount {
+    direction: ltr !important;
+    text-align: right !important;
+    unicode-bidi: embed !important;
+}
+
+

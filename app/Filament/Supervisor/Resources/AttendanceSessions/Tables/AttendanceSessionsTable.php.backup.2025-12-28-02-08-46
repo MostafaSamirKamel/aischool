@@ -1,0 +1,82 @@
+<?php
+
+namespace App\Filament\Supervisor\Resources\AttendanceSessions\Tables;
+
+use Filament\Actions\ViewAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\BadgeColumn;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Table;
+
+class AttendanceSessionsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('attendance_date')
+                    ->label('تاريخ الجلسة')
+                    ->date('Y-m-d')
+                    ->sortable()
+                    ->searchable(),
+
+                TextColumn::make('group.name')
+                    ->label('المجموعة')
+                    ->searchable(),
+
+                TextColumn::make('instructor.user.name')
+                    ->label('المدرس'),
+
+                TextColumn::make('attendances_count')
+                    ->label('الحاضرون')
+                    ->counts([
+                        'attendances' => fn ($query) => $query->where('status', 'present')
+                    ])
+                    ->badge()
+                    ->color('success'),
+
+                TextColumn::make('absents_count')
+                    ->label('الغائبون')
+                    ->counts([
+                        'attendances' => fn ($query) => $query->where('status', 'absent')
+                    ])
+                    ->badge()
+                    ->color('danger'),
+
+                TextColumn::make('late_count')
+                    ->label('المتأخرون')
+                    ->counts([
+                        'attendances' => fn ($query) => $query->where('status', 'late')
+                    ])
+                    ->badge()
+                    ->color('warning'),
+
+                BadgeColumn::make('status')
+                    ->label('حالة الجلسة')
+                    ->colors([
+                        'warning' => 'pending',
+                        'success' => 'completed',
+                        'danger' => 'cancelled',
+                    ])
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'pending' => 'قيد الانتظار',
+                        'completed' => 'مكتملة',
+                        'cancelled' => 'ملغاة',
+                        default => $state,
+                    }),
+            ])
+            ->filters([
+                SelectFilter::make('status')
+                    ->label('حالة الجلسة')
+                    ->options([
+                        'pending' => 'قيد الانتظار',
+                        'completed' => 'مكتملة',
+                        'cancelled' => 'ملغاة',
+                    ]),
+            ])
+            ->recordActions([
+                ViewAction::make(),
+            ])
+            ->defaultSort('attendance_date', 'desc');
+    }
+}
