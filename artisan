@@ -13,11 +13,32 @@ require __DIR__.'/vendor/autoload.php';
 /** @var Application $app */
 $app = require_once __DIR__.'/bootstrap/app.php';
 
+// Ensure required runtime storage directories exist
+foreach ([
+    __DIR__.'/storage/framework/cache/data',
+    __DIR__.'/storage/framework/sessions',
+    __DIR__.'/storage/framework/views',
+    __DIR__.'/storage/logs',
+    __DIR__.'/bootstrap/cache',
+    __DIR__.'/database',
+] as $runtimeDir) {
+    if (!is_dir($runtimeDir)) {
+        @mkdir($runtimeDir, 0777, true);
+    }
+}
+
+// Ensure SQLite database file exists if SQLite connection is used
+$sqlitePath = __DIR__.'/database/database.sqlite';
+if (!file_exists($sqlitePath)) {
+    @touch($sqlitePath);
+}
+
 // In automated deployment platforms (e.g. Wasmer, cloud build hooks) where migrations
 // are invoked non-interactively without --force, automatically inject --force to prevent prompts
 if (isset($_SERVER['argv']) && in_array('migrate', $_SERVER['argv']) && !in_array('--force', $_SERVER['argv'])) {
     $_SERVER['argv'][] = '--force';
 }
+
 
 $status = $app->handleCommand(new ArgvInput);
 

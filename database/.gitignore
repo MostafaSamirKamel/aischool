@@ -1,1 +1,5 @@
-*.sqlite*
+*.sqlite-journal
+*.sqlite3-journal
+*.bak*
+*.pre_*
+backups/

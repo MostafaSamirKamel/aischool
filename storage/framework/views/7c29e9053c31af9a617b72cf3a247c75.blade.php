@@ -1,1 +1,0 @@
-<x-filament::icon icon="o-envelope" class="w-5 h-5" />

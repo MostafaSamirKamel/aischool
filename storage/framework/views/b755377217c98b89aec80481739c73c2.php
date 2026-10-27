@@ -1,1 +1,0 @@
-<?php echo $__env->make('filament.components.screen-guide-modal', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\ai_school_new-main (1)\ai_school_new-main\storage\framework/views/9839fc4f9db865a4ef6c15f5afc7c89b.blade.php ENDPATH**/ ?>

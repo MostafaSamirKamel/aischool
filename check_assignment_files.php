@@ -50,7 +50,7 @@ if ($assignment->attachment_path) {
 echo "\n📝 Storage Configuration:\n";
 echo "   Default Disk: " . config('filesystems.default') . "\n";
 echo "   Public Disk Root: " . storage_path('app/public') . "\n";
-echo "   Public URL: " . env('APP_URL') . '/storage\n";
+echo "   Public URL: " . env('APP_URL') . "/storage\n";
 
 echo "\n🔗 Symlink Check:\n";
 $symlinkPath = public_path('storage');
