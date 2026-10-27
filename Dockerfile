@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1
 # ==========================================
 # Stage 1: Build Frontend Assets (Vite)
 # ==========================================
@@ -52,7 +53,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Install official PHP extension installer
-ADD --chmod=0755 https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
+RUN curl -sSLf -o /usr/local/bin/install-php-extensions https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions \
+    && chmod +x /usr/local/bin/install-php-extensions
 
 # Install required PHP extensions
 RUN install-php-extensions \
