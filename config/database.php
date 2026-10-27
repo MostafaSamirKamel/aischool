@@ -16,7 +16,16 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => (function () {
+        $connection = env('DB_CONNECTION', 'sqlite');
+        if ($connection === 'mysql') {
+            $hasRemoteHost = !empty(env('DB_URL')) || !empty(env('DATABASE_URL')) || (!empty(env('DB_HOST')) && !in_array(env('DB_HOST'), ['127.0.0.1', 'localhost', 'db']));
+            if (!$hasRemoteHost && file_exists(database_path('database.sqlite'))) {
+                return 'sqlite';
+            }
+        }
+        return $connection;
+    })(),
 
     /*
     |--------------------------------------------------------------------------

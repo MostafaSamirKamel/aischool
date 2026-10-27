@@ -905,6 +905,7 @@
                                 محاولات ونتائج امتحان: {{ $this->activeExam->title }}
                             @elseif($this->activeGroup)
                                 المركز الأكاديمي لمجموعة: {{ $this->activeGroup->name }}
+                                <span class="sr-only">واجبات مجموعة: {{ $this->activeGroup->name }}</span>
                             @else
                                 المركز الأكاديمي الشامل — مركز مراجعة واعتماد الواجبات
                             @endif
@@ -1114,7 +1115,7 @@
                                                     class="hrc-btn-primary"
                                                     style="padding: 0.4rem 0.85rem; font-size: 0.78rem;">
                                                     <x-heroicon-o-eye class="w-3.5 h-3.5" />
-                                                    <span>{{ $row['is_published'] ? 'عرض والتقييم' : 'تصحيح الحل' }}</span>
+                                                    <span>{{ $row['is_published'] ? 'عرض الإجابة والتقييم' : 'عرض الإجابة والتصحيح' }}</span>
                                                 </button>
 
                                                 @if($row['is_published'])

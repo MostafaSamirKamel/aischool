@@ -9,10 +9,6 @@ define('LARAVEL_START', microtime(true));
 // Register the Composer autoloader...
 require __DIR__.'/vendor/autoload.php';
 
-// Bootstrap Laravel and handle the command...
-/** @var Application $app */
-$app = require_once __DIR__.'/bootstrap/app.php';
-
 // Ensure required runtime storage directories exist
 foreach ([
     __DIR__.'/storage/framework/cache/data',
@@ -33,11 +29,27 @@ if (!file_exists($sqlitePath)) {
     @touch($sqlitePath);
 }
 
+// Resilient database fallback: If no explicit remote DB host or URL is given in environment,
+// default to pre-migrated sqlite database to ensure instant edge and serverless operation.
+if (empty($_ENV['DB_HOST']) && empty(getenv('DB_HOST')) && empty($_ENV['DATABASE_URL']) && empty(getenv('DATABASE_URL'))) {
+    if (file_exists($sqlitePath)) {
+        $_ENV['DB_CONNECTION'] = 'sqlite';
+        putenv('DB_CONNECTION=sqlite');
+        $realDbPath = realpath($sqlitePath) ?: $sqlitePath;
+        $_ENV['DB_DATABASE'] = $realDbPath;
+        putenv("DB_DATABASE={$realDbPath}");
+    }
+}
+
 // In automated deployment platforms (e.g. Wasmer, cloud build hooks) where migrations
 // are invoked non-interactively without --force, automatically inject --force to prevent prompts
 if (isset($_SERVER['argv']) && in_array('migrate', $_SERVER['argv']) && !in_array('--force', $_SERVER['argv'])) {
     $_SERVER['argv'][] = '--force';
 }
+
+// Bootstrap Laravel and handle the command...
+/** @var Application $app */
+$app = require_once __DIR__.'/bootstrap/app.php';
 
 
 $status = $app->handleCommand(new ArgvInput);

@@ -230,7 +230,7 @@ class ManageAssignmentSubmissions extends Page
             $this->loadSubmissions();
 
             Notification::make()
-                ->title('تم حفظ مسودة التقييم بنجاح 📝')
+                ->title('تم حفظ مسودة التقييم بنجاح')
                 ->body('تم حفظ الدرجة والملاحظات كمسودة ولن تظهر للطالب حتى تقوم باعتمادها ونشرها.')
                 ->info()
                 ->send();
@@ -288,7 +288,7 @@ class ManageAssignmentSubmissions extends Page
             $this->loadSubmissions();
 
             Notification::make()
-                ->title('تم اعتماد ونشر النتيجة رسمياً! 🌟')
+                ->title('تم اعتماد ونشر التقييم بنجاح')
                 ->body("تم التصحيح وحفظ النتيجة ونشرها فوراً! أصبحت الدرجة ({$this->score} / {$maxScore}) وملاحظاتك معتمدة ومنشورة للطالب وولي الأمر رسمياً.")
                 ->success()
                 ->send();
