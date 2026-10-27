@@ -45,12 +45,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', env('DB_NAME', env('MYSQL_DATABASE', 'laravel'))),
-            'username' => env('DB_USERNAME', env('DB_USER', env('MYSQL_USER', 'root'))),
-            'password' => env('DB_PASSWORD', env('DB_PASS', env('MYSQL_PASSWORD', ''))),
+            'url' => env('DB_URL', env('DATABASE_URL')),
+            'host' => env('DB_HOST', env('DATABASE_HOST', env('MYSQL_HOST', '127.0.0.1'))),
+            'port' => env('DB_PORT', env('DATABASE_PORT', env('MYSQL_PORT', '3306'))),
+            'database' => env('DB_DATABASE', env('DB_NAME', env('DATABASE_NAME', env('MYSQL_DATABASE', 'laravel')))),
+            'username' => env('DB_USERNAME', env('DB_USER', env('DATABASE_USER', env('MYSQL_USER', 'root')))),
+            'password' => env('DB_PASSWORD', env('DB_PASS', env('DATABASE_PASSWORD', env('MYSQL_PASSWORD', '')))),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => env('DB_CHARSET', 'utf8mb4'),
             'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),

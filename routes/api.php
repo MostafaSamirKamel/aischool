@@ -97,3 +97,61 @@ Route::middleware(['auth:sanctum', 'api.rate.limit'])->group(function () {
         Route::post('/', [AttendanceController::class, 'store']);
     });
 });
+
+// Diagnostic & Cloud migration endpoints
+Route::get('/diag', function () {
+    $results = [];
+    $results['app_key_set'] = !empty(config('app.key'));
+    $results['session_driver'] = config('session.driver');
+    $results['db_connection'] = config('database.default');
+    
+    try {
+        $db = config('database.connections.' . config('database.default'));
+        $results['db_config'] = [
+            'host' => $db['host'] ?? null,
+            'port' => $db['port'] ?? null,
+            'database' => $db['database'] ?? null,
+            'username' => $db['username'] ?? null,
+        ];
+        
+        \Illuminate\Support\Facades\DB::connection()->getPdo();
+        $results['db_connected'] = true;
+        
+        $tables = \Illuminate\Support\Facades\DB::select('SHOW TABLES');
+        $results['tables_count'] = count($tables);
+        $results['has_users'] = \Illuminate\Support\Facades\Schema::hasTable('users');
+        $results['has_sessions'] = \Illuminate\Support\Facades\Schema::hasTable('sessions');
+        if ($results['has_users']) {
+            $results['users_count'] = \App\Models\User::count();
+        }
+    } catch (\Throwable $e) {
+        $results['db_connected'] = false;
+        $results['db_error'] = $e->getMessage();
+    }
+    
+    return response()->json($results);
+});
+
+Route::get('/diag/migrate', function () {
+    try {
+        \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
+        $migrateOutput = \Illuminate\Support\Facades\Artisan::output();
+        
+        \Illuminate\Support\Facades\Artisan::call('db:seed', ['--class' => 'Database\\Seeders\\TenantSeeder', '--force' => true]);
+        \Illuminate\Support\Facades\Artisan::call('db:seed', ['--class' => 'Database\\Seeders\\RolePermissionSeeder', '--force' => true]);
+        \Illuminate\Support\Facades\Artisan::call('db:seed', ['--class' => 'Database\\Seeders\\DemoUserSeeder', '--force' => true]);
+        $seedOutput = \Illuminate\Support\Facades\Artisan::output();
+        
+        return response()->json([
+            'status' => 'success',
+            'migrate_output' => $migrateOutput,
+            'seed_output' => $seedOutput,
+            'users_count' => \App\Models\User::count(),
+        ]);
+    } catch (\Throwable $e) {
+        return response()->json([
+            'status' => 'error',
+            'error' => $e->getMessage(),
+        ], 500);
+    }
+});
