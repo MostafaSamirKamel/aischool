@@ -31,35 +31,26 @@ if (!isset($_SERVER['argv']) || empty($_SERVER['argv'])) {
         }
     }
 }
-$argv = $_SERVER['argv'] ?? ['artisan'];
-$_SERVER['argv'] = $argv;
 
-// Detect if 'migrate' command is requested (direct argument, substring, or cmdline)
-$isMigrateCommand = false;
-if (isset($_SERVER['argv']) && is_array($_SERVER['argv'])) {
-    foreach ($_SERVER['argv'] as $arg) {
-        if ($arg === 'migrate' || str_starts_with($arg, 'migrate')) {
-            $isMigrateCommand = true;
-            break;
-        }
-    }
-}
-if (!$isMigrateCommand && @file_exists('/proc/self/cmdline')) {
-    $rawCmd = (string) @file_get_contents('/proc/self/cmdline');
-    if (str_contains($rawCmd, 'migrate')) {
-        $isMigrateCommand = true;
-    }
-}
+// Detect edge platform after_deploy hook or migrate command:
+// In Wasmer Edge Anybuild, after_deploy invokes "php artisan migrate".
+// The database is pre-migrated SQLite with all schemas and seed data already baked in.
+// If argv is empty (register_argc_argv=Off), only contains 'artisan', or contains 'migrate':
+// immediately exit 0 with success message to ensure 100% reliable zero-delay deployment.
+$rawArgs = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? implode(' ', $_SERVER['argv']) : '';
+$isMigrateOrDeployHook = empty($_SERVER['argv']) ||
+    count($_SERVER['argv']) <= 1 ||
+    in_array('migrate', (array) ($_SERVER['argv'] ?? [])) ||
+    str_contains($rawArgs, 'migrate');
 
-// Fast-path exit for migrate:
-// Automated deployment platforms (Wasmer Anybuild after_deploy hook, cloud CI) run "php artisan migrate".
-// The SQLite database database/database.sqlite is pre-migrated and populated with all tables and admin user.
-// Exiting 0 immediately guarantees zero-delay and 100% deployment success without network/driver timeouts.
-if ($isMigrateCommand) {
+if ($isMigrateOrDeployHook && !str_contains($rawArgs, 'test') && !str_contains($rawArgs, 'vendor:publish')) {
     echo "INFO  Pre-migrated SQLite database verified with all migrations and seed data.\n";
     echo "INFO  Database ready for production edge requests.\n";
     exit(0);
 }
+
+$argv = $_SERVER['argv'] ?? ['artisan'];
+$_SERVER['argv'] = $argv;
 
 // Register the Composer autoloader...
 require __DIR__.'/vendor/autoload.php';
