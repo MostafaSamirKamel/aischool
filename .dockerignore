@@ -33,6 +33,7 @@ storage/pail/*
 database/*.sqlite-journal
 database/*.sqlite3-journal
 database/*.bak*
+database/backups/*
 !database/database.sqlite
 
 # Temporary / testing files
@@ -40,6 +41,9 @@ tests
 phpunit.xml
 .phpunit.cache
 .phpunit.result.cache
+exams_qa
+reports
+.styling_checkpoint_backup
 *.log
 *.bak
 *.zip

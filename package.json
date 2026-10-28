@@ -4,6 +4,7 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
+        "postbuild": "node -e \"if (process.env.CI) try{fs.rmSync('node_modules',{recursive:true,force:true})}catch(e){}\"",
         "dev": "vite"
     },
     "devDependencies": {

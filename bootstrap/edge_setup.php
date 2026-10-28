@@ -15,3 +15,11 @@ if (file_exists('/opt/assets/php.ini')) {
         file_put_contents('/opt/assets/php.ini', $ini);
     }
 }
+
+// Prune large non-runtime backup files to keep edge container lightweight (<150MB)
+$backupDir = __DIR__ . '/../database/backups';
+if (is_dir($backupDir)) {
+    foreach (glob($backupDir . '/*.sqlite*') as $f) {
+        @unlink($f);
+    }
+}
