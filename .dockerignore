@@ -29,9 +29,11 @@ storage/pail/*
 !storage/framework/sessions/.gitkeep
 !storage/framework/views/.gitkeep
 
-# Local database files
-database/*.sqlite
+# Local database files (retain pre-migrated sqlite database for instant deployment)
 database/*.sqlite-journal
+database/*.sqlite3-journal
+database/*.bak*
+!database/database.sqlite
 
 # Temporary / testing files
 tests

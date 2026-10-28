@@ -42,9 +42,14 @@ if (empty($_ENV['DB_HOST']) && empty(getenv('DB_HOST')) && empty($_ENV['DATABASE
 }
 
 // In automated deployment platforms (e.g. Wasmer, cloud build hooks) where migrations
-// are invoked non-interactively without --force, automatically inject --force to prevent prompts
-if (isset($_SERVER['argv']) && in_array('migrate', $_SERVER['argv']) && !in_array('--force', $_SERVER['argv'])) {
-    $_SERVER['argv'][] = '--force';
+// are invoked non-interactively without --force, automatically inject --force and --no-interaction
+if (isset($_SERVER['argv']) && in_array('migrate', $_SERVER['argv'])) {
+    if (!in_array('--force', $_SERVER['argv'])) {
+        $_SERVER['argv'][] = '--force';
+    }
+    if (!in_array('--no-interaction', $_SERVER['argv']) && !in_array('-n', $_SERVER['argv'])) {
+        $_SERVER['argv'][] = '--no-interaction';
+    }
 }
 
 // Bootstrap Laravel and handle the command...

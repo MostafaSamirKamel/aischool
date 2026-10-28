@@ -1,21 +1,6 @@
 # syntax=docker/dockerfile:1
 # ==========================================
-# Stage 1: Build Frontend Assets (Vite)
-# ==========================================
-FROM node:22-bookworm-slim AS frontend-builder
-WORKDIR /app
-
-COPY package.json package-lock.json ./
-RUN npm ci
-
-COPY vite.config.js ./
-COPY resources/ resources/
-COPY public/ public/
-
-RUN npm run build
-
-# ==========================================
-# Stage 2: Install PHP Dependencies (Composer)
+# Stage 1: Install PHP Dependencies (Composer)
 # ==========================================
 FROM composer:2 AS composer-builder
 WORKDIR /app
@@ -31,6 +16,23 @@ RUN composer install \
 
 COPY . .
 RUN composer dump-autoload --optimize --no-dev --ignore-platform-reqs
+
+# ==========================================
+# Stage 2: Build Frontend Assets (Vite)
+# ==========================================
+FROM node:22-bookworm-slim AS frontend-builder
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY vite.config.js ./
+COPY resources/ resources/
+COPY public/ public/
+# Copy vendor from composer-builder so Filament CSS references can be resolved by Vite
+COPY --from=composer-builder /app/vendor ./vendor
+
+RUN npm run build
 
 # ==========================================
 # Stage 3: Production Runtime (PHP-FPM + Nginx)
