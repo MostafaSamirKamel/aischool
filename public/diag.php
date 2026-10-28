@@ -43,6 +43,7 @@ try {
         PDO::ATTR_TIMEOUT => 3,
     ]);
     $res['pdo_connected'] = true;
+    $res['driver'] = 'mysql';
 
     $stmt = $pdo->query("SHOW TABLES");
     $tables = $stmt->fetchAll(PDO::FETCH_COLUMN);
@@ -59,8 +60,35 @@ try {
         }
     }
 } catch (\Throwable $e) {
-    $res['pdo_connected'] = false;
-    $res['pdo_error'] = $e->getMessage();
+    $res['mysql_error'] = $e->getMessage();
+    
+    // SQLite Fallback check
+    $sqlitePath = __DIR__ . '/../database/database.sqlite';
+    $res['sqlite_exists'] = file_exists($sqlitePath);
+    if ($res['sqlite_exists']) {
+        try {
+            $pdo = new PDO('sqlite:' . realpath($sqlitePath));
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $res['pdo_connected'] = true;
+            $res['driver'] = 'sqlite';
+            $tables = $pdo->query("SELECT name FROM sqlite_master WHERE type='table'")->fetchAll(PDO::FETCH_COLUMN);
+            $res['tables_count'] = count($tables);
+            $res['has_users_table'] = in_array('users', $tables);
+            if ($res['has_users_table']) {
+                $res['users_count'] = (int) $pdo->query("SELECT count(*) FROM users")->fetchColumn();
+                if ($res['users_count'] > 0) {
+                    $usersStmt = $pdo->query("SELECT id, name, email, is_super_admin FROM users LIMIT 10");
+                    $res['sample_users'] = $usersStmt->fetchAll(PDO::FETCH_ASSOC);
+                }
+            }
+        } catch (\Throwable $sqle) {
+            $res['pdo_connected'] = false;
+            $res['pdo_error'] = $sqle->getMessage();
+        }
+    } else {
+        $res['pdo_connected'] = false;
+        $res['pdo_error'] = $e->getMessage();
+    }
 }
 
 // Handle action=migrate

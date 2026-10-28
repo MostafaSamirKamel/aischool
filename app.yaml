@@ -1,0 +1,25 @@
+kind: wasmer.io/App.v0
+owner: mostafasamirkamel
+name: aischool
+package: .
+debug: false
+env:
+  APP_NAME: "AI School"
+  APP_ENV: production
+  APP_DEBUG: "false"
+  APP_KEY: "base64:BZAGK0XVvoqnGNkkFs+t6N8kIieDYho6viEBsjonpu4="
+  APP_URL: "https://aischool.wasmer.app"
+  DB_CONNECTION: sqlite
+  DB_DATABASE: /app/database/database.sqlite
+  SESSION_DRIVER: cookie
+  CACHE_STORE: array
+  QUEUE_CONNECTION: sync
+health_checks:
+  - method: GET
+    path: /up
+    interval: 10s
+    timeout: 3s
+    unhealthy_threshold: 3
+    healthy_threshold: 1
+    expected_status_codes:
+      - 200

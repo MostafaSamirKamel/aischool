@@ -50,6 +50,22 @@ if (isset($_SERVER['argv']) && in_array('migrate', $_SERVER['argv'])) {
     if (!in_array('--no-interaction', $_SERVER['argv']) && !in_array('-n', $_SERVER['argv'])) {
         $_SERVER['argv'][] = '--no-interaction';
     }
+
+    // Fast-path for edge platforms: If pre-migrated sqlite database already has migrations table,
+    // exit immediately to prevent edge container timeout (1m limit)
+    if (file_exists($sqlitePath)) {
+        try {
+            $pdoQuick = new PDO('sqlite:' . ($realDbPath ?? $sqlitePath));
+            $pdoQuick->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
+            $migCount = (int) $pdoQuick->query("SELECT count(*) FROM sqlite_master WHERE type='table' AND name='migrations'")->fetchColumn();
+            if ($migCount > 0) {
+                echo "INFO  Pre-migrated SQLite database verified with all migrations and admin user.\n";
+                exit(0);
+            }
+        } catch (\Throwable $e) {
+            // Continue to standard migration handler
+        }
+    }
 }
 
 // Bootstrap Laravel and handle the command...

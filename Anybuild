@@ -1,0 +1,31 @@
+# Anybuild configuration for aischool on Wasmer Edge
+# https://anybuild.run
+
+load("//anybuild/tools:laravel.bzl", "laravel_build", "laravel_config", "laravel_serve")
+
+config = laravel_config(
+    schema = 1,
+    php_version = "8.3.29",
+    node_version = "24",
+    node_package_manager = "npm",
+    node_build_command = "npm run build",
+    php_framework = "laravel",
+    commands = {
+        "start": "php -S 0.0.0.0:8080 -t public",
+        "after_deploy": "echo 'aischool ready'",
+    },
+)
+
+build = laravel_build(
+    config = config,
+)
+
+laravel_serve(
+    config = config,
+    build = build,
+    name = "aischool",
+    commands = {
+        "start": "php -S 0.0.0.0:8080 -t public",
+        "after_deploy": "echo 'aischool ready'",
+    },
+)
