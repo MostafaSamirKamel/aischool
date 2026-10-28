@@ -15,6 +15,10 @@ Route::get('/', DashboardRedirectController::class)->name('dashboard.redirect');
 Route::redirect('/portal', '/student-portal/');
 Route::redirect('/pwa', '/student-portal/');
 
+// Dedicated lightweight edge health check endpoints
+Route::get('/health', fn () => response('OK', 200, ['Content-Type' => 'text/plain']));
+Route::get('/healthz', fn () => response('OK', 200, ['Content-Type' => 'text/plain']));
+
 // Diagnostic & Emergency Migration Endpoint for Cloud / Wasmer deployments
 Route::withoutMiddleware([
     \Illuminate\Session\Middleware\StartSession::class,

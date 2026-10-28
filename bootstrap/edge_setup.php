@@ -10,17 +10,9 @@ if (!file_exists($envFile) && file_exists($envExample)) {
 // Ensure register_argc_argv = On and variables_order = "EGPCS" in /opt/assets/php.ini (Anybuild edge runtime)
 if (file_exists('/opt/assets/php.ini')) {
     $ini = (string) file_get_contents('/opt/assets/php.ini');
-    $modified = false;
-    if (str_contains($ini, 'register_argc_argv = Off')) {
-        $ini = str_replace('register_argc_argv = Off', 'register_argc_argv = On', $ini);
-        $modified = true;
-    }
-    if (str_contains($ini, 'variables_order = "GPCS"')) {
-        $ini = str_replace('variables_order = "GPCS"', 'variables_order = "EGPCS"', $ini);
-        $modified = true;
-    }
-    if ($modified) {
-        file_put_contents('/opt/assets/php.ini', $ini);
+    if (!str_contains($ini, 'register_argc_argv = On')) {
+        $append = "\n; Edge runtime overrides\nregister_argc_argv = On\nvariables_order = \"EGPCS\"\ndisplay_errors = On\n";
+        file_put_contents('/opt/assets/php.ini', $ini . $append);
     }
 }
 
