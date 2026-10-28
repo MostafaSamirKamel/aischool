@@ -23,6 +23,17 @@ foreach ([
     }
 }
 
+// Ensure environment file and APP_KEY exist for zero-config edge/serverless runtime
+$envFile = __DIR__.'/.env';
+$envExample = __DIR__.'/.env.example';
+if (!file_exists($envFile) && file_exists($envExample)) {
+    @copy($envExample, $envFile);
+}
+if (empty($_ENV['APP_KEY']) && empty(getenv('APP_KEY'))) {
+    $_ENV['APP_KEY'] = 'base64:BZAGK0XVvoqnGNkkFs+t6N8kIieDYho6viEBsjonpu4=';
+    putenv('APP_KEY=base64:BZAGK0XVvoqnGNkkFs+t6N8kIieDYho6viEBsjonpu4=');
+}
+
 // Ensure SQLite database file exists if SQLite connection is used
 $sqlitePath = __DIR__.'/database/database.sqlite';
 if (!file_exists($sqlitePath)) {
