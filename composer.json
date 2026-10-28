@@ -69,7 +69,7 @@
             "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php bootstrap/edge_setup.php",
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
         "post-root-package-install": [

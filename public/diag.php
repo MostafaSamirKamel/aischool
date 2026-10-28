@@ -4,114 +4,97 @@ header('Content-Type: application/json; charset=utf-8');
 $res = [
     'time' => date('Y-m-d H:i:s'),
     'php_version' => PHP_VERSION,
+    'pdo_drivers' => extension_loaded('pdo') ? PDO::getAvailableDrivers() : [],
     'extensions' => [
         'pdo' => extension_loaded('pdo'),
+        'pdo_sqlite' => extension_loaded('pdo_sqlite'),
+        'sqlite3' => extension_loaded('sqlite3'),
         'pdo_mysql' => extension_loaded('pdo_mysql'),
         'openssl' => extension_loaded('openssl'),
         'mbstring' => extension_loaded('mbstring'),
     ],
     'env_vars' => [
         'APP_KEY_SET' => !empty($_ENV['APP_KEY']) || !empty(getenv('APP_KEY')),
+        'DB_CONNECTION' => $_ENV['DB_CONNECTION'] ?? getenv('DB_CONNECTION') ?: null,
         'DB_HOST' => $_ENV['DB_HOST'] ?? getenv('DB_HOST') ?: null,
         'DB_PORT' => $_ENV['DB_PORT'] ?? getenv('DB_PORT') ?: null,
         'DB_DATABASE' => $_ENV['DB_DATABASE'] ?? getenv('DB_DATABASE') ?: null,
-        'DB_NAME' => $_ENV['DB_NAME'] ?? getenv('DB_NAME') ?: null,
-        'DB_USERNAME' => $_ENV['DB_USERNAME'] ?? getenv('DB_USERNAME') ?: null,
-        'DB_USER' => $_ENV['DB_USER'] ?? getenv('DB_USER') ?: null,
         'DATABASE_URL_SET' => !empty($_ENV['DATABASE_URL']) || !empty(getenv('DATABASE_URL')),
     ],
 ];
 
-// Determine DB credentials
-$host = $_ENV['DB_HOST'] ?? getenv('DB_HOST') ?: '127.0.0.1';
-$port = $_ENV['DB_PORT'] ?? getenv('DB_PORT') ?: '3306';
-$dbName = $_ENV['DB_DATABASE'] ?? getenv('DB_DATABASE') ?: ($_ENV['DB_NAME'] ?? getenv('DB_NAME') ?: ($_ENV['MYSQL_DATABASE'] ?? getenv('MYSQL_DATABASE') ?: 'laravel'));
-$user = $_ENV['DB_USERNAME'] ?? getenv('DB_USERNAME') ?: ($_ENV['DB_USER'] ?? getenv('DB_USER') ?: ($_ENV['MYSQL_USER'] ?? getenv('MYSQL_USER') ?: 'root'));
-$pass = $_ENV['DB_PASSWORD'] ?? getenv('DB_PASSWORD') ?: ($_ENV['DB_PASS'] ?? getenv('DB_PASS') ?: ($_ENV['MYSQL_PASSWORD'] ?? getenv('MYSQL_PASSWORD') ?: ''));
+// Determine if SQLite should be used
+$sqlitePath = __DIR__ . '/../database/database.sqlite';
+$useSqlite = (getenv('DB_CONNECTION') === 'sqlite' || ($_ENV['DB_CONNECTION'] ?? null) === 'sqlite') ||
+    (empty($_ENV['DB_HOST']) && empty(getenv('DB_HOST')) && empty($_ENV['DATABASE_URL']) && empty(getenv('DATABASE_URL')));
 
-$res['resolved_db'] = [
-    'host' => $host,
-    'port' => $port,
-    'database' => $dbName,
-    'username' => $user,
-];
+if ($useSqlite && file_exists($sqlitePath)) {
+    try {
+        $realPath = realpath($sqlitePath) ?: $sqlitePath;
+        $pdo = new PDO('sqlite:' . $realPath);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $res['pdo_connected'] = true;
+        $res['driver'] = 'sqlite';
+        $res['database_file'] = $realPath;
+        $tables = $pdo->query("SELECT name FROM sqlite_master WHERE type='table'")->fetchAll(PDO::FETCH_COLUMN);
+        $res['tables_count'] = count($tables);
+        $res['has_users_table'] = in_array('users', $tables);
 
-try {
-    $dsn = "mysql:host={$host};port={$port};dbname={$dbName};charset=utf8mb4";
-    $pdo = new PDO($dsn, $user, $pass, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_TIMEOUT => 3,
-    ]);
-    $res['pdo_connected'] = true;
-    $res['driver'] = 'mysql';
+        if ($res['has_users_table']) {
+            $userCountStmt = $pdo->query("SELECT count(*) FROM users");
+            $res['users_count'] = (int) $userCountStmt->fetchColumn();
 
-    $stmt = $pdo->query("SHOW TABLES");
-    $tables = $stmt->fetchAll(PDO::FETCH_COLUMN);
-    $res['tables_count'] = count($tables);
-    $res['has_users_table'] = in_array('users', $tables);
-
-    if ($res['has_users_table']) {
-        $userCountStmt = $pdo->query("SELECT count(*) FROM users");
-        $res['users_count'] = (int) $userCountStmt->fetchColumn();
-
-        if ($res['users_count'] > 0) {
-            $usersStmt = $pdo->query("SELECT id, name, email, is_super_admin FROM users LIMIT 10");
-            $res['sample_users'] = $usersStmt->fetchAll(PDO::FETCH_ASSOC);
-        }
-    }
-} catch (\Throwable $e) {
-    $res['mysql_error'] = $e->getMessage();
-    
-    // SQLite Fallback check
-    $sqlitePath = __DIR__ . '/../database/database.sqlite';
-    $res['sqlite_exists'] = file_exists($sqlitePath);
-    if ($res['sqlite_exists']) {
-        try {
-            $pdo = new PDO('sqlite:' . realpath($sqlitePath));
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $res['pdo_connected'] = true;
-            $res['driver'] = 'sqlite';
-            $tables = $pdo->query("SELECT name FROM sqlite_master WHERE type='table'")->fetchAll(PDO::FETCH_COLUMN);
-            $res['tables_count'] = count($tables);
-            $res['has_users_table'] = in_array('users', $tables);
-            if ($res['has_users_table']) {
-                $res['users_count'] = (int) $pdo->query("SELECT count(*) FROM users")->fetchColumn();
-                if ($res['users_count'] > 0) {
-                    $usersStmt = $pdo->query("SELECT id, name, email, is_super_admin FROM users LIMIT 10");
-                    $res['sample_users'] = $usersStmt->fetchAll(PDO::FETCH_ASSOC);
-                }
+            if ($res['users_count'] > 0) {
+                $usersStmt = $pdo->query("SELECT id, name, email, is_super_admin FROM users LIMIT 10");
+                $res['sample_users'] = $usersStmt->fetchAll(PDO::FETCH_ASSOC);
             }
-        } catch (\Throwable $sqle) {
-            $res['pdo_connected'] = false;
-            $res['pdo_error'] = $sqle->getMessage();
         }
-    } else {
-        $res['pdo_connected'] = false;
-        $res['pdo_error'] = $e->getMessage();
+    } catch (\Throwable $sqle) {
+        $res['sqlite_error'] = $sqle->getMessage();
     }
 }
 
-// Handle action=migrate
-if (isset($_GET['action']) && $_GET['action'] === 'migrate') {
+// If SQLite was not connected, attempt MySQL
+if (empty($res['pdo_connected'])) {
+    $host = $_ENV['DB_HOST'] ?? getenv('DB_HOST') ?: '127.0.0.1';
+    $port = $_ENV['DB_PORT'] ?? getenv('DB_PORT') ?: '3306';
+    $dbName = $_ENV['DB_DATABASE'] ?? getenv('DB_DATABASE') ?: ($_ENV['DB_NAME'] ?? getenv('DB_NAME') ?: 'laravel');
+    $user = $_ENV['DB_USERNAME'] ?? getenv('DB_USERNAME') ?: 'root';
+    $pass = $_ENV['DB_PASSWORD'] ?? getenv('DB_PASSWORD') ?: '';
+
+    $res['resolved_db'] = [
+        'host' => $host,
+        'port' => $port,
+        'database' => $dbName,
+        'username' => $user,
+    ];
+
     try {
-        require_once __DIR__ . '/../vendor/autoload.php';
-        /** @var \Illuminate\Foundation\Application $app */
-        $app = require_once __DIR__ . '/../bootstrap/app.php';
-        $kernel = $app->make(\Illuminate\Contracts\Console\Kernel::class);
-        $kernel->bootstrap();
+        $dsn = "mysql:host={$host};port={$port};dbname={$dbName};charset=utf8mb4";
+        $pdo = new PDO($dsn, $user, $pass, [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_TIMEOUT => 2,
+        ]);
+        $res['pdo_connected'] = true;
+        $res['driver'] = 'mysql';
 
-        \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
-        $res['migrate_output'] = \Illuminate\Support\Facades\Artisan::output();
+        $stmt = $pdo->query("SHOW TABLES");
+        $tables = $stmt->fetchAll(PDO::FETCH_COLUMN);
+        $res['tables_count'] = count($tables);
+        $res['has_users_table'] = in_array('users', $tables);
 
-        \Illuminate\Support\Facades\Artisan::call('db:seed', ['--class' => 'Database\\Seeders\\TenantSeeder', '--force' => true]);
-        \Illuminate\Support\Facades\Artisan::call('db:seed', ['--class' => 'Database\\Seeders\\RolePermissionSeeder', '--force' => true]);
-        \Illuminate\Support\Facades\Artisan::call('db:seed', ['--class' => 'Database\\Seeders\\DemoUserSeeder', '--force' => true]);
-        $res['seed_output'] = \Illuminate\Support\Facades\Artisan::output();
+        if ($res['has_users_table']) {
+            $userCountStmt = $pdo->query("SELECT count(*) FROM users");
+            $res['users_count'] = (int) $userCountStmt->fetchColumn();
 
-        $res['migration_status'] = 'success';
+            if ($res['users_count'] > 0) {
+                $usersStmt = $pdo->query("SELECT id, name, email, is_super_admin FROM users LIMIT 10");
+                $res['sample_users'] = $usersStmt->fetchAll(PDO::FETCH_ASSOC);
+            }
+        }
     } catch (\Throwable $e) {
-        $res['migration_status'] = 'error';
-        $res['migration_error'] = $e->getMessage();
+        $res['pdo_connected'] = false;
+        $res['pdo_error'] = $e->getMessage();
     }
 }
 
