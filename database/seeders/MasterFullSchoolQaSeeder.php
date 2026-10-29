@@ -605,7 +605,7 @@ class MasterFullSchoolQaSeeder extends Seeder
         foreach ($roles as $roleName => $perms) {
             $role = Role::firstOrCreate(['name' => $roleName, 'guard_name' => 'web']);
             if (!empty($perms)) {
-                $role->syncPermissions($perms);
+                $role->givePermissionTo($perms);
             }
         }
     }

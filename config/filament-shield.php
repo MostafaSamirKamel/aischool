@@ -229,8 +229,68 @@ return [
     */
 
     'custom_permissions' => [
+        // Vaults & Cash
+        'view_vault_balance',
         'view_vault_balances',
         'view_vault_transactions',
+        'view_vault_reports',
+        'transfer_vault_funds',
+        'manage_expenses',
+        'manage_salaries',
+        'pay_salaries',
+
+        // Enrollments & Settlements
+        'cancel_enrollments',
+        'cancel_subscription',
+        'settle_enrollments',
+        'settle_subscription',
+        'refund_enrollments',
+        'refund_subscription',
+        'execute_refunds',
+        'transfer_student_group',
+
+        // Educational Supervision
+        'create_supervisory_observations',
+        'approve_supervisory_observations',
+        'return_supervisory_observations',
+        'respond_supervisory_observations',
+        'prepare_supervision_reports',
+        'publish_supervision_reports',
+        'review_management_supervision_reports',
+        'create_instructor_evaluations',
+        'publish_instructor_evaluations',
+        'appeal_instructor_evaluations',
+        'comment_instructor_evaluations',
+        'view_educational_supervision',
+        'view_supervision_dashboard',
+        'view_supervised_groups',
+        'view_supervised_instructors',
+
+        // Student Follow-Up & Tasks
+        'create_student_followup',
+        'complete_student_followup',
+        'create_student_followup_task',
+        'complete_student_followup_task',
+        'record_parent_contact',
+        'record_followup_contact',
+        'reassign_follow_up_case',
+        'view_student_contact_numbers',
+        'view_student_academic_monitoring',
+        'view_student_financial_follow_up',
+
+        // Reporting & Analytics
+        'view_reports',
+        'export_reports',
+        'schedule_reports',
+        'save_report_configurations',
+        'view_financial_reports',
+        'view_academic_reports',
+        'view_cancellation_settlement_reports',
+        'view_daily_follow_up_dashboard',
+        'view_daily_follow_up_reports',
+        'save_daily_snapshot',
+        'view_reporting_center',
+        'export_reporting_center',
     ],
 
     /*

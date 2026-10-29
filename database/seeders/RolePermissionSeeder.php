@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 
@@ -16,109 +17,79 @@ class RolePermissionSeeder extends Seeder
         // Reset cached roles and permissions
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
-        // Create roles
-        $roles = [
+        // 10 system roles
+        $roleDefinitions = [
             'super_admin' => 'Super Admin',
             'branch_manager' => 'Branch Manager',
+            'admin' => 'Admin',
             'supervisor' => 'Supervisor',
             'instructor' => 'Instructor / Teacher',
             'secretary' => 'Secretary',
+            'accountant' => 'Accountant',
+            'registration' => 'Registration Officer',
             'student' => 'Student',
             'parent' => 'Parent',
         ];
 
-        foreach ($roles as $slug => $name) {
+        foreach ($roleDefinitions as $slug => $label) {
             Role::firstOrCreate(
                 ['name' => $slug],
                 ['guard_name' => 'web']
             );
         }
 
-        // Define permissions by module
-        $permissions = [
-            // Tenants/Branches
-            'view_tenants',
-            'create_tenants',
-            'edit_tenants',
-            'delete_tenants',
-            
-            // Users
-            'view_users',
-            'create_users',
-            'edit_users',
-            'delete_users',
-            
-            // Students (سيتم إضافتها لاحقًا في Sprint 3)
-            'view_students',
-            'create_students',
-            'edit_students',
-            'delete_students',
-            
-            // Courses (سيتم إضافتها لاحقًا في Sprint 2)
-            'view_courses',
-            'create_courses',
-            'edit_courses',
-            'delete_courses',
-            
-            // Attendance (سيتم إضافتها لاحقًا في Sprint 4)
-            'view_attendance',
-            'create_attendance',
-            'edit_attendance',
-            'delete_attendance',
-            
-            // Payments (سيتم إضافتها لاحقًا في Sprint 5)
-            'view_payments',
-            'create_payments',
-            'edit_payments',
-            'delete_payments',
-        ];
-
-        foreach ($permissions as $permission) {
-            Permission::firstOrCreate(
-                ['name' => $permission],
-                ['guard_name' => 'web']
-            );
+        $dataFile = __DIR__ . '/roles_permissions_data.json';
+        if (!file_exists($dataFile)) {
+            $this->command?->error("Permissions data file not found: {$dataFile}");
+            return;
         }
 
-        // Assign permissions to roles
-        $super_admin = Role::findByName('super_admin');
-        $super_admin->givePermissionTo(Permission::all());
+        $data = json_decode((string) file_get_contents($dataFile), true);
+        if (!is_array($data) || empty($data['permissions'])) {
+            $this->command?->error("Invalid permissions data in {$dataFile}");
+            return;
+        }
 
-        $branchManager = Role::findByName('branch_manager');
-        $branchManager->givePermissionTo([
-            'view_users',
-            'create_users',
-            'edit_users',
-            'view_students',
-            'create_students',
-            'edit_students',
-            'delete_students',
-            'view_courses',
-            'view_attendance',
-            'create_attendance',
-            'edit_attendance',
-            'view_payments',
-            'create_payments',
-            'edit_payments',
-        ]);
+        DB::transaction(function () use ($data) {
+            $now = now();
+            $existingPerms = Permission::pluck('id', 'name')->toArray();
+            $toInsert = [];
 
-        $instructor = Role::findByName('instructor');
-        $instructor->givePermissionTo([
-            'view_students',
-            'view_courses',
-            'view_attendance',
-            'create_attendance',
-            'edit_attendance',
-        ]);
+            foreach ($data['permissions'] as $permName) {
+                if (!isset($existingPerms[$permName])) {
+                    $toInsert[] = [
+                        'name' => $permName,
+                        'guard_name' => 'web',
+                        'created_at' => $now,
+                        'updated_at' => $now,
+                    ];
+                }
+            }
 
-        $secretary = Role::findByName('secretary');
-        $secretary->givePermissionTo([
-            'view_students',
-            'create_students',
-            'edit_students',
-            'view_payments',
-            'create_payments',
-            'edit_payments',
-        ]);
+            if (!empty($toInsert)) {
+                foreach (array_chunk($toInsert, 100) as $chunk) {
+                    Permission::insert($chunk);
+                }
+            }
+
+            $allPerms = Permission::pluck('id', 'name')->toArray();
+
+            foreach ($data['roles'] as $roleName => $perms) {
+                $role = Role::firstOrCreate(['name' => $roleName, 'guard_name' => 'web']);
+                $permIds = [];
+                foreach ($perms as $pName) {
+                    if (isset($allPerms[$pName])) {
+                        $permIds[] = $allPerms[$pName];
+                    }
+                }
+                $role->permissions()->sync($permIds);
+            }
+        });
+
+        app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
+
+        $this->command?->info('✅ Roles and Permissions synchronized successfully!');
+        $this->command?->info('📋 Active Roles: ' . count($roleDefinitions));
+        $this->command?->info('🔐 Total Permissions: ' . count($data['permissions']));
     }
 }
